@@ -21,7 +21,7 @@ This is an Astro website using islands architecture, static HTML by default and 
 - Interactive islands are implemented with React (`.tsx`) through Preact
   - `client:only="preact"` is used for client-only UI (for example, command bar)
   - `client:load` is used where hydration after SSR is wanted (for example, games)
-- Locale is inferred in middleware and injected into `Astro.locals.lang`
+- Locale is inferred in middleware (see lines 5-8 of [src/middleware.ts](/src/middleware.ts)) and injected into `Astro.locals.lang`
 - Blog HTML is post-processed in middleware to wrap standalone images into `<figure><figcaption>` using image alt text
 
 ### Deployment
@@ -33,11 +33,13 @@ The project supports both Vercel and Netlify adapters. The adapter is selected b
 
 Build output is static (`output: "static"`) with dynamic runtime endpoints only where explicitly configured.
 
+See line 7 of the [astro.config.mjs](/astro.config.mjs) for implementation :)
+
 ## Features
 
 - Static site generation with Astro
 - Tailwind CSS for styling
-- Content collections for blog posts, now, projects, uses, scrapbook, and webrings
+- Content collections for blog posts, now, projects, uses, scrapbook, and webrings (see [src/content](/src/content))
 - Dark/light theme support
 - Multilingual support
 - Accessible (WCAG 2.1 AA)
@@ -171,7 +173,7 @@ The site supports dark and light modes:
 
 - Dark mode is the default
 - Theme preference stored in `localStorage`
-- CSS variables in `:root` / `.light` / `.dark` selectors (see `src/styles/globals.css`)
+- CSS variables in `:root` / `.light` / `.dark` selectors (see [src/styles/globals.css](/src/styles/globals.css))
 - Theme applied via `class` on `<html>` element
 - Respects user's system preference on first visit
 
@@ -179,8 +181,8 @@ The site supports dark and light modes:
 
 **12 languages** supported: English, Tiếng Việt, Русский, Eesti, Dansk, 中文, Türkçe, Polski, Svenska, Suomi, toki pona, 漢喃
 
-- Translations in `src/i18n/translations/*.json`
-- Use the `T.astro` component for static translations
+- Translations in [`src/i18n/translations/*.json`](/src/i18n/translations)
+- Use the [`T.astro`](/src/components/T.astro) component for static translations
 - Language state managed via `languageStore` nanostore
 - Language detection from browser or localStorage
 
@@ -192,11 +194,11 @@ The site supports dark and light modes:
 
 ### Feeds and SEO
 
-- RSS endpoint: `src/pages/rss.xml.ts`
-- Atom endpoint: `src/pages/atom.xml.ts`
-- JSON feed endpoint: `src/pages/feed.json.ts`
-- Sitemap: `src/pages/sitemap.xml.ts`
-- XML stylesheets are provided in `public/*.xsl`
+- RSS endpoint: [`src/pages/rss.xml.ts`](/src/pages/rss.xml.ts)
+- Atom endpoint: [`src/pages/atom.xml.ts`](/src/pages/atom.xml.ts)
+- JSON feed endpoint: [`src/pages/feed.json.ts`](/src/pages/feed.json.ts)
+- Sitemap: [`src/pages/sitemap.xml.ts`](/src/pages/sitemap.xml.ts)
+- XML stylesheets are provided in [`public/*.xsl`](/public)
 
 ### Component conventions
 
