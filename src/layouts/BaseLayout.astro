@@ -142,9 +142,7 @@ const structuredData = {
 <!--- My code's a lil messy, please bear with me :p --->
 <html lang={lang} data-locale={lang} class="dark">
   <head>
-    <script is:inline data-i18n={JSON.stringify(translations[lang] || translations.en)}>
-      window._I18N_DICT = JSON.parse(document.currentScript.getAttribute('data-i18n'));
-    </script>
+    <script is:inline set:html={`window._I18N_DICT = ${JSON.stringify(translations[lang] || translations.en)};`}></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
@@ -249,15 +247,13 @@ const structuredData = {
     </script>
 
 
-    <script is:inline data-analytics-ids={JSON.stringify(analyticsWebsiteIds)} data-analytics-url={analyticsScriptUrl}>
+    <script is:inline set:html={`
+      const analyticsWebsiteIds = ${JSON.stringify(analyticsWebsiteIds)};
+      const analyticsScriptUrl = ${JSON.stringify(analyticsScriptUrl)};
       (function () {
         try {
-          const analyticsWebsiteIds = JSON.parse(document.currentScript.getAttribute('data-analytics-ids'));
-          const analyticsScriptUrl = document.currentScript.getAttribute('data-analytics-url');
-          if (!analyticsWebsiteIds || !analyticsScriptUrl) return;
-
           const host = location.hostname;
-          if (/^(localhost|::1|0\.0\.0\.0)$/.test(host) || host.startsWith("127.")) return;
+          if (/^(localhost|::1|0\\.0\\.0\\.0)$/.test(host) || host.startsWith("127.")) return;
 
           const siteId = (host === "z.is-a.dev" || host.endsWith(".z.is-a.dev"))
             ? analyticsWebsiteIds["z.is-a.dev"]
@@ -270,7 +266,7 @@ const structuredData = {
           document.head.appendChild(s);
         } catch (e) {}
       })();
-    </script>
+    `}></script>
 
     <style>
       .emoji-flag {
