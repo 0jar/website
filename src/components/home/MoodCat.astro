@@ -220,9 +220,9 @@ const initialCat = moodCats[Math.floor(Math.random() * moodCats.length)];
   </div>
 </section>
 
-<script is:inline set:html={`
-  const cats = ${JSON.stringify(moodCats)};
-  const serverInitialCat = ${JSON.stringify(initialCat)};
+<script is:inline data-moodcats={JSON.stringify(moodCats)} data-initialcat={JSON.stringify(initialCat)}>
+  const cats = JSON.parse(document.currentScript.getAttribute('data-moodcats'));
+  const serverInitialCat = JSON.parse(document.currentScript.getAttribute('data-initialcat'));
   let currentCatId = serverInitialCat.id;
 
   const refreshBtn = document.getElementById('refresh-cat');
@@ -275,7 +275,7 @@ const initialCat = moodCats[Math.floor(Math.random() * moodCats.length)];
       }, 150);
     });
   }
-`}></script>
+</script>
 
 <style>
   #mood-cat-image {
