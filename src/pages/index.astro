@@ -205,24 +205,20 @@ const showAndroidCountdown = daysLeft > 0;
   // Android countdown banner
   const banner = document.getElementById("android-countdown");
   if (banner) {
-    // Replace X with actual days
-    const text = document.getElementById("countdown-text");
-    const deadline = new Date(Date.UTC(2026, 8, 1, 0, 0, 0));
-    const days = Math.ceil((deadline.getTime() - Date.now()) / 864e5);
-    if (days <= 0) { banner.hidden = true; } else if (text) {
-      text.textContent = text.textContent.replace("X", String(days));
-    }
-
-    // Hide if previously dismissed
     if (localStorage.getItem("androidCountdownDismissed") === "true") {
       banner.hidden = true;
     } else {
-      const handleEscape = (e: KeyboardEvent) => e.key === "Escape" && dismiss();
+      const text = document.getElementById("countdown-text");
+      const days = banner.dataset.days;
+      if (Number(days) <= 0) banner.hidden = true;
+      else if (text && days) text.textContent = text.textContent.replace("X", days);
+
       const dismiss = () => {
         banner.hidden = true;
         localStorage.setItem("androidCountdownDismissed", "true");
         document.removeEventListener("keydown", handleEscape);
       };
+      const handleEscape = (e: KeyboardEvent) => e.key === "Escape" && dismiss();
 
       document.getElementById("close-countdown")?.addEventListener("click", dismiss);
       document.addEventListener("keydown", handleEscape);

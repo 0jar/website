@@ -294,37 +294,18 @@ const structuredData = {
       (function () {
         try {
           const host = location.hostname;
+          if (/^(localhost|::1|0\.0\.0\.0)$/.test(host) || host.startsWith("127.")) return;
 
-          // Don't load analytics on development
-          if (
-            host === "localhost" ||
-            host === "127.0.0.1" ||
-            host === "::1" ||
-            host === "0.0.0.0" ||
-            host.startsWith("127.")
-          ) {
-            return;
-          }
-
-          // Use website IDs from constants
-          const websiteIds = analyticsWebsiteIds;
-
-          // Default to jarema.me ID
-          let siteId = websiteIds["jarema.me"];
-
-          // Check if running on alternative domain
-          if (host === "z.is-a.dev" || host.endsWith(".z.is-a.dev")) {
-            siteId = websiteIds["z.is-a.dev"];
-          }
+          const siteId = (host === "z.is-a.dev" || host.endsWith(".z.is-a.dev"))
+            ? analyticsWebsiteIds["z.is-a.dev"]
+            : analyticsWebsiteIds["jarema.me"];
 
           const s = document.createElement("script");
           s.defer = true;
           s.src = analyticsScriptUrl;
           s.setAttribute("data-website-id", siteId);
           document.head.appendChild(s);
-        } catch (e) {
-          // Silence errors during script injection
-        }
+        } catch (e) {}
       })();
     </script>
 
