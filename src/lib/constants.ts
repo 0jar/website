@@ -109,6 +109,13 @@ export const hrefLangLanguages = supportedLanguages.filter((l) => l.code !== "to
 // Completed translations
 export const completedLanguages = ["en", "vi", "et", "ru", "da"] as const;
 
+// Map site language codes to Open Graph locale values
+export const ogLocaleMap: Record<string, string> = {
+  en: "en_US", vi: "vi_VN", "vi-Hani": "vi_VN", zh: "zh_CN", ru: "ru_RU",
+  da: "da_DK", et: "et_EE", tr: "tr_TR", pl: "pl_PL", sv: "sv_SE",
+  fi: "fi_FI", tok: "en_US",
+};
+
 // Theme constants
 export const themes = ["light", "dark", "system"] as const;
 export type Theme = (typeof themes)[number];
@@ -217,10 +224,6 @@ export const footerBadges: FooterBadge[] = [
     alt: "Clouds are nice",
   },
   {
-    src: "/button2019.gif",
-    alt: "Still using buttons in 2019!",
-  },
-  {
     src: "/people_pledge_badge_party_cream_pink_88x31.png",
     alt: "People Pledge",
     href: "https://people.pledge.party/",
@@ -240,16 +243,6 @@ export const footerBadges: FooterBadge[] = [
     href: "https://yesterweb.org/no-to-web3/",
   },
   {
-    src: "/valid-rss-rogers.png",
-    alt: "Valid RSS",
-    href: "/rss.xml",
-  },
-  {
-    src: "/valid-atom.png",
-    alt: "Valid Atom",
-    href: "/atom.xml",
-  },
-  {
     src: "/humanstxt.png",
     alt: "Humans.txt",
     href: "/humans.txt",
@@ -263,21 +256,6 @@ export const footerBadges: FooterBadge[] = [
     src: "/fedora.gif",
     alt: "Fedora Linux",
     href: "https://fedoraproject.org/",
-  },
-  {
-    src: "/anythingbut.gif",
-    alt: "Anything but Chrome",
-    href: "/blog/2025/08/anything-but-chrome",
-  },
-  {
-    src: "/perfectclear.gif",
-    alt: "Tetris",
-    href: "/tetris",
-  },
-  {
-    src: "/retrokid.gif",
-    alt: "Retro kid",
-    href: "/retro",
   },
 ];
 

@@ -8,10 +8,8 @@ type MoodCat = {
   id: number;
   image: string;
   caption: string;
-  captionVi?: string;
   attribution?: string;
   attributionNote?: string;
-  attributionNoteVi?: string;
 };
 
 // Import all cat images for optimization
@@ -55,111 +53,96 @@ const moodCats: MoodCat[] = [
     id: 1,
     image: optimizedImages[0].src,
     caption: "meowtivated",
-    captionVi: "đang meo-tivated hết cỡ",
     attribution: "https://www.reddit.com/r/aww/comments/s3t3mo/coding_cat_is_raising_your_productivity_3/",
   },
   {
     id: 2,
     image: optimizedImages[1].src,
     caption: "overthinking like my hooman",
-    captionVi: "suy nghĩ nhiều như sen nhà luôn á",
     attribution: "https://www.reddit.com/r/aww/comments/1c841o3/my_friend_says_my_cat_has_resting_bewildered_face/",
   },
   {
     id: 3,
     image: optimizedImages[2].src,
     caption: "404 nap not found",
-    captionVi: "lỗi 404: không tìm thấy giấc ngủ trưa",
     attribution: "https://www.reddit.com/r/aww/comments/jdbrgp/how_am_i_supposed_to_game_with_this_tiny_kitten/",
   },
   {
     id: 4,
     image: optimizedImages[3].src,
     caption: "catffeinated",
-    captionVi: "đã nạp đủ cà-meo-in",
     attribution: "https://x.com/poorlycatdraw/status/1563137689326858240",
   },
   {
     id: 5,
     image: optimizedImages[4].src,
     caption: "studying the meowconomy",
-    captionVi: "đang nghiên cứu meo tế học",
     attribution: "https://www.reddit.com/r/CPA/comments/xwi18u/compilation_of_my_cat_studying_with_me",
   },
   {
     id: 6,
     image: optimizedImages[5].src,
     caption: "purrfessor with tenure",
-    captionVi: "giáo sư meomeo có biên chế hẳn hoi nha",
     attribution: "https://x.com/fatfatpankocat/status/1545269035738320896",
   },
   {
     id: 7,
     image: optimizedImages[6].src,
     caption: "waiting for my date to return from the bathroom",
-    captionVi: "đang đợi bồ đi vệ sinh xong quay lại",
     attribution: "https://www.reddit.com/r/notinteresting/comments/1jxeskh/my_friend_went_on_a_date/",
   },
   {
     id: 8,
     image: optimizedImages[7].src,
     caption: "your latte will be ready in a meowment",
-    captionVi: "latte của bạn sẽ sẵn sàng trong vòng... một meo-ment",
     attribution: "https://www.reddit.com/r/Catswithjobs/comments/1jw0fvn/the_barista_will_prepare_your_latte_now/",
   },
   {
     id: 9,
     image: optimizedImages[8].src,
     caption: "pawsport and ID please",
-    captionVi: "cho xin pawsport và căn cước nha",
     attribution: "https://www.reddit.com/r/Catswithjobs/comments/dncwls/the_security_guy_in_istanbul_turkey/",
   },
   {
     id: 10,
     image: optimizedImages[9].src,
     caption: "i don't get paid enough for this",
-    captionVi: "lương không đủ để chịu đựng mấy cái này đâu á",
     attribution: "https://www.reddit.com/r/Catswithjobs/comments/uopwrf/employee_of_the_month/",
   },
   {
     id: 11,
     image: optimizedImages[10].src,
     caption: "hitting those high meowtes",
-    captionVi: "lên tới nốt meow cao luôn rồi",
     attribution: "https://www.reddit.com/r/Catswithjobs/comments/1fqw9f3/tenor/",
   },
   {
     id: 12,
     image: optimizedImages[11].src,
     caption: "US purrstal service, i have a purrcel for you",
-    captionVi: "tui là dịch vụ bưu điện việt meo, tui có gói hàng meo cho bạn nè",
     attribution: "https://www.reddit.com/r/Catswithjobs/comments/10va12b/maam_us_purrstal_service_i_have_a_purrcel_for_you/",
   },
   {
     id: 13,
     image: optimizedImages[12].src,
     caption: "rodents don't have a chance",
-    captionVi: "lũ gặm nhấm không có cửa đâu",
     attribution: "https://www.reddit.com/r/Catswithjobs/comments/tsxus1/the_rodents_dont_have_a_chance/",
   },
   {
     id: 14,
     image: optimizedImages[13].src,
     caption: "your purroblem is the catalytic converter",
-    captionVi: "vấn đề là ở cái bộ chuyển xúc tác mèo đó",
     attribution: "https://www.reddit.com/r/Catswithjobs/comments/11kkwce/shambo_tryna_diagnose_my_car_not_sure_hes/",
   },
   {
     id: 15,
     image: optimizedImages[14].src,
     caption: "excavation supurrvisor, no breaks until the purrmit is approved",
-    captionVi: "giám sát công trình meo meo đây, chưa có purrmit thì đừng hòng nghỉ trưa nhé",
     attribution: "https://www.reddit.com/r/Catswithjobs/comments/1iao56u/the_ceo_himself/",
   },
 ];
 
-// Pick one cat for SSR (will be randomized on client)
-const initialCat = moodCats[0];
+// Pick a random cat for the initial render
+const initialCat = moodCats[Math.floor(Math.random() * moodCats.length)];
 ---
 
 <section aria-labelledby="mood-cat-heading" class="flex flex-col h-full">
@@ -237,9 +220,9 @@ const initialCat = moodCats[0];
   </div>
 </section>
 
-<script is:inline define:vars={{ moodCats }}>
+<script is:inline define:vars={{ moodCats, serverInitialCat: initialCat }}>
   const cats = moodCats;
-  let currentCatId = cats[0].id;
+  let currentCatId = serverInitialCat.id;
 
   const refreshBtn = document.getElementById('refresh-cat');
   const catImage = document.getElementById('mood-cat-image');
@@ -255,28 +238,8 @@ const initialCat = moodCats[0];
     return newCat;
   }
 
-  // Get current language
-  function getCurrentLang() {
-    try {
-      return localStorage.getItem('i18nextLng') || 'en';
-    } catch {
-      return 'en';
-    }
-  }
-
-  // Set initial random cat on page load
-  const initialCat = getRandomCat();
-  currentCatId = initialCat.id;
-  if (catImage) {
-    catImage.src = initialCat.image;
-    catImage.alt = `Mood cat: ${initialCat.caption}`;
-  }
-  if (captionEl) {
-    const lang = getCurrentLang();
-    captionEl.textContent = (lang === 'vi' && initialCat.captionVi) ? initialCat.captionVi : initialCat.caption;
-  }
-  if (attributionEl && initialCat.attribution) {
-    attributionEl.href = initialCat.attribution;
+  if (attributionEl && serverInitialCat.attribution) {
+    attributionEl.href = serverInitialCat.attribution;
     attributionEl.parentElement.classList.remove('hidden');
   } else if (attributionEl) {
     attributionEl.parentElement.classList.add('hidden');
@@ -296,8 +259,7 @@ const initialCat = moodCats[0];
         catImage.alt = `Mood cat: ${newCat.caption}`;
 
         if (captionEl) {
-          const lang = getCurrentLang();
-          captionEl.textContent = (lang === 'vi' && newCat.captionVi) ? newCat.captionVi : newCat.caption;
+          captionEl.textContent = newCat.caption;
         }
 
         if (attributionEl && newCat.attribution) {

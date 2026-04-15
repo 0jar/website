@@ -7,7 +7,7 @@ import { cycleLanguage, t as i18nT, getPageLocale } from "@/i18n/client";
 import { localePath } from "@/i18n/routing";
 import { routes, keyboardShortcuts } from "@/lib/constants";
 import { applyTheme } from "@/lib/utils/theme-utils";
-import { useMounted, isTypingInInput } from "@/hooks";
+import { useMounted, isTypingInInput, useDebounce } from "@/hooks";
 import {
   ArrowDown, ArrowLeft, ArrowRight, ArrowUp, BookOpen, Calendar, Clock, Code, FileText,
   FlipHorizontal, Gamepad2, Home, Languages, Mail, MessagesSquare, Moon, RefreshCw,
@@ -20,16 +20,6 @@ const KeyboardShortcut = ({ children }: { children: JSX.Element | string | numbe
     {children}
   </kbd>
 );
-
-// Inline useDebounce hook
-function useDebounce<T>(value: T, delay = 500): T {
-  const [debouncedValue, setDebouncedValue] = useState(value);
-  useEffect(() => {
-    const timer = setTimeout(() => setDebouncedValue(value), delay);
-    return () => clearTimeout(timer);
-  }, [value, delay]);
-  return debouncedValue;
-}
 
 // Helpers
 const dispatchKey = (key: string) => document.dispatchEvent(new KeyboardEvent("keydown", { key, bubbles: true }));
@@ -381,13 +371,20 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
           <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setOpen(false)}
+            aria-hidden="true"
           />
 
           {/* Dialog content */}
-          <div className="relative bg-background border rounded-lg shadow-lg w-full max-w-md mx-4 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+          <div
+            className="relative bg-background border rounded-lg shadow-lg w-full max-w-md mx-4 overflow-hidden animate-in fade-in zoom-in-95 duration-200"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t("actionSearch.placeholder", "Search actions...")}
+          >
             {/* Search input */}
             <div className="p-4 pb-2">
-              <div className="relative">
+              <div className="relative flex items-center">
+                <Search className="absolute left-3 h-4 w-4 text-muted-foreground" aria-hidden="true" />
                 <input
                   ref={inputRef}
                   type="text"
@@ -395,6 +392,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
                     "actionSearch.placeholder",
                     "Search actions...",
                   )}
+                  aria-label={t("actionSearch.placeholder", "Search actions...")}
                   value={query}
                   onChange={(e) => {
                     setQuery((e.target as HTMLInputElement).value);
@@ -402,7 +400,6 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
                   }}
                   className="w-full pl-10 pr-4 h-10 bg-background border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-ring"
                 />
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               </div>
             </div>
 

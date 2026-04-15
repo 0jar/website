@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer.astro";
 import Galaxy from "@/components/layout/Galaxy.astro";
 import BarListener from "@/components/layout/BarListener.astro";
 import Banners from "@/components/layout/Banners.astro";
-import { hrefLangLanguages, siteUrl, siteName, siteDescription, siteKeywords, author, socialLinks, alternativeDomains, services, themeColors } from "@/lib/constants";
+import { hrefLangLanguages, siteUrl, siteName, siteDescription, siteKeywords, author, socialLinks, alternativeDomains, services, themeColors, ogLocaleMap } from "@/lib/constants";
 import { localePath, stripLocale } from "@/i18n/routing";
 import { translations } from "@/i18n";
 
@@ -72,69 +72,28 @@ const resolvedOgImage = ogImage
   : `${siteUrl}/android-chrome-512x512.png`;
 
 const defaultBreadcrumbs: BreadcrumbItem[] = (() => {
-  const pathname = Astro.url.pathname;
-  const segments = pathname.split("/").filter(Boolean);
+  const segments = Astro.url.pathname.split("/").filter(Boolean);
+  const isBlogDatedPath = segments[0] === "blog" && /^\d{4}$/.test(segments[1] ?? "") && /^(0?[1-9]|1[0-2])$/.test(segments[2] ?? "");
+  const items: BreadcrumbItem[] = [{ name: "Home", url: siteUrl }];
 
-  const isBlogDatedPath =
-    segments[0] === "blog" &&
-    /^\d{4}$/.test(segments[1] ?? "") &&
-    /^(0?[1-9]|1[0-2])$/.test(segments[2] ?? "");
-
-  const items: BreadcrumbItem[] = [
-    {
-      name: "Home",
-      url: siteUrl,
-    },
-  ];
-
-  if (segments.length === 0) return items;
-
-  const titleCrumb = title?.trim();
-  const prettify = (segment: string) =>
-    decodeURIComponent(segment)
-      .replace(/[-_]+/g, " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase());
+  const prettify = (segment: string) => decodeURIComponent(segment).replace(/[-_]+/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
   segments.forEach((segment, index) => {
-    const partialPath = `/${segments.slice(0, index + 1).join("/")}`;
-    const isLast = index === segments.length - 1;
-
-    // For blog posts stored at /blog/YYYY/MM/slug, skip YYYY and MM crumbs
     if (isBlogDatedPath && (index === 1 || index === 2)) return;
-
+    const isLast = index === segments.length - 1;
     items.push({
-      name: isLast && titleCrumb ? titleCrumb : prettify(segment),
-      url: new URL(partialPath, siteUrl).href,
+      name: isLast && title?.trim() ? title.trim() : prettify(segment),
+      url: new URL(`/${segments.slice(0, index + 1).join("/")}`, siteUrl).href,
     });
   });
 
   return items;
 })();
 
-const personName = author.name;
-const personEmail = author.email;
-const personNote = author.note;
-const personImage = `${siteUrl}${author.image}`;
-const personKeyUrl = `${siteUrl}${author.keyUrl}`;
 const personSameAs = [
   ...alternativeDomains,
   socialLinks.github,
 ];
-// Map site language codes to Open Graph locale values
-const ogLocaleMap: Record<string, string> = {
-  en: "en_US",
-  vi: "vi_VN",
-  "vi-Hani": "vi_VN",
-  zh: "zh_CN",
-  ru: "ru_RU",
-  da: "da_DK",
-  et: "et_EE",
-  tr: "tr_TR",
-  pl: "pl_PL",
-  sv: "sv_SE",
-  fi: "fi_FI",
-  tok: "en_US",
-};
 
 const ogLocale = ogLocaleMap[lang] ?? "en_US";
 
@@ -142,10 +101,10 @@ const structuredDataGraph: any[] = [
   {
     "@type": "Person",
     "@id": `${siteUrl}/#person`,
-    name: personName,
+    name: author.name,
     url: siteUrl,
-    image: personImage,
-    email: `mailto:${personEmail}`,
+    image: `${siteUrl}${author.image}`,
+    email: `mailto:${author.email}`,
     sameAs: personSameAs,
   },
   {
@@ -294,37 +253,18 @@ const structuredData = {
       (function () {
         try {
           const host = location.hostname;
+          if (/^(localhost|::1|0\.0\.0\.0)$/.test(host) || host.startsWith("127.")) return;
 
-          // Don't load analytics on development
-          if (
-            host === "localhost" ||
-            host === "127.0.0.1" ||
-            host === "::1" ||
-            host === "0.0.0.0" ||
-            host.startsWith("127.")
-          ) {
-            return;
-          }
-
-          // Use website IDs from constants
-          const websiteIds = analyticsWebsiteIds;
-
-          // Default to jarema.me ID
-          let siteId = websiteIds["jarema.me"];
-
-          // Check if running on alternative domain
-          if (host === "z.is-a.dev" || host.endsWith(".z.is-a.dev")) {
-            siteId = websiteIds["z.is-a.dev"];
-          }
+          const siteId = (host === "z.is-a.dev" || host.endsWith(".z.is-a.dev"))
+            ? analyticsWebsiteIds["z.is-a.dev"]
+            : analyticsWebsiteIds["jarema.me"];
 
           const s = document.createElement("script");
           s.defer = true;
           s.src = analyticsScriptUrl;
           s.setAttribute("data-website-id", siteId);
           document.head.appendChild(s);
-        } catch (e) {
-          // Silence errors during script injection
-        }
+        } catch (e) {}
       })();
     </script>
 
@@ -339,11 +279,11 @@ const structuredData = {
     <!-- h-card -->
     <div class="sr-only">
       <div class="h-card vcard">
-        <a class="p-name u-url u-uid fn url uid" href={siteUrl}>{personName}</a>
-        <img class="u-photo u-logo photo logo" src={personImage} alt="" />
-        <span class="p-note note">{personNote}</span>
-        <a class="u-email email" href={`mailto:${personEmail}`}>{personEmail}</a>
-        <a class="u-key key" href={personKeyUrl}>{personKeyUrl}</a>
+        <a class="p-name u-url u-uid fn url uid" href={siteUrl}>{author.name}</a>
+        <img class="u-photo u-logo photo logo" src={author.image} alt="" />
+        <span class="p-note note">{author.note}</span>
+        <a class="u-email email" href={`mailto:${author.email}`}>{author.email}</a>
+        <a class="u-key key" href={author.keyUrl}>{author.keyUrl}</a>
         <span class="p-category category">{author.category}</span>
         <span class="p-country-name country-name">{author.country}</span>
 
