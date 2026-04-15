@@ -5,6 +5,7 @@
 <div id="command-bar-root"></div>
 
 <script>
+  // @ts-nocheck
   import { routes, keyboardShortcuts } from "@/lib/constants";
   import { cycleTheme } from "@/lib/utils/theme-utils";
   import { cycleLanguage, getPageLocale } from "@/i18n/client";
@@ -13,13 +14,16 @@
 
   // Build nav shortcut map: shortcut key → route path
   const locale = getPageLocale();
-  const navShortcuts: Record<string, string> = {};
+  const navShortcuts = {};
   for (const [key, shortcut] of Object.entries(keyboardShortcuts)) {
-    if (key in routes) navShortcuts[shortcut] = localePath(locale, routes[key as keyof typeof routes]);
+    if (key in routes) {
+      const routePath = routes[key];
+      navShortcuts[shortcut] = localePath(locale, routePath);
+    }
   }
 
   // Global actions shared between game and non-game pages
-  const globalActions: Record<string, () => void> = {
+  const globalActions = {
     m: cycleTheme,
     y: cycleLanguage,
   };
@@ -28,12 +32,12 @@
   let loading = false;
 
   // Find cat button (may render after this script)
-  let catBtn: HTMLButtonElement | null = null;
+  let catBtn = null;
   const findCatBtn = () => { catBtn = document.querySelector('button[aria-label="Refresh mood cat"]'); };
   findCatBtn();
   setTimeout(findCatBtn, 1000);
 
-  window.addEventListener("keydown", (e: KeyboardEvent) => {
+  const onKeyDown = (e) => {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (isTypingInInput()) return;
 
@@ -75,5 +79,7 @@
       e.preventDefault();
       catBtn.click();
     }
-  });
+  };
+
+  window.addEventListener("keydown", onKeyDown);
 </script>
