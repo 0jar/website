@@ -109,6 +109,13 @@ export const hrefLangLanguages = supportedLanguages.filter((l) => l.code !== "to
 // Completed translations
 export const completedLanguages = ["en", "vi", "et", "ru", "da"] as const;
 
+// Map site language codes to Open Graph locale values
+export const ogLocaleMap: Record<string, string> = {
+  en: "en_US", vi: "vi_VN", "vi-Hani": "vi_VN", zh: "zh_CN", ru: "ru_RU",
+  da: "da_DK", et: "et_EE", tr: "tr_TR", pl: "pl_PL", sv: "sv_SE",
+  fi: "fi_FI", tok: "en_US",
+};
+
 // Theme constants
 export const themes = ["light", "dark", "system"] as const;
 export type Theme = (typeof themes)[number];
