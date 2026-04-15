@@ -9,7 +9,7 @@ See the site in action:
 - [https://jarema.vercel.app](https://jarema.vercel.app) (backup)
 - [https://jarema.netlify.app](https://jarema.netlify.app) (backup)
 
-![Screenshot of the first fold of website's homepage in dark mode. The hero section centers a main heading, a short bio and a flex row of four action buttons. The lower section uses a two column layout. The left column displays three blog post cards with titles, excerpts, dates and read times. The right column displays a dynamic now section.](<jarema.me - Salvestamata.jpg>)
+![Screenshot of the first fold of website's homepage in dark mode. The hero section centers a main heading, a short bio and a flex row of four action buttons. The lower section uses a two column layout. The left column displays three blog post cards with titles, excerpts, dates and read times. The right column displays a dynamic now section.](<salvestamata.png>)
 
 ## Architecture
 
