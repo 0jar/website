@@ -72,39 +72,18 @@ const resolvedOgImage = ogImage
   : `${siteUrl}/android-chrome-512x512.png`;
 
 const defaultBreadcrumbs: BreadcrumbItem[] = (() => {
-  const pathname = Astro.url.pathname;
-  const segments = pathname.split("/").filter(Boolean);
+  const segments = Astro.url.pathname.split("/").filter(Boolean);
+  const isBlogDatedPath = segments[0] === "blog" && /^\d{4}$/.test(segments[1] ?? "") && /^(0?[1-9]|1[0-2])$/.test(segments[2] ?? "");
+  const items: BreadcrumbItem[] = [{ name: "Home", url: siteUrl }];
 
-  const isBlogDatedPath =
-    segments[0] === "blog" &&
-    /^\d{4}$/.test(segments[1] ?? "") &&
-    /^(0?[1-9]|1[0-2])$/.test(segments[2] ?? "");
-
-  const items: BreadcrumbItem[] = [
-    {
-      name: "Home",
-      url: siteUrl,
-    },
-  ];
-
-  if (segments.length === 0) return items;
-
-  const titleCrumb = title?.trim();
-  const prettify = (segment: string) =>
-    decodeURIComponent(segment)
-      .replace(/[-_]+/g, " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase());
+  const prettify = (segment: string) => decodeURIComponent(segment).replace(/[-_]+/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
   segments.forEach((segment, index) => {
-    const partialPath = `/${segments.slice(0, index + 1).join("/")}`;
-    const isLast = index === segments.length - 1;
-
-    // For blog posts stored at /blog/YYYY/MM/slug, skip YYYY and MM crumbs
     if (isBlogDatedPath && (index === 1 || index === 2)) return;
-
+    const isLast = index === segments.length - 1;
     items.push({
-      name: isLast && titleCrumb ? titleCrumb : prettify(segment),
-      url: new URL(partialPath, siteUrl).href,
+      name: isLast && title?.trim() ? title.trim() : prettify(segment),
+      url: new URL(`/${segments.slice(0, index + 1).join("/")}`, siteUrl).href,
     });
   });
 
