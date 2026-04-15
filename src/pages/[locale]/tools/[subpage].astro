@@ -3,7 +3,7 @@
 import { locales } from "@/i18n/routing";
 
 export function getStaticPaths() {
-  const globs = import.meta.glob("../../tools/*/index.astro");
+  const globs = import.meta.glob("../../tools/**/index.astro");
   const slugs = Object.keys(globs)
     .map((p) => p.replace(/^\.\.\/\.\.\/tools\//, "").replace(/\/index\.astro$/, ""))
     .filter((s) => s !== "");
@@ -13,7 +13,7 @@ export function getStaticPaths() {
 }
 
 const { subpage } = Astro.params;
-const globs = import.meta.glob("../../tools/*/index.astro");
+const globs = import.meta.glob("../../tools/**/index.astro");
 const entry = Object.entries(globs).find(([p]) =>
   p === `../../tools/${subpage}/index.astro`
 );
