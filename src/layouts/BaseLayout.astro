@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer.astro";
 import Galaxy from "@/components/layout/Galaxy.astro";
 import BarListener from "@/components/layout/BarListener.astro";
 import Banners from "@/components/layout/Banners.astro";
-import { hrefLangLanguages, siteUrl, siteName, siteDescription, siteKeywords, author, socialLinks, alternativeDomains, services, themeColors } from "@/lib/constants";
+import { hrefLangLanguages, siteUrl, siteName, siteDescription, siteKeywords, author, socialLinks, alternativeDomains, services, themeColors, ogLocaleMap } from "@/lib/constants";
 import { localePath, stripLocale } from "@/i18n/routing";
 import { translations } from "@/i18n";
 
@@ -90,30 +90,10 @@ const defaultBreadcrumbs: BreadcrumbItem[] = (() => {
   return items;
 })();
 
-const personName = author.name;
-const personEmail = author.email;
-const personNote = author.note;
-const personImage = `${siteUrl}${author.image}`;
-const personKeyUrl = `${siteUrl}${author.keyUrl}`;
 const personSameAs = [
   ...alternativeDomains,
   socialLinks.github,
 ];
-// Map site language codes to Open Graph locale values
-const ogLocaleMap: Record<string, string> = {
-  en: "en_US",
-  vi: "vi_VN",
-  "vi-Hani": "vi_VN",
-  zh: "zh_CN",
-  ru: "ru_RU",
-  da: "da_DK",
-  et: "et_EE",
-  tr: "tr_TR",
-  pl: "pl_PL",
-  sv: "sv_SE",
-  fi: "fi_FI",
-  tok: "en_US",
-};
 
 const ogLocale = ogLocaleMap[lang] ?? "en_US";
 
@@ -121,10 +101,10 @@ const structuredDataGraph: any[] = [
   {
     "@type": "Person",
     "@id": `${siteUrl}/#person`,
-    name: personName,
+    name: author.name,
     url: siteUrl,
-    image: personImage,
-    email: `mailto:${personEmail}`,
+    image: `${siteUrl}${author.image}`,
+    email: `mailto:${author.email}`,
     sameAs: personSameAs,
   },
   {
@@ -299,11 +279,11 @@ const structuredData = {
     <!-- h-card -->
     <div class="sr-only">
       <div class="h-card vcard">
-        <a class="p-name u-url u-uid fn url uid" href={siteUrl}>{personName}</a>
-        <img class="u-photo u-logo photo logo" src={personImage} alt="" />
-        <span class="p-note note">{personNote}</span>
-        <a class="u-email email" href={`mailto:${personEmail}`}>{personEmail}</a>
-        <a class="u-key key" href={personKeyUrl}>{personKeyUrl}</a>
+        <a class="p-name u-url u-uid fn url uid" href={siteUrl}>{author.name}</a>
+        <img class="u-photo u-logo photo logo" src={author.image} alt="" />
+        <span class="p-note note">{author.note}</span>
+        <a class="u-email email" href={`mailto:${author.email}`}>{author.email}</a>
+        <a class="u-key key" href={author.keyUrl}>{author.keyUrl}</a>
         <span class="p-category category">{author.category}</span>
         <span class="p-country-name country-name">{author.country}</span>
 
