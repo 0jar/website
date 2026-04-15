@@ -36,11 +36,6 @@ export default defineConfig({
           target: 'https://status.cafe',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api\/status\.json/, '/users/jarema/status.json')
-        },
-        '/stats': {
-          target: 'https://cloud.umami.is',
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/stats/, '')
         }
       }
     },
