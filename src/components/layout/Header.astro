@@ -11,7 +11,8 @@ const basePath = stripLocale(pathname);
 const isActive = (href: string) => href === "/" ? basePath === "/" : basePath.startsWith(href);
 const navState = navItems.map((item) => ({ ...item, href: localePath(lang, item.href), active: isActive(item.href) }));
 
-const navBase = "text-sm transition-colors hover:text-primary whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm";
+const focusBase = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
+const navBase = `text-sm transition-colors hover:text-primary whitespace-nowrap ${focusBase} rounded-sm`;
 
 // Reused SVG path data
 const gearPath = "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z";
@@ -36,7 +37,7 @@ const toggles = [
     <div class="flex items-center gap-2 min-w-0 flex-1">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href={localePath(lang, "/")} class="flex items-center gap-2 transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md" aria-label={`${author.name} - Homepage`}>
+        <a href={localePath(lang, "/")} class={`flex items-center gap-2 transition-opacity hover:opacity-80 ${focusBase} rounded-md`} aria-label={`${author.name} - Homepage`}>
           <div class="relative size-8 overflow-hidden">
             <Image src="/favicon-128.png" alt={`${author.name}'s logo`} width={32} height={32} class="size-8" aria-hidden="true" loading="eager" fetchpriority="high" />
           </div>
@@ -67,7 +68,7 @@ const toggles = [
 
       <!-- Settings menu -->
       <details id="settings-menu" class="group relative">
-        <summary class="p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Settings">
+        <summary class={`p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden ${focusBase}`} aria-label="Settings">
           <svg {...iconBase} width="20" height="20" aria-hidden="true">
             <path d={gearPath} /><circle cx="12" cy="12" r="3" />
           </svg>
@@ -126,7 +127,7 @@ const toggles = [
               </svg>
               <T key="settings.fontFamily" class="text-sm font-medium" id="font-family-label" />
             </div>
-            <select id="settings-font-select" aria-labelledby="font-family-label" class="font-preview-select px-3 py-1.5 text-sm font-medium bg-muted text-foreground border border-border rounded-md transition-all hover:bg-muted/80 hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:border-primary cursor-pointer">
+            <select id="settings-font-select" aria-labelledby="font-family-label" class={`font-preview-select px-3 py-1.5 text-sm font-medium bg-muted text-foreground border border-border rounded-md transition-all hover:bg-muted/80 hover:border-primary/50 ${focusBase}`}>
               <option value="personal" style="font-family: 'Lexend', ui-sans-serif, system-ui, sans-serif;"><T key="settings.fontPersonal" /></option>
               <option value="system" style="font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Nimbus Sans L', Roboto, Noto, 'Segoe UI', Arial, Helvetica, 'Helvetica Neue', sans-serif;"><T key="settings.fontSystem" /></option>
               <option value="atkinson" style="font-family: 'Atkinson Hyperlegible', sans-serif;">Atkinson Hyperlegible</option>
@@ -182,7 +183,7 @@ const toggles = [
 
       <!-- Mobile hamburger menu -->
       <details class="group lg:hidden relative">
-        <summary class="p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" aria-label="Toggle navigation menu">
+        <summary class={`p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden ${focusBase}`} aria-label="Toggle navigation menu">
           <svg class="group-open:hidden" {...iconBase} width="20" height="20" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg class="hidden group-open:block" {...iconBase} width="20" height="20" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
         </summary>
@@ -191,7 +192,7 @@ const toggles = [
             <a
               href={href}
               class:list={[
-                "block px-4 py-2 text-sm transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset",
+                `block px-4 py-2 text-sm transition-colors hover:bg-muted ${focusBase}`,
                 active ? "text-foreground font-medium bg-muted/50" : "text-muted-foreground",
               ]}
               aria-current={active ? "page" : undefined}
@@ -207,66 +208,7 @@ const toggles = [
 
 <script>
   import { applyTheme } from '@/lib/utils/theme-utils';
-
-  const activeClass = ['bg-primary', 'text-primary-foreground'];
-  const inactiveClass = ['text-muted-foreground', 'hover:bg-muted'];
-  const fontClasses = ['personal-fonts', 'atkinson-font', 'be-vietnam-pro-font', 'basier-font', 'dyslexia-font', 'geist-font', 'grandstander-font', 'lexend-font', 'outfit-font', 'recursive-font', 'space-grotesk-font', 'tiresias-font'];
-
-  const setToggle = (btn: HTMLButtonElement, on: boolean) => {
-    btn.setAttribute('aria-checked', String(on));
-    const knob = btn.querySelector('span');
-    if (!knob) return;
-    btn.classList.toggle('bg-primary', on);
-    btn.classList.toggle('bg-muted', !on);
-    knob.classList.toggle('translate-x-4', on);
-    knob.classList.toggle('translate-x-0.5', !on);
-    knob.classList.toggle('bg-white', on);
-    knob.classList.toggle('bg-muted-foreground', !on);
-  };
-
-  const bindToggle = (id: string, key: string, onUpdate: (on: boolean) => void) => {
-    const btn = document.getElementById(id) as HTMLButtonElement | null;
-    if (!btn) return;
-    const on = (localStorage.getItem(key) ?? btn.getAttribute('aria-checked')) === 'true';
-    setToggle(btn, on);
-    onUpdate(on);
-    btn.onclick = () => {
-      const next = btn.getAttribute('aria-checked') !== 'true';
-      localStorage.setItem(key, String(next));
-      setToggle(btn, next);
-      onUpdate(next);
-    };
-  };
-
-  const updateRadioGroup = (selector: string, storageKey: string, fallback: string) => {
-    const current = localStorage.getItem(storageKey) || fallback;
-    document.querySelectorAll<HTMLButtonElement>(selector).forEach((btn) => {
-      const active = Object.values(btn.dataset)[0] === current;
-      btn.setAttribute('aria-checked', String(active));
-      activeClass.forEach(c => btn.classList.toggle(c, active));
-      inactiveClass.forEach(c => btn.classList.toggle(c, !active));
-    });
-  };
-
-  const bindRadioGroup = (selector: string, storageKey: string, fallback: string, signal: AbortSignal, onUpdate?: (value: string) => void) => {
-    updateRadioGroup(selector, storageKey, fallback);
-    document.querySelectorAll<HTMLButtonElement>(selector).forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const value = Object.values(btn.dataset)[0];
-        if (value) {
-          localStorage.setItem(storageKey, value);
-          updateRadioGroup(selector, storageKey, fallback);
-          onUpdate?.(value);
-        }
-      }, { signal });
-    });
-  };
-
-  const applyFont = (font: string) => {
-    document.documentElement.classList.remove(...fontClasses);
-    const className = font === 'personal' ? 'personal-fonts' : font === 'system' ? '' : `${font}-font`;
-    if (className) document.documentElement.classList.add(className);
-  };
+  import { bindToggle, bindRadioGroup, applyFont, setToggle } from '@/lib/utils/settings';
 
   let ac: AbortController;
 
