@@ -207,8 +207,11 @@ const showAndroidCountdown = daysLeft > 0;
   if (banner) {
     // Replace X with actual days
     const text = document.getElementById("countdown-text");
-    const days = banner.dataset.days;
-    if (text && days) text.textContent = text.textContent.replace("X", days);
+    const deadline = new Date(Date.UTC(2026, 8, 1, 0, 0, 0));
+    const days = Math.ceil((deadline.getTime() - Date.now()) / 864e5);
+    if (days <= 0) { banner.hidden = true; } else if (text) {
+      text.textContent = text.textContent.replace("X", String(days));
+    }
 
     // Hide if previously dismissed
     if (localStorage.getItem("androidCountdownDismissed") === "true") {
