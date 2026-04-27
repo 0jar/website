@@ -2,6 +2,8 @@
 
 A personal website built with [Astro](https://astro.build).
 
+This repository is hosted on [GitHub](https://github.com/jartf/website) and mirrored on [Codeberg](https://codeberg.org/jartf/website) and [GitLab](https://gitlab.com/jartf/website).
+
 See the site in action:
 
 - [https://jarema.me](https://jarema.me)
