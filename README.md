@@ -33,6 +33,8 @@ The project supports both Vercel and Netlify adapters. The adapter is selected b
 - Default adapter: `@astrojs/vercel`
 - If `NETLIFY` environment variable is set: `@astrojs/netlify`
 
+Both Vercel and Netlify deploy from the [GitHub mirror](https://github.com/jartf/website).
+
 Build output is static (`output: "static"`) with dynamic runtime endpoints only where explicitly configured.
 
 See line 7 of the [astro.config.mjs](/astro.config.mjs) for implementation :)
