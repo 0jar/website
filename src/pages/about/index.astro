@@ -6,11 +6,27 @@ import { author } from '@/lib/constants';
 
 const title = "About me";
 const description = "The story of who I am, where I come from, what my passion is, and what I'm working toward.";
-const chapters = [...[1, 2, 3, 4, 5].map(num => ({ num, key: String(num) })), { num: 6, key: "6", hidden: true }];
+
+type ChapterConfig = {
+  num: number;
+  paragraphs: number;
+  hidden?: boolean;
+  quote?: { after: number };
+  specialLastParagraph?: boolean;
+};
+
+const chapters: ChapterConfig[] = [
+  { num: 1, paragraphs: 3 },
+  { num: 2, paragraphs: 3 },
+  { num: 3, paragraphs: 3 },
+  { num: 4, paragraphs: 3, quote: { after: 2 } },
+  { num: 5, paragraphs: 4 },
+  { num: 6, paragraphs: 4, hidden: true, specialLastParagraph: true },
+];
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container mx-auto px-4 py-8 max-w-4xl">
+  <div id="top" class="container mx-auto px-4 py-8 max-w-4xl">
     <header class="text-center mb-12">
       <T key="about.title" tag="h1" class="text-4xl font-bold mb-4" />
       <T key="about.description" tag="p" class="text-muted-foreground text-lg max-w-2xl mx-auto" />
@@ -31,62 +47,57 @@ const chapters = [...[1, 2, 3, 4, 5].map(num => ({ num, key: String(num) })), { 
 
     <nav class="flex flex-wrap justify-center gap-2 mb-10" aria-label="Chapter navigation">
       {chapters.map((ch) => (
-        <a href={`#chapter-${ch.num}`} class:list={["px-3 py-1.5 rounded-full border text-sm hover:bg-accent transition-colors", ('hidden' in ch) && "hidden-chapter hidden"]} data-hidden-chapter={('hidden' in ch) || undefined}>{ch.num}</a>
+        <a
+          href={`#chapter-${ch.num}`}
+          aria-label={`Chapter ${ch.num}`}
+          class:list={[
+            "px-3 py-1.5 rounded-full border text-sm hover:bg-accent transition-colors",
+            ch.hidden && "hidden-chapter hidden",
+          ]}
+          data-hidden-chapter={ch.hidden ? "true" : undefined}
+        >
+          {ch.num}
+        </a>
       ))}
     </nav>
 
     <div class="space-y-16">
-      {[1, 2, 3].map(num => (
-        <section id={`chapter-${num}`} class="scroll-mt-20">
+      {chapters.map((ch) => (
+        <section
+          id={`chapter-${ch.num}`}
+          class:list={["scroll-mt-20", ch.hidden && "hidden-chapter hidden"]}
+        >
           <h2 class="text-2xl font-bold mb-6 text-primary">
-            <span class="text-muted-foreground mr-2">{num}.</span>
-            <T key={`about.chapters.${num}.title`} />
+            <span class="text-muted-foreground mr-2">{ch.num}.</span>
+            <T key={`about.chapters.${ch.num}.title`} />
           </h2>
-          <div class="prose-lg max-w-none space-y-4 text-justify">
-            {[1, 2, 3].map(i => <T key={`about.chapters.${num}.content${i}`} tag="p" />)}
+          <div class="prose-lg max-w-none space-y-4">
+            {Array.from({ length: ch.paragraphs }, (_, i) => i + 1).map((i) => (
+              <>
+                <T
+                  key={`about.chapters.${ch.num}.content${i}`}
+                  tag="p"
+                  class={ch.specialLastParagraph && i === ch.paragraphs
+                    ? "font-medium text-foreground not-italic"
+                    : undefined}
+                />
+                {ch.quote?.after === i && (
+                  <blockquote
+                    class="border-l-4 border-primary pl-4 italic my-6"
+                    title={`about.chapters.${ch.num}.quoteTooltip`}
+                  >
+                    <T key={`about.chapters.${ch.num}.quote`} tag="p" />
+                  </blockquote>
+                )}
+              </>
+            ))}
           </div>
         </section>
       ))}
-
-      <section id="chapter-4" class="scroll-mt-20">
-        <h2 class="text-2xl font-bold mb-6 text-primary">
-          <span class="text-muted-foreground mr-2">4.</span>
-          <T key="about.chapters.4.title" />
-        </h2>
-        <div class="prose-lg max-w-none space-y-4 text-justify">
-          <T key="about.chapters.4.content1" tag="p" />
-          <T key="about.chapters.4.content2" tag="p" />
-          <blockquote class="border-l-4 border-primary pl-4 italic my-6">
-            <T key="about.chapters.4.quote" tag="p" />
-          </blockquote>
-          <T key="about.chapters.4.content3" tag="p" />
-        </div>
-      </section>
-
-      <section id="chapter-5" class="scroll-mt-20">
-        <h2 class="text-2xl font-bold mb-6 text-primary">
-          <span class="text-muted-foreground mr-2">5.</span>
-          <T key="about.chapters.5.title" />
-        </h2>
-        <div class="prose-lg max-w-none space-y-4 text-justify">
-          {[1, 2, 3, 4].map(i => <T key={`about.chapters.5.content${i}`} tag="p" />)}
-        </div>
-      </section>
-
-      <section id="chapter-6" class="scroll-mt-20 hidden-chapter hidden">
-        <h2 class="text-2xl font-bold mb-6 text-primary">
-          <span class="text-muted-foreground mr-2">6.</span>
-          <T key="about.chapters.6.title" />
-        </h2>
-        <div class="prose-lg max-w-none space-y-4 text-justify">
-          {[1, 2, 3].map(i => <T key={`about.chapters.6.content${i}`} tag="p" />)}
-          <T key="about.chapters.6.content4" tag="p" class="font-medium text-foreground not-italic" />
-        </div>
-      </section>
     </div>
 
     <div class="text-center mt-16">
-      <a href="#" class="text-sm text-muted-foreground hover:text-primary transition-colors">↑ Back to top</a>
+      <a href="#top" class="text-sm text-muted-foreground hover:text-primary transition-colors">↑ Back to top</a>
     </div>
   </div>
 </BaseLayout>
