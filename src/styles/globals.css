@@ -421,7 +421,7 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
 
 .personal-fonts,
 .personal-fonts :is(p, span, li, a, button) {
-  font-family: var(--font-personal-body) !important;
+  font-family: var(--font-personal-body);
 }
 
 .lexend-font,
@@ -501,7 +501,16 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
   .space-grotesk-font,
   .tiresias-font
 ) * {
-  font-family: var(--preferred-font-family) !important;
+  font-family: var(--preferred-font-family);
+}
+
+.font-mono, .font-mono *,
+.font-monaspice, .font-monaspice * {
+  font-family: var(--font-monaspice), monospace !important;
+}
+
+.font-vi-hani, .font-vi-hani * {
+  font-family: var(--font-vi-hani), serif !important;
 }
 
 /* Font preview dropdown styling */
