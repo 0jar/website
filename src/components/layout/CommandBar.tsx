@@ -16,7 +16,7 @@ import {
 
 // Inline KeyboardShortcut component
 const KeyboardShortcut = ({ children }: { children: JSX.Element | string | number }) => (
-  <kbd className="px-1.5 py-0.5 text-xs bg-muted rounded border border-border font-mono">
+  <kbd className="px-1.5 py-0.5 text-xs bg-muted rounded border border-border font-monaspice">
     {children}
   </kbd>
 );
