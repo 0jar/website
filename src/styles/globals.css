@@ -236,10 +236,6 @@
     --ring: 195 100% 65%;
   }
 
-  .dark {
-    /* Dark theme inherits from :root */
-  }
-
   /* High contrast overrides, dark */
   .high-contrast {
     --foreground: 0 0% 100%;
@@ -410,6 +406,15 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
   }
 }
 
+.reduce-motion *,
+.reduce-motion ::before,
+.reduce-motion ::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
 .dyslexia-font,
 .dyslexia-font * {
   font-family: 'OpenDyslexic', sans-serif !important;
@@ -488,23 +493,10 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
   .recursive-font,
   .space-grotesk-font,
   .tiresias-font
-),
-:is(
-  .lexend-font,
-  .atkinson-font,
-  .basier-font,
-  .be-vietnam-pro-font,
-  .geist-font,
-  .grandstander-font,
-  .outfit-font,
-  .recursive-font,
-  .space-grotesk-font,
-  .tiresias-font
 ) * {
   font-family: var(--preferred-font-family);
 }
 
-.font-mono, .font-mono *,
 .font-monaspice, .font-monaspice * {
   font-family: var(--font-monaspice), monospace !important;
 }
@@ -532,15 +524,6 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
 [data-locale="zh"],
 [data-locale="zh"] * {
   font-family: 'Noto Sans SC', var(--font-system) !important;
-}
-
-.reduce-motion *,
-.reduce-motion ::before,
-.reduce-motion ::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
 }
 
 /* Stars background for dark mode */
@@ -739,6 +722,7 @@ html:not([lang="en"]) [data-t-key]:empty {
     ::view-transition-old(root),
     ::view-transition-new(root) { animation: none; }
 }
+
 .reduce-motion ::view-transition-old(root),
 .reduce-motion ::view-transition-new(root) { animation: none; }
 
