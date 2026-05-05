@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import CommitTimeline from "@/components/CommitTimeline.astro";
 import T from "@/components/T.astro";
 import { Image } from "astro:assets";
 import { author, authorTimezone, authorTimezoneLabel } from '@/lib/constants';
@@ -170,41 +171,11 @@ o   o
     </div>
 
     <!-- Git history -->
-    <article class="mt-4 bg-card text-card-foreground border rounded-lg p-4 shadow-sm overflow-hidden text-sm">
-      <div class="divide-y divide-border">
-        {commits.map((commit) => (
-          <div class="flex items-center gap-3 p-3 hover:bg-muted/50 transition-colors group">
-            <Image src="/favicon.png" alt={commit.author} width={24} height={24} class="rounded-sm flex-shrink-0" />
-            <span class="font-medium text-muted-foreground w-15">{commit.author}</span>
-            <span class="px-2 py-0.5 bg-muted/80 text-muted-foreground rounded border border-border/50 hidden sm:block text-xs font-monaspice">{commit.hash.substring(0, 10)}</span>
-            <span class="flex-1 font-medium">{commit.msg}</span>
-            <div class="hidden md:flex gap-1">
-              {commit.badges.map(badge => (
-                <span class="px-1.5 text-[12px] font-bold tracking-wider rounded-sm border border-primary/20 text-primary/70">{badge}</span>
-              ))}
-            </div>
-            <span class="text-xs text-muted-foreground whitespace-nowrap ml-auto">
-              <span class="sm:hidden">{commit.date.slice(-4)}</span>
-              <span class="hidden sm:inline">{commit.date}</span>
-            </span>
-            <div class="flex gap-1 opacity-100">
-              <button class="p-1 hover:bg-accent rounded text-muted-foreground copy-hash-btn" data-hash={commit.hash} aria-label={t(lang, "about.timeline.copyHash")} title={t(lang, "about.timeline.copyHashTitle")}><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </article>
+    <CommitTimeline commits={commits} />
   </div>
 </BaseLayout>
 
 <script>
-  document.querySelectorAll('.copy-hash-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const hash = btn.getAttribute('data-hash');
-      if (hash) navigator.clipboard.writeText(hash);
-    });
-  });
-
   // Time widget
   function updateTimes() {
     const authorEl = document.getElementById("author-time");
