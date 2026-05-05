@@ -26,6 +26,24 @@
       ]
     },
     {
+      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)/:path((?!(?:retro|about|records|now|guestbook)(?:/|$)).+)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/:path((?!(?:retro|about|records|now|guestbook)(?:/|$)).+)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
       "source": "/",
       "headers": [
         {
@@ -44,7 +62,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z][a-z]?)/about/:path*",
+      "source": "/:locale([a-z]{2,3})/about/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -62,7 +80,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z][a-z]?)/now/:path*",
+      "source": "/:locale([a-z]{2,3})/now/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -80,29 +98,11 @@
       ]
     },
     {
-      "source": "/:locale([a-z][a-z]?)/guestbook/:path*",
+      "source": "/:locale([a-z]{2,3})/guestbook/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
-        }
-      ]
-    },
-    {
-      "source": "/:locale([a-z][a-z]?)/:path((?!(?:retro|about|records|now|guestbook)(?:/|$)).+)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
-        }
-      ]
-    },
-    {
-      "source": "/:path((?!(?:retro|about|records|now|guestbook)(?:/|$)).+)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
         }
       ]
     },
@@ -126,7 +126,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z][a-z]?)/records/:path*",
+      "source": "/:locale([a-z]{2,3})/records/:path*",
       "headers": [
         { "key": "Request-OTR", "value": "1" },
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z][a-z]?)/retro/:path*",
+      "source": "/:locale([a-z]{2,3})/retro/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
