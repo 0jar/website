@@ -22,6 +22,7 @@ export const author = {
 
 // Social media and identity links
 export const socialLinks = {
+  codeberg: "https://codeberg.org/jartf",
   github: "https://github.com/jartf",
   pronounsPage: "https://pronouns.page/@jerryv",
 } as const;
