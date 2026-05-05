@@ -35,6 +35,15 @@
       ]
     },
     {
+      "source": "/about/:path*",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me api.maptiler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src api.maptiler.com; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com api.maptiler.com tiles.openstreetmap.org; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
       "source": "/now/:path*",
       "headers": [
         {
@@ -53,7 +62,7 @@
       ]
     },
     {
-      "source": "/:path((?!(?:retro|records|now|guestbook)(?:/|$)).+)",
+      "source": "/:path((?!(?:retro|about|records|now|guestbook)(?:/|$)).+)",
       "headers": [
         {
           "key": "Content-Security-Policy",
