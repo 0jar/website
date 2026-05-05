@@ -10,7 +10,7 @@ const lang = Astro.locals?.lang || "en";
 const title = t(lang, "about.title");
 const description = t(lang, "about.description");
 
-const interestKeys = ["linguistics", "geopolitics", "internationalEconomics", "privacy", "security", "openSource", "selfHosting", "indieWeb", "digitalIdentity", "linux", "writing", "platformEcosystems"];
+const interestKeys = ["linguistics", "geopolitics", "internationalEconomics", "privacy", "security", "openSource", "selfHosting", "indieWeb", "digitalIdentity", "linux", "writing"];
 
 const languageList = [
   { langKey: "vi", level: "native" },
@@ -39,15 +39,15 @@ const commits = [
 ---
 
 <BaseLayout title={title} description={description}>
-  <div id="top" class="container mx-auto px-4 py-8 max-w-5xl">
+  <div id="top" class="container mx-auto px-4 py-8 max-w-6xl">
     <header class="text-center mb-12">
       <T key="about.title" tag="h1" class="text-4xl font-bold mb-4" />
       <T key="about.description" tag="p" class="text-muted-foreground text-lg max-w-2xl mx-auto" />
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-4">
       <!-- Profile card -->
-      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm md:col-span-2 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm md:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center justify-center gap-6">
         <Image src="/favicon.png" alt={author.name} width={120} height={120} class="u-photo rounded-full" />
         <div class="text-center sm:text-left">
           <h2 class="p-name text-2xl font-bold">{author.name}</h2>
@@ -61,7 +61,7 @@ const commits = [
       </article>
 
       <!-- Stats box -->
-      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center text-center">
+      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center text-center md:col-span-1 lg:col-span-1">
         <div class="grid grid-cols-2 gap-4 w-full">
           <div>
             <div class="text-3xl font-bold text-primary">1</div>
@@ -82,57 +82,82 @@ const commits = [
         </div>
       </article>
 
+      <!-- Time widget -->
+      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center md:col-span-1 lg:col-span-1" aria-labelledby="timezone-heading">
+        <T key="home.time" tag="h2" id="timezone-heading" class="text-lg font-bold mb-3 text-center" />
+        <div class="flex flex-col gap-2 w-full">
+          <div class="text-center">
+            <p id="author-time" class="text-2xl font-bold text-primary" data-timezone={authorTimezone}>--:--:--</p>
+            <p class="text-xs text-muted-foreground mt-1"><T key="home.myTime" /> ({authorTimezoneLabel})</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Interests box -->
+      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center md:col-span-2 lg:col-span-1">
+        <h3 class="text-lg font-semibold mb-4">{t(lang, "about.interests.title")}</h3>
+        <div class="flex flex-wrap gap-2">
+          {interestKeys.map((key) => (
+             <span class="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-md border border-border">{t(lang, `about.interests.tags.${key}`)}</span>
+          ))}
+        </div>
+      </article>
+
       <!-- Terminal card -->
-      <article class="bg-[#0c0c0c] border border-border rounded-lg p-6 shadow-sm font-monaspice md:col-span-2 overflow-x-auto text-sm">
+      <article class="bg-[#0c0c0c] border border-border rounded-lg p-6 shadow-sm font-monaspice md:col-span-2 lg:col-span-2 md:row-span-2 overflow-x-auto text-sm">
         <div class="flex items-center gap-2 mb-4 text-muted-foreground opacity-50">
           <div class="w-3 h-3 rounded-full bg-red-500"></div>
           <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div class="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <p class="mb-2"><span class="text-blue-400">jar@jarema:~/gits/website</span>$ fastfetch</p>
+        <p class="mb-2"><span class="text-primary">jar@jarema:~/gits/website</span>$ fastfetch</p>
         <div class="flex gap-4">
-          <div class="hidden sm:block mt-2 text-blue-500 font-bold whitespace-pre">
+          <div class="hidden sm:block mt-2 text-primary font-bold whitespace-pre">
 ​  o  ​
      ​
 o   o
           </div>
           <div>
-            <p><span class="text-blue-400 font-bold">├─ OS: </span>{t(lang, "about.terminal.fastfetch.os")}</p>
-            <p><span class="text-blue-400 font-bold">├─ Host: </span>{t(lang, "about.terminal.fastfetch.host")}</p>
-            <p><span class="text-blue-400 font-bold">├─ Uptime: </span>{t(lang, "about.terminal.fastfetch.uptime")}</p>
-            <p><span class="text-blue-400 font-bold">├─ Shell: </span>{t(lang, "about.terminal.fastfetch.shell")}</p>
-            <p><span class="text-blue-400 font-bold">├─ Theme: </span>{t(lang, "about.terminal.fastfetch.theme")}</p>
-            <p><span class="text-blue-400 font-bold">├─ CPU: </span>{t(lang, "about.terminal.fastfetch.cpu")}</p>
-            <p><span class="text-blue-400 font-bold">└─ GPU: </span>{t(lang, "about.terminal.fastfetch.gpu")}</p>
+            <p><span class="text-primary font-bold">├─ OS: </span>{t(lang, "about.terminal.fastfetch.os")}</p>
+            <p><span class="text-primary font-bold">├─ Host: </span>{t(lang, "about.terminal.fastfetch.host")}</p>
+            <p><span class="text-primary font-bold">├─ Uptime: </span>{t(lang, "about.terminal.fastfetch.uptime")}</p>
+            <p><span class="text-primary font-bold">├─ Shell: </span>{t(lang, "about.terminal.fastfetch.shell")}</p>
+            <p><span class="text-primary font-bold">├─ Theme: </span>{t(lang, "about.terminal.fastfetch.theme")}</p>
+            <p><span class="text-primary font-bold">├─ CPU: </span>{t(lang, "about.terminal.fastfetch.cpu")}</p>
+            <p><span class="text-primary font-bold">└─ GPU: </span>{t(lang, "about.terminal.fastfetch.gpu")}</p>
           </div>
         </div>
-        <p class="mt-2 mb-2"><span class="text-blue-400">jar@jarema:~/gits/website</span>$ whoami</p>
+        <p class="mt-2 mb-2"><span class="text-primary">jar@jarema:~/gits/website</span>$ whoami</p>
         <div class="flex gap-4">
           <div class="hidden sm:block"></div>
           <div>
-            <p><span class="text-blue-400 font-bold">jar</span>@jarema</p>
-            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line1")}</p>
-            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line2")}</p>
-            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line3")}</p>
-            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line4")}</p>
-            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line5")}</p>
-            <p><span class="text-blue-400 font-bold">└─ </span>{t(lang, "about.terminal.whoami.line6")}</p>
+            <p><span class="text-primary font-bold">jar</span>@jarema</p>
+            <p><span class="text-primary font-bold">├─ </span>{t(lang, "about.terminal.whoami.line1")}</p>
+            <p><span class="text-primary font-bold">├─ </span>{t(lang, "about.terminal.whoami.line2")}</p>
+            <p><span class="text-primary font-bold">├─ </span>{t(lang, "about.terminal.whoami.line3")}</p>
+            <p><span class="text-primary font-bold">├─ </span>{t(lang, "about.terminal.whoami.line4")}</p>
+            <p><span class="text-primary font-bold">├─ </span>{t(lang, "about.terminal.whoami.line5")}</p>
+            <p><span class="text-primary font-bold">└─ </span>{t(lang, "about.terminal.whoami.line6")}</p>
           </div>
         </div>
-        <p class="mt-2"><span class="text-blue-400">jar@jarema:~/gits/website</span>$
+        <p class="mt-2"><span class="text-primary">jar@jarema:~/gits/website</span>$
         <span class="animate-blink">_</span></p>
       </article>
 
-      <!-- Interests grid -->
-      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center">
-        <h3 class="text-lg font-semibold mb-4 text-primary">{t(lang, "about.interests.title")}</h3>
-        <div class="flex flex-wrap gap-2 mb-6">
-          {interestKeys.map((key) => (
-             <span class="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-md border border-border">{t(lang, `about.interests.tags.${key}`)}</span>
-          ))}
-        </div>
+      <!-- Map box -->
+      <article class="bg-card text-card-foreground border rounded-lg overflow-hidden shadow-sm md:col-span-1 lg:col-span-1 md:row-span-2 relative">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://api.maptiler.com/tiles/satellite-night/?key=ZtNe0LkdF7pMF24Pxqme#4/21/105.8"
+          title="Map showing Jarema's location"
+          class="absolute inset-0 border-0"
+        ></iframe>
+      </article>
 
-        <h3 class="text-lg font-semibold mb-4 text-primary">{t(lang, "about.interests.languagesTitle")}</h3>
+      <!-- Languages box -->
+      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center md:col-span-3 lg:col-span-1">
+        <h3 class="text-lg font-semibold mb-4">{t(lang, "about.interests.languagesTitle")}</h3>
         <div class="flex flex-col gap-2 text-sm">
           {languageList.map(({ langKey, level }) => (
             <div class="flex justify-between items-center bg-accent/50 p-2 rounded border border-border">
@@ -145,7 +170,7 @@ o   o
     </div>
 
     <!-- Git history -->
-    <article class="mt-6 bg-card text-card-foreground border rounded-lg p-0 shadow-sm overflow-hidden text-sm">
+    <article class="mt-4 bg-card text-card-foreground border rounded-lg p-4 shadow-sm overflow-hidden text-sm">
       <div class="divide-y divide-border">
         {commits.map((commit) => (
           <div class="flex items-center gap-3 p-3 hover:bg-muted/50 transition-colors group">
@@ -179,4 +204,19 @@ o   o
       if (hash) navigator.clipboard.writeText(hash);
     });
   });
+
+  // Time widget
+  function updateTimes() {
+    const authorEl = document.getElementById("author-time");
+    if (!authorEl) return;
+
+    const now = new Date();
+    const fmt = (tz?: string) => now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", second: "2-digit", ...(tz && { timeZone: tz }) });
+
+    const tz = authorEl.dataset.timezone;
+    if (tz) authorEl.textContent = fmt(tz);
+  }
+
+  updateTimes();
+  setInterval(updateTimes, 1000);
 </script>
