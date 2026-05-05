@@ -35,7 +35,7 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)/)?about/:path*",
+      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/about/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)/)?now/:path*",
+      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/now/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -53,11 +53,20 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)/)?guestbook/:path*",
+      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/guestbook/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)/:path((?!(?:retro|about|records|now|guestbook)(?:/|$)).+)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
         }
       ]
     },
@@ -71,7 +80,7 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)/)?records/:path*",
+      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/records/:path*",
       "headers": [
         { "key": "Request-OTR", "value": "1" },
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
@@ -90,7 +99,7 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)/)?retro/:path*",
+      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/retro/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
