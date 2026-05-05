@@ -35,7 +35,7 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?about/:path*",
+      "source": "/about/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -44,7 +44,16 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?now/:path*",
+      "source": "/:locale([a-z]{2,3})/about/:path*",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me api.maptiler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src api.maptiler.com; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com api.maptiler.com tiles.openstreetmap.org; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/now/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -53,7 +62,25 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?guestbook/:path*",
+      "source": "/:locale([a-z]{2,3})/now/:path*",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is status.cafe; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/guestbook/:path*",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/:locale([a-z]{2,3})/guestbook/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -71,7 +98,7 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?records/:path*",
+      "source": "/records/:path*",
       "headers": [
         { "key": "Request-OTR", "value": "1" },
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
@@ -90,7 +117,35 @@
       ]
     },
     {
-      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?retro/:path*",
+      "source": "/:locale([a-z]{2,3})/records/:path*",
+      "headers": [
+        { "key": "Request-OTR", "value": "1" },
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
+        { "key": "CDN-Cache-Control", "value": "no-store" },
+        { "key": "Pragma", "value": "no-cache" },
+        { "key": "Expires", "value": "0" },
+        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" },
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" },
+        { "key": "Origin-Agent-Cluster", "value": "?1" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src 'none'; img-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/retro/:path*",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me api-gateway.umami.dev cloud.umami.is; font-src 'self'; img-src 'self' https: *.githubusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+        }
+      ]
+    }
+    {
+      "source": "/:locale([a-z]{2,3})/retro/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
