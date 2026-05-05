@@ -89,7 +89,7 @@
       ]
     },
     {
-      "source": "/:path((?!(?:retro|about|records|now|guestbook)(?:/|$)).+)",
+      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/:path((?!(?:retro|about|records|now|guestbook)(?:/|$)).+)",
       "headers": [
         {
           "key": "Content-Security-Policy",
