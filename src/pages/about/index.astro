@@ -2,7 +2,8 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { Image } from "astro:assets";
-import { author } from '@/lib/constants';
+import { author, authorTimezone, authorTimezoneLabel } from '@/lib/constants';
+import { icons } from '@/lib/icons';
 import { t } from "@/i18n";
 
 const lang = Astro.locals?.lang || "en";
@@ -90,7 +91,10 @@ const commits = [
         </div>
         <p class="mb-2"><span class="text-blue-400">jar@jarema:~/gits/website</span>$ fastfetch</p>
         <div class="flex gap-4">
-          <div class="hidden sm:block text-blue-500 font-bold whitespace-pre">
+          <div class="hidden sm:block mt-2 text-blue-500 font-bold whitespace-pre">
+​  o  ​
+     ​
+o   o
           </div>
           <div>
             <p><span class="text-blue-400 font-bold">├─ OS: </span>{t(lang, "about.terminal.fastfetch.os")}</p>
