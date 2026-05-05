@@ -9,3 +9,73 @@
   to = "https://cloud.umami.is/:splat"
   status = 200
   force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Xss-Protection = "0"
+    Referrer-Policy = "strict-origin"
+    Permissions-Policy = "interest-cohort=(), browsing-topics=(), camera=(), microphone=(), geolocation=(), usb=()"
+    Cross-Origin-Embedder-Policy = "unsafe-none"
+    Cross-Origin-Opener-Policy = "same-origin-allow-popups"
+    Cross-Origin-Resource-Policy = "cross-origin"
+    Access-Control-Allow-Origin = "*"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Server = "Jarema"
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is status.cafe; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/about/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me api.maptiler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src api.maptiler.com; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com api.maptiler.com tiles.openstreetmap.org; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/??/about/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me api.maptiler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src api.maptiler.com; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com api.maptiler.com tiles.openstreetmap.org; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/now/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is status.cafe; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/??/now/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is status.cafe; font-src 'self'; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/guestbook/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/??/guestbook/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' https: *.ytimg.com *.rcd.gg *.googleusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/records/*"
+  [headers.values]
+    Request-OTR = "1"
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
+    CDN-Cache-Control = "no-store"
+    Pragma = "no-cache"
+    Expires = "0"
+    Cross-Origin-Resource-Policy = "same-origin"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Origin-Agent-Cluster = "?1"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src 'none'; img-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+
+[[headers]]
+  for = "/retro/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me api-gateway.umami.dev cloud.umami.is; font-src 'self'; img-src 'self' https: *.githubusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; worker-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com *.me; upgrade-insecure-requests"
