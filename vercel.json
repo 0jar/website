@@ -35,7 +35,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/about/:path*",
+      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?about/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/now/:path*",
+      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?now/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/guestbook/:path*",
+      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?guestbook/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/records/:path*",
+      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?records/:path*",
       "headers": [
         { "key": "Request-OTR", "value": "1" },
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "source": "/:locale([a-z]{2,3}(-[A-Za-z]{4})?)?/retro/:path*",
+      "source": "/(([a-z]{2,3}(-[A-Za-z]{4})?)\/)?retro/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
