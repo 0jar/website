@@ -3,107 +3,176 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { Image } from "astro:assets";
 import { author } from '@/lib/constants';
+import { t } from "@/i18n";
 
-const title = "About me";
-const description = "The story of who I am, where I come from, what my passion is, and what I'm working toward.";
+const lang = Astro.locals?.lang || "en";
+const title = t(lang, "about.title");
+const description = t(lang, "about.description");
 
-type ChapterConfig = {
-  num: number;
-  paragraphs: number;
-  hidden?: boolean;
-  quote?: { after: number };
-  specialLastParagraph?: boolean;
-};
+const interestKeys = ["linguistics", "geopolitics", "internationalEconomics", "privacy", "security", "openSource", "selfHosting", "indieWeb", "digitalIdentity", "linux", "writing", "platformEcosystems"];
 
-const chapters: ChapterConfig[] = [
-  { num: 1, paragraphs: 3 },
-  { num: 2, paragraphs: 3 },
-  { num: 3, paragraphs: 3 },
-  { num: 4, paragraphs: 3, quote: { after: 2 } },
-  { num: 5, paragraphs: 4 },
-  { num: 6, paragraphs: 4, hidden: true, specialLastParagraph: true },
+const languageList = [
+  { langKey: "vi", level: "native" },
+  { langKey: "en", level: "c2" },
+  { langKey: "et", level: "b2" },
+  { langKey: "ru", level: "b2" },
+];
+
+const commits = [
+  { hash: "f07a4dd32795d2ce8162e15a4232201fb7df37f8", msg: t(lang, "about.timeline.commits.c15"), date: "7 Jan 2026", author: "Jarema", badges: ["HEAD", "main", "site"] },
+  { hash: "3f8063fca565dd8559d2c56b92ddc8335bdc6d45", msg: t(lang, "about.timeline.commits.c14"), date: "10 Sep 2025", author: "Jarema", badges: ["site"] },
+  { hash: "1db591f0f2012b211fd97e447fff3a626154d016", msg: t(lang, "about.timeline.commits.c13"), date: "25 Jun 2024", author: "Jarema", badges: ["site"] },
+  { hash: "75d7059f319542b680e338a5e3dcbf222c411524", msg: t(lang, "about.timeline.commits.c12"), date: "10 Jan 2024", author: "Jarema", badges: ["site"] },
+  { hash: "86ecbe40835d22715da47c200a254654db9bd267", msg: t(lang, "about.timeline.commits.c11"), date: "20 Jun 2023", author: "Jarema", badges: ["self"] },
+  { hash: "30a3efac2b2f162616c5e6ca59978396babd6049", msg: t(lang, "about.timeline.commits.c10"), date: "2021", author: "Jarema", badges: ["site"] },
+  { hash: "c1a1deb40f178fe3b7db812dc1d6736c8355a8c9", msg: t(lang, "about.timeline.commits.c9"), date: "2019", author: "Jarema", badges: ["self"] },
+  { hash: "d9b1f5292b83ad40f89f2415657f20b4e9d35846", msg: t(lang, "about.timeline.commits.c8"), date: "2018", author: "Jarema", badges: ["self"] },
+  { hash: "fe4c07a5b05f50e43a8941f97aa7ed53a9074d40", msg: t(lang, "about.timeline.commits.c7"), date: "2018", author: "Jarema", badges: ["self"] },
+  { hash: "a3f2c91b847d6e0f5c2a1d4b9e7f3082c6d5a1e8", msg: t(lang, "about.timeline.commits.c6"), date: "2017", author: "Jarema", badges: ["self"] },
+  { hash: "8f6d28ab534fdef8a1309f61c4ce241e6013dd64", msg: t(lang, "about.timeline.commits.c5"), date: "2015", author: "Jarema", badges: ["self"] },
+  { hash: "4bd52ba8a87b6b9d6eddb5751127eafa29053b50", msg: t(lang, "about.timeline.commits.c4"), date: "2013", author: "Jarema", badges: ["self"] },
+  { hash: "4321c9ca36011060da3eac01332f3306cd0cfc0d", msg: t(lang, "about.timeline.commits.c3"), date: "2011", author: "Jarema", badges: ["self"] },
+  { hash: "e1a053f47845cef67fea19d866a2293bb7d5967d", msg: t(lang, "about.timeline.commits.c2"), date: "2009", author: "Jarema", badges: ["self"] },
+  { hash: "682f8b5eb19fff888bff1119c8e6867270e69190", msg: t(lang, "about.timeline.commits.c1"), date: "2005", author: "Jarema", badges: ["root", "self"] },
 ];
 ---
 
 <BaseLayout title={title} description={description}>
-  <div id="top" class="container mx-auto px-4 py-8 max-w-4xl">
+  <div id="top" class="container mx-auto px-4 py-8 max-w-5xl">
     <header class="text-center mb-12">
       <T key="about.title" tag="h1" class="text-4xl font-bold mb-4" />
       <T key="about.description" tag="p" class="text-muted-foreground text-lg max-w-2xl mx-auto" />
     </header>
 
-    <div class="h-card mb-10 p-6 border rounded-lg bg-muted/10 flex flex-col sm:flex-row items-center gap-4">
-      <Image src="/favicon.png" alt={author.name} width={80} height={80} class="u-photo rounded-full" />
-      <div class="text-center sm:text-left">
-        <h2 class="p-name text-xl font-bold">{author.name}</h2>
-        <p class="p-note mt-1 text-muted-foreground">{author.note}</p>
-        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-2">
-          <a href="/" class="u-url u-uid text-sm text-primary hover:underline">jarema.me</a>
-          <a class="u-email text-sm text-primary hover:underline" href={`mailto:${author.email}`}>{author.email}</a>
-        </div>
-        <span class="p-category hidden">{author.category}</span>
-      </div>
-    </div>
-
-    <nav class="flex flex-wrap justify-center gap-2 mb-10" aria-label="Chapter navigation">
-      {chapters.map((ch) => (
-        <a
-          href={`#chapter-${ch.num}`}
-          aria-label={`Chapter ${ch.num}`}
-          class:list={[
-            "px-3 py-1.5 rounded-full border text-sm hover:bg-accent transition-colors",
-            ch.hidden && "hidden-chapter hidden",
-          ]}
-          data-hidden-chapter={ch.hidden ? "true" : undefined}
-        >
-          {ch.num}
-        </a>
-      ))}
-    </nav>
-
-    <div class="space-y-16">
-      {chapters.map((ch) => (
-        <section
-          id={`chapter-${ch.num}`}
-          class:list={["scroll-mt-20", ch.hidden && "hidden-chapter hidden"]}
-        >
-          <h2 class="text-2xl font-bold mb-6 text-primary">
-            <span class="text-muted-foreground mr-2">{ch.num}.</span>
-            <T key={`about.chapters.${ch.num}.title`} />
-          </h2>
-          <div class="prose-lg max-w-none space-y-4">
-            {Array.from({ length: ch.paragraphs }, (_, i) => i + 1).map((i) => (
-              <>
-                <T
-                  key={`about.chapters.${ch.num}.content${i}`}
-                  tag="p"
-                  class={ch.specialLastParagraph && i === ch.paragraphs
-                    ? "font-medium text-foreground not-italic"
-                    : undefined}
-                />
-                {ch.quote?.after === i && (
-                  <blockquote
-                    class="border-l-4 border-primary pl-4 italic my-6"
-                    title={`about.chapters.${ch.num}.quoteTooltip`}
-                  >
-                    <T key={`about.chapters.${ch.num}.quote`} tag="p" />
-                  </blockquote>
-                )}
-              </>
-            ))}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Profile card -->
+      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm md:col-span-2 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+        <Image src="/favicon.png" alt={author.name} width={120} height={120} class="u-photo rounded-full" />
+        <div class="text-center sm:text-left">
+          <h2 class="p-name text-2xl font-bold">{author.name}</h2>
+          <p class="p-note mt-2 text-muted-foreground">{author.note}</p>
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-4">
+            <a href="/" class="u-url u-uid text-sm text-primary hover:underline">jarema.me</a>
+            <a class="u-email text-sm text-primary hover:underline" href={`mailto:${author.email}`}>{author.email}</a>
           </div>
-        </section>
-      ))}
+          <span class="p-category hidden">{author.category}</span>
+        </div>
+      </article>
+
+      <!-- Stats box -->
+      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center text-center">
+        <div class="grid grid-cols-2 gap-4 w-full">
+          <div>
+            <div class="text-3xl font-bold text-primary">1</div>
+            <div class="text-xs text-muted-foreground mt-1">{t(lang, "about.stats.self")}</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-primary">6</div>
+            <div class="text-xs text-muted-foreground mt-1">{t(lang, "about.stats.languages")}</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-primary">5</div>
+            <div class="text-xs text-muted-foreground mt-1">{t(lang, "about.stats.siteVersions")}</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-primary">15+</div>
+            <div class="text-xs text-muted-foreground mt-1">{t(lang, "about.stats.yearsOnline")}</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Terminal card -->
+      <article class="bg-[#0c0c0c] border border-border rounded-lg p-6 shadow-sm font-monaspice md:col-span-2 overflow-x-auto text-sm">
+        <div class="flex items-center gap-2 mb-4 text-muted-foreground opacity-50">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <p class="mb-2"><span class="text-blue-400">jar@jarema:~/gits/website</span>$ fastfetch</p>
+        <div class="flex gap-4">
+          <div class="hidden sm:block text-blue-500 font-bold whitespace-pre">
+          </div>
+          <div>
+            <p><span class="text-blue-400 font-bold">├─ OS: </span>{t(lang, "about.terminal.fastfetch.os")}</p>
+            <p><span class="text-blue-400 font-bold">├─ Host: </span>{t(lang, "about.terminal.fastfetch.host")}</p>
+            <p><span class="text-blue-400 font-bold">├─ Uptime: </span>{t(lang, "about.terminal.fastfetch.uptime")}</p>
+            <p><span class="text-blue-400 font-bold">├─ Shell: </span>{t(lang, "about.terminal.fastfetch.shell")}</p>
+            <p><span class="text-blue-400 font-bold">├─ Theme: </span>{t(lang, "about.terminal.fastfetch.theme")}</p>
+            <p><span class="text-blue-400 font-bold">├─ CPU: </span>{t(lang, "about.terminal.fastfetch.cpu")}</p>
+            <p><span class="text-blue-400 font-bold">└─ GPU: </span>{t(lang, "about.terminal.fastfetch.gpu")}</p>
+          </div>
+        </div>
+        <p class="mt-2 mb-2"><span class="text-blue-400">jar@jarema:~/gits/website</span>$ whoami</p>
+        <div class="flex gap-4">
+          <div class="hidden sm:block"></div>
+          <div>
+            <p><span class="text-blue-400 font-bold">jar</span>@jarema</p>
+            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line1")}</p>
+            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line2")}</p>
+            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line3")}</p>
+            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line4")}</p>
+            <p><span class="text-blue-400 font-bold">├─ </span>{t(lang, "about.terminal.whoami.line5")}</p>
+            <p><span class="text-blue-400 font-bold">└─ </span>{t(lang, "about.terminal.whoami.line6")}</p>
+          </div>
+        </div>
+        <p class="mt-2"><span class="text-blue-400">jar@jarema:~/gits/website</span>$
+        <span class="animate-blink">_</span></p>
+      </article>
+
+      <!-- Interests grid -->
+      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center">
+        <h3 class="text-lg font-semibold mb-4 text-primary">{t(lang, "about.interests.title")}</h3>
+        <div class="flex flex-wrap gap-2 mb-6">
+          {interestKeys.map((key) => (
+             <span class="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-md border border-border">{t(lang, `about.interests.tags.${key}`)}</span>
+          ))}
+        </div>
+
+        <h3 class="text-lg font-semibold mb-4 text-primary">{t(lang, "about.interests.languagesTitle")}</h3>
+        <div class="flex flex-col gap-2 text-sm">
+          {languageList.map(({ langKey, level }) => (
+            <div class="flex justify-between items-center bg-accent/50 p-2 rounded border border-border">
+              <span class="font-medium">{t(lang, `language.${langKey}`)}</span>
+              <span class="text-xs px-2 py-0.5 bg-primary/20 text-primary rounded">{t(lang, `about.interests.levels.${level}`)}</span>
+            </div>
+          ))}
+        </div>
+      </article>
     </div>
 
-    <div class="text-center mt-16">
-      <a href="#top" class="text-sm text-muted-foreground hover:text-primary transition-colors">↑ Back to top</a>
-    </div>
+    <!-- Git history -->
+    <article class="mt-6 bg-card text-card-foreground border rounded-lg p-0 shadow-sm overflow-hidden text-sm">
+      <div class="divide-y divide-border">
+        {commits.map((commit) => (
+          <div class="flex items-center gap-3 p-3 hover:bg-muted/50 transition-colors group">
+            <Image src="/favicon.png" alt={commit.author} width={24} height={24} class="rounded-sm flex-shrink-0" />
+            <span class="font-medium text-muted-foreground w-15">{commit.author}</span>
+            <span class="px-2 py-0.5 bg-muted/80 text-muted-foreground rounded border border-border/50 hidden sm:block text-xs font-monaspice">{commit.hash.substring(0, 10)}</span>
+            <span class="flex-1 font-medium">{commit.msg}</span>
+            <div class="hidden md:flex gap-1">
+              {commit.badges.map(badge => (
+                <span class="px-1.5 text-[12px] font-bold tracking-wider rounded-sm border border-primary/20 text-primary/70">{badge}</span>
+              ))}
+            </div>
+            <span class="text-xs text-muted-foreground whitespace-nowrap ml-auto">
+              <span class="sm:hidden">{commit.date.slice(-4)}</span>
+              <span class="hidden sm:inline">{commit.date}</span>
+            </span>
+            <div class="flex gap-1 opacity-100">
+              <button class="p-1 hover:bg-accent rounded text-muted-foreground copy-hash-btn" data-hash={commit.hash} aria-label={t(lang, "about.timeline.copyHash")} title={t(lang, "about.timeline.copyHashTitle")}><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </article>
   </div>
 </BaseLayout>
 
 <script>
-  if (sessionStorage.getItem("showHiddenChapter") === "true") {
-    document.querySelectorAll(".hidden-chapter").forEach(el => el.classList.remove("hidden"));
-  }
+  document.querySelectorAll('.copy-hash-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const hash = btn.getAttribute('data-hash');
+      if (hash) navigator.clipboard.writeText(hash);
+    });
+  });
 </script>

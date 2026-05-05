@@ -108,40 +108,78 @@
   "about": {
     "title": "About me",
     "description": "The story of who I am, where I come from, what my passion is, and what I'm working toward.",
+    "stats": {
+      "self": "self",
+      "languages": "languages",
+      "siteVersions": "site versions",
+      "yearsOnline": "years online"
+    },
+    "terminal": {
+      "fastfetch": {
+        "os": "Fedora Linux",
+        "host": "jarema.me",
+        "uptime": "99.99%",
+        "shell": "bash",
+        "theme": "Starry Space [Jarema]",
+        "cpu": "1 human brain cell + cat brain",
+        "gpu": "Astro + Tailwind"
+      },
+      "whoami": {
+        "line1": "That one weird dreamy moody boy",
+        "line2": "Economics at a diplomacy school",
+        "line3": "Writes about tech and economics",
+        "line4": "Hanoi -> Tartu -> somewhere in between",
+        "line5": "ADHD, still figuring things out",
+        "line6": "Glad you're here :3"
+      }
+    },
+    "interests": {
+      "title": "Interests",
+      "languagesTitle": "Languages",
+      "tags": {
+        "linguistics": "Linguistics",
+        "geopolitics": "Geopolitics",
+        "internationalEconomics": "International economics",
+        "privacy": "Privacy",
+        "security": "Security",
+        "openSource": "Open source",
+        "selfHosting": "Self-hosting",
+        "indieWeb": "Indie web",
+        "digitalIdentity": "Digital identity",
+        "linux": "Linux",
+        "writing": "Writing",
+        "platformEcosystems": "Platform ecosystems"
+      },
+      "levels": {
+        "native": "Native",
+        "c2": "C2",
+        "b2": "B2",
+        "a2": "A2",
+        "a1": "A1"
+      }
+    },
+    "timeline": {
+      "copyHash": "Copy hash",
+      "copyHashTitle": "Copy full SHA",
+      "commits": {
+        "c15": "came back to Astro and pretended Next.js never happened",
+        "c14": "got distracted by Next.js for a sec",
+        "c13": "Astro site, oh boy it actually flies",
+        "c12": "moved to Carrd, it was fast",
+        "c11": "economics at a diplomacy uni, idk how baby",
+        "c10": "first site on WordPress, it was quite bad",
+        "c9": "fell in love with Linux, broke everything, kept going",
+        "c8": "another rabbit hole, another community, this one I never left",
+        "c7": "chemistry class genuinely changed how I see the world",
+        "c6": "found Polandball, learned more geopolitics than school ever taught me",
+        "c5": "moved places and no one told me life would be a play",
+        "c4": "went quiet, English became the comfort language",
+        "c3": "computers were more interesting than people",
+        "c2": "learned to read, enjoyed news feeds",
+        "c1": "born in Hanoi, i was the quiet kid"
+      }
+    },
     "chapters": {
-      "1": {
-        "title": "how i spawned",
-        "content1": "I was born in Vietnam in the mid-2000s, which technically makes me Gen Z, but I grew up with a kind of in-betweenness that doesn't quite fit any label. I was the quiet kid in the back of the room, but my mind was never really quiet. I was observing everything, whether that was people, patterns, or power dynamics, and quietly putting it all together.",
-        "content2": "My childhood was a strange mix of digital escapes and emotional landmines. I didn't have a perfect family. I won't even try to pretend I did. I had to grow up fast, emotionally speaking, and I learned early on that being sensitive meant being careful. You learn to listen more than you speak. You learn to code-switch, to hide pieces of yourself in plain sight. But you also learn resilience. You learn how to build a self from scratch when no one hands you the blueprint.",
-        "content3": "This site is part of that blueprint. Not to explain everything or even try to, but to make peace with the chaos."
-      },
-      "2": {
-        "title": "when i found out the world is rigged",
-        "content1": "It didn't hit all at once. There wasn't some singular moment of revelation. It was more like a slow burn: the realization that the systems around me, from family to education to society at large, weren't built with people like me in mind. That stability could be a trap. That even love can be conditional, weaponized. That you could follow all the \"rules\" and still lose.",
-        "content2": "So I did what a lot of us do: I adapted. I sharpened my mind, armored my heart, and started studying everything. Economics gave me the vocabulary to understand power. Coding gave me the tools to build power. Language gave me the freedom to express and escape. I realized I didn't want to just survive inside the system, I wanted to understand it, expose it, and maybe even subvert it a little.",
-        "content3": "This site isn't just a portfolio. It's proof that I exist on my own terms, not the ones I was handed."
-      },
-      "3": {
-        "title": "coding, languages, and the ADHD grindset",
-        "content1": "I don't do well with rigid routines or neat timelines. ADHD means my brain moves fast, loops endlessly, hyperfocuses randomly at 2am, forgets to eat for a day straight, and sometimes drowns in noise. Sensitivity to noise also makes me go insane sometimes. But it also means I'm deeply curious. Obsessively so. I don't \"dabble\" in things, rather I throw myself in. I don't multitask, it's just that I live in parallel tabs.",
-        "content2": "Coding, for me, is both chaos and comfort. It gives structure to thoughts that refuse to sit still. It gives me the power to make something that works, something that reflects a part of my mind that can never fully be verbalized. And language? That's the other half of the puzzle. I switch between Vietnamese, English, Russian, and sometimes Turkish or Danish, not because I want to show off, but because different languages unlock different selves. Different emotions. Different memories. English is my sharpest blade. Vietnamese is my heartbeat. Russian is my melancholy. Turkish is the thrill of newness. Danish is… well, still in progress.",
-        "content3": "And yeah, I write messy, but I write real. I code imperfectly, but intentionally. Everything you see here was built with that same energy."
-      },
-      "4": {
-        "title": "activism and being too real online",
-        "content1": "I'm not an influencer. I'm not a loud voice on a picket line. But I believe in accountability, in empathy, in building spaces where people feel seen, not just tolerated. My activism is quiet, sometimes invisible. It shows up in the things I build, the conversations I have, and the way I refuse to dilute my truth just to make someone comfortable.",
-        "content2": "It's in calling out injustice when it's safer to stay silent. It's in amplifying marginalized voices, even when I feel like mine is already whisper-thin. It's in the saying:",
-        "quote": "\"I don't have all the answers, but I'm still going to try.\"",
-        "quoteTooltip": "yeah I said it lol",
-        "content3": "Sometimes I vanish for weeks. Sometimes I overshare at 3am. Sometimes I post a cat meme and follow it with a quote I randomly make up. I contain multitudes."
-      },
-      "5": {
-        "title": "where i'm headed",
-        "content1": "I'm not here to sell you a personal brand or pretend I've got my life all figured out. Because I really don't. Most days, I'm just trying to balance being functional, being kind, and being honest. But I do know what matters to me.",
-        "content2": "I want to keep creating. Keep writing. Keep learning languages that make my brain buzz. I want to build tools that matter, not just get likes. I want to travel to the places where history, language, and identity tangle together. I want to leave behind things that feel warm, useful, and human. Not polished perfection, but stories and scraps that make people feel less alone.",
-        "content3": "I want peace. Not just the absence of chaos, but the kind of peace that comes from knowing who you are, what you've been through, and what you've chosen to leave behind.",
-        "content4": "If you're here reading this, then part of you resonates with that. Welcome. Make yourself at home. Just watch your step, some of the thoughts on this site are still under construction."
-      },
       "6": {
         "title": "i'm not done yet",
         "content1": "so here's the part they weren't supposed to read.",
