@@ -236,6 +236,10 @@
     --ring: 195 100% 65%;
   }
 
+  .dark {
+    /* Dark theme inherits from :root */
+  }
+
   /* High contrast overrides, dark */
   .high-contrast {
     --foreground: 0 0% 100%;
