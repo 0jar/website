@@ -107,7 +107,7 @@
   },
   "about": {
     "title": "About me",
-    "description": "The story of who I am, where I come from, what my passion is, and what I'm working toward.",
+    "description": "Basic facts about me, in a bento board.",
     "stats": {
       "self": "self",
       "languages": "languages",
