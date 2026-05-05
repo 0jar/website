@@ -63,6 +63,23 @@ const scrapbook = defineCollection({
   }),
 });
 
+const aboutCommit = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "src/content/aboutLog" }),
+  schema: z.object({
+    date: z.coerce.date(),
+    content: i18nContentOptional,
+    commits: z.array(z.object({
+      hash: z.string(),
+      tree: z.string(),
+      parent: z.string(),
+      msg: z.string(),
+      date: z.string(),
+      author: z.string(),
+      badges: z.array(z.string()),
+    })).optional()
+  }),
+});
+
 const nowSchema = z.object({
     id: z.number(),
     category: z.string(),
@@ -123,7 +140,7 @@ const webrings = defineCollection({
   schema: webringsSchema,
 });
 
-export const collections = { blog, scrapbook, now, projects, uses, webrings };
+export const collections = { blog, scrapbook, aboutCommit, now, projects, uses, webrings };
 export type I18nContent = Record<Locale, string>;
 export type I18nContentOptional = { en: string } & Partial<Record<Exclude<Locale, "en">, string>>;
 
