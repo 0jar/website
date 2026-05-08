@@ -240,7 +240,7 @@ The site supports dark and light modes:
 
 This repository is dual-licensed.
 
-All source code is licensed under the [MIT License](LICENSE).
+All source code is licensed under the [GNU General Public License v3](LICENSE).
 
 All non-code content, such as text, posts, essays, documentation, photos, videos, and other materials, is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
 
