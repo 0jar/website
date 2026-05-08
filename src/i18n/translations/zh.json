@@ -693,7 +693,9 @@
     "copyright": "2026，∴ 承靖 (Jarema)，知识共享-署名 4.0 国际 (CC BY-4.0)",
     "madeWith": "用所有的爱制作",
     "andChaos": "和几天瞎搞代码的时光",
-    "decorativeStripe": "页脚装饰条"
+    "decorativeStripe": "页脚装饰条",
+    "uptime": "运行状态",
+    "siteStatus": "网站状态"
   },
   "keyboardShortcuts": {
     "2048": "2048",

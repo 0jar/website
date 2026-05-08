@@ -693,7 +693,9 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "gjord med kärlek",
     "andChaos": "och några veckors kodande",
-    "decorativeStripe": "Dekorativ sidfotsrand"
+    "decorativeStripe": "Dekorativ sidfotsrand",
+    "uptime": "Drifttid",
+    "siteStatus": "Webbplatsstatus"
   },
   "keyboardShortcuts": {
     "2048": "2048",

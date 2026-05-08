@@ -592,7 +592,10 @@
   "footer": {
     "copyright": "2026，∴ Jarema，Creative Commons 記功 (CC BY) 4.0",
     "madeWith": "làm với mọi yêu thương",
-    "andChaos": "và vài tuần nghịch code"
+    "andChaos": "và vài tuần nghịch code",
+    "uptime": " uptime",
+    "siteStatus": "Trang thái trang",
+    "decorativeStripe": "Dải trang trí chân trang"
   },
   "keyboardShortcuts": {
     "2048": "2048",

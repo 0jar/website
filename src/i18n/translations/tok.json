@@ -693,7 +693,9 @@
     "copyright": "tenpo sike 2026, jan Jarema, nasin CC BY 4.0",
     "madeWith": "mi pali kepeken olin",
     "andChaos": "en tenpo lili pi musi ilo",
-    "decorativeStripe": "linja len pi anpa lipu"
+    "decorativeStripe": "linja len pi anpa lipu",
+    "uptime": "tenpo pali",
+    "siteStatus": "sitelen tawa sike"
   },
   "keyboardShortcuts": {
     "2048": "2048",

@@ -693,7 +693,9 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "zrobione z miłością",
     "andChaos": "i kilkoma dniami kodowania",
-    "decorativeStripe": "Ozdobny pasek stopki"
+    "decorativeStripe": "Ozdobny pasek stopki",
+    "uptime": "Uptime",
+    "siteStatus": "Status strony"
   },
   "keyboardShortcuts": {
     "2048": "2048",

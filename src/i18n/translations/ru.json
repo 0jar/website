@@ -693,7 +693,9 @@
     "copyright": "2026, ∴ Джарема (Jarema), CC BY 4.0",
     "madeWith": "сделано с любовью",
     "andChaos": "и несколькими днями кодинга",
-    "decorativeStripe": "Декоративная полоса подвала"
+    "decorativeStripe": "Декоративная полоса подвала",
+    "uptime": "Аптайм",
+    "siteStatus": "Статус сайта"
   },
   "keyboardShortcuts": {
     "2048": "2048",

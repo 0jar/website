@@ -731,7 +731,9 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "làm với mọi yêu thương",
     "andChaos": "và vài tuần nghịch code",
-    "decorativeStripe": "Dải trang trí chân trang"
+    "decorativeStripe": "Dải trang trí chân trang",
+    "uptime": "Trạng thái hoạt động",
+    "siteStatus": "Tình trạng trang"
   },
   "keyboardShortcuts": {
     "2048": "2048",

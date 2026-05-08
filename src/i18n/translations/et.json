@@ -693,7 +693,9 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "armastusega tehtud",
     "andChaos": "ja paar nädalat mängimist",
-    "decorativeStripe": "Dekoratiivne jaluse triip"
+    "decorativeStripe": "Dekoratiivne jaluse triip",
+    "uptime": "Ülekoormus",
+    "siteStatus": "Saidi olek"
   },
   "keyboardShortcuts": {
     "2048": "2048",

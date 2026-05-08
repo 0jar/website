@@ -693,7 +693,9 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "tehty rakkaudella",
     "andChaos": "ja muutaman viikon säätämisellä",
-    "decorativeStripe": "Koristeellinen alatunnisteen raita"
+    "decorativeStripe": "Koristeellinen alatunnisteen raita",
+    "uptime": "Käytettävyys",
+    "siteStatus": "Sivuston tila"
   },
   "keyboardShortcuts": {
     "2048": "2048",
