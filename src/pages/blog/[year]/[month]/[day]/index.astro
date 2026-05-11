@@ -1,90 +1,20 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import T from "@/components/T.astro";
-import { routes } from "@/lib/constants";
-import { localePath } from "@/i18n/routing";
-
-type BlogEntry = CollectionEntry<"blog">;
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getCollection(
-    "blog",
-    ({ data }: BlogEntry) => !data.draft,
-  );
-  const byDate = new Map<string, BlogEntry[]>();
-  for (const post of posts) {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => {
     const d = post.data.date;
-    const year = String(d.getUTCFullYear());
-    const month = String(d.getUTCMonth() + 1).padStart(2, "0");
-    const day = String(d.getUTCDate()).padStart(2, "0");
-    const key = `${year}-${month}-${day}`;
-    if (!byDate.has(key)) byDate.set(key, []);
-    byDate.get(key)!.push(post);
-  }
-  const paths: {
-    params: { year: string; month: string; day: string };
-    props: { posts: BlogEntry[] };
-  }[] = [];
-  for (const [key, datePosts] of byDate) {
-    const [year, month, day] = key.split("-");
-    paths.push({ params: { year, month, day }, props: { posts: datePosts } });
-  }
-  return paths;
+    return {
+      params: {
+        year: String(d.getUTCFullYear()),
+        month: String(d.getUTCMonth() + 1).padStart(2, "0"),
+        day: String(d.getUTCDate()).padStart(2, "0"),
+      },
+      props: { id: post.id },
+    };
+  });
 }
 
-interface Props {
-  posts: BlogEntry[];
-}
-
-const { year, month, day } = Astro.params;
-const { posts } = Astro.props;
-
-if (posts.length === 1) {
-  return Astro.redirect(`/blog/${posts[0].id}/`, 301);
-}
-const lang = Astro.locals?.lang || "en";
-const dateLabel = `${year}-${month}-${day}`;
-const title = `Posts from ${dateLabel}`;
+return Astro.redirect(`/blog/${Astro.props.id}/`, 302);
 ---
-
-<BaseLayout
-  title={title}
-  description={`Blog posts published on ${dateLabel}`}
-  lang={lang}
->
-  <div class="container mx-auto px-4 py-12 max-w-3xl">
-    <div class="text-sm text-muted-foreground mb-6">
-      <a
-        href={localePath(lang, routes.blog)}
-        class="hover:text-primary transition-colors"
-      >
-        ← <T key="blog.back" />
-      </a>
-    </div>
-
-    <h1 class="text-3xl font-bold mb-8">{title}</h1>
-
-    <ul class="space-y-4">
-      {
-        posts.map((post: BlogEntry) => (
-          <li>
-            <a
-              href={`/blog/${post.id}/`}
-              class="block p-4 border rounded-lg hover:border-primary/50 transition-colors group"
-            >
-              <p class="font-semibold group-hover:text-primary transition-colors">
-                {post.data.title}
-              </p>
-              {post.data.excerpt && (
-                <p class="text-sm text-muted-foreground mt-1 line-clamp-2">
-                  {post.data.excerpt}
-                </p>
-              )}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
-</BaseLayout>
