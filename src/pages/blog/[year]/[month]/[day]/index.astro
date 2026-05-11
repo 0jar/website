@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { siteName } from "@/lib/constants";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
@@ -11,10 +13,18 @@ export async function getStaticPaths() {
         month: String(d.getUTCMonth() + 1).padStart(2, "0"),
         day: String(d.getUTCDate()).padStart(2, "0"),
       },
-      props: { id: post.id },
+      props: {
+        id: post.id,
+        title: post.data.title,
+        description: post.data.excerpt || `Read "${post.data.title}" on ${siteName}.`,
+      },
     };
   });
 }
 
-return Astro.redirect(`/blog/${Astro.props.id}/`, 302);
+const { id, title, description } = Astro.props;
 ---
+
+<BaseLayout title={title} description={description} ogType="article">
+  <meta http-equiv="refresh" content={`0; url=/blog/${id}/`} slot="head" />
+</BaseLayout>
