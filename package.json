@@ -7,9 +7,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "build:fast": "SKIP_WEBMENTIONS=1 astro build",
-    "preview": "astro preview",
+    "preview": "LOCAL_PREVIEW=1 SKIP_WEBMENTIONS=1 astro build && LOCAL_PREVIEW=1 astro preview",
     "astro": "astro",
-    "check": "astro check"
+    "check": "astro check",
+    "killall": "lsof -i :4321 -t | xargs -r kill -9"
   },
   "dependencies": {
     "@astrojs/check": "0.9.7",
@@ -30,6 +31,7 @@
     "yaml": ">=2.8.3"
   },
   "devDependencies": {
+    "@astrojs/node": "^10.1.0",
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.14",

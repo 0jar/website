@@ -3,8 +3,9 @@ import tailwind from '@astrojs/tailwind';
 import preact from '@astrojs/preact';
 import vercel from '@astrojs/vercel';
 import netlify from '@astrojs/netlify';
+import node from '@astrojs/node';
 
-const adapter = process.env.NETLIFY ? netlify() : vercel();
+const adapter = process.env.LOCAL_PREVIEW ? node({ mode: 'standalone' }) : process.env.NETLIFY ? netlify() : vercel();
 
 // https://astro.build/config
 export default defineConfig({
