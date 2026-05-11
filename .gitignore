@@ -1,5 +1,3 @@
-website-v4/
-
 # Copied from astro's .gitignore file
 # Source: https://github.com/withastro/astro/blob/main/.gitignore
 
@@ -25,6 +23,7 @@ package-lock.json
 
 # do not commit .env files or any files that end with `.env`
 *.env
+.env*.local
 
 packages/astro/src/**/*.prebuilt.ts
 packages/astro/src/**/*.prebuilt-dev.ts
