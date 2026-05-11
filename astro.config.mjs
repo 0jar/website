@@ -10,7 +10,7 @@ const adapter = process.env.LOCAL_PREVIEW ? node({ mode: 'standalone' }) : proce
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jarema.me',
-  trailingSlash: 'ignore',
+  trailingSlash: 'always',
   output: 'static',
   adapter,
 
