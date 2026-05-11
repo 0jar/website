@@ -26,7 +26,7 @@
       ]
     },
     {
-      "source": "/:locale/:path((?!(?:retro|about|blog|records|now|guestbook)(?:/|$)).+)",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/:path((?!(?:retro|about|blog|records|now|guestbook)(?:/|$)).+)",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "source": "/:locale/",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "source": "/:locale/about/:path*",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/about/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "source": "/:locale/blog/:path*",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/blog/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "source": "/:locale/now/:path*",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/now/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "source": "/:locale/guestbook/:path*",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/guestbook/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "source": "/:locale/records/:path*",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/records/:path*",
       "headers": [
         { "key": "Request-OTR", "value": "1" },
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "source": "/:locale/retro/:path*",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/retro/:path*",
       "headers": [
         {
           "key": "Content-Security-Policy",
