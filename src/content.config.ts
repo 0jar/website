@@ -57,7 +57,7 @@ const scrapbook = defineCollection({
 });
 
 const aboutCommit = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "src/content/aboutLog" }),
+  loader: glob({ pattern: "**/*.json", base: "src/content/about/logs" }),
   schema: z.object({
     hash: z.string(),
     date: z.coerce.date(),
