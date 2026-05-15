@@ -53,13 +53,6 @@ const scrapbook = defineCollection({
   schema: z.object({
     date: z.coerce.date(),
     content: i18nContentOptional,
-    commits: z.array(z.object({
-      hash: z.string(),
-      msg: z.string(),
-      date: z.string(),
-      author: z.string(),
-      badges: z.array(z.string()),
-    })).optional()
   }),
 });
 

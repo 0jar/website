@@ -22,24 +22,23 @@ const languageList = [
 ];
 
 const aboutCommitsData = await getCollection("aboutCommit");
-const sortedCommits = aboutCommitsData.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const commits = sortedCommits.map(c => {
-  const d = c.data.date;
-  const isYearOnly = d.getMonth() === 0 && d.getDate() === 1;
+const commits = aboutCommitsData
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .map(c => {
+    const d = c.data.date;
+    const isYearOnly = d.getMonth() === 0 && d.getDate() === 1;
 
-  const dateStr = isYearOnly
-    ? d.getFullYear().toString()
-    : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }).replace(/,/g, '');
-
-  return {
-    hash: c.data.hash,
-    msg: c.data.content[lang as keyof typeof c.data.content] || c.data.content.en,
-    date: dateStr,
-    author: "Jarema",
-    badges: c.data.badges
-  };
-});
+    return {
+      hash: c.data.hash,
+      msg: c.data.content[lang as keyof typeof c.data.content] || c.data.content.en,
+      date: isYearOnly
+        ? d.getFullYear().toString()
+        : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }).replace(/,/g, ''),
+      author: "Jarema",
+      badges: c.data.badges
+    };
+  });
 ---
 
 <BaseLayout title={title} description={description}>
