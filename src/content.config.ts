@@ -128,7 +128,18 @@ const webrings = defineCollection({
   schema: webringsSchema,
 });
 
-export const collections = { blog, scrapbook, aboutCommit, now, projects, uses, webrings };
+const aboutInterestsSchema = z.object({
+    id: z.string(),
+    order: z.number(),
+    content: i18nContentOptional,
+  });
+
+const aboutInterests = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "src/content/about/interests" }),
+  schema: aboutInterestsSchema,
+});
+
+export const collections = { blog, scrapbook, aboutCommit, now, projects, uses, webrings, aboutInterests };
 export type I18nContent = Record<Locale, string>;
 export type I18nContentOptional = { en: string } & Partial<Record<Exclude<Locale, "en">, string>>;
 

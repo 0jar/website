@@ -4,7 +4,6 @@ import CommitTimeline from "@/components/CommitTimeline.astro";
 import T from "@/components/T.astro";
 import { Image } from "astro:assets";
 import { author, authorTimezone, authorTimezoneLabel } from '@/lib/constants';
-import { icons } from '@/lib/icons';
 import { t } from "@/i18n";
 import { getCollection } from "astro:content";
 
@@ -12,7 +11,8 @@ const lang = Astro.locals?.lang || "en";
 const title = t(lang, "about.title");
 const description = t(lang, "about.description");
 
-const interestKeys = ["linguistics", "geopolitics", "internationalEconomics", "privacy", "security", "openSource", "selfHosting", "indieWeb", "digitalIdentity", "linux", "writing"];
+const aboutInterestsData = await getCollection("aboutInterests");
+const interests = aboutInterestsData.sort((a, b) => a.data.order - b.data.order).map(i => i.data);
 
 const languageList = [
   { langKey: "vi", level: "native" },
@@ -100,8 +100,8 @@ const commits = aboutCommitsData
       <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center md:col-span-2 lg:col-span-1">
         <h3 class="text-lg font-semibold mb-4">{t(lang, "about.interests.title")}</h3>
         <div class="flex flex-wrap gap-2">
-          {interestKeys.map((key) => (
-             <span class="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-md border border-border">{t(lang, `about.interests.tags.${key}`)}</span>
+          {interests.map((interest) => (
+             <span class="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-md border border-border">{interest.content[lang as keyof typeof interest.content] || interest.content.en}</span>
           ))}
         </div>
       </article>
