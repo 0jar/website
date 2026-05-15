@@ -109,39 +109,6 @@
     "title": "Minust",
     "description": "Lugu sellest, kes ma olen, kust ma tulen, mis on mu kirg ja mille poole ma püüdlen.",
     "chapters": {
-      "1": {
-        "title": "kuidas ma sündisin",
-        "content1": "Ma sündisin Vietnamis 2000ndate keskpaigas, mis teeb minust tehniliselt Gen Z, aga kasvasin üles pigem kuskil vahepealsuses, mis ei sobi hästi ühegi sildi alla. Ma olin see vaikne laps klassi taga, aga mu mõistus polnud kunagi vaikne. Ma jälgisin kõike, olgu see inimesed, mustrid või võimusuhted, ja panin seda kõike tasa ja targu kokku.",
-        "content2": "My childhood was a strange mix of digital escapes and emotional landmines. I didn't have a perfect family. I won't even try to pretend I did. I had to grow up fast, emotionally speaking, and I learned early on that being sensitive meant being careful. You learn to listen more than you speak. You learn to code-switch, to hide pieces of yourself in plain sight. But you also learn resilience. You learn how to build a self from scratch when no one hands you the blueprint.",
-        "content3": "This site is part of that blueprint. Not to explain everything or even try to, but to make peace with the chaos."
-      },
-      "2": {
-        "title": "kui ma avastasin, et maailm on kokku mängitud",
-        "content1": "It didn't hit all at once. There wasn't some singular moment of revelation. It was more like a slow burn: the realization that the systems around me, from family to education to society at large, weren't built with people like me in mind. That stability could be a trap. That even love can be conditional, weaponized. That you could follow all the \"rules\" and still lose.",
-        "content2": "So I did what a lot of us do: I adapted. I sharpened my mind, armored my heart, and started studying everything. Economics gave me the vocabulary to understand power. Coding gave me the tools to build power. Language gave me the freedom to express and escape. I realized I didn't want to just survive inside the system, I wanted to understand it, expose it, and maybe even subvert it a little.",
-        "content3": "This site isn't just a portfolio. It's proof that I exist on my own terms, not the ones I was handed."
-      },
-      "3": {
-        "title": "kood, keeled ja ADHD eripäradest tulenev eneseteostus",
-        "content1": "I don't do well with rigid routines or neat timelines. ADHD means my brain moves fast, loops endlessly, hyperfocuses randomly at 2am, forgets to eat for a day straight, and sometimes drowns in noise. Sensitivity to noise also makes me go insane sometimes. But it also means I'm deeply curious. Obsessively so. I don't \"dabble\" in things, rather I throw myself in. I don't multitask, it's just that I live in parallel tabs.",
-        "content2": "Coding, for me, is both chaos and comfort. It gives structure to thoughts that refuse to sit still. It gives me the power to make something that works, something that reflects a part of my mind that can never fully be verbalized. And language? That's the other half of the puzzle. I switch between Vietnamese, English, Russian, and sometimes Turkish or Danish, not because I want to show off, but because different languages unlock different selves. Different emotions. Different memories. English is my sharpest blade. Vietnamese is my heartbeat. Russian is my melancholy. Turkish is the thrill of newness. Danish is… well, still in progress.",
-        "content3": "And yeah, I write messy, but I write real. I code imperfectly, but intentionally. Everything you see here was built with that same energy."
-      },
-      "4": {
-        "title": "aktivism ja liiga ehtne olemine veebis",
-        "content1": "I'm not an influencer. I'm not a loud voice on a picket line. But I believe in accountability, in empathy, in building spaces where people feel seen, not just tolerated. My activism is quiet, sometimes invisible. It shows up in the things I build, the conversations I have, and the way I refuse to dilute my truth just to make someone comfortable.",
-        "content2": "It's in calling out injustice when it's safer to stay silent. It's in amplifying marginalized voices, even when I feel like mine is already whisper-thin. It's in the saying:",
-        "quote": "\"Mul ei ole kõiki vastuseid, aga ma püüan ikkagi.\"",
-        "quoteTooltip": "jah, ma ütlesin seda lol",
-        "content3": "Sometimes I vanish for weeks. Sometimes I overshare at 3am. Sometimes I post a cat meme and follow it with a quote I randomly make up. I contain multitudes."
-      },
-      "5": {
-        "title": "mis on mu järgmine samm",
-        "content1": "I'm not here to sell you a personal brand or pretend I've got my life all figured out. Because I really don't. Most days, I'm just trying to balance being functional, being kind, and being honest. But I do know what matters to me.",
-        "content2": "I want to keep creating. Keep writing. Keep learning languages that make my brain buzz. I want to build tools that matter, not just get likes. I want to travel to the places where history, language, and identity tangle together. I want to leave behind things that feel warm, useful, and human. Not polished perfection, but stories and scraps that make people feel less alone.",
-        "content3": "I want peace. Not just the absence of chaos, but the kind of peace that comes from knowing who you are, what you've been through, and what you've chosen to leave behind.",
-        "content4": "If you're here reading this, then part of you resonates with that. Welcome. Make yourself at home. Just watch your step, some of the thoughts on this site are still under construction."
-      },
       "6": {
         "title": "ma tahtsin veel midagi öelda",
         "content1": "so here's the part they weren't supposed to read.",

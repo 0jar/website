@@ -136,20 +136,6 @@
     "interests": {
       "title": "Interests",
       "languagesTitle": "Languages",
-      "tags": {
-        "linguistics": "Linguistics",
-        "geopolitics": "Geopolitics",
-        "internationalEconomics": "International economics",
-        "privacy": "Privacy",
-        "security": "Security",
-        "openSource": "Open source",
-        "selfHosting": "Self-hosting",
-        "indieWeb": "Indie web",
-        "digitalIdentity": "Digital identity",
-        "linux": "Linux",
-        "writing": "Writing",
-        "platformEcosystems": "Platform ecosystems"
-      },
       "levels": {
         "native": "Native",
         "c2": "C2",

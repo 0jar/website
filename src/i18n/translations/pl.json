@@ -109,39 +109,6 @@
     "title": "O mnie",
     "description": "Historia o tym, kim jestem, skąd pochodzę, jaka jest moja pasja i do czego dążę.",
     "chapters": {
-      "1": {
-        "title": "jak się pojawiłem",
-        "content1": "Urodziłem się w Wietnamie w połowie lat 2000, więc technicznie jestem Gen Z, ale dorastałem gdzieś pomiędzy, nie pasując do żadnej etykiety. Byłem cichym dzieckiem z tyłu klasy, ale w głowie miałem zawsze chaos. Obserwowałem wszystko: ludzi, wzorce, układy sił, i po cichu układałem to w całość.",
-        "content2": "Moje dzieciństwo to dziwna mieszanka cyfrowych ucieczek i emocjonalnych min. Nie miałem idealnej rodziny. Nawet nie będę udawać, że było inaczej. Musiałem szybko dorosnąć emocjonalnie i wcześnie zrozumiałem, że wrażliwość to ostrożność. Uczysz się słuchać więcej niż mówić. Uczysz się zmieniać kod, ukrywać kawałki siebie na widoku. Ale uczysz się też odporności. Budujesz siebie od zera, gdy nikt nie daje ci planu.",
-        "content3": "Ta strona to część tego planu. Nie po to, by wszystko wyjaśnić, ale by pogodzić się z chaosem."
-      },
-      "2": {
-        "title": "kiedy zrozumiałem, że świat jest ustawiony",
-        "content1": "To nie przyszło nagle. Nie było jednego momentu olśnienia. To był raczej powolny żar: świadomość, że systemy wokół mnie, od rodziny po edukację i społeczeństwo, nie były tworzone z myślą o takich jak ja. Że stabilizacja może być pułapką. Że nawet miłość może być warunkowa, używana jako broń. Że można przestrzegać wszystkich \"zasad\" i i tak przegrać.",
-        "content2": "Więc zrobiłem to, co wielu z nas: dostosowałem się. Wyostrzyłem umysł, opancerzyłem serce i zacząłem uczyć się wszystkiego. Ekonomia dała mi słownik do rozumienia władzy. Programowanie dało mi narzędzia do jej budowania. Język dał mi wolność wyrażania siebie i ucieczki. Zrozumiałem, że nie chcę tylko przetrwać w systemie, chcę go zrozumieć, obnażyć, a może nawet trochę podkopać.",
-        "content3": "Ta strona to nie tylko portfolio. To dowód, że istnieję na własnych zasadach, nie tych narzuconych."
-      },
-      "3": {
-        "title": "kodowanie, języki i ADHD-mindset",
-        "content1": "Nie radzę sobie z sztywnymi rutynami czy idealnymi planami. ADHD sprawia, że mój mózg pędzi, zapętla się, czasem hiperfokusuje o 2 w nocy, zapomina o jedzeniu przez cały dzień, a czasem tonie w hałasie. Nadwrażliwość na dźwięki też czasem doprowadza mnie do szału. Ale to też znaczy, że jestem bardzo ciekawski. Wręcz obsesyjnie. Nie \"próbuję\" rzeczy, tylko rzucam się w nie na głęboką wodę. Nie jestem multitaskingowy, po prostu żyję w równoległych kartach.",
-        "content2": "Kodowanie to dla mnie chaos i ukojenie. Daje strukturę myślom, które nie chcą się zatrzymać. Pozwala mi stworzyć coś, co działa, coś, co odbija kawałek mojego umysłu, którego nie da się do końca opisać słowami. A język? To druga połowa układanki. Przełączam się między wietnamskim, angielskim, rosyjskim, czasem tureckim czy duńskim – nie żeby się popisywać, ale bo różne języki otwierają różne wersje mnie. Różne emocje. Różne wspomnienia. Angielski to mój najostrzejszy miecz. Wietnamski to bicie serca. Rosyjski to melancholia. Turecki to dreszcz nowości. Duński... jeszcze się ładuje.",
-        "content3": "I tak, piszę chaotycznie, ale prawdziwie. Koduję nieidealnie, ale z zamysłem. Wszystko, co tu widzisz, powstało z tej samej energii."
-      },
-      "4": {
-        "title": "aktywizmy i bycie zbyt szczerym w sieci",
-        "content1": "Nie jestem influencerem. Nie jestem głośnym głosem na barykadzie. Ale wierzę w odpowiedzialność, empatię, tworzenie przestrzeni, gdzie ludzie są widziani, a nie tylko tolerowani. Mój aktywizm jest cichy, czasem niewidoczny. Przejawia się w tym, co buduję, w rozmowach, które prowadzę, i w tym, że nie rozcieńczam swojej prawdy tylko po to, by komuś było wygodniej.",
-        "content2": "To w wytykaniu niesprawiedliwości, gdy łatwiej milczeć. To w wzmacnianiu głosów marginalizowanych, nawet gdy mój własny ledwo się przebija. To w słowach:",
-        "quote": "\"Nie znam wszystkich odpowiedzi, ale i tak spróbuję.\"",
-        "quoteTooltip": "tak, to ja powiedziałem, lol",
-        "content3": "Czasem znikam na tygodnie. Czasem za dużo się zwierzam o 3 w nocy. Czasem wrzucam mema z kotem, a potem cytat, który sam wymyślam. Jestem wielością."
-      },
-      "5": {
-        "title": "dokąd zmierzam",
-        "content1": "Nie jestem tu, by sprzedać ci osobistą markę czy udawać, że mam wszystko poukładane. Bo nie mam. Większość dni to balansowanie między funkcjonalnością, życzliwością i szczerością. Ale wiem, co jest dla mnie ważne.",
-        "content2": "Chcę dalej tworzyć. Pisać. Uczyć się języków, które pobudzają mózg. Budować narzędzia, które mają znaczenie, nie tylko zbierają lajki. Podróżować tam, gdzie historia, język i tożsamość się splatają. Zostawić po sobie coś ciepłego, przydatnego i ludzkiego. Nie wypolerowaną perfekcję, ale historie i skrawki, które sprawiają, że ktoś czuje się mniej samotny.",
-        "content3": "Chcę pokoju. Nie tylko braku chaosu, ale tego spokoju, który przychodzi, gdy wiesz, kim jesteś, przez co przeszedłeś i co postanowiłeś zostawić za sobą.",
-        "content4": "Jeśli to czytasz, to znaczy, że coś w tobie rezonuje z tym. Witaj. Czuj się jak u siebie. Tylko uważaj, niektóre myśli na tej stronie są jeszcze w budowie."
-      },
       "6": {
         "title": "jeszcze nie skończyłem",
         "content1": "więc tu jest ta część, której nie mieli przeczytać.",

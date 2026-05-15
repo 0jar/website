@@ -136,20 +136,6 @@
     "interests": {
       "title": "Quan tâm",
       "languagesTitle": "Ngôn ngữ",
-      "tags": {
-        "linguistics": "Ngôn ngữ học",
-        "geopolitics": "Địa chính trị",
-        "internationalEconomics": "Kinh tế quốc tế",
-        "privacy": "Quyền riêng tư",
-        "security": "Bảo mật",
-        "openSource": "Mã nguồn mở",
-        "selfHosting": "Tự host",
-        "indieWeb": "Indie web",
-        "digitalIdentity": "Danh tính số",
-        "linux": "Linux",
-        "writing": "Viết lách",
-        "platformEcosystems": "Hệ sinh thái nền tảng"
-      },
       "levels": {
         "native": "Tiếng mẹ đẻ",
         "c2": "C2",

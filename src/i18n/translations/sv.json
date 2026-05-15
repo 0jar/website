@@ -109,39 +109,6 @@
     "title": "Om mig",
     "description": "Berättelsen om vem jag är, var jag kommer ifrån, vad min passion är och vad jag strävar efter.",
     "chapters": {
-      "1": {
-        "title": "hur jag blev till",
-        "content1": "Jag föddes i Vietnam i mitten av 2000-talet, vilket tekniskt sett gör mig till Gen Z, men jag växte upp i ett slags mellanläge som inte riktigt passar någon etikett. Jag var det tysta barnet längst bak i klassrummet, men mitt sinne var aldrig tyst. Jag observerade allt, människor, mönster och maktdynamik, och satte ihop allt i tysthet.",
-        "content2": "Min barndom var en märklig blandning av digitala flykter och känslomässiga minor. Jag hade ingen perfekt familj. Jag tänker inte ens låtsas. Jag var tvungen att växa upp snabbt, känslomässigt, och lärde mig tidigt att vara känslig betyder att vara försiktig. Man lär sig att lyssna mer än man pratar. Man lär sig att byta kod, att gömma delar av sig själv i det öppna. Men man lär sig också motståndskraft. Man lär sig bygga sig själv från grunden när ingen ger dig ritningen.",
-        "content3": "Den här sidan är en del av den ritningen. Inte för att förklara allt, utan för att göra fred med kaoset."
-      },
-      "2": {
-        "title": "när jag insåg att världen är riggad",
-        "content1": "Det slog mig inte på en gång. Det fanns inget ögonblick av uppenbarelse. Det var mer som en långsam insikt: att systemen runt mig, från familj till utbildning till samhället i stort, inte var byggda för sådana som mig. Att stabilitet kan vara en fälla. Att även kärlek kan vara villkorad, användas som vapen. Att man kan följa alla \"regler\" och ändå förlora.",
-        "content2": "Så jag gjorde som många av oss gör: jag anpassade mig. Jag vässade mitt sinne, pansrade mitt hjärta och började studera allt. Ekonomi gav mig språket för att förstå makt. Kodning gav mig verktygen att bygga makt. Språk gav mig friheten att uttrycka och fly. Jag insåg att jag inte bara ville överleva i systemet, jag ville förstå det, avslöja det och kanske till och med undergräva det lite.",
-        "content3": "Den här sidan är inte bara en portfolio. Den är beviset på att jag existerar på mina egna villkor, inte de jag fick."
-      },
-      "3": {
-        "title": "kodning, språk och ADHD-mentalitet",
-        "content1": "Jag klarar inte av stela rutiner eller snygga tidslinjer. ADHD betyder att min hjärna går snabbt, snurrar i oändliga loopar, hyperfokuserar slumpmässigt klockan 2 på natten, glömmer att äta en hel dag och ibland drunknar i brus. Känslighet för ljud gör mig också galen ibland. Men det betyder också att jag är djupt nyfiken. Nästan besatt. Jag \"testar\" inte saker, jag kastar mig in. Jag multitaskar inte, jag lever bara i parallella flikar.",
-        "content2": "Kodning är för mig både kaos och tröst. Det ger struktur åt tankar som vägrar sitta still. Det ger mig kraften att skapa något som fungerar, något som speglar en del av mitt sinne som aldrig kan uttryckas helt. Och språk? Det är den andra halvan av pusslet. Jag växlar mellan vietnamesiska, engelska, ryska och ibland turkiska eller danska, inte för att skryta, utan för att olika språk låser upp olika versioner av mig själv. Olika känslor. Olika minnen. Engelska är mitt vassaste svärd. Vietnamesiska är mitt hjärtslag. Ryska är min melankoli. Turkiska är känslan av något nytt. Danska... laddar fortfarande.",
-        "content3": "Och ja, jag skriver rörigt, men jag skriver äkta. Jag kodar ofullkomligt, men med avsikt. Allt du ser här är byggt med samma energi."
-      },
-      "4": {
-        "title": "aktivism och att vara för äkta online",
-        "content1": "Jag är ingen influencer. Jag är inte en högljudd röst på en demonstration. Men jag tror på ansvar, empati och att skapa utrymmen där folk känner sig sedda, inte bara tolererade. Min aktivism är tyst, ibland osynlig. Den syns i det jag bygger, i samtalen jag har och i hur jag vägrar späda ut min sanning bara för att göra någon bekväm.",
-        "content2": "Det handlar om att påpeka orättvisor när det är säkrare att vara tyst. Det handlar om att förstärka marginaliserade röster, även när min egen känns tunn som en viskning. Det handlar om att säga:",
-        "quote": "\"Jag har inte alla svar, men jag tänker försöka ändå.\"",
-        "quoteTooltip": "ja, det var jag som sa det lol",
-        "content3": "Ibland försvinner jag i veckor. Ibland översharar jag klockan 3 på natten. Ibland postar jag en katt-meme och följer upp med ett citat jag hittar på. Jag rymmer många sidor."
-      },
-      "5": {
-        "title": "vart jag är på väg",
-        "content1": "Jag är inte här för att sälja dig ett personligt varumärke eller låtsas att jag har koll på livet. För det har jag verkligen inte. De flesta dagar försöker jag bara balansera att vara fungerande, snäll och ärlig. Men jag vet vad som är viktigt för mig.",
-        "content2": "Jag vill fortsätta skapa. Fortsätta skriva. Fortsätta lära mig språk som får hjärnan att surra. Jag vill bygga verktyg som betyder något, inte bara få likes. Jag vill resa till platser där historia, språk och identitet trasslar ihop sig. Jag vill lämna efter mig saker som känns varma, användbara och mänskliga. Inte polerad perfektion, utan berättelser och fragment som får folk att känna sig mindre ensamma.",
-        "content3": "Jag vill ha frid. Inte bara frånvaro av kaos, utan den sorts frid som kommer av att veta vem du är, vad du gått igenom och vad du valt att lämna bakom dig.",
-        "content4": "Om du läser detta så känner du kanske igen dig. Välkommen. Känn dig som hemma. Men se upp, vissa tankar här är fortfarande under konstruktion."
-      },
       "6": {
         "title": "jag är inte klar än",
         "content1": "så här är delen de inte skulle läsa.",

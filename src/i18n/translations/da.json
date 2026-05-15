@@ -109,39 +109,6 @@
     "title": "Om mig",
     "description": "Historien om hvem jeg er, hvor jeg kommer fra, hvad min passion er, og hvad jeg arbejder hen imod.",
     "chapters": {
-      "1": {
-        "title": "hvordan jeg blev til",
-        "content1": "Jeg blev født i Vietnam i midten af 2000'erne, hvilket teknisk set gør mig til Gen Z, men jeg voksede op med en slags mellemting, der ikke helt passer ind i nogen kategori. Jeg var det stille barn bagerst i lokalet, men mit sind var aldrig rigtig stille. Jeg observerede alt, uanset om det var mennesker, mønstre eller magtdynamikker, og satte det hele stille og roligt sammen.",
-        "content2": "Min barndom var en underlig blanding af digitale flugter og følelsesmæssige minefelter. Jeg havde ikke en perfekt familie. Jeg vil ikke engang lade som om, at jeg havde det.",
-        "content3": "Jeg var nødt til at vokse op hurtigt, følelsesmæssigt set, og jeg lærte tidligt, at det at være følsom betød, at man skulle være forsigtig."
-      },
-      "2": {
-        "title": "da jeg indså, at denne verden er et fusk",
-        "content1": "Det skete ikke på én gang. Det var mere som en langsom erkendelse: at systemerne omkring mig, fra familie til uddannelse til samfundet generelt, ikke var designet til folk som mig. At stabilitet nogle gange kan være en fælde. At selv kærlighed kan være betinget, gjort til et våben. At du kan følge alle \"reglerne\" og stadig tabe.",
-        "content2": "Så jeg gjorde, hvad jeg tror, mange mennesker som mig gør: Jeg måtte tilpasse mig. Jeg skærpede mit sind, pansrede mit hjerte og begyndte at studere alt. Økonomi gav mig ordforrådet til at forstå magt. Kodning gav mig værktøjerne til at opbygge magt. Sprog gav mig friheden til at udtrykke og flygte. Jeg indså, at jeg ikke bare ville overleve i systemet, jeg ville forstå det, afsløre det og måske endda undergrave det lidt.",
-        "content3": "Dette websted er ikke kun min portefølje. Det er et bevis på, at jeg eksisterer på mine egne præmisser, ikke dem, jeg fik."
-      },
-      "3": {
-        "title": "kodning, sprog og ADHD-mentaliteten",
-        "content1": "Jeg har det ikke godt med rigide rutiner eller pæne tidslinjer. ADHD betyder, at min hjerne bevæger sig hurtigt, kører i ring uendeligt, hyperfokuserer tilfældigt kl. 2 om natten, glemmer at spise i et døgn og nogle gange drukner i støj. Følsomhed over for støj gør mig også sindssyg nogle gange. Men det betyder også, at jeg er dybt nysgerrig. Besat af det. Jeg \"dabber\" ikke med ting, jeg kaster mig ud i dem. Jeg multitasker ikke, jeg lever bare i parallelle faner.",
-        "content2": "For mig er kode virkelig kaotisk og forvirrende, men det er også et tilflugtssted. Det giver struktur til tanker, der nægter at sidde stille. Det giver mig magten til at skabe noget, der fungerer, noget der afspejler en del af mit sind, der aldrig fuldt ud kan verbaliseres. Og sprog? Det er den anden halvdel af mit livs historie. Jeg hopper frem og tilbage mellem vietnamesisk, engelsk, russisk, og nogle gange tyrkisk eller dansk, ikke for at vise mig, men fordi hvert sprog åbner en anden version af mig, en anden følelse, et andet minde. Engelsk er sværdet, vietnamesisk er hjerteslaget, russisk er den stille melankoli. Tyrkisk er en ny spænding. Og dansk... det loader stadig.",
-        "content3": "Og ja, jeg skriver rodet, men jeg skriver ægte. Jeg koder uperfekt, men bevidst. Alt, hvad du ser her, er bygget med den samme energi."
-      },
-      "4": {
-        "title": "aktivisme og at være for ægte online",
-        "content1": "Jeg er ikke influencer, og jeg er ikke en høj stemme på en strejke. Men jeg tror på ansvarlighed, på empati, på at skabe rum, hvor folk føler sig set, ikke bare tolereret. Min aktivisme er stille, nogle gange usynlig. Det viser sig i de ting, jeg bygger, de samtaler, jeg har, og den måde, jeg nægter at udvande min sandhed bare for at få nogen til at føle sig godt tilpas.",
-        "content2": "Det er i at kalde uretfærdighed frem, når det er sikrere at forblive tavs. Det er i at forstærke marginaliserede stemmer, selv når jeg føler, at min egen allerede er hviskende tynd. Det er i ordene:",
-        "quote": "\"Jeg har ikke alle svarene, men jeg vil stadig prøve.\"",
-        "quoteTooltip": "ja, jeg sagde det lol",
-        "content3": "Nogle gange forsvinder jeg i ugevis. Nogle gange overdelte jeg kl. 3 om natten. Nogle gange poster jeg et kattememe og følger det op med et citat, jeg tilfældigt finder på. Jeg rummer mange ting."
-      },
-      "5": {
-        "title": "hvor jeg er på vej hen",
-        "content1": "Jeg er her ikke for at sælge dig et personligt brand eller lade som om, at jeg har styr på mit liv. Fordi det er jeg virkelig ikke. De fleste dage prøver jeg bare at balancere at være funktionel, at være venlig og at være ærlig. Men jeg ved, hvad der er vigtigt for mig.",
-        "content2": "Jeg vil fortsætte med at skabe. Jeg vil fortsætte med at skrive. Måske lære flere sprog for sjov. Men jeg vil bygge ting, der giver mening, ikke bare for at få likes. Jeg vil rejse til de steder, hvor historie, sprog og identitet vikler sig ind i hinanden. Jeg vil efterlade mig ting, der føles varme, nyttige og menneskelige. Ikke poleret perfektion, men historier, der gør folk mindre ensomme.",
-        "content3": "Og jeg vil have fred. Ikke bare fraværet af kaos, men den slags fred, der kommer af at vide, hvem du er, hvad du har været igennem, og hvad du har valgt at lægge bag dig.",
-        "content4": "s grad af empati. Så velkommen. Føl dig hjemme. Men vær forsigtig, nogle af tankerne herinde er stadig under opbygning."
-      },
       "6": {
         "title": "jeg er ikke færdig endnu",
         "content1": "og her er den del, som \"folk\" ikke skulle se.",
@@ -152,7 +119,7 @@
     }
   },
   "projects": {
-    "title": "Mine Projekter",
+    "title": "Mine projekter",
     "description": "En samling af personlige, akademiske og aktivistiske projekter, jeg har arbejdet på. Nogle færdige, nogle stadig under udvikling.",
     "status": {
       "completed": "Færdig",
@@ -161,7 +128,7 @@
     },
     "statusLabels": {
       "completed": "Færdig",
-      "inProgress": "I Gang",
+      "inProgress": "I gang",
       "planned": "Planlagt"
     },
     "categories": {

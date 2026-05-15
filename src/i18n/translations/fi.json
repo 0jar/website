@@ -109,39 +109,6 @@
     "title": "Minusta",
     "description": "Tarina siitä, kuka olen, mistä tulen, mikä on intohimoni ja mitä kohti työskentelen.",
     "chapters": {
-      "1": {
-        "title": "kuinka synnyin",
-        "content1": "Synnyin Vietnamissa 2000-luvun puolivälissä, joten olen teknisesti Gen Z, mutta kasvoin jonkinlaisessa välitilassa, joka ei oikein sovi mihinkään lokeroon. Olin se hiljainen lapsi luokan takana, mutta mieleni ei ollut koskaan hiljaa. Tarkkailin kaikkea, ihmisiä, kuvioita ja valtasuhteita, ja kokosin kaiken hiljaa yhteen.",
-        "content2": "Lapsuuteni oli outo sekoitus digitaalisia pakopaikkoja ja tunneansoja. Minulla ei ollut täydellistä perhettä. En edes yritä teeskennellä. Jouduin kasvamaan nopeasti henkisesti ja opin varhain, että herkkyys tarkoittaa varovaisuutta. Opit kuuntelemaan enemmän kuin puhumaan. Opit vaihtamaan roolia, piilottamaan osia itsestäsi näkyvillä. Mutta opit myös sitkeyttä. Opit rakentamaan itsesi tyhjästä, kun kukaan ei anna sinulle piirustusta.",
-        "content3": "Tämä sivusto on osa sitä piirustusta. Ei selittääkseen kaikkea, vaan tehdäkseen rauhan kaaoksen kanssa."
-      },
-      "2": {
-        "title": "kun tajusin että maailma on huijausta",
-        "content1": "Se ei iskenyt kerralla. Ei ollut mitään yhtä suurta oivalluksen hetkeä. Se oli enemmänkin hidas havahtuminen: järjestelmät ympärilläni, perheestä kouluun ja yhteiskuntaan, eivät olleet tehty kaltaisilleni. Vakaus voi olla ansa. Rakkauskin voi olla ehdollista, aseena. Voit noudattaa kaikkia \"sääntöjä\" ja silti hävitä.",
-        "content2": "Tein kuten moni muukin: sopeuduin. Teroitin mieltäni, panssaroin sydämeni ja aloin opiskella kaikkea. Taloustiede antoi minulle kielen ymmärtää valtaa. Koodaus antoi työkalut rakentaa valtaa. Kieli antoi vapauden ilmaista ja paeta. Tajusin, etten halua vain selviytyä järjestelmässä, vaan ymmärtää, paljastaa ja ehkä vähän horjuttaa sitä.",
-        "content3": "Tämä sivu ei ole vain portfolio. Se on todiste siitä, että olen olemassa omilla ehdoillani, en niillä jotka sain."
-      },
-      "3": {
-        "title": "koodaus, kielet ja ADHD-moodi",
-        "content1": "En pärjää jäykillä rutiineilla tai siisteillä aikatauluilla. ADHD tarkoittaa, että aivoni liikkuvat nopeasti, kiertävät loputtomasti, hyperfokusoivat satunnaisesti klo 2 yöllä, unohtavat syödä koko päivän ja joskus hukkuvat meluun. Herkkyys melulle tekee minut välillä hulluksi. Mutta se tekee minusta myös uteliaan. Pakkomielteisen uteliaan. En \"kokeile\" asioita, vaan sukellan niihin. En multitaskaa, elän vain rinnakkaisissa välilehdissä.",
-        "content2": "Koodaus on minulle sekä kaaosta että lohtua. Se antaa rakennetta ajatuksille, jotka eivät pysy paikallaan. Se antaa voiman luoda jotain toimivaa, jotain joka heijastaa mieltäni, jota ei voi täysin pukea sanoiksi. Ja kieli? Se on toinen puoli palapelistä. Vaihdan vietnamin, englannin, venäjän ja joskus turkin tai tanskan välillä, en siksi että haluaisin näyttää, vaan koska eri kielet avaavat eri puolia itsestäni. Eri tunteita. Eri muistoja. Englanti on terävin teräni. Vietnami on sydämenlyöntini. Venäjä on melankoliani. Turkki on uuden jännitys. Tanska... latautuu vielä.",
-        "content3": "Ja kyllä, kirjoitan sotkuisesti, mutta kirjoitan totta. Koodaan epätäydellisesti, mutta tarkoituksella. Kaikki täällä on tehty samalla energialla."
-      },
-      "4": {
-        "title": "aktivismi ja liika aitous netissä",
-        "content1": "En ole vaikuttaja. En ole kovaääninen mielenosoittaja. Mutta uskon vastuuseen, empatiaan ja tilojen luomiseen, joissa ihmiset kokevat tulevansa nähdyiksi, eivät vain siedetyiksi. Aktivismini on hiljaista, joskus näkymätöntä. Se näkyy rakentamissani asioissa, keskusteluissa ja siinä, etten laimenna totuuttani vain jonkun mukavuuden vuoksi.",
-        "content2": "Se on epäoikeudenmukaisuuden esiin nostamista, kun olisi helpompi olla hiljaa. Se on syrjäytettyjen äänien vahvistamista, vaikka oma ääneni olisi ohut kuin kuiskaus. Se on sanomisessa:",
-        "quote": "\"Minulla ei ole kaikkia vastauksia, mutta aion silti yrittää.\"",
-        "quoteTooltip": "joo, sanoin sen itse lol",
-        "content3": "Joskus katoan viikoiksi. Joskus jaan liikaa klo 3 yöllä. Joskus postaan kissameemin ja keksin siihen lainauksen. Olen monipuolinen."
-      },
-      "5": {
-        "title": "minne olen menossa",
-        "content1": "En ole täällä myymässä henkilöbrändiä tai teeskentelemässä että elämäni on hallinnassa. Koska ei todellakaan ole. Useimpina päivinä yritän vain tasapainotella toimivuuden, ystävällisyyden ja rehellisyyden välillä. Mutta tiedän mikä minulle on tärkeää.",
-        "content2": "Haluan jatkaa luomista. Jatkaa kirjoittamista. Jatkaa kielten oppimista, jotka saavat aivoni surisemaan. Haluan rakentaa työkaluja, joilla on merkitystä, en vain tykkäyksiä. Haluan matkustaa paikkoihin, joissa historia, kieli ja identiteetti kietoutuvat yhteen. Haluan jättää jälkeeni asioita, jotka tuntuvat lämpimiltä, hyödyllisiltä ja inhimillisiltä. En kiillotettua täydellisyyttä, vaan tarinoita ja paloja, jotka saavat ihmiset tuntemaan olonsa vähemmän yksinäiseksi.",
-        "content3": "Haluan rauhaa. En vain kaaoksen poissaoloa, vaan sellaista rauhaa, joka tulee siitä että tietää kuka on, mitä on kokenut ja mitä on päättänyt jättää taakseen.",
-        "content4": "Jos luet tätä, ehkä sama resonoi sinussa. Tervetuloa. Ole kuin kotonasi. Mutta varo, osa ajatuksista täällä on vielä keskeneräisiä."
-      },
       "6": {
         "title": "en ole vielä valmis",
         "content1": "tässä on osa, jota ei pitänyt lukea.",

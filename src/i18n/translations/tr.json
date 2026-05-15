@@ -109,39 +109,6 @@
     "title": "Hakkımda",
     "description": "Ben kimim, nereden geliyorum, tutkum ne ve ne için çalışıyorum hikayesi.",
     "chapters": {
-      "1": {
-        "title": "nasıl ortaya çıktım",
-        "content1": "2000'lerin ortasında Vietnam'da doğdum, bu da teknik olarak beni Z kuşağı yapıyor, ama hiçbir etikete tam olarak uymayan bir tür arada kalmışlıkla büyüdüm. Sınıfın arkasındaki sessiz çocuktum, ama zihnim asla gerçekten sessiz değildi. İnsanları, kalıpları veya güç dinamiklerini gözlemliyor ve sessizce her şeyi bir araya getiriyordum.",
-        "content2": "Çocukluğum dijital kaçışlar ve duygusal mayın tarlalarının tuhaf bir karışımıydı. Mükemmel bir ailem yoktu. Öyleymiş gibi davranmaya bile çalışmayacağım. Duygusal olarak hızlı büyümek zorunda kaldım ve hassas olmanın dikkatli olmak anlamına geldiğini erken öğrendim.",
-        "content3": "Konuşmaktan çok dinlemeyi öğrenirsin. Kod değiştirmeyi, kendinin parçalarını göz önünde saklamayı öğrenirsin. Ama aynı zamanda dayanıklılığı da öğrenirsin. Kimse sana planı vermediğinde sıfırdan bir benlik inşa etmeyi öğrenirsin. Bu site o planın bir parçası. Her şeyi açıklamak ya da denemek için değil, kaosla barışmak için."
-      },
-      "2": {
-        "title": "dünyanın hileli olduğunu öğrendiğimde",
-        "content1": "Hepsi bir anda olmadı. Tek bir aydınlanma anı yoktu. Daha çok yavaş bir yanmaydı: aileden eğitime, topluma kadar etrafımdaki sistemlerin benim gibi gibi insanlar düşünülerek inşa edilmediğinin farkına varılması. İstikrarın bir tuzak olabileceği. Sevginin bile koşullu olabileceği, silahlaştırılabileceği. Tüm \"kuralları\" takip edip yine de kaybedebileceğin gerçeği.",
-        "content2": "Bu yüzden çoğumuzun yaptığını yaptım: uyum sağladım. Zihnimi keskinleştirdim, kalbimi zırhladım ve her şeyi incelemeye başladım. Ekonomi bana gücü anlama kelime dağarcığını verdi. Kodlama bana güç inşa etme araçlarını verdi. Dil bana ifade etme ve kaçma özgürlüğünü verdi. Sadece sistemin içinde hayatta kalmak istemediğimi fark ettim; onu anlamak, ifşa etmek ve belki biraz da altüst etmek istedim.",
-        "content3": "Bu site sadece bir portföy değil. Bana dayatılan şartlarla değil, kendi şartlarımla var olduğumun kanıtı."
-      },
-      "3": {
-        "title": "kodlama, diller ve DEHB azmi",
-        "content1": "Katı rutinler veya düzenli zaman çizelgeleriyle aram iyi değil. DEHB, beynimin hızlı hareket ettiği, sonsuz döngülere girdiği, gece 2'de rastgele hiper-odaklandığı, bütün gün yemeyi unuttuğu ve bazen gürültüde boğulduğu anlamına geliyor. Gürültüye duyarlılık da bazen beni çıldırtıyor. Ama aynı zamanda derinden meraklı olduğum anlamına da geliyor. Takıntılı bir şekilde. Bir şeylerle sadece \"ilgilenmem\", daha çok kendimi içine atarım. Çoklu görev yapmam, sadece paralel sekmelerde yaşarım.",
-        "content2": "Kodlama benim için hem kaos hem de rahatlık. Yerinde durmayı reddeden düşüncelere yapı kazandırıyor. Çalışan, zihnimin asla tam olarak kelimelere dökülemeyen bir parçasını yansıtan bir şey yapma gücü veriyor. Peki ya dil? Bu, bulmacanın diğer yarısı. Vietnamca, İngilizce, Rusça ve bazen Türkçe veya Danca arasında geçiş yapıyorum, gösteriş yapmak istediğim için değil, çünkü farklı diller farklı benliklerin kilidini açıyor. Farklı duygular. Farklı anılar. İngilizce en keskin bıçağım. Vietnamca kalp atışım. Rusça melankolim. Türkçe yeniliğin heyecanı. Danca… eh, hala devam ediyor.",
-        "content3": "Ve evet, dağınık yazıyorum ama gerçek yazıyorum. Kusurlu kodluyorum ama kasıtlı olarak. Burada gördüğünüz her şey aynı enerjiyle inşa edildi."
-      },
-      "4": {
-        "title": "aktivizm ve internette fazla gerçek olmak",
-        "content1": "Ben bir influencer değilim. Bir grev hattında gürültülü bir ses değilim. Ama hesap verebilirliğe, empatiye, insanların sadece hoş görülmekle kalmayıp görüldüğünü hissettiği alanlar inşa etmeye inanıyorum. Aktivizmim sessiz, bazen görünmez. İnşa ettiğim şeylerde, yaptığım konuşmalarda ve sırf birini rahat ettirmek için gerçeğimi sulandırmayı reddetme şeklimde ortaya çıkıyor.",
-        "content2": "Sessiz kalmanın daha güvenli olduğu zamanlarda adaletsizliğe ses çıkarmakta. Kendi sesimin zaten fısıltı kadar ince olduğunu hissettiğimde bile marjinalleştirilmiş sesleri yükseltmekte. Şunu söylemekte:",
-        "quote": "\"Tüm cevaplara sahip değilim ama yine de deneyeceğim.\"",
-        "quoteTooltip": "evet ben söyledim haha",
-        "content3": "Bazen haftalarca ortadan kayboluyorum. Bazen gece 3'te fazla paylaşıyorum. Bazen bir kedi memesi paylaşıp ardından rastgele uydurduğum bir alıntıyla devam ediyorum. Çok yönlüyüm."
-      },
-      "5": {
-        "title": "nereye gidiyorum",
-        "content1": "Size kişisel bir marka satmak ya da hayatımı çözmüş gibi davranmak için burada değilim. Çünkü gerçekten çözmedim. Çoğu gün sadece işlevsel olmak, kibar olmak ve dürüst olmak arasında denge kurmaya çalışıyorum. Ama benim için neyin önemli olduğunu biliyorum.",
-        "content2": "Yaratmaya devam etmek istiyorum. Yazmaya devam etmek. Beynimi harekete geçiren dilleri öğrenmeye devam etmek. Sadece beğeni almak için değil, önemli araçlar oluşturmak istiyorum. Tarihin, dilin ve kimliğin iç içe geçtiği yerlere seyahat etmek istiyorum. Arkamda sıcak, kullanışlı ve insani hissettiren şeyler bırakmak istiyorum. Cilalı mükemmellik değil, insanları daha az yalnız hissettiren hikayeler ve parçalar.",
-        "content3": "Huzur istiyorum. Sadece kaosun yokluğu değil, kim olduğunu, neler yaşadığını ve geride bırakmayı seçtiğin şeylerden gelen türden bir huzur.",
-        "content4": "Eğer bunu okuyorsan, bir parçan bununla rezonansa giriyor demektir. Hoş geldin. Kendini evinde hisset. Sadece adımlarına dikkat et, bu sitedeki bazı düşünceler hala yapım aşamasında."
-      },
       "6": {
         "title": "henüz bitirmedim",
         "content1": "işte okumamaları gereken kısım.",
