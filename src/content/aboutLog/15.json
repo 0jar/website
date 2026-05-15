@@ -1,0 +1,15 @@
+{
+  "hash": "f07a4dd32795d2ce8162e15a4232201fb7df37f8",
+  "date": "2026-01-07T00:00:00.000Z",
+  "tree": "74821dee3f456909642340e936cc3c9976039279",
+  "parent": "3f8063fca565dd8559d2c56b92ddc8335bdc6d45",
+  "content": {
+    "en": "came back to Astro and pretended Next.js never happened",
+    "vi": "quay lại với Astro và coi như Next.js chưa từng tồn tại"
+  },
+  "badges": [
+    "HEAD",
+    "main",
+    "site"
+  ]
+}

@@ -160,24 +160,7 @@
     },
     "timeline": {
       "copyHash": "Sao chép hash",
-      "copyHashTitle": "Sao chép toàn bộ mã SHA",
-      "commits": {
-        "c15": "quay lại với Astro và coi như Next.js chưa từng tồn tại",
-        "c14": "bị Next.js làm xao nhãng một tẹo",
-        "c13": "web sang nền Astro, ôi nó lên nhanh vãi chưởng",
-        "c12": "chuyển sang Carrd, cũng nhanh phết đó chứ",
-        "c11": "học kinh tế trường ngoại giao, chả hiểu sao luôn",
-        "c10": "trang web đầu tiên bằng WordPress, thôi đừng nhắc đến nó nữa",
-        "c9": "lỡ phải lòng Linux, lỡ nghịch ngu phá máy nhưng vẫn dùng tiếp",
-        "c8": "lại vào một cộng đồng khác, lần này thì ở lại luôn",
-        "c7": "môn Hóa học thực sự đã thay đổi đời tôi",
-        "c6": "tìm ra Polandball và tôi học được nhiều địa chính trị hơn hẳn ở trường",
-        "c5": "chuyển chỗ ở và chẳng ai bảo tôi rằng đời sẽ thành vở kịch",
-        "c4": "tôi bắt đầu trầm tính và tiếng Anh thành ngôn ngữ trú ngụ",
-        "c3": "nghịch máy tính thích hơn đối mặt với con người",
-        "c2": "bắt đầu biết đọc và thích xem tin tức luôn",
-        "c1": "sinh ra ở Hà Nội, tôi từng là một đứa trẻ ít nói"
-      }
+      "copyHashTitle": "Sao chép toàn bộ mã SHA"
     },
     "chapters": {
       "6": {

@@ -160,24 +160,7 @@
     },
     "timeline": {
       "copyHash": "Copy hash",
-      "copyHashTitle": "Copy full SHA",
-      "commits": {
-        "c15": "came back to Astro and pretended Next.js never happened",
-        "c14": "got distracted by Next.js for a sec",
-        "c13": "Astro site, oh boy it actually flies",
-        "c12": "moved to Carrd, it was fast",
-        "c11": "economics at a diplomacy uni, idk how baby",
-        "c10": "first site on WordPress, it was quite bad",
-        "c9": "fell in love with Linux, broke everything, kept going",
-        "c8": "another rabbit hole, another community, this one I never left",
-        "c7": "chemistry class genuinely changed how I see the world",
-        "c6": "found Polandball, learned more geopolitics than school ever taught me",
-        "c5": "moved places and no one told me life would be a play",
-        "c4": "went quiet, English became the comfort language",
-        "c3": "computers were more interesting than people",
-        "c2": "learned to read, enjoyed news feeds",
-        "c1": "born in Hanoi, i was the quiet kid"
-      }
+      "copyHashTitle": "Copy full SHA"
     },
     "chapters": {
       "6": {
