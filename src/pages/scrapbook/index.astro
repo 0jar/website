@@ -2,14 +2,14 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import CommitTimeline from "@/components/CommitTimeline.astro";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import { dateLong } from "@/lib/utils/timezone-utils";
 
 const lang = Astro.locals?.lang || "en";
 const entries = await getCollection("scrapbook");
 const commits = entries
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .map(entry => ({
+  .sort((a: CollectionEntry<"scrapbook">, b: CollectionEntry<"scrapbook">) => b.data.date.getTime() - a.data.date.getTime())
+  .map((entry: CollectionEntry<"scrapbook">) => ({
     hash: entry.id.substring(0, 10),
     msg: entry.data.content[lang as keyof typeof entry.data.content] || entry.data.content.en,
     date: entry.data.date.toLocaleDateString("en", dateLong),

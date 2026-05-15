@@ -5,14 +5,14 @@ import T from "@/components/T.astro";
 import { Image } from "astro:assets";
 import { author, authorTimezone, authorTimezoneLabel } from '@/lib/constants';
 import { t } from "@/i18n";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 const lang = Astro.locals?.lang || "en";
 const title = t(lang, "about.title");
 const description = t(lang, "about.description");
 
 const aboutInterestsData = await getCollection("aboutInterests");
-const interests = aboutInterestsData.sort((a, b) => a.data.order - b.data.order).map(i => i.data);
+const interests = aboutInterestsData.sort((a: CollectionEntry<"aboutInterests">, b: CollectionEntry<"aboutInterests">) => a.data.order - b.data.order).map((i: CollectionEntry<"aboutInterests">) => i.data);
 
 const languageList = [
   { langKey: "vi", level: "native" },
@@ -24,8 +24,8 @@ const languageList = [
 const aboutCommitsData = await getCollection("aboutCommit");
 
 const commits = aboutCommitsData
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .map(c => {
+  .sort((a: CollectionEntry<"aboutCommit">, b: CollectionEntry<"aboutCommit">) => b.data.date.getTime() - a.data.date.getTime())
+  .map((c: CollectionEntry<"aboutCommit">) => {
     const d = c.data.date;
     const isYearOnly = d.getMonth() === 0 && d.getDate() === 1;
 
@@ -100,7 +100,7 @@ const commits = aboutCommitsData
       <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center md:col-span-2 lg:col-span-1">
         <h3 class="text-lg font-semibold mb-4">{t(lang, "about.interests.title")}</h3>
         <div class="flex flex-wrap gap-2">
-          {interests.map((interest) => (
+          {interests.map((interest: any) => (
              <span class="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-md border border-border">{interest.content[lang as keyof typeof interest.content] || interest.content.en}</span>
           ))}
         </div>
