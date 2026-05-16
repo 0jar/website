@@ -3,26 +3,19 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { getData } from "@/content.config";
 
-const projects = await getData("projects");
-
 const lang = Astro.locals?.lang || "en";
-const k = lang;
-const visibleProjects = projects.filter(p => !p.hidden);
+const projects = (await getData("projects")).filter((p) => !p.hidden);
 
 const statusGroups = [
-  { key: 'in-progress', indicator: 'bg-yellow-500 motion-safe:animate-pulse', projects: visibleProjects.filter(p => p.status === 'in-progress') },
-  { key: 'completed', indicator: 'bg-green-500', projects: visibleProjects.filter(p => p.status === 'completed') },
-  { key: 'planned', indicator: 'bg-blue-500', projects: visibleProjects.filter(p => p.status === 'planned') },
-];
+  { key: "completed", bg: "bg-green-500", items: projects.filter((p) => p.status === "completed") },
+  { key: "inProgress", bg: "bg-yellow-500 animate-pulse", items: projects.filter((p) => p.status === "in-progress") },
+  { key: "planned", bg: "bg-blue-500", items: projects.filter((p) => p.status === "planned") },
+].filter((g) => g.items.length > 0);
 
-const statusColors = {
-  'completed': 'bg-green-500/20 text-green-700 dark:text-green-300',
-  'in-progress': 'bg-yellow-500/20 text-yellow-700 dark:text-yellow-300',
-  'planned': 'bg-blue-500/20 text-blue-700 dark:text-blue-300',
-};
+const icons: Record<string, string> = { personal: "🧑‍💻", academic: "📚", activism: "✊" };
+const categories = Object.keys(icons);
 
-const categoryIcons: Record<string, string> = { 'personal': '🧑‍💻', 'academic': '📚', 'activism': '✊' };
-const categories = Object.keys(categoryIcons);
+const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[field];
 ---
 
 <BaseLayout title="Projects" description="A collection of my projects and experiments.">
@@ -33,122 +26,227 @@ const categories = Object.keys(categoryIcons);
         <T key="projects.description" tag="p" class="text-muted-foreground text-lg max-w-xl mx-auto" />
       </header>
 
-      <div class="flex flex-wrap justify-center gap-2 mb-8">
+      <div class="flex flex-wrap justify-center gap-2 mb-8" aria-label="Project filters">
         <button class="filter-btn active px-4 py-2 rounded-full border transition-colors" data-filter="all" aria-pressed="true">
           <T key="projects.filters.all" />
         </button>
-        {categories.map(cat => (
+        {categories.map((cat) => (
           <button class="filter-btn px-4 py-2 rounded-full border transition-colors" data-filter={cat} aria-pressed="false">
-            {categoryIcons[cat]} <T key={`projects.filters.${cat}`} />
+            <T key={`projects.categories.${cat}`} />
           </button>
         ))}
       </div>
 
-      {statusGroups.map(({ key, indicator, projects: groupProjects }) => groupProjects.length > 0 && (
-        <section class="mb-12">
-          <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-            <span class={`w-3 h-3 rounded-full ${indicator}`}></span>
-            <T key={`projects.${key.replace('-', '')}`} />
-          </h2>
-          <div class="grid gap-6 md:grid-cols-2">
-            {groupProjects.map((project) => (
-              <article class="project-card group perspective" data-category={project.category} data-project-id={project.id} data-project-content={JSON.stringify(project.content)} tabindex="0" role="button" aria-label={`${project.content[k]?.title || project.content.en.title} - click or press Enter to see details`}>
-                <div class="card-inner relative w-full h-64 transition-transform duration-500 transform-style-preserve-3d">
-                  <div class="card-front absolute inset-0 backface-hidden rounded-xl border bg-card p-6 flex flex-col">
-                    <div class="flex items-start justify-between mb-3">
-                      <span class="text-2xl">{categoryIcons[project.category]}</span>
-                      <span class={`text-xs px-2 py-1 rounded-full ${statusColors[project.status]}`}>
-                        <T key={`projects.status.${project.status}`} />
+    {statusGroups.map(({ key, bg, items }) => (
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+          <span class={`w-3 h-3 rounded-full ${bg}`} aria-hidden="true" />
+          <T key={`projects.status.${key.replace("-", "")}`} />
+        </h2>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          {items.map((p) => {
+            const title = t(p, 'title');
+            return (
+              <article
+                class="project-card group perspective"
+                data-category={p.category}
+                tabindex="0"
+                role="button"
+                aria-label={`${title} - click to flip`}
+                aria-expanded="false"
+              >
+                <div class="card-inner relative w-full h-[310px] transition-transform duration-700 transform-style-preserve-3d">
+                  {/* Front */}
+                  <div class="card-front absolute inset-0 backface-hidden rounded-2xl border-2 bg-card/90 backdrop-blur-md p-7 flex flex-col shadow-md transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-2xl group-hover:-translate-y-1">
+                    <div class="flex items-start justify-between mb-5">
+                      <span class="text-4xl filter drop-shadow-md" aria-hidden="true">{icons[p.category]}</span>
+                      <div class="flex gap-1.5 flex-wrap justify-end max-w-[65%]">
+                        {p.tags.slice(0, 4).map((tag) => (
+                          <span class="text-[11px] px-2 py-1 rounded-full bg-secondary text-secondary-foreground font-bold shadow-sm">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 project-title group-hover:text-primary transition-colors">{title}</h3>
+                    <p class="text-muted-foreground text-sm flex-1 line-clamp-4 leading-relaxed">{t(p, 'description')}</p>
+                    {p.url && (
+                      <div class="mt-4">
+                        <a href={p.url} target="_blank" rel="noopener noreferrer" class="flex w-full justify-center items-center gap-1.5 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-sm font-bold transition-colors focus:ring-2 focus:ring-primary focus:outline-none mb-2">
+                          <T key="projects.buttons.visit" />
+                          <span aria-hidden="true">↗</span>
+                          <kbd class="hidden md:inline-block ml-1 border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5 font-sans">Enter</kbd>
+                        </a>
+                      </div>
+                    )}
+                    <div class="mt-4 flex items-center justify-between text-xs font-bold text-primary opacity-100 transition-opacity">
+                      <div class="flex items-center gap-2">
+                        <T key="projects.clickToFlip" />
+                        <kbd class="hidden md:inline-block border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5 font-sans">Space</kbd>
+                      </div>
+                      <span aria-hidden="true" class="transform group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
+
+                  {/* Back */}
+                  <div class="card-back absolute inset-0 backface-hidden rounded-2xl border-2 bg-card p-7 flex flex-col rotate-y-180 shadow-xl overflow-y-auto overflow-x-hidden custom-scrollbar">
+                    <div class="space-y-5 flex-1">
+                      <div>
+                        <T key="projects.what" tag="h4" class="text-xs font-bold text-primary/80 mb-2" />
+                        <p class="text-sm leading-relaxed text-card-foreground/90">{t(p, 'what')}</p>
+                      </div>
+                      <div>
+                        <T key="projects.learned" tag="h4" class="text-xs font-bold text-primary/80 mb-2" />
+                        <p class="text-sm leading-relaxed text-card-foreground/90">{t(p, 'learned')}</p>
+                      </div>
+                      <div>
+                        <T key="projects.why" tag="h4" class="text-xs font-bold text-primary/80 mb-2" />
+                        <p class="text-sm leading-relaxed text-card-foreground/90">{t(p, 'why')}</p>
+                      </div>
+                      {p.url && (
+                        <div class="pt-2">
+                          <a href={p.url} target="_blank" rel="noopener noreferrer" class="flex w-full justify-center items-center gap-1.5 px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-sm font-bold transition-colors focus:ring-2 focus:ring-primary focus:outline-none">
+                            <T key="projects.buttons.visit" />
+                            <span aria-hidden="true">↗</span>
+                            <kbd class="hidden md:inline-block ml-1 border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5 font-sans">Enter</kbd>
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                    <div class="mt-6 pt-4 border-t flex items-center justify-between text-xs font-bold text-primary/70 opacity-100 transition-opacity">
+                      <T key="projects.cardActions.clickToClose" />
+                      <span class="hidden md:inline-flex items-center gap-1 font-sans">
+                        <kbd class="border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5">Space</kbd>
+                        <span>/</span>
+                        <kbd class="border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5">Esc</kbd>
                       </span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 project-title">{project.content[k]?.title || project.content.en.title}</h3>
-                    <p class="text-muted-foreground text-sm flex-1 project-description">{project.content[k]?.description || project.content.en.description}</p>
-                    <div class="flex flex-wrap gap-1 mt-3">
-                      {project.tags.slice(0, 4).map((tag) => <span class="text-xs px-2 py-0.5 rounded bg-muted">{tag}</span>)}
-                    </div>
-                    <T key="projects.clickToFlip" tag="p" class="text-xs text-muted-foreground mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <div class="card-back absolute inset-0 backface-hidden rounded-xl border bg-card p-6 flex flex-col rotate-y-180">
-                    <T key="projects.what" tag="h4" class="font-semibold text-sm text-muted-foreground mb-2" />
-                    <p class="text-sm mb-3 project-what">{project.content[k]?.what || project.content.en.what}</p>
-                    <T key="projects.learned" tag="h4" class="font-semibold text-sm text-muted-foreground mb-2" />
-                    <p class="text-sm mb-3 project-learned">{project.content[k]?.learned || project.content.en.learned}</p>
-                    <T key="projects.why" tag="h4" class="font-semibold text-sm text-muted-foreground mb-2" />
-                    <p class="text-sm flex-1 project-why">{project.content[k]?.why || project.content.en.why}</p>
                   </div>
                 </div>
               </article>
-            ))}
-          </div>
-        </section>
-      ))}
+            );
+          })}
+        </div>
+      </section>
+    ))}
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  .perspective {
-    perspective: 1000px;
-  }
+  .perspective { perspective: 1500px; }
+  .transform-style-preserve-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .rotate-y-180 { transform: rotateY(180deg); }
+  .card-inner.flipped { transform: rotateY(180deg); }
 
-  .transform-style-preserve-3d {
-    transform-style: preserve-3d;
-  }
+  .project-card { outline: none; cursor: pointer; }
+  .project-card:focus-visible .card-front { border-color: hsl(var(--primary)); box-shadow: 0 0 0 3px hsl(var(--ring)); }
 
-  .backface-hidden {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
+  .filter-btn { opacity: 0.6; border-color: transparent; cursor: pointer; }
+  .filter-btn:hover { opacity: 1; background-color: hsl(var(--secondary)); }
+  .filter-btn.active { opacity: 1; background-color: hsl(var(--primary) / 0.1); border-color: hsl(var(--primary)); color: hsl(var(--primary)); }
 
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-
-  .card-inner.flipped {
-    transform: rotateY(180deg);
-  }
-
-  .project-card {
-    cursor: pointer;
-  }
-
-  .project-card.hidden {
-    display: none;
-  }
-
-  .filter-btn {
-    opacity: 0.6;
-  }
-
-  .filter-btn.active {
-    opacity: 1;
-    background-color: hsl(var(--primary) / 0.1);
-    border-color: hsl(var(--primary));
-  }
+  .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.3); border-radius: 10px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary) / 0.5); }
 </style>
 
 <script>
-  const cards = document.querySelectorAll('.project-card');
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>(".project-card");
+  const btns = document.querySelectorAll<HTMLButtonElement>(".filter-btn");
 
-  // Flip cards on click and keyboard
-  cards.forEach(card => {
-    const el = card as HTMLElement;
-    const flip = () => el.querySelector('.card-inner')?.classList.toggle('flipped');
-    el.addEventListener('click', flip);
-    el.addEventListener('keydown', (e) => {
-      if ((e as KeyboardEvent).key === 'Enter' || (e as KeyboardEvent).key === ' ') { e.preventDefault(); flip(); }
+  cards.forEach((card) => {
+    const flip = (forceState?: boolean) => {
+      const inner = card.querySelector(".card-inner");
+      if (!inner) return;
+      const isFlipped = typeof forceState === "boolean" ? forceState : !inner.classList.contains("flipped");
+      inner.classList.toggle("flipped", isFlipped);
+      card.setAttribute("aria-expanded", String(isFlipped));
+    };
+
+    card.addEventListener("click", (e) => {
+      if ((e.target as HTMLElement).closest('a')) return;
+      flip();
+    });
+    card.addEventListener("keydown", (e) => {
+      const isFlipped = card.getAttribute("aria-expanded") === "true";
+
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const link = card.querySelector("a");
+        if (link) {
+          link.click();
+        } else {
+          flip();
+        }
+        return;
+      }
+
+      if (e.key === " ") {
+        e.preventDefault();
+        flip();
+        return;
+      }
+
+      if (e.key === "Escape" && isFlipped) {
+        e.preventDefault();
+        flip(false);
+        card.focus();
+        return;
+      }
+
+      if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)) {
+        if (isFlipped && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+          e.preventDefault();
+          const scrollable = card.querySelector(".card-back");
+          if (scrollable) {
+            scrollable.scrollTop += e.key === "ArrowDown" ? 40 : -40;
+          }
+          return;
+        }
+
+        e.preventDefault();
+
+        if (isFlipped && (e.key === "ArrowLeft" || e.key === "ArrowRight")) {
+          flip(false);
+        }
+
+        const visible = Array.from(document.querySelectorAll<HTMLElement>(".project-card:not(.hidden)"));
+        const idx = visible.indexOf(card);
+        if (idx === -1) return;
+
+        const cols = window.innerWidth >= 768 ? 2 : 1;
+        let nextIdx = idx;
+
+        if (e.key === "ArrowLeft") nextIdx = idx - 1;
+        if (e.key === "ArrowRight") nextIdx = idx + 1;
+        if (e.key === "ArrowUp") nextIdx = idx - cols;
+        if (e.key === "ArrowDown") nextIdx = idx + cols;
+
+        if (nextIdx >= 0 && nextIdx < visible.length) {
+          visible[nextIdx].focus();
+        }
+      }
     });
   });
 
-  // Filter by category
-  filterBtns.forEach(btn => btn.addEventListener('click', () => {
-    const filter = btn.getAttribute('data-filter');
-    filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
-    btn.classList.add('active');
-    btn.setAttribute('aria-pressed', 'true');
-    cards.forEach(card => card.classList.toggle('hidden',
-      filter !== 'all' && card.getAttribute('data-category') !== filter
-    ));
-  }));
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+
+      btns.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed", "false");
+      });
+
+      btn.classList.add("active");
+      btn.setAttribute("aria-pressed", "true");
+
+      cards.forEach((card) => {
+        const match = filter === "all" || card.dataset.category === filter;
+        card.classList.toggle("hidden", !match);
+      });
+    });
+  });
 </script>

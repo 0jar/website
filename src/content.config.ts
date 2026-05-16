@@ -84,6 +84,7 @@ const now = defineCollection({
 
 const projectsSchema = z.object({
     id: z.number(),
+    url: z.string().optional(),
     content: z.record(z.string(), projectFields),
     tags: z.array(z.string()),
     status: z.enum(["completed", "in-progress", "planned"]),

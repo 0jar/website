@@ -187,7 +187,8 @@
     },
     "buttons": {
       "showRandom": "Show more randomness",
-      "hideRandom": "Hide the chaos"
+      "hideRandom": "Hide the chaos",
+      "visit": "Visit project"
     },
     "filters": {
       "all": "All"
