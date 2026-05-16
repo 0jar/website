@@ -356,12 +356,6 @@
       "moreClicksToReveal": "(еще {count} кликов, чтобы показать)",
       "clicksRemaining": "кликов осталось до показа"
     },
-    "hiddenPlatforms": {
-      "platform1": "Неназываемая Платформа 1",
-      "platform2": "Неназываемая Платформа 2",
-      "click5": "Нажмите 5 раз, чтобы показать",
-      "moreClicks": "(еще 5 кликов, чтобы показать)"
-    },
     "hidden": {
       "clickToReveal": "Нажмите 5 раз, чтобы показать",
       "clicksLeft": "(еще {{clicks}} кликов, чтобы показать)",
@@ -372,7 +366,6 @@
     "title": "Контакты",
     "description": "Способы связаться и пообщаться со мной.",
     "message": "не стесняйся. скажи привет. или забронируй встречу 1 на 1, если настроен профессионально :)",
-    "pgpNote": "PGP-ключи и другие способы верификации предоставляются по запросу.",
     "disclaimer": "я отвечаю на письма. наверное. если меня не отвлечет птичка или что-то такое, хз",
     "sections": {
       "contactMe": "Связаться со мной",
@@ -391,19 +384,13 @@
       "messengerNote": "Я очень неактивен на Facebook и в Messenger. Отвечаю по мере возможности.",
       "pgpKey": "Публичный ключ PGP",
       "sshKey": "Публичный ключ SSH"
-    },
-    "secretButton": "Секретная кнопочка"
+    }
   },
   "moodCat": {
     "title": "Кот настроения дня",
     "hover": "мягко осуждает тебя",
     "refresh": "Новый кот, кто это?",
-    "seeMore": "Посмотреть еще котиков",
-    "imageSource": "Источник изображения"
-  },
-  "music": {
-    "play": "Включить фоновую музыку",
-    "pause": "Приостановить фоновую музыку"
+    "seeMore": "Посмотреть еще котиков"
   },
   "tetris": {
     "title": "Тетрис",
@@ -495,7 +482,6 @@
     "showingCount": "Показано значков: {{count}}",
     "showingFiltered": "Показано {{filtered}} из {{total}} значков",
     "noResults": "Значки по вашему запросу не найдены",
-    "visitBadge": "Посетить {{name}}",
     "categories": {
       "all": "Все",
       "personal": "Личное",
@@ -660,7 +646,6 @@
     "copyright": "2026, ∴ Джарема (Jarema), CC BY 4.0",
     "madeWith": "сделано с любовью",
     "andChaos": "и несколькими днями кодинга",
-    "decorativeStripe": "Декоративная полоса подвала",
     "uptime": "Аптайм",
     "siteStatus": "Статус сайта"
   },
@@ -684,7 +669,6 @@
     "cycleLanguage": "Переключить язык",
     "cycleTheme": "Сменить тему",
     "refreshCat": "Обновить котика-настроение",
-    "gamePageNotice": "Большинство горячих клавиш отключено на страницах игр, чтобы избежать конфликтов с управлением.",
     "openShortcuts": "Открыть список клавиш",
     "actionSearch": "Открыть Поиск Действий",
     "webring": "Веб-кольца"
@@ -712,60 +696,38 @@
     "projects": {
       "category": "Навигация по карточкам проектов",
       "closeCard": "Закрыть перевёрнутую карточку",
-      "closeCardDescription": "",
       "left": "Перейти влево",
-      "leftDescription": "",
       "right": "Перейти вправо",
-      "rightDescription": "",
       "up": "Перейти вверх",
-      "upDescription": "",
       "down": "Перейти вниз",
-      "downDescription": "",
-      "flipCard": "Перевернуть карточку проекта: {{title}}",
-      "flipCardDescription": ""
+      "flipCard": "Перевернуть карточку проекта: {{title}}"
     },
     "blog": {
       "category": "Навигация по блогам",
       "next": "К следующему посту",
-      "nextDescription": "",
       "prev": "К предыдущему посту",
-      "prevDescription": "",
       "search": "Поиск по блогам",
-      "searchDescription": "",
       "filterTag": "Фильтровать посты блога",
-      "filterTagDescription": "",
       "jumpToPost": "Перейти к посту {{i}}",
-      "jumpToPostDescription": "",
-      "back": "Назад к списку блогов",
-      "backDescription": ""
+      "back": "Назад к списку блогов"
     },
     "about": {
       "category": "Навигация по разделам 'О нас'",
-      "jumpToChapter": "Перейти к главе {{i}}",
-      "jumpToChapterDescription": ""
+      "jumpToChapter": "Перейти к главе {{i}}"
     },
     "uses": {
       "category": "Навигация по разделам использования",
-      "jumpToCategory": "Перейти к {{category}}",
-      "jumpToCategoryDescription": ""
+      "jumpToCategory": "Перейти к {{category}}"
     },
     "now": {
       "category": "Навигация по текущим разделам",
-      "jumpToCategory": "Перейти к {{category}}",
-      "jumpToCategoryDescription": ""
+      "jumpToCategory": "Перейти к {{category}}"
     },
     "colophon": {
       "category": "Навигация по разделам колофона",
-      "jumpToSection": "Перейти к {{section}}",
-      "jumpToSectionDescription": ""
+      "jumpToSection": "Перейти к {{section}}"
     },
     "tools": "Инструменты"
-  },
-  "firstVisitHint": {
-    "prefix": "Подсказка:",
-    "message": "Нажмите клавишу",
-    "suffix": ", чтобы открыть поиск по сайту :D",
-    "dismiss": "Скрыть"
   },
   "textCounter": {
     "title": "Счетчик текста",
@@ -830,9 +792,5 @@
   "slashes": {
     "title": "Слеши",
     "description": "Список всех основных страниц на этом сайте."
-  },
-  "game": {
-    "javascriptRequired": "Требуется JavaScript",
-    "javascriptRequiredDesc": "Для этой игры требуется JavaScript. Пожалуйста, включите JavaScript и перезагрузите страницу."
   }
 }

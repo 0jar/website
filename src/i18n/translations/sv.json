@@ -356,12 +356,6 @@
       "moreClicksToReveal": "({count} klick kvar för att visa)",
       "clicksRemaining": "klick kvar för att visa"
     },
-    "hiddenPlatforms": {
-      "platform1": "Omtalad plattform 1",
-      "platform2": "Omtalad plattform 2",
-      "click5": "Klicka 5 gånger för att visa",
-      "moreClicks": "(5 klick kvar för att visa)"
-    },
     "hidden": {
       "clickToReveal": "Klicka 5 gånger för att visa",
       "clicksLeft": "({{clicks}} klick kvar för att visa)",
@@ -372,7 +366,6 @@
     "title": "Kontakt",
     "description": "Sätt att nå ut och kontakta mig.",
     "message": "var inte blyg. säg hej. eller boka ett 1:1 om du känner dig proffs :)",
-    "pgpNote": "PGP-nycklar och andra verifieringsmetoder tillgängliga på begäran.",
     "disclaimer": "jag svarar på mejl. troligen. om jag inte blir distraherad av en fågel eller något",
     "sections": {
       "contactMe": "Kontakta mig",
@@ -391,19 +384,13 @@
       "messengerNote": "Jag är väldigt inaktiv på Facebook och Messenger. Svar sker i mån av tid.",
       "pgpKey": "PGP publik nyckel",
       "sshKey": "SSH publik nyckel"
-    },
-    "secretButton": "Hemlig knapp"
+    }
   },
   "moodCat": {
     "title": "Dagens katt",
     "hover": "dömer dig mjukt",
     "refresh": "Ny katt, vem är du?",
-    "seeMore": "Se fler katter",
-    "imageSource": "Bildkälla"
-  },
-  "music": {
-    "play": "Spela bakgrundsmusik",
-    "pause": "Pausa bakgrundsmusik"
+    "seeMore": "Se fler katter"
   },
   "tetris": {
     "title": "Tetris",
@@ -495,7 +482,6 @@
     "showingCount": "Visar {{count}} märken",
     "showingFiltered": "Visar {{filtered}} av {{total}} märken",
     "noResults": "Inga märken hittades som matchar dina sökkriterier",
-    "visitBadge": "Besök {{name}}",
     "categories": {
       "all": "Alla",
       "personal": "Personligt",
@@ -660,7 +646,6 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "gjord med kärlek",
     "andChaos": "och några veckors kodande",
-    "decorativeStripe": "Dekorativ sidfotsrand",
     "uptime": "Drifttid",
     "siteStatus": "Webbplatsstatus"
   },
@@ -684,7 +669,6 @@
     "cycleLanguage": "Byt språk",
     "cycleTheme": "Byt tema",
     "refreshCat": "Uppdatera humörkatt",
-    "gamePageNotice": "De flesta tangentbordsgenvägar är avstängda på spelsidor för att undvika konflikter med spelkontroller.",
     "openShortcuts": "Öppna tangentbordsgenvägar",
     "actionSearch": "Öppna åtgärdssökning",
     "webring": "Webbringar"
@@ -712,60 +696,38 @@
     "projects": {
       "category": "Navigera bland projektkort",
       "closeCard": "Stäng vänt kort",
-      "closeCardDescription": "Stäng det öppnade projektkortet",
       "left": "Navigera vänster",
-      "leftDescription": "Gå till föregående projektkort",
       "right": "Navigera höger",
-      "rightDescription": "Gå till nästa projektkort",
       "up": "Navigera upp",
-      "upDescription": "Navigera upp eller scrolla innehåll",
       "down": "Navigera ner",
-      "downDescription": "Navigera ner eller scrolla innehåll",
-      "flipCard": "Vänd projektkort: {{title}}",
-      "flipCardDescription": "Vänd projektkortet för att se detaljer"
+      "flipCard": "Vänd projektkort: {{title}}"
     },
     "blog": {
       "category": "Navigera bland blogginlägg",
       "next": "Till nästa inlägg",
-      "nextDescription": "Gå till nästa blogginlägg",
       "prev": "Till föregående inlägg",
-      "prevDescription": "Gå till föregående blogginlägg",
       "search": "Sök blogginlägg",
-      "searchDescription": "Sök bland titlar eller innehåll",
       "filterTag": "Filtrera blogginlägg",
-      "filterTagDescription": "Öppna filtermeny",
       "jumpToPost": "Hoppa till inlägg {{i}}",
-      "jumpToPostDescription": "Navigera till inlägg {{i}}",
-      "back": "Tillbaka till blogglistan",
-      "backDescription": "Gå tillbaka till blogglistan"
+      "back": "Tillbaka till blogglistan"
     },
     "about": {
       "category": "Navigera bland om-sektioner",
-      "jumpToChapter": "Hoppa till kapitel {{i}}",
-      "jumpToChapterDescription": "Navigera till kapitel {{i}}"
+      "jumpToChapter": "Hoppa till kapitel {{i}}"
     },
     "uses": {
       "category": "Navigera bland verktygssektioner",
-      "jumpToCategory": "Hoppa till {{category}}",
-      "jumpToCategoryDescription": "Navigera till kategori {{category}}"
+      "jumpToCategory": "Hoppa till {{category}}"
     },
     "now": {
       "category": "Navigera bland nu-sektioner",
-      "jumpToCategory": "Hoppa till {{category}}",
-      "jumpToCategoryDescription": "Navigera till {{category}}"
+      "jumpToCategory": "Hoppa till {{category}}"
     },
     "colophon": {
       "category": "Navigera bland kolofonsektioner",
-      "jumpToSection": "Hoppa till {{section}}",
-      "jumpToSectionDescription": "Navigera till sektion {{section}}"
+      "jumpToSection": "Hoppa till {{section}}"
     },
     "tools": "Verktyg"
-  },
-  "firstVisitHint": {
-    "prefix": "Tips:",
-    "message": "Du kan trycka på",
-    "suffix": "-tangenten för att öppna sökfältet :D",
-    "dismiss": "Dölj"
   },
   "textCounter": {
     "title": "Texträknare",
@@ -830,9 +792,5 @@
   "slashes": {
     "title": "Snedstreck",
     "description": "En lista över alla huvudsidor på denna webbplats."
-  },
-  "game": {
-    "javascriptRequired": "JavaScript krävs",
-    "javascriptRequiredDesc": "Det här spelet behöver JavaScript för att köras. Aktivera JavaScript och ladda om sidan."
   }
 }

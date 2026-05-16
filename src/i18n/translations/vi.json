@@ -396,12 +396,6 @@
       "moreClicksToReveal": "(còn {count} lần nhấn nữa để hiện)",
       "clicksRemaining": "lần nhấn nữa để hiện"
     },
-    "hiddenPlatforms": {
-      "platform1": "Nền tảng bí mật số 1",
-      "platform2": "Nền tảng bí mật số 2",
-      "click5": "Nhấn 5 lần để hiện",
-      "moreClicks": "(còn 5 lần nhấn nữa để hiện)"
-    },
     "hidden": {
       "clickToReveal": "Nhấn 5 lần để hiện",
       "clicksLeft": "(còn {{clicks}} lần nhấn nữa để hiện)",
@@ -413,7 +407,6 @@
     "description": "Các phương thức liên lạc với mình.",
     "message": "đừng ngại mình, hãy vào chào một câu nhé. hoặc cũng có thể đặt lịch 1:1 nếu bạn muốn chuyên nghiệp tí =))",
     "disclaimer": "mình có trả lời email nha. ờm, chắc thế. trừ khi mình bị mèo hay gì đó làm phân tâm thôi :v",
-    "pgpNote": "Khóa PGP và các phương thức xác thực khác sẽ được cung cấp khi yêu cầu.",
     "sections": {
       "contactMe": "Liên hệ với mình",
       "socialMedia": "Mình trên mạng xã hội",
@@ -431,19 +424,13 @@
       "messengerNote": "Mình khá ít hoạt động trên Facebook và Messenger. Mình không thể đảm bảo được sẽ trả lời nhanh nếu bạn nhắn tin qua đây.",
       "pgpKey": "Khóa công khai PGP",
       "sshKey": "Khóa công khai SSH"
-    },
-    "secretButton": "Nút ấn bí hiểm"
+    }
   },
   "moodCat": {
     "title": "Mèo của hôm nay",
     "hover": "mèo âm thầm phán xét bạn",
     "refresh": "Cho xem mèo mới đi",
-    "seeMore": "Xem thêm mèo khác",
-    "imageSource": "Nguồn ảnh"
-  },
-  "music": {
-    "play": "Phát nhạc nền",
-    "pause": "Tạm dừng nhạc nền"
+    "seeMore": "Xem thêm mèo khác"
   },
   "tetris": {
     "title": "Tetris",
@@ -535,7 +522,6 @@
     "showingCount": "Đang hiện {{count}} huy hiệu",
     "showingFiltered": "Đang hiện {{filtered}} trong tổng số {{total}} huy hiệu",
     "noResults": "Không tìm thấy huy hiệu nào khớp với tìm kiếm",
-    "visitBadge": "Ghé thăm {{name}}",
     "categories": {
       "all": "Tất cả",
       "personal": "Cá nhân",
@@ -700,7 +686,6 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "làm với mọi yêu thương",
     "andChaos": "và vài tuần nghịch code",
-    "decorativeStripe": "Dải trang trí chân trang",
     "uptime": "Trạng thái hoạt động",
     "siteStatus": "Tình trạng trang"
   },
@@ -724,7 +709,6 @@
     "cycleLanguage": "Chuyển đổi ngôn ngữ",
     "cycleTheme": "Chuyển đổi chủ đề",
     "refreshCat": "Thay đổi ảnh mèo",
-    "gamePageNotice": "Hầu hết các phím tắt ở các trang khác đều bị vô hiệu hóa ở các trang trò chơi để tránh xung đột với các phím điều hướng của các trò.",
     "openShortcuts": "Mở bảng phím tắt",
     "actionSearch": "Mở thanh tìm kiếm",
     "webring": "Webrings"
@@ -752,60 +736,38 @@
     "projects": {
       "category": "Điều hướng qua các dự án",
       "closeCard": "Đóng dự án",
-      "closeCardDescription": "Đóng dự án hiện tại",
       "left": "Điều hướng sang trái",
-      "leftDescription": "Điều hướng đến dự án trước đó",
       "right": "Điều hướng sang phải",
-      "rightDescription": "Điều hướng đến dự án tiếp theo",
       "up": "Điều hướng lên",
-      "upDescription": "Điều hướng lên",
       "down": "Điều hướng xuống",
-      "downDescription": "Điều hướng xuống",
-      "flipCard": "Mở dự án {{title}}",
-      "flipCardDescription": "Mở dự án để xem chi tiết"
+      "flipCard": "Mở dự án {{title}}"
     },
     "blog": {
       "category": "Điều hướng qua các bài viết",
       "next": "Đến bài viết tiếp theo",
-      "nextDescription": "",
       "prev": "Đến bài viết trước",
-      "prevDescription": "",
       "search": "Tìm kiếm bài viết",
-      "searchDescription": "Tìm theo tiêu đề hoặc nội dung",
       "filterTag": "Lọc bài viết",
-      "filterTagDescription": "Mở bộ lọc bài viết",
       "jumpToPost": "Đi tới bài viết số {{i}}",
-      "jumpToPostDescription": "",
-      "back": "Quay lại danh sách bài viết",
-      "backDescription": ""
+      "back": "Quay lại danh sách bài viết"
     },
     "about": {
       "category": "Điều hướng qua các phần giới thiệu",
-      "jumpToChapter": "Đi đến chương {{i}}",
-      "jumpToChapterDescription": ""
+      "jumpToChapter": "Đi đến chương {{i}}"
     },
     "uses": {
       "category": "Điều hướng qua các phần công cụ",
-      "jumpToCategory": "Đi đến mục {{category}}",
-      "jumpToCategoryDescription": ""
+      "jumpToCategory": "Đi đến mục {{category}}"
     },
     "now": {
       "category": "Điều hướng qua các phần",
-      "jumpToCategory": "Đi đến mục {{category}}",
-      "jumpToCategoryDescription": ""
+      "jumpToCategory": "Đi đến mục {{category}}"
     },
     "colophon": {
       "category": "Điều hướng qua các phần thông tin",
-      "jumpToSection": "Đi đến phần {{section}}",
-      "jumpToSectionDescription": ""
+      "jumpToSection": "Đi đến phần {{section}}"
     },
     "tools": "Công cụ"
-  },
-  "firstVisitHint": {
-    "prefix": "Mách nhỏ:",
-    "message": "Bạn có thể nhấn phím",
-    "suffix": "để mở thanh tìm kiếm :D",
-    "dismiss": "Bỏ qua"
   },
   "textCounter": {
     "title": "Công cụ đếm văn bản",
@@ -870,9 +832,5 @@
   "slashes": {
     "title": "Slashes",
     "description": "Danh sách tất cả các trang chính trên trang web này."
-  },
-  "game": {
-    "javascriptRequired": "Cần có JavaScript",
-    "javascriptRequiredDesc": "Trò chơi này cần JavaScript để chạy. Vui lòng bật JavaScript và tải lại trang."
   }
 }

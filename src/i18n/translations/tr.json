@@ -356,12 +356,6 @@
       "moreClicksToReveal": "(ortaya çıkarmak için {count} tıklama daha)",
       "clicksRemaining": "tıklama daha kaldı"
     },
-    "hiddenPlatforms": {
-      "platform1": "Söylenemez Platform 1",
-      "platform2": "Söylenemez Platform 2",
-      "click5": "Ortaya çıkarmak için 5 kez tıkla",
-      "moreClicks": "(ortaya çıkarmak için 5 tıklama daha)"
-    },
     "hidden": {
       "clickToReveal": "Ortaya çıkarmak için 5 kez tıkla",
       "clicksLeft": "(ortaya çıkarmak için {{clicks}} tıklama daha)",
@@ -372,7 +366,6 @@
     "title": "İletişim",
     "description": "Bana ulaşmanın ve bağlantı kurmanın yolları.",
     "message": "çekinme. selam ver. ya da profesyonel hissediyorsan 1:1 görüşme ayarla :)",
-    "pgpNote": "PGP anahtarları ve diğer doğrulama yöntemleri istek üzerine paylaşılır.",
     "disclaimer": "e-postalara cevap veriyorum. muhtemelen. bir kuş dikkatimi dağıtmazsa falan idk",
     "sections": {
       "contactMe": "Bana ulaş",
@@ -391,19 +384,13 @@
       "messengerNote": "Facebook ve Messenger'da çok aktif değilim. Cevaplar elimden geldiğince olacak.",
       "pgpKey": "PGP açık anahtar",
       "sshKey": "SSH açık anahtar"
-    },
-    "secretButton": "Gizli düğme"
+    }
   },
   "moodCat": {
     "title": "Günün Mod Kedisi",
     "hover": "seni usulca yargılıyor",
     "refresh": "Yeni kedi, kimmiş o?",
-    "seeMore": "Daha fazla kedi gör",
-    "imageSource": "Görsel kaynağı"
-  },
-  "music": {
-    "play": "Arka plan müziğini çal",
-    "pause": "Arka plan müziğini duraklat"
+    "seeMore": "Daha fazla kedi gör"
   },
   "tetris": {
     "title": "Tetris",
@@ -495,7 +482,6 @@
     "showingCount": "{{count}} rozet gösteriliyor",
     "showingFiltered": "{{total}} rozetten {{filtered}} tanesi gösteriliyor",
     "noResults": "Arama kriterlerinle eşleşen rozet bulunamadı",
-    "visitBadge": "Ziyaret et: {{name}}",
     "categories": {
       "all": "Tümü",
       "personal": "Kişisel",
@@ -660,7 +646,6 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "sevgiyle yapıldı",
     "andChaos": "ve birkaç günlük kodlamayla",
-    "decorativeStripe": "Dekoratif altbilgi şeridi",
     "uptime": "Çalışma süresi",
     "siteStatus": "Site durumu"
   },
@@ -684,7 +669,6 @@
     "cycleLanguage": "Dilleri döngüyle değiştir",
     "cycleTheme": "Temaları sırayla değiştir",
     "refreshCat": "Mod kedisini yenile",
-    "gamePageNotice": "Oyun kontrolleriyle çakışmaları önlemek için oyun sayfalarında çoğu kısayol devre dışıdır.",
     "openShortcuts": "Klavye kısayollarını aç",
     "actionSearch": "Eylem Aramasını Aç",
     "webring": "Web halkaları"
@@ -712,60 +696,38 @@
     "projects": {
       "category": "Projeler arasında gezin",
       "closeCard": "Kartı kapat",
-      "closeCardDescription": "Çevrilmiş projeyi kapat",
       "left": "Sola git",
-      "leftDescription": "Önceki projeye git",
       "right": "Sağa git",
-      "rightDescription": "Sonraki projeye git",
       "up": "Yukarı git",
-      "upDescription": "Yukarı git veya kaydır",
       "down": "Aşağı git",
-      "downDescription": "Aşağı git veya kaydır",
-      "flipCard": "Projeyi çevir: {{title}}",
-      "flipCardDescription": "Detayları görmek için kartı çevir"
+      "flipCard": "Projeyi çevir: {{title}}"
     },
     "blog": {
       "category": "Blog gönderilerinde gezin",
       "next": "Sonraki gönderi",
-      "nextDescription": "Sonraki blog gönderisine geç",
       "prev": "Önceki gönderi",
-      "prevDescription": "Önceki blog gönderisine dön",
       "search": "Blog gönderilerini ara",
-      "searchDescription": "Başlığa veya içeriğe göre ara",
       "filterTag": "Gönderileri filtrele",
-      "filterTagDescription": "Filtre menüsünü aç",
       "jumpToPost": "{{i}} numaralı gönderiye git",
-      "jumpToPostDescription": "{{i}} numaralı gönderiye git",
-      "back": "Blog listesine geri dön",
-      "backDescription": "Tüm blog gönderilerine geri dön"
+      "back": "Blog listesine geri dön"
     },
     "about": {
       "category": "Hakkımda bölümlerinde gezin",
-      "jumpToChapter": "{{i}}. bölüme git",
-      "jumpToChapterDescription": "{{i}}. bölüme git"
+      "jumpToChapter": "{{i}}. bölüme git"
     },
     "uses": {
       "category": "Kullanım bölümlerinde gezin",
-      "jumpToCategory": "{{category}} kategorisine git",
-      "jumpToCategoryDescription": "{{category}} kategorisine git"
+      "jumpToCategory": "{{category}} kategorisine git"
     },
     "now": {
       "category": "Şu an bölümlerinde gezin",
-      "jumpToCategory": "{{category}} kategorisine git",
-      "jumpToCategoryDescription": "{{category}} kategorisine git"
+      "jumpToCategory": "{{category}} kategorisine git"
     },
     "colophon": {
       "category": "Künye bölümlerinde gezin",
-      "jumpToSection": "{{section}} bölümüne git",
-      "jumpToSectionDescription": "{{section}} bölümüne git"
+      "jumpToSection": "{{section}} bölümüne git"
     },
     "tools": "Araçlar"
-  },
-  "firstVisitHint": {
-    "prefix": "İpucu:",
-    "message": "Arama çubuğunu açmak için",
-    "suffix": "tuşuna basabilirsin :D",
-    "dismiss": "Kapat"
   },
   "textCounter": {
     "title": "Metin sayacı",
@@ -830,9 +792,5 @@
   "slashes": {
     "title": "Slashler",
     "description": "Bu sitedeki tüm ana sayfaların bir listesi."
-  },
-  "game": {
-    "javascriptRequired": "JavaScript gerekli",
-    "javascriptRequiredDesc": "Bu oyunun çalışması için JavaScript gereklidir. Lütfen JavaScript'i etkinleştirin ve sayfayı yeniden yükleyin."
   }
 }

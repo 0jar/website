@@ -356,12 +356,6 @@
       "moreClicksToReveal": "({count} luka sin tawa lukin)",
       "clicksRemaining": "luka sin tawa lukin"
     },
-    "hiddenPlatforms": {
-      "platform1": "lipu pi toki ala 1",
-      "platform2": "lipu pi toki ala 2",
-      "click5": "o luka 5 tawa lukin",
-      "moreClicks": "(luka 5 sin tawa lukin)"
-    },
     "hidden": {
       "clickToReveal": "o luka 5 tawa lukin",
       "clicksLeft": "(luka {{clicks}} sin tawa lukin)",
@@ -372,7 +366,6 @@
     "title": "toki tawa",
     "description": "nasin tawa kama toki tawa mi.",
     "message": "o wawa ala. o toki. anu o ante e tenpo 1:1 la sina wile pona :)",
-    "pgpNote": "sina wile la, mi pana e ilo open PGP e nasin pi sona lon ante.",
     "disclaimer": "mi ken pana e toki e-mail. ken la waso li alasa e pilin mi.",
     "sections": {
       "contactMe": "toki tawa mi",
@@ -391,19 +384,13 @@
       "messengerNote": "mi lon Facebook en Messenger lili. mi ken pana toki kepeken wawa ala.",
       "pgpKey": "ilo open PGP",
       "sshKey": "ilo open SSH"
-    },
-    "secretButton": "nupa len"
+    }
   },
   "moodCat": {
     "title": "soweli pi tenpo ni",
     "hover": "li lukin ike lili tawa sina",
     "refresh": "soweli sin, seme?",
-    "seeMore": "o lukin e soweli ante",
-    "imageSource": "tan sitelen"
-  },
-  "music": {
-    "play": "o kalama musi anpa",
-    "pause": "o weka e kalama musi"
+    "seeMore": "o lukin e soweli ante"
   },
   "tetris": {
     "title": "Tetris",
@@ -495,7 +482,6 @@
     "showingCount": "sitelen {{count}} li lon",
     "showingFiltered": "sitelen {{filtered}} pi {{total}} li lon",
     "noResults": "mi alasa, taso mi lukin ala e sitelen",
-    "visitBadge": "o tawa {{name}}",
     "categories": {
       "all": "ale",
       "personal": "mi",
@@ -660,7 +646,6 @@
     "copyright": "tenpo sike 2026, jan Jarema, nasin CC BY 4.0",
     "madeWith": "mi pali kepeken olin",
     "andChaos": "en tenpo lili pi musi ilo",
-    "decorativeStripe": "linja len pi anpa lipu",
     "uptime": "tenpo pali",
     "siteStatus": "sitelen tawa sike"
   },
@@ -684,7 +669,6 @@
     "cycleLanguage": "ante e toki",
     "cycleTheme": "ante e kule",
     "refreshCat": "sin e soweli pilin",
-    "gamePageNotice": "lon lipu musi la, nasin noka mute li weka tawa weka pakala.",
     "openShortcuts": "open e nasin noka",
     "actionSearch": "open e alasa pali",
     "webring": "kulupu lipu webring"
@@ -712,60 +696,38 @@
     "projects": {
       "category": "tawa lon poki pali",
       "closeCard": "pini e lipu tawa",
-      "closeCardDescription": "pini e lipu pali open",
       "left": "tawa lete",
-      "leftDescription": "tawa pali pini",
       "right": "tawa poka",
-      "rightDescription": "tawa pali kama",
       "up": "tawa sewi",
-      "upDescription": "tawa sewi anu tawa lipu insa",
       "down": "tawa anpa",
-      "downDescription": "tawa anpa anu tawa lipu insa",
-      "flipCard": "ante sinpin pi pali: {{title}}",
-      "flipCardDescription": "ante sinpin tawa lukin e sona"
+      "flipCard": "ante sinpin pi pali: {{title}}"
     },
     "blog": {
       "category": "tawa lon lipu toki",
       "next": "tawa lipu kama",
-      "nextDescription": "tawa lipu kama",
       "prev": "tawa lipu pini",
-      "prevDescription": "tawa lipu pini",
       "search": "alasa e lipu toki",
-      "searchDescription": "alasa kepeken nimi anu insa",
       "filterTag": "lawa e lipu toki",
-      "filterTagDescription": "open e lawa",
       "jumpToPost": "tawa lipu {{i}}",
-      "jumpToPostDescription": "tawa lipu {{i}}",
-      "back": "tawa listi pi lipu toki",
-      "backDescription": "tawa listi lipu toki"
+      "back": "tawa listi pi lipu toki"
     },
     "about": {
       "category": "tawa lon 'sona mi'",
-      "jumpToChapter": "tawa len {{i}}",
-      "jumpToChapterDescription": "tawa len {{i}}"
+      "jumpToChapter": "tawa len {{i}}"
     },
     "uses": {
       "category": "tawa lon 'kepeken'",
-      "jumpToCategory": "tawa {{category}}",
-      "jumpToCategoryDescription": "tawa kulupu {{category}}"
+      "jumpToCategory": "tawa {{category}}"
     },
     "now": {
       "category": "tawa lon 'tenpo ni'",
-      "jumpToCategory": "tawa {{category}}",
-      "jumpToCategoryDescription": "tawa {{category}}"
+      "jumpToCategory": "tawa {{category}}"
     },
     "colophon": {
       "category": "tawa lon 'tan lipu'",
-      "jumpToSection": "tawa {{section}}",
-      "jumpToSectionDescription": "tawa kulupu {{section}}"
+      "jumpToSection": "tawa {{section}}"
     },
     "tools": "ilo"
-  },
-  "firstVisitHint": {
-    "prefix": "sona:",
-    "message": "o luka e nena",
-    "suffix": "tawa open e ilo alasa :D",
-    "dismiss": "weka e sona"
   },
   "textCounter": {
     "title": "ilo pi nanpa nimi",
@@ -830,9 +792,5 @@
   "slashes": {
     "title": "lipu lili",
     "description": "kulupu pi lipu suli ali pi lipu ni."
-  },
-  "game": {
-    "javascriptRequired": "wile e ilo JavaScript",
-    "javascriptRequiredDesc": "musi ni li wile e ilo JavaScript. o open e ilo JavaScript li sin e lipu."
   }
 }

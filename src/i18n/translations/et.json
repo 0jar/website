@@ -356,12 +356,6 @@
       "moreClicksToReveal": "({count} klikki veel, et paljastada)",
       "clicksRemaining": "klikki veel, et paljastada"
     },
-    "hiddenPlatforms": {
-      "platform1": "Nimetu platvorm 1",
-      "platform2": "Nimetu platvorm 2",
-      "click5": "Klõpsake 5 korda, et kuvada",
-      "moreClicks": "(veel 5 klikki, et paljastada)"
-    },
     "hidden": {
       "clickToReveal": "Vajutage 5 korda, et kuvada",
       "clicksLeft": "({{clicks}} klõpsu veel, et paljastada)",
@@ -373,7 +367,6 @@
     "description": "Võimalused minuga ühendust võtta ja ühendust luua.",
     "message": "ära ole häbelik. ütle tere. või broneeri 1:1, kui tunned end professionaalselt :)",
     "disclaimer": "vastan meilidele küll. tõenäoliselt. kui mind just mõni lind vms ei hauta",
-    "pgpNote": "PGP-võtmed ja teised verifitseerimismeetodid on saadaval nõudmisel.",
     "sections": {
       "contactMe": "Võtke minuga ühendust",
       "socialMedia": "Mina sotsiaalmeedias",
@@ -391,19 +384,13 @@
       "messengerNote": "Olen Facebookis ja Messengeris väga passiivne. Vastan parima võimaluse piires.",
       "pgpKey": "PGP avalik võti",
       "sshKey": "SSH avalik võti"
-    },
-    "secretButton": "Salajane nupp"
+    }
   },
   "moodCat": {
     "title": "Päeva kass",
     "hover": "hindab sind pehmelt",
     "refresh": "Uus kass, kes see?",
-    "seeMore": "Vaata rohkem liiva",
-    "imageSource": "Pildi allikas"
-  },
-  "music": {
-    "play": "Esita taustamuusikat",
-    "pause": "Taustamuusika peatamine"
+    "seeMore": "Vaata rohkem liiva"
   },
   "tetris": {
     "title": "Tetris",
@@ -495,7 +482,6 @@
     "showingCount": "Kuvatud {{count}} märki",
     "showingFiltered": "Kuvatud {{filtered}} märki {{total}}-st",
     "noResults": "Otsingukriteeriumidele vastavaid märke ei leitud",
-    "visitBadge": "Külasta {{name}}",
     "categories": {
       "all": "Kõik",
       "personal": "Isiklik",
@@ -660,7 +646,6 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "armastusega tehtud",
     "andChaos": "ja paar nädalat mängimist",
-    "decorativeStripe": "Dekoratiivne jaluse triip",
     "uptime": "Ülekoormus",
     "siteStatus": "Saidi olek"
   },
@@ -684,7 +669,6 @@
     "cycleLanguage": "Keelte vahel liikumine",
     "cycleTheme": "Heledate/tumedate teemade vaheldumisi vahetamine",
     "refreshCat": "Värskenda kassi",
-    "gamePageNotice": "Mängulehtedel on enamik klaviatuuri otseteid keelatud, et vältida konflikte nuppudega.",
     "openShortcuts": "Ava klaviatuuri otseteed",
     "actionSearch": "Ava tegevuste otsing",
     "webring": "Veebiringid"
@@ -712,60 +696,38 @@
     "projects": {
       "category": "Navigeeri projektide seas",
       "closeCard": "Sulge avatud kaart",
-      "closeCardDescription": "Sulge praegu avatud kaart",
       "left": "Navigeeri vasakule",
-      "leftDescription": "Navigeeri eelmisele projektikaardile",
       "right": "Navigeeri paremale",
-      "rightDescription": "Navigeeri järgmisele projektikaardile",
       "up": "Navigeeri üles",
-      "upDescription": "Navigeeri üles või keri lehte",
       "down": "Navigeeri alla",
-      "downDescription": "Navigeeri alla või keri lehte",
-      "flipCard": "Pööra projektikaarti: {{title}}",
-      "flipCardDescription": "Pööra kaarti, et näha üksikasju"
+      "flipCard": "Pööra projektikaarti: {{title}}"
     },
     "blog": {
       "category": "Navigeeri blogipostitustes",
       "next": "Järgmise postituse juurde",
-      "nextDescription": "Navigeeri järgmise blogipostituseni",
       "prev": "Eelmise postituse juurde",
-      "prevDescription": "Navigeeri eelmise blogipostituseni",
       "search": "Otsi blogipostitusi",
-      "searchDescription": "Otsi postitusi pealkirja või sisu järgi",
       "filterTag": "Filtreeri blogipostitusi",
-      "filterTagDescription": "Ava filtreerimismenüü",
       "jumpToPost": "Hüppa postitusse {{i}}",
-      "jumpToPostDescription": "Navigeeri postitusele {{i}}",
-      "back": "Tagasi bloginimekirja",
-      "backDescription": "Mine tagasi pealehele"
+      "back": "Tagasi bloginimekirja"
     },
     "about": {
       "category": "Navigeeri sektsioonides",
-      "jumpToChapter": "Hüppa peatükki {{i}}",
-      "jumpToChapterDescription": "Navigeeri peatükki {{i}}"
+      "jumpToChapter": "Hüppa peatükki {{i}}"
     },
     "uses": {
       "category": "Navigeeri tööriistade seas",
-      "jumpToCategory": "Hüppa kategooriasse {{category}}",
-      "jumpToCategoryDescription": "Navigeeri {{category}} juurde"
+      "jumpToCategory": "Hüppa kategooriasse {{category}}"
     },
     "now": {
       "category": "Navigeeri praegustes tegevustes",
-      "jumpToCategory": "Hüppa kategooriasse {{category}}",
-      "jumpToCategoryDescription": "Navigeeri {{category}} juurde"
+      "jumpToCategory": "Hüppa kategooriasse {{category}}"
     },
     "colophon": {
       "category": "Navigeeri kolofooni sektsioonides",
-      "jumpToSection": "Hüppa sektsiooni {{section}}",
-      "jumpToSectionDescription": "Navigeeri sektsiooni {{section}}"
+      "jumpToSection": "Hüppa sektsiooni {{section}}"
     },
     "tools": "Tööriistad"
-  },
-  "firstVisitHint": {
-    "prefix": "Vihje:",
-    "message": "Otsinguriba avamiseks võid vajutada",
-    "suffix": "klahvi :D",
-    "dismiss": "Sulge vihje"
   },
   "textCounter": {
     "title": "Tekstiloendur",
@@ -830,9 +792,5 @@
   "slashes": {
     "title": "Kaldkriipsud",
     "description": "Nimekiri kõikidest selle saidi pealehtedest."
-  },
-  "game": {
-    "javascriptRequired": "JavaScript on nõutav",
-    "javascriptRequiredDesc": "See mäng vajab töötamiseks JavaScripti. Palun luba JavaScript ja lae leht uuesti."
   }
 }

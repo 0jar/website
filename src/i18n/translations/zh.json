@@ -356,12 +356,6 @@
       "moreClicksToReveal": "(还需点击 {count} 次才能显示)",
       "clicksRemaining": "次点击才能显示"
     },
-    "hiddenPlatforms": {
-      "platform1": "秘密平台 1",
-      "platform2": "秘密平台 2",
-      "click5": "点击 5 次显示",
-      "moreClicks": "(还需点击 5 次才能显示)"
-    },
     "hidden": {
       "clickToReveal": "点击 5 次显示",
       "clicksLeft": "(还需点击 {{clicks}} 次才能显示)",
@@ -372,7 +366,6 @@
     "title": "联系",
     "description": "联系我的方式。",
     "message": "别害羞，来打个招呼吧。如果你想专业点，也可以预约 1 对 1 交流",
-    "pgpNote": "PGP 密钥及其他验证方式可应要求提供。",
     "disclaimer": "我会回复邮件的。嗯，大概吧。除非我被猫或其他什么东西分心了",
     "sections": {
       "contactMe": "联系我",
@@ -391,19 +384,13 @@
       "messengerNote": "我不太活跃在 Facebook 和 Messenger 上。如果你通过这里发消息，我不能保证很快回复。",
       "pgpKey": "PGP 公钥",
       "sshKey": "SSH 公钥"
-    },
-    "secretButton": "神秘按钮"
+    }
   },
   "moodCat": {
     "title": "今日精选猫咪图",
     "hover": "猫咪正在默默地评判你",
     "refresh": "换张猫咪图看看",
-    "seeMore": "查看更多猫咪",
-    "imageSource": "图片来源"
-  },
-  "music": {
-    "play": "播放背景音乐",
-    "pause": "暂停背景音乐"
+    "seeMore": "查看更多猫咪"
   },
   "tetris": {
     "title": "俄罗斯方块",
@@ -495,7 +482,6 @@
     "showingCount": "显示 {{count}} 个徽章",
     "showingFiltered": "显示 {{total}} 个徽章中的 {{filtered}} 个",
     "noResults": "未找到符合搜索条件的徽章",
-    "visitBadge": "访问 {{name}}",
     "categories": {
       "all": "全部",
       "personal": "个人",
@@ -660,7 +646,6 @@
     "copyright": "2026，∴ 承靖 (Jarema)，知识共享-署名 4.0 国际 (CC BY-4.0)",
     "madeWith": "用所有的爱制作",
     "andChaos": "和几天瞎搞代码的时光",
-    "decorativeStripe": "页脚装饰条",
     "uptime": "运行状态",
     "siteStatus": "网站状态"
   },
@@ -684,7 +669,6 @@
     "cycleLanguage": "切换语言",
     "cycleTheme": "切换主题",
     "refreshCat": "刷新猫咪心情",
-    "gamePageNotice": "为了避免与游戏操作冲突，大多数快捷键在游戏页面上已被禁用。",
     "openShortcuts": "打开快捷键列表",
     "actionSearch": "打开操作搜索",
     "webring": "Webrings"
@@ -712,60 +696,38 @@
     "projects": {
       "category": "浏览项目卡片",
       "closeCard": "关闭翻转卡片",
-      "closeCardDescription": "关闭当前翻转的项目卡",
       "left": "向左浏览",
-      "leftDescription": "查看上一个项目",
       "right": "向右浏览",
-      "rightDescription": "查看下一个项目",
       "up": "向上浏览",
-      "upDescription": "向上或滚动页面",
       "down": "向下浏览",
-      "downDescription": "向下或滚动页面",
-      "flipCard": "翻转项目卡片：{{title}}",
-      "flipCardDescription": "翻转卡片以查看详细信息"
+      "flipCard": "翻转项目卡片：{{title}}"
     },
     "blog": {
       "category": "浏览博客文章",
       "next": "下一篇文章",
-      "nextDescription": "跳转到下一篇博客文章",
       "prev": "上一篇文章",
-      "prevDescription": "跳转到上一篇博客文章",
       "search": "搜索博客文章",
-      "searchDescription": "通过标题或内容搜索",
       "filterTag": "筛选博客文章",
-      "filterTagDescription": "打开筛选菜单",
       "jumpToPost": "跳转到文章 {{i}}",
-      "jumpToPostDescription": "跳转到文章 {{i}}",
-      "back": "返回博客列表",
-      "backDescription": "回到博客文章列表"
+      "back": "返回博客列表"
     },
     "about": {
       "category": "浏览关于页面部分",
-      "jumpToChapter": "跳转到章节 {{i}}",
-      "jumpToChapterDescription": "跳转到章节 {{i}}"
+      "jumpToChapter": "跳转到章节 {{i}}"
     },
     "uses": {
       "category": "浏览使用工具部分",
-      "jumpToCategory": "跳转到 {{category}}",
-      "jumpToCategoryDescription": "跳转到分类 {{category}}"
+      "jumpToCategory": "跳转到 {{category}}"
     },
     "now": {
       "category": "浏览 Now 页面部分",
-      "jumpToCategory": "跳转到 {{category}}",
-      "jumpToCategoryDescription": "跳转到 {{category}}"
+      "jumpToCategory": "跳转到 {{category}}"
     },
     "colophon": {
       "category": "浏览尾注部分",
-      "jumpToSection": "跳转到 {{section}}",
-      "jumpToSectionDescription": "跳转到部分 {{section}}"
+      "jumpToSection": "跳转到 {{section}}"
     },
     "tools": "工具"
-  },
-  "firstVisitHint": {
-    "prefix": "提示：",
-    "message": "您可以按",
-    "suffix": "键来打开搜索栏 :D",
-    "dismiss": "关闭"
   },
   "textCounter": {
     "title": "文本计数器",
@@ -830,9 +792,5 @@
   "slashes": {
     "title": "斜杠",
     "description": "本网站所有主要页面的列表。"
-  },
-  "game": {
-    "javascriptRequired": "需要 JavaScript",
-    "javascriptRequiredDesc": "此游戏需要 JavaScript 才能运行。请启用 JavaScript 并重新加载页面。"
   }
 }

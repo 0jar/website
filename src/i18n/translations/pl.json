@@ -356,12 +356,6 @@
       "moreClicksToReveal": "(jeszcze {count} kliknięć, by pokazać)",
       "clicksRemaining": "kliknięć do odkrycia"
     },
-    "hiddenPlatforms": {
-      "platform1": "Niewymawialna Platforma 1",
-      "platform2": "Niewymawialna Platforma 2",
-      "click5": "Kliknij 5 razy, by pokazać",
-      "moreClicks": "(jeszcze 5 kliknięć, by pokazać)"
-    },
     "hidden": {
       "clickToReveal": "Kliknij 5 razy, by pokazać",
       "clicksLeft": "(jeszcze {{clicks}} kliknięć, by pokazać)",
@@ -372,7 +366,6 @@
     "title": "Kontakt",
     "description": "Jak się ze mną skontaktować.",
     "message": "nie krępuj się. napisz cześć. albo umów się na 1:1, jeśli masz ochotę na poważnie :)",
-    "pgpNote": "Klucze PGP i inne metody weryfikacji dostępne na życzenie.",
     "disclaimer": "odpowiadam na maile. chyba. chyba że rozproszy mnie kot albo coś innego ;)",
     "sections": {
       "contactMe": "Skontaktuj się ze mną",
@@ -391,19 +384,13 @@
       "messengerNote": "Jestem bardzo nieaktywny na Facebooku i Messengerze. Odpowiadam, jak się uda.",
       "pgpKey": "Klucz publiczny PGP",
       "sshKey": "Klucz publiczny SSH"
-    },
-    "secretButton": "Sekretny przycisk"
+    }
   },
   "moodCat": {
     "title": "Kot dnia",
     "hover": "delikatnie cię ocenia",
     "refresh": "Nowy kot, kto to?",
-    "seeMore": "Zobacz więcej kotów",
-    "imageSource": "Źródło obrazka"
-  },
-  "music": {
-    "play": "Włącz muzykę w tle",
-    "pause": "Wstrzymaj muzykę"
+    "seeMore": "Zobacz więcej kotów"
   },
   "tetris": {
     "title": "Tetris",
@@ -495,7 +482,6 @@
     "showingCount": "Wyświetlono {{count}} odznak",
     "showingFiltered": "Wyświetlono {{filtered}} z {{total}} odznak",
     "noResults": "Nie znaleziono odznak pasujących do kryteriów wyszukiwania",
-    "visitBadge": "Odwiedź {{name}}",
     "categories": {
       "all": "Wszystkie",
       "personal": "Osobiste",
@@ -660,7 +646,6 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "zrobione z miłością",
     "andChaos": "i kilkoma dniami kodowania",
-    "decorativeStripe": "Ozdobny pasek stopki",
     "uptime": "Uptime",
     "siteStatus": "Status strony"
   },
@@ -684,7 +669,6 @@
     "cycleLanguage": "Zmień język",
     "cycleTheme": "Zmień motyw",
     "refreshCat": "Odśwież kota nastroju",
-    "gamePageNotice": "Większość skrótów jest wyłączona na stronach gier, by nie kolidowały ze sterowaniem.",
     "openShortcuts": "Otwórz skróty klawiaturowe",
     "actionSearch": "Otwórz wyszukiwarkę akcji",
     "webring": "Webringi"
@@ -712,60 +696,38 @@
     "projects": {
       "category": "Nawigacja po kartach projektów",
       "closeCard": "Zamknij odwróconą kartę",
-      "closeCardDescription": "Zamknij aktualnie otwartą kartę",
       "left": "Przejdź w lewo",
-      "leftDescription": "Do poprzedniego projektu",
       "right": "Przejdź w prawo",
-      "rightDescription": "Do następnego projektu",
       "up": "Przejdź w górę",
-      "upDescription": "W górę lub przewiń",
       "down": "Przejdź w dół",
-      "downDescription": "W dół lub przewiń",
-      "flipCard": "Obróć kartę projektu: {{title}}",
-      "flipCardDescription": "Obróć kartę, by zobaczyć szczegóły"
+      "flipCard": "Obróć kartę projektu: {{title}}"
     },
     "blog": {
       "category": "Nawigacja po wpisach na blogu",
       "next": "Do następnego wpisu",
-      "nextDescription": "Przejdź do następnego wpisu",
       "prev": "Do poprzedniego wpisu",
-      "prevDescription": "Przejdź do poprzedniego wpisu",
       "search": "Szukaj wpisów",
-      "searchDescription": "Szukaj po tytule lub treści",
       "filterTag": "Filtruj wpisy",
-      "filterTagDescription": "Otwórz menu filtrów",
       "jumpToPost": "Przejdź do wpisu {{i}}",
-      "jumpToPostDescription": "Przejdź do wpisu {{i}}",
-      "back": "Powrót do listy bloga",
-      "backDescription": "Wróć do listy bloga"
+      "back": "Powrót do listy bloga"
     },
     "about": {
       "category": "Nawigacja po sekcjach 'O mnie'",
-      "jumpToChapter": "Przejdź do rozdziału {{i}}",
-      "jumpToChapterDescription": "Przejdź do rozdziału {{i}}"
+      "jumpToChapter": "Przejdź do rozdziału {{i}}"
     },
     "uses": {
       "category": "Nawigacja po sekcjach 'Używam'",
-      "jumpToCategory": "Przejdź do {{category}}",
-      "jumpToCategoryDescription": "Przejdź do kategorii {{category}}"
+      "jumpToCategory": "Przejdź do {{category}}"
     },
     "now": {
       "category": "Nawigacja po sekcjach 'Teraz'",
-      "jumpToCategory": "Przejdź do {{category}}",
-      "jumpToCategoryDescription": "Przejdź do kategorii {{category}}"
+      "jumpToCategory": "Przejdź do {{category}}"
     },
     "colophon": {
       "category": "Nawigacja po sekcjach kolofonu",
-      "jumpToSection": "Przejdź do sekcji {{section}}",
-      "jumpToSectionDescription": "Przejdź do sekcji {{section}}"
+      "jumpToSection": "Przejdź do sekcji {{section}}"
     },
     "tools": "Narzędzia"
-  },
-  "firstVisitHint": {
-    "prefix": "Wskazówka:",
-    "message": "Naciśnij klawisz",
-    "suffix": ", aby otworzyć wyszukiwarkę :D",
-    "dismiss": "Ukryj"
   },
   "textCounter": {
     "title": "Licznik tekstu",
@@ -830,9 +792,5 @@
   "slashes": {
     "title": "Slashes",
     "description": "Lista wszystkich głównych stron w tej witrynie."
-  },
-  "game": {
-    "javascriptRequired": "Wymagany JavaScript",
-    "javascriptRequiredDesc": "Ta gra wymaga JavaScriptu do działania. Proszę włączyć JavaScript i odświeżyć stronę."
   }
 }

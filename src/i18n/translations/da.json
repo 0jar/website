@@ -356,12 +356,6 @@
       "moreClicksToReveal": "({count} flere klik for at afsløre)",
       "clicksRemaining": "flere klik for at afsløre"
     },
-    "hiddenPlatforms": {
-      "platform1": "Ubeskrivelig platform 1",
-      "platform2": "Ubeskrivelig platform 2",
-      "click5": "Klik 5 gange for at afsløre",
-      "moreClicks": "(5 flere klik for at afsløre)"
-    },
     "hidden": {
       "clickToReveal": "Klik 5 gange for at afsløre",
       "clicksLeft": "({{clicks}} klik mere for at afsløre)",
@@ -373,7 +367,6 @@
     "description": "Måder at række ud og komme i kontakt med mig.",
     "message": "vær ikke genert. sig hej. eller book en 1:1, hvis du føler dig professionel :)",
     "disclaimer": "jeg svarer på e-mails. sandsynligvis. medmindre jeg bliver distraheret af en fugl eller noget idk",
-    "pgpNote": "PGP-nøgler og andre bekræftelsesmetoder fås ved henvendelse.",
     "sections": {
       "contactMe": "Kontakt mig",
       "socialMedia": "Mig på sociale medier",
@@ -391,19 +384,13 @@
       "messengerNote": "Jeg er meget inaktiv på Facebook og Messenger. Svar vil være efter bedste evne.",
       "pgpKey": "PGP offentlig nøgle",
       "sshKey": "SSH offentlig nøgle"
-    },
-    "secretButton": "Hemmelig knap"
+    }
   },
   "moodCat": {
     "title": "Dagens Humørkat",
     "hover": "dømmer dig blidt",
     "refresh": "Ny kat, hvem er du?",
-    "seeMore": "Se flere katte",
-    "imageSource": "Billedkilde"
-  },
-  "music": {
-    "play": "Afspil baggrundsmusik",
-    "pause": "Pause baggrundsmusik"
+    "seeMore": "Se flere katte"
   },
   "tetris": {
     "title": "Tetris",
@@ -495,7 +482,6 @@
     "showingCount": "Viser {{count}} badges",
     "showingFiltered": "Viser {{filtered}} af {{total}} badges",
     "noResults": "Ingen badges matcher din søgning",
-    "visitBadge": "Besøg {{name}}",
     "categories": {
       "all": "Alle",
       "personal": "Personligt",
@@ -660,7 +646,6 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "lavet med kærlighed",
     "andChaos": "og et par dages kodning",
-    "decorativeStripe": "Dekorativ sidfods-stribe",
     "uptime": "Drift",
     "siteStatus": "Side status"
   },
@@ -684,7 +669,6 @@
     "cycleLanguage": "Skift sprog",
     "cycleTheme": "Skift tema",
     "refreshCat": "Opdatér humørkatten",
-    "gamePageNotice": "De fleste tastaturgenveje er deaktiveret på spil-sider for at undgå konflikter med spilkontroller.",
     "openShortcuts": "Åbn tastaturgenveje",
     "actionSearch": "Åbn Handlingssøgning",
     "webring": "Webringe"
@@ -712,60 +696,38 @@
     "projects": {
       "category": "Navigér mellem projekter",
       "closeCard": "Luk vendt kort",
-      "closeCardDescription": "Luk det vendte projektkort",
       "left": "Navigér til venstre",
-      "leftDescription": "Gå til forrige projekt",
       "right": "Navigér til højre",
-      "rightDescription": "Gå til næste projekt",
       "up": "Navigér op",
-      "upDescription": "Gå op eller rul",
       "down": "Navigér ned",
-      "downDescription": "Gå ned eller rul",
-      "flipCard": "Vend projektkort: {{title}}",
-      "flipCardDescription": "Vend kortet for at se detaljer"
+      "flipCard": "Vend projektkort: {{title}}"
     },
     "blog": {
       "category": "Navigér mellem blogindlæg",
       "next": "Til næste indlæg",
-      "nextDescription": "Gå til næste blogindlæg",
       "prev": "Til forrige indlæg",
-      "prevDescription": "Gå til forrige blogindlæg",
       "search": "Søg i blogindlæg",
-      "searchDescription": "Søg i titler eller indhold",
       "filterTag": "Filtrér blogindlæg",
-      "filterTagDescription": "Åbn filtermenu",
       "jumpToPost": "Hop til indlæg {{i}}",
-      "jumpToPostDescription": "Navigér til indlæg {{i}}",
-      "back": "Tilbage til bloglisten",
-      "backDescription": "Gå tilbage til bloglisten"
+      "back": "Tilbage til bloglisten"
     },
     "about": {
       "category": "Navigér i 'Om mig'-sektionerne",
-      "jumpToChapter": "Hop til kapitel {{i}}",
-      "jumpToChapterDescription": "Gå til kapitel {{i}}"
+      "jumpToChapter": "Hop til kapitel {{i}}"
     },
     "uses": {
       "category": "Navigér i 'Jeg bruger'-sektionerne",
-      "jumpToCategory": "Hop til {{category}}",
-      "jumpToCategoryDescription": "Gå til kategori {{category}}"
+      "jumpToCategory": "Hop til {{category}}"
     },
     "now": {
       "category": "Navigér i 'Nu'-sektionerne",
-      "jumpToCategory": "Hop til {{category}}",
-      "jumpToCategoryDescription": "Gå til kategori {{category}}"
+      "jumpToCategory": "Hop til {{category}}"
     },
     "colophon": {
       "category": "Navigér i kolofonsektionerne",
-      "jumpToSection": "Hop til {{section}}",
-      "jumpToSectionDescription": "Gå til sektion {{section}}"
+      "jumpToSection": "Hop til {{section}}"
     },
     "tools": "Værktøjer"
-  },
-  "firstVisitHint": {
-    "prefix": "Tip:",
-    "message": "Du kan trykke på",
-    "suffix": "-tasten for at åbne søgefeltet :D",
-    "dismiss": "Afvis hint"
   },
   "textCounter": {
     "title": "Teksttæller",
@@ -830,9 +792,5 @@
   "slashes": {
     "title": "Slashes",
     "description": "En liste over alle hovedsider på dette websted."
-  },
-  "game": {
-    "javascriptRequired": "JavaScript kræves",
-    "javascriptRequiredDesc": "Dette spil kræver JavaScript for at køre. Aktivér JavaScript og genindlæs siden."
   }
 }

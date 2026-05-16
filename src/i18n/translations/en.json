@@ -396,12 +396,6 @@
       "moreClicksToReveal": "({count} more clicks to reveal)",
       "clicksRemaining": "more clicks to reveal"
     },
-    "hiddenPlatforms": {
-      "platform1": "Unspeakable platform 1",
-      "platform2": "Unspeakable platform 2",
-      "click5": "Click 5 times to reveal",
-      "moreClicks": "(5 more clicks to reveal)"
-    },
     "hidden": {
       "clickToReveal": "Click 5 times to reveal",
       "clicksLeft": "({{clicks}} clicks to reveal)",
@@ -413,7 +407,6 @@
     "description": "Ways to reach out and connect with me.",
     "message": "don't be shy. say hi. or book a 1:1 if you're feeling professional :)",
     "disclaimer": "i do respond to emails. probably. unless i get distracted by a bird or something idk",
-    "pgpNote": "PGP keys and other verification methods available upon request.",
     "sections": {
       "contactMe": "Contact me",
       "socialMedia": "Me on social media",
@@ -431,19 +424,13 @@
       "messengerNote": "I'm very inactive on Facebook and Messenger. Replies will be on a best-effort basis.",
       "pgpKey": "PGP public key",
       "sshKey": "SSH public key"
-    },
-    "secretButton": "Secret button"
+    }
   },
   "moodCat": {
     "title": "Cat of the day",
     "hover": "judging you softly",
     "refresh": "New cat, who dis?",
-    "seeMore": "See more cats",
-    "imageSource": "Image source"
-  },
-  "music": {
-    "play": "Play background music",
-    "pause": "Pause background music"
+    "seeMore": "See more cats"
   },
   "tetris": {
     "title": "Tetris",
@@ -541,7 +528,6 @@
     "showingCount": "Showing {{count}} badges",
     "showingFiltered": "Showing {{filtered}} of {{total}} badges",
     "noResults": "No badges found matching your search criteria",
-    "visitBadge": "Visit {{name}}",
     "categories": {
       "all": "All",
       "personal": "Personal",
@@ -706,7 +692,6 @@
     "copyright": "2026, ∴ Jarema, CC BY 4.0",
     "madeWith": "made with love",
     "andChaos": "and a few weeks of screwing around",
-    "decorativeStripe": "Decorative footer stripe",
     "uptime": "Uptime",
     "siteStatus": "Site status"
   },
@@ -731,7 +716,6 @@
     "cycleLanguage": "Cycle through languages",
     "cycleTheme": "Cycle through themes",
     "refreshCat": "Refresh mood cat",
-    "gamePageNotice": "Most keyboard shortcuts are disabled in game pages to avoid conflicts with game controls.",
     "openShortcuts": "Open keyboard shortcuts",
     "actionSearch": "Open Action Search"
   },
@@ -759,59 +743,37 @@
     "projects": {
       "category": "Navigate through project cards",
       "closeCard": "Close flipped card",
-      "closeCardDescription": "Close the currently opened card",
       "left": "Navigate left",
-      "leftDescription": "Navigate to the previous project card",
       "right": "Navigate right",
-      "rightDescription": "Navigate to the next project card",
       "up": "Navigate up",
-      "upDescription": "Navigate up or scroll content",
       "down": "Navigate down",
-      "downDescription": "Navigate down or scroll content",
-      "flipCard": "Flip project card: {{title}}",
-      "flipCardDescription": "Flip the project card to view details"
+      "flipCard": "Flip project card: {{title}}"
     },
     "blog": {
       "category": "Navigate through blog posts",
       "next": "To next post",
-      "nextDescription": "Navigate to the next blog post",
       "prev": "To previous post",
-      "prevDescription": "Navigate to the previous blog post",
       "search": "Search blog posts",
-      "searchDescription": "Search blog posts by title or content",
       "filterTag": "Filter blog posts",
-      "filterTagDescription": "Open filter menu",
       "jumpToPost": "Jump to post {{i}}",
-      "jumpToPostDescription": "Navigate to post {{i}}",
-      "back": "Back to blog list",
-      "backDescription": "Return to the blog list"
+      "back": "Back to blog list"
     },
     "about": {
       "category": "Navigate through about sections",
-      "jumpToChapter": "Jump to chapter {{i}}",
-      "jumpToChapterDescription": "Navigate to chapter {{i}}"
+      "jumpToChapter": "Jump to chapter {{i}}"
     },
     "uses": {
       "category": "Navigate through uses sections",
-      "jumpToCategory": "Jump to {{category}}",
-      "jumpToCategoryDescription": "Navigate to category {{category}}"
+      "jumpToCategory": "Jump to {{category}}"
     },
     "now": {
       "category": "Navigate through now sections",
-      "jumpToCategory": "Jump to {{category}}",
-      "jumpToCategoryDescription": "Navigate to {{category}}"
+      "jumpToCategory": "Jump to {{category}}"
     },
     "colophon": {
       "category": "Navigate through colophon sections",
-      "jumpToSection": "Jump to {{section}}",
-      "jumpToSectionDescription": "Navigate to section {{section}}"
+      "jumpToSection": "Jump to {{section}}"
     }
-  },
-  "firstVisitHint": {
-    "prefix": "Hint:",
-    "message": "You can press the",
-    "suffix": "key on your keyboard to open the global search bar :D",
-    "dismiss": "Dismiss hint"
   },
   "textCounter": {
     "title": "Text counter",
@@ -872,9 +834,5 @@
         "description": "Count characters, words, sentences, paragraphs, and estimate reading/speaking time."
       }
     }
-  },
-  "game": {
-    "javascriptRequired": "JavaScript required",
-    "javascriptRequiredDesc": "This game needs JavaScript to run. Please enable JavaScript and reload the page."
   }
 }

@@ -293,12 +293,6 @@
       "clickToReveal": "Nhấn 5 lần để hiện",
       "moreClicksToReveal": "(còn {count} lần nhấn nữa để hiện)",
       "clicksRemaining": "lần nhấn nữa để hiện"
-    },
-    "hiddenPlatforms": {
-      "platform1": "𡋂磉秘密次一",
-      "platform2": "𡋂磉秘密次𠄩",
-      "click5": "扨5𠞺抵現",
-      "moreClicks": "（群5𠞺扨𡛤抵現）"
     }
   },
   "contact": {
@@ -323,19 +317,13 @@
       "messengerNote": "𨉟可𠃣活動𨑗 Facebook 吧 Messenger。𨉟空体擔保得仕㨋𠳒𮞊一裊伴𠴍信過低。",
       "pgpKey": "銙公開 PGP",
       "sshKey": "銙公開 SSH"
-    },
-    "secretButton": "𨨷秘險"
+    }
   },
   "moodCat": {
     "title": "貓𧵑𣋚𫢩",
     "hover": "貓陰忱判察伴",
     "refresh": "朱䀡貓㵋𠫾",
-    "seeMore": "䀡添貓恪",
-    "imageSource": "源影"
-  },
-  "music": {
-    "play": "發樂𡋂",
-    "pause": "暫仃樂𡋂"
+    "seeMore": "䀡添貓恪"
   },
   "tetris": {
     "title": "Tetris",
@@ -424,7 +412,6 @@
     "showingCount": "當顯示 {{count}} 徽號",
     "showingFiltered": "當顯示 {{filtered}} 𨑗總數 {{total}} 徽號",
     "noResults": "空尋𧡊徽號𱜢𨨤貝尋檢",
-    "visitBadge": "㨳㖭探 {{name}}",
     "categories": {
       "all": "悉哿",
       "personal": "個人",
@@ -561,8 +548,7 @@
     "madeWith": "làm với mọi yêu thương",
     "andChaos": "và vài tuần nghịch code",
     "uptime": " uptime",
-    "siteStatus": "Trang thái trang",
-    "decorativeStripe": "Dải trang trí chân trang"
+    "siteStatus": "Trang thái trang"
   },
   "keyboardShortcuts": {
     "2048": "2048",
@@ -584,7 +570,6 @@
     "cycleLanguage": "Chuyển đổi ngôn ngữ",
     "cycleTheme": "Chuyển đổi chủ đề",
     "refreshCat": "Thay đổi ảnh mèo",
-    "gamePageNotice": "Hầu hết các phím tắt ở các trang khác đều bị vô hiệu hóa ở các trang trò chơi để tránh xung đột với các phím điều hướng của các trò.",
     "openShortcuts": "Mở bảng phím tắt",
     "actionSearch": "Mở thanh tìm kiếm"
   },
@@ -611,58 +596,36 @@
     "projects": {
       "category": "Điều hướng qua các dự án",
       "closeCard": "Đóng dự án",
-      "closeCardDescription": "Đóng dự án hiện tại",
       "left": "Điều hướng sang trái",
-      "leftDescription": "Điều hướng đến dự án trước đó",
       "right": "Điều hướng sang phải",
-      "rightDescription": "Điều hướng đến dự án tiếp theo",
       "up": "Điều hướng lên",
-      "upDescription": "Điều hướng lên",
       "down": "Điều hướng xuống",
-      "downDescription": "Điều hướng xuống",
-      "flipCard": "Mở dự án {{title}}",
-      "flipCardDescription": "Mở dự án để xem chi tiết"
+      "flipCard": "Mở dự án {{title}}"
     },
     "blog": {
       "category": "Điều hướng qua các bài viết",
       "next": "Đến bài viết tiếp theo",
-      "nextDescription": "",
       "prev": "Đến bài viết trước",
-      "prevDescription": "",
       "search": "Tìm kiếm bài viết",
-      "searchDescription": "Tìm theo tiêu đề hoặc nội dung",
       "filterTag": "Lọc bài viết",
-      "filterTagDescription": "Mở bộ lọc bài viết",
       "jumpToPost": "Đi tới bài viết số {{i}}",
-      "jumpToPostDescription": "",
-      "back": "Quay lại danh sách bài viết",
-      "backDescription": ""
+      "back": "Quay lại danh sách bài viết"
     },
     "about": {
       "category": "Điều hướng qua các phần giới thiệu",
-      "jumpToChapter": "Đi đến chương {{i}}",
-      "jumpToChapterDescription": ""
+      "jumpToChapter": "Đi đến chương {{i}}"
     },
     "uses": {
       "category": "Điều hướng qua các phần công cụ",
-      "jumpToCategory": "Đi đến mục {{category}}",
-      "jumpToCategoryDescription": ""
+      "jumpToCategory": "Đi đến mục {{category}}"
     },
     "now": {
       "category": "Điều hướng qua các phần",
-      "jumpToCategory": "Đi đến mục {{category}}",
-      "jumpToCategoryDescription": ""
+      "jumpToCategory": "Đi đến mục {{category}}"
     },
     "colophon": {
       "category": "Điều hướng qua các phần thông tin",
-      "jumpToSection": "Đi đến phần {{section}}",
-      "jumpToSectionDescription": ""
+      "jumpToSection": "Đi đến phần {{section}}"
     }
-  },
-  "firstVisitHint": {
-    "prefix": "𠼽𡮈:",
-    "message": "伴固体扨柉",
-    "suffix": "抵𢲫工具尋檢 :D",
-    "dismiss": "𠬃過"
   }
 }
