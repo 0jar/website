@@ -2,6 +2,8 @@
   "date": "2026-02-26T12:25:19Z",
   "content": {
     "en": "blocked bot scanning on secret path",
-    "vi": "cấm bot dò link trên link bí mật"
+    "vi": "chặn bot dò link trên link bí mật",
+    "ru": "прикрыл секретный роут от ботов",
+    "et": "blokeerisin bottide skannimise salajasel marsruudil"
   }
 }

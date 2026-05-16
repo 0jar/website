@@ -2,6 +2,8 @@
   "date": "2026-02-16T09:15:32Z",
   "content": {
     "en": "removed the command palette toast hint on first visit on desktop. felt it was more intrusive than helpful, and users can figure it out as an easter egg :3",
-    "vi": "bỏ cái toast giới thiệu command palette khi lần đầu vào trên máy tính. t tự thấy nó hơi gây khó chịu hơn là hữu ích, với lại người dùng cũng có thể tự khám phá ra nó như một easter egg mà :3"
+    "vi": "bỏ cái toast giới thiệu command palette khi lần đầu vào trên máy tính. t tự thấy nó hơi gây khó chịu hơn là hữu ích, với lại người dùng cũng có thể tự khám phá ra nó như một easter egg mà :3",
+    "ru": "убрал подсказку палитры команд при первом визите на десктопе. показалось что она скорее мешает, пользователи и так найдут как пасхалку :3",
+    "et": "eemaldasin käsurea paleti vihje esimesel külastusel arvutis. tundus pigem häiriv kui abistav, kasutajad leiavad selle niigi easter egg'ina :3"
   }
 }

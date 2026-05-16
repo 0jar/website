@@ -2,6 +2,8 @@
   "date": "2025-11-27T07:41:09Z",
   "content": {
     "en": "removed eslint because apparently it is no longer supported in nextjs? wild.",
-    "vi": "phải xóa eslint vì nó không còn được hỗ trợ trong nextjs nữa? lạ v."
+    "vi": "phải xóa eslint vì nó không còn được hỗ trợ trong nextjs nữa? lạ v",
+    "ru": "удалил eslint потому что видимо он больше не поддерживается в nextjs? дичь.",
+    "et": "eemaldasin eslinti, sest ilmselt seda nextjs-is enam ei toetata? hull"
   }
 }

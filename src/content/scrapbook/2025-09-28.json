@@ -2,6 +2,8 @@
   "date": "2025-09-28T12:22:25Z",
   "content": {
     "en": "added fuzzysort for, well, fuzzy search lol",
-    "vi": "thêm fuzzysort để tìm fuzzy (là tìm mờ nhé :)))"
+    "vi": "thêm fuzzysort để tìm fuzzy (là tìm mờ nhé :)))",
+    "ru": "запилил fuzzysort, ну то есть нечёткий поиск лол",
+    "et": "lisasin fuzzysorti, noh, hägusa otsingu jaoks lol"
   }
 }

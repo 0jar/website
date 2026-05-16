@@ -2,6 +2,8 @@
   "date": "2025-11-10T14:45:00Z",
   "content": {
     "en": "consolidated rss/atom feed routes and added some redirects",
-    "vi": "hợp nhất các route của feed rss/atom và thêm một số link chuyển hướng"
+    "vi": "hợp nhất các route của feed rss/atom và thêm một số link chuyển hướng",
+    "ru": "объединил роуты rss/atom фидов и добавил пару редиректов",
+    "et": "koondasin rss/atom voo marsruudid ja lisasin mõned redirectid"
   }
 }

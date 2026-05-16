@@ -2,6 +2,8 @@
   "date": "2024-07-31T12:13:54+07:00",
   "content": {
     "en": "implemented security HTTP headers for the site",
-    "vi": "thêm cái http header bảo mật cho trang web"
+    "vi": "thêm cái http header bảo mật cho trang web",
+    "ru": "внедрил security HTTP заголовки для сайта",
+    "et": "lisasin saidile turvalisuse HTTP päised"
   }
 }

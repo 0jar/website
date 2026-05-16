@@ -2,6 +2,8 @@
   "date": "2025-12-13T00:21:19Z",
   "content": {
     "en": "ripped out MotionProvider, big refactor. had enough of it.",
-    "vi": "gỡ MotionProvider và refactor lại code. mình cũng chán nó rồi."
+    "vi": "gỡ MotionProvider và refactor lại code. mình cũng chán nó rồi.",
+    "ru": "выдрал MotionProvider, большой рефакторинг. с меня хватит.",
+    "et": "kiskusin MotionProvideri välja, suur refaktor. mul on sellest kõrini."
   }
 }

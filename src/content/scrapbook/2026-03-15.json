@@ -2,6 +2,8 @@
   "date": "2026-03-15T14:44:50Z",
   "content": {
     "en": "removed unused cursors from the css, liked them but had to make site lighter",
-    "vi": "bỏ mấy cái cursor không dùng đến khỏi css, thích thì thích thật nhưng phải làm cho web nhẹ hơn thôi"
+    "vi": "bỏ mấy cái cursor không dùng đến khỏi css, thích thì thích thật nhưng phải làm cho web nhẹ hơn thôi",
+    "ru": "удалил неиспользуемые курсоры из css, жалко конечно, но сайт надо было облегчить",
+    "et": "eemaldasin css-ist kasutamata kursorid, meeldisid, aga pidin saidi kergemaks tegema"
   }
 }

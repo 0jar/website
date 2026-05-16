@@ -2,6 +2,8 @@
   "date": "2026-05-12",
   "content": {
     "en": "implemented algorithmic permashortlinks, now my blog URLs look shorter and i can flex about that lol",
-    "vi": "mới triển khai xong cái link rút gọn bằng thuật toán nè. giờ link blog trông ngắn hơn hẳn rồi đấy, mang đi flex được rồi :))"
+    "vi": "mới triển khai xong cái link rút gọn bằng thuật toán nè. giờ link blog trông ngắn hơn hẳn rồi đấy, mang đi flex được rồi :))",
+    "ru": "запилил алгоритмические постоянные короткие ссылки, теперь урлы моего блога короче и я могу выпендриваться этим лол",
+    "et": "lisasin algoritmilised püsivad lühilingid, nüüd on mu blogi URL-id lühemad ja saan sellega eputada"
   }
 }

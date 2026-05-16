@@ -1,0 +1,9 @@
+{
+  "date": "2026-05-16",
+  "content": {
+    "en": "removed hardcodes for translations for items in /uses and interests in /about",
+    "vi": "bỏ hardcode phần dịch item trong trang /uses và phần quan tâm trong trang /about",
+    "ru": "убрал хардкоды для переводов айтемов в /uses и интересов в /about",
+    "et": "eemaldasin hardcode'id /uses asjade ja /about huvide tõlgetelt"
+  }
+}

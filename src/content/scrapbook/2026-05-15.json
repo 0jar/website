@@ -1,0 +1,9 @@
+{
+  "date": "2026-05-15",
+  "content": {
+    "en": "refactored the commit timeline logic for the about page and this page",
+    "vi": "tối ưu xong cái logic của timeline commit trong trang này và trang giới thiệu rồi nè",
+    "ru": "отрефакторил логику таймлайна коммитов для страницы about и этой страницы",
+    "et": "refaktoreerisin commitide ajajoone loogikat about lehe ja selle lehe jaoks"
+  }
+}
