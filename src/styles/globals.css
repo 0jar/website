@@ -567,32 +567,35 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
 }
 
 .stars-1a {
-  background-image: radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0, 0, 0, 0)),
-    radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0, 0, 0, 0)),
-    radial-gradient(1.5px 1.5px at 135px 85px, #ffffff, rgba(0, 0, 0, 0));
+  background-image:
+    radial-gradient(1px 1px at 5% 25%, #ffffff 70%, transparent),
+    radial-gradient(1px 1px at 10% 10%, #ffffff 70%, transparent),
+    radial-gradient(1.5px 1.5px at 20% 40%, #ffffff 70%, transparent);
   background-repeat: repeat;
   background-size: 247px 183px;
   animation: stars-twinkle-1 4s ease-in-out infinite;
 }
 
 .stars-2a {
-  background-image: radial-gradient(1px 1px at 25px 5px, #ffffff, rgba(0, 0, 0, 0)),
-    radial-gradient(1px 1px at 125px 20px, #ffffff, rgba(0, 0, 0, 0)),
-    radial-gradient(1.5px 1.5px at 217px 134px, #ffffff, rgba(0, 0, 0, 0));
+  background-image:
+    radial-gradient(1px 1px at 20% 0%, #ffffff 80%, transparent),
+    radial-gradient(1px 1px at 40% 20%, #ffffff 80%, transparent),
+    radial-gradient(1.5px 1.5px at 60% 70%, #ffffff 80%, transparent);
   background-repeat: repeat;
   background-size: 331px 277px;
-  animation: stars-twinkle-2 5s ease-in-out infinite;
-  animation-delay: 0.7s;
+  animation: stars-twinkle-2 6s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
 .stars-3a {
-  background-image: radial-gradient(1px 1px at 10px 10px, #ffffff, rgba(0, 0, 0, 0)),
-    radial-gradient(1px 1px at 177px 93px, #ffffff, rgba(0, 0, 0, 0)),
-    radial-gradient(1px 1px at 54px 158px, #ffffff, rgba(0, 0, 0, 0));
+  background-image:
+    radial-gradient(1px 1px at 5% 5%, #ffffff 90%, transparent),
+    radial-gradient(1px 1px at 80% 30%, #ffffff 90%, transparent),
+    radial-gradient(1px 1px at 90% 80%, #ffffff 90%, transparent);
   background-repeat: repeat;
   background-size: 229px 193px;
-  animation: stars-twinkle-3 6s ease-in-out infinite;
-  animation-delay: 1.5s;
+  animation: stars-twinkle-3 9s ease-in-out infinite;
+  animation-delay: 2.5s;
 }
 
 @keyframes stars-twinkle-1 {
