@@ -14,6 +14,8 @@ const categoryIcons: Record<string, string> = {
 const getIcon = (title: string) => categoryIcons[title] || "📌";
 const isHiddenPlatform = (name: string) => name.startsWith('Unspeakable');
 const getHiddenPlatform = (name: string) => name === 'Unspeakable Platform 1' ? 'revanced' : 'stremio';
+
+const locale = Astro.locals?.lang || Astro.currentLocale || "en";
 ---
 
 <BaseLayout title="Uses" description="The tools and tech I use daily.">
@@ -49,7 +51,11 @@ const getHiddenPlatform = (name: string) => name === 'Unspeakable Platform 1' ? 
                           {item.name}<span class="text-xs ml-1 opacity-70">↗</span>
                         </a>
                       ) : <h3 class="text-lg font-medium">{item.name}</h3>}
-                      <T key={`uses.itemDescriptions.${item.descriptionKey}`} tag="p" class="text-muted-foreground item-description" />
+                      {item.description && (
+                        <p class="text-muted-foreground item-description">
+                          {typeof item.description === 'string' ? item.description : (item.description[locale as keyof typeof item.description] || item.description.en)}
+                        </p>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -87,9 +93,11 @@ const getHiddenPlatform = (name: string) => name === 'Unspeakable Platform 1' ? 
                             {item.name}<span class="text-xs ml-1 opacity-70">↗</span>
                           </a>
                         ) : <h4 class="text-lg font-medium">{item.name}</h4>}
-                        {item.descriptionKey ? (
-                          <T key={`uses.itemDescriptions.${item.descriptionKey}`} tag="p" class="text-muted-foreground item-description" />
-                        ) : item.description && <p class="text-muted-foreground">{item.description}</p>}
+                        {item.description && (
+                          <p class="text-muted-foreground item-description">
+                            {typeof item.description === 'string' ? item.description : (item.description[locale as keyof typeof item.description] || item.description.en)}
+                          </p>
+                        )}
                       </div>
                     </div>
                   ))}

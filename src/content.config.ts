@@ -16,8 +16,7 @@ const i18nContentOptional = z.object(
 
 const usesItem = z.object({
   name: z.string(),
-  descriptionKey: z.string().optional(),
-  description: z.string().optional(),
+  description: z.union([z.string(), i18nContentOptional]).optional(),
   link: z.string().optional(),
 });
 

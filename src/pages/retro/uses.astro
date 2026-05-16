@@ -1,9 +1,9 @@
 ---
 import RetroLayout from "@/layouts/RetroLayout.astro";
-import { t } from "@/i18n";
 import { getData } from "@/content.config";
 
 const usesCategories = await getData("uses");
+const lang = Astro.locals?.lang || "en";
 ---
 
 <RetroLayout title="Uses - Jarema's Retro Site">
@@ -55,7 +55,7 @@ const usesCategories = await getData("uses");
             </td>
             <td>
               <font size="2">
-                {t("en", `uses.itemDescriptions.${item.descriptionKey}`) || item.descriptionKey}
+                {item.description ? (typeof item.description === 'string' ? item.description : (item.description[lang as keyof typeof item.description] || item.description.en)) : ""}
                 {item.link && (
                   <>
                     {' '}
@@ -76,7 +76,7 @@ const usesCategories = await getData("uses");
               </td>
               <td>
                 <font size="2">
-                  {item.descriptionKey ? (t("en", `uses.itemDescriptions.${item.descriptionKey}`) || item.descriptionKey) : item.description}
+                  {item.description ? (typeof item.description === 'string' ? item.description : (item.description[lang as keyof typeof item.description] || item.description.en)) : ""}
                   {item.link && (
                     <>
                       {' '}
