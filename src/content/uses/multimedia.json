@@ -9,28 +9,93 @@
       "items": [
         {
           "name": "Adobe Illustrator",
-          "descriptionKey": "vectorGraphics",
-          "link": "https://www.adobe.com/products/illustrator.html"
+          "link": "https://www.adobe.com/products/illustrator.html",
+          "description": {
+            "da": "Vektorgrafikeditor",
+            "en": "Vector graphics editor",
+            "et": "Vektorgraafika redaktor",
+            "fi": "Vektoripiirrosohjelma",
+            "pl": "Edytor grafiki wektorowej",
+            "ru": "Редактор векторной графики",
+            "sv": "Vektorgrafikredigerare",
+            "tok": "ilo sitelen linja",
+            "tr": "Vektör grafik düzenleyici",
+            "vi-Hani": "Trình vẽ đồ họa vector",
+            "vi": "Trình vẽ đồ họa vector",
+            "zh": "矢量图形编辑器"
+          }
         },
         {
           "name": "Figma",
-          "descriptionKey": "uiUxDesign",
-          "link": "https://www.figma.com/"
+          "link": "https://www.figma.com/",
+          "description": {
+            "da": "UI/UX-designværktøj",
+            "en": "UI/UX design tool",
+            "et": "UI/UX disaini tööriist",
+            "fi": "UI/UX-suunnittelutyökalu",
+            "pl": "Narzędzie do projektowania UI/UX",
+            "ru": "Инструмент для UI/UX дизайна",
+            "sv": "UI/UX-designverktyg",
+            "tok": "ilo sitelen UI/UX",
+            "tr": "UI/UX tasarım aracı",
+            "vi-Hani": "Công cụ thiết kế UI/UX",
+            "vi": "Công cụ thiết kế UI/UX",
+            "zh": "UI/UX 设计工具"
+          }
         },
         {
           "name": "Canva",
-          "descriptionKey": "graphicDesign",
-          "link": "https://www.canva.com/"
+          "link": "https://www.canva.com/",
+          "description": {
+            "da": "Grafisk designplatform",
+            "en": "Graphic design platform",
+            "et": "Graafilise disaini platvorm",
+            "fi": "Graafisen suunnittelun alusta",
+            "pl": "Platforma do projektowania graficznego",
+            "ru": "Платформа для графического дизайна",
+            "sv": "Grafisk designplattform",
+            "tok": "lipu sitelen pi kulupu",
+            "tr": "Grafik tasarım platformu",
+            "vi-Hani": "Thiết kế đồ họa cho nhóm",
+            "vi": "Thiết kế đồ họa cho nhóm",
+            "zh": "团队图形设计"
+          }
         },
         {
           "name": "Krita",
-          "descriptionKey": "digitalPaintingDesktop",
-          "link": "https://krita.org/"
+          "link": "https://krita.org/",
+          "description": {
+            "da": "Digital maling (desktop)",
+            "en": "Digital painting (desktop)",
+            "et": "Digitaalne maalimine (töölaud)",
+            "fi": "Digitaalinen maalaus (tietokone)",
+            "pl": "Cyfrowe malowanie (PC)",
+            "ru": "Цифровое рисование (десктоп)",
+            "sv": "Digital målning (dator)",
+            "tok": "sitelen lon ilo suli",
+            "tr": "Dijital boyama (masaüstü)",
+            "vi-Hani": "Vẽ vời trên máy tính",
+            "vi": "Vẽ vời trên máy tính",
+            "zh": "数字绘画（电脑）"
+          }
         },
         {
           "name": "ibisPaint X",
-          "descriptionKey": "digitalPaintingMobile",
-          "link": "https://ibispaint.com/"
+          "link": "https://ibispaint.com/",
+          "description": {
+            "da": "Digital maling (mobil)",
+            "en": "Digital painting (mobile)",
+            "et": "Digitaalne maalimine (mobiil)",
+            "fi": "Digitaalinen maalaus (mobiili)",
+            "pl": "Cyfrowe malowanie (mobilne)",
+            "ru": "Цифровое рисование (мобильное)",
+            "sv": "Digital målning (mobil)",
+            "tok": "sitelen lon ilo tawa",
+            "tr": "Dijital boyama (mobil)",
+            "vi-Hani": "Vẽ vời trên điện thoại",
+            "vi": "Vẽ vời trên điện thoại",
+            "zh": "数字绘画（手机）"
+          }
         }
       ]
     },
@@ -40,13 +105,39 @@
       "items": [
         {
           "name": "Adobe Photoshop",
-          "descriptionKey": "photoEditing",
-          "link": "https://www.adobe.com/products/photoshop.html"
+          "link": "https://www.adobe.com/products/photoshop.html",
+          "description": {
+            "da": "Fotoredigering og -manipulation",
+            "en": "Photo editing and manipulation",
+            "et": "Fototöötlus",
+            "fi": "Kuvankäsittely ja muokkaus",
+            "pl": "Edycja i obróbka zdjęć",
+            "ru": "Редактирование и обработка фото",
+            "sv": "Bildredigering och manipulation",
+            "tok": "ante & pali sitelen",
+            "tr": "Fotoğraf düzenleme ve manipülasyon",
+            "vi-Hani": "Chỉnh sửa và xử lý ảnh",
+            "vi": "Chỉnh sửa và xử lý ảnh",
+            "zh": "照片编辑和处理"
+          }
         },
         {
           "name": "GIMP",
-          "descriptionKey": "openSourceEditor",
-          "link": "https://www.gimp.org/"
+          "link": "https://www.gimp.org/",
+          "description": {
+            "da": "Open source-fotoredigeringsprogram",
+            "en": "Open-source photo editor",
+            "et": "Avatud lähtekoodiga fototöötleja",
+            "fi": "Avoimen lähdekoodin kuvankäsittely",
+            "pl": "Edytor zdjęć open source",
+            "ru": "Фоторедактор с открытым исходным кодом",
+            "sv": "Öppen källkod-bildredigerare",
+            "tok": "ilo ante sitelen open source",
+            "tr": "Açık kaynaklı fotoğraf düzenleyici",
+            "vi-Hani": "Trình sửa ảnh mã nguồn mở",
+            "vi": "Trình sửa ảnh mã nguồn mở",
+            "zh": "开源照片编辑器"
+          }
         }
       ]
     },
@@ -56,38 +147,129 @@
       "items": [
         {
           "name": "Adobe Premiere Pro",
-          "descriptionKey": "professionalEditor",
-          "link": "https://www.adobe.com/products/premiere.html"
+          "link": "https://www.adobe.com/products/premiere.html",
+          "description": {
+            "da": "Professionel videoredigeringsprogram",
+            "en": "Professional video editor",
+            "et": "Professionaalne videoredaktor",
+            "fi": "Ammattimainen videoeditori",
+            "pl": "Profesjonalny edytor wideo",
+            "ru": "Профессиональный видеоредактор",
+            "sv": "Professionell videoredigerare",
+            "tok": "ilo ante sitelen tawa pi jan suli",
+            "tr": "Profesyonel video düzenleyici",
+            "vi-Hani": "Trình sửa video chuyên nghiệp",
+            "vi": "Trình sửa video chuyên nghiệp",
+            "zh": "专业视频编辑器"
+          }
         },
         {
           "name": "DaVinci Resolve",
-          "descriptionKey": "professionalEditorDavinci",
-          "link": "https://www.blackmagicdesign.com/products/davinciresolve/"
+          "link": "https://www.blackmagicdesign.com/products/davinciresolve/",
+          "description": {
+            "da": "Professionel videoredigeringsprogram",
+            "en": "Professional video editor",
+            "et": "Professionaalne videoredaktor",
+            "fi": "Ammattimainen videoeditori",
+            "pl": "Profesjonalny edytor wideo",
+            "ru": "Профессиональный видеоредактор",
+            "sv": "Professionell videoredigerare",
+            "tok": "ilo ante sitelen tawa pi jan suli",
+            "tr": "Profesyonel video düzenleyici",
+            "vi-Hani": "Trình sửa video chuyên nghiệp",
+            "vi": "Trình sửa video chuyên nghiệp",
+            "zh": "专业视频编辑器"
+          }
         },
         {
           "name": "Kdenlive",
-          "descriptionKey": "openSourceVideoEditor",
-          "link": "https://kdenlive.org/"
+          "link": "https://kdenlive.org/",
+          "description": {
+            "da": "Open source-videoredigeringsprogram",
+            "en": "Open-source video editor",
+            "et": "Avatud lähtekoodiga videoredaktor",
+            "fi": "Avoimen lähdekoodin videoeditori",
+            "pl": "Edytor wideo open source",
+            "ru": "Видеоредактор с открытым исходным кодом",
+            "sv": "Öppen källkod-videoredigerare",
+            "tok": "ilo ante sitelen tawa open source",
+            "tr": "Açık kaynaklı video düzenleyici",
+            "vi-Hani": "Trình sửa video mã nguồn mở",
+            "vi": "Trình sửa video mã nguồn mở",
+            "zh": "开源视频编辑器"
+          }
         },
         {
           "name": "CapCut",
-          "descriptionKey": "videoEditorCapcut",
-          "link": "https://www.capcut.com/"
+          "link": "https://www.capcut.com/",
+          "description": {
+            "da": "Videoredigeringsprogram (desktop & mobil)",
+            "en": "Video editor (desktop & mobile)",
+            "et": "Videoredaktor (töölaud ja mobiil)",
+            "fi": "Videoeditori (tietokone & mobiili)",
+            "pl": "Edytor wideo (PC i mobilny)",
+            "ru": "Видеоредактор (десктоп и мобильный)",
+            "sv": "Videoredigerare (dator & mobil)",
+            "tok": "ilo ante sitelen tawa (ilo & ilo tawa)",
+            "tr": "Video düzenleyici (masaüstü & mobil)",
+            "vi-Hani": "Trình sửa video",
+            "vi": "Trình sửa video",
+            "zh": "视频编辑器"
+          }
         },
         {
           "name": "Aegisub",
-          "descriptionKey": "subtitleEditor",
-          "link": "http://www.aegisub.org/"
+          "link": "http://www.aegisub.org/",
+          "description": {
+            "da": "Underteksteditor",
+            "en": "Subtitle editor",
+            "et": "Subtiitrite redaktor",
+            "fi": "Tekstityseditori",
+            "pl": "Edytor napisów",
+            "ru": "Редактор субтитров",
+            "sv": "Textningsredigerare",
+            "tok": "ilo sitelen anpa kalama",
+            "tr": "Altyazı düzenleyici",
+            "vi-Hani": "Trình tạo phụ đề",
+            "vi": "Trình tạo phụ đề",
+            "zh": "字幕编辑器"
+          }
         },
         {
           "name": "VLC",
-          "descriptionKey": "videoPlayer",
-          "link": "https://www.videolan.org/vlc/"
+          "link": "https://www.videolan.org/vlc/",
+          "description": {
+            "da": "Videoafspiller",
+            "en": "Video player",
+            "et": "Videopleier",
+            "fi": "Videotoistin",
+            "pl": "Odtwarzacz wideo",
+            "ru": "Видеоплеер",
+            "sv": "Videospelare",
+            "tok": "ilo lukin sitelen tawa",
+            "tr": "Video oynatıcı",
+            "vi-Hani": "Trình phát video",
+            "vi": "Trình phát video",
+            "zh": "视频播放器"
+          }
         },
         {
           "name": "Audacity",
-          "descriptionKey": "audioEditor",
-          "link": "https://www.audacityteam.org/"
+          "link": "https://www.audacityteam.org/",
+          "description": {
+            "da": "Lydredigeringsprogram",
+            "en": "Audio editor",
+            "et": "Heliredaktor",
+            "fi": "Äänieditori",
+            "pl": "Edytor audio",
+            "ru": "Аудиоредактор",
+            "sv": "Ljudredigerare",
+            "tok": "ilo ante kalama",
+            "tr": "Ses düzenleyici",
+            "vi-Hani": "Trình sửa âm thanh",
+            "vi": "Trình sửa âm thanh",
+            "zh": "音频编辑器"
+          }
         }
       ]
     },
@@ -97,18 +279,57 @@
       "items": [
         {
           "name": "YouTube Music",
-          "descriptionKey": "musicStreamingYoutube",
-          "link": "https://music.youtube.com/"
+          "link": "https://music.youtube.com/",
+          "description": {
+            "da": "Musikstreamingtjeneste",
+            "en": "Music streaming service",
+            "et": "Muusika voogedastusteenus",
+            "fi": "Musiikin suoratoistopalvelu",
+            "pl": "Serwis streamingowy muzyki",
+            "ru": "Сервис потоковой передачи музыки",
+            "sv": "Musikstreamingtjänst",
+            "tok": "ilo kalama musi",
+            "tr": "Müzik akış hizmeti",
+            "vi-Hani": "Dịch vụ phát nhạc trực tuyến",
+            "vi": "Dịch vụ phát nhạc trực tuyến",
+            "zh": "在线音乐流媒体服务"
+          }
         },
         {
           "name": "Spotify",
-          "descriptionKey": "musicStreamingSpotify",
-          "link": "https://www.spotify.com/"
+          "link": "https://www.spotify.com/",
+          "description": {
+            "da": "Musikstreamingtjeneste",
+            "en": "Music streaming service",
+            "et": "Muusika voogedastusteenus",
+            "fi": "Musiikin suoratoistopalvelu",
+            "pl": "Serwis streamingowy muzyki",
+            "ru": "Сервис потоковой передачи музыки",
+            "sv": "Musikstreamingtjänst",
+            "tok": "ilo kalama musi",
+            "tr": "Müzik akış hizmeti",
+            "vi-Hani": "Dịch vụ phát nhạc trực tuyến",
+            "vi": "Dịch vụ phát nhạc trực tuyến",
+            "zh": "在线音乐流媒体服务"
+          }
         },
         {
           "name": "YouTube",
-          "descriptionKey": "videoStreaming",
-          "link": "https://www.youtube.com/"
+          "link": "https://www.youtube.com/",
+          "description": {
+            "da": "Videostreamingplatform",
+            "en": "Video streaming platform",
+            "et": "Video voogedastusplatvorm",
+            "fi": "Videon suoratoistoalusta",
+            "pl": "Platforma streamingowa wideo",
+            "ru": "Платформа потокового видео",
+            "sv": "Videostreamingplattform",
+            "tok": "ilo tawa sitelen tawa",
+            "tr": "Video akış platformu",
+            "vi-Hani": "Nền tảng phát video trực tuyến",
+            "vi": "Nền tảng phát video trực tuyến",
+            "zh": "在线视频流媒体平台"
+          }
         },
         {
           "name": "Unspeakable Platform 1",

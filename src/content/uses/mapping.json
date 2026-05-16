@@ -4,33 +4,111 @@
   "items": [
     {
       "name": "QGIS",
-      "descriptionKey": "geographicSystem",
-      "link": "https://qgis.org/"
+      "link": "https://qgis.org/",
+      "description": {
+        "da": "Geografisk Informationssystem",
+        "en": "Geographic Information System",
+        "et": "Geograafiline infosüsteem",
+        "fi": "Paikkatietojärjestelmä",
+        "pl": "System informacji geograficznej",
+        "ru": "Географическая информационная система",
+        "sv": "Geografiskt informationssystem",
+        "tok": "ilo sona ma",
+        "tr": "Coğrafi Bilgi Sistemi",
+        "vi-Hani": "Hệ thống thông tin địa lý",
+        "vi": "Hệ thống thông tin địa lý",
+        "zh": "地理信息系统"
+      }
     },
     {
       "name": "iD Editor",
-      "descriptionKey": "webOpenstreetmap",
-      "link": "https://wiki.openstreetmap.org/wiki/ID"
+      "link": "https://wiki.openstreetmap.org/wiki/ID",
+      "description": {
+        "da": "Webbaseret OpenStreetMap-editor",
+        "en": "Web-based OpenStreetMap editor",
+        "et": "Veebipõhine OpenStreetMap redaktor",
+        "fi": "Web-pohjainen OpenStreetMap-editori",
+        "pl": "Edytor OpenStreetMap online",
+        "ru": "Веб-редактор OpenStreetMap",
+        "sv": "Webbaserad OpenStreetMap-redigerare",
+        "tok": "ilo OpenStreetMap lon ilo lukin",
+        "tr": "Web tabanlı OpenStreetMap düzenleyici",
+        "vi-Hani": "Trình sửa OpenStreetMap trên web",
+        "vi": "Trình sửa OpenStreetMap trên web",
+        "zh": "网页版 OpenStreetMap 编辑器"
+      }
     },
     {
       "name": "JOSM",
-      "descriptionKey": "desktopOpenstreetmap",
-      "link": "https://josm.openstreetmap.de/"
+      "link": "https://josm.openstreetmap.de/",
+      "description": {
+        "da": "Desktop OpenStreetMap-editor",
+        "en": "Desktop OpenStreetMap editor",
+        "et": "Töölaua OpenStreetMap redaktor",
+        "fi": "OpenStreetMap-editori (tietokone)",
+        "pl": "Edytor OpenStreetMap na komputer",
+        "ru": "Десктопный редактор OpenStreetMap",
+        "sv": "OpenStreetMap-redigerare för dator",
+        "tok": "ilo OpenStreetMap lon ilo suli",
+        "tr": "Masaüstü OpenStreetMap düzenleyici",
+        "vi-Hani": "Trình sửa OpenStreetMap trên máy tính",
+        "vi": "Trình sửa OpenStreetMap trên máy tính",
+        "zh": "桌面版 OpenStreetMap 编辑器"
+      }
     },
     {
       "name": "Vespucci",
-      "descriptionKey": "mobileOpenstreetmap",
-      "link": "https://vespucci.io/"
+      "link": "https://vespucci.io/",
+      "description": {
+        "da": "Mobil OpenStreetMap-editor",
+        "en": "Mobile OpenStreetMap editor",
+        "et": "Mobiilne OpenStreetMap redaktor",
+        "fi": "OpenStreetMap-editori (mobiili)",
+        "pl": "Edytor OpenStreetMap na telefon",
+        "ru": "Мобильный редактор OpenStreetMap",
+        "sv": "OpenStreetMap-redigerare för mobil",
+        "tok": "ilo OpenStreetMap lon ilo tawa",
+        "tr": "Mobil OpenStreetMap düzenleyici",
+        "vi-Hani": "Trình sửa OpenStreetMap trên điện thoại",
+        "vi": "Trình sửa OpenStreetMap trên điện thoại",
+        "zh": "移动版 OpenStreetMap 编辑器"
+      }
     },
     {
       "name": "StreetComplete",
-      "descriptionKey": "mobileContributor",
-      "link": "https://streetcomplete.app/"
+      "link": "https://streetcomplete.app/",
+      "description": {
+        "da": "Mobil OpenStreetMap-bidragyder",
+        "en": "Mobile OpenStreetMap contributor",
+        "et": "Mobiilne OpenStreetMap panustaja",
+        "fi": "OpenStreetMap-mobiilieditori",
+        "pl": "Mobilny kontrybutor OpenStreetMap",
+        "ru": "Мобильный контрибьютор OpenStreetMap",
+        "sv": "OpenStreetMap-bidragsgivare på mobil",
+        "tok": "jan pana OpenStreetMap lon ilo tawa",
+        "tr": "Mobil OpenStreetMap katılımcısı",
+        "vi-Hani": "Đóng góp OpenStreetMap trên điện thoại",
+        "vi": "Đóng góp OpenStreetMap trên điện thoại",
+        "zh": "移动版 OpenStreetMap 贡献"
+      }
     },
     {
       "name": "Waze Map Editor",
-      "descriptionKey": "communityNavigation",
-      "link": "https://www.waze.com/en/user/editor/vanhv"
+      "link": "https://www.waze.com/en/user/editor/vanhv",
+      "description": {
+        "da": "Fællesskabsbaseret navigation og korteditor",
+        "en": "Community-based navigation and map editor",
+        "et": "Kogukonnapõhine navigatsioon ja kaardiredaktor",
+        "fi": "Yhteisön navigointi ja kartoitus",
+        "pl": "Nawigacja społecznościowa i edytor map",
+        "ru": "Навигация и редактор карт на основе сообщества",
+        "sv": "Community-navigering och kartredigering",
+        "tok": "linja & sitelen ma pi kulupu",
+        "tr": "Topluluk tabanlı navigasyon ve harita düzenleyici",
+        "vi-Hani": "Sửa bản đồ và điều hướng",
+        "vi": "Sửa bản đồ và điều hướng",
+        "zh": "地图编辑和导航"
+      }
     }
   ]
 }

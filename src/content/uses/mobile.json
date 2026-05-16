@@ -4,18 +4,57 @@
   "items": [
     {
       "name": "Samsung Galaxy S20 Ultra",
-      "descriptionKey": "mainPhone",
-      "link": "https://www.samsung.com/us/mobile/galaxy-s20-5g/instore/"
+      "link": "https://www.samsung.com/us/mobile/galaxy-s20-5g/instore/",
+      "description": {
+        "da": "Primær telefon",
+        "en": "Main phone",
+        "et": "Peamine telefon",
+        "fi": "Pääpuhelin",
+        "pl": "Telefon główny",
+        "ru": "Основной телефон",
+        "sv": "Huvudtelefon",
+        "tok": "ilo tawa nanpa wan",
+        "tr": "Ana telefon",
+        "vi-Hani": "電話正",
+        "vi": "Điện thoại chính",
+        "zh": "主用手机"
+      }
     },
     {
       "name": "LG V50 ThinQ 5G",
-      "descriptionKey": "secondaryPhone",
-      "link": "https://www.lg.com/us/mobile-phones/v50-thinq"
+      "link": "https://www.lg.com/us/mobile-phones/v50-thinq",
+      "description": {
+        "da": "Sekundær telefon",
+        "en": "Secondary phone",
+        "et": "Teine telefon töö jaoks",
+        "fi": "Toinen puhelin",
+        "pl": "Telefon zapasowy",
+        "ru": "Запасной телефон",
+        "sv": "Andra telefonen",
+        "tok": "ilo tawa nanpa tu",
+        "tr": "İkincil telefon",
+        "vi-Hani": "電話工役",
+        "vi": "Điện thoại phụ",
+        "zh": "备用手机"
+      }
     },
     {
       "name": "Samsung Galaxy Watch4 LTE",
-      "descriptionKey": "smartwatch",
-      "link": "https://www.samsung.com/global/galaxy/galaxy-watch4/"
+      "link": "https://www.samsung.com/global/galaxy/galaxy-watch4/",
+      "description": {
+        "da": "Smartwatch",
+        "en": "Smartwatch",
+        "et": "Nutikell",
+        "fi": "Älykello",
+        "pl": "Smartwatch",
+        "ru": "Умные часы",
+        "sv": "Smartklocka",
+        "tok": "ilo tenpo lon palisa",
+        "tr": "Akıllı saat",
+        "vi-Hani": "銅壺聰明",
+        "vi": "Đồng hồ thông minh",
+        "zh": "智能手表"
+      }
     }
   ]
 }

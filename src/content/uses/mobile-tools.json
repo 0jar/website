@@ -4,28 +4,93 @@
   "items": [
     {
       "name": "LGUP",
-      "descriptionKey": "lgFirmware",
-      "link": "https://xdaforums.com/t/lgup-1-16-3-patched-setup-installer-w-lgmobile-drivers-and-common_dll.4304181/"
+      "link": "https://xdaforums.com/t/lgup-1-16-3-patched-setup-installer-w-lgmobile-drivers-and-common_dll.4304181/",
+      "description": {
+        "da": "LG firmware-flashværktøj",
+        "en": "LG firmware flashing tool",
+        "et": "LG püsivara vilkumise tööriist",
+        "fi": "LG firmware-työkalu",
+        "pl": "Narzędzie do flashowania LG",
+        "ru": "Инструмент для прошивки LG",
+        "sv": "LG firmware-verktyg",
+        "tok": "ilo pana firmware LG",
+        "tr": "LG firmware flaşlama aracı",
+        "vi-Hani": "Công cụ cài firmware LG",
+        "vi": "Công cụ cài firmware LG",
+        "zh": "LG 固件刷写工具"
+      }
     },
     {
       "name": "QFIL",
-      "descriptionKey": "qualcommFlash",
-      "link": "https://qfiltool.com/"
+      "link": "https://qfiltool.com/",
+      "description": {
+        "da": "Qualcomm Flash Image Loader",
+        "en": "Qualcomm Flash Image Loader",
+        "et": "Qualcomm Flash Image Loader",
+        "fi": "Qualcomm Flash Image Loader",
+        "pl": "Qualcomm Flash Image Loader",
+        "ru": "Qualcomm Flash Image Loader",
+        "sv": "Qualcomm Flash Image Loader",
+        "tok": "Qualcomm Flash Image Loader",
+        "tr": "Qualcomm Flaş Görüntü Yükleyici",
+        "vi-Hani": "Công cụ cài firmware Qualcomm",
+        "vi": "Công cụ cài firmware Qualcomm",
+        "zh": "高通固件刷写工具"
+      }
     },
     {
       "name": "Odin",
-      "descriptionKey": "samsungFirmware",
-      "link": "https://xdaforums.com/t/patched-odin-3-13-1.3762572/"
+      "link": "https://xdaforums.com/t/patched-odin-3-13-1.3762572/",
+      "description": {
+        "da": "Samsung firmware-flashværktøj",
+        "en": "Samsung firmware flashing tool",
+        "et": "Samsungi püsivara vilkumise tööriist",
+        "fi": "Samsung firmware-työkalu",
+        "pl": "Narzędzie do flashowania Samsung",
+        "ru": "Инструмент для прошивки Samsung",
+        "sv": "Samsung firmware-verktyg",
+        "tok": "ilo pana firmware Samsung",
+        "tr": "Samsung firmware flaşlama aracı",
+        "vi-Hani": "Công cụ cài firmware Samsung",
+        "vi": "Công cụ cài firmware Samsung",
+        "zh": "三星固件刷写工具"
+      }
     },
     {
       "name": "SamFW",
-      "descriptionKey": "samsungDownload",
-      "link": "https://samfw.com/"
+      "link": "https://samfw.com/",
+      "description": {
+        "da": "Samsung firmware-downloadside",
+        "en": "Samsung firmware download site",
+        "et": "Samsungi püsivara allalaadimissait",
+        "fi": "Samsung firmware-lataussivu",
+        "pl": "Strona pobierania firmware Samsung",
+        "ru": "Сайт для загрузки прошивок Samsung",
+        "sv": "Samsung firmware-nedladdning",
+        "tok": "lipu tawa firmware Samsung",
+        "tr": "Samsung firmware indirme sitesi",
+        "vi-Hani": "Trang tải firmware Samsung",
+        "vi": "Trang tải firmware Samsung",
+        "zh": "三星固件下载网站"
+      }
     },
     {
       "name": "3uTools",
-      "descriptionKey": "iosManagement",
-      "link": "https://www.3u.com/"
+      "link": "https://www.3u.com/",
+      "description": {
+        "da": "iOS-enhedsstyring",
+        "en": "iOS device management",
+        "et": "iOS seadme haldus",
+        "fi": "iOS-laitteiden hallinta",
+        "pl": "Zarządzanie urządzeniami iOS",
+        "ru": "Управление устройствами iOS",
+        "sv": "iOS-enhetshantering",
+        "tok": "lawa ilo iOS",
+        "tr": "iOS cihaz yönetimi",
+        "vi-Hani": "Quản lý thiết bị iOS",
+        "vi": "Quản lý thiết bị iOS",
+        "zh": "iOS 设备管理"
+      }
     }
   ]
 }

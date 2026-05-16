@@ -4,17 +4,56 @@
   "items": [
     {
       "name": "Fedora Linux / Windows 11",
-      "descriptionKey": "dualBoot"
+      "description": {
+        "da": "Dual boot-opsætning med hærdet Windows",
+        "en": "Dual boot setup with hardened Windows",
+        "et": "Kaksiklaadimine turvatud Windowsiga",
+        "fi": "Kaksoiskäynnistys kovennetulla Windowsilla",
+        "pl": "Dual boot z utwardzonym Windowsem",
+        "ru": "Dual boot с усиленной Windows",
+        "sv": "Dual boot med härdad Windows",
+        "tok": "Dual boot kepeken Windows wawa",
+        "tr": "Sertleştirilmiş Windows ile çift önyükleme kurulumu",
+        "vi-Hani": "𨉟掑雙雙𠄩系調行",
+        "vi": "Mình cài song song hai hệ điều hành",
+        "zh": "我安装了双系统"
+      }
     },
     {
       "name": "Firefox",
-      "descriptionKey": "primaryBrowser",
-      "link": "https://www.mozilla.org/firefox/"
+      "link": "https://www.mozilla.org/firefox/",
+      "description": {
+        "da": "Primær webbrowser",
+        "en": "Primary web browser",
+        "et": "Peamine veebibrauser",
+        "fi": "Pääselain",
+        "pl": "Główna przeglądarka",
+        "ru": "Основной веб-браузер",
+        "sv": "Primär webbläsare",
+        "tok": "ilo lukin nanpa wan",
+        "tr": "Birincil web tarayıcısı",
+        "vi-Hani": "程閱䇼正",
+        "vi": "Trình duyệt web chính",
+        "zh": "主用网页浏览器"
+      }
     },
     {
       "name": "Brave",
-      "descriptionKey": "secondaryBrowser",
-      "link": "https://brave.com/"
+      "link": "https://brave.com/",
+      "description": {
+        "da": "Sekundær webbrowser",
+        "en": "Secondary web browser",
+        "et": "Teisene veebibrauser",
+        "fi": "Toinen selain",
+        "pl": "Przeglądarka zapasowa",
+        "ru": "Запасной веб-браузер",
+        "sv": "Sekundär webbläsare",
+        "tok": "ilo lukin nanpa tu",
+        "tr": "İkincil web tarayıcısı",
+        "vi-Hani": "程閱䇼恪",
+        "vi": "Trình duyệt web phụ",
+        "zh": "备用网页浏览器"
+      }
     }
   ]
 }

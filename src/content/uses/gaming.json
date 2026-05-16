@@ -4,23 +4,75 @@
   "items": [
     {
       "name": "Lunar Client",
-      "descriptionKey": "minecraftClient",
-      "link": "https://www.lunarclient.com/"
+      "link": "https://www.lunarclient.com/",
+      "description": {
+        "da": "Minecraft-klient",
+        "en": "Minecraft client and launcher",
+        "et": "Minecrafti klient ja käivitaja",
+        "fi": "Minecraft-asiakas ja käynnistin",
+        "pl": "Klient Minecraft",
+        "ru": "Клиент Minecraft",
+        "sv": "Minecraft-klient och launcher",
+        "tok": "Minecraft client & launcher",
+        "tr": "Minecraft istemcisi",
+        "vi-Hani": "Ứng dụng chơi Minecraft Java",
+        "vi": "Ứng dụng chơi Minecraft Java",
+        "zh": "Minecraft 客户端"
+      }
     },
     {
       "name": "Steam",
-      "descriptionKey": "gameDistribution",
-      "link": "https://store.steampowered.com/"
+      "link": "https://store.steampowered.com/",
+      "description": {
+        "da": "Spildistributionsplatform",
+        "en": "Game distribution platform",
+        "et": "Mängude levitamise platvorm",
+        "fi": "Pelien jakelualusta",
+        "pl": "Platforma dystrybucji gier",
+        "ru": "Платформа дистрибуции игр",
+        "sv": "Speldistributionsplattform",
+        "tok": "poki musi",
+        "tr": "Oyun dağıtım platformu",
+        "vi-Hani": "Nền tảng phân phối trò chơi",
+        "vi": "Nền tảng phân phối trò chơi",
+        "zh": "游戏分发平台"
+      }
     },
     {
       "name": "Epic Games",
-      "descriptionKey": "gameLauncher",
-      "link": "https://www.epicgames.com/"
+      "link": "https://www.epicgames.com/",
+      "description": {
+        "da": "Spilbutik og launcher",
+        "en": "Game store and launcher",
+        "et": "Mängupood ja käivitaja",
+        "fi": "Pelien kauppa ja käynnistin",
+        "pl": "Sklep i launcher gier",
+        "ru": "Магазин и лаунчер игр",
+        "sv": "Spelbutik och launcher",
+        "tok": "esun musi & launcher",
+        "tr": "Oyun mağazası ve başlatıcısı",
+        "vi-Hani": "Cửa hàng trò chơi",
+        "vi": "Cửa hàng trò chơi",
+        "zh": "游戏商店"
+      }
     },
     {
       "name": "itch.io",
-      "descriptionKey": "indieMarketplace",
-      "link": "https://itch.io/"
+      "link": "https://itch.io/",
+      "description": {
+        "da": "Indie-spilmarkedsplads",
+        "en": "Indie game marketplace",
+        "et": "Indiemängude turg",
+        "fi": "Indie-pelien markkinapaikka",
+        "pl": "Rynek gier indie",
+        "ru": "Рынок инди-игр",
+        "sv": "Indie-spelmarknad",
+        "tok": "esun musi indie",
+        "tr": "Bağımsız oyun pazarı",
+        "vi-Hani": "Cửa hàng trò chơi indie",
+        "vi": "Cửa hàng trò chơi indie",
+        "zh": "独立游戏商店"
+      }
     }
   ]
 }

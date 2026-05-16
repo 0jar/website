@@ -4,41 +4,145 @@
   "items": [
     {
       "name": "VS Code",
-      "descriptionKey": "primaryCodeEditor",
-      "link": "https://code.visualstudio.com/"
+      "link": "https://code.visualstudio.com/",
+      "description": {
+        "da": "Primær kodeeditor",
+        "en": "Primary code editor",
+        "et": "Peamine koodiredaktor",
+        "fi": "Pääkoodieditori",
+        "pl": "Główny edytor kodu",
+        "ru": "Основной редактор кода",
+        "sv": "Primär kodredigerare",
+        "tok": "ilo sitelen nanpa nanpa wan",
+        "tr": "Birincil kod düzenleyici",
+        "vi-Hani": "程撰討 code 正",
+        "vi": "Trình soạn thảo code chính",
+        "zh": "主用代码编辑器"
+      }
     },
     {
       "name": "Warp / Black Box",
-      "descriptionKey": "terminalEmulators",
-      "link": "https://www.warp.dev/"
+      "link": "https://www.warp.dev/",
+      "description": {
+        "da": "Terminalemulatorer",
+        "en": "Terminal emulators",
+        "et": "Terminalimulaatorid",
+        "fi": "Terminaaliemulaattorit",
+        "pl": "Emulatory terminala",
+        "ru": "Эмуляторы терминала",
+        "sv": "Terminalemulatorer",
+        "tok": "ilo Termina",
+        "tr": "Terminal emülatörleri",
+        "vi-Hani": "Trình giả lập terminal",
+        "vi": "Trình giả lập terminal",
+        "zh": "终端模拟器"
+      }
     },
     {
       "name": "Git",
-      "descriptionKey": "versionControl"
+      "description": {
+        "da": "Versionskontrolsystem",
+        "en": "Version control system",
+        "et": "Versioonihaldus",
+        "fi": "Versionhallintajärjestelmä",
+        "pl": "System kontroli wersji",
+        "ru": "Система контроля версий",
+        "sv": "Versionshanteringssystem",
+        "tok": "nasin lawa pi ante lipu",
+        "tr": "Sürüm kontrol sistemi",
+        "vi-Hani": "系統管理翻版",
+        "vi": "Hệ thống quản lý phiên bản",
+        "zh": "版本控制系统"
+      }
     },
     {
       "name": "Postman",
-      "descriptionKey": "apiTesting",
-      "link": "https://www.postman.com/"
+      "link": "https://www.postman.com/",
+      "description": {
+        "da": "API-testværktøj",
+        "en": "API testing tool",
+        "et": "API testimisvahend",
+        "fi": "API-testaustyökalu",
+        "pl": "Narzędzie do testowania API",
+        "ru": "Инструмент для тестирования API",
+        "sv": "API-testverktyg",
+        "tok": "ilo alasa API",
+        "tr": "API test aracı",
+        "vi-Hani": "Công cụ kiểm thử API",
+        "vi": "Công cụ kiểm thử API",
+        "zh": "API 测试工具"
+      }
     },
     {
       "name": "MySQL",
-      "descriptionKey": "databaseManagement"
+      "description": {
+        "da": "Databaseadministration",
+        "en": "Database management",
+        "et": "Andmebaaside haldus",
+        "fi": "Tietokannan hallinta",
+        "pl": "Zarządzanie bazami danych",
+        "ru": "Управление базами данных",
+        "sv": "Databashantering",
+        "tok": "lawa poki sona",
+        "tr": "Veritabanı yönetimi",
+        "vi-Hani": "管理基礎與料",
+        "vi": "Quản lý cơ sở dữ liệu",
+        "zh": "数据库管理"
+      }
     },
     {
       "name": "GitHub",
-      "descriptionKey": "codeHosting",
-      "link": "https://github.com/"
+      "link": "https://github.com/",
+      "description": {
+        "da": "Kodehosting og samarbejde",
+        "en": "Code hosting and collaboration",
+        "et": "Koodimajutus ja koostöö",
+        "fi": "Koodin hostaus ja yhteistyö",
+        "pl": "Hosting kodu i współpraca",
+        "ru": "Хостинг кода и совместная работа",
+        "sv": "Kodhosting och samarbete",
+        "tok": "poki lipu nanpa & kulupu",
+        "tr": "Kod barındırma ve işbirliği",
+        "vi-Hani": "Lưu trữ code và hỗ trợ code nhóm",
+        "vi": "Lưu trữ code và hỗ trợ code nhóm",
+        "zh": "代码托管和团队协作"
+      }
     },
     {
       "name": "Vercel",
-      "descriptionKey": "webHosting",
-      "link": "https://vercel.com/"
+      "link": "https://vercel.com/",
+      "description": {
+        "da": "Webhostingplatform",
+        "en": "Web hosting platform",
+        "et": "Veebimajutuse platvorm",
+        "fi": "Webhotelli",
+        "pl": "Platforma hostingowa",
+        "ru": "Платформа веб-хостинга",
+        "sv": "Webbhotell",
+        "tok": "poki lipu",
+        "tr": "Web barındırma platformu",
+        "vi-Hani": "Nền tảng host web",
+        "vi": "Nền tảng host web",
+        "zh": "网站托管平台"
+      }
     },
     {
       "name": "Cloudflare",
-      "descriptionKey": "ddosProtection",
-      "link": "https://www.cloudflare.com/"
+      "link": "https://www.cloudflare.com/",
+      "description": {
+        "da": "DDoS-beskyttelse og CDN",
+        "en": "DDoS protection and CDN",
+        "et": "DDoS kaitse ja CDN",
+        "fi": "DDoS-suojaus ja CDN",
+        "pl": "Ochrona DDoS i CDN",
+        "ru": "Защита от DDoS и CDN",
+        "sv": "DDoS-skydd och CDN",
+        "tok": "awen tan DDoS & CDN",
+        "tr": "DDoS koruması ve CDN",
+        "vi-Hani": "保衛𠺌 DDoS 吧供給 CDN",
+        "vi": "Bảo vệ khỏi DDoS và cung cấp CDN",
+        "zh": "DDoS 防护和 CDN 服务"
+      }
     }
   ]
 }

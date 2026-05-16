@@ -4,13 +4,39 @@
   "items": [
     {
       "name": "Samsung Galaxy Buds2",
-      "descriptionKey": "primaryEarbuds",
-      "link": "https://www.samsung.com/us/app/mobile-audio/galaxy-buds2/"
+      "link": "https://www.samsung.com/us/app/mobile-audio/galaxy-buds2/",
+      "description": {
+        "da": "Primære trådløse ørepropper",
+        "en": "Primary wireless earbuds",
+        "et": "Peamised juhtmevabad kõrvaklapid",
+        "fi": "Pääkuulokkeet (langattomat)",
+        "pl": "Główne bezprzewodowe słuchawki",
+        "ru": "Основные беспроводные наушники",
+        "sv": "Primära trådlösa hörlurar",
+        "tok": "ilo kute ala linja nanpa wan",
+        "tr": "Birincil kablosuz kulaklık",
+        "vi-Hani": "𦖻𦖑空絏正",
+        "vi": "Tai nghe không dây chính",
+        "zh": "主用无线耳机"
+      }
     },
     {
       "name": "Soundcore R50i",
-      "descriptionKey": "backupEarbuds",
-      "link": "https://versus.com/en/anker-soundcore-r50i"
+      "link": "https://versus.com/en/anker-soundcore-r50i",
+      "description": {
+        "da": "Backup ørepropper",
+        "en": "Backup earbuds",
+        "et": "Varukõrvaklapid",
+        "fi": "Varakuulokkeet",
+        "pl": "Słuchawki zapasowe",
+        "ru": "Запасные наушники",
+        "sv": "Reservhörlurar",
+        "tok": "ilo kute awen",
+        "tr": "Yedek kulaklık",
+        "vi-Hani": "𦖻𦖑預防",
+        "vi": "Tai nghe dự phòng",
+        "zh": "备用耳机"
+      }
     }
   ]
 }

@@ -4,56 +4,199 @@
   "items": [
     {
       "name": "Betterbird",
-      "descriptionKey": "desktopEmail",
-      "link": "https://www.betterbird.eu/"
+      "link": "https://www.betterbird.eu/",
+      "description": {
+        "da": "Desktop e-mailklient",
+        "en": "Desktop email client",
+        "et": "Töölauameiliklient",
+        "fi": "Sähköpostiohjelma (tietokone)",
+        "pl": "Klient poczty na komputer",
+        "ru": "Десктопный почтовый клиент",
+        "sv": "E-postklient på datorn",
+        "tok": "ilo e-mail pi ilo suli",
+        "tr": "Masaüstü e-posta istemcisi",
+        "vi-Hani": "應用伊𩄲𨑗𣛠併",
+        "vi": "Ứng dụng email trên máy tính",
+        "zh": "桌面邮件应用"
+      }
     },
     {
       "name": "Spark",
-      "descriptionKey": "emailClient",
-      "link": "https://sparkmailapp.com/"
+      "link": "https://sparkmailapp.com/",
+      "description": {
+        "da": "E-mailklient (desktop & mobil)",
+        "en": "Email client (desktop & mobile)",
+        "et": "E-posti klient (töölaud ja mobiil)",
+        "fi": "Sähköpostiohjelma (tietokone & mobiili)",
+        "pl": "Klient poczty (PC i mobilny)",
+        "ru": "Почтовый клиент (десктоп и мобильный)",
+        "sv": "E-postklient (dator & mobil)",
+        "tok": "ilo e-mail (ilo & ilo tawa)",
+        "tr": "E-posta istemcisi (masaüstü & mobil)",
+        "vi-Hani": "應用伊𩄲𨑗𣛠併吧電話",
+        "vi": "Ứng dụng email trên máy tính & điện thoại",
+        "zh": "桌面 & 移动邮件应用"
+      }
     },
     {
       "name": "Zoho",
-      "descriptionKey": "domainEmail",
-      "link": "https://www.zoho.com/mail/"
+      "link": "https://www.zoho.com/mail/",
+      "description": {
+        "da": "Domain e-mailudbyder",
+        "en": "Domain email provider",
+        "et": "Domeeni e-posti teenusepakkuja",
+        "fi": "Domain-sähköpostipalvelu",
+        "pl": "Dostawca poczty dla domeny",
+        "ru": "Провайдер почты для домена",
+        "sv": "Domän-e-postleverantör",
+        "tok": "pana e e-mail pi nimi ma",
+        "tr": "Alan adı e-posta sağlayıcısı",
+        "vi-Hani": "供給伊𩄲朱𠸜沔",
+        "vi": "Cung cấp email cho tên miền",
+        "zh": "域名邮箱提供商"
+      }
     },
     {
       "name": "Workflowy",
-      "descriptionKey": "taskManagement",
-      "link": "https://workflowy.com/"
+      "link": "https://workflowy.com/",
+      "description": {
+        "da": "Opgavestyring",
+        "en": "Task management",
+        "et": "Ülesannete haldus",
+        "fi": "Tehtävienhallinta",
+        "pl": "Zarządzanie zadaniami",
+        "ru": "Управление задачами",
+        "sv": "Uppgiftshantering",
+        "tok": "ilo lawa pali",
+        "tr": "Görev yönetimi",
+        "vi-Hani": "管理工役",
+        "vi": "Quản lý công việc",
+        "zh": "任务管理"
+      }
     },
     {
       "name": "Google Calendar",
-      "descriptionKey": "calendar"
+      "description": {
+        "da": "Kalender og planlægning",
+        "en": "Calendar and scheduling",
+        "et": "Kalender ja ajakava",
+        "fi": "Kalenteri ja aikataulutus",
+        "pl": "Kalendarz i planowanie",
+        "ru": "Календарь и планирование",
+        "sv": "Kalender och planering",
+        "tok": "tenpo & sitelen tenpo",
+        "tr": "Takvim ve zamanlama",
+        "vi-Hani": "Lịch và lập kế hoạch",
+        "vi": "Lịch và lập kế hoạch",
+        "zh": "日历和计划"
+      }
     },
     {
       "name": "Toggl",
-      "descriptionKey": "timeTracking",
-      "link": "https://toggl.com/"
+      "link": "https://toggl.com/",
+      "description": {
+        "da": "Tidsregistrering",
+        "en": "Time tracking",
+        "et": "Aja jälgimine",
+        "fi": "Ajanseuranta",
+        "pl": "Śledzenie czasu",
+        "ru": "Отслеживание времени",
+        "sv": "Tidrapportering",
+        "tok": "ilo alasa tenpo",
+        "tr": "Zaman takibi",
+        "vi-Hani": "蹺𠼲時間",
+        "vi": "Theo dõi thời gian",
+        "zh": "时间追踪"
+      }
     },
     {
       "name": "Zapier",
-      "descriptionKey": "automationTool",
-      "link": "https://zapier.com/"
+      "link": "https://zapier.com/",
+      "description": {
+        "da": "Automatiseringsværktøj",
+        "en": "Automation tool",
+        "et": "Automatiseerimisvahend",
+        "fi": "Automaatio-ohjelma",
+        "pl": "Narzędzie automatyzacji",
+        "ru": "Инструмент автоматизации",
+        "sv": "Automatiseringsverktyg",
+        "tok": "ilo pali wawa",
+        "tr": "Otomasyon aracı",
+        "vi-Hani": "Công cụ tự động hóa",
+        "vi": "Công cụ tự động hóa",
+        "zh": "自动化工具"
+      }
     },
     {
       "name": "KDE Connect",
-      "descriptionKey": "phoneLinking",
-      "link": "https://kdeconnect.kde.org/"
+      "link": "https://kdeconnect.kde.org/",
+      "description": {
+        "da": "Forbindelse mellem telefon og PC",
+        "en": "Linking phone with PC",
+        "et": "Telefoni ühendamine arvutiga",
+        "fi": "Puhelimen yhdistäminen tietokoneeseen",
+        "pl": "Łączenie telefonu z komputerem",
+        "ru": "Связь телефона с ПК",
+        "sv": "Koppla telefon till dator",
+        "tok": "linja ilo tawa & ilo suli",
+        "tr": "Telefonu PC ile bağlama",
+        "vi-Hani": "結綏電話貝𣛠併",
+        "vi": "Kết nối điện thoại với máy tính",
+        "zh": "连接手机和电脑"
+      }
     },
     {
       "name": "Notesnook",
-      "descriptionKey": "noteTaking",
-      "link": "https://notesnook.com/"
+      "link": "https://notesnook.com/",
+      "description": {
+        "da": "Note-app",
+        "en": "Note-taking app",
+        "et": "Märkmete rakendus",
+        "fi": "Muistiinpanosovellus",
+        "pl": "Aplikacja do notatek",
+        "ru": "Приложение для заметок",
+        "sv": "Anteckningsapp",
+        "tok": "ilo sitelen lili",
+        "tr": "Not alma uygulaması",
+        "vi-Hani": "應用𥱬註",
+        "vi": "Ứng dụng ghi chú",
+        "zh": "笔记应用"
+      }
     },
     {
       "name": "Microsoft Office Online",
-      "descriptionKey": "officeSuite"
+      "description": {
+        "da": "Office-pakke",
+        "en": "Office suite",
+        "et": "Kontoritarkvara",
+        "fi": "Toimisto-ohjelmisto",
+        "pl": "Pakiet biurowy",
+        "ru": "Офисный пакет",
+        "sv": "Kontorspaket",
+        "tok": "ilo pali lipu",
+        "tr": "Ofis paketi",
+        "vi-Hani": "Bộ ứng dụng văn phòng",
+        "vi": "Bộ ứng dụng văn phòng",
+        "zh": "办公套件"
+      }
     },
     {
       "name": "Self-hosted Nextcloud",
-      "descriptionKey": "cloudStorage",
-      "link": "https://nextcloud.com/"
+      "link": "https://nextcloud.com/",
+      "description": {
+        "da": "Cloud-lagringsløsning",
+        "en": "Cloud storage solution",
+        "et": "Pilvesalvestuslahendus",
+        "fi": "Pilvitallennus",
+        "pl": "Chmura do przechowywania",
+        "ru": "Облачное хранилище",
+        "sv": "Molnlagring",
+        "tok": "poki sewi",
+        "tr": "Bulut depolama çözümü",
+        "vi-Hani": "Giải pháp lưu trữ đám mây",
+        "vi": "Giải pháp lưu trữ đám mây",
+        "zh": "云存储解决方案"
+      }
     }
   ]
 }

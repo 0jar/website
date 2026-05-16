@@ -4,33 +4,111 @@
   "items": [
     {
       "name": "Windscribe",
-      "descriptionKey": "vpn",
-      "link": "https://windscribe.com/"
+      "link": "https://windscribe.com/",
+      "description": {
+        "da": "VPN med WireGuard-konfiguration",
+        "en": "VPN with WireGuard config",
+        "et": "VPN WireGuardi seadetega",
+        "fi": "VPN WireGuard-konfiguraatiolla",
+        "pl": "VPN z konfiguracją WireGuard",
+        "ru": "VPN с конфигурацией WireGuard",
+        "sv": "VPN med WireGuard-konfiguration",
+        "tok": "VPN kepeken WireGuard",
+        "tr": "WireGuard yapılandırmalı VPN",
+        "vi-Hani": "VPN với cấu hình WireGuard",
+        "vi": "VPN với cấu hình WireGuard",
+        "zh": "使用 WireGuard 配置的 VPN"
+      }
     },
     {
       "name": "Bitwarden",
-      "descriptionKey": "passwordManager",
-      "link": "https://bitwarden.com/"
+      "link": "https://bitwarden.com/",
+      "description": {
+        "da": "Selv-hostet adgangskodemanager",
+        "en": "Self-hosted password manager",
+        "et": "Isemajandatud paroolihaldur",
+        "fi": "Oma salasanojen hallinta",
+        "pl": "Samohostowany menedżer haseł",
+        "ru": "Самостоятельно размещенный менеджер паролей",
+        "sv": "Självhostad lösenordshanterare",
+        "tok": "ilo awen nimi nena lon jan",
+        "tr": "Kendi kendine barındırılan şifre yöneticisi",
+        "vi-Hani": "Trình quản lý mật khẩu tự host",
+        "vi": "Trình quản lý mật khẩu tự host",
+        "zh": "自托管密码管理器"
+      }
     },
     {
       "name": "Ente Auth",
-      "descriptionKey": "twoFactorAuth",
-      "link": "https://ente.io/"
+      "link": "https://ente.io/",
+      "description": {
+        "da": "To-faktor-godkendelsesapp",
+        "en": "Two-factor authentication app",
+        "et": "Kaheastmelise autentimise rakendus",
+        "fi": "Kaksivaiheinen tunnistautuminen",
+        "pl": "Aplikacja do 2FA",
+        "ru": "Приложение для двухфакторной аутентификации",
+        "sv": "Tvåfaktorsautentiseringsapp",
+        "tok": "ilo awen nanpa tu",
+        "tr": "İki faktörlü kimlik doğrulama uygulaması",
+        "vi-Hani": "Ứng dụng xác thực hai yếu tố (2FA)",
+        "vi": "Ứng dụng xác thực hai yếu tố (2FA)",
+        "zh": "双因素认证应用"
+      }
     },
     {
       "name": "RethinkDNS",
-      "descriptionKey": "dnsProvider",
-      "link": "https://rethinkdns.com/"
+      "link": "https://rethinkdns.com/",
+      "description": {
+        "da": "DNS-udbyder",
+        "en": "DNS provider",
+        "et": "DNS-teenusepakkuja",
+        "fi": "DNS-palveluntarjoaja",
+        "pl": "Dostawca DNS",
+        "ru": "DNS-провайдер",
+        "sv": "DNS-leverantör",
+        "tok": "jan pana DNS",
+        "tr": "DNS sağlayıcısı",
+        "vi-Hani": "Nhà cung cấp DNS",
+        "vi": "Nhà cung cấp DNS",
+        "zh": "DNS 提供商"
+      }
     },
     {
       "name": "Brave Search",
-      "descriptionKey": "privacySearch",
-      "link": "https://search.brave.com/"
+      "link": "https://search.brave.com/",
+      "description": {
+        "da": "Privatlivsfokuseret søgemaskine",
+        "en": "Privacy-focused search engine",
+        "et": "Privaatsusele keskendunud otsingumootor",
+        "fi": "Yksityisyyttä korostava hakukone",
+        "pl": "Wyszukiwarka dbająca o prywatność",
+        "ru": "Поисковая система, ориентированная на приватность",
+        "sv": "Integritetsfokuserad sökmotor",
+        "tok": "ilo alasa pi len",
+        "tr": "Gizlilik odaklı arama motoru",
+        "vi-Hani": "Công cụ tìm kiếm",
+        "vi": "Công cụ tìm kiếm",
+        "zh": "搜索引擎"
+      }
     },
     {
       "name": "Tailscale",
-      "descriptionKey": "networkVpn",
-      "link": "https://tailscale.com/"
+      "link": "https://tailscale.com/",
+      "description": {
+        "da": "Sikkert netværks-mesh-VPN",
+        "en": "Secure network mesh VPN",
+        "et": "Turvaline võrk (mesh VPN)",
+        "fi": "Turvallinen verkko-VPN",
+        "pl": "Bezpieczny mesh VPN",
+        "ru": "Безопасная сетевая mesh VPN",
+        "sv": "Säkert nätverks-VPN",
+        "tok": "VPN pi linja awen",
+        "tr": "Güvenli ağ örgüsü VPN",
+        "vi-Hani": "VPN kết nối mạng lưới thiết bị",
+        "vi": "VPN kết nối mạng lưới thiết bị",
+        "zh": "连接设备网络的 VPN"
+      }
     }
   ]
 }
