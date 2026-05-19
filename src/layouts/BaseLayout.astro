@@ -183,6 +183,11 @@ const structuredData = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={resolvedOgImage} />
 
+    <!-- Fediverse -->
+    <meta name="fediverse:creator" content="@jar@blob.cat" />
+    <meta name="fediverse:creator" content="@jar@toot.io" />
+    <meta name="fediverse:creator" content="@jarema@mas.to" />
+
     {metaTags.map((tag) => (
       tag.property ? (
         <meta property={tag.property} content={tag.content} />
