@@ -1,719 +1,1667 @@
 {
-  "404": {
-    "title": "Haritanın dışına çıktın",
-    "description": "Kedi bile burayı bilmiyor.",
-    "button": "Ana sayfaya dön",
-    "sitemap": "Site haritasını görüntüle",
-    "enjoycat": "Kaybolmuşken, bu kediyi seyret:"
+  "404.title": {
+    "other": "Haritanın dışına çıktın"
   },
-  "2048": {
-    "description": "Karoları birleştirin, 2048'e ulaşın!",
-    "score": "Puan",
-    "best": "En İyi",
-    "gameOver": "Oyun Bitti!",
-    "finalScore": "Son Puan",
-    "tryAgain": "Tekrar Dene",
-    "youWin": "Kazandınız!",
-    "currentScore": "Mevcut Puan",
-    "keepPlaying": "Oynamaya Devam Et",
-    "newGame": "Yeni Oyun",
-    "howToPlay": "Nasıl Oynanır",
-    "instructions1": "Karoları hareket ettirmek için ok tuşlarını veya WASD'yi kullanın. Aynı sayıya sahip iki karo birbirine dokunduğunda, birleşerek tek bir karo oluşturur!",
-    "instructions2": "Her hareketten sonra yeni bir karo belirir (2 veya 4).",
-    "instructions3": "2048 sayısına sahip bir karo oluşturarak oyunu kazanın!",
-    "controls": "Kontroller",
-    "moveLeft": "Sola Hareket",
-    "moveRight": "Sağa Hareket",
-    "moveUp": "Yukarı Hareket",
-    "moveDown": "Aşağı Hareket",
-    "touchInstructions": "Mobil cihazlarda, karolar�� hareket ettirmek için kaydırın veya ekrandaki kontrolleri kullanın.",
-    "undo": "Geri Al",
-    "title": "2048",
-    "instructions4": "2048'e ulaştıktan sonra daha da yüksek puanlar elde etmek için oynamaya devam edebilirsiniz!"
+  "404.description": {
+    "other": "Kedi bile burayı bilmiyor."
   },
-  "nav": {
-    "home": "Ana sayfa",
-    "about": "Hakkında",
-    "projects": "Projeler",
-    "blog": "Blog",
-    "now": "Şimdi",
-    "uses": "Kullandıklarım",
-    "contact": "İletişim",
-    "guestbook": "Ziyaretçi defteri",
-    "colophon": "Künye",
-    "webring": "Web halkası",
-    "scrapbook": "Karalama defteri",
-    "slashes": "Site haritası",
-    "brand": "Marka kiti",
-    "badges": "Rozetler",
-    "tools": "Araçlar"
+  "404.button": {
+    "other": "Ana sayfaya dön"
   },
-  "languageNotice": {
-    "message": "Bu dil için çeviriler hala yapım aşamasındadır. Bazı içerikler eksik veya tamamlanmamış olabilir.",
-    "dismiss": "Kapat"
+  "404.sitemap": {
+    "other": "Site haritasını görüntüle"
   },
-  "language": {
-    "main": "Ana diller",
-    "beta": "Beta diller",
-    "other": "Diğer diller",
-    "auto": "Otomatik (tarayıcı dili)",
-    "search": "Dilleri ara...",
-    "en": "İngilizce",
-    "vi": "Vietnamca",
-    "et": "Estonca",
-    "ru": "Rusça",
-    "da": "Danca",
-    "tr": "Türkçe",
-    "zh": "Çince",
-    "pl": "Lehçe",
-    "sv": "İsveççe",
-    "fi": "Fince",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "Kaybolmuşken, bu kediyi seyret:"
   },
-  "greetings": {
-    "morning": "Günaydın gezgin.",
-    "afternoon": "Tünaydın yolcu.",
-    "evening": "İyi akşamlar kaşif.",
-    "night": "Hala uyanık mısın? Ben de."
+  "2048.description": {
+    "other": "Karoları birleştirin, 2048'e ulaşın!"
   },
-  "home": {
-    "buttons": {
-      "about": "Hakkımda",
-      "projects": "Projelerimi Gör"
-    },
-    "footer": "Dijital bahçeme hoş geldin. Keşfetmekten çekinme.",
-    "heading": "selam, ben Jarema",
-    "subheading": "Ekonomiyi okurum, kod bazen yazarım, kedilerle hep oynarım.",
-    "contactButton": "Bana ulaş",
-    "aboutButton": "Hakkımda",
-    "blogButton": "Blogumu oku",
-    "guestbookButton": "Ziyaretçi defterime yaz",
-    "recentPosts": "Son blog yazıları",
-    "latestNow": "Şu anda ne yapıyorum",
-    "currentMood": "Şu anki ruh halim",
-    "currentStatus": "Şu anki durumum",
-    "time": "Şu anki zaman",
-    "yourTime": "Senin zamanın",
-    "myTime": "Benim zamanım",
-    "viewAllWebrings": "Tüm web çemberlerini gör",
-    "checkOutSites": "Bu sitelere göz at!",
-    "androidCountdown": "Android X gün içinde kapalı bir işletim sistemi haline gelecek"
+  "2048.score": {
+    "other": "Puan"
   },
-  "guestbook": {
-    "title": "Ziyaretçi defteri",
-    "description": "Ziyaretçi defterime bir mesaj bırak!",
-    "poweredBy": "Altyapı",
-    "atabook": "Atabook"
+  "2048.best": {
+    "other": "En İyi"
   },
-  "about": {
-    "title": "Hakkımda",
-    "description": "Ben kimim, nereden geliyorum, tutkum ne ve ne için çalışıyorum hikayesi.",
-    "chapters": {
-      "6": {
-        "title": "henüz bitirmedim",
-        "content1": "işte okumamaları gereken kısım.",
-        "content2": "hala kızgınım. var olmasına asla izin verilmeyen bir versiyonumun yasını hala tutuyorum. hala bazı günler neden her şeyin birkaç derece yanlış hissettirdiğini merak ederek uyanıyorum. bazen kaçıp gitmeyi, sadece ortadan kaybolmayı düşünüyorum, yeni isim, yeni şehir, yeni dil. bazen neredeyse yapıyorum.",
-        "content3": "insan bile hissetmediğim günler var. daha çok katılaşmaya çalışan bir anı gibi. daha çok artık ulaşamadığım daha yumuşak bir şeyin yankısı gibi. diğer günler, elektriğim. her ayrıntıyı hissediyorum, tenimde güneş ışığı, sessiz çalma listeleri, insanların nihayet kendileri olabilecek kadar güvende olduklarında yüzlerinin değişme şekli. bir şekilde beni hayatta tutuyor.",
-        "content4": "olmam gereken kişi her kimse, o kişi olmayı henüz bitirmedim. ama sessiz kalmaktan memnunmuş gibi davranmayı bıraktım."
-      }
-    }
+  "2048.gameOver": {
+    "other": "Oyun Bitti!"
   },
-  "projects": {
-    "title": "Projelerim",
-    "description": "Üzerinde çalıştığım kişisel, akademik ve aktivizm projelerinin bir derlemesi. Bazıları bitti, bazıları hala pişiyor.",
-    "status": {
-      "completed": "Tamamlandı",
-      "inProgress": "Hala Pişiyor",
-      "planned": "Planlandı"
-    },
-    "statusLabels": {
-      "completed": "Tamamlandı",
-      "inProgress": "Devam Ediyor",
-      "planned": "Planlandı"
-    },
-    "categories": {
-      "personal": "Kişisel",
-      "academic": "Akademik",
-      "activism": "Aktivizm"
-    },
-    "details": {
-      "what": "Ne olduğu",
-      "learned": "Ne öğrendim",
-      "why": "Neden önemli"
-    },
-    "cardActions": {
-      "clickForDetails": "Detaylar için tıkla",
-      "clickToClose": "Kapatmak için tıkla"
-    },
-    "buttons": {
-      "showRandom": "Daha fazla rastgelelik göster",
-      "hideRandom": "Kaosu gizle"
-    },
-    "filters": {
-      "all": "Tümü"
-    },
-    "clickToFlip": "Çevirmek için tıkla",
-    "what": "Bu nedir?",
-    "learned": "Ne öğrendim",
-    "why": "Bunu neden yaptım?"
+  "2048.finalScore": {
+    "other": "Son Puan"
   },
-  "blog": {
-    "title": "Blog",
-    "description": "Düşünceler, yansımalar ve ara sıra atıp tutmalar. Çeşitli saatlerde ve ruh hallerinde yazılmıştır.",
-    "language": "Dil",
-    "languageFilter": "Dile göre filtrele",
-    "tag": "Etiket",
-    "sort": "Gönderileri sırala",
-    "category": "Kategori",
-    "noPosts": "Henüz hiç gönderi yok. Yakında tekrar kontrol et!",
-    "search": "Gönderilerde ara...",
-    "sortNew": "En yeniler önce",
-    "sortOld": "En eskiler önce",
-    "sortReadTime": "Okuma süresi",
-    "sortABC": "Alfabetik",
-    "filter": "Filtrele",
-    "filterDescription": "Blog gönderilerini filtrele",
-    "activeFilter": "Etkin filtreler:",
-    "filterNoMatch": "Filtrelerine uyan gönderi bulunamadı. Arama kriterlerini değiştirmeyi deneyebilirsin.",
-    "clearFilter": "Tüm filtreleri temizle",
-    "mood": "Ruh hali",
-    "cat": "Kedi mührünü bastı",
-    "prev": "Önceki gönderi",
-    "next": "Sonraki gönderi",
-    "jumpToPost": "Gönderiye git",
-    "back": "Blog listesine geri dön",
-    "showingPosts": "{{total}} gönderiden {{current}} tanesi gösteriliyor",
-    "minRead": "dakikalık okuma",
-    "rss": "RSS beslemesi",
-    "subscribeRSS": "RSS ile abone ol",
-    "allPosts": "Tüm yazıların beslemesi",
-    "languageFeeds": "Dile özel beslemeler",
-    "rssDescription": "Yeni yazılardan haberdar olmak için favori RSS okuyucunuzdan RSS beslemelerime abone olun.",
-    "atom": "Atom beslemesi",
-    "subscribeAtom": "Atom ile abone ol",
-    "atomDescription": "Yeni yazılardan haberdar olmak için favori Atom okuyucunuzdan Atom beslemelerime abone olun.",
-    "availableIn": "Bu sayfa şu dillerde de mevcut:",
-    "comments": "Yorumlar",
-    "webmentions": "Web Bahsetmeleri",
-    "webmentionsNone": "Henüz web bahsetmesi yok. İlk yanıtlayan siz olun!",
-    "webmentionLike": "bunu beğendi",
-    "webmentionRepost": "bunu paylaştı",
-    "webmentionReply": "yanıtladı",
-    "webmentionMention": "bundan bahsetti",
-    "tagLabels": {
-      "first-post": "ilk yazı",
-      "identity": "kimlik",
-      "belonging": "aidiyet",
-      "introspection": "iç gözlem",
-      "browsers": "tarayıcılar",
-      "chrome": "Chrome",
-      "open-web": "açık web",
-      "app-defaults": "varsayılan uygulamalar",
-      "software": "yazılım",
-      "tools": "araçlar",
-      "new-year": "yeni yıl",
-      "reflection": "öz-yansıma",
-      "health": "sağlık",
-      "tet": "Tet Bayramı",
-      "vietnam": "Vietnam",
-      "military": "askerlik",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "güvenlik sertleştirme",
-      "values": "değerler",
-      "personal-philosophy": "kişisel felsefe"
-    },
-    "categoryLabels": {
-      "personal": "Kişisel",
-      "meta": "Meta",
-      "identity": "Kimlik",
-      "technical": "Teknik",
-      "privacy": "Gizlilik",
-      "opinions": "Görüşler",
-      "life": "Yaşam",
-      "security": "Güvenlik",
-      "guides": "Rehberler"
-    }
+  "2048.tryAgain": {
+    "other": "Tekrar Dene"
   },
-  "now": {
-    "title": "Şimdi",
-    "description": "Şu anda ne yapıyorum, ne düşünüyorum ve neye odaklanıyorum.",
-    "lastUpdated": "Son güncelleme",
-    "whatIsNow": "/now sayfası nedir?",
-    "whatIsNowDescription": "Bir /now sayfası, kişisel bir web sitesinde, kişinin şu anda, bugün veya çok yakın zamanda neye odaklandığını anlatan bir sayfadır. Daha fazlasını şuradan öğrenebilirsiniz:",
-    "categories": {
-      "reading": "Okuyorum",
-      "coding": "Kodluyorum",
-      "drinking": "İçiyorum",
-      "listening": "Dinliyorum",
-      "premid": "Discordetkinliği",
-      "thinking": "Düşünüyorum",
-      "studying": "Çalışıyorum",
-      "planning": "Planlıyorum"
-    }
+  "2048.youWin": {
+    "other": "Kazandınız!"
   },
-  "uses": {
-    "title": "Kullandıklarım",
-    "description": "Günlük olarak kullandığım her şey. Ayrıca şurada da mevcut:",
-    "websiteDescription": "insanların kullandıkları şeyleri paylaştığı bir web sitesi.",
-    "categories": {
-      "hardware": "Donanım",
-      "mobile": "Mobil",
-      "audio": "Ses",
-      "os": "İşletim Sistemi & Tarayıcılar",
-      "development": "Geliştirme",
-      "email": "E-posta & Üretkenlik",
-      "privacy": "Gizlilik & Güvenlik",
-      "mobile_tools": "Mobil Cihaz Araçları",
-      "mapping": "Haritalama",
-      "gaming": "Oyun",
-      "multimedia": "Multimedya",
-      "design": "Tasarım & İllüstrasyon",
-      "photo": "Fotoğraf Düzenleme",
-      "video": "Video & Ses",
-      "media": "Medya Hizmetleri"
-    },
-    "subsections": {
-      "design": "Tasarım & İllüstrasyon",
-      "photo": "Fotoğraf Düzenleme",
-      "video": "Video & Ses",
-      "media": "Medya Hizmetleri"
-    },
-    "hidden": {
-      "clickToReveal": "Ortaya çıkarmak için 5 kez tıkla",
-      "clicksLeft": "(ortaya çıkarmak için {{clicks}} tıklama daha)",
-      "platformPrefix": "Gizli Platform"
-    }
+  "2048.currentScore": {
+    "other": "Mevcut Puan"
   },
-  "contact": {
-    "title": "İletişim",
-    "description": "Bana ulaşmanın ve bağlantı kurmanın yolları.",
-    "message": "çekinme. selam ver. ya da profesyonel hissediyorsan 1:1 görüşme ayarla :)",
-    "disclaimer": "e-postalara cevap veriyorum. muhtemelen. bir kuş dikkatimi dağıtmazsa falan idk",
-    "sections": {
-      "contactMe": "Bana ulaş",
-      "socialMedia": "Sosyal medyada ben",
-      "otherPlatforms": "Diğer platformlarda ben"
-    },
-    "sectionTitles": {
-      "contactMe": "Bana ulaş",
-      "socialMedia": "Sosyal medyada ben",
-      "otherPlatforms": "Diğer platformlarda ben",
-      "keys": "Açık anahtarlar"
-    },
-    "links": {
-      "universityEmail": "Üniversite E-postası",
-      "bookMeeting": "Benimle bir toplantı ayarla",
-      "messengerNote": "Facebook ve Messenger'da çok aktif değilim. Cevaplar elimden geldiğince olacak.",
-      "pgpKey": "PGP açık anahtar",
-      "sshKey": "SSH açık anahtar"
-    }
+  "2048.keepPlaying": {
+    "other": "Oynamaya Devam Et"
   },
-  "moodCat": {
-    "title": "Günün Mod Kedisi",
-    "hover": "seni usulca yargılıyor",
-    "refresh": "Yeni kedi, kimmiş o?",
-    "seeMore": "Daha fazla kedi gör"
+  "2048.newGame": {
+    "other": "Yeni Oyun"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "Düşen bloklar ve kaybolan çizgilerle klasik bir oyun",
-    "gameInfo": "Oyun Bilgisi",
-    "score": "Puan",
-    "level": "Seviye",
-    "status": "Durum",
-    "next": "Sonraki",
-    "gameOver": "Oyun Bitti",
-    "paused": "Duraklatıldı",
-    "playing": "Oynanıyor",
-    "ready": "Hazır",
-    "playAgain": "Tekrar Oyna",
-    "pause": "Duraklat",
-    "resume": "Devam Et",
-    "start": "Başla",
-    "reset": "Sıfırla",
-    "controls": "Kontroller",
-    "moveLeft": "Sola Git",
-    "moveRight": "Sağa Git",
-    "moveDown": "Aşağı Git",
-    "rotate": "Döndür",
-    "hardDrop": "Hızlı Düşür",
-    "pauseGame": "Oyunu Duraklat",
-    "musicOn": "Müzik Açık",
-    "musicOff": "Müzik Kapalı",
-    "nowPlaying": "Şimdi çalıyor",
-    "spacebar": "Boşluk"
+  "2048.howToPlay": {
+    "other": "Nasıl Oynanır"
   },
-  "scrapbook": {
-    "title": "Geliştirme Günlüğü",
-    "description": "Bu siteyi yaparkenki bazı geliştirme günlüklerim.",
-    "noEntries": "Henüz giriş yok."
+  "2048.instructions1": {
+    "other": "Karoları hareket ettirmek için ok tuşlarını veya WASD'yi kullanın. Aynı sayıya sahip iki karo birbirine dokunduğunda, birleşerek tek bir karo oluşturur!"
   },
-  "settings": {
-    "title": "Ayarlar",
-    "theme": "Tema",
-    "themeAuto": "Otomatik",
-    "themeLight": "Açık tema",
-    "themeDark": "Koyu tema",
-    "stars": "Kırpışan yıldızlar",
-    "reduceMotion": "Hareketi azalt",
-    "highContrast": "Yüksek kontrast",
-    "dyslexiaFont": "Disleksi yazı tipi",
-    "timezone": "Saat dilimi",
-    "tzYours": "Senin",
-    "tzAuthor": "Jarema'nın",
-    "music": "Müzik",
-    "musicUnavailable": "Şu anda kullanılamıyor"
+  "2048.instructions2": {
+    "other": "Her hareketten sonra yeni bir karo belirir (2 veya 4)."
   },
-  "webrings": {
-    "title": "Web çemberleri",
-    "description": "Parçası olduğum web çemberleri. Daha fazla bağımsız web sitesi ve kişisel blog keşfedin.",
-    "intro1": "Web çemberi, genellikle bir konu, estetik veya ortak ilgi alanı etrafında toplanan, kafa dengi insanlar tarafından oluşturulmuş web siteleri koleksiyonudur. (safonts web çemberinden)",
-    "intro2": "Bu web sitesi bu çemberlerin bir parçasıdır. Komşularımın ve (eğer rastgele fonksiyonu varsa) diğer üyelerin sitelerini ziyaret etmek için linklere tıklayın. İstediğiniz çemberi seçin!",
-    "previous": "Önceki",
-    "random": "Rastgele",
-    "next": "Sonraki",
-    "previousAria": "{{name}} içindeki önceki site",
-    "randomAria": "{{name}} içindeki rastgele site",
-    "nextAria": "{{name}} içindeki sonraki site",
-    "pending": {
-      "title": "Onay bekliyor",
-      "description": "Katılmak için başvurduğum ve onay beklediğim web çemberleri.",
-      "badge": "Beklemede"
-    }
+  "2048.instructions3": {
+    "other": "2048 sayısına sahip bir karo oluşturarak oyunu kazanın!"
   },
-  "badges": {
-    "title": "Web rozetleri koleksiyonu",
-    "description": "Web sitemde kullanılan klasik web rozetleri ve butonlarından oluşan bir koleksiyon.",
-    "pageTitle": "Klasik web rozetleri koleksiyonu",
-    "pageDescription": "Benim ve bu sitenin aslında neye önem verdiğini göstermek için bu 88x31 rozetleri topladım. Bunlar, internetin kurumsal zırvalar ve yapay zeka çöplüğüyle daha az dolu olduğu Geocities dönemine bir geri dönüş. Eklememi istediğin bir rozet varsa, bana sorman yeterli.",
-    "myBadgeTitle": "Benim rozetim (genişletmek için tıkla)",
-    "myBadgeIntro": "Web siteme link vermek için bu rozeti kullan:",
-    "hotlinkUrl": "Hotlink URL:",
-    "htmlCodeTitle": "HTML kodu",
-    "embeddingSuggestionsTitle": "Gömme önerileri",
-    "suggestion1": "Piksel sanatı stilini korumak için CSS'inde",
-    "suggestion1b": "kullan.",
-    "suggestion2": "Doğrudan ana sayfama şu adresten link ver:",
-    "suggestion3": "Rozet 88x31 pikseldir, HTML'inde genişliği ve yüksekliği iki katına çıkararak",
-    "suggestion3b": "yaparsan yüksek çözünürlüklü ekranlarda okunması daha kolay olur.",
-    "collectionHeading": "Rozet koleksiyonu",
-    "search": "Rozet ara...",
-    "filterByCategory": "Kategoriye göre filtrele",
-    "verboseView": "Ayrıntılı",
-    "badgeOnlyView": "Sadece rozet",
-    "showingCount": "{{count}} rozet gösteriliyor",
-    "showingFiltered": "{{total}} rozetten {{filtered}} tanesi gösteriliyor",
-    "noResults": "Arama kriterlerinle eşleşen rozet bulunamadı",
-    "categories": {
-      "all": "Tümü",
-      "personal": "Kişisel",
-      "friends": "Arkadaşlar",
-      "other-sites": "Diğer siteler",
-      "software": "Yazılım",
-      "web": "Web",
-      "fun": "Eğlence"
-    }
+  "2048.controls": {
+    "other": "Kontroller"
   },
-  "brand": {
-    "pageTitle": "Marka",
-    "pageDescription": "Görsel kimlik ve marka unsurları. Bu siteye atıfta bulunmak veya bağlantı vermek isterseniz bunları kullanın.",
-    "name": {
-      "title": "İsim",
-      "nameLabel": "İsim",
-      "displayNameLabel": "Görünen İsim",
-      "symbolNote": "'Bu nedenle' sembolü (∴) her zaman görünen ismimin bir parçasıdır. Sonuçları, mantıksal çıkarımları, bağlantıları ve bir düşünce sürecinin sonunu temsil eder; dolaysızdır ve kararlı bir şekildir."
-    },
-    "logo": {
-      "title": "Logo",
-      "faceOnly": "Sadece yüz",
-      "faceAndBody": "Yüz ve gövde",
-      "dimensions1": "384×384px (veya katları)",
-      "dimensions2": "512×512px (veya katları)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "Rozet",
-      "urlLabel": "Doğrudan URL",
-      "htmlLabel": "HTML kodu"
-    },
-    "colors": {
-      "title": "Renkler",
-      "names": {
-        "primary": "Birincil",
-        "background": "Arkaplan",
-        "card": "Kart",
-        "foreground": "Önplan",
-        "muted": "Sönük",
-        "border": "Kenarlık"
-      },
-      "descriptions": {
-        "primary": "Ana vurgu rengi",
-        "background": "Sayfa arkaplanı",
-        "card": "Kart arkaplanı",
-        "foreground": "Ana metin rengi",
-        "muted": "İkincil öğeler",
-        "border": "Kenarlıklar ve ayırıcılar"
-      },
-      "darkMode": "Karanlık mod",
-      "lightMode": "Aydınlık mod"
-    },
-    "fonts": {
-      "title": "Yazı Tipleri",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "Başlıklar",
-        "body": "Gövde metni ve arayüz",
-        "notoSansSC": "Çince metin",
-        "monaspice": "Kod ve sabit genişlikli metin",
-        "hanNomGothic": "Vietnamca Chữ Nôm"
-      },
-      "weight": "Kalınlık:",
-      "viewOnGoogleFonts": "Yazı tipi deposunda görüntüle",
-      "languages": {
-        "english": "İngilizce",
-        "vietnamese": "Vietnamca",
-        "polish": "Lehçe",
-        "russian": "Rusça",
-        "japanese": "Japonca",
-        "hebrew": "İbranice",
-        "thai": "Tay",
-        "symbols": "Semboller",
-        "chineseSimplified": "Çince (Basitleştirilmiş)",
-        "chineseTraditional": "Çince (Geleneksel)",
-        "vietnameseHanNom": "Vietnamca (Chữ Nôm)"
-      }
-    },
-    "usage": {
-      "title": "Birkaç not",
-      "point1Title": "Rahatça kullanın",
-      "point1Text": "Rozeti veya logoyu kullanmak ya da bu siteye link vermek için izin istemenize gerek yok. Alın, hotlink yapın, sitenize yapıştırın. Umurumda değil. Aslında, memnun bile olurum.",
-      "point2Title": "Rozetin piksel stilini koruyun",
-      "point2Text": "Rozeti (badge) kullanıyorsanız, lütfen CSS'inizde 'image-rendering: pixelated' (veya Firefox için 'crisp-edges') kullanın. Bu olmazsa tarayıcılar pikselleri bulanıklaştırır ve çöp gibi görünür. Bu bir piksel sanatı, lütfen ona piksel sanatı muamelesi yapın.",
-      "point3Title": "Atıfta bulunmak güzel ama isteğe bağlı",
-      "point3Text": "Site hakkında yazıyorsanız veya bunları bir blog yazısında kullanıyorsanız, bir geri bağlantı (link) makbule geçer. Ancak rozetimi sadece linkler sayfanıza ekliyorsanız, fazladan bir şey yapmanıza gerek yok. Rozet için verdiğim HTML kodu zaten buraya link veriyor.",
-      "point4Title": "Saçmalamayın",
-      "point4Text": "Bunları beni taklit etmek, desteklemediğim bir şeyi destekliyormuşum gibi göstermek veya tekinsiz bir şeyle ilişkilendirmek için kullanmayın. Sevdiğiniz bir siteye link vermekle başkası gibi davranmak arasındaki farkı bildiğinize inanıyorum. Yaptığınız şeyin garip olup olmadığından emin değilseniz, muhtemelen gariptir.",
-      "footer": "Bu kadar, sadece saygılı kullanın yeter."
-    }
+  "2048.moveLeft": {
+    "other": "Sola Hareket"
   },
-  "colophon": {
-    "title": "Künye",
-    "description": "Bu web sitesinin arkasındaki hikaye ve nasıl oluşturulduğu",
-    "siteHistory": {
-      "title": "Site Geçmişi",
-      "content1": "Bu site 2023'ün sonlarında kaydedildi, ancak tasarımı ömrü boyunca çok değişti. İlk sürüm, şüpheli bir ücretsiz barındırma sağlayıcısında barındırılan temel bir WordPress sitesiydi, ikincisi Carrd tabanlıydı ve üçüncüsü Astro ile oluşturulmuştu. Bu mevcut iterasyon (dördüncü sürüm), modern web teknolojileriyle sıfırdan oluşturulmuş eksiksiz bir yeniden tasarımdır.",
-      "content2": "Her sürüm bir evrim olmuştur; bu en sonuncusu performans, erişilebilirlik ve kim olduğumu ve neye önem verdiğimi daha iyi temsil eden daha kişisel bir dokunuşa odaklanmaktadır."
-    },
-    "technologyStack": {
-      "title": "Teknoloji Yığını",
-      "nextjs": "Sunucu taraflı işleme ve statik site oluşturmayı sağlayan React framework'ü",
-      "react": "Kullanıcı arayüzleri oluşturmak için JavaScript kütüphanesi",
-      "tailwind": "Yardımcı program öncelikli CSS framework'ü",
-      "shadcn": "Radix UI ve Tailwind ile oluşturulmuş yeniden kullanılabilir bileşen kütüphanesi",
-      "framer": "React için animasyon kütüphanesi",
-      "i18next": "Uluslararasılaştırma framework'ü",
-      "typescript": "JavaScript üzerine kurulu, güçlü tipli programlama dili"
-    },
-    "hosting": {
-      "title": "Barındırma & Dağıtım",
-      "content1": "Site şurada barındırılıyor:",
-      "content2": "GitHub'dan sorunsuz dağıtım, otomatik HTTPS ve küresel CDN dağıtımı sağlayan.",
-      "content3": "Alan adı şunun aracılığıyla yönetiliyor:",
-      "content4": "ek güvenlik ve performans avantajları sağlayan."
-    },
-    "design": {
-      "title": "Tasarım felsefesi",
-      "p1": "Bu web sitesi erişilebilirlik ve performans göz önünde bulundurularak tasarlanmıştır. JavaScript etkinleştirilmeden çalışır, semantik HTML kullanır ve herhangi bir izleme çerezi kullanmayarak gizliliğinize saygı duyar.",
-      "p2": "Tasarım, modern estetik ile klasik web sadeliği arasında bir dengeyi hedefler. Karanlık mod varsayılandır, çünkü retinamı seviyorum."
-    },
-    "webStandards": {
-      "title": "Web standartları",
-      "intro": "Bu site şunları uygular:",
-      "microformats": "mikroformatlar",
-      "feeds": "RSS, Atom ve JSON beslemeleri",
-      "robots": "robots.txt ve sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "Erişilebilirlik",
-      "intro": "Bu siteyi herkes için erişilebilir kılmaya çalışıyorum. Özellikler şunları içerir:",
-      "item1": "Semantik HTML yapısı",
-      "item2": "İçeriğe atla bağlantıları",
-      "item3": "Doğru başlık hiyerarşisi",
-      "item4": "WCAG 2.1 AA renk kontrastı",
-      "item5": "Klavye ile gezilebilir",
-      "item6": "Azaltılmış hareket tercihlerine saygı",
-      "reportText": "Herhangi bir erişilebilirlik sorunuyla karşılaşırsanız, lütfen",
-      "contactLink": "bana bildirin"
-    },
-    "inspiration": {
-      "title": "İlham Kaynağı",
-      "content1": "Bu sayfa şuradan ilham alıyor:",
-      "content2": "o da şuradan ilham alıyor:",
-      "content3": "Orijinal fikir şurada:",
-      "maggie": "Maggie Appleton'ın kolofonu",
-      "gwern": "Gwern Branwen'in kolofonu"
-    }
+  "2048.moveRight": {
+    "other": "Sağa Hareket"
   },
-  "footer": {
-    "copyright": "2026, ∴ Jarema, CC BY 4.0",
-    "madeWith": "sevgiyle yapıldı",
-    "andChaos": "ve birkaç günlük kodlamayla",
-    "uptime": "Çalışma süresi",
-    "siteStatus": "Site durumu"
+  "2048.moveUp": {
+    "other": "Yukarı Hareket"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Klavye kısayolları",
-    "navigation": "Gezinme",
-    "actions": "Eylemler",
-    "close": "Kapat",
-    "home": "Anasayfa",
-    "about": "Hakkımda",
-    "blog": "Blog",
-    "projects": "Projeler",
-    "now": "Şu an",
-    "uses": "Kullandıklarım",
-    "contact": "İletişim",
-    "colophon": "Künye",
-    "slashes": "Site haritası",
-    "scrapbook": "Geliştirici günlüğü",
-    "tetris": "Tetris",
-    "cycleLanguage": "Dilleri döngüyle değiştir",
-    "cycleTheme": "Temaları sırayla değiştir",
-    "refreshCat": "Mod kedisini yenile",
-    "openShortcuts": "Klavye kısayollarını aç",
-    "actionSearch": "Eylem Aramasını Aç",
-    "webring": "Web halkaları"
+  "2048.moveDown": {
+    "other": "Aşağı Hareket"
   },
-  "actionSearch": {
-    "2048": "2048 oyna",
-    "title": "Eylemleri ara",
-    "placeholder": "Eylem ara...",
-    "noResults": "Hiçbir eylem bulunamadı",
-    "goTo": "Sayfaya git",
-    "toggleTheme": "Temayı değiştir",
-    "switchDarkMode": "Koyu moda geç",
-    "switchLightMode": "Açık moda geç",
-    "appearance": "Görünüm",
-    "cycleLanguage": "Dilleri sırayla değiştir",
-    "refreshCat": "Yeni ruh hali kedisi getir",
-    "playGame": "Oyun oyna",
-    "viewShortcuts": "Tüm kısayolları görüntüle",
-    "pressToOpen": ". tuşuna basarak komut paletini aç",
-    "escToClose": "ESC ile kapat",
-    "fun": "Eğlence",
-    "games": "Oyunlar",
-    "tetris": "Tetris oyna",
-    "help": "Yardım",
-    "projects": {
-      "category": "Projeler arasında gezin",
-      "closeCard": "Kartı kapat",
-      "left": "Sola git",
-      "right": "Sağa git",
-      "up": "Yukarı git",
-      "down": "Aşağı git",
-      "flipCard": "Projeyi çevir: {{title}}"
-    },
-    "blog": {
-      "category": "Blog gönderilerinde gezin",
-      "next": "Sonraki gönderi",
-      "prev": "Önceki gönderi",
-      "search": "Blog gönderilerini ara",
-      "filterTag": "Gönderileri filtrele",
-      "jumpToPost": "{{i}} numaralı gönderiye git",
-      "back": "Blog listesine geri dön"
-    },
-    "about": {
-      "category": "Hakkımda bölümlerinde gezin",
-      "jumpToChapter": "{{i}}. bölüme git"
-    },
-    "uses": {
-      "category": "Kullanım bölümlerinde gezin",
-      "jumpToCategory": "{{category}} kategorisine git"
-    },
-    "now": {
-      "category": "Şu an bölümlerinde gezin",
-      "jumpToCategory": "{{category}} kategorisine git"
-    },
-    "colophon": {
-      "category": "Künye bölümlerinde gezin",
-      "jumpToSection": "{{section}} bölümüne git"
-    },
-    "tools": "Araçlar"
+  "2048.touchInstructions": {
+    "other": "Mobil cihazlarda, karolar�� hareket ettirmek için kaydırın veya ekrandaki kontrolleri kullanın."
   },
-  "textCounter": {
-    "title": "Metin sayacı",
-    "description": "Karakterleri, kelimeleri, cümleleri, paragrafları sayın ve konuşma/okuma süresini hesaplayın.",
-    "placeholder": "Yazmaya başlayın veya metninizi buraya yapıştırın...",
-    "clear": "Temizle",
-    "stats": {
-      "characters": "Karakterler",
-      "charactersNoSpaces": "Karakterler (boşluksuz)",
-      "words": "Kelimeler",
-      "sentences": "Cümleler",
-      "paragraphs": "Paragraflar",
-      "lines": "Satırlar",
-      "readingTime": "Okuma süresi",
-      "speakingTime": "Konuşma süresi"
-    },
-    "textLanguage": "Metin dili",
-    "languages": {
-      "en": "İngilizce",
-      "vi": "Vietnamca",
-      "et": "Estonca",
-      "zh": "Çince",
-      "ru": "Rusça",
-      "custom": "Diğer / özel",
-      "advanced": "Gelişmiş ayarlar"
-    },
-    "speed": {
-      "label": "Hız",
-      "slow": "Yavaş",
-      "average": "Orta",
-      "fast": "Hızlı",
-      "custom": "Özel",
-      "readingWpm": "Okuma (Kelime/Dakika)",
-      "speakingWpm": "Konuşma (Kelime/Dakika)",
-      "englishDefaultsWarning": "Süre hesaplayıcıları şu anda İngilizce varsayılan hızları kullanıyor. Tam değerleri girmek için \"Özel\" seçeneğine geçin."
-    },
-    "advanced": {
-      "title": "Gelişmiş ayarlar",
-      "disableWords": "Kelime sayımını devre dışı bırak",
-      "disableWordsDesc": "Logografik ve Brahmik diller için boşluklar kelimeleri ayırmaz.",
-      "newlineAsParagraph": "Her satırı bir paragraf olarak kabul et",
-      "newlineAsParagraphDesc": "Boş satırlar gerektirmek yerine tek satır sonlarını paragraf sonu olarak sayın. Satır sayacı gizlenecektir."
-    },
-    "privacy": {
-      "summary": "Gizlilik bilgileri",
-      "body": "Bu araç tamamen tarayıcınızda çalışır. İnternet bağlantınızı kesebilirsiniz ve yine de çalışmaya devam eder, metniniz asla hiçbir yere gönderilmez.",
-      "technicalLabel": "Teknik doğrulama yöntemi:",
-      "technical": "Doğrulamak için tarayıcı DevTools'u (F12) → Ağ (Network) sekmesini açın, ardından metin alanına bir şeyler yazın ve sayfa yüklenmesi bittikten sonra hiçbir istek yapılmadığını onaylayın."
-    }
+  "2048.undo": {
+    "other": "Geri Al"
   },
-  "tools": {
-    "title": "Araçlar",
-    "description": "Bazı kullanışlı araçlar. İhtiyaçlarıma tam olarak uyan hiçbir şey bulamadığım için.",
-    "items": {
-      "counter": {
-        "title": "Metin sayacı",
-        "icon": "🔤",
-        "description": "Karakterleri, kelimeleri, cümleleri, paragrafları sayın ve okuma/konuşma süresini tahmin edin."
-      }
-    }
+  "2048.title": {
+    "other": "2048"
   },
-  "slashes": {
-    "title": "Slashler",
-    "description": "Bu sitedeki tüm ana sayfaların bir listesi."
+  "2048.instructions4": {
+    "other": "2048'e ulaştıktan sonra daha da yüksek puanlar elde etmek için oynamaya devam edebilirsiniz!"
+  },
+  "nav.home": {
+    "other": "Ana sayfa"
+  },
+  "nav.about": {
+    "other": "Hakkında"
+  },
+  "nav.projects": {
+    "other": "Projeler"
+  },
+  "nav.blog": {
+    "other": "Blog"
+  },
+  "nav.now": {
+    "other": "Şimdi"
+  },
+  "nav.uses": {
+    "other": "Kullandıklarım"
+  },
+  "nav.contact": {
+    "other": "İletişim"
+  },
+  "nav.guestbook": {
+    "other": "Ziyaretçi defteri"
+  },
+  "nav.colophon": {
+    "other": "Künye"
+  },
+  "nav.webring": {
+    "other": "Web halkası"
+  },
+  "nav.scrapbook": {
+    "other": "Karalama defteri"
+  },
+  "nav.slashes": {
+    "other": "Site haritası"
+  },
+  "nav.brand": {
+    "other": "Marka kiti"
+  },
+  "nav.badges": {
+    "other": "Rozetler"
+  },
+  "nav.tools": {
+    "other": "Araçlar"
+  },
+  "languageNotice.message": {
+    "other": "Bu dil için çeviriler hala yapım aşamasındadır. Bazı içerikler eksik veya tamamlanmamış olabilir."
+  },
+  "languageNotice.dismiss": {
+    "other": "Kapat"
+  },
+  "language.main": {
+    "other": "Ana diller"
+  },
+  "language.beta": {
+    "other": "Beta diller"
+  },
+  "language.other": {
+    "other": "Diğer diller"
+  },
+  "language.auto": {
+    "other": "Otomatik (tarayıcı dili)"
+  },
+  "language.search": {
+    "other": "Dilleri ara..."
+  },
+  "language.en": {
+    "other": "İngilizce"
+  },
+  "language.vi": {
+    "other": "Vietnamca"
+  },
+  "language.et": {
+    "other": "Estonca"
+  },
+  "language.ru": {
+    "other": "Rusça"
+  },
+  "language.da": {
+    "other": "Danca"
+  },
+  "language.tr": {
+    "other": "Türkçe"
+  },
+  "language.zh": {
+    "other": "Çince"
+  },
+  "language.pl": {
+    "other": "Lehçe"
+  },
+  "language.sv": {
+    "other": "İsveççe"
+  },
+  "language.fi": {
+    "other": "Fince"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "Günaydın gezgin."
+  },
+  "greetings.afternoon": {
+    "other": "Tünaydın yolcu."
+  },
+  "greetings.evening": {
+    "other": "İyi akşamlar kaşif."
+  },
+  "greetings.night": {
+    "other": "Hala uyanık mısın? Ben de."
+  },
+  "home.buttons.about": {
+    "other": "Hakkımda"
+  },
+  "home.buttons.projects": {
+    "other": "Projelerimi Gör"
+  },
+  "home.footer": {
+    "other": "Dijital bahçeme hoş geldin. Keşfetmekten çekinme."
+  },
+  "home.heading": {
+    "other": "selam, ben Jarema"
+  },
+  "home.subheading": {
+    "other": "Ekonomiyi okurum, kod bazen yazarım, kedilerle hep oynarım."
+  },
+  "home.contactButton": {
+    "other": "Bana ulaş"
+  },
+  "home.aboutButton": {
+    "other": "Hakkımda"
+  },
+  "home.blogButton": {
+    "other": "Blogumu oku"
+  },
+  "home.guestbookButton": {
+    "other": "Ziyaretçi defterime yaz"
+  },
+  "home.recentPosts": {
+    "other": "Son blog yazıları"
+  },
+  "home.latestNow": {
+    "other": "Şu anda ne yapıyorum"
+  },
+  "home.currentMood": {
+    "other": "Şu anki ruh halim"
+  },
+  "home.currentStatus": {
+    "other": "Şu anki durumum"
+  },
+  "home.time": {
+    "other": "Şu anki zaman"
+  },
+  "home.yourTime": {
+    "other": "Senin zamanın"
+  },
+  "home.myTime": {
+    "other": "Benim zamanım"
+  },
+  "home.viewAllWebrings": {
+    "other": "Tüm web çemberlerini gör"
+  },
+  "home.checkOutSites": {
+    "other": "Bu sitelere göz at!"
+  },
+  "home.androidCountdown": {
+    "other": "Android X gün içinde kapalı bir işletim sistemi haline gelecek"
+  },
+  "guestbook.title": {
+    "other": "Ziyaretçi defteri"
+  },
+  "guestbook.description": {
+    "other": "Ziyaretçi defterime bir mesaj bırak!"
+  },
+  "guestbook.poweredBy": {
+    "other": "Altyapı"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "Hakkımda"
+  },
+  "about.description": {
+    "other": "Ben kimim, nereden geliyorum, tutkum ne ve ne için çalışıyorum hikayesi."
+  },
+  "about.chapters.6.title": {
+    "other": "henüz bitirmedim"
+  },
+  "about.chapters.6.content1": {
+    "other": "işte okumamaları gereken kısım."
+  },
+  "about.chapters.6.content2": {
+    "other": "hala kızgınım. var olmasına asla izin verilmeyen bir versiyonumun yasını hala tutuyorum. hala bazı günler neden her şeyin birkaç derece yanlış hissettirdiğini merak ederek uyanıyorum. bazen kaçıp gitmeyi, sadece ortadan kaybolmayı düşünüyorum, yeni isim, yeni şehir, yeni dil. bazen neredeyse yapıyorum."
+  },
+  "about.chapters.6.content3": {
+    "other": "insan bile hissetmediğim günler var. daha çok katılaşmaya çalışan bir anı gibi. daha çok artık ulaşamadığım daha yumuşak bir şeyin yankısı gibi. diğer günler, elektriğim. her ayrıntıyı hissediyorum, tenimde güneş ışığı, sessiz çalma listeleri, insanların nihayet kendileri olabilecek kadar güvende olduklarında yüzlerinin değişme şekli. bir şekilde beni hayatta tutuyor."
+  },
+  "about.chapters.6.content4": {
+    "other": "olmam gereken kişi her kimse, o kişi olmayı henüz bitirmedim. ama sessiz kalmaktan memnunmuş gibi davranmayı bıraktım."
+  },
+  "projects.title": {
+    "other": "Projelerim"
+  },
+  "projects.description": {
+    "other": "Üzerinde çalıştığım kişisel, akademik ve aktivizm projelerinin bir derlemesi. Bazıları bitti, bazıları hala pişiyor."
+  },
+  "projects.status.completed": {
+    "other": "Tamamlandı"
+  },
+  "projects.status.inProgress": {
+    "other": "Hala Pişiyor"
+  },
+  "projects.status.planned": {
+    "other": "Planlandı"
+  },
+  "projects.statusLabels.completed": {
+    "other": "Tamamlandı"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "Devam Ediyor"
+  },
+  "projects.statusLabels.planned": {
+    "other": "Planlandı"
+  },
+  "projects.categories.personal": {
+    "other": "Kişisel"
+  },
+  "projects.categories.academic": {
+    "other": "Akademik"
+  },
+  "projects.categories.activism": {
+    "other": "Aktivizm"
+  },
+  "projects.details.what": {
+    "other": "Ne olduğu"
+  },
+  "projects.details.learned": {
+    "other": "Ne öğrendim"
+  },
+  "projects.details.why": {
+    "other": "Neden önemli"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "Detaylar için tıkla"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "Kapatmak için tıkla"
+  },
+  "projects.buttons.showRandom": {
+    "other": "Daha fazla rastgelelik göster"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "Kaosu gizle"
+  },
+  "projects.filters.all": {
+    "other": "Tümü"
+  },
+  "projects.clickToFlip": {
+    "other": "Çevirmek için tıkla"
+  },
+  "projects.what": {
+    "other": "Bu nedir?"
+  },
+  "projects.learned": {
+    "other": "Ne öğrendim"
+  },
+  "projects.why": {
+    "other": "Bunu neden yaptım?"
+  },
+  "blog.title": {
+    "other": "Blog"
+  },
+  "blog.description": {
+    "other": "Düşünceler, yansımalar ve ara sıra atıp tutmalar. Çeşitli saatlerde ve ruh hallerinde yazılmıştır."
+  },
+  "blog.language": {
+    "other": "Dil"
+  },
+  "blog.languageFilter": {
+    "other": "Dile göre filtrele"
+  },
+  "blog.tag": {
+    "other": "Etiket"
+  },
+  "blog.sort": {
+    "other": "Gönderileri sırala"
+  },
+  "blog.category": {
+    "other": "Kategori"
+  },
+  "blog.noPosts": {
+    "other": "Henüz hiç gönderi yok. Yakında tekrar kontrol et!"
+  },
+  "blog.search": {
+    "other": "Gönderilerde ara..."
+  },
+  "blog.sortNew": {
+    "other": "En yeniler önce"
+  },
+  "blog.sortOld": {
+    "other": "En eskiler önce"
+  },
+  "blog.sortReadTime": {
+    "other": "Okuma süresi"
+  },
+  "blog.sortABC": {
+    "other": "Alfabetik"
+  },
+  "blog.filter": {
+    "other": "Filtrele"
+  },
+  "blog.filterDescription": {
+    "other": "Blog gönderilerini filtrele"
+  },
+  "blog.activeFilter": {
+    "other": "Etkin filtreler:"
+  },
+  "blog.filterNoMatch": {
+    "other": "Filtrelerine uyan gönderi bulunamadı. Arama kriterlerini değiştirmeyi deneyebilirsin."
+  },
+  "blog.clearFilter": {
+    "other": "Tüm filtreleri temizle"
+  },
+  "blog.mood": {
+    "other": "Ruh hali"
+  },
+  "blog.cat": {
+    "other": "Kedi mührünü bastı"
+  },
+  "blog.prev": {
+    "other": "Önceki gönderi"
+  },
+  "blog.next": {
+    "other": "Sonraki gönderi"
+  },
+  "blog.jumpToPost": {
+    "other": "Gönderiye git"
+  },
+  "blog.back": {
+    "other": "Blog listesine geri dön"
+  },
+  "blog.showingPosts": {
+    "other": "{{total}} gönderiden {{current}} tanesi gösteriliyor"
+  },
+  "blog.minRead": {
+    "other": "dakikalık okuma"
+  },
+  "blog.rss": {
+    "other": "RSS beslemesi"
+  },
+  "blog.subscribeRSS": {
+    "other": "RSS ile abone ol"
+  },
+  "blog.allPosts": {
+    "other": "Tüm yazıların beslemesi"
+  },
+  "blog.languageFeeds": {
+    "other": "Dile özel beslemeler"
+  },
+  "blog.rssDescription": {
+    "other": "Yeni yazılardan haberdar olmak için favori RSS okuyucunuzdan RSS beslemelerime abone olun."
+  },
+  "blog.atom": {
+    "other": "Atom beslemesi"
+  },
+  "blog.subscribeAtom": {
+    "other": "Atom ile abone ol"
+  },
+  "blog.atomDescription": {
+    "other": "Yeni yazılardan haberdar olmak için favori Atom okuyucunuzdan Atom beslemelerime abone olun."
+  },
+  "blog.availableIn": {
+    "other": "Bu sayfa şu dillerde de mevcut:"
+  },
+  "blog.comments": {
+    "other": "Yorumlar"
+  },
+  "blog.webmentions": {
+    "other": "Web Bahsetmeleri"
+  },
+  "blog.webmentionsNone": {
+    "other": "Henüz web bahsetmesi yok. İlk yanıtlayan siz olun!"
+  },
+  "blog.webmentionLike": {
+    "other": "bunu beğendi"
+  },
+  "blog.webmentionRepost": {
+    "other": "bunu paylaştı"
+  },
+  "blog.webmentionReply": {
+    "other": "yanıtladı"
+  },
+  "blog.webmentionMention": {
+    "other": "bundan bahsetti"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "ilk yazı"
+  },
+  "blog.tagLabels.identity": {
+    "other": "kimlik"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "aidiyet"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "iç gözlem"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "tarayıcılar"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "açık web"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "varsayılan uygulamalar"
+  },
+  "blog.tagLabels.software": {
+    "other": "yazılım"
+  },
+  "blog.tagLabels.tools": {
+    "other": "araçlar"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "yeni yıl"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "öz-yansıma"
+  },
+  "blog.tagLabels.health": {
+    "other": "sağlık"
+  },
+  "blog.tagLabels.tet": {
+    "other": "Tet Bayramı"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "Vietnam"
+  },
+  "blog.tagLabels.military": {
+    "other": "askerlik"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "güvenlik sertleştirme"
+  },
+  "blog.tagLabels.values": {
+    "other": "değerler"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "kişisel felsefe"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "Kişisel"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "Meta"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "Kimlik"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "Teknik"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "Gizlilik"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "Görüşler"
+  },
+  "blog.categoryLabels.life": {
+    "other": "Yaşam"
+  },
+  "blog.categoryLabels.security": {
+    "other": "Güvenlik"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "Rehberler"
+  },
+  "now.title": {
+    "other": "Şimdi"
+  },
+  "now.description": {
+    "other": "Şu anda ne yapıyorum, ne düşünüyorum ve neye odaklanıyorum."
+  },
+  "now.lastUpdated": {
+    "other": "Son güncelleme"
+  },
+  "now.whatIsNow": {
+    "other": "/now sayfası nedir?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "Bir /now sayfası, kişisel bir web sitesinde, kişinin şu anda, bugün veya çok yakın zamanda neye odaklandığını anlatan bir sayfadır. Daha fazlasını şuradan öğrenebilirsiniz:"
+  },
+  "now.categories.reading": {
+    "other": "Okuyorum"
+  },
+  "now.categories.coding": {
+    "other": "Kodluyorum"
+  },
+  "now.categories.drinking": {
+    "other": "İçiyorum"
+  },
+  "now.categories.listening": {
+    "other": "Dinliyorum"
+  },
+  "now.categories.premid": {
+    "other": "Discordetkinliği"
+  },
+  "now.categories.thinking": {
+    "other": "Düşünüyorum"
+  },
+  "now.categories.studying": {
+    "other": "Çalışıyorum"
+  },
+  "now.categories.planning": {
+    "other": "Planlıyorum"
+  },
+  "uses.title": {
+    "other": "Kullandıklarım"
+  },
+  "uses.description": {
+    "other": "Günlük olarak kullandığım her şey. Ayrıca şurada da mevcut:"
+  },
+  "uses.websiteDescription": {
+    "other": "insanların kullandıkları şeyleri paylaştığı bir web sitesi."
+  },
+  "uses.categories.hardware": {
+    "other": "Donanım"
+  },
+  "uses.categories.mobile": {
+    "other": "Mobil"
+  },
+  "uses.categories.audio": {
+    "other": "Ses"
+  },
+  "uses.categories.os": {
+    "other": "İşletim Sistemi & Tarayıcılar"
+  },
+  "uses.categories.development": {
+    "other": "Geliştirme"
+  },
+  "uses.categories.email": {
+    "other": "E-posta & Üretkenlik"
+  },
+  "uses.categories.privacy": {
+    "other": "Gizlilik & Güvenlik"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Mobil Cihaz Araçları"
+  },
+  "uses.categories.mapping": {
+    "other": "Haritalama"
+  },
+  "uses.categories.gaming": {
+    "other": "Oyun"
+  },
+  "uses.categories.multimedia": {
+    "other": "Multimedya"
+  },
+  "uses.categories.design": {
+    "other": "Tasarım & İllüstrasyon"
+  },
+  "uses.categories.photo": {
+    "other": "Fotoğraf Düzenleme"
+  },
+  "uses.categories.video": {
+    "other": "Video & Ses"
+  },
+  "uses.categories.media": {
+    "other": "Medya Hizmetleri"
+  },
+  "uses.subsections.design": {
+    "other": "Tasarım & İllüstrasyon"
+  },
+  "uses.subsections.photo": {
+    "other": "Fotoğraf Düzenleme"
+  },
+  "uses.subsections.video": {
+    "other": "Video & Ses"
+  },
+  "uses.subsections.media": {
+    "other": "Medya Hizmetleri"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "Ortaya çıkarmak için 5 kez tıkla"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "(ortaya çıkarmak için {{clicks}} tıklama daha)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "Gizli Platform"
+  },
+  "contact.title": {
+    "other": "İletişim"
+  },
+  "contact.description": {
+    "other": "Bana ulaşmanın ve bağlantı kurmanın yolları."
+  },
+  "contact.message": {
+    "other": "çekinme. selam ver. ya da profesyonel hissediyorsan 1:1 görüşme ayarla :)"
+  },
+  "contact.disclaimer": {
+    "other": "e-postalara cevap veriyorum. muhtemelen. bir kuş dikkatimi dağıtmazsa falan idk"
+  },
+  "contact.sections.contactMe": {
+    "other": "Bana ulaş"
+  },
+  "contact.sections.socialMedia": {
+    "other": "Sosyal medyada ben"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "Diğer platformlarda ben"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "Bana ulaş"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "Sosyal medyada ben"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "Diğer platformlarda ben"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "Açık anahtarlar"
+  },
+  "contact.links.universityEmail": {
+    "other": "Üniversite E-postası"
+  },
+  "contact.links.bookMeeting": {
+    "other": "Benimle bir toplantı ayarla"
+  },
+  "contact.links.messengerNote": {
+    "other": "Facebook ve Messenger'da çok aktif değilim. Cevaplar elimden geldiğince olacak."
+  },
+  "contact.links.pgpKey": {
+    "other": "PGP açık anahtar"
+  },
+  "contact.links.sshKey": {
+    "other": "SSH açık anahtar"
+  },
+  "moodCat.title": {
+    "other": "Günün Mod Kedisi"
+  },
+  "moodCat.hover": {
+    "other": "seni usulca yargılıyor"
+  },
+  "moodCat.refresh": {
+    "other": "Yeni kedi, kimmiş o?"
+  },
+  "moodCat.seeMore": {
+    "other": "Daha fazla kedi gör"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "Düşen bloklar ve kaybolan çizgilerle klasik bir oyun"
+  },
+  "tetris.gameInfo": {
+    "other": "Oyun Bilgisi"
+  },
+  "tetris.score": {
+    "other": "Puan"
+  },
+  "tetris.level": {
+    "other": "Seviye"
+  },
+  "tetris.status": {
+    "other": "Durum"
+  },
+  "tetris.next": {
+    "other": "Sonraki"
+  },
+  "tetris.gameOver": {
+    "other": "Oyun Bitti"
+  },
+  "tetris.paused": {
+    "other": "Duraklatıldı"
+  },
+  "tetris.playing": {
+    "other": "Oynanıyor"
+  },
+  "tetris.ready": {
+    "other": "Hazır"
+  },
+  "tetris.playAgain": {
+    "other": "Tekrar Oyna"
+  },
+  "tetris.pause": {
+    "other": "Duraklat"
+  },
+  "tetris.resume": {
+    "other": "Devam Et"
+  },
+  "tetris.start": {
+    "other": "Başla"
+  },
+  "tetris.reset": {
+    "other": "Sıfırla"
+  },
+  "tetris.controls": {
+    "other": "Kontroller"
+  },
+  "tetris.moveLeft": {
+    "other": "Sola Git"
+  },
+  "tetris.moveRight": {
+    "other": "Sağa Git"
+  },
+  "tetris.moveDown": {
+    "other": "Aşağı Git"
+  },
+  "tetris.rotate": {
+    "other": "Döndür"
+  },
+  "tetris.hardDrop": {
+    "other": "Hızlı Düşür"
+  },
+  "tetris.pauseGame": {
+    "other": "Oyunu Duraklat"
+  },
+  "tetris.musicOn": {
+    "other": "Müzik Açık"
+  },
+  "tetris.musicOff": {
+    "other": "Müzik Kapalı"
+  },
+  "tetris.nowPlaying": {
+    "other": "Şimdi çalıyor"
+  },
+  "tetris.spacebar": {
+    "other": "Boşluk"
+  },
+  "scrapbook.title": {
+    "other": "Geliştirme Günlüğü"
+  },
+  "scrapbook.description": {
+    "other": "Bu siteyi yaparkenki bazı geliştirme günlüklerim."
+  },
+  "scrapbook.noEntries": {
+    "other": "Henüz giriş yok."
+  },
+  "settings.title": {
+    "other": "Ayarlar"
+  },
+  "settings.theme": {
+    "other": "Tema"
+  },
+  "settings.themeAuto": {
+    "other": "Otomatik"
+  },
+  "settings.themeLight": {
+    "other": "Açık tema"
+  },
+  "settings.themeDark": {
+    "other": "Koyu tema"
+  },
+  "settings.stars": {
+    "other": "Kırpışan yıldızlar"
+  },
+  "settings.reduceMotion": {
+    "other": "Hareketi azalt"
+  },
+  "settings.highContrast": {
+    "other": "Yüksek kontrast"
+  },
+  "settings.dyslexiaFont": {
+    "other": "Disleksi yazı tipi"
+  },
+  "settings.timezone": {
+    "other": "Saat dilimi"
+  },
+  "settings.tzYours": {
+    "other": "Senin"
+  },
+  "settings.tzAuthor": {
+    "other": "Jarema'nın"
+  },
+  "settings.music": {
+    "other": "Müzik"
+  },
+  "settings.musicUnavailable": {
+    "other": "Şu anda kullanılamıyor"
+  },
+  "webrings.title": {
+    "other": "Web çemberleri"
+  },
+  "webrings.description": {
+    "other": "Parçası olduğum web çemberleri. Daha fazla bağımsız web sitesi ve kişisel blog keşfedin."
+  },
+  "webrings.intro1": {
+    "other": "Web çemberi, genellikle bir konu, estetik veya ortak ilgi alanı etrafında toplanan, kafa dengi insanlar tarafından oluşturulmuş web siteleri koleksiyonudur. (safonts web çemberinden)"
+  },
+  "webrings.intro2": {
+    "other": "Bu web sitesi bu çemberlerin bir parçasıdır. Komşularımın ve (eğer rastgele fonksiyonu varsa) diğer üyelerin sitelerini ziyaret etmek için linklere tıklayın. İstediğiniz çemberi seçin!"
+  },
+  "webrings.previous": {
+    "other": "Önceki"
+  },
+  "webrings.random": {
+    "other": "Rastgele"
+  },
+  "webrings.next": {
+    "other": "Sonraki"
+  },
+  "webrings.previousAria": {
+    "other": "{{name}} içindeki önceki site"
+  },
+  "webrings.randomAria": {
+    "other": "{{name}} içindeki rastgele site"
+  },
+  "webrings.nextAria": {
+    "other": "{{name}} içindeki sonraki site"
+  },
+  "webrings.pending.title": {
+    "other": "Onay bekliyor"
+  },
+  "webrings.pending.description": {
+    "other": "Katılmak için başvurduğum ve onay beklediğim web çemberleri."
+  },
+  "webrings.pending.badge": {
+    "other": "Beklemede"
+  },
+  "badges.title": {
+    "other": "Web rozetleri koleksiyonu"
+  },
+  "badges.description": {
+    "other": "Web sitemde kullanılan klasik web rozetleri ve butonlarından oluşan bir koleksiyon."
+  },
+  "badges.pageTitle": {
+    "other": "Klasik web rozetleri koleksiyonu"
+  },
+  "badges.pageDescription": {
+    "other": "Benim ve bu sitenin aslında neye önem verdiğini göstermek için bu 88x31 rozetleri topladım. Bunlar, internetin kurumsal zırvalar ve yapay zeka çöplüğüyle daha az dolu olduğu Geocities dönemine bir geri dönüş. Eklememi istediğin bir rozet varsa, bana sorman yeterli."
+  },
+  "badges.myBadgeTitle": {
+    "other": "Benim rozetim (genişletmek için tıkla)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "Web siteme link vermek için bu rozeti kullan:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "Hotlink URL:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "HTML kodu"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "Gömme önerileri"
+  },
+  "badges.suggestion1": {
+    "other": "Piksel sanatı stilini korumak için CSS'inde"
+  },
+  "badges.suggestion1b": {
+    "other": "kullan."
+  },
+  "badges.suggestion2": {
+    "other": "Doğrudan ana sayfama şu adresten link ver:"
+  },
+  "badges.suggestion3": {
+    "other": "Rozet 88x31 pikseldir, HTML'inde genişliği ve yüksekliği iki katına çıkararak"
+  },
+  "badges.suggestion3b": {
+    "other": "yaparsan yüksek çözünürlüklü ekranlarda okunması daha kolay olur."
+  },
+  "badges.collectionHeading": {
+    "other": "Rozet koleksiyonu"
+  },
+  "badges.search": {
+    "other": "Rozet ara..."
+  },
+  "badges.filterByCategory": {
+    "other": "Kategoriye göre filtrele"
+  },
+  "badges.verboseView": {
+    "other": "Ayrıntılı"
+  },
+  "badges.badgeOnlyView": {
+    "other": "Sadece rozet"
+  },
+  "badges.showingCount": {
+    "other": "{{count}} rozet gösteriliyor"
+  },
+  "badges.showingFiltered": {
+    "other": "{{total}} rozetten {{filtered}} tanesi gösteriliyor"
+  },
+  "badges.noResults": {
+    "other": "Arama kriterlerinle eşleşen rozet bulunamadı"
+  },
+  "badges.categories.all": {
+    "other": "Tümü"
+  },
+  "badges.categories.personal": {
+    "other": "Kişisel"
+  },
+  "badges.categories.friends": {
+    "other": "Arkadaşlar"
+  },
+  "badges.categories.other-sites": {
+    "other": "Diğer siteler"
+  },
+  "badges.categories.software": {
+    "other": "Yazılım"
+  },
+  "badges.categories.web": {
+    "other": "Web"
+  },
+  "badges.categories.fun": {
+    "other": "Eğlence"
+  },
+  "brand.pageTitle": {
+    "other": "Marka"
+  },
+  "brand.pageDescription": {
+    "other": "Görsel kimlik ve marka unsurları. Bu siteye atıfta bulunmak veya bağlantı vermek isterseniz bunları kullanın."
+  },
+  "brand.name.title": {
+    "other": "İsim"
+  },
+  "brand.name.nameLabel": {
+    "other": "İsim"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "Görünen İsim"
+  },
+  "brand.name.symbolNote": {
+    "other": "'Bu nedenle' sembolü (∴) her zaman görünen ismimin bir parçasıdır. Sonuçları, mantıksal çıkarımları, bağlantıları ve bir düşünce sürecinin sonunu temsil eder; dolaysızdır ve kararlı bir şekildir."
+  },
+  "brand.logo.title": {
+    "other": "Logo"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Sadece yüz"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Yüz ve gövde"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (veya katları)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (veya katları)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "Rozet"
+  },
+  "brand.badge.urlLabel": {
+    "other": "Doğrudan URL"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "HTML kodu"
+  },
+  "brand.colors.title": {
+    "other": "Renkler"
+  },
+  "brand.colors.names.primary": {
+    "other": "Birincil"
+  },
+  "brand.colors.names.background": {
+    "other": "Arkaplan"
+  },
+  "brand.colors.names.card": {
+    "other": "Kart"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Önplan"
+  },
+  "brand.colors.names.muted": {
+    "other": "Sönük"
+  },
+  "brand.colors.names.border": {
+    "other": "Kenarlık"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Ana vurgu rengi"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Sayfa arkaplanı"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Kart arkaplanı"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Ana metin rengi"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "İkincil öğeler"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Kenarlıklar ve ayırıcılar"
+  },
+  "brand.colors.darkMode": {
+    "other": "Karanlık mod"
+  },
+  "brand.colors.lightMode": {
+    "other": "Aydınlık mod"
+  },
+  "brand.fonts.title": {
+    "other": "Yazı Tipleri"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "Başlıklar"
+  },
+  "brand.fonts.usage.body": {
+    "other": "Gövde metni ve arayüz"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "Çince metin"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "Kod ve sabit genişlikli metin"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "Vietnamca Chữ Nôm"
+  },
+  "brand.fonts.weight": {
+    "other": "Kalınlık:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "Yazı tipi deposunda görüntüle"
+  },
+  "brand.fonts.languages.english": {
+    "other": "İngilizce"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "Vietnamca"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "Lehçe"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "Rusça"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "Japonca"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "İbranice"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "Tay"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "Semboller"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "Çince (Basitleştirilmiş)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "Çince (Geleneksel)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "Vietnamca (Chữ Nôm)"
+  },
+  "brand.usage.title": {
+    "other": "Birkaç not"
+  },
+  "brand.usage.point1Title": {
+    "other": "Rahatça kullanın"
+  },
+  "brand.usage.point1Text": {
+    "other": "Rozeti veya logoyu kullanmak ya da bu siteye link vermek için izin istemenize gerek yok. Alın, hotlink yapın, sitenize yapıştırın. Umurumda değil. Aslında, memnun bile olurum."
+  },
+  "brand.usage.point2Title": {
+    "other": "Rozetin piksel stilini koruyun"
+  },
+  "brand.usage.point2Text": {
+    "other": "Rozeti (badge) kullanıyorsanız, lütfen CSS'inizde 'image-rendering: pixelated' (veya Firefox için 'crisp-edges') kullanın. Bu olmazsa tarayıcılar pikselleri bulanıklaştırır ve çöp gibi görünür. Bu bir piksel sanatı, lütfen ona piksel sanatı muamelesi yapın."
+  },
+  "brand.usage.point3Title": {
+    "other": "Atıfta bulunmak güzel ama isteğe bağlı"
+  },
+  "brand.usage.point3Text": {
+    "other": "Site hakkında yazıyorsanız veya bunları bir blog yazısında kullanıyorsanız, bir geri bağlantı (link) makbule geçer. Ancak rozetimi sadece linkler sayfanıza ekliyorsanız, fazladan bir şey yapmanıza gerek yok. Rozet için verdiğim HTML kodu zaten buraya link veriyor."
+  },
+  "brand.usage.point4Title": {
+    "other": "Saçmalamayın"
+  },
+  "brand.usage.point4Text": {
+    "other": "Bunları beni taklit etmek, desteklemediğim bir şeyi destekliyormuşum gibi göstermek veya tekinsiz bir şeyle ilişkilendirmek için kullanmayın. Sevdiğiniz bir siteye link vermekle başkası gibi davranmak arasındaki farkı bildiğinize inanıyorum. Yaptığınız şeyin garip olup olmadığından emin değilseniz, muhtemelen gariptir."
+  },
+  "brand.usage.footer": {
+    "other": "Bu kadar, sadece saygılı kullanın yeter."
+  },
+  "colophon.title": {
+    "other": "Künye"
+  },
+  "colophon.description": {
+    "other": "Bu web sitesinin arkasındaki hikaye ve nasıl oluşturulduğu"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Site Geçmişi"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "Bu site 2023'ün sonlarında kaydedildi, ancak tasarımı ömrü boyunca çok değişti. İlk sürüm, şüpheli bir ücretsiz barındırma sağlayıcısında barındırılan temel bir WordPress sitesiydi, ikincisi Carrd tabanlıydı ve üçüncüsü Astro ile oluşturulmuştu. Bu mevcut iterasyon (dördüncü sürüm), modern web teknolojileriyle sıfırdan oluşturulmuş eksiksiz bir yeniden tasarımdır."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Her sürüm bir evrim olmuştur; bu en sonuncusu performans, erişilebilirlik ve kim olduğumu ve neye önem verdiğimi daha iyi temsil eden daha kişisel bir dokunuşa odaklanmaktadır."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Teknoloji Yığını"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "Sunucu taraflı işleme ve statik site oluşturmayı sağlayan React framework'ü"
+  },
+  "colophon.technologyStack.react": {
+    "other": "Kullanıcı arayüzleri oluşturmak için JavaScript kütüphanesi"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Yardımcı program öncelikli CSS framework'ü"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Radix UI ve Tailwind ile oluşturulmuş yeniden kullanılabilir bileşen kütüphanesi"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "React için animasyon kütüphanesi"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Uluslararasılaştırma framework'ü"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "JavaScript üzerine kurulu, güçlü tipli programlama dili"
+  },
+  "colophon.hosting.title": {
+    "other": "Barındırma & Dağıtım"
+  },
+  "colophon.hosting.content1": {
+    "other": "Site şurada barındırılıyor:"
+  },
+  "colophon.hosting.content2": {
+    "other": "GitHub'dan sorunsuz dağıtım, otomatik HTTPS ve küresel CDN dağıtımı sağlayan."
+  },
+  "colophon.hosting.content3": {
+    "other": "Alan adı şunun aracılığıyla yönetiliyor:"
+  },
+  "colophon.hosting.content4": {
+    "other": "ek güvenlik ve performans avantajları sağlayan."
+  },
+  "colophon.design.title": {
+    "other": "Tasarım felsefesi"
+  },
+  "colophon.design.p1": {
+    "other": "Bu web sitesi erişilebilirlik ve performans göz önünde bulundurularak tasarlanmıştır. JavaScript etkinleştirilmeden çalışır, semantik HTML kullanır ve herhangi bir izleme çerezi kullanmayarak gizliliğinize saygı duyar."
+  },
+  "colophon.design.p2": {
+    "other": "Tasarım, modern estetik ile klasik web sadeliği arasında bir dengeyi hedefler. Karanlık mod varsayılandır, çünkü retinamı seviyorum."
+  },
+  "colophon.webStandards.title": {
+    "other": "Web standartları"
+  },
+  "colophon.webStandards.intro": {
+    "other": "Bu site şunları uygular:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "mikroformatlar"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "RSS, Atom ve JSON beslemeleri"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt ve sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "Erişilebilirlik"
+  },
+  "colophon.accessibility.intro": {
+    "other": "Bu siteyi herkes için erişilebilir kılmaya çalışıyorum. Özellikler şunları içerir:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "Semantik HTML yapısı"
+  },
+  "colophon.accessibility.item2": {
+    "other": "İçeriğe atla bağlantıları"
+  },
+  "colophon.accessibility.item3": {
+    "other": "Doğru başlık hiyerarşisi"
+  },
+  "colophon.accessibility.item4": {
+    "other": "WCAG 2.1 AA renk kontrastı"
+  },
+  "colophon.accessibility.item5": {
+    "other": "Klavye ile gezilebilir"
+  },
+  "colophon.accessibility.item6": {
+    "other": "Azaltılmış hareket tercihlerine saygı"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "Herhangi bir erişilebilirlik sorunuyla karşılaşırsanız, lütfen"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "bana bildirin"
+  },
+  "colophon.inspiration.title": {
+    "other": "İlham Kaynağı"
+  },
+  "colophon.inspiration.content1": {
+    "other": "Bu sayfa şuradan ilham alıyor:"
+  },
+  "colophon.inspiration.content2": {
+    "other": "o da şuradan ilham alıyor:"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Orijinal fikir şurada:"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Maggie Appleton'ın kolofonu"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Gwern Branwen'in kolofonu"
+  },
+  "footer.copyright": {
+    "other": "2026, ∴ Jarema, CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "sevgiyle yapıldı"
+  },
+  "footer.andChaos": {
+    "other": "ve birkaç günlük kodlamayla"
+  },
+  "footer.uptime": {
+    "other": "Çalışma süresi"
+  },
+  "footer.siteStatus": {
+    "other": "Site durumu"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Klavye kısayolları"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Gezinme"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Eylemler"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Kapat"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Anasayfa"
+  },
+  "keyboardShortcuts.about": {
+    "other": "Hakkımda"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blog"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Projeler"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Şu an"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Kullandıklarım"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "İletişim"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Künye"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "Site haritası"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Geliştirici günlüğü"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Dilleri döngüyle değiştir"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Temaları sırayla değiştir"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Mod kedisini yenile"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Klavye kısayollarını aç"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Eylem Aramasını Aç"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Web halkaları"
+  },
+  "actionSearch.2048": {
+    "other": "2048 oyna"
+  },
+  "actionSearch.title": {
+    "other": "Eylemleri ara"
+  },
+  "actionSearch.placeholder": {
+    "other": "Eylem ara..."
+  },
+  "actionSearch.noResults": {
+    "other": "Hiçbir eylem bulunamadı"
+  },
+  "actionSearch.goTo": {
+    "other": "Sayfaya git"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Temayı değiştir"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Koyu moda geç"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Açık moda geç"
+  },
+  "actionSearch.appearance": {
+    "other": "Görünüm"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Dilleri sırayla değiştir"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Yeni ruh hali kedisi getir"
+  },
+  "actionSearch.playGame": {
+    "other": "Oyun oyna"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "Tüm kısayolları görüntüle"
+  },
+  "actionSearch.pressToOpen": {
+    "other": ". tuşuna basarak komut paletini aç"
+  },
+  "actionSearch.escToClose": {
+    "other": "ESC ile kapat"
+  },
+  "actionSearch.fun": {
+    "other": "Eğlence"
+  },
+  "actionSearch.games": {
+    "other": "Oyunlar"
+  },
+  "actionSearch.tetris": {
+    "other": "Tetris oyna"
+  },
+  "actionSearch.help": {
+    "other": "Yardım"
+  },
+  "actionSearch.projects.category": {
+    "other": "Projeler arasında gezin"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Kartı kapat"
+  },
+  "actionSearch.projects.left": {
+    "other": "Sola git"
+  },
+  "actionSearch.projects.right": {
+    "other": "Sağa git"
+  },
+  "actionSearch.projects.up": {
+    "other": "Yukarı git"
+  },
+  "actionSearch.projects.down": {
+    "other": "Aşağı git"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Projeyi çevir: {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Blog gönderilerinde gezin"
+  },
+  "actionSearch.blog.next": {
+    "other": "Sonraki gönderi"
+  },
+  "actionSearch.blog.prev": {
+    "other": "Önceki gönderi"
+  },
+  "actionSearch.blog.search": {
+    "other": "Blog gönderilerini ara"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Gönderileri filtrele"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "{{i}} numaralı gönderiye git"
+  },
+  "actionSearch.blog.back": {
+    "other": "Blog listesine geri dön"
+  },
+  "actionSearch.about.category": {
+    "other": "Hakkımda bölümlerinde gezin"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "{{i}}. bölüme git"
+  },
+  "actionSearch.uses.category": {
+    "other": "Kullanım bölümlerinde gezin"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "{{category}} kategorisine git"
+  },
+  "actionSearch.now.category": {
+    "other": "Şu an bölümlerinde gezin"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "{{category}} kategorisine git"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Künye bölümlerinde gezin"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "{{section}} bölümüne git"
+  },
+  "actionSearch.tools": {
+    "other": "Araçlar"
+  },
+  "textCounter.title": {
+    "other": "Metin sayacı"
+  },
+  "textCounter.description": {
+    "other": "Karakterleri, kelimeleri, cümleleri, paragrafları sayın ve konuşma/okuma süresini hesaplayın."
+  },
+  "textCounter.placeholder": {
+    "other": "Yazmaya başlayın veya metninizi buraya yapıştırın..."
+  },
+  "textCounter.clear": {
+    "other": "Temizle"
+  },
+  "textCounter.stats.characters": {
+    "other": "Karakterler"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "Karakterler (boşluksuz)"
+  },
+  "textCounter.stats.words": {
+    "other": "Kelimeler"
+  },
+  "textCounter.stats.sentences": {
+    "other": "Cümleler"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "Paragraflar"
+  },
+  "textCounter.stats.lines": {
+    "other": "Satırlar"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "Okuma süresi"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "Konuşma süresi"
+  },
+  "textCounter.textLanguage": {
+    "other": "Metin dili"
+  },
+  "textCounter.languages.en": {
+    "other": "İngilizce"
+  },
+  "textCounter.languages.vi": {
+    "other": "Vietnamca"
+  },
+  "textCounter.languages.et": {
+    "other": "Estonca"
+  },
+  "textCounter.languages.zh": {
+    "other": "Çince"
+  },
+  "textCounter.languages.ru": {
+    "other": "Rusça"
+  },
+  "textCounter.languages.custom": {
+    "other": "Diğer / özel"
+  },
+  "textCounter.languages.advanced": {
+    "other": "Gelişmiş ayarlar"
+  },
+  "textCounter.speed.label": {
+    "other": "Hız"
+  },
+  "textCounter.speed.slow": {
+    "other": "Yavaş"
+  },
+  "textCounter.speed.average": {
+    "other": "Orta"
+  },
+  "textCounter.speed.fast": {
+    "other": "Hızlı"
+  },
+  "textCounter.speed.custom": {
+    "other": "Özel"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "Okuma (Kelime/Dakika)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "Konuşma (Kelime/Dakika)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "Süre hesaplayıcıları şu anda İngilizce varsayılan hızları kullanıyor. Tam değerleri girmek için \"Özel\" seçeneğine geçin."
+  },
+  "textCounter.advanced.title": {
+    "other": "Gelişmiş ayarlar"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "Kelime sayımını devre dışı bırak"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "Logografik ve Brahmik diller için boşluklar kelimeleri ayırmaz."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "Her satırı bir paragraf olarak kabul et"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "Boş satırlar gerektirmek yerine tek satır sonlarını paragraf sonu olarak sayın. Satır sayacı gizlenecektir."
+  },
+  "textCounter.privacy.summary": {
+    "other": "Gizlilik bilgileri"
+  },
+  "textCounter.privacy.body": {
+    "other": "Bu araç tamamen tarayıcınızda çalışır. İnternet bağlantınızı kesebilirsiniz ve yine de çalışmaya devam eder, metniniz asla hiçbir yere gönderilmez."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "Teknik doğrulama yöntemi:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "Doğrulamak için tarayıcı DevTools'u (F12) → Ağ (Network) sekmesini açın, ardından metin alanına bir şeyler yazın ve sayfa yüklenmesi bittikten sonra hiçbir istek yapılmadığını onaylayın."
+  },
+  "tools.title": {
+    "other": "Araçlar"
+  },
+  "tools.description": {
+    "other": "Bazı kullanışlı araçlar. İhtiyaçlarıma tam olarak uyan hiçbir şey bulamadığım için."
+  },
+  "tools.items.counter.title": {
+    "other": "Metin sayacı"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "Karakterleri, kelimeleri, cümleleri, paragrafları sayın ve okuma/konuşma süresini tahmin edin."
+  },
+  "slashes.title": {
+    "other": "Slashler"
+  },
+  "slashes.description": {
+    "other": "Bu sitedeki tüm ana sayfaların bir listesi."
   }
 }

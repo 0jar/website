@@ -1,0 +1,10 @@
+<header class="w-full max-w-4xl mx-auto px-4 py-6 flex items-center justify-between border-b border-border">
+  <a href="/" class="font-bold text-xl hover:opacity-80 transition-opacity">{{ site.Title }}</a>
+  <nav>
+    <ul class="flex space-x-6">
+      <li><a href="/about/" class="text-muted-foreground hover:text-foreground transition-colors">{{ i18n "nav.about" | default "About" }}</a></li>
+      <li><a href="/projects/" class="text-muted-foreground hover:text-foreground transition-colors">{{ i18n "nav.projects" | default "Projects" }}</a></li>
+      <li><a href="/blog/" class="text-muted-foreground hover:text-foreground transition-colors">{{ i18n "nav.blog" | default "Blog" }}</a></li>
+    </ul>
+  </nav>
+</header>

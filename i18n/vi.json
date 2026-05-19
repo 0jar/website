@@ -1,759 +1,1745 @@
 {
-  "404": {
-    "title": "Bạn đi lạc khỏi map mất rồi :))",
-    "description": "Mấy con mèo cũng chẳng biết đây là đâu.",
-    "button": "Quay về trang chủ",
-    "sitemap": "Xem sơ đồ trang web",
-    "enjoycat": "Trong lúc bạn đang lạc, hãy xem chú mèo này:"
+  "404.title": {
+    "other": "Bạn đi lạc khỏi map mất rồi :))"
   },
-  "2048": {
-    "title": "2048",
-    "description": "Kết hợp các ô để đạt đến số 2048",
-    "score": "Điểm",
-    "best": "Cao nhất",
-    "gameOver": "Trò chơi kết thúc!",
-    "finalScore": "Điểm cuối cùng",
-    "tryAgain": "Chơi lại",
-    "youWin": "Bạn đã thắng!",
-    "currentScore": "Điểm hiện tại",
-    "keepPlaying": "Tiếp tục chơi",
-    "newGame": "Chơi ván mới",
-    "howToPlay": "Cách chơi",
-    "instructions1": "Sử dụng phím mũi tên hoặc WASD để di chuyển các ô. Khi hai ô có cùng số được gộp vào nhau, chúng sẽ kết hợp thành số tổng của hai số đó.",
-    "instructions2": "Sau mỗi lượt di chuyển, một ô mới (số 2 hoặc 4) xuất hiện.",
-    "instructions3": "Hãy tạo một ô với số 2048 để thắng trò chơi nhé!",
-    "instructions4": "Sau khi đạt được 2048, bạn có thể tiếp tục chơi để đạt điểm cao hơn!",
-    "controls": "Điều khiển",
-    "moveLeft": "Di chuyển sang trái",
-    "moveRight": "Di chuyển sang phải",
-    "moveUp": "Di chuyển lên",
-    "moveDown": "Di chuyển xuống",
-    "touchInstructions": "Trên điện thoại, hãy sử dụng các nút điều khiển trên màn hình để di chuyển các ô.",
-    "undo": "Hoàn tác"
+  "404.description": {
+    "other": "Mấy con mèo cũng chẳng biết đây là đâu."
   },
-  "nav": {
-    "home": "Trang chủ",
-    "about": "Giới thiệu",
-    "projects": "Dự án",
-    "blog": "Blog",
-    "now": "Hiện tại",
-    "uses": "Công cụ",
-    "contact": "Liên hệ",
-    "guestbook": "Sổ lưu bút",
-    "colophon": "Thông tin",
-    "webring": "Webring",
-    "scrapbook": "Ghi chép",
-    "slashes": "Sơ đồ trang web",
-    "brand": "Bộ nhận diện",
-    "badges": "Huy hiệu",
-    "tools": "Công cụ"
+  "404.button": {
+    "other": "Quay về trang chủ"
   },
-  "languageNotice": {
-    "message": "Bản dịch cho ngôn ngữ này vẫn đang được xây dựng. Một số nội dung có thể chưa hoàn chỉnh hoặc bị thiếu.",
-    "dismiss": "Đóng"
+  "404.sitemap": {
+    "other": "Xem sơ đồ trang web"
   },
-  "language": {
-    "main": "Ngôn ngữ chính",
-    "beta": "Ngôn ngữ đang xây dựng",
-    "other": "Ngôn ngữ khác",
-    "auto": "Tự động chọn theo ngôn ngữ trình duyệt",
-    "search": "Tìm ngôn ngữ...",
-    "en": "Tiếng Anh",
-    "vi": "Tiếng Việt",
-    "et": "Tiếng Estonia",
-    "ru": "Tiếng Nga",
-    "da": "Tiếng Đan Mạch",
-    "tr": "Tiếng Thổ Nhĩ Kỳ",
-    "zh": "Tiếng Trung",
-    "sv": "Tiếng Thụy Điển",
-    "fi": "Tiếng Phần Lan",
-    "pl": "Tiếng Ba Lan",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "Trong lúc bạn đang lạc, hãy xem chú mèo này:"
   },
-  "greetings": {
-    "morning": "Chào buổi sáng nhé, chú ong chăm chỉ",
-    "afternoon": "Buổi chiều vui vẻ nhé!",
-    "evening": "Buổi tối thảnh thơi nghỉ ngơi nhé!",
-    "night": "Vẫn thức à? Mình cũng thế nè."
+  "2048.title": {
+    "other": "2048"
   },
-  "home": {
-    "buttons": {
-      "about": "Về mình",
-      "projects": "Xem dự án của mình"
-    },
-    "footer": "Chào mừng bạn đến với trang web của mình. Cứ tự nhiên mà khám phá nhé.",
-    "heading": "chào bạn, mình là Jarema",
-    "subheading": "Sinh viên ngành kinh tế, thỉnh thoảng nghịch mò với code, thường xuyên nghịch xàm với mèo.",
-    "contactButton": "Liên hệ mình",
-    "aboutButton": "Về mình",
-    "blogButton": "Đọc blog của mình",
-    "guestbookButton": "Để lại lưu bút cho mình",
-    "recentPosts": "Bài blog gần đây",
-    "latestNow": "Bây giờ mình đang làm gì?",
-    "currentMood": "Tâm trạng hiện tại",
-    "currentStatus": "Trạng thái hiện tại",
-    "time": "Thời gian hiện tại",
-    "yourTime": "Thời gian của bạn",
-    "myTime": "Thời gian của mình",
-    "viewAllWebrings": "Xem tất cả webring",
-    "checkOutSites": "Xem thêm các trang này nhé!",
-    "androidCountdown": "Android sẽ trở thành một hệ điều hành đóng trong X ngày"
+  "2048.description": {
+    "other": "Kết hợp các ô để đạt đến số 2048"
   },
-  "guestbook": {
-    "title": "Sổ lưu bút",
-    "description": "Hãy để lại lời nhắn trong sổ lưu bút của mình nhé!",
-    "poweredBy": "Được cung cấp bởi",
-    "atabook": "Atabook"
+  "2048.score": {
+    "other": "Điểm"
   },
-  "about": {
-    "title": "Về mình",
-    "description": "Giới thiệu mình là ai, mình đến từ đâu, đam mê của mình là gì, và mình đang hướng tới điều gì.",
-    "stats": {
-      "self": "con người",
-      "languages": "ngôn ngữ",
-      "siteVersions": "phiên bản web",
-      "yearsOnline": "năm online"
-    },
-    "terminal": {
-      "fastfetch": {
-        "os": "Fedora Linux",
-        "host": "jarema.me",
-        "uptime": "99,99%",
-        "shell": "bash",
-        "theme": "Starry Space [Jarema]",
-        "cpu": "1 mẩu não người + não mèo",
-        "gpu": "Astro + Tailwind"
-      },
-      "whoami": {
-        "line1": "Cậu nhóc kỳ lạ hay mơ mộng thất thường",
-        "line2": "Học kinh tế ở trường ngoại giao",
-        "line3": "Viết lách về công nghệ và kinh tế",
-        "line4": "Hà Nội -> Tartu -> một nơi nào đó khác",
-        "line5": "ADHD, vẫn đang cố tìm hiểu mọi thứ",
-        "line6": "Rất vui vì bạn ghé qua chơi :3"
-      }
-    },
-    "interests": {
-      "title": "Quan tâm",
-      "languagesTitle": "Ngôn ngữ",
-      "levels": {
-        "native": "Tiếng mẹ đẻ",
-        "c2": "C2",
-        "b2": "B2",
-        "a2": "A2",
-        "a1": "A1"
-      }
-    },
-    "timeline": {
-      "copyHash": "Sao chép hash",
-      "copyHashTitle": "Sao chép toàn bộ mã SHA"
-    },
-    "chapters": {
-      "6": {
-        "title": "mình vẫn chưa nói hết đâu",
-        "content1": "và nên đây là phần lẽ ra \"người ta\" không nên thấy.",
-        "content2": "xin phép được xưng là \"tôi\". tôi vẫn còn bực. bực lắm. tôi vẫn đang tiếc nuối vì một phần của chính mình chưa bao giờ có cơ hội được sống thật. vẫn có những buổi sáng tỉnh dậy mà cứ có cảm giác mọi thứ bị lệch đi vài chút, mà không biết tại sao. có những lúc tôi đã nghĩ đến việc chạy trốn và biến mất luôn, lập một cái tên mới, sống ở thành phố mới, nói một ngôn ngữ mới. hoặc đôi lúc cũng là buông bỏ mọi thứ theo cái nghĩa ngược lại. và có lần tôi đã suýt làm thế thật.",
-        "content3": "có những ngày tôi chẳng cảm thấy mình là con người nữa. có những lúc tôi thấy bản thân giống như kiểu một ký ức đang cố kết lại thành hình hơn. giống như một tiếng vọng vang của một điều gì đó mềm mại mà chính tôi cũng không còn có thể chạm tới được nữa. nhưng cũng có những ngày tôi bùng cháy như có điện chạy trong người. tôi cảm được từng chi tiết quanh tôi, từ ánh nắng trên da, những nốt nhạc nhẹ nhàng của playlist đang bật, những khoảnh khắc ánh mắt và gương mặt người ta thay đổi khi họ thấy đủ an toàn để thể hiện chính mình. mấy điều nhỏ nhoi đó, bằng một cách nào đó, vẫn đang níu giữ tôi sống.",
-        "content4": "tôi vẫn chưa xong cái việc trở thành một phiên bản quái gì mà tôi cũng chẳng biết rõ là ai hay như thế nào. nhưng có một điều tôi chắc chắn, là tôi đã xong với cái việc lúc nào cũng phải giả vờ là mình ổn, và tôi không chịu im lặng nữa."
-      }
-    }
+  "2048.best": {
+    "other": "Cao nhất"
   },
-  "projects": {
-    "title": "Các dự án của mình",
-    "description": "Tổng hợp các dự án cá nhân, học thuật và hoạt động mà mình đã và đang thực hiện. Một số cái thì đã xong, chỗ khác thì vẫn đang làm dở.",
-    "status": {
-      "completed": "Đã hoàn thành",
-      "inProgress": "Đang tiến hành",
-      "planned": "Dự kiến"
-    },
-    "categories": {
-      "personal": "Cá nhân",
-      "academic": "Học thuật",
-      "activism": "Hoạt động xã hội"
-    },
-    "details": {
-      "what": "Đây là gì",
-      "learned": "Mình đã học được gì",
-      "why": "Dự án này quan trọng với mình vì"
-    },
-    "cardActions": {
-      "clickForDetails": "Nhấn để xem chi tiết",
-      "clickToClose": "Nhấn để đóng"
-    },
-    "statusLabels": {
-      "completed": "Đã hoàn thành",
-      "inProgress": "Đang tiến hành",
-      "planned": "Dự kiến"
-    },
-    "buttons": {
-      "showRandom": "Hiện thêm vài dự án khác",
-      "hideRandom": "Thôi ẩn đi, nhiều quá"
-    },
-    "filters": {
-      "all": "Tất cả"
-    },
-    "clickToFlip": "Nhấn để lật",
-    "what": "Nó là gì?",
-    "learned": "Những gì tôi học được",
-    "why": "Tại sao tôi làm cái này?"
+  "2048.gameOver": {
+    "other": "Trò chơi kết thúc!"
   },
-  "blog": {
-    "title": "Blog",
-    "description": "Vài dòng suy nghĩ, vài lời tâm trạng, và thỉnh thoảng là vài lời kêu ca. Giờ nào cũng viết, cảm xúc nào cũng có.",
-    "language": "Ngôn ngữ",
-    "languageFilter": "Lọc theo ngôn ngữ",
-    "tag": "Thẻ",
-    "sort": "Sắp xếp bài",
-    "category": "Thể loại",
-    "noPosts": "Chưa có bài viết nào ở đây cả. Quay lại sau nhé!",
-    "search": "Tìm kiếm bài viết...",
-    "sortNew": "Mới nhất trước",
-    "sortOld": "Cũ nhất trước",
-    "sortReadTime": "Theo thời gian đọc",
-    "sortABC": "Theo bảng chữ cái",
-    "filter": "Lọc",
-    "filterDescription": "Lọc các bài viết",
-    "activeFilter": "Đang lọc theo:",
-    "filterNoMatch": "Không có bài nào phù hợp với bộ lọc. Thử điều chỉnh tìm kiếm nhé!",
-    "clearFilter": "Xoá tất cả bộ lọc",
-    "mood": "Tâm trạng",
-    "cat": "Được boss phê duyệt",
-    "prev": "Bài trước",
-    "next": "Bài sau",
-    "jumpToPost": "Nhảy đến bài viết",
-    "back": "Quay lại danh sách blog",
-    "showingPosts": "Đang hiển thị {{current}} trên tổng số {{total}} bài viết",
-    "minRead": "phút đọc",
-    "rss": "Nguồn cấp tin RSS",
-    "subscribeRSS": "Đăng ký qua RSS",
-    "allPosts": "Nguồn cho tất cả bài viết",
-    "languageFeeds": "Nguồn cấp tin theo ngôn ngữ",
-    "rssDescription": "Đăng ký nguồn tin RSS của mình trên trình đọc bạn thích để nhận thông báo về bài viết mới.",
-    "atom": "Nguồn cấp tin Atom",
-    "subscribeAtom": "Đăng ký qua Atom",
-    "atomDescription": "Đăng ký nguồn tin Atom của mình trên trình đọc bạn thích để nhận thông báo về bài viết mới.",
-    "availableIn": "Trang này cũng được viết trong",
-    "comments": "Bình luận",
-    "webmentions": "Webmention",
-    "webmentionsNone": "Chưa có webmention nào. Hãy là người đầu tiên phản hồi!",
-    "webmentionLike": "đã thích bài này",
-    "webmentionRepost": "đã chia sẻ lại bài này",
-    "webmentionReply": "đã trả lời",
-    "webmentionMention": "đã đề cập bài này",
-    "tagLabels": {
-      "first-post": "bài đầu tiên",
-      "identity": "bản sắc",
-      "belonging": "sự thuộc về",
-      "introspection": "nội tâm",
-      "browsers": "trình duyệt",
-      "chrome": "Chrome",
-      "open-web": "web mở",
-      "app-defaults": "ứng dụng mặc định",
-      "software": "phần mềm",
-      "tools": "công cụ",
-      "new-year": "năm mới",
-      "reflection": "suy ngẫm",
-      "health": "sức khỏe",
-      "tet": "Tết",
-      "vietnam": "Việt Nam",
-      "military": "quân sự",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "tăng cường bảo mật",
-      "values": "giá trị",
-      "personal-philosophy": "triết lý cá nhân"
-    },
-    "categoryLabels": {
-      "personal": "Cá nhân",
-      "meta": "Meta",
-      "identity": "Bản sắc",
-      "technical": "Kỹ thuật",
-      "privacy": "Quyền riêng tư",
-      "opinions": "Quan điểm",
-      "life": "Cuộc sống",
-      "security": "Bảo mật",
-      "guides": "Hướng dẫn"
-    }
+  "2048.finalScore": {
+    "other": "Điểm cuối cùng"
   },
-  "now": {
-    "title": "Hiện tại",
-    "description": "Những thứ mình đang làm, đang nghĩ, và đang ngâm.",
-    "lastUpdated": "Cập nhật lần cuối",
-    "whatIsNow": "Trang /now là gì?",
-    "whatIsNowDescription": "Trang /now là một trang cho bạn biết người chủ website đang tập trung vào điều gì vào lúc này hoặc gần đây. Bạn có thể tìm hiểu thêm tại",
-    "categories": {
-      "reading": "Đang đọc",
-      "coding": "Đang code",
-      "drinking": "Đang uống",
-      "listening": "Đang nghe",
-      "premid": "Hoạt động trên Discord",
-      "thinking": "Đang nghĩ",
-      "studying": "Đang học",
-      "planning": "Đang lên kế hoạch"
-    }
+  "2048.tryAgain": {
+    "other": "Chơi lại"
   },
-  "uses": {
-    "title": "Công cụ",
-    "description": "Tổng hợp mọi thứ mình sử dụng hàng ngày. Trang này lấy cảm hứng từ",
-    "websiteDescription": "trang web nơi mọi người chia sẻ những thứ họ sử dụng hàng ngày trong công việc cũng như đời thường.",
-    "categories": {
-      "hardware": "Thiết bị",
-      "mobile": "Đồ di động",
-      "audio": "Tai nghe",
-      "os": "Hệ điều hành & Trình duyệt",
-      "development": "Lập trình",
-      "email": "Ứng dụng hiệu suất",
-      "privacy": "Bảo mật & Riêng tư",
-      "mobile_tools": "Táy máy tò mò với điện thoại",
-      "mapping": "Bản đồ",
-      "gaming": "Trò chơi",
-      "multimedia": "Đa phương tiện",
-      "design": "Thiết kế & Vẽ",
-      "photo": "Chỉnh sửa ảnh",
-      "video": "Video & Âm thanh",
-      "media": "Các dịch vụ phương tiện"
-    },
-    "subsections": {
-      "design": "Thiết kế & Vẽ",
-      "photo": "Chỉnh sửa ảnh",
-      "video": "Video & Âm thanh",
-      "media": "Các dịch vụ phương tiện"
-    },
-    "hidden": {
-      "clickToReveal": "Nhấn 5 lần để hiện",
-      "clicksLeft": "(còn {{clicks}} lần nhấn nữa để hiện)",
-      "platformPrefix": "Nền tảng ẩn"
-    }
+  "2048.youWin": {
+    "other": "Bạn đã thắng!"
   },
-  "contact": {
-    "title": "Liên hệ",
-    "description": "Các phương thức liên lạc với mình.",
-    "message": "đừng ngại mình, hãy vào chào một câu nhé. hoặc cũng có thể đặt lịch 1:1 nếu bạn muốn chuyên nghiệp tí =))",
-    "disclaimer": "mình có trả lời email nha. ờm, chắc thế. trừ khi mình bị mèo hay gì đó làm phân tâm thôi :v",
-    "sections": {
-      "contactMe": "Liên hệ với mình",
-      "socialMedia": "Mình trên mạng xã hội",
-      "otherPlatforms": "Mình trên các nền tảng khác"
-    },
-    "sectionTitles": {
-      "contactMe": "Liên hệ với mình",
-      "socialMedia": "Mình trên mạng xã hội",
-      "otherPlatforms": "Mình trên các nền tảng khác",
-      "keys": "Khoá công khai"
-    },
-    "links": {
-      "universityEmail": "Email học viện",
-      "bookMeeting": "Đặt lịch 1:1 với mình",
-      "messengerNote": "Mình khá ít hoạt động trên Facebook và Messenger. Mình không thể đảm bảo được sẽ trả lời nhanh nếu bạn nhắn tin qua đây.",
-      "pgpKey": "Khóa công khai PGP",
-      "sshKey": "Khóa công khai SSH"
-    }
+  "2048.currentScore": {
+    "other": "Điểm hiện tại"
   },
-  "moodCat": {
-    "title": "Mèo của hôm nay",
-    "hover": "mèo âm thầm phán xét bạn",
-    "refresh": "Cho xem mèo mới đi",
-    "seeMore": "Xem thêm mèo khác"
+  "2048.keepPlaying": {
+    "other": "Tiếp tục chơi"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "Trò chơi xếp hình cổ điển gắn liền với tuổi thơ của bao thế hệ.",
-    "gameInfo": "Thông tin màn chơi",
-    "score": "Điểm",
-    "level": "Cấp độ",
-    "status": "Trạng thái",
-    "next": "Tiếp theo",
-    "gameOver": "Kết thúc",
-    "paused": "Tạm dừng",
-    "playing": "Đang chơi",
-    "ready": "Sẵn sàng",
-    "playAgain": "Chơi lại",
-    "pause": "Tạm dừng",
-    "resume": "Tiếp tục",
-    "start": "Bắt đầu",
-    "reset": "Đặt lại",
-    "controls": "Điều khiển",
-    "moveLeft": "Di chuyển sang trái",
-    "moveRight": "Di chuyển sang phải",
-    "moveDown": "Di chuyển xuống",
-    "rotate": "Xoay khối",
-    "hardDrop": "Thả nhanh",
-    "pauseGame": "Tạm dừng trò chơi",
-    "musicOn": "Bật nhạc",
-    "musicOff": "Tắt nhạc",
-    "nowPlaying": "Đang phát",
-    "spacebar": "Phím cách"
+  "2048.newGame": {
+    "other": "Chơi ván mới"
   },
-  "scrapbook": {
-    "title": "Devlog",
-    "description": "Một vài nhật ký phát triển khi tôi tạo ra trang web này.",
-    "noEntries": "Chưa có mục nào."
+  "2048.howToPlay": {
+    "other": "Cách chơi"
   },
-  "settings": {
-    "title": "Cài đặt",
-    "theme": "Giao diện",
-    "themeAuto": "Tự động",
-    "themeLight": "Giao diện sáng",
-    "themeDark": "Giao diện tối",
-    "stars": "Sao lấp lánh",
-    "reduceMotion": "Giảm chuyển động",
-    "highContrast": "Tương phản cao",
-    "dyslexiaFont": "Phông chữ cho người khó đọc",
-    "timezone": "Múi giờ",
-    "tzYours": "Của bạn",
-    "tzAuthor": "Của Jarema",
-    "music": "Nhạc",
-    "musicUnavailable": "Hiện không khả dụng"
+  "2048.instructions1": {
+    "other": "Sử dụng phím mũi tên hoặc WASD để di chuyển các ô. Khi hai ô có cùng số được gộp vào nhau, chúng sẽ kết hợp thành số tổng của hai số đó."
   },
-  "webrings": {
-    "title": "Webring",
-    "description": "Các webring mình đang tham gia. Khám phá thêm những website và blog cá nhân khác nhé.",
-    "intro1": "Webring là tập hợp các trang web được tạo bởi những người cùng chí hướng, thường xoay quanh một chủ đề, gu thẩm mỹ hoặc sở thích chung. (từ safonts webring)",
-    "intro2": "Trang web này là một phần của các webring dưới đây. Nhấn vào link để ghé thăm nhà hàng xóm của mình, hoặc các thành viên khác nếu webring đó có chức năng random. Cứ chọn bất kỳ vòng nào bạn thích nha!",
-    "previous": "Trước",
-    "random": "Ngẫu nhiên",
-    "next": "Sau",
-    "previousAria": "Trang trước trong {{name}}",
-    "randomAria": "Trang ngẫu nhiên trong {{name}}",
-    "nextAria": "Trang sau trong {{name}}",
-    "pending": {
-      "title": "Đang chờ duyệt",
-      "description": "Những webring mình đã đăng ký tham gia và đang chờ phê duyệt.",
-      "badge": "Chờ duyệt"
-    }
+  "2048.instructions2": {
+    "other": "Sau mỗi lượt di chuyển, một ô mới (số 2 hoặc 4) xuất hiện."
   },
-  "badges": {
-    "title": "Bộ sưu tập huy hiệu web",
-    "description": "Một bộ sưu tập các huy hiệu và nút web cổ điển được sử dụng trên website của mình.",
-    "pageTitle": "Bộ sưu tập huy hiệu web cổ điển",
-    "pageDescription": "Mình đã sưu tập những huy hiệu 88x31 này để thể hiện những gì mình và trang web này thực sự quan tâm. Chúng được tạo nên từ thời kỳ Geocities, hồi đó internet chưa bị ngập tràn bởi những cái AI slop. Nếu bạn có một huy hiệu muốn mình thêm vào đây, cứ ới mình nhé.",
-    "myBadgeTitle": "Huy hiệu của mình (bấm để mở rộng)",
-    "myBadgeIntro": "Dùng huy hiệu này để dẫn link về website của mình:",
-    "hotlinkUrl": "URL Hotlink:",
-    "htmlCodeTitle": "Mã HTML",
-    "embeddingSuggestionsTitle": "Gợi ý khi nhúng mã",
-    "suggestion1": "Sử dụng",
-    "suggestion1b": "trong CSS của bạn để giữ nguyên phong cách pixel art.",
-    "suggestion2": "Link trực tiếp về trang chủ của mình tại",
-    "suggestion3": "Huy hiệu có kích thước 88x31 pixel, hãy nhân đôi chiều rộng và chiều cao trong HTML lên",
-    "suggestion3b": "để dễ đọc hơn trên các màn hình độ phân giải cao.",
-    "collectionHeading": "Bộ sưu tập huy hiệu",
-    "search": "Tìm huy hiệu...",
-    "filterByCategory": "Lọc theo danh mục",
-    "verboseView": "Chi tiết",
-    "badgeOnlyView": "Chỉ hiện huy hiệu",
-    "showingCount": "Đang hiện {{count}} huy hiệu",
-    "showingFiltered": "Đang hiện {{filtered}} trong tổng số {{total}} huy hiệu",
-    "noResults": "Không tìm thấy huy hiệu nào khớp với tìm kiếm",
-    "categories": {
-      "all": "Tất cả",
-      "personal": "Cá nhân",
-      "friends": "Bạn bè",
-      "other-sites": "Trang khác",
-      "software": "Phần mềm",
-      "web": "Web",
-      "fun": "Khác"
-    }
+  "2048.instructions3": {
+    "other": "Hãy tạo một ô với số 2048 để thắng trò chơi nhé!"
   },
-  "brand": {
-    "pageTitle": "Bộ nhận diện",
-    "pageDescription": "Bộ nhận diện của trang web của mình. Hãy dùng mấy cái này nếu bạn muốn nhắc đến hoặc dẫn link tới trang này nhé.",
-    "name": {
-      "title": "Tên",
-      "nameLabel": "Tên",
-      "displayNameLabel": "Tên hiển thị",
-      "symbolNote": "Ký hiệu 'vì vậy' (∴) luôn là một phần trong tên hiển thị của mình. Nó đại diện cho kết quả, kết luận, điểm kết của luồng suy nghĩ."
-    },
-    "logo": {
-      "title": "Logo",
-      "faceOnly": "Chỉ mặt",
-      "faceAndBody": "Mặt và thân trên",
-      "dimensions1": "384×384px (hoặc bội số to hoặc nhỏ hơn của nó đều được)",
-      "dimensions2": "512×512px (hoặc bội số to hoặc nhỏ hơn của nó đều được)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "Huy hiệu",
-      "urlLabel": "URL trực tiếp",
-      "htmlLabel": "Mã HTML"
-    },
-    "colors": {
-      "title": "Màu sắc",
-      "names": {
-        "primary": "Chủ đạo",
-        "background": "Nền",
-        "card": "Thẻ",
-        "foreground": "Màu trước",
-        "muted": "Mờ",
-        "border": "Viền"
-      },
-      "descriptions": {
-        "primary": "Màu nhấn chính",
-        "background": "Nền trang",
-        "card": "Nền thẻ",
-        "foreground": "Màu chữ chính",
-        "muted": "Các phần tử phụ",
-        "border": "Viền và dải phân cách"
-      },
-      "darkMode": "Chế độ tối",
-      "lightMode": "Chế độ sáng"
-    },
-    "fonts": {
-      "title": "Phông chữ",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Hán Nôm Gothic"
-      },
-      "usage": {
-        "heading": "Tiêu đề",
-        "body": "Nội dung và giao diện (UI)",
-        "notoSansSC": "Tiếng Trung",
-        "monaspice": "Đoạn mã code",
-        "hanNomGothic": "Chữ Nôm"
-      },
-      "weight": "Độ dày:",
-      "viewOnGoogleFonts": "Xem trên kho phông chữ",
-      "languages": {
-        "english": "Tiếng Anh",
-        "vietnamese": "Tiếng Việt",
-        "polish": "Tiếng Ba Lan",
-        "russian": "Tiếng Nga",
-        "japanese": "Tiếng Nhật",
-        "hebrew": "Tiếng Do Thái",
-        "thai": "Tiếng Thái",
-        "symbols": "Ký hiệu",
-        "chineseSimplified": "Tiếng Trung (Giản thể)",
-        "chineseTraditional": "Tiếng Trung (Phồn thể)",
-        "vietnameseHanNom": "Tiếng Việt (Chữ Nôm)"
-      }
-    },
-    "usage": {
-      "title": "Lưu ý nhỏ",
-      "point1Title": "Cứ thoải mái dùng",
-      "point1Text": "Không cần xin phép để dùng huy hiệu, logo hay dẫn link tới web này đâu. Cứ lấy, hotlink, hay vứt lên web của bạn. Mình không quan tâm. Thực ra là mình còn thấy vui ấy chứ.",
-      "point2Title": "Giữ nguyên style pixel của huy hiệu",
-      "point2Text": "Nếu dùng huy hiệu (badge), làm ơn thêm 'image-rendering: pixelated' (hoặc 'crisp-edges' trên Firefox) vào CSS. Không có nó, trình duyệt sẽ làm mờ pixel nhìn như rác ấy. Nó là pixel art, làm ơn hãy đối xử với nó như pixel art.",
-      "point3Title": "Ghi nguồn thì tốt, không thì cũng không sao",
-      "point3Text": "Nếu bạn viết bài về trang web này hay dùng tư liệu trong blog, dẫn link lại thì mình sẽ vui lắm. Nhưng nếu chỉ gắn cái badge vào trang liên kết thì không cần làm gì thêm đâu, cái mã HTML của badge mình đưa đã có link sẵn về đây rồi.",
-      "point4Title": "Đừng làm trò",
-      "point4Text": "Đừng dùng mấy cái này để giả danh mình, nhét chữ vào mình, hay làm như kiểu mình dính dáng tới cái gì mờ ám. Mình tin là bạn biết sự khác biệt giữa việc dẫn link tới trang bạn thích và việc giả mạo người khác. Nếu thấy lấn cấn không biết việc bạn định làm có kỳ cục không, thì khả năng cao là có đấy.",
-      "footer": "Thế thôi, cứ dùng đàng hoàng là được."
-    }
+  "2048.instructions4": {
+    "other": "Sau khi đạt được 2048, bạn có thể tiếp tục chơi để đạt điểm cao hơn!"
   },
-  "colophon": {
-    "title": "Thông tin trang web",
-    "description": "Câu chuyện đằng sau trang web này",
-    "siteHistory": {
-      "title": "Lịch sử trang này",
-      "content1": "Mình mới đăng ký trang web này vào cuối năm 2023, nhưng thiết kế nó đã thay đổi rất nhiều trong suốt thời gian này. Phiên bản đầu tiên chỉ là một trang WordPress ở trên một cái hosting miễn phí nào đó, bản thứ hai thì là trang Carrd.co, và bản thứ ba được xây trên nền Astro. Phiên bản hiện tại là một bản mình thiết kế lại hoàn toàn mới và đập đi xây lại từ đầu.",
-      "content2": "Mỗi phiên bản đều là một sự tiến hóa nhất định, với bản mới nhất này tập trung vào độ nhanh nhạy, khả năng tiếp cận (accessibility), khả năng điều hướng hoàn toàn bằng bàn phím, và cũng như một cảm giác \"mình\" hơn một chút, thể hiện \"mình\" tốt hơn chút."
-    },
-    "technologyStack": {
-      "title": "Các nền công nghệ sử dụng",
-      "nextjs": "Framework React cho phép render (tạo ảnh) từ phía server và tạo trang web tĩnh",
-      "react": "Thư viện JavaScript xây dựng giao diện",
-      "tailwind": "Framework CSS theo phương pháp utility-first (viết CSS mà không cần viết quá nhiều CSS)",
-      "shadcn": "Thư viện component (thành phần) tái sử dụng được dựng với Radix UI và Tailwind",
-      "framer": "Thư viện animation (hoạt ảnh) cho React",
-      "i18next": "Framework hỗ trợ ngôn ngữ",
-      "typescript": "Ngôn ngữ lập trình mở rộng dựa trên JavaScript"
-    },
-    "hosting": {
-      "title": "Lưu trữ web (Hosting)",
-      "content1": "Trang web được lưu trên",
-      "content2": "hỗ trợ chạy code web thông suốt từ GitHub.",
-      "content3": "Tên miền này được quản lý bởi",
-      "content4": "và họ cũng giúp bảo mật trang web này cũng như hỗ trợ tăng hiệu năng."
-    },
-    "design": {
-      "title": "Triết lý thiết kế",
-      "p1": "Trang web này được thiết kế chú trọng vào khả năng tiếp cận và hiệu suất. Nó hoạt động mà không cần bạn bật JavaScript, sử dụng HTML đúng ngữ nghĩa và tôn trọng quyền riêng tư của bạn bằng cách không sử dụng bất kỳ cookie theo dõi nào.",
-      "p2": "Thiết kế hướng tới cân bằng giữa thẩm mỹ hiện đại và sự đơn giản cổ điển của web indie. Chế độ tối được đặt mặc định vì mình cũng thương đôi mắt của mình lắm."
-    },
-    "webStandards": {
-      "title": "Tiêu chuẩn web",
-      "intro": "Trang web này triển khai:",
-      "microformats": "microformats",
-      "feeds": "RSS, Atom và JSON feeds",
-      "robots": "robots.txt và sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "Khả năng tiếp cận",
-      "intro": "Mình cố gắng làm cho trang web này có thể truy cập được cho tất cả mọi người. Các tính năng bao gồm:",
-      "item1": "Cấu trúc HTML ngữ nghĩa",
-      "item2": "Liên kết 'Skip-to-content'",
-      "item3": "Phân cấp tiêu đề hợp lý",
-      "item4": "Độ tương phản màu WCAG 2.1 AA",
-      "item5": "Điều hướng bằng bàn phím",
-      "item6": "Tôn trọng tùy chọn giảm chuyển động",
-      "reportText": "Nếu bạn gặp bất kỳ vấn đề nào về khả năng tiếp cận, vui lòng",
-      "contactLink": "cho mình biết"
-    },
-    "inspiration": {
-      "title": "Nguồn cảm hứng",
-      "content1": "Trang này lấy cảm hứng từ",
-      "content2": "mà lại có cảm hứng từ",
-      "content3": "Ý tưởng ban đầu ở trên",
-      "maggie": "Colophon của Maggie Appleton",
-      "gwern": "Colophon của Gwern Branwen"
-    }
+  "2048.controls": {
+    "other": "Điều khiển"
   },
-  "footer": {
-    "copyright": "2026, ∴ Jarema, CC BY 4.0",
-    "madeWith": "làm với mọi yêu thương",
-    "andChaos": "và vài tuần nghịch code",
-    "uptime": "Trạng thái hoạt động",
-    "siteStatus": "Tình trạng trang"
+  "2048.moveLeft": {
+    "other": "Di chuyển sang trái"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Phím tắt",
-    "navigation": "Điều hướng",
-    "actions": "Hành động",
-    "close": "Đóng",
-    "home": "Trang chủ",
-    "about": "Giới thiệu",
-    "blog": "Blog",
-    "projects": "Dự án",
-    "now": "Hiện tại",
-    "uses": "Công cụ",
-    "contact": "Liên hệ",
-    "colophon": "Thông tin",
-    "slashes": "Sơ đồ trang web",
-    "scrapbook": "Devlog",
-    "tetris": "Tetris",
-    "cycleLanguage": "Chuyển đổi ngôn ngữ",
-    "cycleTheme": "Chuyển đổi chủ đề",
-    "refreshCat": "Thay đổi ảnh mèo",
-    "openShortcuts": "Mở bảng phím tắt",
-    "actionSearch": "Mở thanh tìm kiếm",
-    "webring": "Webrings"
+  "2048.moveRight": {
+    "other": "Di chuyển sang phải"
   },
-  "actionSearch": {
-    "2048": "Chơi 2048",
-    "title": "Tìm kiếm hành động",
-    "placeholder": "Gõ để tìm hành động...",
-    "noResults": "Không tìm thấy hành động nào",
-    "goTo": "Chuyển đến trang",
-    "toggleTheme": "Chuyển đổi chủ đề",
-    "switchDarkMode": "Chuyển sang chế độ tối",
-    "switchLightMode": "Chuyển sang chế độ sáng",
-    "appearance": "Giao diện",
-    "cycleLanguage": "Chuyển đổi ngôn ngữ",
-    "refreshCat": "Xem mèo mới",
-    "playGame": "Chơi trò chơi",
-    "viewShortcuts": "Xem toàn bộ phím tắt",
-    "pressToOpen": "Nhấn . để mở thanh tìm kiếm",
-    "escToClose": "Nhấn ESC để thoát",
-    "fun": "Chơi vui",
-    "games": "Trò chơi",
-    "tetris": "Chơi Tetris",
-    "help": "Trợ giúp",
-    "projects": {
-      "category": "Điều hướng qua các dự án",
-      "closeCard": "Đóng dự án",
-      "left": "Điều hướng sang trái",
-      "right": "Điều hướng sang phải",
-      "up": "Điều hướng lên",
-      "down": "Điều hướng xuống",
-      "flipCard": "Mở dự án {{title}}"
-    },
-    "blog": {
-      "category": "Điều hướng qua các bài viết",
-      "next": "Đến bài viết tiếp theo",
-      "prev": "Đến bài viết trước",
-      "search": "Tìm kiếm bài viết",
-      "filterTag": "Lọc bài viết",
-      "jumpToPost": "Đi tới bài viết số {{i}}",
-      "back": "Quay lại danh sách bài viết"
-    },
-    "about": {
-      "category": "Điều hướng qua các phần giới thiệu",
-      "jumpToChapter": "Đi đến chương {{i}}"
-    },
-    "uses": {
-      "category": "Điều hướng qua các phần công cụ",
-      "jumpToCategory": "Đi đến mục {{category}}"
-    },
-    "now": {
-      "category": "Điều hướng qua các phần",
-      "jumpToCategory": "Đi đến mục {{category}}"
-    },
-    "colophon": {
-      "category": "Điều hướng qua các phần thông tin",
-      "jumpToSection": "Đi đến phần {{section}}"
-    },
-    "tools": "Công cụ"
+  "2048.moveUp": {
+    "other": "Di chuyển lên"
   },
-  "textCounter": {
-    "title": "Công cụ đếm văn bản",
-    "description": "Đếm ký tự, từ, câu, đoạn văn, tính thời gian đọc và nói.",
-    "placeholder": "Bắt đầu nhập hoặc dán văn bản của bạn vào đây...",
-    "clear": "Xóa",
-    "stats": {
-      "characters": "Ký tự",
-      "charactersNoSpaces": "Ký tự (không tính dấu cách)",
-      "words": "Từ",
-      "sentences": "Câu",
-      "paragraphs": "Đoạn văn",
-      "lines": "Dòng",
-      "readingTime": "Thời gian đọc",
-      "speakingTime": "Thời gian nói"
-    },
-    "textLanguage": "Ngôn ngữ văn bản",
-    "languages": {
-      "en": "Tiếng Anh",
-      "vi": "Tiếng Việt",
-      "et": "Tiếng Estonia",
-      "zh": "Tiếng Trung",
-      "ru": "Tiếng Nga",
-      "custom": "Khác / tùy chỉnh",
-      "advanced": "Cài đặt nâng cao"
-    },
-    "speed": {
-      "label": "Tốc độ",
-      "slow": "Chậm",
-      "average": "Trung bình",
-      "fast": "Nhanh",
-      "custom": "Tùy chỉnh",
-      "readingWpm": "Đọc (từ/phút)",
-      "speakingWpm": "Nói (từ/phút)",
-      "englishDefaultsWarning": "Mục tùy chỉnh đang sử dụng tốc độ mặc định của tiếng Anh. Hãy chuyển tốc độ sang \"Tùy chỉnh\" để chỉnh sang giá trị chính xác bạn muốn."
-    },
-    "advanced": {
-      "title": "Cài đặt nâng cao",
-      "disableWords": "Tắt đếm từ",
-      "disableWordsDesc": "Dành cho các ngôn ngữ sử dụng chữ viết tượng hình không phân cách các từ bằng dấu cách.",
-      "newlineAsParagraph": "Coi mỗi lần xuống dòng là một đoạn văn",
-      "newlineAsParagraphDesc": "Đếm mỗi lần xuống dòng là một đoạn văn, không bắt buộc phải có dòng trống giữa hai đoạn văn. Bộ đếm dòng sẽ bị ẩn."
-    },
-    "privacy": {
-      "summary": "Thông tin về quyền riêng tư",
-      "body": "Công cụ này chạy hoàn toàn trong trình duyệt của bạn. Bạn có thể ngắt kết nối internet và nó vẫn sẽ hoạt động, văn bản của bạn hoàn toàn không bị gửi đi bất cứ đâu.",
-      "technicalLabel": "Phương pháp xác minh kỹ thuật:",
-      "technical": "Để xác minh, hãy mở DevTools của trình duyệt (F12) → tab Mạng (Network), sau đó nhập vào vùng văn bản và xác nhận rằng không có yêu cầu mới nào được thực hiện sau khi trang hoàn tất tải."
-    }
+  "2048.moveDown": {
+    "other": "Di chuyển xuống"
   },
-  "tools": {
-    "title": "Công cụ",
-    "description": "Một số tiện ích hữu ích.",
-    "items": {
-      "counter": {
-        "title": "Trình đếm văn bản",
-        "icon": "🔤",
-        "description": "Đếm ký tự, từ, câu, đoạn văn, ước tính thời gian đọc và nói."
-      }
-    }
+  "2048.touchInstructions": {
+    "other": "Trên điện thoại, hãy sử dụng các nút điều khiển trên màn hình để di chuyển các ô."
   },
-  "slashes": {
-    "title": "Slashes",
-    "description": "Danh sách tất cả các trang chính trên trang web này."
+  "2048.undo": {
+    "other": "Hoàn tác"
+  },
+  "nav.home": {
+    "other": "Trang chủ"
+  },
+  "nav.about": {
+    "other": "Giới thiệu"
+  },
+  "nav.projects": {
+    "other": "Dự án"
+  },
+  "nav.blog": {
+    "other": "Blog"
+  },
+  "nav.now": {
+    "other": "Hiện tại"
+  },
+  "nav.uses": {
+    "other": "Công cụ"
+  },
+  "nav.contact": {
+    "other": "Liên hệ"
+  },
+  "nav.guestbook": {
+    "other": "Sổ lưu bút"
+  },
+  "nav.colophon": {
+    "other": "Thông tin"
+  },
+  "nav.webring": {
+    "other": "Webring"
+  },
+  "nav.scrapbook": {
+    "other": "Ghi chép"
+  },
+  "nav.slashes": {
+    "other": "Sơ đồ trang web"
+  },
+  "nav.brand": {
+    "other": "Bộ nhận diện"
+  },
+  "nav.badges": {
+    "other": "Huy hiệu"
+  },
+  "nav.tools": {
+    "other": "Công cụ"
+  },
+  "languageNotice.message": {
+    "other": "Bản dịch cho ngôn ngữ này vẫn đang được xây dựng. Một số nội dung có thể chưa hoàn chỉnh hoặc bị thiếu."
+  },
+  "languageNotice.dismiss": {
+    "other": "Đóng"
+  },
+  "language.main": {
+    "other": "Ngôn ngữ chính"
+  },
+  "language.beta": {
+    "other": "Ngôn ngữ đang xây dựng"
+  },
+  "language.other": {
+    "other": "Ngôn ngữ khác"
+  },
+  "language.auto": {
+    "other": "Tự động chọn theo ngôn ngữ trình duyệt"
+  },
+  "language.search": {
+    "other": "Tìm ngôn ngữ..."
+  },
+  "language.en": {
+    "other": "Tiếng Anh"
+  },
+  "language.vi": {
+    "other": "Tiếng Việt"
+  },
+  "language.et": {
+    "other": "Tiếng Estonia"
+  },
+  "language.ru": {
+    "other": "Tiếng Nga"
+  },
+  "language.da": {
+    "other": "Tiếng Đan Mạch"
+  },
+  "language.tr": {
+    "other": "Tiếng Thổ Nhĩ Kỳ"
+  },
+  "language.zh": {
+    "other": "Tiếng Trung"
+  },
+  "language.sv": {
+    "other": "Tiếng Thụy Điển"
+  },
+  "language.fi": {
+    "other": "Tiếng Phần Lan"
+  },
+  "language.pl": {
+    "other": "Tiếng Ba Lan"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "Chào buổi sáng nhé, chú ong chăm chỉ"
+  },
+  "greetings.afternoon": {
+    "other": "Buổi chiều vui vẻ nhé!"
+  },
+  "greetings.evening": {
+    "other": "Buổi tối thảnh thơi nghỉ ngơi nhé!"
+  },
+  "greetings.night": {
+    "other": "Vẫn thức à? Mình cũng thế nè."
+  },
+  "home.buttons.about": {
+    "other": "Về mình"
+  },
+  "home.buttons.projects": {
+    "other": "Xem dự án của mình"
+  },
+  "home.footer": {
+    "other": "Chào mừng bạn đến với trang web của mình. Cứ tự nhiên mà khám phá nhé."
+  },
+  "home.heading": {
+    "other": "chào bạn, mình là Jarema"
+  },
+  "home.subheading": {
+    "other": "Sinh viên ngành kinh tế, thỉnh thoảng nghịch mò với code, thường xuyên nghịch xàm với mèo."
+  },
+  "home.contactButton": {
+    "other": "Liên hệ mình"
+  },
+  "home.aboutButton": {
+    "other": "Về mình"
+  },
+  "home.blogButton": {
+    "other": "Đọc blog của mình"
+  },
+  "home.guestbookButton": {
+    "other": "Để lại lưu bút cho mình"
+  },
+  "home.recentPosts": {
+    "other": "Bài blog gần đây"
+  },
+  "home.latestNow": {
+    "other": "Bây giờ mình đang làm gì?"
+  },
+  "home.currentMood": {
+    "other": "Tâm trạng hiện tại"
+  },
+  "home.currentStatus": {
+    "other": "Trạng thái hiện tại"
+  },
+  "home.time": {
+    "other": "Thời gian hiện tại"
+  },
+  "home.yourTime": {
+    "other": "Thời gian của bạn"
+  },
+  "home.myTime": {
+    "other": "Thời gian của mình"
+  },
+  "home.viewAllWebrings": {
+    "other": "Xem tất cả webring"
+  },
+  "home.checkOutSites": {
+    "other": "Xem thêm các trang này nhé!"
+  },
+  "home.androidCountdown": {
+    "other": "Android sẽ trở thành một hệ điều hành đóng trong X ngày"
+  },
+  "guestbook.title": {
+    "other": "Sổ lưu bút"
+  },
+  "guestbook.description": {
+    "other": "Hãy để lại lời nhắn trong sổ lưu bút của mình nhé!"
+  },
+  "guestbook.poweredBy": {
+    "other": "Được cung cấp bởi"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "Về mình"
+  },
+  "about.description": {
+    "other": "Giới thiệu mình là ai, mình đến từ đâu, đam mê của mình là gì, và mình đang hướng tới điều gì."
+  },
+  "about.stats.self": {
+    "other": "con người"
+  },
+  "about.stats.languages": {
+    "other": "ngôn ngữ"
+  },
+  "about.stats.siteVersions": {
+    "other": "phiên bản web"
+  },
+  "about.stats.yearsOnline": {
+    "other": "năm online"
+  },
+  "about.terminal.fastfetch.os": {
+    "other": "Fedora Linux"
+  },
+  "about.terminal.fastfetch.host": {
+    "other": "jarema.me"
+  },
+  "about.terminal.fastfetch.uptime": {
+    "other": "99,99%"
+  },
+  "about.terminal.fastfetch.shell": {
+    "other": "bash"
+  },
+  "about.terminal.fastfetch.theme": {
+    "other": "Starry Space [Jarema]"
+  },
+  "about.terminal.fastfetch.cpu": {
+    "other": "1 mẩu não người + não mèo"
+  },
+  "about.terminal.fastfetch.gpu": {
+    "other": "Astro + Tailwind"
+  },
+  "about.terminal.whoami.line1": {
+    "other": "Cậu nhóc kỳ lạ hay mơ mộng thất thường"
+  },
+  "about.terminal.whoami.line2": {
+    "other": "Học kinh tế ở trường ngoại giao"
+  },
+  "about.terminal.whoami.line3": {
+    "other": "Viết lách về công nghệ và kinh tế"
+  },
+  "about.terminal.whoami.line4": {
+    "other": "Hà Nội -> Tartu -> một nơi nào đó khác"
+  },
+  "about.terminal.whoami.line5": {
+    "other": "ADHD, vẫn đang cố tìm hiểu mọi thứ"
+  },
+  "about.terminal.whoami.line6": {
+    "other": "Rất vui vì bạn ghé qua chơi :3"
+  },
+  "about.interests.title": {
+    "other": "Quan tâm"
+  },
+  "about.interests.languagesTitle": {
+    "other": "Ngôn ngữ"
+  },
+  "about.interests.levels.native": {
+    "other": "Tiếng mẹ đẻ"
+  },
+  "about.interests.levels.c2": {
+    "other": "C2"
+  },
+  "about.interests.levels.b2": {
+    "other": "B2"
+  },
+  "about.interests.levels.a2": {
+    "other": "A2"
+  },
+  "about.interests.levels.a1": {
+    "other": "A1"
+  },
+  "about.timeline.copyHash": {
+    "other": "Sao chép hash"
+  },
+  "about.timeline.copyHashTitle": {
+    "other": "Sao chép toàn bộ mã SHA"
+  },
+  "about.chapters.6.title": {
+    "other": "mình vẫn chưa nói hết đâu"
+  },
+  "about.chapters.6.content1": {
+    "other": "và nên đây là phần lẽ ra \"người ta\" không nên thấy."
+  },
+  "about.chapters.6.content2": {
+    "other": "xin phép được xưng là \"tôi\". tôi vẫn còn bực. bực lắm. tôi vẫn đang tiếc nuối vì một phần của chính mình chưa bao giờ có cơ hội được sống thật. vẫn có những buổi sáng tỉnh dậy mà cứ có cảm giác mọi thứ bị lệch đi vài chút, mà không biết tại sao. có những lúc tôi đã nghĩ đến việc chạy trốn và biến mất luôn, lập một cái tên mới, sống ở thành phố mới, nói một ngôn ngữ mới. hoặc đôi lúc cũng là buông bỏ mọi thứ theo cái nghĩa ngược lại. và có lần tôi đã suýt làm thế thật."
+  },
+  "about.chapters.6.content3": {
+    "other": "có những ngày tôi chẳng cảm thấy mình là con người nữa. có những lúc tôi thấy bản thân giống như kiểu một ký ức đang cố kết lại thành hình hơn. giống như một tiếng vọng vang của một điều gì đó mềm mại mà chính tôi cũng không còn có thể chạm tới được nữa. nhưng cũng có những ngày tôi bùng cháy như có điện chạy trong người. tôi cảm được từng chi tiết quanh tôi, từ ánh nắng trên da, những nốt nhạc nhẹ nhàng của playlist đang bật, những khoảnh khắc ánh mắt và gương mặt người ta thay đổi khi họ thấy đủ an toàn để thể hiện chính mình. mấy điều nhỏ nhoi đó, bằng một cách nào đó, vẫn đang níu giữ tôi sống."
+  },
+  "about.chapters.6.content4": {
+    "other": "tôi vẫn chưa xong cái việc trở thành một phiên bản quái gì mà tôi cũng chẳng biết rõ là ai hay như thế nào. nhưng có một điều tôi chắc chắn, là tôi đã xong với cái việc lúc nào cũng phải giả vờ là mình ổn, và tôi không chịu im lặng nữa."
+  },
+  "projects.title": {
+    "other": "Các dự án của mình"
+  },
+  "projects.description": {
+    "other": "Tổng hợp các dự án cá nhân, học thuật và hoạt động mà mình đã và đang thực hiện. Một số cái thì đã xong, chỗ khác thì vẫn đang làm dở."
+  },
+  "projects.status.completed": {
+    "other": "Đã hoàn thành"
+  },
+  "projects.status.inProgress": {
+    "other": "Đang tiến hành"
+  },
+  "projects.status.planned": {
+    "other": "Dự kiến"
+  },
+  "projects.categories.personal": {
+    "other": "Cá nhân"
+  },
+  "projects.categories.academic": {
+    "other": "Học thuật"
+  },
+  "projects.categories.activism": {
+    "other": "Hoạt động xã hội"
+  },
+  "projects.details.what": {
+    "other": "Đây là gì"
+  },
+  "projects.details.learned": {
+    "other": "Mình đã học được gì"
+  },
+  "projects.details.why": {
+    "other": "Dự án này quan trọng với mình vì"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "Nhấn để xem chi tiết"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "Nhấn để đóng"
+  },
+  "projects.statusLabels.completed": {
+    "other": "Đã hoàn thành"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "Đang tiến hành"
+  },
+  "projects.statusLabels.planned": {
+    "other": "Dự kiến"
+  },
+  "projects.buttons.showRandom": {
+    "other": "Hiện thêm vài dự án khác"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "Thôi ẩn đi, nhiều quá"
+  },
+  "projects.filters.all": {
+    "other": "Tất cả"
+  },
+  "projects.clickToFlip": {
+    "other": "Nhấn để lật"
+  },
+  "projects.what": {
+    "other": "Nó là gì?"
+  },
+  "projects.learned": {
+    "other": "Những gì tôi học được"
+  },
+  "projects.why": {
+    "other": "Tại sao tôi làm cái này?"
+  },
+  "blog.title": {
+    "other": "Blog"
+  },
+  "blog.description": {
+    "other": "Vài dòng suy nghĩ, vài lời tâm trạng, và thỉnh thoảng là vài lời kêu ca. Giờ nào cũng viết, cảm xúc nào cũng có."
+  },
+  "blog.language": {
+    "other": "Ngôn ngữ"
+  },
+  "blog.languageFilter": {
+    "other": "Lọc theo ngôn ngữ"
+  },
+  "blog.tag": {
+    "other": "Thẻ"
+  },
+  "blog.sort": {
+    "other": "Sắp xếp bài"
+  },
+  "blog.category": {
+    "other": "Thể loại"
+  },
+  "blog.noPosts": {
+    "other": "Chưa có bài viết nào ở đây cả. Quay lại sau nhé!"
+  },
+  "blog.search": {
+    "other": "Tìm kiếm bài viết..."
+  },
+  "blog.sortNew": {
+    "other": "Mới nhất trước"
+  },
+  "blog.sortOld": {
+    "other": "Cũ nhất trước"
+  },
+  "blog.sortReadTime": {
+    "other": "Theo thời gian đọc"
+  },
+  "blog.sortABC": {
+    "other": "Theo bảng chữ cái"
+  },
+  "blog.filter": {
+    "other": "Lọc"
+  },
+  "blog.filterDescription": {
+    "other": "Lọc các bài viết"
+  },
+  "blog.activeFilter": {
+    "other": "Đang lọc theo:"
+  },
+  "blog.filterNoMatch": {
+    "other": "Không có bài nào phù hợp với bộ lọc. Thử điều chỉnh tìm kiếm nhé!"
+  },
+  "blog.clearFilter": {
+    "other": "Xoá tất cả bộ lọc"
+  },
+  "blog.mood": {
+    "other": "Tâm trạng"
+  },
+  "blog.cat": {
+    "other": "Được boss phê duyệt"
+  },
+  "blog.prev": {
+    "other": "Bài trước"
+  },
+  "blog.next": {
+    "other": "Bài sau"
+  },
+  "blog.jumpToPost": {
+    "other": "Nhảy đến bài viết"
+  },
+  "blog.back": {
+    "other": "Quay lại danh sách blog"
+  },
+  "blog.showingPosts": {
+    "other": "Đang hiển thị {{current}} trên tổng số {{total}} bài viết"
+  },
+  "blog.minRead": {
+    "other": "phút đọc"
+  },
+  "blog.rss": {
+    "other": "Nguồn cấp tin RSS"
+  },
+  "blog.subscribeRSS": {
+    "other": "Đăng ký qua RSS"
+  },
+  "blog.allPosts": {
+    "other": "Nguồn cho tất cả bài viết"
+  },
+  "blog.languageFeeds": {
+    "other": "Nguồn cấp tin theo ngôn ngữ"
+  },
+  "blog.rssDescription": {
+    "other": "Đăng ký nguồn tin RSS của mình trên trình đọc bạn thích để nhận thông báo về bài viết mới."
+  },
+  "blog.atom": {
+    "other": "Nguồn cấp tin Atom"
+  },
+  "blog.subscribeAtom": {
+    "other": "Đăng ký qua Atom"
+  },
+  "blog.atomDescription": {
+    "other": "Đăng ký nguồn tin Atom của mình trên trình đọc bạn thích để nhận thông báo về bài viết mới."
+  },
+  "blog.availableIn": {
+    "other": "Trang này cũng được viết trong"
+  },
+  "blog.comments": {
+    "other": "Bình luận"
+  },
+  "blog.webmentions": {
+    "other": "Webmention"
+  },
+  "blog.webmentionsNone": {
+    "other": "Chưa có webmention nào. Hãy là người đầu tiên phản hồi!"
+  },
+  "blog.webmentionLike": {
+    "other": "đã thích bài này"
+  },
+  "blog.webmentionRepost": {
+    "other": "đã chia sẻ lại bài này"
+  },
+  "blog.webmentionReply": {
+    "other": "đã trả lời"
+  },
+  "blog.webmentionMention": {
+    "other": "đã đề cập bài này"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "bài đầu tiên"
+  },
+  "blog.tagLabels.identity": {
+    "other": "bản sắc"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "sự thuộc về"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "nội tâm"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "trình duyệt"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "web mở"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "ứng dụng mặc định"
+  },
+  "blog.tagLabels.software": {
+    "other": "phần mềm"
+  },
+  "blog.tagLabels.tools": {
+    "other": "công cụ"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "năm mới"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "suy ngẫm"
+  },
+  "blog.tagLabels.health": {
+    "other": "sức khỏe"
+  },
+  "blog.tagLabels.tet": {
+    "other": "Tết"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "Việt Nam"
+  },
+  "blog.tagLabels.military": {
+    "other": "quân sự"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "tăng cường bảo mật"
+  },
+  "blog.tagLabels.values": {
+    "other": "giá trị"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "triết lý cá nhân"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "Cá nhân"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "Meta"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "Bản sắc"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "Kỹ thuật"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "Quyền riêng tư"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "Quan điểm"
+  },
+  "blog.categoryLabels.life": {
+    "other": "Cuộc sống"
+  },
+  "blog.categoryLabels.security": {
+    "other": "Bảo mật"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "Hướng dẫn"
+  },
+  "now.title": {
+    "other": "Hiện tại"
+  },
+  "now.description": {
+    "other": "Những thứ mình đang làm, đang nghĩ, và đang ngâm."
+  },
+  "now.lastUpdated": {
+    "other": "Cập nhật lần cuối"
+  },
+  "now.whatIsNow": {
+    "other": "Trang /now là gì?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "Trang /now là một trang cho bạn biết người chủ website đang tập trung vào điều gì vào lúc này hoặc gần đây. Bạn có thể tìm hiểu thêm tại"
+  },
+  "now.categories.reading": {
+    "other": "Đang đọc"
+  },
+  "now.categories.coding": {
+    "other": "Đang code"
+  },
+  "now.categories.drinking": {
+    "other": "Đang uống"
+  },
+  "now.categories.listening": {
+    "other": "Đang nghe"
+  },
+  "now.categories.premid": {
+    "other": "Hoạt động trên Discord"
+  },
+  "now.categories.thinking": {
+    "other": "Đang nghĩ"
+  },
+  "now.categories.studying": {
+    "other": "Đang học"
+  },
+  "now.categories.planning": {
+    "other": "Đang lên kế hoạch"
+  },
+  "uses.title": {
+    "other": "Công cụ"
+  },
+  "uses.description": {
+    "other": "Tổng hợp mọi thứ mình sử dụng hàng ngày. Trang này lấy cảm hứng từ"
+  },
+  "uses.websiteDescription": {
+    "other": "trang web nơi mọi người chia sẻ những thứ họ sử dụng hàng ngày trong công việc cũng như đời thường."
+  },
+  "uses.categories.hardware": {
+    "other": "Thiết bị"
+  },
+  "uses.categories.mobile": {
+    "other": "Đồ di động"
+  },
+  "uses.categories.audio": {
+    "other": "Tai nghe"
+  },
+  "uses.categories.os": {
+    "other": "Hệ điều hành & Trình duyệt"
+  },
+  "uses.categories.development": {
+    "other": "Lập trình"
+  },
+  "uses.categories.email": {
+    "other": "Ứng dụng hiệu suất"
+  },
+  "uses.categories.privacy": {
+    "other": "Bảo mật & Riêng tư"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Táy máy tò mò với điện thoại"
+  },
+  "uses.categories.mapping": {
+    "other": "Bản đồ"
+  },
+  "uses.categories.gaming": {
+    "other": "Trò chơi"
+  },
+  "uses.categories.multimedia": {
+    "other": "Đa phương tiện"
+  },
+  "uses.categories.design": {
+    "other": "Thiết kế & Vẽ"
+  },
+  "uses.categories.photo": {
+    "other": "Chỉnh sửa ảnh"
+  },
+  "uses.categories.video": {
+    "other": "Video & Âm thanh"
+  },
+  "uses.categories.media": {
+    "other": "Các dịch vụ phương tiện"
+  },
+  "uses.subsections.design": {
+    "other": "Thiết kế & Vẽ"
+  },
+  "uses.subsections.photo": {
+    "other": "Chỉnh sửa ảnh"
+  },
+  "uses.subsections.video": {
+    "other": "Video & Âm thanh"
+  },
+  "uses.subsections.media": {
+    "other": "Các dịch vụ phương tiện"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "Nhấn 5 lần để hiện"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "(còn {{clicks}} lần nhấn nữa để hiện)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "Nền tảng ẩn"
+  },
+  "contact.title": {
+    "other": "Liên hệ"
+  },
+  "contact.description": {
+    "other": "Các phương thức liên lạc với mình."
+  },
+  "contact.message": {
+    "other": "đừng ngại mình, hãy vào chào một câu nhé. hoặc cũng có thể đặt lịch 1:1 nếu bạn muốn chuyên nghiệp tí =))"
+  },
+  "contact.disclaimer": {
+    "other": "mình có trả lời email nha. ờm, chắc thế. trừ khi mình bị mèo hay gì đó làm phân tâm thôi :v"
+  },
+  "contact.sections.contactMe": {
+    "other": "Liên hệ với mình"
+  },
+  "contact.sections.socialMedia": {
+    "other": "Mình trên mạng xã hội"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "Mình trên các nền tảng khác"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "Liên hệ với mình"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "Mình trên mạng xã hội"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "Mình trên các nền tảng khác"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "Khoá công khai"
+  },
+  "contact.links.universityEmail": {
+    "other": "Email học viện"
+  },
+  "contact.links.bookMeeting": {
+    "other": "Đặt lịch 1:1 với mình"
+  },
+  "contact.links.messengerNote": {
+    "other": "Mình khá ít hoạt động trên Facebook và Messenger. Mình không thể đảm bảo được sẽ trả lời nhanh nếu bạn nhắn tin qua đây."
+  },
+  "contact.links.pgpKey": {
+    "other": "Khóa công khai PGP"
+  },
+  "contact.links.sshKey": {
+    "other": "Khóa công khai SSH"
+  },
+  "moodCat.title": {
+    "other": "Mèo của hôm nay"
+  },
+  "moodCat.hover": {
+    "other": "mèo âm thầm phán xét bạn"
+  },
+  "moodCat.refresh": {
+    "other": "Cho xem mèo mới đi"
+  },
+  "moodCat.seeMore": {
+    "other": "Xem thêm mèo khác"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "Trò chơi xếp hình cổ điển gắn liền với tuổi thơ của bao thế hệ."
+  },
+  "tetris.gameInfo": {
+    "other": "Thông tin màn chơi"
+  },
+  "tetris.score": {
+    "other": "Điểm"
+  },
+  "tetris.level": {
+    "other": "Cấp độ"
+  },
+  "tetris.status": {
+    "other": "Trạng thái"
+  },
+  "tetris.next": {
+    "other": "Tiếp theo"
+  },
+  "tetris.gameOver": {
+    "other": "Kết thúc"
+  },
+  "tetris.paused": {
+    "other": "Tạm dừng"
+  },
+  "tetris.playing": {
+    "other": "Đang chơi"
+  },
+  "tetris.ready": {
+    "other": "Sẵn sàng"
+  },
+  "tetris.playAgain": {
+    "other": "Chơi lại"
+  },
+  "tetris.pause": {
+    "other": "Tạm dừng"
+  },
+  "tetris.resume": {
+    "other": "Tiếp tục"
+  },
+  "tetris.start": {
+    "other": "Bắt đầu"
+  },
+  "tetris.reset": {
+    "other": "Đặt lại"
+  },
+  "tetris.controls": {
+    "other": "Điều khiển"
+  },
+  "tetris.moveLeft": {
+    "other": "Di chuyển sang trái"
+  },
+  "tetris.moveRight": {
+    "other": "Di chuyển sang phải"
+  },
+  "tetris.moveDown": {
+    "other": "Di chuyển xuống"
+  },
+  "tetris.rotate": {
+    "other": "Xoay khối"
+  },
+  "tetris.hardDrop": {
+    "other": "Thả nhanh"
+  },
+  "tetris.pauseGame": {
+    "other": "Tạm dừng trò chơi"
+  },
+  "tetris.musicOn": {
+    "other": "Bật nhạc"
+  },
+  "tetris.musicOff": {
+    "other": "Tắt nhạc"
+  },
+  "tetris.nowPlaying": {
+    "other": "Đang phát"
+  },
+  "tetris.spacebar": {
+    "other": "Phím cách"
+  },
+  "scrapbook.title": {
+    "other": "Devlog"
+  },
+  "scrapbook.description": {
+    "other": "Một vài nhật ký phát triển khi tôi tạo ra trang web này."
+  },
+  "scrapbook.noEntries": {
+    "other": "Chưa có mục nào."
+  },
+  "settings.title": {
+    "other": "Cài đặt"
+  },
+  "settings.theme": {
+    "other": "Giao diện"
+  },
+  "settings.themeAuto": {
+    "other": "Tự động"
+  },
+  "settings.themeLight": {
+    "other": "Giao diện sáng"
+  },
+  "settings.themeDark": {
+    "other": "Giao diện tối"
+  },
+  "settings.stars": {
+    "other": "Sao lấp lánh"
+  },
+  "settings.reduceMotion": {
+    "other": "Giảm chuyển động"
+  },
+  "settings.highContrast": {
+    "other": "Tương phản cao"
+  },
+  "settings.dyslexiaFont": {
+    "other": "Phông chữ cho người khó đọc"
+  },
+  "settings.timezone": {
+    "other": "Múi giờ"
+  },
+  "settings.tzYours": {
+    "other": "Của bạn"
+  },
+  "settings.tzAuthor": {
+    "other": "Của Jarema"
+  },
+  "settings.music": {
+    "other": "Nhạc"
+  },
+  "settings.musicUnavailable": {
+    "other": "Hiện không khả dụng"
+  },
+  "webrings.title": {
+    "other": "Webring"
+  },
+  "webrings.description": {
+    "other": "Các webring mình đang tham gia. Khám phá thêm những website và blog cá nhân khác nhé."
+  },
+  "webrings.intro1": {
+    "other": "Webring là tập hợp các trang web được tạo bởi những người cùng chí hướng, thường xoay quanh một chủ đề, gu thẩm mỹ hoặc sở thích chung. (từ safonts webring)"
+  },
+  "webrings.intro2": {
+    "other": "Trang web này là một phần của các webring dưới đây. Nhấn vào link để ghé thăm nhà hàng xóm của mình, hoặc các thành viên khác nếu webring đó có chức năng random. Cứ chọn bất kỳ vòng nào bạn thích nha!"
+  },
+  "webrings.previous": {
+    "other": "Trước"
+  },
+  "webrings.random": {
+    "other": "Ngẫu nhiên"
+  },
+  "webrings.next": {
+    "other": "Sau"
+  },
+  "webrings.previousAria": {
+    "other": "Trang trước trong {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "Trang ngẫu nhiên trong {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "Trang sau trong {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "Đang chờ duyệt"
+  },
+  "webrings.pending.description": {
+    "other": "Những webring mình đã đăng ký tham gia và đang chờ phê duyệt."
+  },
+  "webrings.pending.badge": {
+    "other": "Chờ duyệt"
+  },
+  "badges.title": {
+    "other": "Bộ sưu tập huy hiệu web"
+  },
+  "badges.description": {
+    "other": "Một bộ sưu tập các huy hiệu và nút web cổ điển được sử dụng trên website của mình."
+  },
+  "badges.pageTitle": {
+    "other": "Bộ sưu tập huy hiệu web cổ điển"
+  },
+  "badges.pageDescription": {
+    "other": "Mình đã sưu tập những huy hiệu 88x31 này để thể hiện những gì mình và trang web này thực sự quan tâm. Chúng được tạo nên từ thời kỳ Geocities, hồi đó internet chưa bị ngập tràn bởi những cái AI slop. Nếu bạn có một huy hiệu muốn mình thêm vào đây, cứ ới mình nhé."
+  },
+  "badges.myBadgeTitle": {
+    "other": "Huy hiệu của mình (bấm để mở rộng)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "Dùng huy hiệu này để dẫn link về website của mình:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "URL Hotlink:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "Mã HTML"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "Gợi ý khi nhúng mã"
+  },
+  "badges.suggestion1": {
+    "other": "Sử dụng"
+  },
+  "badges.suggestion1b": {
+    "other": "trong CSS của bạn để giữ nguyên phong cách pixel art."
+  },
+  "badges.suggestion2": {
+    "other": "Link trực tiếp về trang chủ của mình tại"
+  },
+  "badges.suggestion3": {
+    "other": "Huy hiệu có kích thước 88x31 pixel, hãy nhân đôi chiều rộng và chiều cao trong HTML lên"
+  },
+  "badges.suggestion3b": {
+    "other": "để dễ đọc hơn trên các màn hình độ phân giải cao."
+  },
+  "badges.collectionHeading": {
+    "other": "Bộ sưu tập huy hiệu"
+  },
+  "badges.search": {
+    "other": "Tìm huy hiệu..."
+  },
+  "badges.filterByCategory": {
+    "other": "Lọc theo danh mục"
+  },
+  "badges.verboseView": {
+    "other": "Chi tiết"
+  },
+  "badges.badgeOnlyView": {
+    "other": "Chỉ hiện huy hiệu"
+  },
+  "badges.showingCount": {
+    "other": "Đang hiện {{count}} huy hiệu"
+  },
+  "badges.showingFiltered": {
+    "other": "Đang hiện {{filtered}} trong tổng số {{total}} huy hiệu"
+  },
+  "badges.noResults": {
+    "other": "Không tìm thấy huy hiệu nào khớp với tìm kiếm"
+  },
+  "badges.categories.all": {
+    "other": "Tất cả"
+  },
+  "badges.categories.personal": {
+    "other": "Cá nhân"
+  },
+  "badges.categories.friends": {
+    "other": "Bạn bè"
+  },
+  "badges.categories.other-sites": {
+    "other": "Trang khác"
+  },
+  "badges.categories.software": {
+    "other": "Phần mềm"
+  },
+  "badges.categories.web": {
+    "other": "Web"
+  },
+  "badges.categories.fun": {
+    "other": "Khác"
+  },
+  "brand.pageTitle": {
+    "other": "Bộ nhận diện"
+  },
+  "brand.pageDescription": {
+    "other": "Bộ nhận diện của trang web của mình. Hãy dùng mấy cái này nếu bạn muốn nhắc đến hoặc dẫn link tới trang này nhé."
+  },
+  "brand.name.title": {
+    "other": "Tên"
+  },
+  "brand.name.nameLabel": {
+    "other": "Tên"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "Tên hiển thị"
+  },
+  "brand.name.symbolNote": {
+    "other": "Ký hiệu 'vì vậy' (∴) luôn là một phần trong tên hiển thị của mình. Nó đại diện cho kết quả, kết luận, điểm kết của luồng suy nghĩ."
+  },
+  "brand.logo.title": {
+    "other": "Logo"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Chỉ mặt"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Mặt và thân trên"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (hoặc bội số to hoặc nhỏ hơn của nó đều được)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (hoặc bội số to hoặc nhỏ hơn của nó đều được)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "Huy hiệu"
+  },
+  "brand.badge.urlLabel": {
+    "other": "URL trực tiếp"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "Mã HTML"
+  },
+  "brand.colors.title": {
+    "other": "Màu sắc"
+  },
+  "brand.colors.names.primary": {
+    "other": "Chủ đạo"
+  },
+  "brand.colors.names.background": {
+    "other": "Nền"
+  },
+  "brand.colors.names.card": {
+    "other": "Thẻ"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Màu trước"
+  },
+  "brand.colors.names.muted": {
+    "other": "Mờ"
+  },
+  "brand.colors.names.border": {
+    "other": "Viền"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Màu nhấn chính"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Nền trang"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Nền thẻ"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Màu chữ chính"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "Các phần tử phụ"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Viền và dải phân cách"
+  },
+  "brand.colors.darkMode": {
+    "other": "Chế độ tối"
+  },
+  "brand.colors.lightMode": {
+    "other": "Chế độ sáng"
+  },
+  "brand.fonts.title": {
+    "other": "Phông chữ"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Hán Nôm Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "Tiêu đề"
+  },
+  "brand.fonts.usage.body": {
+    "other": "Nội dung và giao diện (UI)"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "Tiếng Trung"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "Đoạn mã code"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "Chữ Nôm"
+  },
+  "brand.fonts.weight": {
+    "other": "Độ dày:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "Xem trên kho phông chữ"
+  },
+  "brand.fonts.languages.english": {
+    "other": "Tiếng Anh"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "Tiếng Việt"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "Tiếng Ba Lan"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "Tiếng Nga"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "Tiếng Nhật"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "Tiếng Do Thái"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "Tiếng Thái"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "Ký hiệu"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "Tiếng Trung (Giản thể)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "Tiếng Trung (Phồn thể)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "Tiếng Việt (Chữ Nôm)"
+  },
+  "brand.usage.title": {
+    "other": "Lưu ý nhỏ"
+  },
+  "brand.usage.point1Title": {
+    "other": "Cứ thoải mái dùng"
+  },
+  "brand.usage.point1Text": {
+    "other": "Không cần xin phép để dùng huy hiệu, logo hay dẫn link tới web này đâu. Cứ lấy, hotlink, hay vứt lên web của bạn. Mình không quan tâm. Thực ra là mình còn thấy vui ấy chứ."
+  },
+  "brand.usage.point2Title": {
+    "other": "Giữ nguyên style pixel của huy hiệu"
+  },
+  "brand.usage.point2Text": {
+    "other": "Nếu dùng huy hiệu (badge), làm ơn thêm 'image-rendering: pixelated' (hoặc 'crisp-edges' trên Firefox) vào CSS. Không có nó, trình duyệt sẽ làm mờ pixel nhìn như rác ấy. Nó là pixel art, làm ơn hãy đối xử với nó như pixel art."
+  },
+  "brand.usage.point3Title": {
+    "other": "Ghi nguồn thì tốt, không thì cũng không sao"
+  },
+  "brand.usage.point3Text": {
+    "other": "Nếu bạn viết bài về trang web này hay dùng tư liệu trong blog, dẫn link lại thì mình sẽ vui lắm. Nhưng nếu chỉ gắn cái badge vào trang liên kết thì không cần làm gì thêm đâu, cái mã HTML của badge mình đưa đã có link sẵn về đây rồi."
+  },
+  "brand.usage.point4Title": {
+    "other": "Đừng làm trò"
+  },
+  "brand.usage.point4Text": {
+    "other": "Đừng dùng mấy cái này để giả danh mình, nhét chữ vào mình, hay làm như kiểu mình dính dáng tới cái gì mờ ám. Mình tin là bạn biết sự khác biệt giữa việc dẫn link tới trang bạn thích và việc giả mạo người khác. Nếu thấy lấn cấn không biết việc bạn định làm có kỳ cục không, thì khả năng cao là có đấy."
+  },
+  "brand.usage.footer": {
+    "other": "Thế thôi, cứ dùng đàng hoàng là được."
+  },
+  "colophon.title": {
+    "other": "Thông tin trang web"
+  },
+  "colophon.description": {
+    "other": "Câu chuyện đằng sau trang web này"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Lịch sử trang này"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "Mình mới đăng ký trang web này vào cuối năm 2023, nhưng thiết kế nó đã thay đổi rất nhiều trong suốt thời gian này. Phiên bản đầu tiên chỉ là một trang WordPress ở trên một cái hosting miễn phí nào đó, bản thứ hai thì là trang Carrd.co, và bản thứ ba được xây trên nền Astro. Phiên bản hiện tại là một bản mình thiết kế lại hoàn toàn mới và đập đi xây lại từ đầu."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Mỗi phiên bản đều là một sự tiến hóa nhất định, với bản mới nhất này tập trung vào độ nhanh nhạy, khả năng tiếp cận (accessibility), khả năng điều hướng hoàn toàn bằng bàn phím, và cũng như một cảm giác \"mình\" hơn một chút, thể hiện \"mình\" tốt hơn chút."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Các nền công nghệ sử dụng"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "Framework React cho phép render (tạo ảnh) từ phía server và tạo trang web tĩnh"
+  },
+  "colophon.technologyStack.react": {
+    "other": "Thư viện JavaScript xây dựng giao diện"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Framework CSS theo phương pháp utility-first (viết CSS mà không cần viết quá nhiều CSS)"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Thư viện component (thành phần) tái sử dụng được dựng với Radix UI và Tailwind"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "Thư viện animation (hoạt ảnh) cho React"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Framework hỗ trợ ngôn ngữ"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "Ngôn ngữ lập trình mở rộng dựa trên JavaScript"
+  },
+  "colophon.hosting.title": {
+    "other": "Lưu trữ web (Hosting)"
+  },
+  "colophon.hosting.content1": {
+    "other": "Trang web được lưu trên"
+  },
+  "colophon.hosting.content2": {
+    "other": "hỗ trợ chạy code web thông suốt từ GitHub."
+  },
+  "colophon.hosting.content3": {
+    "other": "Tên miền này được quản lý bởi"
+  },
+  "colophon.hosting.content4": {
+    "other": "và họ cũng giúp bảo mật trang web này cũng như hỗ trợ tăng hiệu năng."
+  },
+  "colophon.design.title": {
+    "other": "Triết lý thiết kế"
+  },
+  "colophon.design.p1": {
+    "other": "Trang web này được thiết kế chú trọng vào khả năng tiếp cận và hiệu suất. Nó hoạt động mà không cần bạn bật JavaScript, sử dụng HTML đúng ngữ nghĩa và tôn trọng quyền riêng tư của bạn bằng cách không sử dụng bất kỳ cookie theo dõi nào."
+  },
+  "colophon.design.p2": {
+    "other": "Thiết kế hướng tới cân bằng giữa thẩm mỹ hiện đại và sự đơn giản cổ điển của web indie. Chế độ tối được đặt mặc định vì mình cũng thương đôi mắt của mình lắm."
+  },
+  "colophon.webStandards.title": {
+    "other": "Tiêu chuẩn web"
+  },
+  "colophon.webStandards.intro": {
+    "other": "Trang web này triển khai:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "microformats"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "RSS, Atom và JSON feeds"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt và sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "Khả năng tiếp cận"
+  },
+  "colophon.accessibility.intro": {
+    "other": "Mình cố gắng làm cho trang web này có thể truy cập được cho tất cả mọi người. Các tính năng bao gồm:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "Cấu trúc HTML ngữ nghĩa"
+  },
+  "colophon.accessibility.item2": {
+    "other": "Liên kết 'Skip-to-content'"
+  },
+  "colophon.accessibility.item3": {
+    "other": "Phân cấp tiêu đề hợp lý"
+  },
+  "colophon.accessibility.item4": {
+    "other": "Độ tương phản màu WCAG 2.1 AA"
+  },
+  "colophon.accessibility.item5": {
+    "other": "Điều hướng bằng bàn phím"
+  },
+  "colophon.accessibility.item6": {
+    "other": "Tôn trọng tùy chọn giảm chuyển động"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "Nếu bạn gặp bất kỳ vấn đề nào về khả năng tiếp cận, vui lòng"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "cho mình biết"
+  },
+  "colophon.inspiration.title": {
+    "other": "Nguồn cảm hứng"
+  },
+  "colophon.inspiration.content1": {
+    "other": "Trang này lấy cảm hứng từ"
+  },
+  "colophon.inspiration.content2": {
+    "other": "mà lại có cảm hứng từ"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Ý tưởng ban đầu ở trên"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Colophon của Maggie Appleton"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Colophon của Gwern Branwen"
+  },
+  "footer.copyright": {
+    "other": "2026, ∴ Jarema, CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "làm với mọi yêu thương"
+  },
+  "footer.andChaos": {
+    "other": "và vài tuần nghịch code"
+  },
+  "footer.uptime": {
+    "other": "Trạng thái hoạt động"
+  },
+  "footer.siteStatus": {
+    "other": "Tình trạng trang"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Phím tắt"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Điều hướng"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Hành động"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Đóng"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Trang chủ"
+  },
+  "keyboardShortcuts.about": {
+    "other": "Giới thiệu"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blog"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Dự án"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Hiện tại"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Công cụ"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "Liên hệ"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Thông tin"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "Sơ đồ trang web"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Devlog"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Chuyển đổi ngôn ngữ"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Chuyển đổi chủ đề"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Thay đổi ảnh mèo"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Mở bảng phím tắt"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Mở thanh tìm kiếm"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Webrings"
+  },
+  "actionSearch.2048": {
+    "other": "Chơi 2048"
+  },
+  "actionSearch.title": {
+    "other": "Tìm kiếm hành động"
+  },
+  "actionSearch.placeholder": {
+    "other": "Gõ để tìm hành động..."
+  },
+  "actionSearch.noResults": {
+    "other": "Không tìm thấy hành động nào"
+  },
+  "actionSearch.goTo": {
+    "other": "Chuyển đến trang"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Chuyển đổi chủ đề"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Chuyển sang chế độ tối"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Chuyển sang chế độ sáng"
+  },
+  "actionSearch.appearance": {
+    "other": "Giao diện"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Chuyển đổi ngôn ngữ"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Xem mèo mới"
+  },
+  "actionSearch.playGame": {
+    "other": "Chơi trò chơi"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "Xem toàn bộ phím tắt"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "Nhấn . để mở thanh tìm kiếm"
+  },
+  "actionSearch.escToClose": {
+    "other": "Nhấn ESC để thoát"
+  },
+  "actionSearch.fun": {
+    "other": "Chơi vui"
+  },
+  "actionSearch.games": {
+    "other": "Trò chơi"
+  },
+  "actionSearch.tetris": {
+    "other": "Chơi Tetris"
+  },
+  "actionSearch.help": {
+    "other": "Trợ giúp"
+  },
+  "actionSearch.projects.category": {
+    "other": "Điều hướng qua các dự án"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Đóng dự án"
+  },
+  "actionSearch.projects.left": {
+    "other": "Điều hướng sang trái"
+  },
+  "actionSearch.projects.right": {
+    "other": "Điều hướng sang phải"
+  },
+  "actionSearch.projects.up": {
+    "other": "Điều hướng lên"
+  },
+  "actionSearch.projects.down": {
+    "other": "Điều hướng xuống"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Mở dự án {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Điều hướng qua các bài viết"
+  },
+  "actionSearch.blog.next": {
+    "other": "Đến bài viết tiếp theo"
+  },
+  "actionSearch.blog.prev": {
+    "other": "Đến bài viết trước"
+  },
+  "actionSearch.blog.search": {
+    "other": "Tìm kiếm bài viết"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Lọc bài viết"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "Đi tới bài viết số {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "Quay lại danh sách bài viết"
+  },
+  "actionSearch.about.category": {
+    "other": "Điều hướng qua các phần giới thiệu"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "Đi đến chương {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "Điều hướng qua các phần công cụ"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "Đi đến mục {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "Điều hướng qua các phần"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "Đi đến mục {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Điều hướng qua các phần thông tin"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "Đi đến phần {{section}}"
+  },
+  "actionSearch.tools": {
+    "other": "Công cụ"
+  },
+  "textCounter.title": {
+    "other": "Công cụ đếm văn bản"
+  },
+  "textCounter.description": {
+    "other": "Đếm ký tự, từ, câu, đoạn văn, tính thời gian đọc và nói."
+  },
+  "textCounter.placeholder": {
+    "other": "Bắt đầu nhập hoặc dán văn bản của bạn vào đây..."
+  },
+  "textCounter.clear": {
+    "other": "Xóa"
+  },
+  "textCounter.stats.characters": {
+    "other": "Ký tự"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "Ký tự (không tính dấu cách)"
+  },
+  "textCounter.stats.words": {
+    "other": "Từ"
+  },
+  "textCounter.stats.sentences": {
+    "other": "Câu"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "Đoạn văn"
+  },
+  "textCounter.stats.lines": {
+    "other": "Dòng"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "Thời gian đọc"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "Thời gian nói"
+  },
+  "textCounter.textLanguage": {
+    "other": "Ngôn ngữ văn bản"
+  },
+  "textCounter.languages.en": {
+    "other": "Tiếng Anh"
+  },
+  "textCounter.languages.vi": {
+    "other": "Tiếng Việt"
+  },
+  "textCounter.languages.et": {
+    "other": "Tiếng Estonia"
+  },
+  "textCounter.languages.zh": {
+    "other": "Tiếng Trung"
+  },
+  "textCounter.languages.ru": {
+    "other": "Tiếng Nga"
+  },
+  "textCounter.languages.custom": {
+    "other": "Khác / tùy chỉnh"
+  },
+  "textCounter.languages.advanced": {
+    "other": "Cài đặt nâng cao"
+  },
+  "textCounter.speed.label": {
+    "other": "Tốc độ"
+  },
+  "textCounter.speed.slow": {
+    "other": "Chậm"
+  },
+  "textCounter.speed.average": {
+    "other": "Trung bình"
+  },
+  "textCounter.speed.fast": {
+    "other": "Nhanh"
+  },
+  "textCounter.speed.custom": {
+    "other": "Tùy chỉnh"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "Đọc (từ/phút)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "Nói (từ/phút)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "Mục tùy chỉnh đang sử dụng tốc độ mặc định của tiếng Anh. Hãy chuyển tốc độ sang \"Tùy chỉnh\" để chỉnh sang giá trị chính xác bạn muốn."
+  },
+  "textCounter.advanced.title": {
+    "other": "Cài đặt nâng cao"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "Tắt đếm từ"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "Dành cho các ngôn ngữ sử dụng chữ viết tượng hình không phân cách các từ bằng dấu cách."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "Coi mỗi lần xuống dòng là một đoạn văn"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "Đếm mỗi lần xuống dòng là một đoạn văn, không bắt buộc phải có dòng trống giữa hai đoạn văn. Bộ đếm dòng sẽ bị ẩn."
+  },
+  "textCounter.privacy.summary": {
+    "other": "Thông tin về quyền riêng tư"
+  },
+  "textCounter.privacy.body": {
+    "other": "Công cụ này chạy hoàn toàn trong trình duyệt của bạn. Bạn có thể ngắt kết nối internet và nó vẫn sẽ hoạt động, văn bản của bạn hoàn toàn không bị gửi đi bất cứ đâu."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "Phương pháp xác minh kỹ thuật:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "Để xác minh, hãy mở DevTools của trình duyệt (F12) → tab Mạng (Network), sau đó nhập vào vùng văn bản và xác nhận rằng không có yêu cầu mới nào được thực hiện sau khi trang hoàn tất tải."
+  },
+  "tools.title": {
+    "other": "Công cụ"
+  },
+  "tools.description": {
+    "other": "Một số tiện ích hữu ích."
+  },
+  "tools.items.counter.title": {
+    "other": "Trình đếm văn bản"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "Đếm ký tự, từ, câu, đoạn văn, ước tính thời gian đọc và nói."
+  },
+  "slashes.title": {
+    "other": "Slashes"
+  },
+  "slashes.description": {
+    "other": "Danh sách tất cả các trang chính trên trang web này."
   }
 }

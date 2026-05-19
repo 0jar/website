@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="space-y-12">
+  <section class="text-center py-12">
+    <h1 class="text-4xl font-bold mb-4">{{ i18n "home.heading" | default "hi there, i'm Jarema" }}</h1>
+    <p class="text-xl text-muted-foreground">{{ i18n "home.subheading" | default "Economics major, sometimes coder, most times cat whisperer." }}</p>
+  </section>
+  
+  <section>
+    <h2 class="text-2xl font-bold mb-4">{{ i18n "home.recentPosts" | default "Recent blog posts" }}</h2>
+    <ul class="space-y-4">
+      {{ range first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+      <li class="flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-border rounded-lg hover:bg-muted/50 transition-colors">
+        <a href="{{ .Permalink }}" class="text-lg font-medium hover:underline">{{ .Title }}</a>
+        <span class="text-muted-foreground text-sm mt-2 sm:mt-0">{{ .Date.Format "Jan 02, 2006" }}</span>
+      </li>
+      {{ end }}
+    </ul>
+    <div class="mt-4">
+      <a href="/blog/" class="text-primary hover:underline">Read all posts &rarr;</a>
+    </div>
+  </section>
+</div>
+{{ end }}

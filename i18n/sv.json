@@ -1,719 +1,1667 @@
 {
-  "404": {
-    "title": "Du har gått vilse",
-    "description": "Katten vet inte ens var detta är.",
-    "button": "Gå tillbaka hem",
-    "sitemap": "Visa webbplatskarta",
-    "enjoycat": "Medan du är vilse, njut av denna katt:"
+  "404.title": {
+    "other": "Du har gått vilse"
   },
-  "2048": {
-    "description": "Slå ihop brickorna, nå 2048!",
-    "score": "Poäng",
-    "best": "Bästa",
-    "gameOver": "Spelet över!",
-    "finalScore": "Slutpoäng",
-    "tryAgain": "Försök igen",
-    "youWin": "Du vann!",
-    "currentScore": "Nuvarande poäng",
-    "keepPlaying": "Fortsätt spela",
-    "newGame": "Nytt spel",
-    "howToPlay": "Hur man spelar",
-    "instructions1": "Använd piltangenterna eller WASD för att flytta brickorna. När två brickor med samma nummer möts, slås de ihop!",
-    "instructions2": "Efter varje drag dyker en ny bricka upp (antingen 2 eller 4).",
-    "instructions3": "Skapa en bricka med siffran 2048 för att vinna spelet!",
-    "controls": "Kontroller",
-    "moveLeft": "Flytta vänster",
-    "moveRight": "Flytta höger",
-    "moveUp": "Flytta upp",
-    "moveDown": "Flytta ner",
-    "touchInstructions": "På mobila enheter, använd knapparna på skärmen för att flytta brickor.",
-    "undo": "Ångra",
-    "title": "2048",
-    "instructions4": "När du har nått 2048 kan du fortsätta spela för att få ännu högre poäng!"
+  "404.description": {
+    "other": "Katten vet inte ens var detta är."
   },
-  "nav": {
-    "home": "Hem",
-    "about": "Om mig",
-    "projects": "Projekt",
-    "blog": "Blogg",
-    "now": "Nu",
-    "uses": "Verktyg",
-    "contact": "Kontakt",
-    "guestbook": "Gästbok",
-    "colophon": "Kolofon",
-    "webring": "Webbring",
-    "scrapbook": "Dagbok",
-    "slashes": "Sidkarta",
-    "brand": "Brand-kit",
-    "badges": "Märken",
-    "tools": "Verktyg"
+  "404.button": {
+    "other": "Gå tillbaka hem"
   },
-  "languageNotice": {
-    "message": "Översättningar för detta språk är fortfarande under arbete. Viss information kan vara ofullständig eller saknas.",
-    "dismiss": "Stäng"
+  "404.sitemap": {
+    "other": "Visa webbplatskarta"
   },
-  "language": {
-    "main": "Huvudspråk",
-    "beta": "Språk i beta",
-    "other": "Andra språk",
-    "auto": "Auto (webbläsarspråk)",
-    "search": "Sök språk...",
-    "en": "Engelska",
-    "vi": "Vietnamesiska",
-    "ru": "Ryska",
-    "et": "Estniska",
-    "da": "Danska",
-    "tr": "Turkiska",
-    "zh": "Kinesiska",
-    "pl": "Polska",
-    "sv": "Svenska",
-    "fi": "Finska",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "Medan du är vilse, njut av denna katt:"
   },
-  "greetings": {
-    "morning": "God morgon, resenär.",
-    "afternoon": "God eftermiddag, vandrare.",
-    "evening": "God kväll, upptäckare.",
-    "night": "Vaken fortfarande? Jag med."
+  "2048.description": {
+    "other": "Slå ihop brickorna, nå 2048!"
   },
-  "home": {
-    "buttons": {
-      "about": "Om mig",
-      "projects": "Se mina projekt"
-    },
-    "footer": "Välkommen till min digitala trädgård. Utforska gärna.",
-    "heading": "hej, jag är Jarema",
-    "subheading": "Ekonomistudent, ibland kodare, oftast kattviskare.",
-    "contactButton": "Kontakta mig",
-    "aboutButton": "Om mig",
-    "blogButton": "Läs min blogg",
-    "guestbookButton": "Skriv i min gästbok",
-    "recentPosts": "Senaste blogginlägg",
-    "latestNow": "Vad jag gör just nu",
-    "currentMood": "Nuvarande humör",
-    "currentStatus": "Nuvarande status",
-    "time": "Aktuell tid",
-    "yourTime": "Din tid",
-    "myTime": "Min tid",
-    "viewAllWebrings": "Se alla webbringar",
-    "checkOutSites": "Kolla in dessa sajter!",
-    "androidCountdown": "Android kommer att bli ett stängt operativsystem om X dagar"
+  "2048.score": {
+    "other": "Poäng"
   },
-  "guestbook": {
-    "title": "Gästbok",
-    "description": "Lämna ett meddelande i min gästbok!",
-    "poweredBy": "Drivs av",
-    "atabook": "Atabook"
+  "2048.best": {
+    "other": "Bästa"
   },
-  "about": {
-    "title": "Om mig",
-    "description": "Berättelsen om vem jag är, var jag kommer ifrån, vad min passion är och vad jag strävar efter.",
-    "chapters": {
-      "6": {
-        "title": "jag är inte klar än",
-        "content1": "så här är delen de inte skulle läsa.",
-        "content2": "jag är fortfarande arg. sörjer fortfarande en version av mig själv som aldrig fick finnas. vaknar fortfarande vissa dagar och undrar varför allt känns lite fel. ibland tänker jag på att bara sticka, försvinna, nytt namn, ny stad, nytt språk. ibland är det nära att jag gör det.",
-        "content3": "det finns dagar då jag inte ens känner mig mänsklig. mer som ett minne som försöker bli verkligt. mer som ett eko av något mjukare jag inte längre når. andra dagar är jag elektrisk. jag känner varje detalj, solsken på huden, tysta spellistor, hur folks ansikten förändras när de äntligen känner sig trygga nog att vara sig själva. det håller mig vid liv, på något sätt.",
-        "content4": "jag är inte klar med att bli den jag ska bli. men jag är klar med att låtsas att det är okej att vara tyst."
-      }
-    }
+  "2048.gameOver": {
+    "other": "Spelet över!"
   },
-  "projects": {
-    "title": "Mina projekt",
-    "description": "En samling personliga, akademiska och aktivistiska projekt jag har arbetat med. Vissa klara, andra på gång.",
-    "status": {
-      "completed": "Färdig",
-      "inProgress": "Pågår",
-      "planned": "Planerad"
-    },
-    "statusLabels": {
-      "completed": "Färdig",
-      "inProgress": "Pågående",
-      "planned": "Planerad"
-    },
-    "categories": {
-      "personal": "Personligt",
-      "academic": "Akademiskt",
-      "activism": "Aktivism"
-    },
-    "details": {
-      "what": "Vad det är",
-      "learned": "Vad jag lärde mig",
-      "why": "Varför det är viktigt"
-    },
-    "cardActions": {
-      "clickForDetails": "Klicka för detaljer",
-      "clickToClose": "Klicka för att stänga"
-    },
-    "buttons": {
-      "showRandom": "Visa mer slump",
-      "hideRandom": "Dölj kaoset"
-    },
-    "filters": {
-      "all": "Alla"
-    },
-    "clickToFlip": "Klicka för att vända",
-    "what": "Vad är det?",
-    "learned": "Vad jag lärde mig",
-    "why": "Varför byggde jag den?"
+  "2048.finalScore": {
+    "other": "Slutpoäng"
   },
-  "blog": {
-    "title": "Blogg",
-    "description": "Tankar, reflektioner och ibland utbrott. Skrivet vid olika tider och sinnesstämningar.",
-    "language": "Språk",
-    "languageFilter": "Filtrera efter språk",
-    "tag": "Tagg",
-    "sort": "Sortera inlägg",
-    "category": "Kategori",
-    "noPosts": "Inga inlägg än. Kom tillbaka snart!",
-    "search": "Sök inlägg...",
-    "sortNew": "Nyast först",
-    "sortOld": "Äldst först",
-    "sortReadTime": "Lästid",
-    "sortABC": "Alfabetisk",
-    "filter": "Filtrera",
-    "filterDescription": "Filtrera blogginlägg",
-    "activeFilter": "Aktiva filter:",
-    "filterNoMatch": "Inga inlägg matchar dina filter. Prova att ändra sökkriterier.",
-    "clearFilter": "Rensa alla filter",
-    "mood": "Humör",
-    "cat": "Godkänd av katten",
-    "prev": "Föregående inlägg",
-    "next": "Nästa inlägg",
-    "jumpToPost": "Hoppa till inlägg",
-    "back": "Tillbaka till blogglistan",
-    "showingPosts": "Visar {{current}} av {{total}} inlägg",
-    "minRead": "min läsning",
-    "rss": "RSS-flöde",
-    "subscribeRSS": "Prenumerera via RSS",
-    "allPosts": "Flöde med alla inlägg",
-    "languageFeeds": "Språkspecifika flöden",
-    "rssDescription": "Prenumerera på mina RSS-flöden i din favoritläsare för att få notiser om nya inlägg.",
-    "atom": "Atom-flöde",
-    "subscribeAtom": "Prenumerera via Atom",
-    "atomDescription": "Prenumerera på mina Atom-flöden i din favoritläsare för att få notiser om nya inlägg.",
-    "availableIn": "Den här sidan finns också på",
-    "comments": "Kommentarer",
-    "webmentions": "Webmentions",
-    "webmentionsNone": "Inga webmentions ännu. Bli den första att svara!",
-    "webmentionLike": "gillade detta",
-    "webmentionRepost": "delade detta",
-    "webmentionReply": "svarade",
-    "webmentionMention": "nämnde detta",
-    "tagLabels": {
-      "first-post": "första inlägg",
-      "identity": "identitet",
-      "belonging": "tillhörighet",
-      "introspection": "introspektion",
-      "browsers": "webbläsare",
-      "chrome": "Chrome",
-      "open-web": "öppet webb",
-      "app-defaults": "standardappar",
-      "software": "programvara",
-      "tools": "verktyg",
-      "new-year": "nyår",
-      "reflection": "reflektion",
-      "health": "hälsa",
-      "tet": "Tet-högtid",
-      "vietnam": "Vietnam",
-      "military": "militär",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "säkerhetshärdning",
-      "values": "värderingar",
-      "personal-philosophy": "personlig filosofi"
-    },
-    "categoryLabels": {
-      "personal": "Personligt",
-      "meta": "Meta",
-      "identity": "Identitet",
-      "technical": "Tekniskt",
-      "privacy": "Integritet",
-      "opinions": "Åsikter",
-      "life": "Liv",
-      "security": "Säkerhet",
-      "guides": "Guider"
-    }
+  "2048.tryAgain": {
+    "other": "Försök igen"
   },
-  "now": {
-    "title": "Nu",
-    "description": "Vad jag gör, tänker på och fokuserar på just nu.",
-    "lastUpdated": "Senast uppdaterad",
-    "whatIsNow": "Vad är en /now-sida?",
-    "whatIsNowDescription": "En now-sida är en sida på en personlig webbplats som berättar vad en person fokuserar på just nu, idag eller nyligen. Du kan läsa mer på",
-    "categories": {
-      "reading": "Läser",
-      "coding": "Kodar",
-      "drinking": "Dricker",
-      "listening": "Lyssnar",
-      "premid": "Discord-aktivitet",
-      "thinking": "Tänker",
-      "studying": "Pluggar",
-      "planning": "Planerar"
-    }
+  "2048.youWin": {
+    "other": "Du vann!"
   },
-  "uses": {
-    "title": "Verktyg",
-    "description": "Alla saker jag använder dagligen. Inspirerad av",
-    "websiteDescription": "en webbplats där folk delar vad de använder.",
-    "categories": {
-      "hardware": "Hårdvara",
-      "mobile": "Mobil",
-      "audio": "Ljud",
-      "os": "Operativsystem & webbläsare",
-      "development": "Utveckling",
-      "email": "E-post & produktivitet",
-      "privacy": "Integritet & säkerhet",
-      "mobile_tools": "Mobilverktyg",
-      "mapping": "Kartläggning",
-      "gaming": "Spel",
-      "multimedia": "Multimedia",
-      "design": "Design & illustration",
-      "photo": "Bildredigering",
-      "video": "Video & ljud",
-      "media": "Streaming-tjänster"
-    },
-    "subsections": {
-      "design": "Design & illustration",
-      "photo": "Bildredigering",
-      "video": "Video & ljud",
-      "media": "Mediatjänster"
-    },
-    "hidden": {
-      "clickToReveal": "Klicka 5 gånger för att visa",
-      "clicksLeft": "({{clicks}} klick kvar för att visa)",
-      "platformPrefix": "Dold plattform"
-    }
+  "2048.currentScore": {
+    "other": "Nuvarande poäng"
   },
-  "contact": {
-    "title": "Kontakt",
-    "description": "Sätt att nå ut och kontakta mig.",
-    "message": "var inte blyg. säg hej. eller boka ett 1:1 om du känner dig proffs :)",
-    "disclaimer": "jag svarar på mejl. troligen. om jag inte blir distraherad av en fågel eller något",
-    "sections": {
-      "contactMe": "Kontakta mig",
-      "socialMedia": "Jag på sociala medier",
-      "otherPlatforms": "Jag på andra plattformar"
-    },
-    "sectionTitles": {
-      "contactMe": "Kontakta mig",
-      "socialMedia": "Jag på sociala medier",
-      "otherPlatforms": "Jag på andra plattformar",
-      "keys": "Publika nycklar"
-    },
-    "links": {
-      "universityEmail": "Universitetsmejl",
-      "bookMeeting": "Boka möte med mig",
-      "messengerNote": "Jag är väldigt inaktiv på Facebook och Messenger. Svar sker i mån av tid.",
-      "pgpKey": "PGP publik nyckel",
-      "sshKey": "SSH publik nyckel"
-    }
+  "2048.keepPlaying": {
+    "other": "Fortsätt spela"
   },
-  "moodCat": {
-    "title": "Dagens katt",
-    "hover": "dömer dig mjukt",
-    "refresh": "Ny katt, vem är du?",
-    "seeMore": "Se fler katter"
+  "2048.newGame": {
+    "other": "Nytt spel"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "Ett klassiskt spel med fallande block och försvinnande rader",
-    "gameInfo": "Spelinformation",
-    "score": "Poäng",
-    "level": "Nivå",
-    "status": "Status",
-    "next": "Nästa",
-    "gameOver": "Spelet över",
-    "paused": "Pausad",
-    "playing": "Spelar",
-    "ready": "Redo",
-    "playAgain": "Spela igen",
-    "pause": "Paus",
-    "resume": "Fortsätt",
-    "start": "Starta",
-    "reset": "Återställ",
-    "controls": "Kontroller",
-    "moveLeft": "Flytta vänster",
-    "moveRight": "Flytta höger",
-    "moveDown": "Flytta ner",
-    "rotate": "Rotera block",
-    "hardDrop": "Snabbsläpp",
-    "pauseGame": "Pausa spelet",
-    "musicOn": "Musik på",
-    "musicOff": "Musik av",
-    "nowPlaying": "Spelar nu",
-    "spacebar": "Mellanslag"
+  "2048.howToPlay": {
+    "other": "Hur man spelar"
   },
-  "scrapbook": {
-    "title": "Devlogg",
-    "description": "Några utvecklingsloggar från när jag byggde den här sidan.",
-    "noEntries": "Inga inlägg ännu."
+  "2048.instructions1": {
+    "other": "Använd piltangenterna eller WASD för att flytta brickorna. När två brickor med samma nummer möts, slås de ihop!"
   },
-  "settings": {
-    "title": "Inställningar",
-    "theme": "Tema",
-    "themeAuto": "Auto",
-    "themeLight": "Ljust tema",
-    "themeDark": "Mörkt tema",
-    "stars": "Blinkande stjärnor",
-    "reduceMotion": "Minska rörelse",
-    "highContrast": "Hög kontrast",
-    "dyslexiaFont": "Dyslexitypsnitt",
-    "timezone": "Tidszon",
-    "tzYours": "Din",
-    "tzAuthor": "Jaremas",
-    "music": "Musik",
-    "musicUnavailable": "Inte tillgänglig just nu"
+  "2048.instructions2": {
+    "other": "Efter varje drag dyker en ny bricka upp (antingen 2 eller 4)."
   },
-  "webrings": {
-    "title": "Webbringar",
-    "description": "Webbringar som jag är med i. Upptäck fler oberoende webbplatser och personliga bloggar.",
-    "intro1": "En webbring är en samling webbplatser skapade av likasinnade, oftast centrerade kring ett ämne, estetik eller gemensamt intresse. (från safonts webring)",
-    "intro2": "Denna webbplats är en del av dessa webbringar. Klicka på länkarna för att besöka mina grannars sidor, och andra medlemmar om den webbringen har en slumpfunktion. Välj vilken ring du vill!",
-    "previous": "Föregående",
-    "random": "Slumpmässig",
-    "next": "Nästa",
-    "previousAria": "Föregående sida i {{name}}",
-    "randomAria": "Slumpmässig sida i {{name}}",
-    "nextAria": "Nästa sida i {{name}}",
-    "pending": {
-      "title": "Väntar på Godkännande",
-      "description": "Dessa är webbringar jag har ansökt om att gå med i och väntar på godkännande.",
-      "badge": "Väntar"
-    }
+  "2048.instructions3": {
+    "other": "Skapa en bricka med siffran 2048 för att vinna spelet!"
   },
-  "badges": {
-    "title": "Samling av webbmärken",
-    "description": "En samling klassiska webbmärken och knappar som används på min webbplats.",
-    "pageTitle": "Klassisk webbmärkessamling",
-    "pageDescription": "Jag har samlat dessa 88x31-märken för att visa vad jag och den här sidan faktiskt bryr oss om. De är en tillbakablick till Geocities-eran då internet var mindre fyllt av företags- och AI-smörja. Om du har ett märke du vill att jag ska lägga till här, säg bara till.",
-    "myBadgeTitle": "Mitt märke (klicka för att expandera)",
-    "myBadgeIntro": "Använd detta märke för att länka till min webbplats:",
-    "hotlinkUrl": "Hotlink URL:",
-    "htmlCodeTitle": "HTML-kod",
-    "embeddingSuggestionsTitle": "Förslag för inbäddning",
-    "suggestion1": "Använd",
-    "suggestion1b": "i din CSS för att behålla pixelkonst-stilen.",
-    "suggestion2": "Länka direkt till min hemsida på",
-    "suggestion3": "Märket är 88x31 pixlar, dubbla bredden och höjden i din HTML till",
-    "suggestion3b": "för att göra dem lättare att läsa på högupplösta skärmar.",
-    "collectionHeading": "Märkessamling",
-    "search": "Sök märken...",
-    "filterByCategory": "Filtrera efter kategori",
-    "verboseView": "Detaljerad",
-    "badgeOnlyView": "Endast märke",
-    "showingCount": "Visar {{count}} märken",
-    "showingFiltered": "Visar {{filtered}} av {{total}} märken",
-    "noResults": "Inga märken hittades som matchar dina sökkriterier",
-    "categories": {
-      "all": "Alla",
-      "personal": "Personligt",
-      "friends": "Vänner",
-      "other-sites": "Andra sidor",
-      "software": "Programvara",
-      "web": "Webb",
-      "fun": "Nöje"
-    }
+  "2048.controls": {
+    "other": "Kontroller"
   },
-  "brand": {
-    "pageTitle": "Profil",
-    "pageDescription": "Visuell identitet och element. Använd dessa om du vill referera eller länka till denna sida.",
-    "name": {
-      "title": "Namn",
-      "nameLabel": "Namn",
-      "displayNameLabel": "Visningsnamn",
-      "symbolNote": "Symbolen för 'därför' (∴) är alltid en del av mitt visningsnamn. Den representerar resultat, logiska slutsatser, kopplingar, slutet på en tankeprocess; den är direkt och en stabil form."
-    },
-    "logo": {
-      "title": "Logotyp",
-      "faceOnly": "Endast ansikte",
-      "faceAndBody": "Ansikte och kropp",
-      "dimensions1": "384×384px (eller multiplar)",
-      "dimensions2": "512×512px (eller multiplar)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "Badge",
-      "urlLabel": "Direkt URL",
-      "htmlLabel": "HTML-kod"
-    },
-    "colors": {
-      "title": "Färger",
-      "names": {
-        "primary": "Primär",
-        "background": "Bakgrund",
-        "card": "Kort",
-        "foreground": "Förgrund",
-        "muted": "Dämpad",
-        "border": "Kantlinje"
-      },
-      "descriptions": {
-        "primary": "Huvudaccentfärg",
-        "background": "Sidbakgrund",
-        "card": "Kortbakgrund",
-        "foreground": "Huvudtextfärg",
-        "muted": "Sekundära element",
-        "border": "Kanter och avdelare"
-      },
-      "darkMode": "Mörkt läge",
-      "lightMode": "Ljust läge"
-    },
-    "fonts": {
-      "title": "Typsnitt",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "Rubriker och titlar",
-        "body": "Brödtext och UI",
-        "notoSansSC": "Kinesisk text",
-        "monaspice": "Kod och monospace-text",
-        "hanNomGothic": "Vietnamesisk Chữ Nôm"
-      },
-      "weight": "Vikt:",
-      "viewOnGoogleFonts": "Visa i arkivet",
-      "languages": {
-        "english": "Engelska",
-        "vietnamese": "Vietnamesiska",
-        "polish": "Polska",
-        "russian": "Ryska",
-        "japanese": "Japanska",
-        "hebrew": "Hebreiska",
-        "thai": "Thailändska",
-        "symbols": "Symboler",
-        "chineseSimplified": "Kinesiska (Förenklad)",
-        "chineseTraditional": "Kinesiska (Traditionell)",
-        "vietnameseHanNom": "Vietnamesiska (Chữ Nôm)"
-      }
-    },
-    "usage": {
-      "title": "Några noter",
-      "point1Title": "Använd dem gärna",
-      "point1Text": "Du behöver inte be om lov för att använda badgen, loggan eller länka till sidan. Ta dem, hotlinka, släng upp dem på din sajt. Jag bryr mig inte. Faktiskt skulle jag bli glad.",
-      "point2Title": "Behåll badgens pixliga stil",
-      "point2Text": "Om du använder badgen, snälla använd 'image-rendering: pixelated' (eller 'crisp-edges' för Firefox) i din CSS. Utan det kommer webbläsare göra pixlarna suddiga och det ser ut som skit. Det är pixel art, behandla det som pixel art.",
-      "point3Title": "Erkännande är trevligt men valfritt",
-      "point3Text": "Om du skriver om sajten eller använder detta i ett blogginlägg, vore en länk tillbaka uppskattat. Men om du bara lägger till min badge på din länksida behöver du inte göra något extra. Min HTML-kod för badgen länkar redan hit.",
-      "point4Title": "Gör inget konstigt",
-      "point4Text": "Använd inte dessa för att utge dig för att vara jag, påstå att jag stödjer något jag inte gör, eller få det att se ut som att jag är associerad med något skumt. Jag litar på att du vet skillnaden på att länka till en sida du gillar och att låtsas vara någon annan. Om du är osäker på om det du gör är konstigt, så är det förmodligen det.",
-      "footer": "Det var allt, använd dem med respekt så är vi lugna."
-    }
+  "2048.moveLeft": {
+    "other": "Flytta vänster"
   },
-  "colophon": {
-    "title": "Kolofon",
-    "description": "Historien bakom denna webbplats och hur den byggdes",
-    "siteHistory": {
-      "title": "Webbplatsens historia",
-      "content1": "Den här webbplatsen registrerades först i slutet av 2023, men designen har ändrats mycket under dess livstid. Första versionen var en enkel WordPress-sida på ett skumt gratis webbhotell, andra var Carrd-baserad, tredje byggd med Astro. Den nuvarande versionen (fjärde) är en total omdesign byggd från grunden med moderna webtekniker.",
-      "content2": "Varje version har varit en utveckling, där den senaste fokuserar på prestanda, tillgänglighet, fullständig tangentbordsnavigering och en mer personlig känsla som bättre representerar vem jag är och vad jag bryr mig om."
-    },
-    "technologyStack": {
-      "title": "Teknikstack",
-      "nextjs": "React-ramverk som möjliggör server-side rendering och statisk webbplatsgenerering",
-      "react": "JavaScript-bibliotek för att bygga användargränssnitt",
-      "tailwind": "Utility-first CSS-ramverk",
-      "shadcn": "Återanvändbart komponentbibliotek byggt med Radix UI och Tailwind",
-      "framer": "Animationsbibliotek för React",
-      "i18next": "Internationaliseringsramverk",
-      "typescript": "Starkt typat programmeringsspråk som bygger på JavaScript"
-    },
-    "hosting": {
-      "title": "Hosting & distribution",
-      "content1": "Sidan är hostad på",
-      "content2": "som erbjuder smidig distribution från GitHub, automatisk HTTPS och global CDN.",
-      "content3": "Domänen hanteras via",
-      "content4": "som ger extra säkerhet och prestanda."
-    },
-    "design": {
-      "title": "Designfilosofi",
-      "p1": "Denna webbplats är utformad med tillgänglighet och prestanda i åtanke. Den fungerar utan JavaScript aktiverat, använder semantisk HTML och respekterar din integritet genom att inte använda några spårningskakor.",
-      "p2": "Designen syftar till en balans mellan modern estetik och klassisk webbenkelhet. Mörkt läge är standard eftersom jag gillar mina näthinnor."
-    },
-    "webStandards": {
-      "title": "Webbstandarder",
-      "intro": "Denna webbplats implementerar:",
-      "microformats": "mikroformat",
-      "feeds": "RSS-, Atom- och JSON-flöden",
-      "robots": "robots.txt och sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "Tillgänglighet",
-      "intro": "Jag strävar efter att göra denna webbplats tillgänglig för alla. Funktioner inkluderar:",
-      "item1": "Semantisk HTML-struktur",
-      "item2": "Hoppa till innehåll-länkar",
-      "item3": "Korrekt rubrikhierarki",
-      "item4": "WCAG 2.1 AA färgkontrast",
-      "item5": "Navigerbar med tangentbord",
-      "item6": "Respekterar inställningar för minskad rörelse",
-      "reportText": "Om du stöter på några tillgänglighetsproblem, vänligen",
-      "contactLink": "låt mig veta"
-    },
-    "inspiration": {
-      "title": "Inspiration",
-      "content1": "Denna sida hämtar inspiration från",
-      "content2": "som i sin tur inspirerats av",
-      "content3": "Ursprunglig idé på",
-      "maggie": "Maggie Appletons kolofon",
-      "gwern": "Gwern Branwens kolofon"
-    }
+  "2048.moveRight": {
+    "other": "Flytta höger"
   },
-  "footer": {
-    "copyright": "2026, ∴ Jarema, CC BY 4.0",
-    "madeWith": "gjord med kärlek",
-    "andChaos": "och några veckors kodande",
-    "uptime": "Drifttid",
-    "siteStatus": "Webbplatsstatus"
+  "2048.moveUp": {
+    "other": "Flytta upp"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Tangentbordsgenvägar",
-    "navigation": "Navigering",
-    "actions": "Åtgärder",
-    "close": "Stäng",
-    "home": "Hem",
-    "about": "Om mig",
-    "blog": "Blogg",
-    "projects": "Projekt",
-    "now": "Nu",
-    "uses": "Verktyg",
-    "contact": "Kontakt",
-    "colophon": "Kolofon",
-    "slashes": "Sidkarta",
-    "scrapbook": "Devlogg",
-    "tetris": "Tetris",
-    "cycleLanguage": "Byt språk",
-    "cycleTheme": "Byt tema",
-    "refreshCat": "Uppdatera humörkatt",
-    "openShortcuts": "Öppna tangentbordsgenvägar",
-    "actionSearch": "Öppna åtgärdssökning",
-    "webring": "Webbringar"
+  "2048.moveDown": {
+    "other": "Flytta ner"
   },
-  "actionSearch": {
-    "2048": "Spela 2048",
-    "title": "Sök åtgärder",
-    "placeholder": "Sök åtgärder...",
-    "noResults": "Inga åtgärder hittades",
-    "goTo": "Gå till sida",
-    "toggleTheme": "Byt tema",
-    "switchDarkMode": "Byt till mörkt läge",
-    "switchLightMode": "Byt till ljust läge",
-    "appearance": "Utseende",
-    "cycleLanguage": "Byt språk",
-    "refreshCat": "Hämta ny humörkatt",
-    "playGame": "Spela spel",
-    "viewShortcuts": "Visa alla genvägar",
-    "pressToOpen": "Tryck . för att öppna kommandopaletten",
-    "escToClose": "ESC för att stänga",
-    "fun": "Kul",
-    "games": "Spel",
-    "tetris": "Spela Tetris",
-    "help": "Hjälp",
-    "projects": {
-      "category": "Navigera bland projektkort",
-      "closeCard": "Stäng vänt kort",
-      "left": "Navigera vänster",
-      "right": "Navigera höger",
-      "up": "Navigera upp",
-      "down": "Navigera ner",
-      "flipCard": "Vänd projektkort: {{title}}"
-    },
-    "blog": {
-      "category": "Navigera bland blogginlägg",
-      "next": "Till nästa inlägg",
-      "prev": "Till föregående inlägg",
-      "search": "Sök blogginlägg",
-      "filterTag": "Filtrera blogginlägg",
-      "jumpToPost": "Hoppa till inlägg {{i}}",
-      "back": "Tillbaka till blogglistan"
-    },
-    "about": {
-      "category": "Navigera bland om-sektioner",
-      "jumpToChapter": "Hoppa till kapitel {{i}}"
-    },
-    "uses": {
-      "category": "Navigera bland verktygssektioner",
-      "jumpToCategory": "Hoppa till {{category}}"
-    },
-    "now": {
-      "category": "Navigera bland nu-sektioner",
-      "jumpToCategory": "Hoppa till {{category}}"
-    },
-    "colophon": {
-      "category": "Navigera bland kolofonsektioner",
-      "jumpToSection": "Hoppa till {{section}}"
-    },
-    "tools": "Verktyg"
+  "2048.touchInstructions": {
+    "other": "På mobila enheter, använd knapparna på skärmen för att flytta brickor."
   },
-  "textCounter": {
-    "title": "Texträknare",
-    "description": "Räkna tecken, ord, meningar, stycken och beräkna tal-/lästid.",
-    "placeholder": "Börja skriva eller klistra in din text här...",
-    "clear": "Rensa",
-    "stats": {
-      "characters": "Tecken",
-      "charactersNoSpaces": "Tecken (utan mellanslag)",
-      "words": "Ord",
-      "sentences": "Meningar",
-      "paragraphs": "Stycken",
-      "lines": "Rader",
-      "readingTime": "Lästid",
-      "speakingTime": "Taltid"
-    },
-    "textLanguage": "Textspråk",
-    "languages": {
-      "en": "Engelska",
-      "vi": "Vietnamesiska",
-      "et": "Estniska",
-      "zh": "Kinesiska",
-      "ru": "Ryska",
-      "custom": "Annat / anpassat",
-      "advanced": "Avancerade inställningar"
-    },
-    "speed": {
-      "label": "Hastighet",
-      "slow": "Långsam",
-      "average": "Medel",
-      "fast": "Snabb",
-      "custom": "Anpassad",
-      "readingWpm": "Läsning (ord per minut)",
-      "speakingWpm": "Tal (ord per minut)",
-      "englishDefaultsWarning": "Tidsberäkningarna använder för närvarande engelska standardhastigheter. Byt till \"Anpassad\" för att ange exakta värden."
-    },
-    "advanced": {
-      "title": "Avancerade inställningar",
-      "disableWords": "Inaktivera ordräkning",
-      "disableWordsDesc": "För logografiska och brahmiska språk skiljer inte mellanslag ord åt.",
-      "newlineAsParagraph": "Behandla varje rad som ett stycke",
-      "newlineAsParagraphDesc": "Räkna enskilda radbrytningar som styckebrytningar istället för att kräva tomma rader. Radräknaren kommer att döljas."
-    },
-    "privacy": {
-      "summary": "Integritetsinformation",
-      "body": "Det här verktyget körs helt i din webbläsare. Du kan koppla från internet och det kommer fortfarande att fungera, din text skickas aldrig någonstans.",
-      "technicalLabel": "Teknisk verifiering:",
-      "technical": "För att verifiera detta öppnar du webbläsarens DevTools (F12) → fliken Nätverk (Network), skriver i textfältet och bekräftar att inga förfrågningar görs efter att sidan har laddats klart."
-    }
+  "2048.undo": {
+    "other": "Ångra"
   },
-  "tools": {
-    "title": "Verktyg",
-    "description": "Några praktiska verktyg. Tja, för att jag inte kunde hitta några som verkligen passade mina behov.",
-    "items": {
-      "counter": {
-        "title": "Texträknare",
-        "icon": "🔤",
-        "description": "Räkna tecken, ord, meningar, stycken och uppskatta läs-/taltid."
-      }
-    }
+  "2048.title": {
+    "other": "2048"
   },
-  "slashes": {
-    "title": "Snedstreck",
-    "description": "En lista över alla huvudsidor på denna webbplats."
+  "2048.instructions4": {
+    "other": "När du har nått 2048 kan du fortsätta spela för att få ännu högre poäng!"
+  },
+  "nav.home": {
+    "other": "Hem"
+  },
+  "nav.about": {
+    "other": "Om mig"
+  },
+  "nav.projects": {
+    "other": "Projekt"
+  },
+  "nav.blog": {
+    "other": "Blogg"
+  },
+  "nav.now": {
+    "other": "Nu"
+  },
+  "nav.uses": {
+    "other": "Verktyg"
+  },
+  "nav.contact": {
+    "other": "Kontakt"
+  },
+  "nav.guestbook": {
+    "other": "Gästbok"
+  },
+  "nav.colophon": {
+    "other": "Kolofon"
+  },
+  "nav.webring": {
+    "other": "Webbring"
+  },
+  "nav.scrapbook": {
+    "other": "Dagbok"
+  },
+  "nav.slashes": {
+    "other": "Sidkarta"
+  },
+  "nav.brand": {
+    "other": "Brand-kit"
+  },
+  "nav.badges": {
+    "other": "Märken"
+  },
+  "nav.tools": {
+    "other": "Verktyg"
+  },
+  "languageNotice.message": {
+    "other": "Översättningar för detta språk är fortfarande under arbete. Viss information kan vara ofullständig eller saknas."
+  },
+  "languageNotice.dismiss": {
+    "other": "Stäng"
+  },
+  "language.main": {
+    "other": "Huvudspråk"
+  },
+  "language.beta": {
+    "other": "Språk i beta"
+  },
+  "language.other": {
+    "other": "Andra språk"
+  },
+  "language.auto": {
+    "other": "Auto (webbläsarspråk)"
+  },
+  "language.search": {
+    "other": "Sök språk..."
+  },
+  "language.en": {
+    "other": "Engelska"
+  },
+  "language.vi": {
+    "other": "Vietnamesiska"
+  },
+  "language.ru": {
+    "other": "Ryska"
+  },
+  "language.et": {
+    "other": "Estniska"
+  },
+  "language.da": {
+    "other": "Danska"
+  },
+  "language.tr": {
+    "other": "Turkiska"
+  },
+  "language.zh": {
+    "other": "Kinesiska"
+  },
+  "language.pl": {
+    "other": "Polska"
+  },
+  "language.sv": {
+    "other": "Svenska"
+  },
+  "language.fi": {
+    "other": "Finska"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "God morgon, resenär."
+  },
+  "greetings.afternoon": {
+    "other": "God eftermiddag, vandrare."
+  },
+  "greetings.evening": {
+    "other": "God kväll, upptäckare."
+  },
+  "greetings.night": {
+    "other": "Vaken fortfarande? Jag med."
+  },
+  "home.buttons.about": {
+    "other": "Om mig"
+  },
+  "home.buttons.projects": {
+    "other": "Se mina projekt"
+  },
+  "home.footer": {
+    "other": "Välkommen till min digitala trädgård. Utforska gärna."
+  },
+  "home.heading": {
+    "other": "hej, jag är Jarema"
+  },
+  "home.subheading": {
+    "other": "Ekonomistudent, ibland kodare, oftast kattviskare."
+  },
+  "home.contactButton": {
+    "other": "Kontakta mig"
+  },
+  "home.aboutButton": {
+    "other": "Om mig"
+  },
+  "home.blogButton": {
+    "other": "Läs min blogg"
+  },
+  "home.guestbookButton": {
+    "other": "Skriv i min gästbok"
+  },
+  "home.recentPosts": {
+    "other": "Senaste blogginlägg"
+  },
+  "home.latestNow": {
+    "other": "Vad jag gör just nu"
+  },
+  "home.currentMood": {
+    "other": "Nuvarande humör"
+  },
+  "home.currentStatus": {
+    "other": "Nuvarande status"
+  },
+  "home.time": {
+    "other": "Aktuell tid"
+  },
+  "home.yourTime": {
+    "other": "Din tid"
+  },
+  "home.myTime": {
+    "other": "Min tid"
+  },
+  "home.viewAllWebrings": {
+    "other": "Se alla webbringar"
+  },
+  "home.checkOutSites": {
+    "other": "Kolla in dessa sajter!"
+  },
+  "home.androidCountdown": {
+    "other": "Android kommer att bli ett stängt operativsystem om X dagar"
+  },
+  "guestbook.title": {
+    "other": "Gästbok"
+  },
+  "guestbook.description": {
+    "other": "Lämna ett meddelande i min gästbok!"
+  },
+  "guestbook.poweredBy": {
+    "other": "Drivs av"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "Om mig"
+  },
+  "about.description": {
+    "other": "Berättelsen om vem jag är, var jag kommer ifrån, vad min passion är och vad jag strävar efter."
+  },
+  "about.chapters.6.title": {
+    "other": "jag är inte klar än"
+  },
+  "about.chapters.6.content1": {
+    "other": "så här är delen de inte skulle läsa."
+  },
+  "about.chapters.6.content2": {
+    "other": "jag är fortfarande arg. sörjer fortfarande en version av mig själv som aldrig fick finnas. vaknar fortfarande vissa dagar och undrar varför allt känns lite fel. ibland tänker jag på att bara sticka, försvinna, nytt namn, ny stad, nytt språk. ibland är det nära att jag gör det."
+  },
+  "about.chapters.6.content3": {
+    "other": "det finns dagar då jag inte ens känner mig mänsklig. mer som ett minne som försöker bli verkligt. mer som ett eko av något mjukare jag inte längre når. andra dagar är jag elektrisk. jag känner varje detalj, solsken på huden, tysta spellistor, hur folks ansikten förändras när de äntligen känner sig trygga nog att vara sig själva. det håller mig vid liv, på något sätt."
+  },
+  "about.chapters.6.content4": {
+    "other": "jag är inte klar med att bli den jag ska bli. men jag är klar med att låtsas att det är okej att vara tyst."
+  },
+  "projects.title": {
+    "other": "Mina projekt"
+  },
+  "projects.description": {
+    "other": "En samling personliga, akademiska och aktivistiska projekt jag har arbetat med. Vissa klara, andra på gång."
+  },
+  "projects.status.completed": {
+    "other": "Färdig"
+  },
+  "projects.status.inProgress": {
+    "other": "Pågår"
+  },
+  "projects.status.planned": {
+    "other": "Planerad"
+  },
+  "projects.statusLabels.completed": {
+    "other": "Färdig"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "Pågående"
+  },
+  "projects.statusLabels.planned": {
+    "other": "Planerad"
+  },
+  "projects.categories.personal": {
+    "other": "Personligt"
+  },
+  "projects.categories.academic": {
+    "other": "Akademiskt"
+  },
+  "projects.categories.activism": {
+    "other": "Aktivism"
+  },
+  "projects.details.what": {
+    "other": "Vad det är"
+  },
+  "projects.details.learned": {
+    "other": "Vad jag lärde mig"
+  },
+  "projects.details.why": {
+    "other": "Varför det är viktigt"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "Klicka för detaljer"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "Klicka för att stänga"
+  },
+  "projects.buttons.showRandom": {
+    "other": "Visa mer slump"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "Dölj kaoset"
+  },
+  "projects.filters.all": {
+    "other": "Alla"
+  },
+  "projects.clickToFlip": {
+    "other": "Klicka för att vända"
+  },
+  "projects.what": {
+    "other": "Vad är det?"
+  },
+  "projects.learned": {
+    "other": "Vad jag lärde mig"
+  },
+  "projects.why": {
+    "other": "Varför byggde jag den?"
+  },
+  "blog.title": {
+    "other": "Blogg"
+  },
+  "blog.description": {
+    "other": "Tankar, reflektioner och ibland utbrott. Skrivet vid olika tider och sinnesstämningar."
+  },
+  "blog.language": {
+    "other": "Språk"
+  },
+  "blog.languageFilter": {
+    "other": "Filtrera efter språk"
+  },
+  "blog.tag": {
+    "other": "Tagg"
+  },
+  "blog.sort": {
+    "other": "Sortera inlägg"
+  },
+  "blog.category": {
+    "other": "Kategori"
+  },
+  "blog.noPosts": {
+    "other": "Inga inlägg än. Kom tillbaka snart!"
+  },
+  "blog.search": {
+    "other": "Sök inlägg..."
+  },
+  "blog.sortNew": {
+    "other": "Nyast först"
+  },
+  "blog.sortOld": {
+    "other": "Äldst först"
+  },
+  "blog.sortReadTime": {
+    "other": "Lästid"
+  },
+  "blog.sortABC": {
+    "other": "Alfabetisk"
+  },
+  "blog.filter": {
+    "other": "Filtrera"
+  },
+  "blog.filterDescription": {
+    "other": "Filtrera blogginlägg"
+  },
+  "blog.activeFilter": {
+    "other": "Aktiva filter:"
+  },
+  "blog.filterNoMatch": {
+    "other": "Inga inlägg matchar dina filter. Prova att ändra sökkriterier."
+  },
+  "blog.clearFilter": {
+    "other": "Rensa alla filter"
+  },
+  "blog.mood": {
+    "other": "Humör"
+  },
+  "blog.cat": {
+    "other": "Godkänd av katten"
+  },
+  "blog.prev": {
+    "other": "Föregående inlägg"
+  },
+  "blog.next": {
+    "other": "Nästa inlägg"
+  },
+  "blog.jumpToPost": {
+    "other": "Hoppa till inlägg"
+  },
+  "blog.back": {
+    "other": "Tillbaka till blogglistan"
+  },
+  "blog.showingPosts": {
+    "other": "Visar {{current}} av {{total}} inlägg"
+  },
+  "blog.minRead": {
+    "other": "min läsning"
+  },
+  "blog.rss": {
+    "other": "RSS-flöde"
+  },
+  "blog.subscribeRSS": {
+    "other": "Prenumerera via RSS"
+  },
+  "blog.allPosts": {
+    "other": "Flöde med alla inlägg"
+  },
+  "blog.languageFeeds": {
+    "other": "Språkspecifika flöden"
+  },
+  "blog.rssDescription": {
+    "other": "Prenumerera på mina RSS-flöden i din favoritläsare för att få notiser om nya inlägg."
+  },
+  "blog.atom": {
+    "other": "Atom-flöde"
+  },
+  "blog.subscribeAtom": {
+    "other": "Prenumerera via Atom"
+  },
+  "blog.atomDescription": {
+    "other": "Prenumerera på mina Atom-flöden i din favoritläsare för att få notiser om nya inlägg."
+  },
+  "blog.availableIn": {
+    "other": "Den här sidan finns också på"
+  },
+  "blog.comments": {
+    "other": "Kommentarer"
+  },
+  "blog.webmentions": {
+    "other": "Webmentions"
+  },
+  "blog.webmentionsNone": {
+    "other": "Inga webmentions ännu. Bli den första att svara!"
+  },
+  "blog.webmentionLike": {
+    "other": "gillade detta"
+  },
+  "blog.webmentionRepost": {
+    "other": "delade detta"
+  },
+  "blog.webmentionReply": {
+    "other": "svarade"
+  },
+  "blog.webmentionMention": {
+    "other": "nämnde detta"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "första inlägg"
+  },
+  "blog.tagLabels.identity": {
+    "other": "identitet"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "tillhörighet"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "introspektion"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "webbläsare"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "öppet webb"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "standardappar"
+  },
+  "blog.tagLabels.software": {
+    "other": "programvara"
+  },
+  "blog.tagLabels.tools": {
+    "other": "verktyg"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "nyår"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "reflektion"
+  },
+  "blog.tagLabels.health": {
+    "other": "hälsa"
+  },
+  "blog.tagLabels.tet": {
+    "other": "Tet-högtid"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "Vietnam"
+  },
+  "blog.tagLabels.military": {
+    "other": "militär"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "säkerhetshärdning"
+  },
+  "blog.tagLabels.values": {
+    "other": "värderingar"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "personlig filosofi"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "Personligt"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "Meta"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "Identitet"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "Tekniskt"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "Integritet"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "Åsikter"
+  },
+  "blog.categoryLabels.life": {
+    "other": "Liv"
+  },
+  "blog.categoryLabels.security": {
+    "other": "Säkerhet"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "Guider"
+  },
+  "now.title": {
+    "other": "Nu"
+  },
+  "now.description": {
+    "other": "Vad jag gör, tänker på och fokuserar på just nu."
+  },
+  "now.lastUpdated": {
+    "other": "Senast uppdaterad"
+  },
+  "now.whatIsNow": {
+    "other": "Vad är en /now-sida?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "En now-sida är en sida på en personlig webbplats som berättar vad en person fokuserar på just nu, idag eller nyligen. Du kan läsa mer på"
+  },
+  "now.categories.reading": {
+    "other": "Läser"
+  },
+  "now.categories.coding": {
+    "other": "Kodar"
+  },
+  "now.categories.drinking": {
+    "other": "Dricker"
+  },
+  "now.categories.listening": {
+    "other": "Lyssnar"
+  },
+  "now.categories.premid": {
+    "other": "Discord-aktivitet"
+  },
+  "now.categories.thinking": {
+    "other": "Tänker"
+  },
+  "now.categories.studying": {
+    "other": "Pluggar"
+  },
+  "now.categories.planning": {
+    "other": "Planerar"
+  },
+  "uses.title": {
+    "other": "Verktyg"
+  },
+  "uses.description": {
+    "other": "Alla saker jag använder dagligen. Inspirerad av"
+  },
+  "uses.websiteDescription": {
+    "other": "en webbplats där folk delar vad de använder."
+  },
+  "uses.categories.hardware": {
+    "other": "Hårdvara"
+  },
+  "uses.categories.mobile": {
+    "other": "Mobil"
+  },
+  "uses.categories.audio": {
+    "other": "Ljud"
+  },
+  "uses.categories.os": {
+    "other": "Operativsystem & webbläsare"
+  },
+  "uses.categories.development": {
+    "other": "Utveckling"
+  },
+  "uses.categories.email": {
+    "other": "E-post & produktivitet"
+  },
+  "uses.categories.privacy": {
+    "other": "Integritet & säkerhet"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Mobilverktyg"
+  },
+  "uses.categories.mapping": {
+    "other": "Kartläggning"
+  },
+  "uses.categories.gaming": {
+    "other": "Spel"
+  },
+  "uses.categories.multimedia": {
+    "other": "Multimedia"
+  },
+  "uses.categories.design": {
+    "other": "Design & illustration"
+  },
+  "uses.categories.photo": {
+    "other": "Bildredigering"
+  },
+  "uses.categories.video": {
+    "other": "Video & ljud"
+  },
+  "uses.categories.media": {
+    "other": "Streaming-tjänster"
+  },
+  "uses.subsections.design": {
+    "other": "Design & illustration"
+  },
+  "uses.subsections.photo": {
+    "other": "Bildredigering"
+  },
+  "uses.subsections.video": {
+    "other": "Video & ljud"
+  },
+  "uses.subsections.media": {
+    "other": "Mediatjänster"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "Klicka 5 gånger för att visa"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "({{clicks}} klick kvar för att visa)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "Dold plattform"
+  },
+  "contact.title": {
+    "other": "Kontakt"
+  },
+  "contact.description": {
+    "other": "Sätt att nå ut och kontakta mig."
+  },
+  "contact.message": {
+    "other": "var inte blyg. säg hej. eller boka ett 1:1 om du känner dig proffs :)"
+  },
+  "contact.disclaimer": {
+    "other": "jag svarar på mejl. troligen. om jag inte blir distraherad av en fågel eller något"
+  },
+  "contact.sections.contactMe": {
+    "other": "Kontakta mig"
+  },
+  "contact.sections.socialMedia": {
+    "other": "Jag på sociala medier"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "Jag på andra plattformar"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "Kontakta mig"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "Jag på sociala medier"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "Jag på andra plattformar"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "Publika nycklar"
+  },
+  "contact.links.universityEmail": {
+    "other": "Universitetsmejl"
+  },
+  "contact.links.bookMeeting": {
+    "other": "Boka möte med mig"
+  },
+  "contact.links.messengerNote": {
+    "other": "Jag är väldigt inaktiv på Facebook och Messenger. Svar sker i mån av tid."
+  },
+  "contact.links.pgpKey": {
+    "other": "PGP publik nyckel"
+  },
+  "contact.links.sshKey": {
+    "other": "SSH publik nyckel"
+  },
+  "moodCat.title": {
+    "other": "Dagens katt"
+  },
+  "moodCat.hover": {
+    "other": "dömer dig mjukt"
+  },
+  "moodCat.refresh": {
+    "other": "Ny katt, vem är du?"
+  },
+  "moodCat.seeMore": {
+    "other": "Se fler katter"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "Ett klassiskt spel med fallande block och försvinnande rader"
+  },
+  "tetris.gameInfo": {
+    "other": "Spelinformation"
+  },
+  "tetris.score": {
+    "other": "Poäng"
+  },
+  "tetris.level": {
+    "other": "Nivå"
+  },
+  "tetris.status": {
+    "other": "Status"
+  },
+  "tetris.next": {
+    "other": "Nästa"
+  },
+  "tetris.gameOver": {
+    "other": "Spelet över"
+  },
+  "tetris.paused": {
+    "other": "Pausad"
+  },
+  "tetris.playing": {
+    "other": "Spelar"
+  },
+  "tetris.ready": {
+    "other": "Redo"
+  },
+  "tetris.playAgain": {
+    "other": "Spela igen"
+  },
+  "tetris.pause": {
+    "other": "Paus"
+  },
+  "tetris.resume": {
+    "other": "Fortsätt"
+  },
+  "tetris.start": {
+    "other": "Starta"
+  },
+  "tetris.reset": {
+    "other": "Återställ"
+  },
+  "tetris.controls": {
+    "other": "Kontroller"
+  },
+  "tetris.moveLeft": {
+    "other": "Flytta vänster"
+  },
+  "tetris.moveRight": {
+    "other": "Flytta höger"
+  },
+  "tetris.moveDown": {
+    "other": "Flytta ner"
+  },
+  "tetris.rotate": {
+    "other": "Rotera block"
+  },
+  "tetris.hardDrop": {
+    "other": "Snabbsläpp"
+  },
+  "tetris.pauseGame": {
+    "other": "Pausa spelet"
+  },
+  "tetris.musicOn": {
+    "other": "Musik på"
+  },
+  "tetris.musicOff": {
+    "other": "Musik av"
+  },
+  "tetris.nowPlaying": {
+    "other": "Spelar nu"
+  },
+  "tetris.spacebar": {
+    "other": "Mellanslag"
+  },
+  "scrapbook.title": {
+    "other": "Devlogg"
+  },
+  "scrapbook.description": {
+    "other": "Några utvecklingsloggar från när jag byggde den här sidan."
+  },
+  "scrapbook.noEntries": {
+    "other": "Inga inlägg ännu."
+  },
+  "settings.title": {
+    "other": "Inställningar"
+  },
+  "settings.theme": {
+    "other": "Tema"
+  },
+  "settings.themeAuto": {
+    "other": "Auto"
+  },
+  "settings.themeLight": {
+    "other": "Ljust tema"
+  },
+  "settings.themeDark": {
+    "other": "Mörkt tema"
+  },
+  "settings.stars": {
+    "other": "Blinkande stjärnor"
+  },
+  "settings.reduceMotion": {
+    "other": "Minska rörelse"
+  },
+  "settings.highContrast": {
+    "other": "Hög kontrast"
+  },
+  "settings.dyslexiaFont": {
+    "other": "Dyslexitypsnitt"
+  },
+  "settings.timezone": {
+    "other": "Tidszon"
+  },
+  "settings.tzYours": {
+    "other": "Din"
+  },
+  "settings.tzAuthor": {
+    "other": "Jaremas"
+  },
+  "settings.music": {
+    "other": "Musik"
+  },
+  "settings.musicUnavailable": {
+    "other": "Inte tillgänglig just nu"
+  },
+  "webrings.title": {
+    "other": "Webbringar"
+  },
+  "webrings.description": {
+    "other": "Webbringar som jag är med i. Upptäck fler oberoende webbplatser och personliga bloggar."
+  },
+  "webrings.intro1": {
+    "other": "En webbring är en samling webbplatser skapade av likasinnade, oftast centrerade kring ett ämne, estetik eller gemensamt intresse. (från safonts webring)"
+  },
+  "webrings.intro2": {
+    "other": "Denna webbplats är en del av dessa webbringar. Klicka på länkarna för att besöka mina grannars sidor, och andra medlemmar om den webbringen har en slumpfunktion. Välj vilken ring du vill!"
+  },
+  "webrings.previous": {
+    "other": "Föregående"
+  },
+  "webrings.random": {
+    "other": "Slumpmässig"
+  },
+  "webrings.next": {
+    "other": "Nästa"
+  },
+  "webrings.previousAria": {
+    "other": "Föregående sida i {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "Slumpmässig sida i {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "Nästa sida i {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "Väntar på Godkännande"
+  },
+  "webrings.pending.description": {
+    "other": "Dessa är webbringar jag har ansökt om att gå med i och väntar på godkännande."
+  },
+  "webrings.pending.badge": {
+    "other": "Väntar"
+  },
+  "badges.title": {
+    "other": "Samling av webbmärken"
+  },
+  "badges.description": {
+    "other": "En samling klassiska webbmärken och knappar som används på min webbplats."
+  },
+  "badges.pageTitle": {
+    "other": "Klassisk webbmärkessamling"
+  },
+  "badges.pageDescription": {
+    "other": "Jag har samlat dessa 88x31-märken för att visa vad jag och den här sidan faktiskt bryr oss om. De är en tillbakablick till Geocities-eran då internet var mindre fyllt av företags- och AI-smörja. Om du har ett märke du vill att jag ska lägga till här, säg bara till."
+  },
+  "badges.myBadgeTitle": {
+    "other": "Mitt märke (klicka för att expandera)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "Använd detta märke för att länka till min webbplats:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "Hotlink URL:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "HTML-kod"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "Förslag för inbäddning"
+  },
+  "badges.suggestion1": {
+    "other": "Använd"
+  },
+  "badges.suggestion1b": {
+    "other": "i din CSS för att behålla pixelkonst-stilen."
+  },
+  "badges.suggestion2": {
+    "other": "Länka direkt till min hemsida på"
+  },
+  "badges.suggestion3": {
+    "other": "Märket är 88x31 pixlar, dubbla bredden och höjden i din HTML till"
+  },
+  "badges.suggestion3b": {
+    "other": "för att göra dem lättare att läsa på högupplösta skärmar."
+  },
+  "badges.collectionHeading": {
+    "other": "Märkessamling"
+  },
+  "badges.search": {
+    "other": "Sök märken..."
+  },
+  "badges.filterByCategory": {
+    "other": "Filtrera efter kategori"
+  },
+  "badges.verboseView": {
+    "other": "Detaljerad"
+  },
+  "badges.badgeOnlyView": {
+    "other": "Endast märke"
+  },
+  "badges.showingCount": {
+    "other": "Visar {{count}} märken"
+  },
+  "badges.showingFiltered": {
+    "other": "Visar {{filtered}} av {{total}} märken"
+  },
+  "badges.noResults": {
+    "other": "Inga märken hittades som matchar dina sökkriterier"
+  },
+  "badges.categories.all": {
+    "other": "Alla"
+  },
+  "badges.categories.personal": {
+    "other": "Personligt"
+  },
+  "badges.categories.friends": {
+    "other": "Vänner"
+  },
+  "badges.categories.other-sites": {
+    "other": "Andra sidor"
+  },
+  "badges.categories.software": {
+    "other": "Programvara"
+  },
+  "badges.categories.web": {
+    "other": "Webb"
+  },
+  "badges.categories.fun": {
+    "other": "Nöje"
+  },
+  "brand.pageTitle": {
+    "other": "Profil"
+  },
+  "brand.pageDescription": {
+    "other": "Visuell identitet och element. Använd dessa om du vill referera eller länka till denna sida."
+  },
+  "brand.name.title": {
+    "other": "Namn"
+  },
+  "brand.name.nameLabel": {
+    "other": "Namn"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "Visningsnamn"
+  },
+  "brand.name.symbolNote": {
+    "other": "Symbolen för 'därför' (∴) är alltid en del av mitt visningsnamn. Den representerar resultat, logiska slutsatser, kopplingar, slutet på en tankeprocess; den är direkt och en stabil form."
+  },
+  "brand.logo.title": {
+    "other": "Logotyp"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Endast ansikte"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Ansikte och kropp"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (eller multiplar)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (eller multiplar)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "Badge"
+  },
+  "brand.badge.urlLabel": {
+    "other": "Direkt URL"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "HTML-kod"
+  },
+  "brand.colors.title": {
+    "other": "Färger"
+  },
+  "brand.colors.names.primary": {
+    "other": "Primär"
+  },
+  "brand.colors.names.background": {
+    "other": "Bakgrund"
+  },
+  "brand.colors.names.card": {
+    "other": "Kort"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Förgrund"
+  },
+  "brand.colors.names.muted": {
+    "other": "Dämpad"
+  },
+  "brand.colors.names.border": {
+    "other": "Kantlinje"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Huvudaccentfärg"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Sidbakgrund"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Kortbakgrund"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Huvudtextfärg"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "Sekundära element"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Kanter och avdelare"
+  },
+  "brand.colors.darkMode": {
+    "other": "Mörkt läge"
+  },
+  "brand.colors.lightMode": {
+    "other": "Ljust läge"
+  },
+  "brand.fonts.title": {
+    "other": "Typsnitt"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "Rubriker och titlar"
+  },
+  "brand.fonts.usage.body": {
+    "other": "Brödtext och UI"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "Kinesisk text"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "Kod och monospace-text"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "Vietnamesisk Chữ Nôm"
+  },
+  "brand.fonts.weight": {
+    "other": "Vikt:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "Visa i arkivet"
+  },
+  "brand.fonts.languages.english": {
+    "other": "Engelska"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "Vietnamesiska"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "Polska"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "Ryska"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "Japanska"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "Hebreiska"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "Thailändska"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "Symboler"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "Kinesiska (Förenklad)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "Kinesiska (Traditionell)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "Vietnamesiska (Chữ Nôm)"
+  },
+  "brand.usage.title": {
+    "other": "Några noter"
+  },
+  "brand.usage.point1Title": {
+    "other": "Använd dem gärna"
+  },
+  "brand.usage.point1Text": {
+    "other": "Du behöver inte be om lov för att använda badgen, loggan eller länka till sidan. Ta dem, hotlinka, släng upp dem på din sajt. Jag bryr mig inte. Faktiskt skulle jag bli glad."
+  },
+  "brand.usage.point2Title": {
+    "other": "Behåll badgens pixliga stil"
+  },
+  "brand.usage.point2Text": {
+    "other": "Om du använder badgen, snälla använd 'image-rendering: pixelated' (eller 'crisp-edges' för Firefox) i din CSS. Utan det kommer webbläsare göra pixlarna suddiga och det ser ut som skit. Det är pixel art, behandla det som pixel art."
+  },
+  "brand.usage.point3Title": {
+    "other": "Erkännande är trevligt men valfritt"
+  },
+  "brand.usage.point3Text": {
+    "other": "Om du skriver om sajten eller använder detta i ett blogginlägg, vore en länk tillbaka uppskattat. Men om du bara lägger till min badge på din länksida behöver du inte göra något extra. Min HTML-kod för badgen länkar redan hit."
+  },
+  "brand.usage.point4Title": {
+    "other": "Gör inget konstigt"
+  },
+  "brand.usage.point4Text": {
+    "other": "Använd inte dessa för att utge dig för att vara jag, påstå att jag stödjer något jag inte gör, eller få det att se ut som att jag är associerad med något skumt. Jag litar på att du vet skillnaden på att länka till en sida du gillar och att låtsas vara någon annan. Om du är osäker på om det du gör är konstigt, så är det förmodligen det."
+  },
+  "brand.usage.footer": {
+    "other": "Det var allt, använd dem med respekt så är vi lugna."
+  },
+  "colophon.title": {
+    "other": "Kolofon"
+  },
+  "colophon.description": {
+    "other": "Historien bakom denna webbplats och hur den byggdes"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Webbplatsens historia"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "Den här webbplatsen registrerades först i slutet av 2023, men designen har ändrats mycket under dess livstid. Första versionen var en enkel WordPress-sida på ett skumt gratis webbhotell, andra var Carrd-baserad, tredje byggd med Astro. Den nuvarande versionen (fjärde) är en total omdesign byggd från grunden med moderna webtekniker."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Varje version har varit en utveckling, där den senaste fokuserar på prestanda, tillgänglighet, fullständig tangentbordsnavigering och en mer personlig känsla som bättre representerar vem jag är och vad jag bryr mig om."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Teknikstack"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "React-ramverk som möjliggör server-side rendering och statisk webbplatsgenerering"
+  },
+  "colophon.technologyStack.react": {
+    "other": "JavaScript-bibliotek för att bygga användargränssnitt"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Utility-first CSS-ramverk"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Återanvändbart komponentbibliotek byggt med Radix UI och Tailwind"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "Animationsbibliotek för React"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Internationaliseringsramverk"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "Starkt typat programmeringsspråk som bygger på JavaScript"
+  },
+  "colophon.hosting.title": {
+    "other": "Hosting & distribution"
+  },
+  "colophon.hosting.content1": {
+    "other": "Sidan är hostad på"
+  },
+  "colophon.hosting.content2": {
+    "other": "som erbjuder smidig distribution från GitHub, automatisk HTTPS och global CDN."
+  },
+  "colophon.hosting.content3": {
+    "other": "Domänen hanteras via"
+  },
+  "colophon.hosting.content4": {
+    "other": "som ger extra säkerhet och prestanda."
+  },
+  "colophon.design.title": {
+    "other": "Designfilosofi"
+  },
+  "colophon.design.p1": {
+    "other": "Denna webbplats är utformad med tillgänglighet och prestanda i åtanke. Den fungerar utan JavaScript aktiverat, använder semantisk HTML och respekterar din integritet genom att inte använda några spårningskakor."
+  },
+  "colophon.design.p2": {
+    "other": "Designen syftar till en balans mellan modern estetik och klassisk webbenkelhet. Mörkt läge är standard eftersom jag gillar mina näthinnor."
+  },
+  "colophon.webStandards.title": {
+    "other": "Webbstandarder"
+  },
+  "colophon.webStandards.intro": {
+    "other": "Denna webbplats implementerar:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "mikroformat"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "RSS-, Atom- och JSON-flöden"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt och sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "Tillgänglighet"
+  },
+  "colophon.accessibility.intro": {
+    "other": "Jag strävar efter att göra denna webbplats tillgänglig för alla. Funktioner inkluderar:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "Semantisk HTML-struktur"
+  },
+  "colophon.accessibility.item2": {
+    "other": "Hoppa till innehåll-länkar"
+  },
+  "colophon.accessibility.item3": {
+    "other": "Korrekt rubrikhierarki"
+  },
+  "colophon.accessibility.item4": {
+    "other": "WCAG 2.1 AA färgkontrast"
+  },
+  "colophon.accessibility.item5": {
+    "other": "Navigerbar med tangentbord"
+  },
+  "colophon.accessibility.item6": {
+    "other": "Respekterar inställningar för minskad rörelse"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "Om du stöter på några tillgänglighetsproblem, vänligen"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "låt mig veta"
+  },
+  "colophon.inspiration.title": {
+    "other": "Inspiration"
+  },
+  "colophon.inspiration.content1": {
+    "other": "Denna sida hämtar inspiration från"
+  },
+  "colophon.inspiration.content2": {
+    "other": "som i sin tur inspirerats av"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Ursprunglig idé på"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Maggie Appletons kolofon"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Gwern Branwens kolofon"
+  },
+  "footer.copyright": {
+    "other": "2026, ∴ Jarema, CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "gjord med kärlek"
+  },
+  "footer.andChaos": {
+    "other": "och några veckors kodande"
+  },
+  "footer.uptime": {
+    "other": "Drifttid"
+  },
+  "footer.siteStatus": {
+    "other": "Webbplatsstatus"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Tangentbordsgenvägar"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Navigering"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Åtgärder"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Stäng"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Hem"
+  },
+  "keyboardShortcuts.about": {
+    "other": "Om mig"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blogg"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Projekt"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Nu"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Verktyg"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "Kontakt"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Kolofon"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "Sidkarta"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Devlogg"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Byt språk"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Byt tema"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Uppdatera humörkatt"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Öppna tangentbordsgenvägar"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Öppna åtgärdssökning"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Webbringar"
+  },
+  "actionSearch.2048": {
+    "other": "Spela 2048"
+  },
+  "actionSearch.title": {
+    "other": "Sök åtgärder"
+  },
+  "actionSearch.placeholder": {
+    "other": "Sök åtgärder..."
+  },
+  "actionSearch.noResults": {
+    "other": "Inga åtgärder hittades"
+  },
+  "actionSearch.goTo": {
+    "other": "Gå till sida"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Byt tema"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Byt till mörkt läge"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Byt till ljust läge"
+  },
+  "actionSearch.appearance": {
+    "other": "Utseende"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Byt språk"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Hämta ny humörkatt"
+  },
+  "actionSearch.playGame": {
+    "other": "Spela spel"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "Visa alla genvägar"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "Tryck . för att öppna kommandopaletten"
+  },
+  "actionSearch.escToClose": {
+    "other": "ESC för att stänga"
+  },
+  "actionSearch.fun": {
+    "other": "Kul"
+  },
+  "actionSearch.games": {
+    "other": "Spel"
+  },
+  "actionSearch.tetris": {
+    "other": "Spela Tetris"
+  },
+  "actionSearch.help": {
+    "other": "Hjälp"
+  },
+  "actionSearch.projects.category": {
+    "other": "Navigera bland projektkort"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Stäng vänt kort"
+  },
+  "actionSearch.projects.left": {
+    "other": "Navigera vänster"
+  },
+  "actionSearch.projects.right": {
+    "other": "Navigera höger"
+  },
+  "actionSearch.projects.up": {
+    "other": "Navigera upp"
+  },
+  "actionSearch.projects.down": {
+    "other": "Navigera ner"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Vänd projektkort: {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Navigera bland blogginlägg"
+  },
+  "actionSearch.blog.next": {
+    "other": "Till nästa inlägg"
+  },
+  "actionSearch.blog.prev": {
+    "other": "Till föregående inlägg"
+  },
+  "actionSearch.blog.search": {
+    "other": "Sök blogginlägg"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Filtrera blogginlägg"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "Hoppa till inlägg {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "Tillbaka till blogglistan"
+  },
+  "actionSearch.about.category": {
+    "other": "Navigera bland om-sektioner"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "Hoppa till kapitel {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "Navigera bland verktygssektioner"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "Hoppa till {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "Navigera bland nu-sektioner"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "Hoppa till {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Navigera bland kolofonsektioner"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "Hoppa till {{section}}"
+  },
+  "actionSearch.tools": {
+    "other": "Verktyg"
+  },
+  "textCounter.title": {
+    "other": "Texträknare"
+  },
+  "textCounter.description": {
+    "other": "Räkna tecken, ord, meningar, stycken och beräkna tal-/lästid."
+  },
+  "textCounter.placeholder": {
+    "other": "Börja skriva eller klistra in din text här..."
+  },
+  "textCounter.clear": {
+    "other": "Rensa"
+  },
+  "textCounter.stats.characters": {
+    "other": "Tecken"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "Tecken (utan mellanslag)"
+  },
+  "textCounter.stats.words": {
+    "other": "Ord"
+  },
+  "textCounter.stats.sentences": {
+    "other": "Meningar"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "Stycken"
+  },
+  "textCounter.stats.lines": {
+    "other": "Rader"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "Lästid"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "Taltid"
+  },
+  "textCounter.textLanguage": {
+    "other": "Textspråk"
+  },
+  "textCounter.languages.en": {
+    "other": "Engelska"
+  },
+  "textCounter.languages.vi": {
+    "other": "Vietnamesiska"
+  },
+  "textCounter.languages.et": {
+    "other": "Estniska"
+  },
+  "textCounter.languages.zh": {
+    "other": "Kinesiska"
+  },
+  "textCounter.languages.ru": {
+    "other": "Ryska"
+  },
+  "textCounter.languages.custom": {
+    "other": "Annat / anpassat"
+  },
+  "textCounter.languages.advanced": {
+    "other": "Avancerade inställningar"
+  },
+  "textCounter.speed.label": {
+    "other": "Hastighet"
+  },
+  "textCounter.speed.slow": {
+    "other": "Långsam"
+  },
+  "textCounter.speed.average": {
+    "other": "Medel"
+  },
+  "textCounter.speed.fast": {
+    "other": "Snabb"
+  },
+  "textCounter.speed.custom": {
+    "other": "Anpassad"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "Läsning (ord per minut)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "Tal (ord per minut)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "Tidsberäkningarna använder för närvarande engelska standardhastigheter. Byt till \"Anpassad\" för att ange exakta värden."
+  },
+  "textCounter.advanced.title": {
+    "other": "Avancerade inställningar"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "Inaktivera ordräkning"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "För logografiska och brahmiska språk skiljer inte mellanslag ord åt."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "Behandla varje rad som ett stycke"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "Räkna enskilda radbrytningar som styckebrytningar istället för att kräva tomma rader. Radräknaren kommer att döljas."
+  },
+  "textCounter.privacy.summary": {
+    "other": "Integritetsinformation"
+  },
+  "textCounter.privacy.body": {
+    "other": "Det här verktyget körs helt i din webbläsare. Du kan koppla från internet och det kommer fortfarande att fungera, din text skickas aldrig någonstans."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "Teknisk verifiering:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "För att verifiera detta öppnar du webbläsarens DevTools (F12) → fliken Nätverk (Network), skriver i textfältet och bekräftar att inga förfrågningar görs efter att sidan har laddats klart."
+  },
+  "tools.title": {
+    "other": "Verktyg"
+  },
+  "tools.description": {
+    "other": "Några praktiska verktyg. Tja, för att jag inte kunde hitta några som verkligen passade mina behov."
+  },
+  "tools.items.counter.title": {
+    "other": "Texträknare"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "Räkna tecken, ord, meningar, stycken och uppskatta läs-/taltid."
+  },
+  "slashes.title": {
+    "other": "Snedstreck"
+  },
+  "slashes.description": {
+    "other": "En lista över alla huvudsidor på denna webbplats."
   }
 }

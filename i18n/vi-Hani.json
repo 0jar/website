@@ -1,554 +1,1274 @@
 {
-  "404": {
-    "title": "伴𠫾落塘𠺌張䇼𠅒耒 :))",
-    "description": "𠇍𡥵貓拱拯別低𱺵坭𱜢。",
-    "button": "𢮿𧗱張主",
-    "sitemap": "䀡疏圖張䇼",
-    "enjoycat": "𥪝𣅶伴當落塘、唉䀡𡥵貓尼："
+  "404.title": {
+    "other": "伴𠫾落塘𠺌張䇼𠅒耒 :))"
   },
-  "2048": {
-    "description": "Kết hợp các ô để đạt đến số 2048",
-    "score": "點",
-    "best": "最高",
-    "gameOver": "Trò chơi kết thúc!",
-    "finalScore": "點最終",
-    "tryAgain": "Chơi lại",
-    "youWin": "伴㐌勝！",
-    "currentScore": "Điểm hiện tại",
-    "keepPlaying": "Tiếp tục chơi",
-    "newGame": "Chơi ván mới",
-    "howToPlay": "Cách chơi",
-    "instructions1": "Sử dụng phím mũi tên hoặc WASD để di chuyển các ô. Khi hai ô có cùng số được gộp vào nhau, chúng sẽ kết hợp thành số tổng của hai số đó.",
-    "instructions2": "Sau mỗi lượt di chuyển, một ô mới (số 2 hoặc 4) xuất hiện.",
-    "instructions3": "Hãy tạo một ô với số 2048 để thắng trò chơi nhé!",
-    "controls": "Điều khiển",
-    "moveLeft": "Di chuyển sang trái",
-    "moveRight": "Di chuyển sang phải",
-    "moveUp": "Di chuyển lên",
-    "moveDown": "Di chuyển xuống",
-    "touchInstructions": "Trên điện thoại, hãy sử dụng các nút điều khiển ở trên màn hình.",
-    "undo": "Hoàn tác"
+  "404.description": {
+    "other": "𠇍𡥵貓拱拯別低𱺵坭𱜢。"
   },
-  "nav": {
-    "home": "張主",
-    "about": "介紹",
-    "projects": "預案",
-    "blog": "Blog",
-    "now": "現在",
-    "uses": "工具",
-    "contact": "聯繫",
-    "guestbook": "數留筆",
-    "colophon": "通信",
-    "webring": "Webring",
-    "scrapbook": "𥱬劄",
-    "slashes": "疏圖張䇼",
-    "brand": "部認面"
+  "404.button": {
+    "other": "𢮿𧗱張主"
   },
-  "languageNotice": {
-    "message": "翻版㗂越平𡨸漢喃吻當得𡏦𥩯。𠬠數內容固体𣗓完整或被少、煩伴通感。（Phiên bản Tiếng Việt bằng chữ Hán Nôm vẫn đang được xây dựng. Một số nội dung có thể chưa hoàn chỉnh hoặc bị thiếu, phiền bạn thông cảm.）",
-    "dismiss": "㨂"
+  "404.sitemap": {
+    "other": "䀡疏圖張䇼"
   },
-  "language": {
-    "main": "言語正",
-    "beta": "言語當𡏦𥩯",
-    "other": "言語恪",
-    "auto": "自動譔蹺言語程閱",
-    "search": "尋言語…",
-    "en": "㗂英",
-    "vi": "㗂越",
-    "et": "㗂𠲖綀蘇尼阿",
-    "ru": "㗂俄",
-    "da": "㗂丹麥",
-    "tr": "㗂土耳其",
-    "zh": "㗂中",
-    "sv": "㗂瑞典",
-    "fi": "㗂芬蘭",
-    "pl": "㗂波蘭",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "𥪝𣅶伴當落塘、唉䀡𡥵貓尼："
   },
-  "greetings": {
-    "morning": "嘲𣇜𤏬唲！",
-    "afternoon": "𣇜𣊿𢝙𨤔唲！",
-    "evening": "𣇜𣋁𨓽迨儗𢯕唲！",
-    "night": "吻𥅞𣌉啊？𨉟拱丕呢。"
+  "2048.description": {
+    "other": "Kết hợp các ô để đạt đến số 2048"
   },
-  "home": {
-    "buttons": {
-      "about": "𧗱𨉟",
-      "projects": "䀡預案𧵑𨉟"
-    },
-    "footer": "嘲𢜠伴𦤾貝張䇼𧵑𨉟。據自然𦓡勘破唲。",
-    "heading": "嘲伴、𨉟𱺵 Jarema",
-    "subheading": "生員梗經濟、請倘逆摸貝 code、常川逆𢴉貝貓。",
-    "contactButton": "聯繫𨉟",
-    "aboutButton": "𧗱𨉟",
-    "blogButton": "讀 blog 𧵑𨉟",
-    "guestbookButton": "𥙩𠸛留筆吏𨉟",
-    "recentPosts": "Blog 𧵆低",
-    "latestNow": "𣊾𣇞𨉟當𫜵之？",
-    "currentMood": "心情現在",
-    "currentStatus": "狀態現在",
-    "viewAllWebrings": "䀡悉哿 webring",
-    "checkOutSites": "覽此諸站！"
+  "2048.score": {
+    "other": "點"
   },
-  "guestbook": {
-    "title": "數留筆",
-    "description": "唉抵吏唎𠴍𥪝數留筆𧵑𨉟唲！"
+  "2048.best": {
+    "other": "最高"
   },
-  "about": {
-    "title": "介紹",
-    "chapters": {
-      "6": {
-        "title": "mình vẫn chưa nói hết đâu",
-        "content1": "và nên đây là phần lẽ ra \"người ta\" không nên thấy.",
-        "content2": "xin phép được xưng là \"tôi\". tôi vẫn còn bực. bực lắm. tôi vẫn đang tiếc nuối vì một phần của chính mình chưa bao giờ có cơ hội được sống thật. vẫn có những buổi sáng tỉnh dậy mà cứ có cảm giác mọi thứ bị lệch đi vài chút, mà không biết tại sao. có những lúc tôi đã nghĩ đến việc chạy trốn và biến mất luôn, lập một cái tên mới, sống ở thành phố mới, nói một ngôn ngữ mới. hoặc đôi lúc cũng là buông bỏ mọi thứ theo cái nghĩa ngược lại. và có lần tôi đã suýt làm thế thật.",
-        "content3": "có những ngày tôi chẳng cảm thấy mình là con người nữa. có những lúc tôi thấy bản thân giống như kiểu một ký ức đang cố kết lại thành hình hơn. giống như một tiếng vọng vang của một điều gì đó mềm mại mà chính tôi cũng không còn có thể chạm tới được nữa. nhưng cũng có những ngày tôi bùng cháy như có điện chạy trong người. tôi cảm được từng chi tiết quanh tôi, từ ánh nắng trên da, những nốt nhạc nhẹ nhàng của playlist đang bật, những khoảnh khắc ánh mắt và gương mặt người ta thay đổi khi họ thấy đủ an toàn để thể hiện chính mình. mấy điều nhỏ nhoi đó, bằng một cách nào đó, vẫn đang níu giữ tôi sống.",
-        "content4": "tôi vẫn chưa xong cái việc trở thành một phiên bản quái gì mà tôi cũng chẳng biết rõ là ai hay như thế nào. nhưng có một điều tôi chắc chắn, là tôi đã xong với cái việc lúc nào cũng phải giả vờ là mình ổn, và tôi không chịu im lặng nữa."
-      }
-    }
+  "2048.gameOver": {
+    "other": "Trò chơi kết thúc!"
   },
-  "projects": {
-    "title": "各預案𧵑𨉟",
-    "description": "綜合各預案個人、學術吧活動𦓡𨉟㐌吧當寔現。𠬠數時㐌歱、仍役恪時吻當𫜵𡁎。",
-    "status": {
-      "completed": "㐌完成",
-      "inProgress": "當進行",
-      "planned": "預見"
-    },
-    "categories": {
-      "personal": "個人",
-      "academic": "學術",
-      "activism": "活動社會"
-    },
-    "details": {
-      "what": "低𱺵之",
-      "learned": "𨉟㐌學得之",
-      "why": "預案尼關重貝𨉟爲"
-    },
-    "cardActions": {
-      "clickForDetails": "扨抵䀡枝節",
-      "clickToClose": "扨抵㨂"
-    },
-    "statusLabels": {
-      "completed": "㐌完成",
-      "inProgress": "當進行",
-      "planned": "預見"
-    },
-    "buttons": {
-      "showRandom": "現添𠄧預案恪",
-      "hideRandom": "催隱𠫾、𡗉過"
-    }
+  "2048.finalScore": {
+    "other": "點最終"
   },
-  "blog": {
-    "title": "Blog",
-    "description": "𠄧𣳔推擬、𠄧唎心狀、吧請倘𱺵𠄧唎叫歌。𣇞𱜢拱曰、感觸𱜢拱固。",
-    "language": "言語",
-    "languageFilter": "漉蹺言語",
-    "tag": "矢",
-    "sort": "𢯛攝排",
-    "category": "體類",
-    "noPosts": "𣗓固排曰𱜢於低哿。𢮿吏𢖖󠄁唲！",
-    "search": "尋檢排曰…",
-    "sortNew": "㵋一𠓀",
-    "sortOld": "𫇰一𠓀",
-    "sortReadTime": "蹺時間讀",
-    "sortABC": "蹺次序𡨸𡣨",
-    "filter": "漉",
-    "filterDescription": "漉各排曰",
-    "activeFilter": "當漉蹺：",
-    "filterNoMatch": "空固排曰𱜢符合貝部漉。調整尋檢唲！",
-    "clearFilter": "毀悉哿部漉",
-    "mood": "心狀",
-    "cat": "得 boss 批閱",
-    "prev": "排曰𠓀",
-    "next": "排曰𢖖󠄁",
-    "jumpToPost": "𬦮𦤾排曰",
-    "back": "𢮿吏名冊 blog",
-    "showingPosts": "當顯示{{current}}𨑗總數{{total}}排曰",
-    "minRead": "丿讀",
-    "availableIn": "排曰尼拱得曰𥪝",
-    "comments": "Comments",
-    "webmentions": "Webmention",
-    "webmentionsNone": "𣗓固 webmention 𡳰。㐌𦓡𠊛頭先反𩈘！",
-    "webmentionLike": "㐌適排尼",
-    "webmentionRepost": "㐌𢯢𠚢𡀰排尼",
-    "webmentionReply": "㐌𢀈𡀰",
-    "webmentionMention": "㐌提及排尼"
+  "2048.tryAgain": {
+    "other": "Chơi lại"
   },
-  "now": {
-    "title": "現在",
-    "description": "仍役𨉟當𫜵、當擬、吧當吟。",
-    "lastUpdated": "及日㵋一𠓨",
-    "categories": {
-      "reading": "當讀",
-      "coding": "當立程",
-      "drinking": "當㕵",
-      "listening": "當𦖑",
-      "premid": "活動𨑗Discord",
-      "thinking": "當擬",
-      "studying": "當學",
-      "planning": "當𬨠計劃"
-    }
+  "2048.youWin": {
+    "other": "伴㐌勝！"
   },
-  "uses": {
-    "title": "工具",
-    "description": "綜合𤗆工具𨉟使用行𣈜。張䇼尼𥙩感興自",
-    "websiteDescription": "張䇼坭𤗆𠊛𢺹𢩿仍工具𣱆使用行𣈜𥪝工役拱如𠁀常。",
-    "categories": {
-      "hardware": "設備",
-      "mobile": "移動",
-      "audio": "𦖻𦖑",
-      "os": "系調行吧程閱",
-      "development": "立程",
-      "email": "應用效率",
-      "privacy": "保密吧𥢆私",
-      "mobile_tools": "Táy máy tò mò với điện thoại",
-      "mapping": "版圖",
-      "gaming": "𠻀𨔈",
-      "multimedia": "多方便",
-      "design": "設計吧𦘧",
-      "photo": "整𢯢影",
-      "video": "韋堤烏吧音聲",
-      "media": "各役務方便"
-    },
-    "subsections": {
-      "design": "設計吧𦘧",
-      "photo": "整𢯢影",
-      "video": "韋堤烏吧音聲",
-      "media": "各役務方便"
-    }
+  "2048.currentScore": {
+    "other": "Điểm hiện tại"
   },
-  "contact": {
-    "title": "聯繫",
-    "description": "各方式聯絡貝𨉟。",
-    "message": "揨礙𨉟、唉𠓨嘲自然唲。或拱固体撻曆𭉑𥢆裊伴㦖專業子 =))",
-    "disclaimer": "𨉟固㨋𠳒伊𩄲唲。𫫡、固𨤰丕。 除欺𨉟被貓咍之妬𫜵分心催 :v",
-    "sections": {
-      "contactMe": "聯繫貝𨉟",
-      "socialMedia": "𨉟𨑗𦁸社會",
-      "otherPlatforms": "𨉟𨑗各𡋂磉恪"
-    },
-    "sectionTitles": {
-      "contactMe": "聯繫貝𨉟",
-      "socialMedia": "𨉟𨑗𦁸社會",
-      "otherPlatforms": "𨉟𨑗各𡋂磉恪",
-      "keys": "銙公開"
-    },
-    "links": {
-      "universityEmail": "伊𩄲學院",
-      "bookMeeting": "撻曆𥢆貝𨉟",
-      "messengerNote": "𨉟可𠃣活動𨑗 Facebook 吧 Messenger。𨉟空体擔保得仕㨋𠳒𮞊一裊伴𠴍信過低。",
-      "pgpKey": "銙公開 PGP",
-      "sshKey": "銙公開 SSH"
-    }
+  "2048.keepPlaying": {
+    "other": "Tiếp tục chơi"
   },
-  "moodCat": {
-    "title": "貓𧵑𣋚𫢩",
-    "hover": "貓陰忱判察伴",
-    "refresh": "朱䀡貓㵋𠫾",
-    "seeMore": "䀡添貓恪"
+  "2048.newGame": {
+    "other": "Chơi ván mới"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "𠻀𨔈攝形古典𮇜連貝歲苴𧵑別包世系。",
-    "gameInfo": "通信幔𨔈",
-    "score": "點數",
-    "level": "級度",
-    "status": "狀態",
-    "next": "接續",
-    "gameOver": "結束",
-    "paused": "暫仃",
-    "playing": "當𨔈",
-    "ready": "淍損",
-    "playAgain": "𨔈吏",
-    "pause": "暫仃",
-    "resume": "接續",
-    "start": "𢲧頭",
-    "reset": "撻吏",
-    "controls": "調遣",
-    "moveLeft": "移轉𨖅債",
-    "moveRight": "移轉𨖅沛",
-    "moveDown": "移轉𬺗",
-    "rotate": "𢮿塊",
-    "hardDrop": "抯𬺗𮞊",
-    "pauseGame": "暫仃𠻀𨔈",
-    "musicOn": "弼樂",
-    "musicOff": "𤎕樂",
-    "nowPlaying": "當發"
+  "2048.howToPlay": {
+    "other": "Cách chơi"
   },
-  "scrapbook": {
-    "title": "Devlog"
+  "2048.instructions1": {
+    "other": "Sử dụng phím mũi tên hoặc WASD để di chuyển các ô. Khi hai ô có cùng số được gộp vào nhau, chúng sẽ kết hợp thành số tổng của hai số đó."
   },
-  "settings": {
-    "title": "掑撻",
-    "theme": "交面",
-    "themeAuto": "自動",
-    "themeLight": "交面𤏵",
-    "themeDark": "交面𣋁",
-    "stars": "星𤑟𤑟",
-    "reduceMotion": "減轉動",
-    "highContrast": "相反高",
-    "dyslexiaFont": "風𡨸朱𠊛𠸋讀",
-    "timezone": "脢𣇞",
-    "tzYours": "𧵑伴",
-    "tzAuthor": "𧵑 Jarema",
-    "music": "樂",
-    "musicUnavailable": "現空可用"
+  "2048.instructions2": {
+    "other": "Sau mỗi lượt di chuyển, một ô mới (số 2 hoặc 4) xuất hiện."
   },
-  "webrings": {
-    "title": "Webring",
-    "description": "各 webring 𨉟當參加。勘破添仍 website 吧 blog 個人恪唲。",
-    "intro1": "Webring 𱺵集合各張䇼得造𤳸仍𠊛共志向、常搓𨒺𠬠主題、㘗審美或所適鍾。（自 safonts webring）",
-    "intro2": "張䇼尼𱺵𠬠份𧵑各 webring 𨑜低。扨𠓨 link 抵踦㖭茹行𥯎𧵑𨉟、或各成員恪裊 webring 妬固職能 random。據譔不期𤥑𱜢伴 thích nha!",
-    "previous": "𠓀",
-    "random": "偶然",
-    "next": "𢖖󠄁",
-    "previousAria": "張𠓀𥪝 {{name}}",
-    "randomAria": "張偶然𥪝 {{name}}",
-    "nextAria": "張𢖖󠄁𥪝 {{name}}",
-    "pending": {
-      "title": "當䟻閱",
-      "description": "仍 webring 𨉟㐌登記參加吧當䟻批閱。",
-      "badge": "䟻閱"
-    }
+  "2048.instructions3": {
+    "other": "Hãy tạo một ô với số 2048 để thắng trò chơi nhé!"
   },
-  "badges": {
-    "title": "部搜集徽號䇼",
-    "description": "𠬠部搜集各徽號吧𨨷䇼古典得使用𨑗 website 𧵑𨉟。",
-    "pageTitle": "部搜集徽號䇼古典",
-    "pageDescription": "𨉟㐌搜集仍徽號 88x31 尼抵體現仍之𨉟吧張䇼尼寔事關心。衆得造𢧚自時期 Geocities、咴妬印絲涅𣗓被汲𣼼𤳸仍內容 AI slop。裊伴固𠬠徽號㦖𨉟添𠓨低、據噫𨉟唲。",
-    "myBadgeTitle": "徽號𧵑𨉟（𢶸抵𢲫㢅）",
-    "myBadgeIntro": "用徽號尼抵引 link 𧗱 website 𧵑𨉟：",
-    "hotlinkUrl": "URL hotlink:",
-    "htmlCodeTitle": "Code HTML",
-    "embeddingSuggestionsTitle": "㨳意欺𣴛 code",
-    "suggestion1": "使用",
-    "suggestion1b": "𥪝 CSS 𧵑伴抵𡨺元風格 pixel art.",
-    "suggestion2": "Link 直接𧗱張主𧵑𨉟在",
-    "suggestion3": "徽號固戟𡱩 88x31 pixel, 唉因對朝㢅吧朝高𥪝 HTML 𬨠",
-    "suggestion3b": "抵易讀欣𨑗各幔形度分解高。",
-    "collectionHeading": "部搜集徽號䇼",
-    "search": "尋徽號…",
-    "filterByCategory": "漉蹺名目",
-    "verboseView": "枝節",
-    "badgeOnlyView": "只現徽號",
-    "showingCount": "當顯示 {{count}} 徽號",
-    "showingFiltered": "當顯示 {{filtered}} 𨑗總數 {{total}} 徽號",
-    "noResults": "空尋𧡊徽號𱜢𨨤貝尋檢",
-    "categories": {
-      "all": "悉哿",
-      "personal": "個人",
-      "friends": "伴佊",
-      "other-sites": "張恪",
-      "software": "份繌",
-      "web": "䇼",
-      "fun": "恪"
-    }
+  "2048.controls": {
+    "other": "Điều khiển"
   },
-  "brand": {
-    "pageTitle": "部認面",
-    "pageDescription": "部認面𧵑張䇼𧵑𨉟。唉使用𠇍丐尼裊伴㦖𠯅𦤾或引 link 𬧐張尼唲。",
-    "name": {
-      "title": "𠸜",
-      "nameLabel": "𠸜",
-      "displayNameLabel": "𠸜顯示",
-      "symbolNote": "記號『爲丕』（∴）㫻𱺵𠬠份𥪝𠸜顯示𧵑𨉟。伮代面朱結果、結論、點結𧵑嚨推擬。"
-    },
-    "logo": {
-      "title": "Logo",
-      "faceOnly": "Chỉ mặt",
-      "faceAndBody": "Mặt và thân trên",
-      "dimensions1": "384×384px （或倍數𫰅或𡮈欣𧵑伮調得）",
-      "dimensions2": "512×512px （或倍數𫰅或𡮈欣𧵑伮調得）",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "徽號",
-      "urlLabel": "URL 直接",
-      "htmlLabel": "HTML"
-    },
-    "colors": {
-      "title": "𦭷色",
-      "names": {
-        "primary": "主導",
-        "background": "Nền",
-        "card": "Thẻ",
-        "foreground": "Tiền cảnh",
-        "muted": "Mờ",
-        "border": "Viền"
-      },
-      "descriptions": {
-        "primary": "Màu nhấn chính",
-        "background": "Nền trang",
-        "card": "Nền thẻ",
-        "foreground": "Màu chữ chính",
-        "muted": "Các phần tử phụ",
-        "border": "Viền và dải phân cách"
-      },
-      "darkMode": "Chế độ tối",
-      "lightMode": "Chế độ sáng"
-    },
-    "fonts": {
-      "title": "Phông chữ",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "hanNomGothic": "漢喃 Gothic"
-      },
-      "usage": {
-        "heading": "標題",
-        "body": "內容吧交面 (UI)",
-        "notoSansSC": "㗂中",
-        "hanNomGothic": "𡨸喃"
-      },
-      "weight": "Độ dày:",
-      "viewOnGoogleFonts": "Xem trên kho phông chữ",
-      "languages": {
-        "english": "㗂英",
-        "vietnamese": "㗂越",
-        "polish": "㗂波蘭",
-        "russian": "㗂俄",
-        "japanese": "㗂日",
-        "hebrew": "㗂猶太",
-        "thai": "㗂泰",
-        "symbols": "記號",
-        "chineseSimplified": "㗂中（簡體）",
-        "chineseTraditional": "㗂中（繁體）",
-        "vietnameseHanNom": "㗂越（𡨸喃）"
-      }
-    },
-    "usage": {
-      "title": "留意𡮈",
-      "point1Title": "Cứ thoải mái dùng",
-      "point1Text": "Không cần xin phép để dùng huy hiệu, logo hay dẫn link tới web này đâu. Cứ lấy, hotlink, hay vứt lên web của bạn. Mình không quan tâm. Thực ra là mình còn thấy vui ấy chứ.",
-      "point2Title": "𡨺元 style pixel 𧵑徽號",
-      "point2Text": "Nếu dùng huy hiệu (badge), làm ơn thêm 'image-rendering: pixelated' (hoặc 'crisp-edges' trên Firefox) vào CSS. Không có nó, trình duyệt sẽ làm mờ pixel nhìn như rác ấy. Nó là pixel art, làm ơn hãy đối xử với nó như pixel art.",
-      "point3Title": "Ghi nguồn thì tốt, không thì cũng không sao",
-      "point3Text": "Nếu bạn viết bài về trang web này hay dùng tư liệu trong blog, dẫn link lại thì mình sẽ vui lắm. Nhưng nếu chỉ gắn cái badge vào trang liên kết thì không cần làm gì thêm đâu, cái mã HTML của badge mình đưa đã có link sẵn về đây rồi.",
-      "point4Title": "揨𫜵𠻀",
-      "point4Text": "Đừng dùng mấy cái này để giả danh mình, nhét chữ vào mình, hay làm như kiểu mình dính dáng tới cái gì mờ ám. Mình tin là bạn biết sự khác biệt giữa việc dẫn link tới trang bạn thích và việc giả mạo người khác. Nếu thấy lấn cấn không biết việc bạn định làm có kỳ cục không, thì khả năng cao là có đấy.",
-      "footer": "Thế thôi, cứ dùng đàng hoàng là được."
-    }
+  "2048.moveLeft": {
+    "other": "Di chuyển sang trái"
   },
-  "colophon": {
-    "title": "通信張䇼",
-    "description": "句𡀯𱘃𢖖󠄁張䇼尼",
-    "siteHistory": {
-      "title": "Lịch sử trang này",
-      "content1": "Mình mới đăng ký trang web này vào cuối năm 2023, nhưng thiết kế nó đã thay đổi rất nhiều trong suốt thời gian này. Phiên bản đầu tiên chỉ là một trang WordPress ở trên một cái hosting miễn phí nào đó, bản thứ hai thì là trang Carrd.co, và bản thứ ba được xây trên nền Astro. Phiên bản hiện tại là một bản mình thiết kế lại hoàn toàn mới và đập đi xây lại từ đầu.",
-      "content2": "Mỗi phiên bản đều là một sự tiến hóa nhất định, với bản mới nhất này tập trung vào độ nhanh nhạy, khả năng tiếp cận (accessibility), khả năng điều hướng hoàn toàn bằng bàn phím, và cũng như một cảm giác \"mình\" hơn một chút, thể hiện \"mình\" tốt hơn chút."
-    },
-    "technologyStack": {
-      "title": "Các nền công nghệ sử dụng",
-      "nextjs": "Framework React cho phép render (tạo ảnh) từ phía server và tạo trang web tĩnh",
-      "react": "Thư viện JavaScript xây dựng giao diện",
-      "tailwind": "Framework CSS theo phương pháp utility-first (viết CSS mà không cần viết quá nhiều CSS)",
-      "shadcn": "Thư viện component (thành phần) tái sử dụng được dựng với Radix UI và Tailwind",
-      "framer": "Thư viện animation (hoạt ảnh) cho React",
-      "i18next": "Framework hỗ trợ ngôn ngữ",
-      "typescript": "Ngôn ngữ lập trình mở rộng dựa trên JavaScript"
-    },
-    "hosting": {
-      "title": "Lưu trữ web (Hosting)",
-      "content1": "Trang web được lưu trên",
-      "content2": "hỗ trợ chạy code web thông suốt từ GitHub.",
-      "content3": "Tên miền này được quản lý bởi",
-      "content4": "và họ cũng giúp bảo mật trang web này cũng như hỗ trợ tăng hiệu năng."
-    },
-    "inspiration": {
-      "title": "Nguồn cảm hứng",
-      "content1": "Trang này lấy cảm hứng từ",
-      "content2": "mà lại có cảm hứng từ",
-      "content3": "Ý tưởng ban đầu ở trên"
-    }
+  "2048.moveRight": {
+    "other": "Di chuyển sang phải"
   },
-  "footer": {
-    "copyright": "2026，∴ Jarema，Creative Commons 記功 (CC BY) 4.0",
-    "madeWith": "làm với mọi yêu thương",
-    "andChaos": "và vài tuần nghịch code",
-    "uptime": " uptime",
-    "siteStatus": "Trang thái trang"
+  "2048.moveUp": {
+    "other": "Di chuyển lên"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Phím tắt",
-    "navigation": "Điều hướng",
-    "actions": "Hành động",
-    "close": "Đóng",
-    "home": "Trang chủ",
-    "about": "Giới thiệu",
-    "blog": "Blog",
-    "projects": "Dự án",
-    "now": "Hiện tại",
-    "uses": "Công cụ",
-    "contact": "Liên hệ",
-    "colophon": "Thông tin",
-    "slashes": "疏圖張䇼",
-    "scrapbook": "Devlog",
-    "tetris": "Tetris",
-    "cycleLanguage": "Chuyển đổi ngôn ngữ",
-    "cycleTheme": "Chuyển đổi chủ đề",
-    "refreshCat": "Thay đổi ảnh mèo",
-    "openShortcuts": "Mở bảng phím tắt",
-    "actionSearch": "Mở thanh tìm kiếm"
+  "2048.moveDown": {
+    "other": "Di chuyển xuống"
   },
-  "actionSearch": {
-    "2048": "Chơi 2048",
-    "title": "Tìm kiếm hành động",
-    "placeholder": "Gõ để tìm hành động...",
-    "noResults": "Không tìm thấy hành động nào",
-    "goTo": "Chuyển đến trang",
-    "toggleTheme": "Chuyển đổi chủ đề",
-    "switchDarkMode": "Chuyển sang chế độ tối",
-    "switchLightMode": "Chuyển sang chế độ sáng",
-    "appearance": "Giao diện",
-    "cycleLanguage": "Chuyển đổi ngôn ngữ",
-    "refreshCat": "Xem mèo mới",
-    "playGame": "Chơi trò chơi",
-    "viewShortcuts": "Xem toàn bộ phím tắt",
-    "pressToOpen": "Nhấn . để mở thanh tìm kiếm",
-    "escToClose": "Nhấn ESC để thoát",
-    "fun": "Chơi vui",
-    "games": "Trò chơi",
-    "tetris": "Chơi Tetris",
-    "help": "Trợ giúp",
-    "projects": {
-      "category": "Điều hướng qua các dự án",
-      "closeCard": "Đóng dự án",
-      "left": "Điều hướng sang trái",
-      "right": "Điều hướng sang phải",
-      "up": "Điều hướng lên",
-      "down": "Điều hướng xuống",
-      "flipCard": "Mở dự án {{title}}"
-    },
-    "blog": {
-      "category": "Điều hướng qua các bài viết",
-      "next": "Đến bài viết tiếp theo",
-      "prev": "Đến bài viết trước",
-      "search": "Tìm kiếm bài viết",
-      "filterTag": "Lọc bài viết",
-      "jumpToPost": "Đi tới bài viết số {{i}}",
-      "back": "Quay lại danh sách bài viết"
-    },
-    "about": {
-      "category": "Điều hướng qua các phần giới thiệu",
-      "jumpToChapter": "Đi đến chương {{i}}"
-    },
-    "uses": {
-      "category": "Điều hướng qua các phần công cụ",
-      "jumpToCategory": "Đi đến mục {{category}}"
-    },
-    "now": {
-      "category": "Điều hướng qua các phần",
-      "jumpToCategory": "Đi đến mục {{category}}"
-    },
-    "colophon": {
-      "category": "Điều hướng qua các phần thông tin",
-      "jumpToSection": "Đi đến phần {{section}}"
-    }
+  "2048.touchInstructions": {
+    "other": "Trên điện thoại, hãy sử dụng các nút điều khiển ở trên màn hình."
+  },
+  "2048.undo": {
+    "other": "Hoàn tác"
+  },
+  "nav.home": {
+    "other": "張主"
+  },
+  "nav.about": {
+    "other": "介紹"
+  },
+  "nav.projects": {
+    "other": "預案"
+  },
+  "nav.blog": {
+    "other": "Blog"
+  },
+  "nav.now": {
+    "other": "現在"
+  },
+  "nav.uses": {
+    "other": "工具"
+  },
+  "nav.contact": {
+    "other": "聯繫"
+  },
+  "nav.guestbook": {
+    "other": "數留筆"
+  },
+  "nav.colophon": {
+    "other": "通信"
+  },
+  "nav.webring": {
+    "other": "Webring"
+  },
+  "nav.scrapbook": {
+    "other": "𥱬劄"
+  },
+  "nav.slashes": {
+    "other": "疏圖張䇼"
+  },
+  "nav.brand": {
+    "other": "部認面"
+  },
+  "languageNotice.message": {
+    "other": "翻版㗂越平𡨸漢喃吻當得𡏦𥩯。𠬠數內容固体𣗓完整或被少、煩伴通感。（Phiên bản Tiếng Việt bằng chữ Hán Nôm vẫn đang được xây dựng. Một số nội dung có thể chưa hoàn chỉnh hoặc bị thiếu, phiền bạn thông cảm.）"
+  },
+  "languageNotice.dismiss": {
+    "other": "㨂"
+  },
+  "language.main": {
+    "other": "言語正"
+  },
+  "language.beta": {
+    "other": "言語當𡏦𥩯"
+  },
+  "language.other": {
+    "other": "言語恪"
+  },
+  "language.auto": {
+    "other": "自動譔蹺言語程閱"
+  },
+  "language.search": {
+    "other": "尋言語…"
+  },
+  "language.en": {
+    "other": "㗂英"
+  },
+  "language.vi": {
+    "other": "㗂越"
+  },
+  "language.et": {
+    "other": "㗂𠲖綀蘇尼阿"
+  },
+  "language.ru": {
+    "other": "㗂俄"
+  },
+  "language.da": {
+    "other": "㗂丹麥"
+  },
+  "language.tr": {
+    "other": "㗂土耳其"
+  },
+  "language.zh": {
+    "other": "㗂中"
+  },
+  "language.sv": {
+    "other": "㗂瑞典"
+  },
+  "language.fi": {
+    "other": "㗂芬蘭"
+  },
+  "language.pl": {
+    "other": "㗂波蘭"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "嘲𣇜𤏬唲！"
+  },
+  "greetings.afternoon": {
+    "other": "𣇜𣊿𢝙𨤔唲！"
+  },
+  "greetings.evening": {
+    "other": "𣇜𣋁𨓽迨儗𢯕唲！"
+  },
+  "greetings.night": {
+    "other": "吻𥅞𣌉啊？𨉟拱丕呢。"
+  },
+  "home.buttons.about": {
+    "other": "𧗱𨉟"
+  },
+  "home.buttons.projects": {
+    "other": "䀡預案𧵑𨉟"
+  },
+  "home.footer": {
+    "other": "嘲𢜠伴𦤾貝張䇼𧵑𨉟。據自然𦓡勘破唲。"
+  },
+  "home.heading": {
+    "other": "嘲伴、𨉟𱺵 Jarema"
+  },
+  "home.subheading": {
+    "other": "生員梗經濟、請倘逆摸貝 code、常川逆𢴉貝貓。"
+  },
+  "home.contactButton": {
+    "other": "聯繫𨉟"
+  },
+  "home.aboutButton": {
+    "other": "𧗱𨉟"
+  },
+  "home.blogButton": {
+    "other": "讀 blog 𧵑𨉟"
+  },
+  "home.guestbookButton": {
+    "other": "𥙩𠸛留筆吏𨉟"
+  },
+  "home.recentPosts": {
+    "other": "Blog 𧵆低"
+  },
+  "home.latestNow": {
+    "other": "𣊾𣇞𨉟當𫜵之？"
+  },
+  "home.currentMood": {
+    "other": "心情現在"
+  },
+  "home.currentStatus": {
+    "other": "狀態現在"
+  },
+  "home.viewAllWebrings": {
+    "other": "䀡悉哿 webring"
+  },
+  "home.checkOutSites": {
+    "other": "覽此諸站！"
+  },
+  "guestbook.title": {
+    "other": "數留筆"
+  },
+  "guestbook.description": {
+    "other": "唉抵吏唎𠴍𥪝數留筆𧵑𨉟唲！"
+  },
+  "about.title": {
+    "other": "介紹"
+  },
+  "about.chapters.6.title": {
+    "other": "mình vẫn chưa nói hết đâu"
+  },
+  "about.chapters.6.content1": {
+    "other": "và nên đây là phần lẽ ra \"người ta\" không nên thấy."
+  },
+  "about.chapters.6.content2": {
+    "other": "xin phép được xưng là \"tôi\". tôi vẫn còn bực. bực lắm. tôi vẫn đang tiếc nuối vì một phần của chính mình chưa bao giờ có cơ hội được sống thật. vẫn có những buổi sáng tỉnh dậy mà cứ có cảm giác mọi thứ bị lệch đi vài chút, mà không biết tại sao. có những lúc tôi đã nghĩ đến việc chạy trốn và biến mất luôn, lập một cái tên mới, sống ở thành phố mới, nói một ngôn ngữ mới. hoặc đôi lúc cũng là buông bỏ mọi thứ theo cái nghĩa ngược lại. và có lần tôi đã suýt làm thế thật."
+  },
+  "about.chapters.6.content3": {
+    "other": "có những ngày tôi chẳng cảm thấy mình là con người nữa. có những lúc tôi thấy bản thân giống như kiểu một ký ức đang cố kết lại thành hình hơn. giống như một tiếng vọng vang của một điều gì đó mềm mại mà chính tôi cũng không còn có thể chạm tới được nữa. nhưng cũng có những ngày tôi bùng cháy như có điện chạy trong người. tôi cảm được từng chi tiết quanh tôi, từ ánh nắng trên da, những nốt nhạc nhẹ nhàng của playlist đang bật, những khoảnh khắc ánh mắt và gương mặt người ta thay đổi khi họ thấy đủ an toàn để thể hiện chính mình. mấy điều nhỏ nhoi đó, bằng một cách nào đó, vẫn đang níu giữ tôi sống."
+  },
+  "about.chapters.6.content4": {
+    "other": "tôi vẫn chưa xong cái việc trở thành một phiên bản quái gì mà tôi cũng chẳng biết rõ là ai hay như thế nào. nhưng có một điều tôi chắc chắn, là tôi đã xong với cái việc lúc nào cũng phải giả vờ là mình ổn, và tôi không chịu im lặng nữa."
+  },
+  "projects.title": {
+    "other": "各預案𧵑𨉟"
+  },
+  "projects.description": {
+    "other": "綜合各預案個人、學術吧活動𦓡𨉟㐌吧當寔現。𠬠數時㐌歱、仍役恪時吻當𫜵𡁎。"
+  },
+  "projects.status.completed": {
+    "other": "㐌完成"
+  },
+  "projects.status.inProgress": {
+    "other": "當進行"
+  },
+  "projects.status.planned": {
+    "other": "預見"
+  },
+  "projects.categories.personal": {
+    "other": "個人"
+  },
+  "projects.categories.academic": {
+    "other": "學術"
+  },
+  "projects.categories.activism": {
+    "other": "活動社會"
+  },
+  "projects.details.what": {
+    "other": "低𱺵之"
+  },
+  "projects.details.learned": {
+    "other": "𨉟㐌學得之"
+  },
+  "projects.details.why": {
+    "other": "預案尼關重貝𨉟爲"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "扨抵䀡枝節"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "扨抵㨂"
+  },
+  "projects.statusLabels.completed": {
+    "other": "㐌完成"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "當進行"
+  },
+  "projects.statusLabels.planned": {
+    "other": "預見"
+  },
+  "projects.buttons.showRandom": {
+    "other": "現添𠄧預案恪"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "催隱𠫾、𡗉過"
+  },
+  "blog.title": {
+    "other": "Blog"
+  },
+  "blog.description": {
+    "other": "𠄧𣳔推擬、𠄧唎心狀、吧請倘𱺵𠄧唎叫歌。𣇞𱜢拱曰、感觸𱜢拱固。"
+  },
+  "blog.language": {
+    "other": "言語"
+  },
+  "blog.languageFilter": {
+    "other": "漉蹺言語"
+  },
+  "blog.tag": {
+    "other": "矢"
+  },
+  "blog.sort": {
+    "other": "𢯛攝排"
+  },
+  "blog.category": {
+    "other": "體類"
+  },
+  "blog.noPosts": {
+    "other": "𣗓固排曰𱜢於低哿。𢮿吏𢖖󠄁唲！"
+  },
+  "blog.search": {
+    "other": "尋檢排曰…"
+  },
+  "blog.sortNew": {
+    "other": "㵋一𠓀"
+  },
+  "blog.sortOld": {
+    "other": "𫇰一𠓀"
+  },
+  "blog.sortReadTime": {
+    "other": "蹺時間讀"
+  },
+  "blog.sortABC": {
+    "other": "蹺次序𡨸𡣨"
+  },
+  "blog.filter": {
+    "other": "漉"
+  },
+  "blog.filterDescription": {
+    "other": "漉各排曰"
+  },
+  "blog.activeFilter": {
+    "other": "當漉蹺："
+  },
+  "blog.filterNoMatch": {
+    "other": "空固排曰𱜢符合貝部漉。調整尋檢唲！"
+  },
+  "blog.clearFilter": {
+    "other": "毀悉哿部漉"
+  },
+  "blog.mood": {
+    "other": "心狀"
+  },
+  "blog.cat": {
+    "other": "得 boss 批閱"
+  },
+  "blog.prev": {
+    "other": "排曰𠓀"
+  },
+  "blog.next": {
+    "other": "排曰𢖖󠄁"
+  },
+  "blog.jumpToPost": {
+    "other": "𬦮𦤾排曰"
+  },
+  "blog.back": {
+    "other": "𢮿吏名冊 blog"
+  },
+  "blog.showingPosts": {
+    "other": "當顯示{{current}}𨑗總數{{total}}排曰"
+  },
+  "blog.minRead": {
+    "other": "丿讀"
+  },
+  "blog.availableIn": {
+    "other": "排曰尼拱得曰𥪝"
+  },
+  "blog.comments": {
+    "other": "Comments"
+  },
+  "blog.webmentions": {
+    "other": "Webmention"
+  },
+  "blog.webmentionsNone": {
+    "other": "𣗓固 webmention 𡳰。㐌𦓡𠊛頭先反𩈘！"
+  },
+  "blog.webmentionLike": {
+    "other": "㐌適排尼"
+  },
+  "blog.webmentionRepost": {
+    "other": "㐌𢯢𠚢𡀰排尼"
+  },
+  "blog.webmentionReply": {
+    "other": "㐌𢀈𡀰"
+  },
+  "blog.webmentionMention": {
+    "other": "㐌提及排尼"
+  },
+  "now.title": {
+    "other": "現在"
+  },
+  "now.description": {
+    "other": "仍役𨉟當𫜵、當擬、吧當吟。"
+  },
+  "now.lastUpdated": {
+    "other": "及日㵋一𠓨"
+  },
+  "now.categories.reading": {
+    "other": "當讀"
+  },
+  "now.categories.coding": {
+    "other": "當立程"
+  },
+  "now.categories.drinking": {
+    "other": "當㕵"
+  },
+  "now.categories.listening": {
+    "other": "當𦖑"
+  },
+  "now.categories.premid": {
+    "other": "活動𨑗Discord"
+  },
+  "now.categories.thinking": {
+    "other": "當擬"
+  },
+  "now.categories.studying": {
+    "other": "當學"
+  },
+  "now.categories.planning": {
+    "other": "當𬨠計劃"
+  },
+  "uses.title": {
+    "other": "工具"
+  },
+  "uses.description": {
+    "other": "綜合𤗆工具𨉟使用行𣈜。張䇼尼𥙩感興自"
+  },
+  "uses.websiteDescription": {
+    "other": "張䇼坭𤗆𠊛𢺹𢩿仍工具𣱆使用行𣈜𥪝工役拱如𠁀常。"
+  },
+  "uses.categories.hardware": {
+    "other": "設備"
+  },
+  "uses.categories.mobile": {
+    "other": "移動"
+  },
+  "uses.categories.audio": {
+    "other": "𦖻𦖑"
+  },
+  "uses.categories.os": {
+    "other": "系調行吧程閱"
+  },
+  "uses.categories.development": {
+    "other": "立程"
+  },
+  "uses.categories.email": {
+    "other": "應用效率"
+  },
+  "uses.categories.privacy": {
+    "other": "保密吧𥢆私"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Táy máy tò mò với điện thoại"
+  },
+  "uses.categories.mapping": {
+    "other": "版圖"
+  },
+  "uses.categories.gaming": {
+    "other": "𠻀𨔈"
+  },
+  "uses.categories.multimedia": {
+    "other": "多方便"
+  },
+  "uses.categories.design": {
+    "other": "設計吧𦘧"
+  },
+  "uses.categories.photo": {
+    "other": "整𢯢影"
+  },
+  "uses.categories.video": {
+    "other": "韋堤烏吧音聲"
+  },
+  "uses.categories.media": {
+    "other": "各役務方便"
+  },
+  "uses.subsections.design": {
+    "other": "設計吧𦘧"
+  },
+  "uses.subsections.photo": {
+    "other": "整𢯢影"
+  },
+  "uses.subsections.video": {
+    "other": "韋堤烏吧音聲"
+  },
+  "uses.subsections.media": {
+    "other": "各役務方便"
+  },
+  "contact.title": {
+    "other": "聯繫"
+  },
+  "contact.description": {
+    "other": "各方式聯絡貝𨉟。"
+  },
+  "contact.message": {
+    "other": "揨礙𨉟、唉𠓨嘲自然唲。或拱固体撻曆𭉑𥢆裊伴㦖專業子 =))"
+  },
+  "contact.disclaimer": {
+    "other": "𨉟固㨋𠳒伊𩄲唲。𫫡、固𨤰丕。 除欺𨉟被貓咍之妬𫜵分心催 :v"
+  },
+  "contact.sections.contactMe": {
+    "other": "聯繫貝𨉟"
+  },
+  "contact.sections.socialMedia": {
+    "other": "𨉟𨑗𦁸社會"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "𨉟𨑗各𡋂磉恪"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "聯繫貝𨉟"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "𨉟𨑗𦁸社會"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "𨉟𨑗各𡋂磉恪"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "銙公開"
+  },
+  "contact.links.universityEmail": {
+    "other": "伊𩄲學院"
+  },
+  "contact.links.bookMeeting": {
+    "other": "撻曆𥢆貝𨉟"
+  },
+  "contact.links.messengerNote": {
+    "other": "𨉟可𠃣活動𨑗 Facebook 吧 Messenger。𨉟空体擔保得仕㨋𠳒𮞊一裊伴𠴍信過低。"
+  },
+  "contact.links.pgpKey": {
+    "other": "銙公開 PGP"
+  },
+  "contact.links.sshKey": {
+    "other": "銙公開 SSH"
+  },
+  "moodCat.title": {
+    "other": "貓𧵑𣋚𫢩"
+  },
+  "moodCat.hover": {
+    "other": "貓陰忱判察伴"
+  },
+  "moodCat.refresh": {
+    "other": "朱䀡貓㵋𠫾"
+  },
+  "moodCat.seeMore": {
+    "other": "䀡添貓恪"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "𠻀𨔈攝形古典𮇜連貝歲苴𧵑別包世系。"
+  },
+  "tetris.gameInfo": {
+    "other": "通信幔𨔈"
+  },
+  "tetris.score": {
+    "other": "點數"
+  },
+  "tetris.level": {
+    "other": "級度"
+  },
+  "tetris.status": {
+    "other": "狀態"
+  },
+  "tetris.next": {
+    "other": "接續"
+  },
+  "tetris.gameOver": {
+    "other": "結束"
+  },
+  "tetris.paused": {
+    "other": "暫仃"
+  },
+  "tetris.playing": {
+    "other": "當𨔈"
+  },
+  "tetris.ready": {
+    "other": "淍損"
+  },
+  "tetris.playAgain": {
+    "other": "𨔈吏"
+  },
+  "tetris.pause": {
+    "other": "暫仃"
+  },
+  "tetris.resume": {
+    "other": "接續"
+  },
+  "tetris.start": {
+    "other": "𢲧頭"
+  },
+  "tetris.reset": {
+    "other": "撻吏"
+  },
+  "tetris.controls": {
+    "other": "調遣"
+  },
+  "tetris.moveLeft": {
+    "other": "移轉𨖅債"
+  },
+  "tetris.moveRight": {
+    "other": "移轉𨖅沛"
+  },
+  "tetris.moveDown": {
+    "other": "移轉𬺗"
+  },
+  "tetris.rotate": {
+    "other": "𢮿塊"
+  },
+  "tetris.hardDrop": {
+    "other": "抯𬺗𮞊"
+  },
+  "tetris.pauseGame": {
+    "other": "暫仃𠻀𨔈"
+  },
+  "tetris.musicOn": {
+    "other": "弼樂"
+  },
+  "tetris.musicOff": {
+    "other": "𤎕樂"
+  },
+  "tetris.nowPlaying": {
+    "other": "當發"
+  },
+  "scrapbook.title": {
+    "other": "Devlog"
+  },
+  "settings.title": {
+    "other": "掑撻"
+  },
+  "settings.theme": {
+    "other": "交面"
+  },
+  "settings.themeAuto": {
+    "other": "自動"
+  },
+  "settings.themeLight": {
+    "other": "交面𤏵"
+  },
+  "settings.themeDark": {
+    "other": "交面𣋁"
+  },
+  "settings.stars": {
+    "other": "星𤑟𤑟"
+  },
+  "settings.reduceMotion": {
+    "other": "減轉動"
+  },
+  "settings.highContrast": {
+    "other": "相反高"
+  },
+  "settings.dyslexiaFont": {
+    "other": "風𡨸朱𠊛𠸋讀"
+  },
+  "settings.timezone": {
+    "other": "脢𣇞"
+  },
+  "settings.tzYours": {
+    "other": "𧵑伴"
+  },
+  "settings.tzAuthor": {
+    "other": "𧵑 Jarema"
+  },
+  "settings.music": {
+    "other": "樂"
+  },
+  "settings.musicUnavailable": {
+    "other": "現空可用"
+  },
+  "webrings.title": {
+    "other": "Webring"
+  },
+  "webrings.description": {
+    "other": "各 webring 𨉟當參加。勘破添仍 website 吧 blog 個人恪唲。"
+  },
+  "webrings.intro1": {
+    "other": "Webring 𱺵集合各張䇼得造𤳸仍𠊛共志向、常搓𨒺𠬠主題、㘗審美或所適鍾。（自 safonts webring）"
+  },
+  "webrings.intro2": {
+    "other": "張䇼尼𱺵𠬠份𧵑各 webring 𨑜低。扨𠓨 link 抵踦㖭茹行𥯎𧵑𨉟、或各成員恪裊 webring 妬固職能 random。據譔不期𤥑𱜢伴 thích nha!"
+  },
+  "webrings.previous": {
+    "other": "𠓀"
+  },
+  "webrings.random": {
+    "other": "偶然"
+  },
+  "webrings.next": {
+    "other": "𢖖󠄁"
+  },
+  "webrings.previousAria": {
+    "other": "張𠓀𥪝 {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "張偶然𥪝 {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "張𢖖󠄁𥪝 {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "當䟻閱"
+  },
+  "webrings.pending.description": {
+    "other": "仍 webring 𨉟㐌登記參加吧當䟻批閱。"
+  },
+  "webrings.pending.badge": {
+    "other": "䟻閱"
+  },
+  "badges.title": {
+    "other": "部搜集徽號䇼"
+  },
+  "badges.description": {
+    "other": "𠬠部搜集各徽號吧𨨷䇼古典得使用𨑗 website 𧵑𨉟。"
+  },
+  "badges.pageTitle": {
+    "other": "部搜集徽號䇼古典"
+  },
+  "badges.pageDescription": {
+    "other": "𨉟㐌搜集仍徽號 88x31 尼抵體現仍之𨉟吧張䇼尼寔事關心。衆得造𢧚自時期 Geocities、咴妬印絲涅𣗓被汲𣼼𤳸仍內容 AI slop。裊伴固𠬠徽號㦖𨉟添𠓨低、據噫𨉟唲。"
+  },
+  "badges.myBadgeTitle": {
+    "other": "徽號𧵑𨉟（𢶸抵𢲫㢅）"
+  },
+  "badges.myBadgeIntro": {
+    "other": "用徽號尼抵引 link 𧗱 website 𧵑𨉟："
+  },
+  "badges.hotlinkUrl": {
+    "other": "URL hotlink:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "Code HTML"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "㨳意欺𣴛 code"
+  },
+  "badges.suggestion1": {
+    "other": "使用"
+  },
+  "badges.suggestion1b": {
+    "other": "𥪝 CSS 𧵑伴抵𡨺元風格 pixel art."
+  },
+  "badges.suggestion2": {
+    "other": "Link 直接𧗱張主𧵑𨉟在"
+  },
+  "badges.suggestion3": {
+    "other": "徽號固戟𡱩 88x31 pixel, 唉因對朝㢅吧朝高𥪝 HTML 𬨠"
+  },
+  "badges.suggestion3b": {
+    "other": "抵易讀欣𨑗各幔形度分解高。"
+  },
+  "badges.collectionHeading": {
+    "other": "部搜集徽號䇼"
+  },
+  "badges.search": {
+    "other": "尋徽號…"
+  },
+  "badges.filterByCategory": {
+    "other": "漉蹺名目"
+  },
+  "badges.verboseView": {
+    "other": "枝節"
+  },
+  "badges.badgeOnlyView": {
+    "other": "只現徽號"
+  },
+  "badges.showingCount": {
+    "other": "當顯示 {{count}} 徽號"
+  },
+  "badges.showingFiltered": {
+    "other": "當顯示 {{filtered}} 𨑗總數 {{total}} 徽號"
+  },
+  "badges.noResults": {
+    "other": "空尋𧡊徽號𱜢𨨤貝尋檢"
+  },
+  "badges.categories.all": {
+    "other": "悉哿"
+  },
+  "badges.categories.personal": {
+    "other": "個人"
+  },
+  "badges.categories.friends": {
+    "other": "伴佊"
+  },
+  "badges.categories.other-sites": {
+    "other": "張恪"
+  },
+  "badges.categories.software": {
+    "other": "份繌"
+  },
+  "badges.categories.web": {
+    "other": "䇼"
+  },
+  "badges.categories.fun": {
+    "other": "恪"
+  },
+  "brand.pageTitle": {
+    "other": "部認面"
+  },
+  "brand.pageDescription": {
+    "other": "部認面𧵑張䇼𧵑𨉟。唉使用𠇍丐尼裊伴㦖𠯅𦤾或引 link 𬧐張尼唲。"
+  },
+  "brand.name.title": {
+    "other": "𠸜"
+  },
+  "brand.name.nameLabel": {
+    "other": "𠸜"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "𠸜顯示"
+  },
+  "brand.name.symbolNote": {
+    "other": "記號『爲丕』（∴）㫻𱺵𠬠份𥪝𠸜顯示𧵑𨉟。伮代面朱結果、結論、點結𧵑嚨推擬。"
+  },
+  "brand.logo.title": {
+    "other": "Logo"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Chỉ mặt"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Mặt và thân trên"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px （或倍數𫰅或𡮈欣𧵑伮調得）"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px （或倍數𫰅或𡮈欣𧵑伮調得）"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "徽號"
+  },
+  "brand.badge.urlLabel": {
+    "other": "URL 直接"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "HTML"
+  },
+  "brand.colors.title": {
+    "other": "𦭷色"
+  },
+  "brand.colors.names.primary": {
+    "other": "主導"
+  },
+  "brand.colors.names.background": {
+    "other": "Nền"
+  },
+  "brand.colors.names.card": {
+    "other": "Thẻ"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Tiền cảnh"
+  },
+  "brand.colors.names.muted": {
+    "other": "Mờ"
+  },
+  "brand.colors.names.border": {
+    "other": "Viền"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Màu nhấn chính"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Nền trang"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Nền thẻ"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Màu chữ chính"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "Các phần tử phụ"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Viền và dải phân cách"
+  },
+  "brand.colors.darkMode": {
+    "other": "Chế độ tối"
+  },
+  "brand.colors.lightMode": {
+    "other": "Chế độ sáng"
+  },
+  "brand.fonts.title": {
+    "other": "Phông chữ"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "漢喃 Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "標題"
+  },
+  "brand.fonts.usage.body": {
+    "other": "內容吧交面 (UI)"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "㗂中"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "𡨸喃"
+  },
+  "brand.fonts.weight": {
+    "other": "Độ dày:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "Xem trên kho phông chữ"
+  },
+  "brand.fonts.languages.english": {
+    "other": "㗂英"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "㗂越"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "㗂波蘭"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "㗂俄"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "㗂日"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "㗂猶太"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "㗂泰"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "記號"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "㗂中（簡體）"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "㗂中（繁體）"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "㗂越（𡨸喃）"
+  },
+  "brand.usage.title": {
+    "other": "留意𡮈"
+  },
+  "brand.usage.point1Title": {
+    "other": "Cứ thoải mái dùng"
+  },
+  "brand.usage.point1Text": {
+    "other": "Không cần xin phép để dùng huy hiệu, logo hay dẫn link tới web này đâu. Cứ lấy, hotlink, hay vứt lên web của bạn. Mình không quan tâm. Thực ra là mình còn thấy vui ấy chứ."
+  },
+  "brand.usage.point2Title": {
+    "other": "𡨺元 style pixel 𧵑徽號"
+  },
+  "brand.usage.point2Text": {
+    "other": "Nếu dùng huy hiệu (badge), làm ơn thêm 'image-rendering: pixelated' (hoặc 'crisp-edges' trên Firefox) vào CSS. Không có nó, trình duyệt sẽ làm mờ pixel nhìn như rác ấy. Nó là pixel art, làm ơn hãy đối xử với nó như pixel art."
+  },
+  "brand.usage.point3Title": {
+    "other": "Ghi nguồn thì tốt, không thì cũng không sao"
+  },
+  "brand.usage.point3Text": {
+    "other": "Nếu bạn viết bài về trang web này hay dùng tư liệu trong blog, dẫn link lại thì mình sẽ vui lắm. Nhưng nếu chỉ gắn cái badge vào trang liên kết thì không cần làm gì thêm đâu, cái mã HTML của badge mình đưa đã có link sẵn về đây rồi."
+  },
+  "brand.usage.point4Title": {
+    "other": "揨𫜵𠻀"
+  },
+  "brand.usage.point4Text": {
+    "other": "Đừng dùng mấy cái này để giả danh mình, nhét chữ vào mình, hay làm như kiểu mình dính dáng tới cái gì mờ ám. Mình tin là bạn biết sự khác biệt giữa việc dẫn link tới trang bạn thích và việc giả mạo người khác. Nếu thấy lấn cấn không biết việc bạn định làm có kỳ cục không, thì khả năng cao là có đấy."
+  },
+  "brand.usage.footer": {
+    "other": "Thế thôi, cứ dùng đàng hoàng là được."
+  },
+  "colophon.title": {
+    "other": "通信張䇼"
+  },
+  "colophon.description": {
+    "other": "句𡀯𱘃𢖖󠄁張䇼尼"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Lịch sử trang này"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "Mình mới đăng ký trang web này vào cuối năm 2023, nhưng thiết kế nó đã thay đổi rất nhiều trong suốt thời gian này. Phiên bản đầu tiên chỉ là một trang WordPress ở trên một cái hosting miễn phí nào đó, bản thứ hai thì là trang Carrd.co, và bản thứ ba được xây trên nền Astro. Phiên bản hiện tại là một bản mình thiết kế lại hoàn toàn mới và đập đi xây lại từ đầu."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Mỗi phiên bản đều là một sự tiến hóa nhất định, với bản mới nhất này tập trung vào độ nhanh nhạy, khả năng tiếp cận (accessibility), khả năng điều hướng hoàn toàn bằng bàn phím, và cũng như một cảm giác \"mình\" hơn một chút, thể hiện \"mình\" tốt hơn chút."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Các nền công nghệ sử dụng"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "Framework React cho phép render (tạo ảnh) từ phía server và tạo trang web tĩnh"
+  },
+  "colophon.technologyStack.react": {
+    "other": "Thư viện JavaScript xây dựng giao diện"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Framework CSS theo phương pháp utility-first (viết CSS mà không cần viết quá nhiều CSS)"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Thư viện component (thành phần) tái sử dụng được dựng với Radix UI và Tailwind"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "Thư viện animation (hoạt ảnh) cho React"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Framework hỗ trợ ngôn ngữ"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "Ngôn ngữ lập trình mở rộng dựa trên JavaScript"
+  },
+  "colophon.hosting.title": {
+    "other": "Lưu trữ web (Hosting)"
+  },
+  "colophon.hosting.content1": {
+    "other": "Trang web được lưu trên"
+  },
+  "colophon.hosting.content2": {
+    "other": "hỗ trợ chạy code web thông suốt từ GitHub."
+  },
+  "colophon.hosting.content3": {
+    "other": "Tên miền này được quản lý bởi"
+  },
+  "colophon.hosting.content4": {
+    "other": "và họ cũng giúp bảo mật trang web này cũng như hỗ trợ tăng hiệu năng."
+  },
+  "colophon.inspiration.title": {
+    "other": "Nguồn cảm hứng"
+  },
+  "colophon.inspiration.content1": {
+    "other": "Trang này lấy cảm hứng từ"
+  },
+  "colophon.inspiration.content2": {
+    "other": "mà lại có cảm hứng từ"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Ý tưởng ban đầu ở trên"
+  },
+  "footer.copyright": {
+    "other": "2026，∴ Jarema，Creative Commons 記功 (CC BY) 4.0"
+  },
+  "footer.madeWith": {
+    "other": "làm với mọi yêu thương"
+  },
+  "footer.andChaos": {
+    "other": "và vài tuần nghịch code"
+  },
+  "footer.uptime": {
+    "other": " uptime"
+  },
+  "footer.siteStatus": {
+    "other": "Trang thái trang"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Phím tắt"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Điều hướng"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Hành động"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Đóng"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Trang chủ"
+  },
+  "keyboardShortcuts.about": {
+    "other": "Giới thiệu"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blog"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Dự án"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Hiện tại"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Công cụ"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "Liên hệ"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Thông tin"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "疏圖張䇼"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Devlog"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Chuyển đổi ngôn ngữ"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Chuyển đổi chủ đề"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Thay đổi ảnh mèo"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Mở bảng phím tắt"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Mở thanh tìm kiếm"
+  },
+  "actionSearch.2048": {
+    "other": "Chơi 2048"
+  },
+  "actionSearch.title": {
+    "other": "Tìm kiếm hành động"
+  },
+  "actionSearch.placeholder": {
+    "other": "Gõ để tìm hành động..."
+  },
+  "actionSearch.noResults": {
+    "other": "Không tìm thấy hành động nào"
+  },
+  "actionSearch.goTo": {
+    "other": "Chuyển đến trang"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Chuyển đổi chủ đề"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Chuyển sang chế độ tối"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Chuyển sang chế độ sáng"
+  },
+  "actionSearch.appearance": {
+    "other": "Giao diện"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Chuyển đổi ngôn ngữ"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Xem mèo mới"
+  },
+  "actionSearch.playGame": {
+    "other": "Chơi trò chơi"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "Xem toàn bộ phím tắt"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "Nhấn . để mở thanh tìm kiếm"
+  },
+  "actionSearch.escToClose": {
+    "other": "Nhấn ESC để thoát"
+  },
+  "actionSearch.fun": {
+    "other": "Chơi vui"
+  },
+  "actionSearch.games": {
+    "other": "Trò chơi"
+  },
+  "actionSearch.tetris": {
+    "other": "Chơi Tetris"
+  },
+  "actionSearch.help": {
+    "other": "Trợ giúp"
+  },
+  "actionSearch.projects.category": {
+    "other": "Điều hướng qua các dự án"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Đóng dự án"
+  },
+  "actionSearch.projects.left": {
+    "other": "Điều hướng sang trái"
+  },
+  "actionSearch.projects.right": {
+    "other": "Điều hướng sang phải"
+  },
+  "actionSearch.projects.up": {
+    "other": "Điều hướng lên"
+  },
+  "actionSearch.projects.down": {
+    "other": "Điều hướng xuống"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Mở dự án {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Điều hướng qua các bài viết"
+  },
+  "actionSearch.blog.next": {
+    "other": "Đến bài viết tiếp theo"
+  },
+  "actionSearch.blog.prev": {
+    "other": "Đến bài viết trước"
+  },
+  "actionSearch.blog.search": {
+    "other": "Tìm kiếm bài viết"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Lọc bài viết"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "Đi tới bài viết số {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "Quay lại danh sách bài viết"
+  },
+  "actionSearch.about.category": {
+    "other": "Điều hướng qua các phần giới thiệu"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "Đi đến chương {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "Điều hướng qua các phần công cụ"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "Đi đến mục {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "Điều hướng qua các phần"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "Đi đến mục {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Điều hướng qua các phần thông tin"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "Đi đến phần {{section}}"
   }
 }

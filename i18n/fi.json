@@ -1,719 +1,1667 @@
 {
-  "404": {
-    "title": "Olet eksynyt kartalta",
-    "description": "Kissakaan ei tiedä missä olet.",
-    "button": "Palaa kotiin",
-    "sitemap": "Näytä sivukartta",
-    "enjoycat": "Kun olet eksyksissä, katso tätä kissaa:"
+  "404.title": {
+    "other": "Olet eksynyt kartalta"
   },
-  "2048": {
-    "description": "Yhdistä laatat, pääse 2048:aan!",
-    "score": "Pisteet",
-    "best": "Paras",
-    "gameOver": "Peli ohi!",
-    "finalScore": "Loppupisteet",
-    "tryAgain": "Yritä uudelleen",
-    "youWin": "Voitit!",
-    "currentScore": "Nykyiset pisteet",
-    "keepPlaying": "Jatka peliä",
-    "newGame": "Uusi peli",
-    "howToPlay": "Kuinka pelata",
-    "instructions1": "Käytä nuolinäppäimiä tai WASD:ta siirtääksesi laattoja. Kun kaksi samanlaista laattaa koskettaa, ne yhdistyvät!",
-    "instructions2": "Jokaisen siirron jälkeen ilmestyy uusi laatta (2 tai 4).",
-    "instructions3": "Luo laatta, jossa on numero 2048, voittaaksesi pelin!",
-    "controls": "Ohjaimet",
-    "moveLeft": "Siirrä vasemmalle",
-    "moveRight": "Siirrä oikealle",
-    "moveUp": "Siirrä ylös",
-    "moveDown": "Siirrä alas",
-    "touchInstructions": "Mobiililaitteilla käytä ruudun ohjaimia siirtääksesi laattoja.",
-    "undo": "Kumoa",
-    "title": "2048",
-    "instructions4": "Kun olet saavuttanut 2048:n, voit jatkaa peliä saadaksesi vielä korkeammat pisteet!"
+  "404.description": {
+    "other": "Kissakaan ei tiedä missä olet."
   },
-  "nav": {
-    "home": "Koti",
-    "about": "Minusta",
-    "projects": "Projektit",
-    "blog": "Blogi",
-    "now": "Nyt",
-    "uses": "Käytän",
-    "contact": "Yhteys",
-    "guestbook": "Vieraskirja",
-    "colophon": "Kolofoni",
-    "webring": "Webring",
-    "scrapbook": "Päiväkirja",
-    "slashes": "Sivukartta",
-    "brand": "Brändimateriaalit",
-    "badges": "Merkit",
-    "tools": "Työkalut"
+  "404.button": {
+    "other": "Palaa kotiin"
   },
-  "languageNotice": {
-    "message": "Tämän kielen käännökset ovat vielä työn alla. Osa sisällöstä voi olla puutteellista tai puuttua kokonaan.",
-    "dismiss": "Sulje"
+  "404.sitemap": {
+    "other": "Näytä sivukartta"
   },
-  "language": {
-    "main": "Pääkielet",
-    "beta": "Kielet beetaversiossa",
-    "other": "Muut kielet",
-    "auto": "Auto (selaimen kieli)",
-    "search": "Etsi kieliä...",
-    "en": "Englanti",
-    "vi": "Vietnami",
-    "ru": "Venäjä",
-    "et": "Viro",
-    "da": "Tanska",
-    "tr": "Turkki",
-    "zh": "Kiina",
-    "pl": "Puola",
-    "sv": "Ruotsi",
-    "fi": "Suomi",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "Kun olet eksyksissä, katso tätä kissaa:"
   },
-  "greetings": {
-    "morning": "Huomenta, matkaaja.",
-    "afternoon": "Hyvää iltapäivää, kulkija.",
-    "evening": "Hyvää iltaa, tutkija.",
-    "night": "Vielä hereillä? Niin minäkin."
+  "2048.description": {
+    "other": "Yhdistä laatat, pääse 2048:aan!"
   },
-  "home": {
-    "buttons": {
-      "about": "Minusta",
-      "projects": "Katso projektini"
-    },
-    "footer": "Tervetuloa digitaaliseen puutarhaani. Tutustu vapaasti.",
-    "heading": "hei, olen Jarema",
-    "subheading": "Talousopiskelija, joskus koodari, useimmiten kissakuiskaaja.",
-    "contactButton": "Ota yhteyttä",
-    "aboutButton": "Minusta",
-    "blogButton": "Lue blogiani",
-    "guestbookButton": "Kirjoita vieraskirjaani",
-    "recentPosts": "Viimeisimmät blogikirjoitukset",
-    "latestNow": "Mitä teen nyt",
-    "currentMood": "Nykyinen mieliala",
-    "currentStatus": "Nykyinen tila",
-    "time": "Nykyinen aika",
-    "yourTime": "Sinun aikasi",
-    "myTime": "Minun aikani",
-    "viewAllWebrings": "Näytä kaikki verkkorenkaat",
-    "checkOutSites": "Katso näitä sivustoja!",
-    "androidCountdown": "Androidista tulee suljettu käyttöjärjestelmä X päivän kuluessa"
+  "2048.score": {
+    "other": "Pisteet"
   },
-  "guestbook": {
-    "title": "Vieraskirja",
-    "description": "Jätä viesti vieraskirjaani!",
-    "poweredBy": "Tarjoaa",
-    "atabook": "Atabook"
+  "2048.best": {
+    "other": "Paras"
   },
-  "about": {
-    "title": "Minusta",
-    "description": "Tarina siitä, kuka olen, mistä tulen, mikä on intohimoni ja mitä kohti työskentelen.",
-    "chapters": {
-      "6": {
-        "title": "en ole vielä valmis",
-        "content1": "tässä on osa, jota ei pitänyt lukea.",
-        "content2": "olen yhä vihainen. suren yhä versiota itsestäni, jota ei koskaan saanut olla. herään yhä joskus ja ihmettelen miksi kaikki tuntuu vähän pielessä. joskus mietin karkaamista, katoamista, uusi nimi, uusi kaupunki, uusi kieli. joskus olen lähellä tehdä sen.",
-        "content3": "on päiviä jolloin en tunne itseäni ihmiseksi. enemmänkin muistoksi, joka yrittää muuttua todeksi. enemmänkin kaiuksi jostain pehmeästä, johon en enää yllä. toisina päivinä olen täynnä sähköä. tunnen jokaisen yksityiskohdan, auringon iholla, hiljaiset soittolistat, miten ihmisten kasvot muuttuvat kun he viimein uskaltavat olla omia itsejään. se pitää minut elossa, jotenkin.",
-        "content4": "en ole valmis tulemaan siksi, miksi minun kuuluu tulla. mutta olen valmis lopettamaan teeskentelyn että on ok olla hiljaa."
-      }
-    }
+  "2048.gameOver": {
+    "other": "Peli ohi!"
   },
-  "projects": {
-    "title": "Projektini",
-    "description": "Kokoelma henkilökohtaisia, akateemisia ja aktivistisia projekteja, joita olen tehnyt. Osa valmiita, osa vielä työn alla.",
-    "status": {
-      "completed": "Valmis",
-      "inProgress": "Käynnissä",
-      "planned": "Suunniteltu"
-    },
-    "statusLabels": {
-      "completed": "Valmis",
-      "inProgress": "Käynnissä",
-      "planned": "Suunniteltu"
-    },
-    "categories": {
-      "personal": "Henkilökohtainen",
-      "academic": "Akateminen",
-      "activism": "Aktivismi"
-    },
-    "details": {
-      "what": "Mikä tämä on",
-      "learned": "Mitä opin",
-      "why": "Miksi tämä on tärkeää"
-    },
-    "cardActions": {
-      "clickForDetails": "Klikkaa nähdäksesi tiedot",
-      "clickToClose": "Klikkaa sulkeaksesi"
-    },
-    "buttons": {
-      "showRandom": "Näytä lisää satunnaisuutta",
-      "hideRandom": "Piilota kaaos"
-    },
-    "filters": {
-      "all": "Kaikki"
-    },
-    "clickToFlip": "Klikkaa kääntääksesi",
-    "what": "Mikä se on?",
-    "learned": "Mitä opin",
-    "why": "Miksi tein sen?"
+  "2048.finalScore": {
+    "other": "Loppupisteet"
   },
-  "blog": {
-    "title": "Blogi",
-    "description": "Ajatuksia, pohdintoja ja joskus purkauksia. Kirjoitettu eri aikoina ja mielentiloissa.",
-    "language": "Kieli",
-    "languageFilter": "Suodata kielen mukaan",
-    "tag": "Tunniste",
-    "sort": "Järjestä kirjoituksia",
-    "category": "Kategoria",
-    "noPosts": "Ei vielä kirjoituksia. Tule pian uudestaan!",
-    "search": "Etsi kirjoituksia...",
-    "sortNew": "Uusimmat ensin",
-    "sortOld": "Vanhimmat ensin",
-    "sortReadTime": "Lukuaika",
-    "sortABC": "Aakkosjärjestys",
-    "filter": "Suodatin",
-    "filterDescription": "Suodata blogikirjoituksia",
-    "activeFilter": "Aktiiviset suodattimet:",
-    "filterNoMatch": "Yksikään kirjoitus ei vastaa suodattimiasi. Kokeile muuttaa hakua.",
-    "clearFilter": "Tyhjennä kaikki suodattimet",
-    "mood": "Mieliala",
-    "cat": "Kissan hyväksymä",
-    "prev": "Edellinen kirjoitus",
-    "next": "Seuraava kirjoitus",
-    "jumpToPost": "Hyppää kirjoitukseen",
-    "back": "Takaisin blogilistaan",
-    "showingPosts": "Näytetään {{current}} / {{total}} kirjoitusta",
-    "minRead": "min lukuaika",
-    "rss": "RSS-syöte",
-    "subscribeRSS": "Tilaa RSS-syöte",
-    "allPosts": "Kaikkien julkaisujen syöte",
-    "languageFeeds": "Kielikohtaiset syötteet",
-    "rssDescription": "Tilaa RSS-syötteeni suosikkilukijassasi saadaksesi ilmoituksen uusista julkaisuista.",
-    "atom": "Atom-syöte",
-    "subscribeAtom": "Tilaa Atom-syöte",
-    "atomDescription": "Tilaa Atom-syötteeni suosikkilukijassasi saadaksesi ilmoituksen uusista julkaisuista.",
-    "availableIn": "Tämä sivu on saatavilla myös",
-    "comments": "Kommentit",
-    "webmentions": "Verkkomaininnat",
-    "webmentionsNone": "Ei vielä verkkomainintoja. Ole ensimmäinen vastaaja!",
-    "webmentionLike": "tykkäsi tästä",
-    "webmentionRepost": "jakoi tämän",
-    "webmentionReply": "vastasi",
-    "webmentionMention": "mainitsi tämän",
-    "tagLabels": {
-      "first-post": "ensimmäinen postaus",
-      "identity": "identiteetti",
-      "belonging": "yhteenkuuluvuus",
-      "introspection": "itsetutkiskelu",
-      "browsers": "selaimet",
-      "chrome": "Chrome",
-      "open-web": "avoin verkko",
-      "app-defaults": "oletussovellukset",
-      "software": "ohjelmisto",
-      "tools": "työkalut",
-      "new-year": "uusi vuosi",
-      "reflection": "pohdinta",
-      "health": "terveys",
-      "tet": "Tet-juhla",
-      "vietnam": "Vietnam",
-      "military": "armeija",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "kovettaminen",
-      "values": "arvot",
-      "personal-philosophy": "henkilökohtainen filosofia"
-    },
-    "categoryLabels": {
-      "personal": "Henkilökohtainen",
-      "meta": "Meta",
-      "identity": "Identiteetti",
-      "technical": "Tekninen",
-      "privacy": "Yksityisyys",
-      "opinions": "Mielipiteet",
-      "life": "Elämä",
-      "security": "Tietoturva",
-      "guides": "Oppaat"
-    }
+  "2048.tryAgain": {
+    "other": "Yritä uudelleen"
   },
-  "now": {
-    "title": "Nyt",
-    "description": "Mitä teen, ajattelen ja mihin keskityn juuri nyt.",
-    "lastUpdated": "Viimeksi päivitetty",
-    "whatIsNow": "Mikä on /now-sivu?",
-    "whatIsNowDescription": "/now-sivu on henkilökohtaisella verkkosivustolla oleva sivu, joka kertoo, mihin henkilö keskittyy tällä hetkellä, tänään tai aivan viime aikoina. Voit lukea lisää osoitteessa",
-    "categories": {
-      "reading": "Lukeminen",
-      "coding": "Koodaus",
-      "drinking": "Juominen",
-      "listening": "Kuuntelu",
-      "premid": "Discordin toiminta",
-      "thinking": "Ajattelu",
-      "studying": "Opiskelu",
-      "planning": "Suunnittelu"
-    }
+  "2048.youWin": {
+    "other": "Voitit!"
   },
-  "uses": {
-    "title": "Käytän",
-    "description": "Kaikki asiat joita käytän päivittäin. Sivusto on saanut inspiraatiota",
-    "websiteDescription": "sivustolta, jossa ihmiset jakavat käyttämiään asioita.",
-    "categories": {
-      "hardware": "Laitteisto",
-      "mobile": "Mobiili",
-      "audio": "Ääni",
-      "os": "Käyttöjärjestelmä & selaimet",
-      "development": "Kehitys",
-      "email": "Sähköposti & tuottavuus",
-      "privacy": "Yksityisyys & turvallisuus",
-      "mobile_tools": "Mobiilityökalut",
-      "mapping": "Kartoitus",
-      "gaming": "Pelaaminen",
-      "multimedia": "Multimedia",
-      "design": "Design & kuvitus",
-      "photo": "Kuvankäsittely",
-      "video": "Video & ääni",
-      "media": "Suoratoistopalvelut"
-    },
-    "subsections": {
-      "design": "Design & kuvitus",
-      "photo": "Kuvankäsittely",
-      "video": "Video & ääni",
-      "media": "Mediapalvelut"
-    },
-    "hidden": {
-      "clickToReveal": "Klikkaa 5 kertaa paljastaaksesi",
-      "clicksLeft": "({{clicks}} klikkausta jäljellä)",
-      "platformPrefix": "Piilotettu alusta"
-    }
+  "2048.currentScore": {
+    "other": "Nykyiset pisteet"
   },
-  "contact": {
-    "title": "Yhteys",
-    "description": "Tapoja ottaa yhteyttä ja tavoittaa minut.",
-    "message": "älä ujostele. sano hei. tai varaa 1:1 jos haluat olla virallinen :)",
-    "disclaimer": "vastaan sähköposteihin. luultavasti. ellei lintu tai jokin muu vie huomiotani",
-    "sections": {
-      "contactMe": "Ota yhteyttä",
-      "socialMedia": "Minä somessa",
-      "otherPlatforms": "Minä muualla"
-    },
-    "sectionTitles": {
-      "contactMe": "Ota yhteyttä",
-      "socialMedia": "Minä somessa",
-      "otherPlatforms": "Minä muualla",
-      "keys": "Julkiset avaimet"
-    },
-    "links": {
-      "universityEmail": "Yliopiston sähköposti",
-      "bookMeeting": "Varaa tapaaminen kanssani",
-      "messengerNote": "Olen hyvin epäaktiivinen Facebookissa ja Messengerissä. Vastaukset tulevat jos tulevat.",
-      "pgpKey": "PGP julkinen avain",
-      "sshKey": "SSH julkinen avain"
-    }
+  "2048.keepPlaying": {
+    "other": "Jatka peliä"
   },
-  "moodCat": {
-    "title": "Päivän kissa",
-    "hover": "arvostelee sinua lempeästi",
-    "refresh": "Uusi kissa, kuka tämä on?",
-    "seeMore": "Katso lisää kissoja"
+  "2048.newGame": {
+    "other": "Uusi peli"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "Klassinen peli putoavista palikoista ja katoavista riveistä",
-    "gameInfo": "Pelinfo",
-    "score": "Pisteet",
-    "level": "Taso",
-    "status": "Tila",
-    "next": "Seuraava",
-    "gameOver": "Peli ohi",
-    "paused": "Tauolla",
-    "playing": "Pelaa",
-    "ready": "Valmis",
-    "playAgain": "Pelaa uudelleen",
-    "pause": "Tauko",
-    "resume": "Jatka",
-    "start": "Aloita",
-    "reset": "Nollaa",
-    "controls": "Ohjaimet",
-    "moveLeft": "Siirrä vasemmalle",
-    "moveRight": "Siirrä oikealle",
-    "moveDown": "Siirrä alas",
-    "rotate": "Kierrä palikkaa",
-    "hardDrop": "Nopea pudotus",
-    "pauseGame": "Tauota peli",
-    "musicOn": "Musiikki päällä",
-    "musicOff": "Musiikki pois",
-    "nowPlaying": "Nyt soi",
-    "spacebar": "Välilyönti"
+  "2048.howToPlay": {
+    "other": "Kuinka pelata"
   },
-  "scrapbook": {
-    "title": "Devlogi",
-    "description": "Muutamia kehityslokeja ajalta, jolloin tein tämän sivuston.",
-    "noEntries": "Ei merkintöjä vielä."
+  "2048.instructions1": {
+    "other": "Käytä nuolinäppäimiä tai WASD:ta siirtääksesi laattoja. Kun kaksi samanlaista laattaa koskettaa, ne yhdistyvät!"
   },
-  "settings": {
-    "title": "Asetukset",
-    "theme": "Teema",
-    "themeAuto": "Auto",
-    "themeLight": "Vaalea teema",
-    "themeDark": "Tumma teema",
-    "stars": "Tuikkivat tähdet",
-    "reduceMotion": "Vähennä liikettä",
-    "highContrast": "Korkea kontrasti",
-    "dyslexiaFont": "Lukihäiriöfontti",
-    "timezone": "Aikavyöhyke",
-    "tzYours": "Sinun",
-    "tzAuthor": "Jareman",
-    "music": "Musiikki",
-    "musicUnavailable": "Ei tällä hetkellä saatavilla"
+  "2048.instructions2": {
+    "other": "Jokaisen siirron jälkeen ilmestyy uusi laatta (2 tai 4)."
   },
-  "webrings": {
-    "title": "Verkkorenkaat",
-    "description": "Verkkorenkaat, joissa olen mukana. Löydä lisää itsenäisiä verkkosivustoja ja henkilökohtaisia blogeja.",
-    "intro1": "Verkkorengas on samanhenkisten ihmisten tekemä sivustokokoelma, joka keskittyy yleensä tiettyyn aiheeseen, estetiikkaan tai yhteiseen kiinnostuksen kohteeseen. (safonts-verkkorenkaalta)",
-    "intro2": "Tämä sivusto on osa näitä verkkorenkaita. Klikkaa linkkejä vieraillaksesi naapureideni sivuilla, tai muiden jäsenten, jos renkaassa on satunnaistoiminto. Valitse mikä tahansa rengas!",
-    "previous": "Edellinen",
-    "random": "Satunnainen",
-    "next": "Seuraava",
-    "previousAria": "Edellinen sivu ryhmässä {{name}}",
-    "randomAria": "Satunnainen sivu ryhmässä {{name}}",
-    "nextAria": "Seuraava sivu ryhmässä {{name}}",
-    "pending": {
-      "title": "Odottaa hyväksyntää",
-      "description": "Nämä ovat verkkorenkaita, joihin olen hakenut ja odotan hyväksyntää.",
-      "badge": "Odottaa"
-    }
+  "2048.instructions3": {
+    "other": "Luo laatta, jossa on numero 2048, voittaaksesi pelin!"
   },
-  "badges": {
-    "title": "Web-merkkien kokoelma",
-    "description": "Kokoelma klassisia web-merkkejä ja painikkeita, joita käytän sivustollani.",
-    "pageTitle": "Klassinen web-merkkikokoelma",
-    "pageDescription": "Olen kerännyt nämä 88x31-merkit näyttääkseni, mistä minä ja tämä sivusto todella välitämme. Ne ovat kunnianosoitus Geocities-aikakaudelle, jolloin internet oli vähemmän täynnä korporaatioiden ja tekoälyn moskaa. Jos sinulla on merkki, jonka haluaisit minun lisäävän tänne, kysy vain.",
-    "myBadgeTitle": "Oma merkkini (klikkaa laajentaaksesi)",
-    "myBadgeIntro": "Käytä tätä merkkiä linkittääksesi sivustolleni:",
-    "hotlinkUrl": "Suoralinkki (Hotlink URL):",
-    "htmlCodeTitle": "HTML-koodi",
-    "embeddingSuggestionsTitle": "Upotusehdotuksia",
-    "suggestion1": "Käytä",
-    "suggestion1b": "CSS:ssäsi säilyttääksesi pikselitaiteen tyylin.",
-    "suggestion2": "Linkitä suoraan kotisivulleni osoitteessa",
-    "suggestion3": "Merkki on 88x31 pikseliä, tuplaa leveys ja korkeus HTML:ssäsi kokoon",
-    "suggestion3b": "jotta ne olisivat helpommin luettavissa korkearesoluutioisilla näytöillä.",
-    "collectionHeading": "Merkkikokoelma",
-    "search": "Hae merkkejä...",
-    "filterByCategory": "Suodata kategorian mukaan",
-    "verboseView": "Yksityiskohtainen",
-    "badgeOnlyView": "Vain merkki",
-    "showingCount": "Näytetään {{count}} merkkiä",
-    "showingFiltered": "Näytetään {{filtered}} / {{total}} merkistä",
-    "noResults": "Hakukriteerejä vastaavia merkkejä ei löytynyt",
-    "categories": {
-      "all": "Kaikki",
-      "personal": "Henkilökohtainen",
-      "friends": "Ystävät",
-      "other-sites": "Muut sivustot",
-      "software": "Ohjelmistot",
-      "web": "Verkko",
-      "fun": "Viihde"
-    }
+  "2048.controls": {
+    "other": "Ohjaimet"
   },
-  "brand": {
-    "pageTitle": "Brändi",
-    "pageDescription": "Visuaalinen ilme ja brändielementit. Käytä näitä, jos haluat viitata tai linkittää tälle sivustolle.",
-    "name": {
-      "title": "Nimi",
-      "nameLabel": "Nimi",
-      "displayNameLabel": "Näyttönimi",
-      "symbolNote": "Symboli 'siis' (∴) on aina osa näyttönimeäni. Se edustaa tuloksia, loogisia johtopäätöksiä, yhteyksiä, ajatusprosessin päätöstä; se on suora ja vakaa muoto."
-    },
-    "logo": {
-      "title": "Logo",
-      "faceOnly": "Vain kasvot",
-      "faceAndBody": "Kasvot ja vartalo",
-      "dimensions1": "384×384px (tai sen kerrannaiset)",
-      "dimensions2": "512×512px (tai sen kerrannaiset)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "Merkki",
-      "urlLabel": "Suora URL",
-      "htmlLabel": "HTML-koodi"
-    },
-    "colors": {
-      "title": "Värit",
-      "names": {
-        "primary": "Ensisijainen",
-        "background": "Tausta",
-        "card": "Kortti",
-        "foreground": "Edusta",
-        "muted": "Himmeä",
-        "border": "Reuna"
-      },
-      "descriptions": {
-        "primary": "Pääkorostusväri",
-        "background": "Sivun tausta",
-        "card": "Kortin tausta",
-        "foreground": "Päätekstin väri",
-        "muted": "Toissijaiset elementit",
-        "border": "Reunat ja jakajat"
-      },
-      "darkMode": "Tumma tila",
-      "lightMode": "Vaalea tila"
-    },
-    "fonts": {
-      "title": "Fontit",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "Otsikot",
-        "body": "Leipäteksti ja käyttöliittymä",
-        "notoSansSC": "Kiina",
-        "monaspice": "Koodi ja tasalevyinen teksti",
-        "hanNomGothic": "Vietnamilainen Chữ Nôm"
-      },
-      "weight": "Paksuus:",
-      "viewOnGoogleFonts": "Katso fonttivarastosta",
-      "languages": {
-        "english": "Englanti",
-        "vietnamese": "Vietnam",
-        "polish": "Puola",
-        "russian": "Venäjä",
-        "japanese": "Japani",
-        "hebrew": "Heprea",
-        "thai": "Thaimaan",
-        "symbols": "Symbolit",
-        "chineseSimplified": "Kiina (Yksinkertaistettu)",
-        "chineseTraditional": "Kiina (Perinteinen)",
-        "vietnameseHanNom": "Vietnam (Chữ Nôm)"
-      }
-    },
-    "usage": {
-      "title": "Pari huomiota",
-      "point1Title": "Käytä vapaasti",
-      "point1Text": "Sinun ei tarvitse kysyä lupaa merkin tai logon käyttämiseen tai sivustolle linkittämiseen. Ota ne, hotlinkkaa, lätkäise ne sivullesi. Ei kiinnosta. Itse asiassa olisin iloinen.",
-      "point2Title": "Säilytä merkin pikselityyli",
-      "point2Text": "Jos käytät merkkiä (badge), käytä CSS:ssäsi 'image-rendering: pixelated' (tai Firefoxissa 'crisp-edges'). Ilman sitä selaimet sumentavat pikselit ja se näyttää roskalta. Se on pikselitaidetta, kohtele sitä kuten pikselitaidetta.",
-      "point3Title": "Maininta on kiva, mutta vapaaehtoinen",
-      "point3Text": "Jos kirjoitat sivustosta tai käytät näitä blogikirjoituksessa tai artikkelissa, linkki takaisin olisi arvostettu. Mutta jos lisäät merkkini vain linkkisivullesi, sinun ei tarvitse tehdä mitään ylimääräistä. Merkin HTML-pätkä linkittää jo tänne.",
-      "point4Title": "Älä sekoile",
-      "point4Text": "Älä käytä näitä esiintyäksesi minuna, väittääksesi minun suosittelevan jotain mitä en suosittele, tai antaaksesi ymmärtää minun liittyvän johonkin hämärään. Luotan siihen, että tiedät eron tykkäämäsi sivuston linkittämisen ja toisena esiintymisen välillä. Jos olet epävarma siitä, onko tekemisesi outoa, se todennäköisesti on.",
-      "footer": "Siinä kaikki, käytä niitä kunnioittavasti niin olemme sujut."
-    }
+  "2048.moveLeft": {
+    "other": "Siirrä vasemmalle"
   },
-  "colophon": {
-    "title": "Kolofoni",
-    "description": "Tarinani tämän sivuston takana ja miten se rakennettiin",
-    "siteHistory": {
-      "title": "Sivuston historia",
-      "content1": "Tämä sivusto rekisteröitiin vasta loppuvuodesta 2023, mutta ulkoasu on muuttunut paljon matkan varrella. Ensimmäinen versio oli yksinkertainen WordPress-sivu ilmaisella hostingilla, toinen Carrd-pohjainen, kolmas rakennettu Astrolla. Tämä nykyinen (neljäs) on täysin uudelleen rakennettu modernilla web-tekniikalla.",
-      "content2": "Jokainen versio on ollut kehitysaskel, ja uusin painottaa suorituskykyä, saavutettavuutta, täyttä näppäimistönavigointia ja henkilökohtaisempaa otetta, joka kuvastaa paremmin kuka olen ja mistä välitän."
-    },
-    "technologyStack": {
-      "title": "Teknologiapino",
-      "nextjs": "React-kehys, joka mahdollistaa palvelinpuolen renderöinnin ja staattisen sivuston generoinnin",
-      "react": "JavaScript-kirjasto käyttöliittymien rakentamiseen",
-      "tailwind": "Utility-first CSS-kehys",
-      "shadcn": "Uudelleenkäytettävä komponenttikirjasto Radix UI:lla ja Tailwindilla",
-      "framer": "Animaatiokirjasto Reactille",
-      "i18next": "Kansainvälistämiskehys",
-      "typescript": "Vahvasti tyypitetty ohjelmointikieli, joka pohjautuu JavaScriptiin"
-    },
-    "hosting": {
-      "title": "Hosting & julkaisu",
-      "content1": "Sivusto on hostattu",
-      "content2": "joka tarjoaa sujuvan julkaisun GitHubista, automaattisen HTTPS:n ja globaalin CDN:n.",
-      "content3": "Verkkotunnus hallinnoidaan",
-      "content4": "joka tarjoaa lisäturvaa ja suorituskykyä."
-    },
-    "design": {
-      "title": "Suunnittelufilosofia",
-      "p1": "Tämä verkkosivusto on suunniteltu saavutettavuus ja suorituskyky mielessä. Se toimii ilman JavaScriptiä, käyttää semanttista HTML:ää ja kunnioittaa yksityisyyttäsi olemalla käyttämättä seurantaevästeitä.",
-      "p2": "Suunnittelu pyrkii tasapainoon modernin estetiikan ja klassisen verkkosivustojen yksinkertaisuuden välillä. Tumma tila on oletuksena, koska pidän verkkokalvoistani."
-    },
-    "webStandards": {
-      "title": "Verkkostandardit",
-      "intro": "Tämä sivusto toteuttaa:",
-      "microformats": "mikroformaatit",
-      "feeds": "RSS-, Atom- ja JSON-syötteet",
-      "robots": "robots.txt ja sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "Saavutettavuus",
-      "intro": "Pyrin tekemään tästä sivustosta saavutettavan kaikille. Ominaisuuksiin kuuluvat:",
-      "item1": "Semanttinen HTML-rakenne",
-      "item2": "Hyppylinkit sisältöön",
-      "item3": "Oikea otsikkohierarkia",
-      "item4": "WCAG 2.1 AA-värikontrasti",
-      "item5": "Navigoitavissa näppäimistöllä",
-      "item6": "Kunnioittaa vähennetyn liikkeen asetuksia",
-      "reportText": "Jos kohtaat saavutettavuusongelmia, ole hyvä ja",
-      "contactLink": "kerro minulle"
-    },
-    "inspiration": {
-      "title": "Inspiraatio",
-      "content1": "Tämä sivu on saanut inspiraatiota",
-      "content2": "joka puolestaan on saanut inspiraatiota",
-      "content3": "Alkuperäinen idea",
-      "maggie": "Maggie Appletonin kolofoni",
-      "gwern": "Gwern Branwenin kolofoni"
-    }
+  "2048.moveRight": {
+    "other": "Siirrä oikealle"
   },
-  "footer": {
-    "copyright": "2026, ∴ Jarema, CC BY 4.0",
-    "madeWith": "tehty rakkaudella",
-    "andChaos": "ja muutaman viikon säätämisellä",
-    "uptime": "Käytettävyys",
-    "siteStatus": "Sivuston tila"
+  "2048.moveUp": {
+    "other": "Siirrä ylös"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Pikanäppäimet",
-    "navigation": "Navigointi",
-    "actions": "Toiminnot",
-    "close": "Sulje",
-    "home": "Koti",
-    "about": "Minusta",
-    "blog": "Blogi",
-    "projects": "Projektit",
-    "now": "Nyt",
-    "uses": "Käytän",
-    "contact": "Yhteys",
-    "colophon": "Kolofoni",
-    "slashes": "Sivukartta",
-    "scrapbook": "Devlogi",
-    "tetris": "Tetris",
-    "cycleLanguage": "Vaihda kieltä",
-    "cycleTheme": "Vaihda teemaa",
-    "refreshCat": "Päivitä kissatunnelma",
-    "openShortcuts": "Avaa pikanäppäimet",
-    "actionSearch": "Avaa toimintohaku",
-    "webring": "Verkkorenkaat"
+  "2048.moveDown": {
+    "other": "Siirrä alas"
   },
-  "actionSearch": {
-    "2048": "Pelaa 2048",
-    "title": "Toimintohaku",
-    "placeholder": "Hae toimintoja...",
-    "noResults": "Ei löytynyt toimintoja",
-    "goTo": "Siirry sivulle",
-    "toggleTheme": "Vaihda teemaa",
-    "switchDarkMode": "Vaihda tummaan tilaan",
-    "switchLightMode": "Vaihda vaaleaan tilaan",
-    "appearance": "Ulkoasu",
-    "cycleLanguage": "Vaihda kieltä",
-    "refreshCat": "Hae uusi kissatunnelma",
-    "playGame": "Pelaa peliä",
-    "viewShortcuts": "Näytä kaikki pikanäppäimet",
-    "pressToOpen": "Paina . avataksesi komentopaletti",
-    "escToClose": "ESC sulkee",
-    "fun": "Hauskaa",
-    "games": "Pelit",
-    "tetris": "Pelaa Tetrikstä",
-    "help": "Apua",
-    "projects": {
-      "category": "Selaa projektikortteja",
-      "closeCard": "Sulje käännetty kortti",
-      "left": "Siirry vasemmalle",
-      "right": "Siirry oikealle",
-      "up": "Siirry ylös",
-      "down": "Siirry alas",
-      "flipCard": "Käännä projektikortti: {{title}}"
-    },
-    "blog": {
-      "category": "Selaa blogikirjoituksia",
-      "next": "Seuraavaan kirjoitukseen",
-      "prev": "Edelliseen kirjoitukseen",
-      "search": "Etsi blogikirjoituksia",
-      "filterTag": "Suodata blogikirjoituksia",
-      "jumpToPost": "Hyppää kirjoitukseen {{i}}",
-      "back": "Takaisin blogilistaan"
-    },
-    "about": {
-      "category": "Selaa minusta-osioita",
-      "jumpToChapter": "Hyppää lukuun {{i}}"
-    },
-    "uses": {
-      "category": "Selaa käytän-osioita",
-      "jumpToCategory": "Hyppää kategoriaan {{category}}"
-    },
-    "now": {
-      "category": "Selaa nyt-osioita",
-      "jumpToCategory": "Hyppää kategoriaan {{category}}"
-    },
-    "colophon": {
-      "category": "Selaa kolofoniosioita",
-      "jumpToSection": "Hyppää osioon {{section}}"
-    },
-    "tools": "Työkalut"
+  "2048.touchInstructions": {
+    "other": "Mobiililaitteilla käytä ruudun ohjaimia siirtääksesi laattoja."
   },
-  "textCounter": {
-    "title": "Tekstilaskuri",
-    "description": "Laske merkit, sanat, lauseet, kappaleet ja laske puhe-/lukuaika.",
-    "placeholder": "Aloita kirjoittaminen tai liitä tekstisi tähän...",
-    "clear": "Tyhjennä",
-    "stats": {
-      "characters": "Merkit",
-      "charactersNoSpaces": "Merkit (ilman välilyöntejä)",
-      "words": "Sanat",
-      "sentences": "Lauseet",
-      "paragraphs": "Kappaleet",
-      "lines": "Rivit",
-      "readingTime": "Lukuaika",
-      "speakingTime": "Puheaika"
-    },
-    "textLanguage": "Tekstin kieli",
-    "languages": {
-      "en": "Englanti",
-      "vi": "Vietnam",
-      "et": "Viro",
-      "zh": "Kiina",
-      "ru": "Venäjä",
-      "custom": "Muu / mukautettu",
-      "advanced": "Lisäasetukset"
-    },
-    "speed": {
-      "label": "Nopeus",
-      "slow": "Hidas",
-      "average": "Keskitaso",
-      "fast": "Nopea",
-      "custom": "Mukautettu",
-      "readingWpm": "Lukeminen (sanaa minuutissa)",
-      "speakingWpm": "Puhuminen (sanaa minuutissa)",
-      "englishDefaultsWarning": "Aika-arviot käyttävät tällä hetkellä englanninkielisiä oletusnopeuksia. Vaihda kohtaan \"Mukautettu\" syöttääksesi tarkat arvot."
-    },
-    "advanced": {
-      "title": "Lisäasetukset",
-      "disableWords": "Poista sanalasku käytöstä",
-      "disableWordsDesc": "Logografisissa ja brahmilaisissa kielissä välilyönnit eivät erota sanoja.",
-      "newlineAsParagraph": "Käsittele jokaista riviä kappaleena",
-      "newlineAsParagraphDesc": "Laske yksittäiset rivinvaihdot kappaleväleinä sen sijaan että vaadittaisiin tyhjiä rivejä. Rivitasolaskuri piilotetaan."
-    },
-    "privacy": {
-      "summary": "Tietosuojatiedot",
-      "body": "Tämä työkalu toimii täysin selaimessasi. Voit katkaista internetyhteyden ja se toimii silti, tekstiäsi ei koskaan lähetetä minnekään.",
-      "technicalLabel": "Tekninen todennus:",
-      "technical": "Varmistaaksesi tämän, avaa selaimen DevTools (F12) → Verkko-välilehti (Network), kirjoita sitten tekstialueelle ja vahvista, ettei pyyntöjä tehdä sen jälkeen, kun sivu on latautunut."
-    }
+  "2048.undo": {
+    "other": "Kumoa"
   },
-  "tools": {
-    "title": "Työkalut",
-    "description": "Joitakin käteviä apuohjelmia. En löytänyt tarpeisiini sopivia, joten tein nämä.",
-    "items": {
-      "counter": {
-        "title": "Tekstilaskuri",
-        "icon": "🔤",
-        "description": "Laske merkit, sanat, lauseet, kappaleet ja arvioi luku-/puheaika."
-      }
-    }
+  "2048.title": {
+    "other": "2048"
   },
-  "slashes": {
-    "title": "Vinoviivat",
-    "description": "Luettelo kaikista tämän sivuston pääsivuista."
+  "2048.instructions4": {
+    "other": "Kun olet saavuttanut 2048:n, voit jatkaa peliä saadaksesi vielä korkeammat pisteet!"
+  },
+  "nav.home": {
+    "other": "Koti"
+  },
+  "nav.about": {
+    "other": "Minusta"
+  },
+  "nav.projects": {
+    "other": "Projektit"
+  },
+  "nav.blog": {
+    "other": "Blogi"
+  },
+  "nav.now": {
+    "other": "Nyt"
+  },
+  "nav.uses": {
+    "other": "Käytän"
+  },
+  "nav.contact": {
+    "other": "Yhteys"
+  },
+  "nav.guestbook": {
+    "other": "Vieraskirja"
+  },
+  "nav.colophon": {
+    "other": "Kolofoni"
+  },
+  "nav.webring": {
+    "other": "Webring"
+  },
+  "nav.scrapbook": {
+    "other": "Päiväkirja"
+  },
+  "nav.slashes": {
+    "other": "Sivukartta"
+  },
+  "nav.brand": {
+    "other": "Brändimateriaalit"
+  },
+  "nav.badges": {
+    "other": "Merkit"
+  },
+  "nav.tools": {
+    "other": "Työkalut"
+  },
+  "languageNotice.message": {
+    "other": "Tämän kielen käännökset ovat vielä työn alla. Osa sisällöstä voi olla puutteellista tai puuttua kokonaan."
+  },
+  "languageNotice.dismiss": {
+    "other": "Sulje"
+  },
+  "language.main": {
+    "other": "Pääkielet"
+  },
+  "language.beta": {
+    "other": "Kielet beetaversiossa"
+  },
+  "language.other": {
+    "other": "Muut kielet"
+  },
+  "language.auto": {
+    "other": "Auto (selaimen kieli)"
+  },
+  "language.search": {
+    "other": "Etsi kieliä..."
+  },
+  "language.en": {
+    "other": "Englanti"
+  },
+  "language.vi": {
+    "other": "Vietnami"
+  },
+  "language.ru": {
+    "other": "Venäjä"
+  },
+  "language.et": {
+    "other": "Viro"
+  },
+  "language.da": {
+    "other": "Tanska"
+  },
+  "language.tr": {
+    "other": "Turkki"
+  },
+  "language.zh": {
+    "other": "Kiina"
+  },
+  "language.pl": {
+    "other": "Puola"
+  },
+  "language.sv": {
+    "other": "Ruotsi"
+  },
+  "language.fi": {
+    "other": "Suomi"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "Huomenta, matkaaja."
+  },
+  "greetings.afternoon": {
+    "other": "Hyvää iltapäivää, kulkija."
+  },
+  "greetings.evening": {
+    "other": "Hyvää iltaa, tutkija."
+  },
+  "greetings.night": {
+    "other": "Vielä hereillä? Niin minäkin."
+  },
+  "home.buttons.about": {
+    "other": "Minusta"
+  },
+  "home.buttons.projects": {
+    "other": "Katso projektini"
+  },
+  "home.footer": {
+    "other": "Tervetuloa digitaaliseen puutarhaani. Tutustu vapaasti."
+  },
+  "home.heading": {
+    "other": "hei, olen Jarema"
+  },
+  "home.subheading": {
+    "other": "Talousopiskelija, joskus koodari, useimmiten kissakuiskaaja."
+  },
+  "home.contactButton": {
+    "other": "Ota yhteyttä"
+  },
+  "home.aboutButton": {
+    "other": "Minusta"
+  },
+  "home.blogButton": {
+    "other": "Lue blogiani"
+  },
+  "home.guestbookButton": {
+    "other": "Kirjoita vieraskirjaani"
+  },
+  "home.recentPosts": {
+    "other": "Viimeisimmät blogikirjoitukset"
+  },
+  "home.latestNow": {
+    "other": "Mitä teen nyt"
+  },
+  "home.currentMood": {
+    "other": "Nykyinen mieliala"
+  },
+  "home.currentStatus": {
+    "other": "Nykyinen tila"
+  },
+  "home.time": {
+    "other": "Nykyinen aika"
+  },
+  "home.yourTime": {
+    "other": "Sinun aikasi"
+  },
+  "home.myTime": {
+    "other": "Minun aikani"
+  },
+  "home.viewAllWebrings": {
+    "other": "Näytä kaikki verkkorenkaat"
+  },
+  "home.checkOutSites": {
+    "other": "Katso näitä sivustoja!"
+  },
+  "home.androidCountdown": {
+    "other": "Androidista tulee suljettu käyttöjärjestelmä X päivän kuluessa"
+  },
+  "guestbook.title": {
+    "other": "Vieraskirja"
+  },
+  "guestbook.description": {
+    "other": "Jätä viesti vieraskirjaani!"
+  },
+  "guestbook.poweredBy": {
+    "other": "Tarjoaa"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "Minusta"
+  },
+  "about.description": {
+    "other": "Tarina siitä, kuka olen, mistä tulen, mikä on intohimoni ja mitä kohti työskentelen."
+  },
+  "about.chapters.6.title": {
+    "other": "en ole vielä valmis"
+  },
+  "about.chapters.6.content1": {
+    "other": "tässä on osa, jota ei pitänyt lukea."
+  },
+  "about.chapters.6.content2": {
+    "other": "olen yhä vihainen. suren yhä versiota itsestäni, jota ei koskaan saanut olla. herään yhä joskus ja ihmettelen miksi kaikki tuntuu vähän pielessä. joskus mietin karkaamista, katoamista, uusi nimi, uusi kaupunki, uusi kieli. joskus olen lähellä tehdä sen."
+  },
+  "about.chapters.6.content3": {
+    "other": "on päiviä jolloin en tunne itseäni ihmiseksi. enemmänkin muistoksi, joka yrittää muuttua todeksi. enemmänkin kaiuksi jostain pehmeästä, johon en enää yllä. toisina päivinä olen täynnä sähköä. tunnen jokaisen yksityiskohdan, auringon iholla, hiljaiset soittolistat, miten ihmisten kasvot muuttuvat kun he viimein uskaltavat olla omia itsejään. se pitää minut elossa, jotenkin."
+  },
+  "about.chapters.6.content4": {
+    "other": "en ole valmis tulemaan siksi, miksi minun kuuluu tulla. mutta olen valmis lopettamaan teeskentelyn että on ok olla hiljaa."
+  },
+  "projects.title": {
+    "other": "Projektini"
+  },
+  "projects.description": {
+    "other": "Kokoelma henkilökohtaisia, akateemisia ja aktivistisia projekteja, joita olen tehnyt. Osa valmiita, osa vielä työn alla."
+  },
+  "projects.status.completed": {
+    "other": "Valmis"
+  },
+  "projects.status.inProgress": {
+    "other": "Käynnissä"
+  },
+  "projects.status.planned": {
+    "other": "Suunniteltu"
+  },
+  "projects.statusLabels.completed": {
+    "other": "Valmis"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "Käynnissä"
+  },
+  "projects.statusLabels.planned": {
+    "other": "Suunniteltu"
+  },
+  "projects.categories.personal": {
+    "other": "Henkilökohtainen"
+  },
+  "projects.categories.academic": {
+    "other": "Akateminen"
+  },
+  "projects.categories.activism": {
+    "other": "Aktivismi"
+  },
+  "projects.details.what": {
+    "other": "Mikä tämä on"
+  },
+  "projects.details.learned": {
+    "other": "Mitä opin"
+  },
+  "projects.details.why": {
+    "other": "Miksi tämä on tärkeää"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "Klikkaa nähdäksesi tiedot"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "Klikkaa sulkeaksesi"
+  },
+  "projects.buttons.showRandom": {
+    "other": "Näytä lisää satunnaisuutta"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "Piilota kaaos"
+  },
+  "projects.filters.all": {
+    "other": "Kaikki"
+  },
+  "projects.clickToFlip": {
+    "other": "Klikkaa kääntääksesi"
+  },
+  "projects.what": {
+    "other": "Mikä se on?"
+  },
+  "projects.learned": {
+    "other": "Mitä opin"
+  },
+  "projects.why": {
+    "other": "Miksi tein sen?"
+  },
+  "blog.title": {
+    "other": "Blogi"
+  },
+  "blog.description": {
+    "other": "Ajatuksia, pohdintoja ja joskus purkauksia. Kirjoitettu eri aikoina ja mielentiloissa."
+  },
+  "blog.language": {
+    "other": "Kieli"
+  },
+  "blog.languageFilter": {
+    "other": "Suodata kielen mukaan"
+  },
+  "blog.tag": {
+    "other": "Tunniste"
+  },
+  "blog.sort": {
+    "other": "Järjestä kirjoituksia"
+  },
+  "blog.category": {
+    "other": "Kategoria"
+  },
+  "blog.noPosts": {
+    "other": "Ei vielä kirjoituksia. Tule pian uudestaan!"
+  },
+  "blog.search": {
+    "other": "Etsi kirjoituksia..."
+  },
+  "blog.sortNew": {
+    "other": "Uusimmat ensin"
+  },
+  "blog.sortOld": {
+    "other": "Vanhimmat ensin"
+  },
+  "blog.sortReadTime": {
+    "other": "Lukuaika"
+  },
+  "blog.sortABC": {
+    "other": "Aakkosjärjestys"
+  },
+  "blog.filter": {
+    "other": "Suodatin"
+  },
+  "blog.filterDescription": {
+    "other": "Suodata blogikirjoituksia"
+  },
+  "blog.activeFilter": {
+    "other": "Aktiiviset suodattimet:"
+  },
+  "blog.filterNoMatch": {
+    "other": "Yksikään kirjoitus ei vastaa suodattimiasi. Kokeile muuttaa hakua."
+  },
+  "blog.clearFilter": {
+    "other": "Tyhjennä kaikki suodattimet"
+  },
+  "blog.mood": {
+    "other": "Mieliala"
+  },
+  "blog.cat": {
+    "other": "Kissan hyväksymä"
+  },
+  "blog.prev": {
+    "other": "Edellinen kirjoitus"
+  },
+  "blog.next": {
+    "other": "Seuraava kirjoitus"
+  },
+  "blog.jumpToPost": {
+    "other": "Hyppää kirjoitukseen"
+  },
+  "blog.back": {
+    "other": "Takaisin blogilistaan"
+  },
+  "blog.showingPosts": {
+    "other": "Näytetään {{current}} / {{total}} kirjoitusta"
+  },
+  "blog.minRead": {
+    "other": "min lukuaika"
+  },
+  "blog.rss": {
+    "other": "RSS-syöte"
+  },
+  "blog.subscribeRSS": {
+    "other": "Tilaa RSS-syöte"
+  },
+  "blog.allPosts": {
+    "other": "Kaikkien julkaisujen syöte"
+  },
+  "blog.languageFeeds": {
+    "other": "Kielikohtaiset syötteet"
+  },
+  "blog.rssDescription": {
+    "other": "Tilaa RSS-syötteeni suosikkilukijassasi saadaksesi ilmoituksen uusista julkaisuista."
+  },
+  "blog.atom": {
+    "other": "Atom-syöte"
+  },
+  "blog.subscribeAtom": {
+    "other": "Tilaa Atom-syöte"
+  },
+  "blog.atomDescription": {
+    "other": "Tilaa Atom-syötteeni suosikkilukijassasi saadaksesi ilmoituksen uusista julkaisuista."
+  },
+  "blog.availableIn": {
+    "other": "Tämä sivu on saatavilla myös"
+  },
+  "blog.comments": {
+    "other": "Kommentit"
+  },
+  "blog.webmentions": {
+    "other": "Verkkomaininnat"
+  },
+  "blog.webmentionsNone": {
+    "other": "Ei vielä verkkomainintoja. Ole ensimmäinen vastaaja!"
+  },
+  "blog.webmentionLike": {
+    "other": "tykkäsi tästä"
+  },
+  "blog.webmentionRepost": {
+    "other": "jakoi tämän"
+  },
+  "blog.webmentionReply": {
+    "other": "vastasi"
+  },
+  "blog.webmentionMention": {
+    "other": "mainitsi tämän"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "ensimmäinen postaus"
+  },
+  "blog.tagLabels.identity": {
+    "other": "identiteetti"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "yhteenkuuluvuus"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "itsetutkiskelu"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "selaimet"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "avoin verkko"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "oletussovellukset"
+  },
+  "blog.tagLabels.software": {
+    "other": "ohjelmisto"
+  },
+  "blog.tagLabels.tools": {
+    "other": "työkalut"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "uusi vuosi"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "pohdinta"
+  },
+  "blog.tagLabels.health": {
+    "other": "terveys"
+  },
+  "blog.tagLabels.tet": {
+    "other": "Tet-juhla"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "Vietnam"
+  },
+  "blog.tagLabels.military": {
+    "other": "armeija"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "kovettaminen"
+  },
+  "blog.tagLabels.values": {
+    "other": "arvot"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "henkilökohtainen filosofia"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "Henkilökohtainen"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "Meta"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "Identiteetti"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "Tekninen"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "Yksityisyys"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "Mielipiteet"
+  },
+  "blog.categoryLabels.life": {
+    "other": "Elämä"
+  },
+  "blog.categoryLabels.security": {
+    "other": "Tietoturva"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "Oppaat"
+  },
+  "now.title": {
+    "other": "Nyt"
+  },
+  "now.description": {
+    "other": "Mitä teen, ajattelen ja mihin keskityn juuri nyt."
+  },
+  "now.lastUpdated": {
+    "other": "Viimeksi päivitetty"
+  },
+  "now.whatIsNow": {
+    "other": "Mikä on /now-sivu?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "/now-sivu on henkilökohtaisella verkkosivustolla oleva sivu, joka kertoo, mihin henkilö keskittyy tällä hetkellä, tänään tai aivan viime aikoina. Voit lukea lisää osoitteessa"
+  },
+  "now.categories.reading": {
+    "other": "Lukeminen"
+  },
+  "now.categories.coding": {
+    "other": "Koodaus"
+  },
+  "now.categories.drinking": {
+    "other": "Juominen"
+  },
+  "now.categories.listening": {
+    "other": "Kuuntelu"
+  },
+  "now.categories.premid": {
+    "other": "Discordin toiminta"
+  },
+  "now.categories.thinking": {
+    "other": "Ajattelu"
+  },
+  "now.categories.studying": {
+    "other": "Opiskelu"
+  },
+  "now.categories.planning": {
+    "other": "Suunnittelu"
+  },
+  "uses.title": {
+    "other": "Käytän"
+  },
+  "uses.description": {
+    "other": "Kaikki asiat joita käytän päivittäin. Sivusto on saanut inspiraatiota"
+  },
+  "uses.websiteDescription": {
+    "other": "sivustolta, jossa ihmiset jakavat käyttämiään asioita."
+  },
+  "uses.categories.hardware": {
+    "other": "Laitteisto"
+  },
+  "uses.categories.mobile": {
+    "other": "Mobiili"
+  },
+  "uses.categories.audio": {
+    "other": "Ääni"
+  },
+  "uses.categories.os": {
+    "other": "Käyttöjärjestelmä & selaimet"
+  },
+  "uses.categories.development": {
+    "other": "Kehitys"
+  },
+  "uses.categories.email": {
+    "other": "Sähköposti & tuottavuus"
+  },
+  "uses.categories.privacy": {
+    "other": "Yksityisyys & turvallisuus"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Mobiilityökalut"
+  },
+  "uses.categories.mapping": {
+    "other": "Kartoitus"
+  },
+  "uses.categories.gaming": {
+    "other": "Pelaaminen"
+  },
+  "uses.categories.multimedia": {
+    "other": "Multimedia"
+  },
+  "uses.categories.design": {
+    "other": "Design & kuvitus"
+  },
+  "uses.categories.photo": {
+    "other": "Kuvankäsittely"
+  },
+  "uses.categories.video": {
+    "other": "Video & ääni"
+  },
+  "uses.categories.media": {
+    "other": "Suoratoistopalvelut"
+  },
+  "uses.subsections.design": {
+    "other": "Design & kuvitus"
+  },
+  "uses.subsections.photo": {
+    "other": "Kuvankäsittely"
+  },
+  "uses.subsections.video": {
+    "other": "Video & ääni"
+  },
+  "uses.subsections.media": {
+    "other": "Mediapalvelut"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "Klikkaa 5 kertaa paljastaaksesi"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "({{clicks}} klikkausta jäljellä)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "Piilotettu alusta"
+  },
+  "contact.title": {
+    "other": "Yhteys"
+  },
+  "contact.description": {
+    "other": "Tapoja ottaa yhteyttä ja tavoittaa minut."
+  },
+  "contact.message": {
+    "other": "älä ujostele. sano hei. tai varaa 1:1 jos haluat olla virallinen :)"
+  },
+  "contact.disclaimer": {
+    "other": "vastaan sähköposteihin. luultavasti. ellei lintu tai jokin muu vie huomiotani"
+  },
+  "contact.sections.contactMe": {
+    "other": "Ota yhteyttä"
+  },
+  "contact.sections.socialMedia": {
+    "other": "Minä somessa"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "Minä muualla"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "Ota yhteyttä"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "Minä somessa"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "Minä muualla"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "Julkiset avaimet"
+  },
+  "contact.links.universityEmail": {
+    "other": "Yliopiston sähköposti"
+  },
+  "contact.links.bookMeeting": {
+    "other": "Varaa tapaaminen kanssani"
+  },
+  "contact.links.messengerNote": {
+    "other": "Olen hyvin epäaktiivinen Facebookissa ja Messengerissä. Vastaukset tulevat jos tulevat."
+  },
+  "contact.links.pgpKey": {
+    "other": "PGP julkinen avain"
+  },
+  "contact.links.sshKey": {
+    "other": "SSH julkinen avain"
+  },
+  "moodCat.title": {
+    "other": "Päivän kissa"
+  },
+  "moodCat.hover": {
+    "other": "arvostelee sinua lempeästi"
+  },
+  "moodCat.refresh": {
+    "other": "Uusi kissa, kuka tämä on?"
+  },
+  "moodCat.seeMore": {
+    "other": "Katso lisää kissoja"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "Klassinen peli putoavista palikoista ja katoavista riveistä"
+  },
+  "tetris.gameInfo": {
+    "other": "Pelinfo"
+  },
+  "tetris.score": {
+    "other": "Pisteet"
+  },
+  "tetris.level": {
+    "other": "Taso"
+  },
+  "tetris.status": {
+    "other": "Tila"
+  },
+  "tetris.next": {
+    "other": "Seuraava"
+  },
+  "tetris.gameOver": {
+    "other": "Peli ohi"
+  },
+  "tetris.paused": {
+    "other": "Tauolla"
+  },
+  "tetris.playing": {
+    "other": "Pelaa"
+  },
+  "tetris.ready": {
+    "other": "Valmis"
+  },
+  "tetris.playAgain": {
+    "other": "Pelaa uudelleen"
+  },
+  "tetris.pause": {
+    "other": "Tauko"
+  },
+  "tetris.resume": {
+    "other": "Jatka"
+  },
+  "tetris.start": {
+    "other": "Aloita"
+  },
+  "tetris.reset": {
+    "other": "Nollaa"
+  },
+  "tetris.controls": {
+    "other": "Ohjaimet"
+  },
+  "tetris.moveLeft": {
+    "other": "Siirrä vasemmalle"
+  },
+  "tetris.moveRight": {
+    "other": "Siirrä oikealle"
+  },
+  "tetris.moveDown": {
+    "other": "Siirrä alas"
+  },
+  "tetris.rotate": {
+    "other": "Kierrä palikkaa"
+  },
+  "tetris.hardDrop": {
+    "other": "Nopea pudotus"
+  },
+  "tetris.pauseGame": {
+    "other": "Tauota peli"
+  },
+  "tetris.musicOn": {
+    "other": "Musiikki päällä"
+  },
+  "tetris.musicOff": {
+    "other": "Musiikki pois"
+  },
+  "tetris.nowPlaying": {
+    "other": "Nyt soi"
+  },
+  "tetris.spacebar": {
+    "other": "Välilyönti"
+  },
+  "scrapbook.title": {
+    "other": "Devlogi"
+  },
+  "scrapbook.description": {
+    "other": "Muutamia kehityslokeja ajalta, jolloin tein tämän sivuston."
+  },
+  "scrapbook.noEntries": {
+    "other": "Ei merkintöjä vielä."
+  },
+  "settings.title": {
+    "other": "Asetukset"
+  },
+  "settings.theme": {
+    "other": "Teema"
+  },
+  "settings.themeAuto": {
+    "other": "Auto"
+  },
+  "settings.themeLight": {
+    "other": "Vaalea teema"
+  },
+  "settings.themeDark": {
+    "other": "Tumma teema"
+  },
+  "settings.stars": {
+    "other": "Tuikkivat tähdet"
+  },
+  "settings.reduceMotion": {
+    "other": "Vähennä liikettä"
+  },
+  "settings.highContrast": {
+    "other": "Korkea kontrasti"
+  },
+  "settings.dyslexiaFont": {
+    "other": "Lukihäiriöfontti"
+  },
+  "settings.timezone": {
+    "other": "Aikavyöhyke"
+  },
+  "settings.tzYours": {
+    "other": "Sinun"
+  },
+  "settings.tzAuthor": {
+    "other": "Jareman"
+  },
+  "settings.music": {
+    "other": "Musiikki"
+  },
+  "settings.musicUnavailable": {
+    "other": "Ei tällä hetkellä saatavilla"
+  },
+  "webrings.title": {
+    "other": "Verkkorenkaat"
+  },
+  "webrings.description": {
+    "other": "Verkkorenkaat, joissa olen mukana. Löydä lisää itsenäisiä verkkosivustoja ja henkilökohtaisia blogeja."
+  },
+  "webrings.intro1": {
+    "other": "Verkkorengas on samanhenkisten ihmisten tekemä sivustokokoelma, joka keskittyy yleensä tiettyyn aiheeseen, estetiikkaan tai yhteiseen kiinnostuksen kohteeseen. (safonts-verkkorenkaalta)"
+  },
+  "webrings.intro2": {
+    "other": "Tämä sivusto on osa näitä verkkorenkaita. Klikkaa linkkejä vieraillaksesi naapureideni sivuilla, tai muiden jäsenten, jos renkaassa on satunnaistoiminto. Valitse mikä tahansa rengas!"
+  },
+  "webrings.previous": {
+    "other": "Edellinen"
+  },
+  "webrings.random": {
+    "other": "Satunnainen"
+  },
+  "webrings.next": {
+    "other": "Seuraava"
+  },
+  "webrings.previousAria": {
+    "other": "Edellinen sivu ryhmässä {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "Satunnainen sivu ryhmässä {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "Seuraava sivu ryhmässä {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "Odottaa hyväksyntää"
+  },
+  "webrings.pending.description": {
+    "other": "Nämä ovat verkkorenkaita, joihin olen hakenut ja odotan hyväksyntää."
+  },
+  "webrings.pending.badge": {
+    "other": "Odottaa"
+  },
+  "badges.title": {
+    "other": "Web-merkkien kokoelma"
+  },
+  "badges.description": {
+    "other": "Kokoelma klassisia web-merkkejä ja painikkeita, joita käytän sivustollani."
+  },
+  "badges.pageTitle": {
+    "other": "Klassinen web-merkkikokoelma"
+  },
+  "badges.pageDescription": {
+    "other": "Olen kerännyt nämä 88x31-merkit näyttääkseni, mistä minä ja tämä sivusto todella välitämme. Ne ovat kunnianosoitus Geocities-aikakaudelle, jolloin internet oli vähemmän täynnä korporaatioiden ja tekoälyn moskaa. Jos sinulla on merkki, jonka haluaisit minun lisäävän tänne, kysy vain."
+  },
+  "badges.myBadgeTitle": {
+    "other": "Oma merkkini (klikkaa laajentaaksesi)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "Käytä tätä merkkiä linkittääksesi sivustolleni:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "Suoralinkki (Hotlink URL):"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "HTML-koodi"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "Upotusehdotuksia"
+  },
+  "badges.suggestion1": {
+    "other": "Käytä"
+  },
+  "badges.suggestion1b": {
+    "other": "CSS:ssäsi säilyttääksesi pikselitaiteen tyylin."
+  },
+  "badges.suggestion2": {
+    "other": "Linkitä suoraan kotisivulleni osoitteessa"
+  },
+  "badges.suggestion3": {
+    "other": "Merkki on 88x31 pikseliä, tuplaa leveys ja korkeus HTML:ssäsi kokoon"
+  },
+  "badges.suggestion3b": {
+    "other": "jotta ne olisivat helpommin luettavissa korkearesoluutioisilla näytöillä."
+  },
+  "badges.collectionHeading": {
+    "other": "Merkkikokoelma"
+  },
+  "badges.search": {
+    "other": "Hae merkkejä..."
+  },
+  "badges.filterByCategory": {
+    "other": "Suodata kategorian mukaan"
+  },
+  "badges.verboseView": {
+    "other": "Yksityiskohtainen"
+  },
+  "badges.badgeOnlyView": {
+    "other": "Vain merkki"
+  },
+  "badges.showingCount": {
+    "other": "Näytetään {{count}} merkkiä"
+  },
+  "badges.showingFiltered": {
+    "other": "Näytetään {{filtered}} / {{total}} merkistä"
+  },
+  "badges.noResults": {
+    "other": "Hakukriteerejä vastaavia merkkejä ei löytynyt"
+  },
+  "badges.categories.all": {
+    "other": "Kaikki"
+  },
+  "badges.categories.personal": {
+    "other": "Henkilökohtainen"
+  },
+  "badges.categories.friends": {
+    "other": "Ystävät"
+  },
+  "badges.categories.other-sites": {
+    "other": "Muut sivustot"
+  },
+  "badges.categories.software": {
+    "other": "Ohjelmistot"
+  },
+  "badges.categories.web": {
+    "other": "Verkko"
+  },
+  "badges.categories.fun": {
+    "other": "Viihde"
+  },
+  "brand.pageTitle": {
+    "other": "Brändi"
+  },
+  "brand.pageDescription": {
+    "other": "Visuaalinen ilme ja brändielementit. Käytä näitä, jos haluat viitata tai linkittää tälle sivustolle."
+  },
+  "brand.name.title": {
+    "other": "Nimi"
+  },
+  "brand.name.nameLabel": {
+    "other": "Nimi"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "Näyttönimi"
+  },
+  "brand.name.symbolNote": {
+    "other": "Symboli 'siis' (∴) on aina osa näyttönimeäni. Se edustaa tuloksia, loogisia johtopäätöksiä, yhteyksiä, ajatusprosessin päätöstä; se on suora ja vakaa muoto."
+  },
+  "brand.logo.title": {
+    "other": "Logo"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Vain kasvot"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Kasvot ja vartalo"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (tai sen kerrannaiset)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (tai sen kerrannaiset)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "Merkki"
+  },
+  "brand.badge.urlLabel": {
+    "other": "Suora URL"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "HTML-koodi"
+  },
+  "brand.colors.title": {
+    "other": "Värit"
+  },
+  "brand.colors.names.primary": {
+    "other": "Ensisijainen"
+  },
+  "brand.colors.names.background": {
+    "other": "Tausta"
+  },
+  "brand.colors.names.card": {
+    "other": "Kortti"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Edusta"
+  },
+  "brand.colors.names.muted": {
+    "other": "Himmeä"
+  },
+  "brand.colors.names.border": {
+    "other": "Reuna"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Pääkorostusväri"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Sivun tausta"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Kortin tausta"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Päätekstin väri"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "Toissijaiset elementit"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Reunat ja jakajat"
+  },
+  "brand.colors.darkMode": {
+    "other": "Tumma tila"
+  },
+  "brand.colors.lightMode": {
+    "other": "Vaalea tila"
+  },
+  "brand.fonts.title": {
+    "other": "Fontit"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "Otsikot"
+  },
+  "brand.fonts.usage.body": {
+    "other": "Leipäteksti ja käyttöliittymä"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "Kiina"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "Koodi ja tasalevyinen teksti"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "Vietnamilainen Chữ Nôm"
+  },
+  "brand.fonts.weight": {
+    "other": "Paksuus:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "Katso fonttivarastosta"
+  },
+  "brand.fonts.languages.english": {
+    "other": "Englanti"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "Vietnam"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "Puola"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "Venäjä"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "Japani"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "Heprea"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "Thaimaan"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "Symbolit"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "Kiina (Yksinkertaistettu)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "Kiina (Perinteinen)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "Vietnam (Chữ Nôm)"
+  },
+  "brand.usage.title": {
+    "other": "Pari huomiota"
+  },
+  "brand.usage.point1Title": {
+    "other": "Käytä vapaasti"
+  },
+  "brand.usage.point1Text": {
+    "other": "Sinun ei tarvitse kysyä lupaa merkin tai logon käyttämiseen tai sivustolle linkittämiseen. Ota ne, hotlinkkaa, lätkäise ne sivullesi. Ei kiinnosta. Itse asiassa olisin iloinen."
+  },
+  "brand.usage.point2Title": {
+    "other": "Säilytä merkin pikselityyli"
+  },
+  "brand.usage.point2Text": {
+    "other": "Jos käytät merkkiä (badge), käytä CSS:ssäsi 'image-rendering: pixelated' (tai Firefoxissa 'crisp-edges'). Ilman sitä selaimet sumentavat pikselit ja se näyttää roskalta. Se on pikselitaidetta, kohtele sitä kuten pikselitaidetta."
+  },
+  "brand.usage.point3Title": {
+    "other": "Maininta on kiva, mutta vapaaehtoinen"
+  },
+  "brand.usage.point3Text": {
+    "other": "Jos kirjoitat sivustosta tai käytät näitä blogikirjoituksessa tai artikkelissa, linkki takaisin olisi arvostettu. Mutta jos lisäät merkkini vain linkkisivullesi, sinun ei tarvitse tehdä mitään ylimääräistä. Merkin HTML-pätkä linkittää jo tänne."
+  },
+  "brand.usage.point4Title": {
+    "other": "Älä sekoile"
+  },
+  "brand.usage.point4Text": {
+    "other": "Älä käytä näitä esiintyäksesi minuna, väittääksesi minun suosittelevan jotain mitä en suosittele, tai antaaksesi ymmärtää minun liittyvän johonkin hämärään. Luotan siihen, että tiedät eron tykkäämäsi sivuston linkittämisen ja toisena esiintymisen välillä. Jos olet epävarma siitä, onko tekemisesi outoa, se todennäköisesti on."
+  },
+  "brand.usage.footer": {
+    "other": "Siinä kaikki, käytä niitä kunnioittavasti niin olemme sujut."
+  },
+  "colophon.title": {
+    "other": "Kolofoni"
+  },
+  "colophon.description": {
+    "other": "Tarinani tämän sivuston takana ja miten se rakennettiin"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Sivuston historia"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "Tämä sivusto rekisteröitiin vasta loppuvuodesta 2023, mutta ulkoasu on muuttunut paljon matkan varrella. Ensimmäinen versio oli yksinkertainen WordPress-sivu ilmaisella hostingilla, toinen Carrd-pohjainen, kolmas rakennettu Astrolla. Tämä nykyinen (neljäs) on täysin uudelleen rakennettu modernilla web-tekniikalla."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Jokainen versio on ollut kehitysaskel, ja uusin painottaa suorituskykyä, saavutettavuutta, täyttä näppäimistönavigointia ja henkilökohtaisempaa otetta, joka kuvastaa paremmin kuka olen ja mistä välitän."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Teknologiapino"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "React-kehys, joka mahdollistaa palvelinpuolen renderöinnin ja staattisen sivuston generoinnin"
+  },
+  "colophon.technologyStack.react": {
+    "other": "JavaScript-kirjasto käyttöliittymien rakentamiseen"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Utility-first CSS-kehys"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Uudelleenkäytettävä komponenttikirjasto Radix UI:lla ja Tailwindilla"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "Animaatiokirjasto Reactille"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Kansainvälistämiskehys"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "Vahvasti tyypitetty ohjelmointikieli, joka pohjautuu JavaScriptiin"
+  },
+  "colophon.hosting.title": {
+    "other": "Hosting & julkaisu"
+  },
+  "colophon.hosting.content1": {
+    "other": "Sivusto on hostattu"
+  },
+  "colophon.hosting.content2": {
+    "other": "joka tarjoaa sujuvan julkaisun GitHubista, automaattisen HTTPS:n ja globaalin CDN:n."
+  },
+  "colophon.hosting.content3": {
+    "other": "Verkkotunnus hallinnoidaan"
+  },
+  "colophon.hosting.content4": {
+    "other": "joka tarjoaa lisäturvaa ja suorituskykyä."
+  },
+  "colophon.design.title": {
+    "other": "Suunnittelufilosofia"
+  },
+  "colophon.design.p1": {
+    "other": "Tämä verkkosivusto on suunniteltu saavutettavuus ja suorituskyky mielessä. Se toimii ilman JavaScriptiä, käyttää semanttista HTML:ää ja kunnioittaa yksityisyyttäsi olemalla käyttämättä seurantaevästeitä."
+  },
+  "colophon.design.p2": {
+    "other": "Suunnittelu pyrkii tasapainoon modernin estetiikan ja klassisen verkkosivustojen yksinkertaisuuden välillä. Tumma tila on oletuksena, koska pidän verkkokalvoistani."
+  },
+  "colophon.webStandards.title": {
+    "other": "Verkkostandardit"
+  },
+  "colophon.webStandards.intro": {
+    "other": "Tämä sivusto toteuttaa:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "mikroformaatit"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "RSS-, Atom- ja JSON-syötteet"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt ja sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "Saavutettavuus"
+  },
+  "colophon.accessibility.intro": {
+    "other": "Pyrin tekemään tästä sivustosta saavutettavan kaikille. Ominaisuuksiin kuuluvat:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "Semanttinen HTML-rakenne"
+  },
+  "colophon.accessibility.item2": {
+    "other": "Hyppylinkit sisältöön"
+  },
+  "colophon.accessibility.item3": {
+    "other": "Oikea otsikkohierarkia"
+  },
+  "colophon.accessibility.item4": {
+    "other": "WCAG 2.1 AA-värikontrasti"
+  },
+  "colophon.accessibility.item5": {
+    "other": "Navigoitavissa näppäimistöllä"
+  },
+  "colophon.accessibility.item6": {
+    "other": "Kunnioittaa vähennetyn liikkeen asetuksia"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "Jos kohtaat saavutettavuusongelmia, ole hyvä ja"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "kerro minulle"
+  },
+  "colophon.inspiration.title": {
+    "other": "Inspiraatio"
+  },
+  "colophon.inspiration.content1": {
+    "other": "Tämä sivu on saanut inspiraatiota"
+  },
+  "colophon.inspiration.content2": {
+    "other": "joka puolestaan on saanut inspiraatiota"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Alkuperäinen idea"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Maggie Appletonin kolofoni"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Gwern Branwenin kolofoni"
+  },
+  "footer.copyright": {
+    "other": "2026, ∴ Jarema, CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "tehty rakkaudella"
+  },
+  "footer.andChaos": {
+    "other": "ja muutaman viikon säätämisellä"
+  },
+  "footer.uptime": {
+    "other": "Käytettävyys"
+  },
+  "footer.siteStatus": {
+    "other": "Sivuston tila"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Pikanäppäimet"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Navigointi"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Toiminnot"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Sulje"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Koti"
+  },
+  "keyboardShortcuts.about": {
+    "other": "Minusta"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blogi"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Projektit"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Nyt"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Käytän"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "Yhteys"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Kolofoni"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "Sivukartta"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Devlogi"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Vaihda kieltä"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Vaihda teemaa"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Päivitä kissatunnelma"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Avaa pikanäppäimet"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Avaa toimintohaku"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Verkkorenkaat"
+  },
+  "actionSearch.2048": {
+    "other": "Pelaa 2048"
+  },
+  "actionSearch.title": {
+    "other": "Toimintohaku"
+  },
+  "actionSearch.placeholder": {
+    "other": "Hae toimintoja..."
+  },
+  "actionSearch.noResults": {
+    "other": "Ei löytynyt toimintoja"
+  },
+  "actionSearch.goTo": {
+    "other": "Siirry sivulle"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Vaihda teemaa"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Vaihda tummaan tilaan"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Vaihda vaaleaan tilaan"
+  },
+  "actionSearch.appearance": {
+    "other": "Ulkoasu"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Vaihda kieltä"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Hae uusi kissatunnelma"
+  },
+  "actionSearch.playGame": {
+    "other": "Pelaa peliä"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "Näytä kaikki pikanäppäimet"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "Paina . avataksesi komentopaletti"
+  },
+  "actionSearch.escToClose": {
+    "other": "ESC sulkee"
+  },
+  "actionSearch.fun": {
+    "other": "Hauskaa"
+  },
+  "actionSearch.games": {
+    "other": "Pelit"
+  },
+  "actionSearch.tetris": {
+    "other": "Pelaa Tetrikstä"
+  },
+  "actionSearch.help": {
+    "other": "Apua"
+  },
+  "actionSearch.projects.category": {
+    "other": "Selaa projektikortteja"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Sulje käännetty kortti"
+  },
+  "actionSearch.projects.left": {
+    "other": "Siirry vasemmalle"
+  },
+  "actionSearch.projects.right": {
+    "other": "Siirry oikealle"
+  },
+  "actionSearch.projects.up": {
+    "other": "Siirry ylös"
+  },
+  "actionSearch.projects.down": {
+    "other": "Siirry alas"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Käännä projektikortti: {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Selaa blogikirjoituksia"
+  },
+  "actionSearch.blog.next": {
+    "other": "Seuraavaan kirjoitukseen"
+  },
+  "actionSearch.blog.prev": {
+    "other": "Edelliseen kirjoitukseen"
+  },
+  "actionSearch.blog.search": {
+    "other": "Etsi blogikirjoituksia"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Suodata blogikirjoituksia"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "Hyppää kirjoitukseen {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "Takaisin blogilistaan"
+  },
+  "actionSearch.about.category": {
+    "other": "Selaa minusta-osioita"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "Hyppää lukuun {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "Selaa käytän-osioita"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "Hyppää kategoriaan {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "Selaa nyt-osioita"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "Hyppää kategoriaan {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Selaa kolofoniosioita"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "Hyppää osioon {{section}}"
+  },
+  "actionSearch.tools": {
+    "other": "Työkalut"
+  },
+  "textCounter.title": {
+    "other": "Tekstilaskuri"
+  },
+  "textCounter.description": {
+    "other": "Laske merkit, sanat, lauseet, kappaleet ja laske puhe-/lukuaika."
+  },
+  "textCounter.placeholder": {
+    "other": "Aloita kirjoittaminen tai liitä tekstisi tähän..."
+  },
+  "textCounter.clear": {
+    "other": "Tyhjennä"
+  },
+  "textCounter.stats.characters": {
+    "other": "Merkit"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "Merkit (ilman välilyöntejä)"
+  },
+  "textCounter.stats.words": {
+    "other": "Sanat"
+  },
+  "textCounter.stats.sentences": {
+    "other": "Lauseet"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "Kappaleet"
+  },
+  "textCounter.stats.lines": {
+    "other": "Rivit"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "Lukuaika"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "Puheaika"
+  },
+  "textCounter.textLanguage": {
+    "other": "Tekstin kieli"
+  },
+  "textCounter.languages.en": {
+    "other": "Englanti"
+  },
+  "textCounter.languages.vi": {
+    "other": "Vietnam"
+  },
+  "textCounter.languages.et": {
+    "other": "Viro"
+  },
+  "textCounter.languages.zh": {
+    "other": "Kiina"
+  },
+  "textCounter.languages.ru": {
+    "other": "Venäjä"
+  },
+  "textCounter.languages.custom": {
+    "other": "Muu / mukautettu"
+  },
+  "textCounter.languages.advanced": {
+    "other": "Lisäasetukset"
+  },
+  "textCounter.speed.label": {
+    "other": "Nopeus"
+  },
+  "textCounter.speed.slow": {
+    "other": "Hidas"
+  },
+  "textCounter.speed.average": {
+    "other": "Keskitaso"
+  },
+  "textCounter.speed.fast": {
+    "other": "Nopea"
+  },
+  "textCounter.speed.custom": {
+    "other": "Mukautettu"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "Lukeminen (sanaa minuutissa)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "Puhuminen (sanaa minuutissa)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "Aika-arviot käyttävät tällä hetkellä englanninkielisiä oletusnopeuksia. Vaihda kohtaan \"Mukautettu\" syöttääksesi tarkat arvot."
+  },
+  "textCounter.advanced.title": {
+    "other": "Lisäasetukset"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "Poista sanalasku käytöstä"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "Logografisissa ja brahmilaisissa kielissä välilyönnit eivät erota sanoja."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "Käsittele jokaista riviä kappaleena"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "Laske yksittäiset rivinvaihdot kappaleväleinä sen sijaan että vaadittaisiin tyhjiä rivejä. Rivitasolaskuri piilotetaan."
+  },
+  "textCounter.privacy.summary": {
+    "other": "Tietosuojatiedot"
+  },
+  "textCounter.privacy.body": {
+    "other": "Tämä työkalu toimii täysin selaimessasi. Voit katkaista internetyhteyden ja se toimii silti, tekstiäsi ei koskaan lähetetä minnekään."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "Tekninen todennus:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "Varmistaaksesi tämän, avaa selaimen DevTools (F12) → Verkko-välilehti (Network), kirjoita sitten tekstialueelle ja vahvista, ettei pyyntöjä tehdä sen jälkeen, kun sivu on latautunut."
+  },
+  "tools.title": {
+    "other": "Työkalut"
+  },
+  "tools.description": {
+    "other": "Joitakin käteviä apuohjelmia. En löytänyt tarpeisiini sopivia, joten tein nämä."
+  },
+  "tools.items.counter.title": {
+    "other": "Tekstilaskuri"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "Laske merkit, sanat, lauseet, kappaleet ja arvioi luku-/puheaika."
+  },
+  "slashes.title": {
+    "other": "Vinoviivat"
+  },
+  "slashes.description": {
+    "other": "Luettelo kaikista tämän sivuston pääsivuista."
   }
 }

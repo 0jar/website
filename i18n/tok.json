@@ -1,719 +1,1667 @@
 {
-  "404": {
-    "title": "sina tawa lon ma ante",
-    "description": "soweli kin li sona ala e ma ni.",
-    "button": "o tawa lipu open",
-    "sitemap": "o lukin e sitelen ma",
-    "enjoycat": "sina lape ala lon ala la, o lukin e soweli ni:"
+  "404.title": {
+    "other": "sina tawa lon ma ante"
   },
-  "2048": {
-    "description": "o wan e palisa nanpa; o kama 2048!",
-    "score": "nanpa",
-    "best": "nanpa suli",
-    "gameOver": "musi li pini!",
-    "finalScore": "nanpa pini",
-    "tryAgain": "o pali sin",
-    "youWin": "sina kama!",
-    "currentScore": "nanpa ni",
-    "keepPlaying": "o awen musi",
-    "newGame": "musi sin",
-    "howToPlay": "nasin musi",
-    "instructions1": "o kepeken noka sitelen anu WASD tawa palisa. palisa tu pi nanpa sama la, ona li kama wan!",
-    "instructions2": "tenpo ale la, palisa sin (2 anu 4) li kama.",
-    "instructions3": "o pali e palisa nanpa 2048 tawa kama!",
-    "controls": "nasin noka",
-    "moveLeft": "tawa lete",
-    "moveRight": "tawa poka",
-    "moveUp": "tawa sewi",
-    "moveDown": "tawa anpa",
-    "touchInstructions": "lon ilo tawa la, o kepeken noka poka lon insa sitelen.",
-    "undo": "wekamoli",
-    "title": "2048",
-    "instructions4": "sina pini e 2048 la, sina ken musi awen tawa nanpa suli!"
+  "404.description": {
+    "other": "soweli kin li sona ala e ma ni."
   },
-  "nav": {
-    "home": "lipu open",
-    "about": "sona mi",
-    "projects": "pali",
-    "blog": "lipu toki",
-    "now": "tenpo ni",
-    "uses": "kepeken",
-    "contact": "toki tawa mi",
-    "guestbook": "lipu pi jan kama",
-    "colophon": "tan lipu",
-    "webring": "sike lipu",
-    "scrapbook": "toki pali",
-    "slashes": "lipu ale",
-    "brand": "poki pi sitelen mi",
-    "badges": "len suli",
-    "tools": "ilo"
+  "404.button": {
+    "other": "o tawa lipu open"
   },
-  "languageNotice": {
-    "message": "toki ni li lon pali. ijo ante li ken weka anu lili.",
-    "dismiss": "weka"
+  "404.sitemap": {
+    "other": "o lukin e sitelen ma"
   },
-  "language": {
-    "main": "toki suli",
-    "beta": "toki pi pali",
-    "other": "toki ante",
-    "auto": "Auto (toki pi ilo lukin)",
-    "search": "o alasa e toki...",
-    "en": "toki Inli",
-    "vi": "toki Wije",
-    "ru": "toki Losi",
-    "et": "toki Estoni",
-    "da": "toki Tansi",
-    "tr": "toki Tosiki",
-    "zh": "toki Sonko",
-    "pl": "toki Polan",
-    "sv": "toki Suwesi",
-    "fi": "toki Sumi",
-    "tok": "toki pona"
+  "404.enjoycat": {
+    "other": "sina lape ala lon ala la, o lukin e soweli ni:"
   },
-  "greetings": {
-    "morning": "tenpo suno open o pona, jan tawa.",
-    "afternoon": "tenpo suno o pona, jan tawa.",
-    "evening": "tenpo suno pini o pona, jan alasa.",
-    "night": "sina awen lon pimeja la? mi kin."
+  "2048.description": {
+    "other": "o wan e palisa nanpa; o kama 2048!"
   },
-  "home": {
-    "buttons": {
-      "about": "sona mi",
-      "projects": "o lukin e pali mi"
-    },
-    "footer": "o kama pona tawa ma kasi pi lipu ni. o alasa lon ona.",
-    "heading": "o kama pona. mi Jarema.",
-    "subheading": "mi jan kama sona mani. tenpo ante la mi pali ilo. taso tenpo mute la mi jan toki tawa soweli.",
-    "contactButton": "toki tawa mi",
-    "aboutButton": "sona mi",
-    "blogButton": "o lukin e lipu toki mi",
-    "guestbookButton": "o sitelen lon lipu mi",
-    "recentPosts": "lipu toki sin",
-    "latestNow": "seme li lon mi lon tenpo ni",
-    "currentMood": "pilin mi lon tenpo ni",
-    "currentStatus": "ijo mi lon tenpo ni",
-    "time": "tenpo ni",
-    "yourTime": "tenpo sina",
-    "myTime": "tenpo mi",
-    "viewAllWebrings": "o lukin e sike lipu ale",
-    "checkOutSites": "o lukin e lipu ni!",
-    "androidCountdown": "ilo Antoli li kama ilo len lon tenpo suno X"
+  "2048.score": {
+    "other": "nanpa"
   },
-  "guestbook": {
-    "title": "lipu pi jan kama",
-    "description": "o sitelen lon lipu pi jan kama mi!",
-    "poweredBy": "wawa tan",
-    "atabook": "Atabook"
+  "2048.best": {
+    "other": "nanpa suli"
   },
-  "about": {
-    "title": "sona mi",
-    "description": "toki pi seme mi, tan seme mi kama, seme pilin mi, en seme mi pali tawa.",
-    "chapters": {
-      "6": {
-        "title": "mi pini ala",
-        "content1": "ni li ijo jan ante wile ala kute.",
-        "content2": "mi pilin utala kin. mi pilin weka tawa mi pi lon ala. tenpo suno ante la mi pilin ni: ijo li lon lili ante. tenpo ante la mi wile tawa weka: nimi sin, ma sin, toki sin. tenpo ante la mi wile awen.",
-        "content3": "tenpo ante la mi pilin ala sama jan. mi sama sitelen wile kama wawa. mi sama kalama pi len. tenpo ante la mi kama seli: mi pilin e suno lon selo, kalama musi lili, sinpin jan li ante lon tenpo ni. ni li awen e mi.",
-        "content4": "mi pini ala lon kama mi. taso mi pini lon awen moli. mi wile toki."
-      }
-    }
+  "2048.gameOver": {
+    "other": "musi li pini!"
   },
-  "projects": {
-    "title": "pali mi",
-    "description": "kulupu pi pali jan, pi sona, en pi pali tawa kulupu. ijo poka li pini, ijo ante li lon pali.",
-    "status": {
-      "completed": "pini",
-      "inProgress": "pali lon",
-      "planned": "pali kama"
-    },
-    "statusLabels": {
-      "completed": "pini",
-      "inProgress": "lon",
-      "planned": "kama"
-    },
-    "categories": {
-      "personal": "jan",
-      "academic": "sona",
-      "activism": "pali tawa kulupu"
-    },
-    "details": {
-      "what": "seme li ona",
-      "learned": "mi kama sona e seme",
-      "why": "tan seme ona li suli"
-    },
-    "cardActions": {
-      "clickForDetails": "o lukin e sona",
-      "clickToClose": "o pini e lukin"
-    },
-    "buttons": {
-      "showRandom": "o pana e anpa lili sin",
-      "hideRandom": "o len e anpa"
-    },
-    "filters": {
-      "all": "ali"
-    },
-    "clickToFlip": "o luka tawa sike",
-    "what": "ni li seme?",
-    "learned": "mi kama sona e seme",
-    "why": "tan seme la mi pali e ni?"
+  "2048.finalScore": {
+    "other": "nanpa pini"
   },
-  "blog": {
-    "title": "lipu toki",
-    "description": "pilin, lukin insa, en kalama utala lili. mi sitelen lon tenpo ante en pilin ante.",
-    "language": "toki",
-    "languageFilter": "lawa kepeken toki",
-    "tag": "nimi",
-    "sort": "lawa e lipu toki",
-    "category": "kulupu",
-    "noPosts": "lipu toki ala lon. o kama sin!",
-    "search": "alasa e lipu...",
-    "sortNew": "sin li open",
-    "sortOld": "sin ala li open",
-    "sortReadTime": "tenpo lukin",
-    "sortABC": "nasin ABC",
-    "filter": "lawa alasa",
-    "filterDescription": "lawa e lipu toki",
-    "activeFilter": "lawa li lon:",
-    "filterNoMatch": "lipu ala li sama lawa sina. o ante e lawa.",
-    "clearFilter": "weka e lawa ale",
-    "mood": "pilin",
-    "cat": "soweli li ken",
-    "prev": "lipu pini",
-    "next": "lipu kama",
-    "jumpToPost": "o tawa lipu",
-    "back": "o tawa listi pi lipu toki",
-    "showingPosts": "mi pana e lipu {{current}} tan {{total}}",
-    "minRead": "minuta lukin",
-    "rss": "lipu RSS",
-    "subscribeRSS": "o kama jo kepeken nasin RSS",
-    "allPosts": "lipu ale",
-    "languageFeeds": "lipu pi toki ante",
-    "rssDescription": "o kama jo e lipu mi kepeken ilo lukin sina. sina ken kute e lipu sin.",
-    "atom": "lipu Atom",
-    "subscribeAtom": "o kama jo kepeken nasin Atom",
-    "atomDescription": "o kama jo e lipu mi kepeken ilo lukin sina. sina ken kute e lipu sin.",
-    "availableIn": "lipu ni li lon toki ante",
-    "comments": "nimi pi sitelen",
-    "webmentions": "toki tan lipu ante",
-    "webmentionsNone": "toki ala li lon. o toki e nanpa wan!",
-    "webmentionLike": "li pona tawa ni",
-    "webmentionRepost": "li pana sin e ni",
-    "webmentionReply": "li toki tawa",
-    "webmentionMention": "li toki e ni",
-    "tagLabels": {
-      "first-post": "lipu nanpa wan",
-      "identity": "nasin mi",
-      "belonging": "lon kulupu",
-      "introspection": "lukin insa",
-      "browsers": "ilo lipu",
-      "chrome": "Chrome",
-      "open-web": "lipu open",
-      "app-defaults": "ilo nanpa wan",
-      "software": "ilo nanpa",
-      "tools": "ilo",
-      "new-year": "tenpo sike sin",
-      "reflection": "pilin insa",
-      "health": "pona sijelo",
-      "tet": "tenpo Tet",
-      "vietnam": "ma Wijen",
-      "military": "kulupu utala",
-      "fedora": "Fedora",
-      "linux": "Linuksi",
-      "hardening": "awen wawa",
-      "values": "nasin pona",
-      "personal-philosophy": "nasin pi mi"
-    },
-    "categoryLabels": {
-      "personal": "pi mi",
-      "meta": "lon ni",
-      "identity": "nasin mi",
-      "technical": "pi ilo",
-      "privacy": "awen mi",
-      "opinions": "toki mi",
-      "life": "lon",
-      "security": "awen",
-      "guides": "pana sona"
-    }
+  "2048.tryAgain": {
+    "other": "o pali sin"
   },
-  "now": {
-    "title": "tenpo ni",
-    "description": "seme mi pali e ni, seme mi pilin, seme li lawa lon tenpo ni.",
-    "lastUpdated": "tenpo sin",
-    "whatIsNow": "lipu /now li seme?",
-    "whatIsNowDescription": "lipu /now li lipu lon ilo sona. ona li toki e ni: jan li pali e seme? ona li awen e seme lon tenpo ni? sina ken kama sona mute lon",
-    "categories": {
-      "reading": "lukin lipu",
-      "coding": "pali ilo",
-      "drinking": "moku telo",
-      "listening": "kute musi",
-      "premid": "Discord",
-      "thinking": "pilin",
-      "studying": "kama sona",
-      "planning": "lawa tenpo"
-    }
+  "2048.youWin": {
+    "other": "sina kama!"
   },
-  "uses": {
-    "title": "kepeken",
-    "description": "ijo ale mi kepeken lon tenpo ale. kin la, ona li lon",
-    "websiteDescription": "lipu: jan li kama pana e ijo kepeken.",
-    "categories": {
-      "hardware": "ilo suli",
-      "mobile": "ilo tawa",
-      "audio": "kalama",
-      "os": "ilo lawa & ilo lukin",
-      "development": "pali ilo",
-      "email": "lipu & pali",
-      "privacy": "len & awen",
-      "mobile_tools": "ilo tawa pali",
-      "mapping": "sitelen ma",
-      "gaming": "musi",
-      "multimedia": "musi ante",
-      "design": "sitelen & linja",
-      "photo": "ante sitelen",
-      "video": "sitelen tawa & kalama",
-      "media": "ilo tawa sitelen"
-    },
-    "subsections": {
-      "design": "sitelen & linja",
-      "photo": "ante sitelen",
-      "video": "sitelen tawa & kalama",
-      "media": "ilo tawa sitelen"
-    },
-    "hidden": {
-      "clickToReveal": "o luka 5 tawa lukin",
-      "clicksLeft": "(luka {{clicks}} sin tawa lukin)",
-      "platformPrefix": "lipu len"
-    }
+  "2048.currentScore": {
+    "other": "nanpa ni"
   },
-  "contact": {
-    "title": "toki tawa",
-    "description": "nasin tawa kama toki tawa mi.",
-    "message": "o wawa ala. o toki. anu o ante e tenpo 1:1 la sina wile pona :)",
-    "disclaimer": "mi ken pana e toki e-mail. ken la waso li alasa e pilin mi.",
-    "sections": {
-      "contactMe": "toki tawa mi",
-      "socialMedia": "mi lon lipu pi kulupu",
-      "otherPlatforms": "mi lon lipu ante"
-    },
-    "sectionTitles": {
-      "contactMe": "toki tawa mi",
-      "socialMedia": "mi lon lipu pi kulupu",
-      "otherPlatforms": "mi lon lipu ante",
-      "keys": "ilo open ale"
-    },
-    "links": {
-      "universityEmail": "e-mail pi kulupu sona",
-      "bookMeeting": "o pana tenpo tawa mi",
-      "messengerNote": "mi lon Facebook en Messenger lili. mi ken pana toki kepeken wawa ala.",
-      "pgpKey": "ilo open PGP",
-      "sshKey": "ilo open SSH"
-    }
+  "2048.keepPlaying": {
+    "other": "o awen musi"
   },
-  "moodCat": {
-    "title": "soweli pi tenpo ni",
-    "hover": "li lukin ike lili tawa sina",
-    "refresh": "soweli sin, seme?",
-    "seeMore": "o lukin e soweli ante"
+  "2048.newGame": {
+    "other": "musi sin"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "musi sinpin pi palisa anpa en linja weka",
-    "gameInfo": "sona musi",
-    "score": "nanpa",
-    "level": "nanpa ma",
-    "status": "kule",
-    "next": "kama",
-    "gameOver": "musi li pini",
-    "paused": "awen",
-    "playing": "musi lon",
-    "ready": "pali",
-    "playAgain": "o musi sin",
-    "pause": "awen",
-    "resume": "o kama musi",
-    "start": "open",
-    "reset": "o sin",
-    "controls": "nasin noka",
-    "moveLeft": "tawa lete",
-    "moveRight": "tawa poka",
-    "moveDown": "tawa anpa",
-    "rotate": "o sike palisa",
-    "hardDrop": "anpa wawa",
-    "pauseGame": "o awen e musi",
-    "musicOn": "kalama lon",
-    "musicOff": "kalama weka",
-    "nowPlaying": "kalama ni",
-    "spacebar": "namako tawa pini pi poki nimi"
+  "2048.howToPlay": {
+    "other": "nasin musi"
   },
-  "scrapbook": {
-    "title": "toki pali",
-    "description": "toki pali tenpo pi mi pali e lipu ni.",
-    "noEntries": "toki ala li lon."
+  "2048.instructions1": {
+    "other": "o kepeken noka sitelen anu WASD tawa palisa. palisa tu pi nanpa sama la, ona li kama wan!"
   },
-  "settings": {
-    "title": "nasin",
-    "theme": "kule",
-    "themeAuto": "Auto",
-    "themeLight": "kule suno",
-    "themeDark": "kule pimeja",
-    "stars": "suno lili pi sewi",
-    "reduceMotion": "lili e tawa",
-    "highContrast": "ante kule suli",
-    "dyslexiaFont": "sitelen pi ken lukin",
-    "timezone": "ma tenpo",
-    "tzYours": "sina",
-    "tzAuthor": "Jarema",
-    "music": "kalama musi",
-    "musicUnavailable": "lon ala lon tenpo ni"
+  "2048.instructions2": {
+    "other": "tenpo ale la, palisa sin (2 anu 4) li kama."
   },
-  "webrings": {
-    "title": "sike lipu",
-    "description": "sike lipu ni li jo e mi. o lukin e lipu ante pi jan ante.",
-    "intro1": "sike lipu li kulupu pi lipu insa. jan li pali e ni tan pilin sama. (tan sike lipu safonts)",
-    "intro2": "lipu ni li lon sike lipu ni. o nena e linja tawa la sina lukin e lipu pi poka mi. o nena e sike ale!",
-    "previous": "pini",
-    "random": "nasa",
-    "next": "kama",
-    "previousAria": "lipu pini lon {{name}}",
-    "randomAria": "lipu nasa lon {{name}}",
-    "nextAria": "lipu kama lon {{name}}",
-    "pending": {
-      "title": "awen lukin",
-      "description": "ni li sike lipu ni: mi wile kama lon. mi awen e wile.",
-      "badge": "awen"
-    }
+  "2048.instructions3": {
+    "other": "o pali e palisa nanpa 2048 tawa kama!"
   },
-  "badges": {
-    "title": "kulupu pi sitelen lili",
-    "description": "kulupu pi sitelen lili pi ilo sona. mi kepeken ni lon lipu mi.",
-    "pageTitle": "kulupu pi sitelen lili majuna",
-    "pageDescription": "mi kama jo e sitelen lili 88x31 ni tawa ni: mi olin e ijo ni. ni li sama tenpo Geocities. tenpo ni la, jaki pi kulupu mani en jaki pi ilo sona li lili lon ilo sona. sina jo e sitelen lili la, o toki tawa mi. mi ken pana e ona tawa lipu ni.",
-    "myBadgeTitle": "sitelen lili mi (o nena tawa suli)",
-    "myBadgeIntro": "o kepeken sitelen ni tawa ni: jan li ken tawa lipu mi:",
-    "hotlinkUrl": "nasin Hotlink:",
-    "htmlCodeTitle": "nasin HTML",
-    "embeddingSuggestionsTitle": "nasin pi pana sitelen",
-    "suggestion1": "o kepeken",
-    "suggestion1b": "lon nasin CSS sina. ni li awen e lukin pi sitelen lili.",
-    "suggestion2": "o pana e nasin tawa lipu mi lon",
-    "suggestion3": "sitelen li leko 88x31. o suli e ona tu lon nasin HTML tawa",
-    "suggestion3b": "tawa ni: lukin li pona lon ilo lukin suli.",
-    "collectionHeading": "kulupu sitelen",
-    "search": "o alasa e sitelen...",
-    "filterByCategory": "o weka e sitelen kepeken kulupu",
-    "verboseView": "toki mute",
-    "badgeOnlyView": "sitelen taso",
-    "showingCount": "sitelen {{count}} li lon",
-    "showingFiltered": "sitelen {{filtered}} pi {{total}} li lon",
-    "noResults": "mi alasa, taso mi lukin ala e sitelen",
-    "categories": {
-      "all": "ale",
-      "personal": "mi",
-      "friends": "jan pona",
-      "other-sites": "lipu ante",
-      "software": "ilo",
-      "web": "linja lipu",
-      "fun": "musi"
-    }
+  "2048.controls": {
+    "other": "nasin noka"
   },
-  "brand": {
-    "pageTitle": "lukin mi",
-    "pageDescription": "ni li lukin pi lipu mi. o kepeken ni tawa ni: sina wile toki e ijo pi lipu mi.",
-    "name": {
-      "title": "nimi",
-      "nameLabel": "nimi",
-      "displayNameLabel": "nimi lukin",
-      "symbolNote": "sitelen ∴ li lon nimi mi. ona li pini pi toki mi. ona li sama komsi, li sama pini. ona li kiwen."
-    },
-    "logo": {
-      "title": "sitelen",
-      "faceOnly": "sinpin taso",
-      "faceAndBody": "sinpin en sijelo",
-      "dimensions1": "leko 384×384 (anu mute ni)",
-      "dimensions2": "leko 512×512 (anu mute ni)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "sitelen lili",
-      "urlLabel": "nasin URL",
-      "htmlLabel": "nasin HTML"
-    },
-    "colors": {
-      "title": "kule",
-      "names": {
-        "primary": "kule suli",
-        "background": "kule du",
-        "card": "kule lipu lili",
-        "foreground": "kule sinpin",
-        "muted": "kule pi wawa lili",
-        "border": "kule selo"
-      },
-      "descriptions": {
-        "primary": "kule pi lukin suli",
-        "background": "kule monsi",
-        "card": "kule pi lipu lili",
-        "foreground": "kule sitelen",
-        "muted": "ijo pi wawa lili",
-        "border": "selo en kipisi"
-      },
-      "darkMode": "lukin pimeja",
-      "lightMode": "lukin walo"
-    },
-    "fonts": {
-      "title": "nasin sitelen",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "nimi suli",
-        "body": "sitelen tawa jan",
-        "notoSansSC": "toki Sonko",
-        "monaspice": "sitelen pi ilo nanpa",
-        "hanNomGothic": "toki Wije (nasin Han Nom)"
-      },
-      "weight": "suli:",
-      "viewOnGoogleFonts": "o lukin lon ma sitelen",
-      "languages": {
-        "english": "toki Inli",
-        "vietnamese": "toki Wije",
-        "polish": "toki Posuka",
-        "russian": "toki Losi",
-        "japanese": "toki Nipon",
-        "hebrew": "toki Iwisi",
-        "thai": "toki Tawi",
-        "symbols": "sitelen",
-        "chineseSimplified": "toki Sonko (sin)",
-        "chineseTraditional": "toki Sonko (majuna)",
-        "vietnameseHanNom": "toki Wije (Han Nom)"
-      }
-    },
-    "usage": {
-      "title": "toki lili",
-      "point1Title": "o kepeken!",
-      "point1Text": "sina wile ala toki e 'mi ken ala ken?' tawa ni: sina kepeken sitelen mi. o kama jo e ona. o kepeken ona lon lipu sina. mi wile e ni. ni li pona tawa mi.",
-      "point2Title": "o awen e lukin leko",
-      "point2Text": "sina kepeken sitelen lili la, o kepeken nasin 'image-rendering: pixelated' (anu 'crisp-edges') lon nasin CSS. sina kepeken ala e ni la, ilo li pakala e lukin leko. ona li lukin jaki. ni li sitelen leko. o lukin e ona sama sitelen leko.",
-      "point3Title": "toki tan li pona, taso wile ala",
-      "point3Text": "sina sitelen e ijo pi lipu mi la, o toki e ni: lipu mi li lon. ni li pona. taso, sina pana e sitelen lili mi tawa lipu sina la, sina wile pali e ala. nasin HTML mi li jo e nasin tawa lipu mi.",
-      "point4Title": "o nasa ala",
-      "point4Text": "o kepeken ala ni tawa ni: sina lukin sama mi, anu sina toki e ni: 'Jarema li olin e ni', taso mi olin ala e ona. mi pilin e ni: sina sona e ante pi 'pana e nasin tawa lipu' en 'lukin sama jan ante'. sina sona ala e ni: 'pali mi li nasa, anu seme?', la ona li nasa.",
-      "footer": "ni taso. o kepeken pona la, ale li pona."
-    }
+  "2048.moveLeft": {
+    "other": "tawa lete"
   },
-  "colophon": {
-    "title": "tan lipu",
-    "description": "toki pi lipu ni en nasin pali ona",
-    "siteHistory": {
-      "title": "tenpo lipu",
-      "content1": "mi open e lipu ni lon pini 2023. taso sitelen ona li ante mute. nanpa wan li WordPress lon poki ken pi mani ala; nanpa tu li Carrd; nanpa tu wan li Astro. lipu ni li nanpa 4: mi pali sin tan anpa kepeken ilo sin.",
-      "content2": "sitelen ale li ante lili lili; tenpo ni la mi lawa e wawa, e ken pi jan ale (accessibility), e noka sitelen lon ilo, en e pilin jan. ni li ken pona e mi."
-    },
-    "technologyStack": {
-      "title": "ilo pi pali",
-      "nextjs": "ilo React tawa pali lon ilo lawa en lipu anpa",
-      "react": "ilo JavaScript tawa pali sinpin",
-      "tailwind": "ilo len pi nimi lili",
-      "shadcn": "poki ijo kepeken tan Radix UI en Tailwind",
-      "framer": "ilo tawa musi tawa React",
-      "i18next": "ilo pi toki mute",
-      "typescript": "toki JavaScript kepeken nimi pi wawa nanpa"
-    },
-    "hosting": {
-      "title": "poki & pana",
-      "content1": "lipu li lon",
-      "content2": "ona li ken pana lon tan GitHub kepeken pona, HTTPS, en CDN pi ma ale.",
-      "content3": "nimi ma li lon",
-      "content4": "ona li pana e awen en wawa sin."
-    },
-    "design": {
-      "title": "nasin pi pali lipu",
-      "p1": "lipu ni li pali tan ni: ona li wile pona tawa jan ali, li wile wawa. ona li ken pali kepeken ala ilo JavaScript. ona li kepeken nasin HTML pona. ona li lukin ala e ni: sina weka tawa seme (ona li kepeken ala e ilo 'cookies' pi alasa jan).",
-      "p2": "lukin pi lipu ni li wile e ni: lukin sin li wan pona tawa lukin pi tenpo pini. mi pini e suno lon lipu (Dark mode), tan ni: mi olin e oko mi."
-    },
-    "webStandards": {
-      "title": "nasin pi kulupu Wepu",
-      "intro": "lipu ni li kepeken e ni:",
-      "microformats": "nasin 'microformats'",
-      "feeds": "nasin RSS, nasin Atom, en nasin JSON",
-      "robots": "lipu robots.txt en lipu sitemap.xml",
-      "humans": "lipu humans.txt"
-    },
-    "accessibility": {
-      "title": "nasin tawa jan ali",
-      "intro": "mi wile e ni: jan ali li ken kepeken e lipu ni. ijo pona li:",
-      "item1": "pali HTML li kule pona",
-      "item2": "linja tawa weka e ijo lili",
-      "item3": "lawa toki li lon ma pona",
-      "item4": "kule li suli sama nasin WCAG 2.1 AA",
-      "item5": "ken kepeken e ilo nena taso",
-      "item6": "awen e wile tawa tawa lili",
-      "reportText": "pakala li lon la, o",
-      "contactLink": "toki tawa mi"
-    },
-    "inspiration": {
-      "title": "kon suli",
-      "content1": "lipu ni li kama tan",
-      "content2": "ona li kama tan",
-      "content3": "pilin open li lon",
-      "maggie": "lipu pini pi jan Maggie Appleton",
-      "gwern": "lipu pini pi jan Gwern Branwen"
-    }
+  "2048.moveRight": {
+    "other": "tawa poka"
   },
-  "footer": {
-    "copyright": "tenpo sike 2026, jan Jarema, nasin CC BY 4.0",
-    "madeWith": "mi pali kepeken olin",
-    "andChaos": "en tenpo lili pi musi ilo",
-    "uptime": "tenpo pali",
-    "siteStatus": "sitelen tawa sike"
+  "2048.moveUp": {
+    "other": "tawa sewi"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "nasin noka",
-    "navigation": "tawa",
-    "actions": "pali",
-    "close": "pini",
-    "home": "lipu open",
-    "about": "sona mi",
-    "blog": "lipu toki",
-    "projects": "pali",
-    "now": "tenpo ni",
-    "uses": "kepeken",
-    "contact": "toki tawa",
-    "colophon": "tan lipu",
-    "slashes": "lipu ale",
-    "scrapbook": "toki pali",
-    "tetris": "Tetris",
-    "cycleLanguage": "ante e toki",
-    "cycleTheme": "ante e kule",
-    "refreshCat": "sin e soweli pilin",
-    "openShortcuts": "open e nasin noka",
-    "actionSearch": "open e alasa pali",
-    "webring": "kulupu lipu webring"
+  "2048.moveDown": {
+    "other": "tawa anpa"
   },
-  "actionSearch": {
-    "2048": "musi 2048",
-    "title": "alasa pali",
-    "placeholder": "alasa pali...",
-    "noResults": "pali ala lon",
-    "goTo": "tawa lipu",
-    "toggleTheme": "ante e kule",
-    "switchDarkMode": "tawa pimeja",
-    "switchLightMode": "tawa suno",
-    "appearance": "kule",
-    "cycleLanguage": "ante e toki",
-    "refreshCat": "alasa soweli pilin sin",
-    "playGame": "musi",
-    "viewShortcuts": "lukin e nasin noka ale",
-    "pressToOpen": "o pilin e . tawa open e poki nasin",
-    "escToClose": "ESC tawa pini",
-    "fun": "musi",
-    "games": "musi",
-    "tetris": "musi Tetris",
-    "help": "kama sona",
-    "projects": {
-      "category": "tawa lon poki pali",
-      "closeCard": "pini e lipu tawa",
-      "left": "tawa lete",
-      "right": "tawa poka",
-      "up": "tawa sewi",
-      "down": "tawa anpa",
-      "flipCard": "ante sinpin pi pali: {{title}}"
-    },
-    "blog": {
-      "category": "tawa lon lipu toki",
-      "next": "tawa lipu kama",
-      "prev": "tawa lipu pini",
-      "search": "alasa e lipu toki",
-      "filterTag": "lawa e lipu toki",
-      "jumpToPost": "tawa lipu {{i}}",
-      "back": "tawa listi pi lipu toki"
-    },
-    "about": {
-      "category": "tawa lon 'sona mi'",
-      "jumpToChapter": "tawa len {{i}}"
-    },
-    "uses": {
-      "category": "tawa lon 'kepeken'",
-      "jumpToCategory": "tawa {{category}}"
-    },
-    "now": {
-      "category": "tawa lon 'tenpo ni'",
-      "jumpToCategory": "tawa {{category}}"
-    },
-    "colophon": {
-      "category": "tawa lon 'tan lipu'",
-      "jumpToSection": "tawa {{section}}"
-    },
-    "tools": "ilo"
+  "2048.touchInstructions": {
+    "other": "lon ilo tawa la, o kepeken noka poka lon insa sitelen."
   },
-  "textCounter": {
-    "title": "ilo pi nanpa nimi",
-    "description": "o nanpa e sitelen, e nimi, e kulupu nimi, o sona e tenpo tawa lukin e lipu.",
-    "placeholder": "o sitelen tawa ni...",
-    "clear": "o weka",
-    "stats": {
-      "characters": "sitelen",
-      "charactersNoSpaces": "sitelen (ala weka)",
-      "words": "nimi",
-      "sentences": "kulupu nimi",
-      "paragraphs": "kipisi lipu",
-      "lines": "linja",
-      "readingTime": "tenpo lukin",
-      "speakingTime": "tenpo toki"
-    },
-    "textLanguage": "toki pi lipu ni",
-    "languages": {
-      "en": "toki Inli",
-      "vi": "toki Wetenan",
-      "et": "toki Esi",
-      "zh": "toki Sonko",
-      "ru": "toki Losi",
-      "custom": "toki ante",
-      "advanced": "ante suli"
-    },
-    "speed": {
-      "label": "tenpo suli",
-      "slow": "tawa lili",
-      "average": "tawa insa",
-      "fast": "tawa mute",
-      "custom": "tawa ante",
-      "readingWpm": "lukin (nimi lon tenpo lili)",
-      "speakingWpm": "toki (nimi lon tenpo lili)",
-      "englishDefaultsWarning": "ilo ni li kepeken e nasin pi toki Inli. o ante tawa \"tawa ante\" tawa pana e nanpa sina."
-    },
-    "advanced": {
-      "title": "ante suli",
-      "disableWords": "o pini e nanpa nimi",
-      "disableWordsDesc": "toki mute li jo ala e weka lon insa pi nimi tu.",
-      "newlineAsParagraph": "linja ali li kipisi lipu",
-      "newlineAsParagraphDesc": "linja sin li pali e kipisi lipu sin. ilo pi nanpa linja li lukin ala."
-    },
-    "privacy": {
-      "summary": "sona pi awen len",
-      "body": "ilo ni li pali lon ilo lukin sina taso. sina ken weka e linja sona, ilo ni li awen pali, lipu sina li tawa ala ma ante.",
-      "technicalLabel": "nasin lukin sona:",
-      "technical": "sina wile sona e ni la o lukin e ilo DevTools (F12) pi ilo lukin, o tawa lipu Network, o sitelen lon lupa toki, o lukin e ni: ilo li pana ala e ijo tawa ma ante lon tenpo pini pi kama lipu."
-    }
+  "2048.undo": {
+    "other": "wekamoli"
   },
-  "tools": {
-    "title": "ilo",
-    "description": "ilo pona tu. mi ken ala alasa e ilo pona tawa mi la mi pali e ni.",
-    "items": {
-      "counter": {
-        "title": "ilo pi nanpa nimi",
-        "icon": "🔤",
-        "description": "o nanpa e sitelen, e nimi, o sona e tenpo tawa lukin e lipu."
-      }
-    }
+  "2048.title": {
+    "other": "2048"
   },
-  "slashes": {
-    "title": "lipu lili",
-    "description": "kulupu pi lipu suli ali pi lipu ni."
+  "2048.instructions4": {
+    "other": "sina pini e 2048 la, sina ken musi awen tawa nanpa suli!"
+  },
+  "nav.home": {
+    "other": "lipu open"
+  },
+  "nav.about": {
+    "other": "sona mi"
+  },
+  "nav.projects": {
+    "other": "pali"
+  },
+  "nav.blog": {
+    "other": "lipu toki"
+  },
+  "nav.now": {
+    "other": "tenpo ni"
+  },
+  "nav.uses": {
+    "other": "kepeken"
+  },
+  "nav.contact": {
+    "other": "toki tawa mi"
+  },
+  "nav.guestbook": {
+    "other": "lipu pi jan kama"
+  },
+  "nav.colophon": {
+    "other": "tan lipu"
+  },
+  "nav.webring": {
+    "other": "sike lipu"
+  },
+  "nav.scrapbook": {
+    "other": "toki pali"
+  },
+  "nav.slashes": {
+    "other": "lipu ale"
+  },
+  "nav.brand": {
+    "other": "poki pi sitelen mi"
+  },
+  "nav.badges": {
+    "other": "len suli"
+  },
+  "nav.tools": {
+    "other": "ilo"
+  },
+  "languageNotice.message": {
+    "other": "toki ni li lon pali. ijo ante li ken weka anu lili."
+  },
+  "languageNotice.dismiss": {
+    "other": "weka"
+  },
+  "language.main": {
+    "other": "toki suli"
+  },
+  "language.beta": {
+    "other": "toki pi pali"
+  },
+  "language.other": {
+    "other": "toki ante"
+  },
+  "language.auto": {
+    "other": "Auto (toki pi ilo lukin)"
+  },
+  "language.search": {
+    "other": "o alasa e toki..."
+  },
+  "language.en": {
+    "other": "toki Inli"
+  },
+  "language.vi": {
+    "other": "toki Wije"
+  },
+  "language.ru": {
+    "other": "toki Losi"
+  },
+  "language.et": {
+    "other": "toki Estoni"
+  },
+  "language.da": {
+    "other": "toki Tansi"
+  },
+  "language.tr": {
+    "other": "toki Tosiki"
+  },
+  "language.zh": {
+    "other": "toki Sonko"
+  },
+  "language.pl": {
+    "other": "toki Polan"
+  },
+  "language.sv": {
+    "other": "toki Suwesi"
+  },
+  "language.fi": {
+    "other": "toki Sumi"
+  },
+  "language.tok": {
+    "other": "toki pona"
+  },
+  "greetings.morning": {
+    "other": "tenpo suno open o pona, jan tawa."
+  },
+  "greetings.afternoon": {
+    "other": "tenpo suno o pona, jan tawa."
+  },
+  "greetings.evening": {
+    "other": "tenpo suno pini o pona, jan alasa."
+  },
+  "greetings.night": {
+    "other": "sina awen lon pimeja la? mi kin."
+  },
+  "home.buttons.about": {
+    "other": "sona mi"
+  },
+  "home.buttons.projects": {
+    "other": "o lukin e pali mi"
+  },
+  "home.footer": {
+    "other": "o kama pona tawa ma kasi pi lipu ni. o alasa lon ona."
+  },
+  "home.heading": {
+    "other": "o kama pona. mi Jarema."
+  },
+  "home.subheading": {
+    "other": "mi jan kama sona mani. tenpo ante la mi pali ilo. taso tenpo mute la mi jan toki tawa soweli."
+  },
+  "home.contactButton": {
+    "other": "toki tawa mi"
+  },
+  "home.aboutButton": {
+    "other": "sona mi"
+  },
+  "home.blogButton": {
+    "other": "o lukin e lipu toki mi"
+  },
+  "home.guestbookButton": {
+    "other": "o sitelen lon lipu mi"
+  },
+  "home.recentPosts": {
+    "other": "lipu toki sin"
+  },
+  "home.latestNow": {
+    "other": "seme li lon mi lon tenpo ni"
+  },
+  "home.currentMood": {
+    "other": "pilin mi lon tenpo ni"
+  },
+  "home.currentStatus": {
+    "other": "ijo mi lon tenpo ni"
+  },
+  "home.time": {
+    "other": "tenpo ni"
+  },
+  "home.yourTime": {
+    "other": "tenpo sina"
+  },
+  "home.myTime": {
+    "other": "tenpo mi"
+  },
+  "home.viewAllWebrings": {
+    "other": "o lukin e sike lipu ale"
+  },
+  "home.checkOutSites": {
+    "other": "o lukin e lipu ni!"
+  },
+  "home.androidCountdown": {
+    "other": "ilo Antoli li kama ilo len lon tenpo suno X"
+  },
+  "guestbook.title": {
+    "other": "lipu pi jan kama"
+  },
+  "guestbook.description": {
+    "other": "o sitelen lon lipu pi jan kama mi!"
+  },
+  "guestbook.poweredBy": {
+    "other": "wawa tan"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "sona mi"
+  },
+  "about.description": {
+    "other": "toki pi seme mi, tan seme mi kama, seme pilin mi, en seme mi pali tawa."
+  },
+  "about.chapters.6.title": {
+    "other": "mi pini ala"
+  },
+  "about.chapters.6.content1": {
+    "other": "ni li ijo jan ante wile ala kute."
+  },
+  "about.chapters.6.content2": {
+    "other": "mi pilin utala kin. mi pilin weka tawa mi pi lon ala. tenpo suno ante la mi pilin ni: ijo li lon lili ante. tenpo ante la mi wile tawa weka: nimi sin, ma sin, toki sin. tenpo ante la mi wile awen."
+  },
+  "about.chapters.6.content3": {
+    "other": "tenpo ante la mi pilin ala sama jan. mi sama sitelen wile kama wawa. mi sama kalama pi len. tenpo ante la mi kama seli: mi pilin e suno lon selo, kalama musi lili, sinpin jan li ante lon tenpo ni. ni li awen e mi."
+  },
+  "about.chapters.6.content4": {
+    "other": "mi pini ala lon kama mi. taso mi pini lon awen moli. mi wile toki."
+  },
+  "projects.title": {
+    "other": "pali mi"
+  },
+  "projects.description": {
+    "other": "kulupu pi pali jan, pi sona, en pi pali tawa kulupu. ijo poka li pini, ijo ante li lon pali."
+  },
+  "projects.status.completed": {
+    "other": "pini"
+  },
+  "projects.status.inProgress": {
+    "other": "pali lon"
+  },
+  "projects.status.planned": {
+    "other": "pali kama"
+  },
+  "projects.statusLabels.completed": {
+    "other": "pini"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "lon"
+  },
+  "projects.statusLabels.planned": {
+    "other": "kama"
+  },
+  "projects.categories.personal": {
+    "other": "jan"
+  },
+  "projects.categories.academic": {
+    "other": "sona"
+  },
+  "projects.categories.activism": {
+    "other": "pali tawa kulupu"
+  },
+  "projects.details.what": {
+    "other": "seme li ona"
+  },
+  "projects.details.learned": {
+    "other": "mi kama sona e seme"
+  },
+  "projects.details.why": {
+    "other": "tan seme ona li suli"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "o lukin e sona"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "o pini e lukin"
+  },
+  "projects.buttons.showRandom": {
+    "other": "o pana e anpa lili sin"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "o len e anpa"
+  },
+  "projects.filters.all": {
+    "other": "ali"
+  },
+  "projects.clickToFlip": {
+    "other": "o luka tawa sike"
+  },
+  "projects.what": {
+    "other": "ni li seme?"
+  },
+  "projects.learned": {
+    "other": "mi kama sona e seme"
+  },
+  "projects.why": {
+    "other": "tan seme la mi pali e ni?"
+  },
+  "blog.title": {
+    "other": "lipu toki"
+  },
+  "blog.description": {
+    "other": "pilin, lukin insa, en kalama utala lili. mi sitelen lon tenpo ante en pilin ante."
+  },
+  "blog.language": {
+    "other": "toki"
+  },
+  "blog.languageFilter": {
+    "other": "lawa kepeken toki"
+  },
+  "blog.tag": {
+    "other": "nimi"
+  },
+  "blog.sort": {
+    "other": "lawa e lipu toki"
+  },
+  "blog.category": {
+    "other": "kulupu"
+  },
+  "blog.noPosts": {
+    "other": "lipu toki ala lon. o kama sin!"
+  },
+  "blog.search": {
+    "other": "alasa e lipu..."
+  },
+  "blog.sortNew": {
+    "other": "sin li open"
+  },
+  "blog.sortOld": {
+    "other": "sin ala li open"
+  },
+  "blog.sortReadTime": {
+    "other": "tenpo lukin"
+  },
+  "blog.sortABC": {
+    "other": "nasin ABC"
+  },
+  "blog.filter": {
+    "other": "lawa alasa"
+  },
+  "blog.filterDescription": {
+    "other": "lawa e lipu toki"
+  },
+  "blog.activeFilter": {
+    "other": "lawa li lon:"
+  },
+  "blog.filterNoMatch": {
+    "other": "lipu ala li sama lawa sina. o ante e lawa."
+  },
+  "blog.clearFilter": {
+    "other": "weka e lawa ale"
+  },
+  "blog.mood": {
+    "other": "pilin"
+  },
+  "blog.cat": {
+    "other": "soweli li ken"
+  },
+  "blog.prev": {
+    "other": "lipu pini"
+  },
+  "blog.next": {
+    "other": "lipu kama"
+  },
+  "blog.jumpToPost": {
+    "other": "o tawa lipu"
+  },
+  "blog.back": {
+    "other": "o tawa listi pi lipu toki"
+  },
+  "blog.showingPosts": {
+    "other": "mi pana e lipu {{current}} tan {{total}}"
+  },
+  "blog.minRead": {
+    "other": "minuta lukin"
+  },
+  "blog.rss": {
+    "other": "lipu RSS"
+  },
+  "blog.subscribeRSS": {
+    "other": "o kama jo kepeken nasin RSS"
+  },
+  "blog.allPosts": {
+    "other": "lipu ale"
+  },
+  "blog.languageFeeds": {
+    "other": "lipu pi toki ante"
+  },
+  "blog.rssDescription": {
+    "other": "o kama jo e lipu mi kepeken ilo lukin sina. sina ken kute e lipu sin."
+  },
+  "blog.atom": {
+    "other": "lipu Atom"
+  },
+  "blog.subscribeAtom": {
+    "other": "o kama jo kepeken nasin Atom"
+  },
+  "blog.atomDescription": {
+    "other": "o kama jo e lipu mi kepeken ilo lukin sina. sina ken kute e lipu sin."
+  },
+  "blog.availableIn": {
+    "other": "lipu ni li lon toki ante"
+  },
+  "blog.comments": {
+    "other": "nimi pi sitelen"
+  },
+  "blog.webmentions": {
+    "other": "toki tan lipu ante"
+  },
+  "blog.webmentionsNone": {
+    "other": "toki ala li lon. o toki e nanpa wan!"
+  },
+  "blog.webmentionLike": {
+    "other": "li pona tawa ni"
+  },
+  "blog.webmentionRepost": {
+    "other": "li pana sin e ni"
+  },
+  "blog.webmentionReply": {
+    "other": "li toki tawa"
+  },
+  "blog.webmentionMention": {
+    "other": "li toki e ni"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "lipu nanpa wan"
+  },
+  "blog.tagLabels.identity": {
+    "other": "nasin mi"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "lon kulupu"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "lukin insa"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "ilo lipu"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "lipu open"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "ilo nanpa wan"
+  },
+  "blog.tagLabels.software": {
+    "other": "ilo nanpa"
+  },
+  "blog.tagLabels.tools": {
+    "other": "ilo"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "tenpo sike sin"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "pilin insa"
+  },
+  "blog.tagLabels.health": {
+    "other": "pona sijelo"
+  },
+  "blog.tagLabels.tet": {
+    "other": "tenpo Tet"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "ma Wijen"
+  },
+  "blog.tagLabels.military": {
+    "other": "kulupu utala"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linuksi"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "awen wawa"
+  },
+  "blog.tagLabels.values": {
+    "other": "nasin pona"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "nasin pi mi"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "pi mi"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "lon ni"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "nasin mi"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "pi ilo"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "awen mi"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "toki mi"
+  },
+  "blog.categoryLabels.life": {
+    "other": "lon"
+  },
+  "blog.categoryLabels.security": {
+    "other": "awen"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "pana sona"
+  },
+  "now.title": {
+    "other": "tenpo ni"
+  },
+  "now.description": {
+    "other": "seme mi pali e ni, seme mi pilin, seme li lawa lon tenpo ni."
+  },
+  "now.lastUpdated": {
+    "other": "tenpo sin"
+  },
+  "now.whatIsNow": {
+    "other": "lipu /now li seme?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "lipu /now li lipu lon ilo sona. ona li toki e ni: jan li pali e seme? ona li awen e seme lon tenpo ni? sina ken kama sona mute lon"
+  },
+  "now.categories.reading": {
+    "other": "lukin lipu"
+  },
+  "now.categories.coding": {
+    "other": "pali ilo"
+  },
+  "now.categories.drinking": {
+    "other": "moku telo"
+  },
+  "now.categories.listening": {
+    "other": "kute musi"
+  },
+  "now.categories.premid": {
+    "other": "Discord"
+  },
+  "now.categories.thinking": {
+    "other": "pilin"
+  },
+  "now.categories.studying": {
+    "other": "kama sona"
+  },
+  "now.categories.planning": {
+    "other": "lawa tenpo"
+  },
+  "uses.title": {
+    "other": "kepeken"
+  },
+  "uses.description": {
+    "other": "ijo ale mi kepeken lon tenpo ale. kin la, ona li lon"
+  },
+  "uses.websiteDescription": {
+    "other": "lipu: jan li kama pana e ijo kepeken."
+  },
+  "uses.categories.hardware": {
+    "other": "ilo suli"
+  },
+  "uses.categories.mobile": {
+    "other": "ilo tawa"
+  },
+  "uses.categories.audio": {
+    "other": "kalama"
+  },
+  "uses.categories.os": {
+    "other": "ilo lawa & ilo lukin"
+  },
+  "uses.categories.development": {
+    "other": "pali ilo"
+  },
+  "uses.categories.email": {
+    "other": "lipu & pali"
+  },
+  "uses.categories.privacy": {
+    "other": "len & awen"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "ilo tawa pali"
+  },
+  "uses.categories.mapping": {
+    "other": "sitelen ma"
+  },
+  "uses.categories.gaming": {
+    "other": "musi"
+  },
+  "uses.categories.multimedia": {
+    "other": "musi ante"
+  },
+  "uses.categories.design": {
+    "other": "sitelen & linja"
+  },
+  "uses.categories.photo": {
+    "other": "ante sitelen"
+  },
+  "uses.categories.video": {
+    "other": "sitelen tawa & kalama"
+  },
+  "uses.categories.media": {
+    "other": "ilo tawa sitelen"
+  },
+  "uses.subsections.design": {
+    "other": "sitelen & linja"
+  },
+  "uses.subsections.photo": {
+    "other": "ante sitelen"
+  },
+  "uses.subsections.video": {
+    "other": "sitelen tawa & kalama"
+  },
+  "uses.subsections.media": {
+    "other": "ilo tawa sitelen"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "o luka 5 tawa lukin"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "(luka {{clicks}} sin tawa lukin)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "lipu len"
+  },
+  "contact.title": {
+    "other": "toki tawa"
+  },
+  "contact.description": {
+    "other": "nasin tawa kama toki tawa mi."
+  },
+  "contact.message": {
+    "other": "o wawa ala. o toki. anu o ante e tenpo 1:1 la sina wile pona :)"
+  },
+  "contact.disclaimer": {
+    "other": "mi ken pana e toki e-mail. ken la waso li alasa e pilin mi."
+  },
+  "contact.sections.contactMe": {
+    "other": "toki tawa mi"
+  },
+  "contact.sections.socialMedia": {
+    "other": "mi lon lipu pi kulupu"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "mi lon lipu ante"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "toki tawa mi"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "mi lon lipu pi kulupu"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "mi lon lipu ante"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "ilo open ale"
+  },
+  "contact.links.universityEmail": {
+    "other": "e-mail pi kulupu sona"
+  },
+  "contact.links.bookMeeting": {
+    "other": "o pana tenpo tawa mi"
+  },
+  "contact.links.messengerNote": {
+    "other": "mi lon Facebook en Messenger lili. mi ken pana toki kepeken wawa ala."
+  },
+  "contact.links.pgpKey": {
+    "other": "ilo open PGP"
+  },
+  "contact.links.sshKey": {
+    "other": "ilo open SSH"
+  },
+  "moodCat.title": {
+    "other": "soweli pi tenpo ni"
+  },
+  "moodCat.hover": {
+    "other": "li lukin ike lili tawa sina"
+  },
+  "moodCat.refresh": {
+    "other": "soweli sin, seme?"
+  },
+  "moodCat.seeMore": {
+    "other": "o lukin e soweli ante"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "musi sinpin pi palisa anpa en linja weka"
+  },
+  "tetris.gameInfo": {
+    "other": "sona musi"
+  },
+  "tetris.score": {
+    "other": "nanpa"
+  },
+  "tetris.level": {
+    "other": "nanpa ma"
+  },
+  "tetris.status": {
+    "other": "kule"
+  },
+  "tetris.next": {
+    "other": "kama"
+  },
+  "tetris.gameOver": {
+    "other": "musi li pini"
+  },
+  "tetris.paused": {
+    "other": "awen"
+  },
+  "tetris.playing": {
+    "other": "musi lon"
+  },
+  "tetris.ready": {
+    "other": "pali"
+  },
+  "tetris.playAgain": {
+    "other": "o musi sin"
+  },
+  "tetris.pause": {
+    "other": "awen"
+  },
+  "tetris.resume": {
+    "other": "o kama musi"
+  },
+  "tetris.start": {
+    "other": "open"
+  },
+  "tetris.reset": {
+    "other": "o sin"
+  },
+  "tetris.controls": {
+    "other": "nasin noka"
+  },
+  "tetris.moveLeft": {
+    "other": "tawa lete"
+  },
+  "tetris.moveRight": {
+    "other": "tawa poka"
+  },
+  "tetris.moveDown": {
+    "other": "tawa anpa"
+  },
+  "tetris.rotate": {
+    "other": "o sike palisa"
+  },
+  "tetris.hardDrop": {
+    "other": "anpa wawa"
+  },
+  "tetris.pauseGame": {
+    "other": "o awen e musi"
+  },
+  "tetris.musicOn": {
+    "other": "kalama lon"
+  },
+  "tetris.musicOff": {
+    "other": "kalama weka"
+  },
+  "tetris.nowPlaying": {
+    "other": "kalama ni"
+  },
+  "tetris.spacebar": {
+    "other": "namako tawa pini pi poki nimi"
+  },
+  "scrapbook.title": {
+    "other": "toki pali"
+  },
+  "scrapbook.description": {
+    "other": "toki pali tenpo pi mi pali e lipu ni."
+  },
+  "scrapbook.noEntries": {
+    "other": "toki ala li lon."
+  },
+  "settings.title": {
+    "other": "nasin"
+  },
+  "settings.theme": {
+    "other": "kule"
+  },
+  "settings.themeAuto": {
+    "other": "Auto"
+  },
+  "settings.themeLight": {
+    "other": "kule suno"
+  },
+  "settings.themeDark": {
+    "other": "kule pimeja"
+  },
+  "settings.stars": {
+    "other": "suno lili pi sewi"
+  },
+  "settings.reduceMotion": {
+    "other": "lili e tawa"
+  },
+  "settings.highContrast": {
+    "other": "ante kule suli"
+  },
+  "settings.dyslexiaFont": {
+    "other": "sitelen pi ken lukin"
+  },
+  "settings.timezone": {
+    "other": "ma tenpo"
+  },
+  "settings.tzYours": {
+    "other": "sina"
+  },
+  "settings.tzAuthor": {
+    "other": "Jarema"
+  },
+  "settings.music": {
+    "other": "kalama musi"
+  },
+  "settings.musicUnavailable": {
+    "other": "lon ala lon tenpo ni"
+  },
+  "webrings.title": {
+    "other": "sike lipu"
+  },
+  "webrings.description": {
+    "other": "sike lipu ni li jo e mi. o lukin e lipu ante pi jan ante."
+  },
+  "webrings.intro1": {
+    "other": "sike lipu li kulupu pi lipu insa. jan li pali e ni tan pilin sama. (tan sike lipu safonts)"
+  },
+  "webrings.intro2": {
+    "other": "lipu ni li lon sike lipu ni. o nena e linja tawa la sina lukin e lipu pi poka mi. o nena e sike ale!"
+  },
+  "webrings.previous": {
+    "other": "pini"
+  },
+  "webrings.random": {
+    "other": "nasa"
+  },
+  "webrings.next": {
+    "other": "kama"
+  },
+  "webrings.previousAria": {
+    "other": "lipu pini lon {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "lipu nasa lon {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "lipu kama lon {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "awen lukin"
+  },
+  "webrings.pending.description": {
+    "other": "ni li sike lipu ni: mi wile kama lon. mi awen e wile."
+  },
+  "webrings.pending.badge": {
+    "other": "awen"
+  },
+  "badges.title": {
+    "other": "kulupu pi sitelen lili"
+  },
+  "badges.description": {
+    "other": "kulupu pi sitelen lili pi ilo sona. mi kepeken ni lon lipu mi."
+  },
+  "badges.pageTitle": {
+    "other": "kulupu pi sitelen lili majuna"
+  },
+  "badges.pageDescription": {
+    "other": "mi kama jo e sitelen lili 88x31 ni tawa ni: mi olin e ijo ni. ni li sama tenpo Geocities. tenpo ni la, jaki pi kulupu mani en jaki pi ilo sona li lili lon ilo sona. sina jo e sitelen lili la, o toki tawa mi. mi ken pana e ona tawa lipu ni."
+  },
+  "badges.myBadgeTitle": {
+    "other": "sitelen lili mi (o nena tawa suli)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "o kepeken sitelen ni tawa ni: jan li ken tawa lipu mi:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "nasin Hotlink:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "nasin HTML"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "nasin pi pana sitelen"
+  },
+  "badges.suggestion1": {
+    "other": "o kepeken"
+  },
+  "badges.suggestion1b": {
+    "other": "lon nasin CSS sina. ni li awen e lukin pi sitelen lili."
+  },
+  "badges.suggestion2": {
+    "other": "o pana e nasin tawa lipu mi lon"
+  },
+  "badges.suggestion3": {
+    "other": "sitelen li leko 88x31. o suli e ona tu lon nasin HTML tawa"
+  },
+  "badges.suggestion3b": {
+    "other": "tawa ni: lukin li pona lon ilo lukin suli."
+  },
+  "badges.collectionHeading": {
+    "other": "kulupu sitelen"
+  },
+  "badges.search": {
+    "other": "o alasa e sitelen..."
+  },
+  "badges.filterByCategory": {
+    "other": "o weka e sitelen kepeken kulupu"
+  },
+  "badges.verboseView": {
+    "other": "toki mute"
+  },
+  "badges.badgeOnlyView": {
+    "other": "sitelen taso"
+  },
+  "badges.showingCount": {
+    "other": "sitelen {{count}} li lon"
+  },
+  "badges.showingFiltered": {
+    "other": "sitelen {{filtered}} pi {{total}} li lon"
+  },
+  "badges.noResults": {
+    "other": "mi alasa, taso mi lukin ala e sitelen"
+  },
+  "badges.categories.all": {
+    "other": "ale"
+  },
+  "badges.categories.personal": {
+    "other": "mi"
+  },
+  "badges.categories.friends": {
+    "other": "jan pona"
+  },
+  "badges.categories.other-sites": {
+    "other": "lipu ante"
+  },
+  "badges.categories.software": {
+    "other": "ilo"
+  },
+  "badges.categories.web": {
+    "other": "linja lipu"
+  },
+  "badges.categories.fun": {
+    "other": "musi"
+  },
+  "brand.pageTitle": {
+    "other": "lukin mi"
+  },
+  "brand.pageDescription": {
+    "other": "ni li lukin pi lipu mi. o kepeken ni tawa ni: sina wile toki e ijo pi lipu mi."
+  },
+  "brand.name.title": {
+    "other": "nimi"
+  },
+  "brand.name.nameLabel": {
+    "other": "nimi"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "nimi lukin"
+  },
+  "brand.name.symbolNote": {
+    "other": "sitelen ∴ li lon nimi mi. ona li pini pi toki mi. ona li sama komsi, li sama pini. ona li kiwen."
+  },
+  "brand.logo.title": {
+    "other": "sitelen"
+  },
+  "brand.logo.faceOnly": {
+    "other": "sinpin taso"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "sinpin en sijelo"
+  },
+  "brand.logo.dimensions1": {
+    "other": "leko 384×384 (anu mute ni)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "leko 512×512 (anu mute ni)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "sitelen lili"
+  },
+  "brand.badge.urlLabel": {
+    "other": "nasin URL"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "nasin HTML"
+  },
+  "brand.colors.title": {
+    "other": "kule"
+  },
+  "brand.colors.names.primary": {
+    "other": "kule suli"
+  },
+  "brand.colors.names.background": {
+    "other": "kule du"
+  },
+  "brand.colors.names.card": {
+    "other": "kule lipu lili"
+  },
+  "brand.colors.names.foreground": {
+    "other": "kule sinpin"
+  },
+  "brand.colors.names.muted": {
+    "other": "kule pi wawa lili"
+  },
+  "brand.colors.names.border": {
+    "other": "kule selo"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "kule pi lukin suli"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "kule monsi"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "kule pi lipu lili"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "kule sitelen"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "ijo pi wawa lili"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "selo en kipisi"
+  },
+  "brand.colors.darkMode": {
+    "other": "lukin pimeja"
+  },
+  "brand.colors.lightMode": {
+    "other": "lukin walo"
+  },
+  "brand.fonts.title": {
+    "other": "nasin sitelen"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "nimi suli"
+  },
+  "brand.fonts.usage.body": {
+    "other": "sitelen tawa jan"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "toki Sonko"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "sitelen pi ilo nanpa"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "toki Wije (nasin Han Nom)"
+  },
+  "brand.fonts.weight": {
+    "other": "suli:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "o lukin lon ma sitelen"
+  },
+  "brand.fonts.languages.english": {
+    "other": "toki Inli"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "toki Wije"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "toki Posuka"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "toki Losi"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "toki Nipon"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "toki Iwisi"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "toki Tawi"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "sitelen"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "toki Sonko (sin)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "toki Sonko (majuna)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "toki Wije (Han Nom)"
+  },
+  "brand.usage.title": {
+    "other": "toki lili"
+  },
+  "brand.usage.point1Title": {
+    "other": "o kepeken!"
+  },
+  "brand.usage.point1Text": {
+    "other": "sina wile ala toki e 'mi ken ala ken?' tawa ni: sina kepeken sitelen mi. o kama jo e ona. o kepeken ona lon lipu sina. mi wile e ni. ni li pona tawa mi."
+  },
+  "brand.usage.point2Title": {
+    "other": "o awen e lukin leko"
+  },
+  "brand.usage.point2Text": {
+    "other": "sina kepeken sitelen lili la, o kepeken nasin 'image-rendering: pixelated' (anu 'crisp-edges') lon nasin CSS. sina kepeken ala e ni la, ilo li pakala e lukin leko. ona li lukin jaki. ni li sitelen leko. o lukin e ona sama sitelen leko."
+  },
+  "brand.usage.point3Title": {
+    "other": "toki tan li pona, taso wile ala"
+  },
+  "brand.usage.point3Text": {
+    "other": "sina sitelen e ijo pi lipu mi la, o toki e ni: lipu mi li lon. ni li pona. taso, sina pana e sitelen lili mi tawa lipu sina la, sina wile pali e ala. nasin HTML mi li jo e nasin tawa lipu mi."
+  },
+  "brand.usage.point4Title": {
+    "other": "o nasa ala"
+  },
+  "brand.usage.point4Text": {
+    "other": "o kepeken ala ni tawa ni: sina lukin sama mi, anu sina toki e ni: 'Jarema li olin e ni', taso mi olin ala e ona. mi pilin e ni: sina sona e ante pi 'pana e nasin tawa lipu' en 'lukin sama jan ante'. sina sona ala e ni: 'pali mi li nasa, anu seme?', la ona li nasa."
+  },
+  "brand.usage.footer": {
+    "other": "ni taso. o kepeken pona la, ale li pona."
+  },
+  "colophon.title": {
+    "other": "tan lipu"
+  },
+  "colophon.description": {
+    "other": "toki pi lipu ni en nasin pali ona"
+  },
+  "colophon.siteHistory.title": {
+    "other": "tenpo lipu"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "mi open e lipu ni lon pini 2023. taso sitelen ona li ante mute. nanpa wan li WordPress lon poki ken pi mani ala; nanpa tu li Carrd; nanpa tu wan li Astro. lipu ni li nanpa 4: mi pali sin tan anpa kepeken ilo sin."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "sitelen ale li ante lili lili; tenpo ni la mi lawa e wawa, e ken pi jan ale (accessibility), e noka sitelen lon ilo, en e pilin jan. ni li ken pona e mi."
+  },
+  "colophon.technologyStack.title": {
+    "other": "ilo pi pali"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "ilo React tawa pali lon ilo lawa en lipu anpa"
+  },
+  "colophon.technologyStack.react": {
+    "other": "ilo JavaScript tawa pali sinpin"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "ilo len pi nimi lili"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "poki ijo kepeken tan Radix UI en Tailwind"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "ilo tawa musi tawa React"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "ilo pi toki mute"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "toki JavaScript kepeken nimi pi wawa nanpa"
+  },
+  "colophon.hosting.title": {
+    "other": "poki & pana"
+  },
+  "colophon.hosting.content1": {
+    "other": "lipu li lon"
+  },
+  "colophon.hosting.content2": {
+    "other": "ona li ken pana lon tan GitHub kepeken pona, HTTPS, en CDN pi ma ale."
+  },
+  "colophon.hosting.content3": {
+    "other": "nimi ma li lon"
+  },
+  "colophon.hosting.content4": {
+    "other": "ona li pana e awen en wawa sin."
+  },
+  "colophon.design.title": {
+    "other": "nasin pi pali lipu"
+  },
+  "colophon.design.p1": {
+    "other": "lipu ni li pali tan ni: ona li wile pona tawa jan ali, li wile wawa. ona li ken pali kepeken ala ilo JavaScript. ona li kepeken nasin HTML pona. ona li lukin ala e ni: sina weka tawa seme (ona li kepeken ala e ilo 'cookies' pi alasa jan)."
+  },
+  "colophon.design.p2": {
+    "other": "lukin pi lipu ni li wile e ni: lukin sin li wan pona tawa lukin pi tenpo pini. mi pini e suno lon lipu (Dark mode), tan ni: mi olin e oko mi."
+  },
+  "colophon.webStandards.title": {
+    "other": "nasin pi kulupu Wepu"
+  },
+  "colophon.webStandards.intro": {
+    "other": "lipu ni li kepeken e ni:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "nasin 'microformats'"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "nasin RSS, nasin Atom, en nasin JSON"
+  },
+  "colophon.webStandards.robots": {
+    "other": "lipu robots.txt en lipu sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "lipu humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "nasin tawa jan ali"
+  },
+  "colophon.accessibility.intro": {
+    "other": "mi wile e ni: jan ali li ken kepeken e lipu ni. ijo pona li:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "pali HTML li kule pona"
+  },
+  "colophon.accessibility.item2": {
+    "other": "linja tawa weka e ijo lili"
+  },
+  "colophon.accessibility.item3": {
+    "other": "lawa toki li lon ma pona"
+  },
+  "colophon.accessibility.item4": {
+    "other": "kule li suli sama nasin WCAG 2.1 AA"
+  },
+  "colophon.accessibility.item5": {
+    "other": "ken kepeken e ilo nena taso"
+  },
+  "colophon.accessibility.item6": {
+    "other": "awen e wile tawa tawa lili"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "pakala li lon la, o"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "toki tawa mi"
+  },
+  "colophon.inspiration.title": {
+    "other": "kon suli"
+  },
+  "colophon.inspiration.content1": {
+    "other": "lipu ni li kama tan"
+  },
+  "colophon.inspiration.content2": {
+    "other": "ona li kama tan"
+  },
+  "colophon.inspiration.content3": {
+    "other": "pilin open li lon"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "lipu pini pi jan Maggie Appleton"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "lipu pini pi jan Gwern Branwen"
+  },
+  "footer.copyright": {
+    "other": "tenpo sike 2026, jan Jarema, nasin CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "mi pali kepeken olin"
+  },
+  "footer.andChaos": {
+    "other": "en tenpo lili pi musi ilo"
+  },
+  "footer.uptime": {
+    "other": "tenpo pali"
+  },
+  "footer.siteStatus": {
+    "other": "sitelen tawa sike"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "nasin noka"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "tawa"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "pali"
+  },
+  "keyboardShortcuts.close": {
+    "other": "pini"
+  },
+  "keyboardShortcuts.home": {
+    "other": "lipu open"
+  },
+  "keyboardShortcuts.about": {
+    "other": "sona mi"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "lipu toki"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "pali"
+  },
+  "keyboardShortcuts.now": {
+    "other": "tenpo ni"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "kepeken"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "toki tawa"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "tan lipu"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "lipu ale"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "toki pali"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "ante e toki"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "ante e kule"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "sin e soweli pilin"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "open e nasin noka"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "open e alasa pali"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "kulupu lipu webring"
+  },
+  "actionSearch.2048": {
+    "other": "musi 2048"
+  },
+  "actionSearch.title": {
+    "other": "alasa pali"
+  },
+  "actionSearch.placeholder": {
+    "other": "alasa pali..."
+  },
+  "actionSearch.noResults": {
+    "other": "pali ala lon"
+  },
+  "actionSearch.goTo": {
+    "other": "tawa lipu"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "ante e kule"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "tawa pimeja"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "tawa suno"
+  },
+  "actionSearch.appearance": {
+    "other": "kule"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "ante e toki"
+  },
+  "actionSearch.refreshCat": {
+    "other": "alasa soweli pilin sin"
+  },
+  "actionSearch.playGame": {
+    "other": "musi"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "lukin e nasin noka ale"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "o pilin e . tawa open e poki nasin"
+  },
+  "actionSearch.escToClose": {
+    "other": "ESC tawa pini"
+  },
+  "actionSearch.fun": {
+    "other": "musi"
+  },
+  "actionSearch.games": {
+    "other": "musi"
+  },
+  "actionSearch.tetris": {
+    "other": "musi Tetris"
+  },
+  "actionSearch.help": {
+    "other": "kama sona"
+  },
+  "actionSearch.projects.category": {
+    "other": "tawa lon poki pali"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "pini e lipu tawa"
+  },
+  "actionSearch.projects.left": {
+    "other": "tawa lete"
+  },
+  "actionSearch.projects.right": {
+    "other": "tawa poka"
+  },
+  "actionSearch.projects.up": {
+    "other": "tawa sewi"
+  },
+  "actionSearch.projects.down": {
+    "other": "tawa anpa"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "ante sinpin pi pali: {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "tawa lon lipu toki"
+  },
+  "actionSearch.blog.next": {
+    "other": "tawa lipu kama"
+  },
+  "actionSearch.blog.prev": {
+    "other": "tawa lipu pini"
+  },
+  "actionSearch.blog.search": {
+    "other": "alasa e lipu toki"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "lawa e lipu toki"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "tawa lipu {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "tawa listi pi lipu toki"
+  },
+  "actionSearch.about.category": {
+    "other": "tawa lon 'sona mi'"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "tawa len {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "tawa lon 'kepeken'"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "tawa {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "tawa lon 'tenpo ni'"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "tawa {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "tawa lon 'tan lipu'"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "tawa {{section}}"
+  },
+  "actionSearch.tools": {
+    "other": "ilo"
+  },
+  "textCounter.title": {
+    "other": "ilo pi nanpa nimi"
+  },
+  "textCounter.description": {
+    "other": "o nanpa e sitelen, e nimi, e kulupu nimi, o sona e tenpo tawa lukin e lipu."
+  },
+  "textCounter.placeholder": {
+    "other": "o sitelen tawa ni..."
+  },
+  "textCounter.clear": {
+    "other": "o weka"
+  },
+  "textCounter.stats.characters": {
+    "other": "sitelen"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "sitelen (ala weka)"
+  },
+  "textCounter.stats.words": {
+    "other": "nimi"
+  },
+  "textCounter.stats.sentences": {
+    "other": "kulupu nimi"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "kipisi lipu"
+  },
+  "textCounter.stats.lines": {
+    "other": "linja"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "tenpo lukin"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "tenpo toki"
+  },
+  "textCounter.textLanguage": {
+    "other": "toki pi lipu ni"
+  },
+  "textCounter.languages.en": {
+    "other": "toki Inli"
+  },
+  "textCounter.languages.vi": {
+    "other": "toki Wetenan"
+  },
+  "textCounter.languages.et": {
+    "other": "toki Esi"
+  },
+  "textCounter.languages.zh": {
+    "other": "toki Sonko"
+  },
+  "textCounter.languages.ru": {
+    "other": "toki Losi"
+  },
+  "textCounter.languages.custom": {
+    "other": "toki ante"
+  },
+  "textCounter.languages.advanced": {
+    "other": "ante suli"
+  },
+  "textCounter.speed.label": {
+    "other": "tenpo suli"
+  },
+  "textCounter.speed.slow": {
+    "other": "tawa lili"
+  },
+  "textCounter.speed.average": {
+    "other": "tawa insa"
+  },
+  "textCounter.speed.fast": {
+    "other": "tawa mute"
+  },
+  "textCounter.speed.custom": {
+    "other": "tawa ante"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "lukin (nimi lon tenpo lili)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "toki (nimi lon tenpo lili)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "ilo ni li kepeken e nasin pi toki Inli. o ante tawa \"tawa ante\" tawa pana e nanpa sina."
+  },
+  "textCounter.advanced.title": {
+    "other": "ante suli"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "o pini e nanpa nimi"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "toki mute li jo ala e weka lon insa pi nimi tu."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "linja ali li kipisi lipu"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "linja sin li pali e kipisi lipu sin. ilo pi nanpa linja li lukin ala."
+  },
+  "textCounter.privacy.summary": {
+    "other": "sona pi awen len"
+  },
+  "textCounter.privacy.body": {
+    "other": "ilo ni li pali lon ilo lukin sina taso. sina ken weka e linja sona, ilo ni li awen pali, lipu sina li tawa ala ma ante."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "nasin lukin sona:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "sina wile sona e ni la o lukin e ilo DevTools (F12) pi ilo lukin, o tawa lipu Network, o sitelen lon lupa toki, o lukin e ni: ilo li pana ala e ijo tawa ma ante lon tenpo pini pi kama lipu."
+  },
+  "tools.title": {
+    "other": "ilo"
+  },
+  "tools.description": {
+    "other": "ilo pona tu. mi ken ala alasa e ilo pona tawa mi la mi pali e ni."
+  },
+  "tools.items.counter.title": {
+    "other": "ilo pi nanpa nimi"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "o nanpa e sitelen, e nimi, o sona e tenpo tawa lukin e lipu."
+  },
+  "slashes.title": {
+    "other": "lipu lili"
+  },
+  "slashes.description": {
+    "other": "kulupu pi lipu suli ali pi lipu ni."
   }
 }

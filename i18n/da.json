@@ -1,719 +1,1667 @@
 {
-  "404": {
-    "title": "Du er faret vild",
-    "description": "Katten kender ikke engang dette sted.",
-    "button": "Gå tilbage til hjemmet",
-    "sitemap": "Se sitemap",
-    "enjoycat": "Mens du er faret vild, nyd denne kat:"
+  "404.title": {
+    "other": "Du er faret vild"
   },
-  "2048": {
-    "description": "Saml brikkerne, nå til 2048!",
-    "score": "Score",
-    "best": "Bedste",
-    "gameOver": "Spillet er slut!",
-    "finalScore": "Endelig score",
-    "tryAgain": "Prøv igen",
-    "youWin": "Du vandt!",
-    "currentScore": "Nuværende score",
-    "keepPlaying": "Fortsæt spillet",
-    "newGame": "Nyt spil",
-    "howToPlay": "Sådan spiller du",
-    "instructions1": "Brug piletasterne eller WASD til at flytte brikkerne. Når to brikker med samme tal rører hinanden, smelter de sammen til én!",
-    "instructions2": "Efter hvert træk dukker en ny brik op (enten 2 eller 4).",
-    "instructions3": "Skab en brik med tallet 2048 for at vinde spillet!",
-    "controls": "Kontroller",
-    "moveLeft": "Flyt til venstre",
-    "moveRight": "Flyt til højre",
-    "moveUp": "Flyt op",
-    "moveDown": "Flyt ned",
-    "touchInstructions": "På mobile enheder, swipe for at flytte brikker eller brug knapperne på skærmen.",
-    "undo": "Fortryd",
-    "title": "2048",
-    "instructions4": "Når du når 2048, kan du fortsætte med at spille for at opnå endnu højere point!"
+  "404.description": {
+    "other": "Katten kender ikke engang dette sted."
   },
-  "nav": {
-    "home": "Hjem",
-    "about": "Om mig",
-    "projects": "Projekter",
-    "blog": "Blog",
-    "now": "Lige nu",
-    "uses": "Bruger",
-    "contact": "Kontakt",
-    "guestbook": "Gæstebog",
-    "colophon": "Kolofon",
-    "webring": "Webring",
-    "scrapbook": "Scrapbog",
-    "slashes": "Sideoversigt",
-    "brand": "Brand-kit",
-    "badges": "Badges",
-    "tools": "Værktøjer"
+  "404.button": {
+    "other": "Gå tilbage til hjemmet"
   },
-  "languageNotice": {
-    "message": "Oversættelser til dette sprog er stadig under opbygning. Noget indhold kan være ufuldstændigt eller manglende.",
-    "dismiss": "Afvis"
+  "404.sitemap": {
+    "other": "Se sitemap"
   },
-  "language": {
-    "main": "Hovedsprog",
-    "beta": "Sprog i beta",
-    "other": "Andre sprog",
-    "auto": "Auto (browser-sprog)",
-    "search": "Søg sprog...",
-    "en": "Engelsk",
-    "vi": "Vietnamesisk",
-    "ru": "Russisk",
-    "et": "Estisk",
-    "da": "Dansk",
-    "tr": "Tyrkisk",
-    "zh": "Kinesisk",
-    "pl": "Polsk",
-    "sv": "Svensk",
-    "fi": "Finsk",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "Mens du er faret vild, nyd denne kat:"
   },
-  "greetings": {
-    "morning": "Godmorgen, rejsende.",
-    "afternoon": "God eftermiddag, vandrer.",
-    "evening": "God aften, opdagelsesrejsende.",
-    "night": "Stadig vågen? Jeg også."
+  "2048.description": {
+    "other": "Saml brikkerne, nå til 2048!"
   },
-  "home": {
-    "buttons": {
-      "about": "Om mig",
-      "projects": "Se mine projekter"
-    },
-    "footer": "Velkommen til min digitale have. Du er velkommen til at udforske.",
-    "heading": "hej der, jeg er Jarema",
-    "subheading": "Økonomistuderende, roder lidt med kode, mest kattenes fortrolige.",
-    "contactButton": "Kontakt mig",
-    "aboutButton": "Om mig",
-    "blogButton": "Læs min blog",
-    "guestbookButton": "Skriv i min gæstebog",
-    "recentPosts": "Seneste blogindlæg",
-    "latestNow": "Hvad jeg laver lige nu",
-    "currentMood": "Nuværende humør",
-    "currentStatus": "Nuværende status",
-    "time": "Nuværende tid",
-    "yourTime": "Din tid",
-    "myTime": "Min tid",
-    "viewAllWebrings": "Se alle webringe",
-    "checkOutSites": "Tjek disse sider ud!",
-    "androidCountdown": "Android vil blive en lukket operativsystem om X dage"
+  "2048.score": {
+    "other": "Score"
   },
-  "guestbook": {
-    "title": "Gæstebog",
-    "description": "Skriv en hilsen i min gæstebog!",
-    "poweredBy": "Drevet af",
-    "atabook": "Atabook"
+  "2048.best": {
+    "other": "Bedste"
   },
-  "about": {
-    "title": "Om mig",
-    "description": "Historien om hvem jeg er, hvor jeg kommer fra, hvad min passion er, og hvad jeg arbejder hen imod.",
-    "chapters": {
-      "6": {
-        "title": "jeg er ikke færdig endnu",
-        "content1": "og her er den del, som \"folk\" ikke skulle se.",
-        "content2": "jeg er stadig vred. jeg er meget vred. jeg sørger stadig over en version af mig selv, der aldrig fik lov til at eksistere. jeg vågner stadig nogle dage og undrer mig over, hvorfor alt føles et par grader forkert. nogle gange tænker jeg på at løbe væk og forsvinde, få et nyt navn, bo i en ny by, tale et nyt sprog. eller nogle gange handler det om at give slip på alt i den modsatte betydning. og jeg var tæt på at gøre det en gang.",
-        "content3": "der er dage, hvor jeg ikke føler, at jeg er et menneske længere. nogle gange føler jeg, at jeg er et minde, der forsøger at tage form. som et ekko af noget blødt, som jeg ikke længere kan røre ved. andre dage er jeg elektrisk. jeg kan føle alle detaljer omkring mig, fra sollyset på min hud, de bløde toner fra den playliste, der spiller, de øjeblikke hvor folks øjne og ansigter ændrer sig, når de føler sig trygge nok til at være sig selv. det holder mig i live på en eller anden måde.",
-        "content4": "jeg er ikke færdig med at blive den, jeg skal være. men jeg er færdig med at lade som om, at jeg er okay og jeg er okay med at være stille mere."
-      }
-    }
+  "2048.gameOver": {
+    "other": "Spillet er slut!"
   },
-  "projects": {
-    "title": "Mine projekter",
-    "description": "En samling af personlige, akademiske og aktivistiske projekter, jeg har arbejdet på. Nogle færdige, nogle stadig under udvikling.",
-    "status": {
-      "completed": "Færdig",
-      "inProgress": "Stadig Under Udvikling",
-      "planned": "Planlagt"
-    },
-    "statusLabels": {
-      "completed": "Færdig",
-      "inProgress": "I gang",
-      "planned": "Planlagt"
-    },
-    "categories": {
-      "personal": "Personlig",
-      "academic": "Akademisk",
-      "activism": "Aktivisme"
-    },
-    "details": {
-      "what": "Hvad det er",
-      "learned": "Hvad jeg lærte",
-      "why": "Hvorfor det er vigtigt"
-    },
-    "cardActions": {
-      "clickForDetails": "Klik for detaljer",
-      "clickToClose": "Klik for at lukke"
-    },
-    "buttons": {
-      "showRandom": "Vis mere tilfældighed",
-      "hideRandom": "Skjul kaosset"
-    },
-    "filters": {
-      "all": "Alle"
-    },
-    "clickToFlip": "Klik for at vende",
-    "what": "Hvad er det?",
-    "learned": "Hvad jeg lærte",
-    "why": "Hvorfor byggede jeg det?"
+  "2048.finalScore": {
+    "other": "Endelig score"
   },
-  "blog": {
-    "title": "Blog",
-    "description": "Tanker, refleksioner og lejlighedsvise skænderier. Skrevet på forskellige tidspunkter og sindstilstande.",
-    "language": "Sprog",
-    "languageFilter": "Filtrer efter sprog",
-    "tag": "Tag",
-    "sort": "Sortér indlæg",
-    "category": "Kategori",
-    "noPosts": "Ingen opslag endnu. Kig forbi igen snart!",
-    "search": "Søg i opslag...",
-    "sortNew": "Nyeste først",
-    "sortOld": "Ældste først",
-    "sortReadTime": "Læsetid",
-    "sortABC": "Alfabetisk",
-    "filter": "Filter",
-    "filterDescription": "Filtrer blogopslag",
-    "activeFilter": "Aktive filtre:",
-    "filterNoMatch": "Ingen opslag matcher dine filtre. Prøv at justere søgekriterierne.",
-    "clearFilter": "Ryd alle filtre",
-    "mood": "Humør",
-    "cat": "Godkendt af katten selv",
-    "prev": "Forrige opslag",
-    "next": "Næste opslag",
-    "jumpToPost": "Hop til opslag",
-    "back": "Tilbage til bloglisten",
-    "showingPosts": "Viser {{current}} ud af {{total}} opslag",
-    "minRead": "minutters læsning",
-    "rss": "RSS-feed",
-    "subscribeRSS": "Abonner via RSS",
-    "allPosts": "Feed med alle indlæg",
-    "languageFeeds": "Sprogspecifikke feeds",
-    "rssDescription": "Abonner på mine RSS-feeds i din foretrukne RSS-læser for at få besked om nye indlæg.",
-    "atom": "Atom-feed",
-    "subscribeAtom": "Abonner via Atom",
-    "atomDescription": "Abonner på mine Atom-feeds i din foretrukne feedlæser for at få besked om nye indlæg.",
-    "availableIn": "Denne side er også tilgængelig på",
-    "comments": "Kommentarer",
-    "webmentions": "Webmentions",
-    "webmentionsNone": "Ingen webmentions endnu. Vær den første til at svare!",
-    "webmentionLike": "syntes godt om dette",
-    "webmentionRepost": "delte dette",
-    "webmentionReply": "svarede",
-    "webmentionMention": "nævnte dette",
-    "tagLabels": {
-      "first-post": "første indlæg",
-      "identity": "identitet",
-      "belonging": "tilhørsforhold",
-      "introspection": "selvindsigt",
-      "browsers": "browsere",
-      "chrome": "Chrome",
-      "open-web": "åbent web",
-      "app-defaults": "standardapps",
-      "software": "software",
-      "tools": "værktøjer",
-      "new-year": "nytår",
-      "reflection": "refleksion",
-      "health": "sundhed",
-      "tet": "Tet-ferie",
-      "vietnam": "Vietnam",
-      "military": "militær",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "sikkerhedshærdning",
-      "values": "værdier",
-      "personal-philosophy": "personlig filosofi"
-    },
-    "categoryLabels": {
-      "personal": "Personligt",
-      "meta": "Meta",
-      "identity": "Identitet",
-      "technical": "Teknisk",
-      "privacy": "Privatliv",
-      "opinions": "Meninger",
-      "life": "Liv",
-      "security": "Sikkerhed",
-      "guides": "Vejledninger"
-    }
+  "2048.tryAgain": {
+    "other": "Prøv igen"
   },
-  "now": {
-    "title": "Nu",
-    "description": "Hvad jeg laver, tænker på og fokuserer på lige nu.",
-    "lastUpdated": "Sidst opdateret",
-    "whatIsNow": "Hvad er en /now-side?",
-    "whatIsNowDescription": "En now-side er en side på en personlig hjemmeside, der fortæller dig, hvad en person fokuserer på i øjeblikket, på dagen eller for ganske nylig. Du kan lære mere på",
-    "categories": {
-      "reading": "Læser",
-      "coding": "Koder",
-      "drinking": "Drikker",
-      "listening": "Lytter",
-      "premid": "Discord-aktivitet",
-      "thinking": "Tænker",
-      "studying": "Studerer",
-      "planning": "Planlægger"
-    }
+  "2048.youWin": {
+    "other": "Du vandt!"
   },
-  "uses": {
-    "title": "Bruger",
-    "description": "Alle de ting, jeg bruger på daglig basis. Også tilgængelig på",
-    "websiteDescription": "et websted, hvor folk deler de ting, de bruger.",
-    "categories": {
-      "hardware": "Hardware",
-      "mobile": "Mobil",
-      "audio": "Lyd",
-      "os": "Styresystem & browsere",
-      "development": "Udvikling",
-      "email": "E-mail & produktivitet",
-      "privacy": "Privatliv & sikkerhed",
-      "mobile_tools": "Værktøjer til mobile enheder",
-      "mapping": "Kortlægning",
-      "gaming": "Gaming",
-      "multimedia": "Multimedie",
-      "design": "Design & Illustration",
-      "photo": "Fotoredigering",
-      "video": "Video & Lyd",
-      "media": "Medietjenester"
-    },
-    "subsections": {
-      "design": "Design & Illustration",
-      "photo": "Fotoredigering",
-      "video": "Video & Lyd",
-      "media": "Medietjenester"
-    },
-    "hidden": {
-      "clickToReveal": "Klik 5 gange for at afsløre",
-      "clicksLeft": "({{clicks}} klik mere for at afsløre)",
-      "platformPrefix": "Skjult platform"
-    }
+  "2048.currentScore": {
+    "other": "Nuværende score"
   },
-  "contact": {
-    "title": "Kontakt",
-    "description": "Måder at række ud og komme i kontakt med mig.",
-    "message": "vær ikke genert. sig hej. eller book en 1:1, hvis du føler dig professionel :)",
-    "disclaimer": "jeg svarer på e-mails. sandsynligvis. medmindre jeg bliver distraheret af en fugl eller noget idk",
-    "sections": {
-      "contactMe": "Kontakt mig",
-      "socialMedia": "Mig på sociale medier",
-      "otherPlatforms": "Mig på andre platforme"
-    },
-    "sectionTitles": {
-      "contactMe": "Kontakt mig",
-      "socialMedia": "Mig på sociale medier",
-      "otherPlatforms": "Mig på andre platforme",
-      "keys": "Offentlige nøgler"
-    },
-    "links": {
-      "universityEmail": "Universitets-e-mail",
-      "bookMeeting": "Book et møde med mig",
-      "messengerNote": "Jeg er meget inaktiv på Facebook og Messenger. Svar vil være efter bedste evne.",
-      "pgpKey": "PGP offentlig nøgle",
-      "sshKey": "SSH offentlig nøgle"
-    }
+  "2048.keepPlaying": {
+    "other": "Fortsæt spillet"
   },
-  "moodCat": {
-    "title": "Dagens Humørkat",
-    "hover": "dømmer dig blidt",
-    "refresh": "Ny kat, hvem er du?",
-    "seeMore": "Se flere katte"
+  "2048.newGame": {
+    "other": "Nyt spil"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "Et klassisk spil med faldende blokke og forsvindende linjer",
-    "gameInfo": "Spilinformation",
-    "score": "Score",
-    "level": "Niveau",
-    "status": "Status",
-    "next": "Næste",
-    "gameOver": "Spil slut",
-    "paused": "Pauset",
-    "playing": "Spiller",
-    "ready": "Klar",
-    "playAgain": "Spil igen",
-    "pause": "Pause",
-    "resume": "Fortsæt",
-    "start": "Start",
-    "reset": "Nulstil",
-    "controls": "Kontroller",
-    "moveLeft": "Flyt til venstre",
-    "moveRight": "Flyt til højre",
-    "moveDown": "Flyt ned",
-    "rotate": "Rotér",
-    "hardDrop": "Hård drop",
-    "pauseGame": "Pause spil",
-    "musicOn": "Musik til",
-    "musicOff": "Musik fra",
-    "nowPlaying": "Spiller nu",
-    "spacebar": "Mellemrum"
+  "2048.howToPlay": {
+    "other": "Sådan spiller du"
   },
-  "scrapbook": {
-    "title": "Devlog",
-    "description": "Nogle udviklingslogge fra da jeg byggede dette websted.",
-    "noEntries": "Ingen indlæg endnu."
+  "2048.instructions1": {
+    "other": "Brug piletasterne eller WASD til at flytte brikkerne. Når to brikker med samme tal rører hinanden, smelter de sammen til én!"
   },
-  "settings": {
-    "title": "Indstillinger",
-    "theme": "Tema",
-    "themeAuto": "Auto",
-    "themeLight": "Lyst tema",
-    "themeDark": "Mørkt tema",
-    "stars": "Blinkende stjerner",
-    "reduceMotion": "Reducer bevægelse",
-    "highContrast": "Høj kontrast",
-    "dyslexiaFont": "Ordblindeskrift",
-    "timezone": "Tidszone",
-    "tzYours": "Din",
-    "tzAuthor": "Jaremas",
-    "music": "Musik",
-    "musicUnavailable": "Ikke tilgængelig i øjeblikket"
+  "2048.instructions2": {
+    "other": "Efter hvert træk dukker en ny brik op (enten 2 eller 4)."
   },
-  "webrings": {
-    "title": "Webringe",
-    "description": "Webringe jeg er med i. Opdag flere uafhængige websider og personlige blogs.",
-    "intro1": "En webring er en samling af websider lavet af ligesindede, typisk centreret omkring et emne, en æstetik eller en fælles interesse. (fra safonts webring)",
-    "intro2": "Denne side er en del af disse webringe. Klik på linkene for at besøge mine naboers sider, og andre medlemmers, hvis den webring har en tilfældig-funktion. Vælg hvilken som helst ring du har lyst til!",
-    "previous": "Forrige",
-    "random": "Tilfældig",
-    "next": "Næste",
-    "previousAria": "Forrige side i {{name}}",
-    "randomAria": "Tilfældig side i {{name}}",
-    "nextAria": "Næste side i {{name}}",
-    "pending": {
-      "title": "Afventer godkendelse",
-      "description": "Dette er webringe jeg har ansøgt om at blive medlem af og afventer godkendelse.",
-      "badge": "Afventer"
-    }
+  "2048.instructions3": {
+    "other": "Skab en brik med tallet 2048 for at vinde spillet!"
   },
-  "badges": {
-    "title": "Samling af web-badges",
-    "description": "En samling af klassiske web-badges og knapper på min hjemmeside.",
-    "pageTitle": "Klassisk web-badge samling",
-    "pageDescription": "Jeg har samlet disse 88x31 badges for at vise, hvad jeg og denne side faktisk går op i. De er et tilbageblik til Geocities-æraen, før internettet blev fyldt med virksomheds- og AI-skrammel. Hvis du har et badge, du synes jeg skal tilføje, så bare spørg.",
-    "myBadgeTitle": "Mit badge (klik for at udvide)",
-    "myBadgeIntro": "Brug dette badge til at linke til min hjemmeside:",
-    "hotlinkUrl": "Hotlink URL:",
-    "htmlCodeTitle": "HTML-kode",
-    "embeddingSuggestionsTitle": "Forslag til indlejring",
-    "suggestion1": "Brug",
-    "suggestion1b": "i din CSS for at bevare pixel art-stilen.",
-    "suggestion2": "Link direkte til min forside på",
-    "suggestion3": "Badget er 88x31 pixels, fordobl bredden og højden i din HTML til",
-    "suggestion3b": "for at gøre dem lettere at læse på skærme med høj opløsning.",
-    "collectionHeading": "Badge-samling",
-    "search": "Søg i badges...",
-    "filterByCategory": "Filtrer efter kategori",
-    "verboseView": "Detaljeret",
-    "badgeOnlyView": "Kun badge",
-    "showingCount": "Viser {{count}} badges",
-    "showingFiltered": "Viser {{filtered}} af {{total}} badges",
-    "noResults": "Ingen badges matcher din søgning",
-    "categories": {
-      "all": "Alle",
-      "personal": "Personligt",
-      "friends": "Venner",
-      "other-sites": "Andre sider",
-      "software": "Software",
-      "web": "Web",
-      "fun": "Sjov"
-    }
+  "2048.controls": {
+    "other": "Kontroller"
   },
-  "brand": {
-    "pageTitle": "Brand",
-    "pageDescription": "Visuel identitet og brandelementer. Brug disse, hvis du vil henvise eller linke til dette site.",
-    "name": {
-      "title": "Navn",
-      "nameLabel": "Navn",
-      "displayNameLabel": "Visningsnavn",
-      "symbolNote": "Symbolet for 'derfor' (∴) er altid en del af mit visningsnavn. Det repræsenterer resultater, logiske konklusioner, forbindelser, slutningen på en tankeproces; det er direkte og en stabil form."
-    },
-    "logo": {
-      "title": "Logo",
-      "faceOnly": "Kun ansigt",
-      "faceAndBody": "Ansigt og krop",
-      "dimensions1": "384×384px (eller multipla heraf)",
-      "dimensions2": "512×512px (eller multipla heraf)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "Badge",
-      "urlLabel": "Direkte URL",
-      "htmlLabel": "HTML-kode"
-    },
-    "colors": {
-      "title": "Farver",
-      "names": {
-        "primary": "Primær",
-        "background": "Baggrund",
-        "card": "Kort",
-        "foreground": "Forgrund",
-        "muted": "Dæmpet",
-        "border": "Kant"
-      },
-      "descriptions": {
-        "primary": "Hoved-accentfarve",
-        "background": "Sidebaggrund",
-        "card": "Kortbaggrund",
-        "foreground": "Hovedtekstfarve",
-        "muted": "Dæmpede elementer",
-        "border": "Kanter og opdelere"
-      },
-      "darkMode": "Mørk tilstand",
-      "lightMode": "Lys tilstand"
-    },
-    "fonts": {
-      "title": "Skrifttyper",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "Overskrifter og titler",
-        "body": "Brødtekst og UI-elementer",
-        "notoSansSC": "Kinesisk tekst",
-        "monaspice": "Kode og monospace-tekst",
-        "hanNomGothic": "Vietnamesisk Chữ Nôm"
-      },
-      "weight": "Vægt:",
-      "viewOnGoogleFonts": "Se i font-repository",
-      "languages": {
-        "english": "Engelsk",
-        "vietnamese": "Vietnamesisk",
-        "polish": "Polsk",
-        "russian": "Russisk",
-        "japanese": "Japansk",
-        "hebrew": "Hebraisk",
-        "thai": "Thailandsk",
-        "symbols": "Symboler",
-        "chineseSimplified": "Kinesisk (Forenklet)",
-        "chineseTraditional": "Kinesisk (Traditionelt)",
-        "vietnameseHanNom": "Vietnamesisk (Chữ Nôm)"
-      }
-    },
-    "usage": {
-      "title": "Et par noter",
-      "point1Title": "Brug dem bare",
-      "point1Text": "Du behøver ikke spørge om lov til at bruge badget, logoet eller linke til dette site. Bare tag dem, hotlink dem, smid dem på din hjemmeside. Jeg er ligeglad. Faktisk ville jeg blive glad.",
-      "point2Title": "Behold badgets pixelerede stil",
-      "point2Text": "Hvis du bruger badget, så brug venligst 'image-rendering: pixelated' (eller 'crisp-edges' til Firefox) i din CSS. Uden det vil browsere sløre pixlerne, og det vil ligne lort. Det er pixelkunst, behandl det venligst som pixelkunst.",
-      "point3Title": "Kreditering er rart, men valgfrit",
-      "point3Text": "Hvis du skriver om sitet eller bruger disse i et blogindlæg eller en artikel, ville et link tilbage være værdsat. Men hvis du bare tilføjer mit badge til din linkside, behøver du ikke gøre noget ekstra. Min HTML-snippet til badget linker allerede hertil.",
-      "point4Title": "Lad være med at være mærkelig",
-      "point4Text": "Brug ikke disse til at udgive dig for at være mig, påstå at jeg støtter noget jeg ikke gør, eller få det til at se ud som om jeg er associeret med noget skummelt. Jeg stoler på, at du kender forskellen på at linke til et site du kan lide, og at lade som om du er en anden. Hvis du er i tvivl om, hvorvidt det du gør er mærkeligt, så er det det sandsynligvis.",
-      "footer": "Det var det hele, bare brug dem med respekt, så er vi gode."
-    }
+  "2048.moveLeft": {
+    "other": "Flyt til venstre"
   },
-  "colophon": {
-    "title": "Kolofon",
-    "description": "Historien bag dette websted, og hvordan det blev bygget",
-    "siteHistory": {
-      "title": "Webstedets Historie",
-      "content1": "Dette websted blev først registreret i slutningen af 2023, men designet har ændret sig meget i løbet af dets levetid. Den første version var bare et grundlæggende WordPress-websted hostet på en skizzy gratis hostingudbyder, den anden var Carrd-baseret, og den tredje var bygget med Astro.",
-      "content2": "Denne nuværende iteration (den fjerde version) er et komplet redesign bygget fra bunden med moderne webteknologier. Hver version har været en udvikling, hvor denne seneste fokuserer på ydeevne, tilgængelighed og et mere personligt præg, der bedre repræsenterer, hvem jeg er, og hvad jeg holder af."
-    },
-    "technologyStack": {
-      "title": "Teknologistak",
-      "nextjs": "React-framework, der muliggør serverside-rendering og statisk webstedsgenerering",
-      "react": "JavaScript-bibliotek til opbygning af brugergrænseflader",
-      "tailwind": "Utility-first CSS-framework",
-      "shadcn": "Genanvendeligt komponentbibliotek bygget med Radix UI og Tailwind",
-      "framer": "Animationsbibliotek til React",
-      "i18next": "Internationaliseringsframework",
-      "typescript": "Stærkt typet programmeringssprog, der bygger på JavaScript"
-    },
-    "hosting": {
-      "title": "Hosting & Implementering",
-      "content1": "Webstedet er hostet på",
-      "content2": "som giver problemfri implementering fra GitHub, automatisk HTTPS og global CDN-distribution.",
-      "content3": "Domænet administreres via",
-      "content4": "som giver yderligere sikkerheds- og ydelsesfordele."
-    },
-    "design": {
-      "title": "Designfilosofi",
-      "p1": "Denne hjemmeside er designet med tilgængelighed og ydeevne for øje. Den fungerer uden JavaScript aktiveret, bruger semantisk HTML og respekterer dit privatliv ved ikke at bruge tracking cookies.",
-      "p2": "Designet sigter mod en balance mellem moderne æstetik og klassisk web-enkelhed. Mørk tilstand er standard, fordi jeg holder af mine nethinder."
-    },
-    "webStandards": {
-      "title": "Webstandarder",
-      "intro": "Denne side implementerer:",
-      "microformats": "mikroformater",
-      "feeds": "RSS, Atom og JSON feeds",
-      "robots": "robots.txt og sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "Tilgængelighed",
-      "intro": "Jeg bestræber mig på at gøre denne side tilgængelig for alle. Funktioner inkluderer:",
-      "item1": "Semantisk HTML-struktur",
-      "item2": "Spring til indhold links",
-      "item3": "Korrekt overskriftshierarki",
-      "item4": "WCAG 2.1 AA farvekontrast",
-      "item5": "Tastaturnavigation",
-      "item6": "Respekterer præferencer for reduceret bevægelse",
-      "reportText": "Hvis du støder på tilgængelighedsproblemer, så",
-      "contactLink": "giv mig besked"
-    },
-    "inspiration": {
-      "title": "Inspiration",
-      "content1": "Denne side henter inspiration fra",
-      "content2": "som igen henter inspiration fra",
-      "content3": "Original idé på",
-      "maggie": "Maggie Appletons kolofon",
-      "gwern": "Gwern Branwens kolofon"
-    }
+  "2048.moveRight": {
+    "other": "Flyt til højre"
   },
-  "footer": {
-    "copyright": "2026, ∴ Jarema, CC BY 4.0",
-    "madeWith": "lavet med kærlighed",
-    "andChaos": "og et par dages kodning",
-    "uptime": "Drift",
-    "siteStatus": "Side status"
+  "2048.moveUp": {
+    "other": "Flyt op"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Tastaturgenveje",
-    "navigation": "Navigation",
-    "actions": "Handlinger",
-    "close": "Luk",
-    "home": "Forside",
-    "about": "Om mig",
-    "blog": "Blog",
-    "projects": "Projekter",
-    "now": "Nu",
-    "uses": "Værktøjer",
-    "contact": "Kontakt",
-    "colophon": "Kolofon",
-    "slashes": "Sideoversigt",
-    "scrapbook": "Devlog",
-    "tetris": "Tetris",
-    "cycleLanguage": "Skift sprog",
-    "cycleTheme": "Skift tema",
-    "refreshCat": "Opdatér humørkatten",
-    "openShortcuts": "Åbn tastaturgenveje",
-    "actionSearch": "Åbn Handlingssøgning",
-    "webring": "Webringe"
+  "2048.moveDown": {
+    "other": "Flyt ned"
   },
-  "actionSearch": {
-    "2048": "Spil 2048",
-    "title": "Søg handlinger",
-    "placeholder": "Søg handlinger...",
-    "noResults": "Ingen handlinger fundet",
-    "goTo": "Gå til side",
-    "toggleTheme": "Skift tema",
-    "switchDarkMode": "Skift til mørk tilstand",
-    "switchLightMode": "Skift til lys tilstand",
-    "appearance": "Udseende",
-    "cycleLanguage": "Skift sprog",
-    "refreshCat": "Hent en ny humørkat",
-    "playGame": "Spil et spil",
-    "viewShortcuts": "Se alle genveje",
-    "pressToOpen": "Tryk på . for at åbne kommandopaletten",
-    "escToClose": "ESC for at lukke",
-    "fun": "Sjov",
-    "games": "Spil",
-    "tetris": "Spil Tetris",
-    "help": "Hjælp",
-    "projects": {
-      "category": "Navigér mellem projekter",
-      "closeCard": "Luk vendt kort",
-      "left": "Navigér til venstre",
-      "right": "Navigér til højre",
-      "up": "Navigér op",
-      "down": "Navigér ned",
-      "flipCard": "Vend projektkort: {{title}}"
-    },
-    "blog": {
-      "category": "Navigér mellem blogindlæg",
-      "next": "Til næste indlæg",
-      "prev": "Til forrige indlæg",
-      "search": "Søg i blogindlæg",
-      "filterTag": "Filtrér blogindlæg",
-      "jumpToPost": "Hop til indlæg {{i}}",
-      "back": "Tilbage til bloglisten"
-    },
-    "about": {
-      "category": "Navigér i 'Om mig'-sektionerne",
-      "jumpToChapter": "Hop til kapitel {{i}}"
-    },
-    "uses": {
-      "category": "Navigér i 'Jeg bruger'-sektionerne",
-      "jumpToCategory": "Hop til {{category}}"
-    },
-    "now": {
-      "category": "Navigér i 'Nu'-sektionerne",
-      "jumpToCategory": "Hop til {{category}}"
-    },
-    "colophon": {
-      "category": "Navigér i kolofonsektionerne",
-      "jumpToSection": "Hop til {{section}}"
-    },
-    "tools": "Værktøjer"
+  "2048.touchInstructions": {
+    "other": "På mobile enheder, swipe for at flytte brikker eller brug knapperne på skærmen."
   },
-  "textCounter": {
-    "title": "Teksttæller",
-    "description": "Tæl tegn, ord, sætninger, afsnit og beregn tale-/læsetid.",
-    "placeholder": "Begynd at skrive eller indsæt din tekst her...",
-    "clear": "Ryd",
-    "stats": {
-      "characters": "Tegn",
-      "charactersNoSpaces": "Tegn (uden mellemrum)",
-      "words": "Ord",
-      "sentences": "Sætninger",
-      "paragraphs": "Afsnit",
-      "lines": "Linjer",
-      "readingTime": "Læsetid",
-      "speakingTime": "Taletid"
-    },
-    "textLanguage": "Tekstsprog",
-    "languages": {
-      "en": "Engelsk",
-      "vi": "Vietnamesisk",
-      "et": "Estisk",
-      "zh": "Kinesisk",
-      "ru": "Russisk",
-      "custom": "Andet / tilpasset",
-      "advanced": "Avancerede indstillinger"
-    },
-    "speed": {
-      "label": "Hastighed",
-      "slow": "Langsom",
-      "average": "Gennemsnit",
-      "fast": "Hurtig",
-      "custom": "Tilpasset",
-      "readingWpm": "Læsning (ord pr. minut)",
-      "speakingWpm": "Tale (ord pr. minut)",
-      "englishDefaultsWarning": "Tidsberegnerne bruger i øjeblikket engelske standardhastigheder. Skift til \"Tilpasset\" for at indtaste nøjagtige værdier."
-    },
-    "advanced": {
-      "title": "Avancerede indstillinger",
-      "disableWords": "Deaktiver ordtælling",
-      "disableWordsDesc": "For logografiske og brahmiske sprog adskiller mellemrum ikke ord.",
-      "newlineAsParagraph": "Behandl hver linje som et afsnit",
-      "newlineAsParagraphDesc": "Tæl enkelte linjeskift som afsnitsskift i stedet for at kræve blanke linjer. Linjetælleren skjules."
-    },
-    "privacy": {
-      "summary": "Information om privatliv",
-      "body": "Dette værktøj kører udelukkende i din browser. Du kan afbryde forbindelsen til internettet, og det vil stadig virke, din tekst bliver aldrig sendt nogen steder hen.",
-      "technicalLabel": "Sådan bekræfter du teknisk:",
-      "technical": "For at bekræfte kan du åbne browserens DevTools (F12) → fanen Netværk, derefter skrive i tekstfeltet og bekræfte, at der ikke foretages nogen anmodninger, efter at siden er færdig med at indlæse."
-    }
+  "2048.undo": {
+    "other": "Fortryd"
   },
-  "tools": {
-    "title": "Værktøjer",
-    "description": "Nogle praktiske værktøjer. Jeg kunne ikke finde nogen der virkelig passede til mine behov.",
-    "items": {
-      "counter": {
-        "title": "Teksttæller",
-        "icon": "🔤",
-        "description": "Tæl tegn, ord, sætninger, afsnit og anslå læse-/taletid."
-      }
-    }
+  "2048.title": {
+    "other": "2048"
   },
-  "slashes": {
-    "title": "Slashes",
-    "description": "En liste over alle hovedsider på dette websted."
+  "2048.instructions4": {
+    "other": "Når du når 2048, kan du fortsætte med at spille for at opnå endnu højere point!"
+  },
+  "nav.home": {
+    "other": "Hjem"
+  },
+  "nav.about": {
+    "other": "Om mig"
+  },
+  "nav.projects": {
+    "other": "Projekter"
+  },
+  "nav.blog": {
+    "other": "Blog"
+  },
+  "nav.now": {
+    "other": "Lige nu"
+  },
+  "nav.uses": {
+    "other": "Bruger"
+  },
+  "nav.contact": {
+    "other": "Kontakt"
+  },
+  "nav.guestbook": {
+    "other": "Gæstebog"
+  },
+  "nav.colophon": {
+    "other": "Kolofon"
+  },
+  "nav.webring": {
+    "other": "Webring"
+  },
+  "nav.scrapbook": {
+    "other": "Scrapbog"
+  },
+  "nav.slashes": {
+    "other": "Sideoversigt"
+  },
+  "nav.brand": {
+    "other": "Brand-kit"
+  },
+  "nav.badges": {
+    "other": "Badges"
+  },
+  "nav.tools": {
+    "other": "Værktøjer"
+  },
+  "languageNotice.message": {
+    "other": "Oversættelser til dette sprog er stadig under opbygning. Noget indhold kan være ufuldstændigt eller manglende."
+  },
+  "languageNotice.dismiss": {
+    "other": "Afvis"
+  },
+  "language.main": {
+    "other": "Hovedsprog"
+  },
+  "language.beta": {
+    "other": "Sprog i beta"
+  },
+  "language.other": {
+    "other": "Andre sprog"
+  },
+  "language.auto": {
+    "other": "Auto (browser-sprog)"
+  },
+  "language.search": {
+    "other": "Søg sprog..."
+  },
+  "language.en": {
+    "other": "Engelsk"
+  },
+  "language.vi": {
+    "other": "Vietnamesisk"
+  },
+  "language.ru": {
+    "other": "Russisk"
+  },
+  "language.et": {
+    "other": "Estisk"
+  },
+  "language.da": {
+    "other": "Dansk"
+  },
+  "language.tr": {
+    "other": "Tyrkisk"
+  },
+  "language.zh": {
+    "other": "Kinesisk"
+  },
+  "language.pl": {
+    "other": "Polsk"
+  },
+  "language.sv": {
+    "other": "Svensk"
+  },
+  "language.fi": {
+    "other": "Finsk"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "Godmorgen, rejsende."
+  },
+  "greetings.afternoon": {
+    "other": "God eftermiddag, vandrer."
+  },
+  "greetings.evening": {
+    "other": "God aften, opdagelsesrejsende."
+  },
+  "greetings.night": {
+    "other": "Stadig vågen? Jeg også."
+  },
+  "home.buttons.about": {
+    "other": "Om mig"
+  },
+  "home.buttons.projects": {
+    "other": "Se mine projekter"
+  },
+  "home.footer": {
+    "other": "Velkommen til min digitale have. Du er velkommen til at udforske."
+  },
+  "home.heading": {
+    "other": "hej der, jeg er Jarema"
+  },
+  "home.subheading": {
+    "other": "Økonomistuderende, roder lidt med kode, mest kattenes fortrolige."
+  },
+  "home.contactButton": {
+    "other": "Kontakt mig"
+  },
+  "home.aboutButton": {
+    "other": "Om mig"
+  },
+  "home.blogButton": {
+    "other": "Læs min blog"
+  },
+  "home.guestbookButton": {
+    "other": "Skriv i min gæstebog"
+  },
+  "home.recentPosts": {
+    "other": "Seneste blogindlæg"
+  },
+  "home.latestNow": {
+    "other": "Hvad jeg laver lige nu"
+  },
+  "home.currentMood": {
+    "other": "Nuværende humør"
+  },
+  "home.currentStatus": {
+    "other": "Nuværende status"
+  },
+  "home.time": {
+    "other": "Nuværende tid"
+  },
+  "home.yourTime": {
+    "other": "Din tid"
+  },
+  "home.myTime": {
+    "other": "Min tid"
+  },
+  "home.viewAllWebrings": {
+    "other": "Se alle webringe"
+  },
+  "home.checkOutSites": {
+    "other": "Tjek disse sider ud!"
+  },
+  "home.androidCountdown": {
+    "other": "Android vil blive en lukket operativsystem om X dage"
+  },
+  "guestbook.title": {
+    "other": "Gæstebog"
+  },
+  "guestbook.description": {
+    "other": "Skriv en hilsen i min gæstebog!"
+  },
+  "guestbook.poweredBy": {
+    "other": "Drevet af"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "Om mig"
+  },
+  "about.description": {
+    "other": "Historien om hvem jeg er, hvor jeg kommer fra, hvad min passion er, og hvad jeg arbejder hen imod."
+  },
+  "about.chapters.6.title": {
+    "other": "jeg er ikke færdig endnu"
+  },
+  "about.chapters.6.content1": {
+    "other": "og her er den del, som \"folk\" ikke skulle se."
+  },
+  "about.chapters.6.content2": {
+    "other": "jeg er stadig vred. jeg er meget vred. jeg sørger stadig over en version af mig selv, der aldrig fik lov til at eksistere. jeg vågner stadig nogle dage og undrer mig over, hvorfor alt føles et par grader forkert. nogle gange tænker jeg på at løbe væk og forsvinde, få et nyt navn, bo i en ny by, tale et nyt sprog. eller nogle gange handler det om at give slip på alt i den modsatte betydning. og jeg var tæt på at gøre det en gang."
+  },
+  "about.chapters.6.content3": {
+    "other": "der er dage, hvor jeg ikke føler, at jeg er et menneske længere. nogle gange føler jeg, at jeg er et minde, der forsøger at tage form. som et ekko af noget blødt, som jeg ikke længere kan røre ved. andre dage er jeg elektrisk. jeg kan føle alle detaljer omkring mig, fra sollyset på min hud, de bløde toner fra den playliste, der spiller, de øjeblikke hvor folks øjne og ansigter ændrer sig, når de føler sig trygge nok til at være sig selv. det holder mig i live på en eller anden måde."
+  },
+  "about.chapters.6.content4": {
+    "other": "jeg er ikke færdig med at blive den, jeg skal være. men jeg er færdig med at lade som om, at jeg er okay og jeg er okay med at være stille mere."
+  },
+  "projects.title": {
+    "other": "Mine projekter"
+  },
+  "projects.description": {
+    "other": "En samling af personlige, akademiske og aktivistiske projekter, jeg har arbejdet på. Nogle færdige, nogle stadig under udvikling."
+  },
+  "projects.status.completed": {
+    "other": "Færdig"
+  },
+  "projects.status.inProgress": {
+    "other": "Stadig Under Udvikling"
+  },
+  "projects.status.planned": {
+    "other": "Planlagt"
+  },
+  "projects.statusLabels.completed": {
+    "other": "Færdig"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "I gang"
+  },
+  "projects.statusLabels.planned": {
+    "other": "Planlagt"
+  },
+  "projects.categories.personal": {
+    "other": "Personlig"
+  },
+  "projects.categories.academic": {
+    "other": "Akademisk"
+  },
+  "projects.categories.activism": {
+    "other": "Aktivisme"
+  },
+  "projects.details.what": {
+    "other": "Hvad det er"
+  },
+  "projects.details.learned": {
+    "other": "Hvad jeg lærte"
+  },
+  "projects.details.why": {
+    "other": "Hvorfor det er vigtigt"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "Klik for detaljer"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "Klik for at lukke"
+  },
+  "projects.buttons.showRandom": {
+    "other": "Vis mere tilfældighed"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "Skjul kaosset"
+  },
+  "projects.filters.all": {
+    "other": "Alle"
+  },
+  "projects.clickToFlip": {
+    "other": "Klik for at vende"
+  },
+  "projects.what": {
+    "other": "Hvad er det?"
+  },
+  "projects.learned": {
+    "other": "Hvad jeg lærte"
+  },
+  "projects.why": {
+    "other": "Hvorfor byggede jeg det?"
+  },
+  "blog.title": {
+    "other": "Blog"
+  },
+  "blog.description": {
+    "other": "Tanker, refleksioner og lejlighedsvise skænderier. Skrevet på forskellige tidspunkter og sindstilstande."
+  },
+  "blog.language": {
+    "other": "Sprog"
+  },
+  "blog.languageFilter": {
+    "other": "Filtrer efter sprog"
+  },
+  "blog.tag": {
+    "other": "Tag"
+  },
+  "blog.sort": {
+    "other": "Sortér indlæg"
+  },
+  "blog.category": {
+    "other": "Kategori"
+  },
+  "blog.noPosts": {
+    "other": "Ingen opslag endnu. Kig forbi igen snart!"
+  },
+  "blog.search": {
+    "other": "Søg i opslag..."
+  },
+  "blog.sortNew": {
+    "other": "Nyeste først"
+  },
+  "blog.sortOld": {
+    "other": "Ældste først"
+  },
+  "blog.sortReadTime": {
+    "other": "Læsetid"
+  },
+  "blog.sortABC": {
+    "other": "Alfabetisk"
+  },
+  "blog.filter": {
+    "other": "Filter"
+  },
+  "blog.filterDescription": {
+    "other": "Filtrer blogopslag"
+  },
+  "blog.activeFilter": {
+    "other": "Aktive filtre:"
+  },
+  "blog.filterNoMatch": {
+    "other": "Ingen opslag matcher dine filtre. Prøv at justere søgekriterierne."
+  },
+  "blog.clearFilter": {
+    "other": "Ryd alle filtre"
+  },
+  "blog.mood": {
+    "other": "Humør"
+  },
+  "blog.cat": {
+    "other": "Godkendt af katten selv"
+  },
+  "blog.prev": {
+    "other": "Forrige opslag"
+  },
+  "blog.next": {
+    "other": "Næste opslag"
+  },
+  "blog.jumpToPost": {
+    "other": "Hop til opslag"
+  },
+  "blog.back": {
+    "other": "Tilbage til bloglisten"
+  },
+  "blog.showingPosts": {
+    "other": "Viser {{current}} ud af {{total}} opslag"
+  },
+  "blog.minRead": {
+    "other": "minutters læsning"
+  },
+  "blog.rss": {
+    "other": "RSS-feed"
+  },
+  "blog.subscribeRSS": {
+    "other": "Abonner via RSS"
+  },
+  "blog.allPosts": {
+    "other": "Feed med alle indlæg"
+  },
+  "blog.languageFeeds": {
+    "other": "Sprogspecifikke feeds"
+  },
+  "blog.rssDescription": {
+    "other": "Abonner på mine RSS-feeds i din foretrukne RSS-læser for at få besked om nye indlæg."
+  },
+  "blog.atom": {
+    "other": "Atom-feed"
+  },
+  "blog.subscribeAtom": {
+    "other": "Abonner via Atom"
+  },
+  "blog.atomDescription": {
+    "other": "Abonner på mine Atom-feeds i din foretrukne feedlæser for at få besked om nye indlæg."
+  },
+  "blog.availableIn": {
+    "other": "Denne side er også tilgængelig på"
+  },
+  "blog.comments": {
+    "other": "Kommentarer"
+  },
+  "blog.webmentions": {
+    "other": "Webmentions"
+  },
+  "blog.webmentionsNone": {
+    "other": "Ingen webmentions endnu. Vær den første til at svare!"
+  },
+  "blog.webmentionLike": {
+    "other": "syntes godt om dette"
+  },
+  "blog.webmentionRepost": {
+    "other": "delte dette"
+  },
+  "blog.webmentionReply": {
+    "other": "svarede"
+  },
+  "blog.webmentionMention": {
+    "other": "nævnte dette"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "første indlæg"
+  },
+  "blog.tagLabels.identity": {
+    "other": "identitet"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "tilhørsforhold"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "selvindsigt"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "browsere"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "åbent web"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "standardapps"
+  },
+  "blog.tagLabels.software": {
+    "other": "software"
+  },
+  "blog.tagLabels.tools": {
+    "other": "værktøjer"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "nytår"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "refleksion"
+  },
+  "blog.tagLabels.health": {
+    "other": "sundhed"
+  },
+  "blog.tagLabels.tet": {
+    "other": "Tet-ferie"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "Vietnam"
+  },
+  "blog.tagLabels.military": {
+    "other": "militær"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "sikkerhedshærdning"
+  },
+  "blog.tagLabels.values": {
+    "other": "værdier"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "personlig filosofi"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "Personligt"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "Meta"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "Identitet"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "Teknisk"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "Privatliv"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "Meninger"
+  },
+  "blog.categoryLabels.life": {
+    "other": "Liv"
+  },
+  "blog.categoryLabels.security": {
+    "other": "Sikkerhed"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "Vejledninger"
+  },
+  "now.title": {
+    "other": "Nu"
+  },
+  "now.description": {
+    "other": "Hvad jeg laver, tænker på og fokuserer på lige nu."
+  },
+  "now.lastUpdated": {
+    "other": "Sidst opdateret"
+  },
+  "now.whatIsNow": {
+    "other": "Hvad er en /now-side?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "En now-side er en side på en personlig hjemmeside, der fortæller dig, hvad en person fokuserer på i øjeblikket, på dagen eller for ganske nylig. Du kan lære mere på"
+  },
+  "now.categories.reading": {
+    "other": "Læser"
+  },
+  "now.categories.coding": {
+    "other": "Koder"
+  },
+  "now.categories.drinking": {
+    "other": "Drikker"
+  },
+  "now.categories.listening": {
+    "other": "Lytter"
+  },
+  "now.categories.premid": {
+    "other": "Discord-aktivitet"
+  },
+  "now.categories.thinking": {
+    "other": "Tænker"
+  },
+  "now.categories.studying": {
+    "other": "Studerer"
+  },
+  "now.categories.planning": {
+    "other": "Planlægger"
+  },
+  "uses.title": {
+    "other": "Bruger"
+  },
+  "uses.description": {
+    "other": "Alle de ting, jeg bruger på daglig basis. Også tilgængelig på"
+  },
+  "uses.websiteDescription": {
+    "other": "et websted, hvor folk deler de ting, de bruger."
+  },
+  "uses.categories.hardware": {
+    "other": "Hardware"
+  },
+  "uses.categories.mobile": {
+    "other": "Mobil"
+  },
+  "uses.categories.audio": {
+    "other": "Lyd"
+  },
+  "uses.categories.os": {
+    "other": "Styresystem & browsere"
+  },
+  "uses.categories.development": {
+    "other": "Udvikling"
+  },
+  "uses.categories.email": {
+    "other": "E-mail & produktivitet"
+  },
+  "uses.categories.privacy": {
+    "other": "Privatliv & sikkerhed"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Værktøjer til mobile enheder"
+  },
+  "uses.categories.mapping": {
+    "other": "Kortlægning"
+  },
+  "uses.categories.gaming": {
+    "other": "Gaming"
+  },
+  "uses.categories.multimedia": {
+    "other": "Multimedie"
+  },
+  "uses.categories.design": {
+    "other": "Design & Illustration"
+  },
+  "uses.categories.photo": {
+    "other": "Fotoredigering"
+  },
+  "uses.categories.video": {
+    "other": "Video & Lyd"
+  },
+  "uses.categories.media": {
+    "other": "Medietjenester"
+  },
+  "uses.subsections.design": {
+    "other": "Design & Illustration"
+  },
+  "uses.subsections.photo": {
+    "other": "Fotoredigering"
+  },
+  "uses.subsections.video": {
+    "other": "Video & Lyd"
+  },
+  "uses.subsections.media": {
+    "other": "Medietjenester"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "Klik 5 gange for at afsløre"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "({{clicks}} klik mere for at afsløre)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "Skjult platform"
+  },
+  "contact.title": {
+    "other": "Kontakt"
+  },
+  "contact.description": {
+    "other": "Måder at række ud og komme i kontakt med mig."
+  },
+  "contact.message": {
+    "other": "vær ikke genert. sig hej. eller book en 1:1, hvis du føler dig professionel :)"
+  },
+  "contact.disclaimer": {
+    "other": "jeg svarer på e-mails. sandsynligvis. medmindre jeg bliver distraheret af en fugl eller noget idk"
+  },
+  "contact.sections.contactMe": {
+    "other": "Kontakt mig"
+  },
+  "contact.sections.socialMedia": {
+    "other": "Mig på sociale medier"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "Mig på andre platforme"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "Kontakt mig"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "Mig på sociale medier"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "Mig på andre platforme"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "Offentlige nøgler"
+  },
+  "contact.links.universityEmail": {
+    "other": "Universitets-e-mail"
+  },
+  "contact.links.bookMeeting": {
+    "other": "Book et møde med mig"
+  },
+  "contact.links.messengerNote": {
+    "other": "Jeg er meget inaktiv på Facebook og Messenger. Svar vil være efter bedste evne."
+  },
+  "contact.links.pgpKey": {
+    "other": "PGP offentlig nøgle"
+  },
+  "contact.links.sshKey": {
+    "other": "SSH offentlig nøgle"
+  },
+  "moodCat.title": {
+    "other": "Dagens Humørkat"
+  },
+  "moodCat.hover": {
+    "other": "dømmer dig blidt"
+  },
+  "moodCat.refresh": {
+    "other": "Ny kat, hvem er du?"
+  },
+  "moodCat.seeMore": {
+    "other": "Se flere katte"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "Et klassisk spil med faldende blokke og forsvindende linjer"
+  },
+  "tetris.gameInfo": {
+    "other": "Spilinformation"
+  },
+  "tetris.score": {
+    "other": "Score"
+  },
+  "tetris.level": {
+    "other": "Niveau"
+  },
+  "tetris.status": {
+    "other": "Status"
+  },
+  "tetris.next": {
+    "other": "Næste"
+  },
+  "tetris.gameOver": {
+    "other": "Spil slut"
+  },
+  "tetris.paused": {
+    "other": "Pauset"
+  },
+  "tetris.playing": {
+    "other": "Spiller"
+  },
+  "tetris.ready": {
+    "other": "Klar"
+  },
+  "tetris.playAgain": {
+    "other": "Spil igen"
+  },
+  "tetris.pause": {
+    "other": "Pause"
+  },
+  "tetris.resume": {
+    "other": "Fortsæt"
+  },
+  "tetris.start": {
+    "other": "Start"
+  },
+  "tetris.reset": {
+    "other": "Nulstil"
+  },
+  "tetris.controls": {
+    "other": "Kontroller"
+  },
+  "tetris.moveLeft": {
+    "other": "Flyt til venstre"
+  },
+  "tetris.moveRight": {
+    "other": "Flyt til højre"
+  },
+  "tetris.moveDown": {
+    "other": "Flyt ned"
+  },
+  "tetris.rotate": {
+    "other": "Rotér"
+  },
+  "tetris.hardDrop": {
+    "other": "Hård drop"
+  },
+  "tetris.pauseGame": {
+    "other": "Pause spil"
+  },
+  "tetris.musicOn": {
+    "other": "Musik til"
+  },
+  "tetris.musicOff": {
+    "other": "Musik fra"
+  },
+  "tetris.nowPlaying": {
+    "other": "Spiller nu"
+  },
+  "tetris.spacebar": {
+    "other": "Mellemrum"
+  },
+  "scrapbook.title": {
+    "other": "Devlog"
+  },
+  "scrapbook.description": {
+    "other": "Nogle udviklingslogge fra da jeg byggede dette websted."
+  },
+  "scrapbook.noEntries": {
+    "other": "Ingen indlæg endnu."
+  },
+  "settings.title": {
+    "other": "Indstillinger"
+  },
+  "settings.theme": {
+    "other": "Tema"
+  },
+  "settings.themeAuto": {
+    "other": "Auto"
+  },
+  "settings.themeLight": {
+    "other": "Lyst tema"
+  },
+  "settings.themeDark": {
+    "other": "Mørkt tema"
+  },
+  "settings.stars": {
+    "other": "Blinkende stjerner"
+  },
+  "settings.reduceMotion": {
+    "other": "Reducer bevægelse"
+  },
+  "settings.highContrast": {
+    "other": "Høj kontrast"
+  },
+  "settings.dyslexiaFont": {
+    "other": "Ordblindeskrift"
+  },
+  "settings.timezone": {
+    "other": "Tidszone"
+  },
+  "settings.tzYours": {
+    "other": "Din"
+  },
+  "settings.tzAuthor": {
+    "other": "Jaremas"
+  },
+  "settings.music": {
+    "other": "Musik"
+  },
+  "settings.musicUnavailable": {
+    "other": "Ikke tilgængelig i øjeblikket"
+  },
+  "webrings.title": {
+    "other": "Webringe"
+  },
+  "webrings.description": {
+    "other": "Webringe jeg er med i. Opdag flere uafhængige websider og personlige blogs."
+  },
+  "webrings.intro1": {
+    "other": "En webring er en samling af websider lavet af ligesindede, typisk centreret omkring et emne, en æstetik eller en fælles interesse. (fra safonts webring)"
+  },
+  "webrings.intro2": {
+    "other": "Denne side er en del af disse webringe. Klik på linkene for at besøge mine naboers sider, og andre medlemmers, hvis den webring har en tilfældig-funktion. Vælg hvilken som helst ring du har lyst til!"
+  },
+  "webrings.previous": {
+    "other": "Forrige"
+  },
+  "webrings.random": {
+    "other": "Tilfældig"
+  },
+  "webrings.next": {
+    "other": "Næste"
+  },
+  "webrings.previousAria": {
+    "other": "Forrige side i {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "Tilfældig side i {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "Næste side i {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "Afventer godkendelse"
+  },
+  "webrings.pending.description": {
+    "other": "Dette er webringe jeg har ansøgt om at blive medlem af og afventer godkendelse."
+  },
+  "webrings.pending.badge": {
+    "other": "Afventer"
+  },
+  "badges.title": {
+    "other": "Samling af web-badges"
+  },
+  "badges.description": {
+    "other": "En samling af klassiske web-badges og knapper på min hjemmeside."
+  },
+  "badges.pageTitle": {
+    "other": "Klassisk web-badge samling"
+  },
+  "badges.pageDescription": {
+    "other": "Jeg har samlet disse 88x31 badges for at vise, hvad jeg og denne side faktisk går op i. De er et tilbageblik til Geocities-æraen, før internettet blev fyldt med virksomheds- og AI-skrammel. Hvis du har et badge, du synes jeg skal tilføje, så bare spørg."
+  },
+  "badges.myBadgeTitle": {
+    "other": "Mit badge (klik for at udvide)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "Brug dette badge til at linke til min hjemmeside:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "Hotlink URL:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "HTML-kode"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "Forslag til indlejring"
+  },
+  "badges.suggestion1": {
+    "other": "Brug"
+  },
+  "badges.suggestion1b": {
+    "other": "i din CSS for at bevare pixel art-stilen."
+  },
+  "badges.suggestion2": {
+    "other": "Link direkte til min forside på"
+  },
+  "badges.suggestion3": {
+    "other": "Badget er 88x31 pixels, fordobl bredden og højden i din HTML til"
+  },
+  "badges.suggestion3b": {
+    "other": "for at gøre dem lettere at læse på skærme med høj opløsning."
+  },
+  "badges.collectionHeading": {
+    "other": "Badge-samling"
+  },
+  "badges.search": {
+    "other": "Søg i badges..."
+  },
+  "badges.filterByCategory": {
+    "other": "Filtrer efter kategori"
+  },
+  "badges.verboseView": {
+    "other": "Detaljeret"
+  },
+  "badges.badgeOnlyView": {
+    "other": "Kun badge"
+  },
+  "badges.showingCount": {
+    "other": "Viser {{count}} badges"
+  },
+  "badges.showingFiltered": {
+    "other": "Viser {{filtered}} af {{total}} badges"
+  },
+  "badges.noResults": {
+    "other": "Ingen badges matcher din søgning"
+  },
+  "badges.categories.all": {
+    "other": "Alle"
+  },
+  "badges.categories.personal": {
+    "other": "Personligt"
+  },
+  "badges.categories.friends": {
+    "other": "Venner"
+  },
+  "badges.categories.other-sites": {
+    "other": "Andre sider"
+  },
+  "badges.categories.software": {
+    "other": "Software"
+  },
+  "badges.categories.web": {
+    "other": "Web"
+  },
+  "badges.categories.fun": {
+    "other": "Sjov"
+  },
+  "brand.pageTitle": {
+    "other": "Brand"
+  },
+  "brand.pageDescription": {
+    "other": "Visuel identitet og brandelementer. Brug disse, hvis du vil henvise eller linke til dette site."
+  },
+  "brand.name.title": {
+    "other": "Navn"
+  },
+  "brand.name.nameLabel": {
+    "other": "Navn"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "Visningsnavn"
+  },
+  "brand.name.symbolNote": {
+    "other": "Symbolet for 'derfor' (∴) er altid en del af mit visningsnavn. Det repræsenterer resultater, logiske konklusioner, forbindelser, slutningen på en tankeproces; det er direkte og en stabil form."
+  },
+  "brand.logo.title": {
+    "other": "Logo"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Kun ansigt"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Ansigt og krop"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (eller multipla heraf)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (eller multipla heraf)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "Badge"
+  },
+  "brand.badge.urlLabel": {
+    "other": "Direkte URL"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "HTML-kode"
+  },
+  "brand.colors.title": {
+    "other": "Farver"
+  },
+  "brand.colors.names.primary": {
+    "other": "Primær"
+  },
+  "brand.colors.names.background": {
+    "other": "Baggrund"
+  },
+  "brand.colors.names.card": {
+    "other": "Kort"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Forgrund"
+  },
+  "brand.colors.names.muted": {
+    "other": "Dæmpet"
+  },
+  "brand.colors.names.border": {
+    "other": "Kant"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Hoved-accentfarve"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Sidebaggrund"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Kortbaggrund"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Hovedtekstfarve"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "Dæmpede elementer"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Kanter og opdelere"
+  },
+  "brand.colors.darkMode": {
+    "other": "Mørk tilstand"
+  },
+  "brand.colors.lightMode": {
+    "other": "Lys tilstand"
+  },
+  "brand.fonts.title": {
+    "other": "Skrifttyper"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "Overskrifter og titler"
+  },
+  "brand.fonts.usage.body": {
+    "other": "Brødtekst og UI-elementer"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "Kinesisk tekst"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "Kode og monospace-tekst"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "Vietnamesisk Chữ Nôm"
+  },
+  "brand.fonts.weight": {
+    "other": "Vægt:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "Se i font-repository"
+  },
+  "brand.fonts.languages.english": {
+    "other": "Engelsk"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "Vietnamesisk"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "Polsk"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "Russisk"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "Japansk"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "Hebraisk"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "Thailandsk"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "Symboler"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "Kinesisk (Forenklet)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "Kinesisk (Traditionelt)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "Vietnamesisk (Chữ Nôm)"
+  },
+  "brand.usage.title": {
+    "other": "Et par noter"
+  },
+  "brand.usage.point1Title": {
+    "other": "Brug dem bare"
+  },
+  "brand.usage.point1Text": {
+    "other": "Du behøver ikke spørge om lov til at bruge badget, logoet eller linke til dette site. Bare tag dem, hotlink dem, smid dem på din hjemmeside. Jeg er ligeglad. Faktisk ville jeg blive glad."
+  },
+  "brand.usage.point2Title": {
+    "other": "Behold badgets pixelerede stil"
+  },
+  "brand.usage.point2Text": {
+    "other": "Hvis du bruger badget, så brug venligst 'image-rendering: pixelated' (eller 'crisp-edges' til Firefox) i din CSS. Uden det vil browsere sløre pixlerne, og det vil ligne lort. Det er pixelkunst, behandl det venligst som pixelkunst."
+  },
+  "brand.usage.point3Title": {
+    "other": "Kreditering er rart, men valgfrit"
+  },
+  "brand.usage.point3Text": {
+    "other": "Hvis du skriver om sitet eller bruger disse i et blogindlæg eller en artikel, ville et link tilbage være værdsat. Men hvis du bare tilføjer mit badge til din linkside, behøver du ikke gøre noget ekstra. Min HTML-snippet til badget linker allerede hertil."
+  },
+  "brand.usage.point4Title": {
+    "other": "Lad være med at være mærkelig"
+  },
+  "brand.usage.point4Text": {
+    "other": "Brug ikke disse til at udgive dig for at være mig, påstå at jeg støtter noget jeg ikke gør, eller få det til at se ud som om jeg er associeret med noget skummelt. Jeg stoler på, at du kender forskellen på at linke til et site du kan lide, og at lade som om du er en anden. Hvis du er i tvivl om, hvorvidt det du gør er mærkeligt, så er det det sandsynligvis."
+  },
+  "brand.usage.footer": {
+    "other": "Det var det hele, bare brug dem med respekt, så er vi gode."
+  },
+  "colophon.title": {
+    "other": "Kolofon"
+  },
+  "colophon.description": {
+    "other": "Historien bag dette websted, og hvordan det blev bygget"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Webstedets Historie"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "Dette websted blev først registreret i slutningen af 2023, men designet har ændret sig meget i løbet af dets levetid. Den første version var bare et grundlæggende WordPress-websted hostet på en skizzy gratis hostingudbyder, den anden var Carrd-baseret, og den tredje var bygget med Astro."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Denne nuværende iteration (den fjerde version) er et komplet redesign bygget fra bunden med moderne webteknologier. Hver version har været en udvikling, hvor denne seneste fokuserer på ydeevne, tilgængelighed og et mere personligt præg, der bedre repræsenterer, hvem jeg er, og hvad jeg holder af."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Teknologistak"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "React-framework, der muliggør serverside-rendering og statisk webstedsgenerering"
+  },
+  "colophon.technologyStack.react": {
+    "other": "JavaScript-bibliotek til opbygning af brugergrænseflader"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Utility-first CSS-framework"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Genanvendeligt komponentbibliotek bygget med Radix UI og Tailwind"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "Animationsbibliotek til React"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Internationaliseringsframework"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "Stærkt typet programmeringssprog, der bygger på JavaScript"
+  },
+  "colophon.hosting.title": {
+    "other": "Hosting & Implementering"
+  },
+  "colophon.hosting.content1": {
+    "other": "Webstedet er hostet på"
+  },
+  "colophon.hosting.content2": {
+    "other": "som giver problemfri implementering fra GitHub, automatisk HTTPS og global CDN-distribution."
+  },
+  "colophon.hosting.content3": {
+    "other": "Domænet administreres via"
+  },
+  "colophon.hosting.content4": {
+    "other": "som giver yderligere sikkerheds- og ydelsesfordele."
+  },
+  "colophon.design.title": {
+    "other": "Designfilosofi"
+  },
+  "colophon.design.p1": {
+    "other": "Denne hjemmeside er designet med tilgængelighed og ydeevne for øje. Den fungerer uden JavaScript aktiveret, bruger semantisk HTML og respekterer dit privatliv ved ikke at bruge tracking cookies."
+  },
+  "colophon.design.p2": {
+    "other": "Designet sigter mod en balance mellem moderne æstetik og klassisk web-enkelhed. Mørk tilstand er standard, fordi jeg holder af mine nethinder."
+  },
+  "colophon.webStandards.title": {
+    "other": "Webstandarder"
+  },
+  "colophon.webStandards.intro": {
+    "other": "Denne side implementerer:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "mikroformater"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "RSS, Atom og JSON feeds"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt og sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "Tilgængelighed"
+  },
+  "colophon.accessibility.intro": {
+    "other": "Jeg bestræber mig på at gøre denne side tilgængelig for alle. Funktioner inkluderer:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "Semantisk HTML-struktur"
+  },
+  "colophon.accessibility.item2": {
+    "other": "Spring til indhold links"
+  },
+  "colophon.accessibility.item3": {
+    "other": "Korrekt overskriftshierarki"
+  },
+  "colophon.accessibility.item4": {
+    "other": "WCAG 2.1 AA farvekontrast"
+  },
+  "colophon.accessibility.item5": {
+    "other": "Tastaturnavigation"
+  },
+  "colophon.accessibility.item6": {
+    "other": "Respekterer præferencer for reduceret bevægelse"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "Hvis du støder på tilgængelighedsproblemer, så"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "giv mig besked"
+  },
+  "colophon.inspiration.title": {
+    "other": "Inspiration"
+  },
+  "colophon.inspiration.content1": {
+    "other": "Denne side henter inspiration fra"
+  },
+  "colophon.inspiration.content2": {
+    "other": "som igen henter inspiration fra"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Original idé på"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Maggie Appletons kolofon"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Gwern Branwens kolofon"
+  },
+  "footer.copyright": {
+    "other": "2026, ∴ Jarema, CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "lavet med kærlighed"
+  },
+  "footer.andChaos": {
+    "other": "og et par dages kodning"
+  },
+  "footer.uptime": {
+    "other": "Drift"
+  },
+  "footer.siteStatus": {
+    "other": "Side status"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Tastaturgenveje"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Navigation"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Handlinger"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Luk"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Forside"
+  },
+  "keyboardShortcuts.about": {
+    "other": "Om mig"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blog"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Projekter"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Nu"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Værktøjer"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "Kontakt"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Kolofon"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "Sideoversigt"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Devlog"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Skift sprog"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Skift tema"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Opdatér humørkatten"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Åbn tastaturgenveje"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Åbn Handlingssøgning"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Webringe"
+  },
+  "actionSearch.2048": {
+    "other": "Spil 2048"
+  },
+  "actionSearch.title": {
+    "other": "Søg handlinger"
+  },
+  "actionSearch.placeholder": {
+    "other": "Søg handlinger..."
+  },
+  "actionSearch.noResults": {
+    "other": "Ingen handlinger fundet"
+  },
+  "actionSearch.goTo": {
+    "other": "Gå til side"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Skift tema"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Skift til mørk tilstand"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Skift til lys tilstand"
+  },
+  "actionSearch.appearance": {
+    "other": "Udseende"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Skift sprog"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Hent en ny humørkat"
+  },
+  "actionSearch.playGame": {
+    "other": "Spil et spil"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "Se alle genveje"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "Tryk på . for at åbne kommandopaletten"
+  },
+  "actionSearch.escToClose": {
+    "other": "ESC for at lukke"
+  },
+  "actionSearch.fun": {
+    "other": "Sjov"
+  },
+  "actionSearch.games": {
+    "other": "Spil"
+  },
+  "actionSearch.tetris": {
+    "other": "Spil Tetris"
+  },
+  "actionSearch.help": {
+    "other": "Hjælp"
+  },
+  "actionSearch.projects.category": {
+    "other": "Navigér mellem projekter"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Luk vendt kort"
+  },
+  "actionSearch.projects.left": {
+    "other": "Navigér til venstre"
+  },
+  "actionSearch.projects.right": {
+    "other": "Navigér til højre"
+  },
+  "actionSearch.projects.up": {
+    "other": "Navigér op"
+  },
+  "actionSearch.projects.down": {
+    "other": "Navigér ned"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Vend projektkort: {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Navigér mellem blogindlæg"
+  },
+  "actionSearch.blog.next": {
+    "other": "Til næste indlæg"
+  },
+  "actionSearch.blog.prev": {
+    "other": "Til forrige indlæg"
+  },
+  "actionSearch.blog.search": {
+    "other": "Søg i blogindlæg"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Filtrér blogindlæg"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "Hop til indlæg {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "Tilbage til bloglisten"
+  },
+  "actionSearch.about.category": {
+    "other": "Navigér i 'Om mig'-sektionerne"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "Hop til kapitel {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "Navigér i 'Jeg bruger'-sektionerne"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "Hop til {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "Navigér i 'Nu'-sektionerne"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "Hop til {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Navigér i kolofonsektionerne"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "Hop til {{section}}"
+  },
+  "actionSearch.tools": {
+    "other": "Værktøjer"
+  },
+  "textCounter.title": {
+    "other": "Teksttæller"
+  },
+  "textCounter.description": {
+    "other": "Tæl tegn, ord, sætninger, afsnit og beregn tale-/læsetid."
+  },
+  "textCounter.placeholder": {
+    "other": "Begynd at skrive eller indsæt din tekst her..."
+  },
+  "textCounter.clear": {
+    "other": "Ryd"
+  },
+  "textCounter.stats.characters": {
+    "other": "Tegn"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "Tegn (uden mellemrum)"
+  },
+  "textCounter.stats.words": {
+    "other": "Ord"
+  },
+  "textCounter.stats.sentences": {
+    "other": "Sætninger"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "Afsnit"
+  },
+  "textCounter.stats.lines": {
+    "other": "Linjer"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "Læsetid"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "Taletid"
+  },
+  "textCounter.textLanguage": {
+    "other": "Tekstsprog"
+  },
+  "textCounter.languages.en": {
+    "other": "Engelsk"
+  },
+  "textCounter.languages.vi": {
+    "other": "Vietnamesisk"
+  },
+  "textCounter.languages.et": {
+    "other": "Estisk"
+  },
+  "textCounter.languages.zh": {
+    "other": "Kinesisk"
+  },
+  "textCounter.languages.ru": {
+    "other": "Russisk"
+  },
+  "textCounter.languages.custom": {
+    "other": "Andet / tilpasset"
+  },
+  "textCounter.languages.advanced": {
+    "other": "Avancerede indstillinger"
+  },
+  "textCounter.speed.label": {
+    "other": "Hastighed"
+  },
+  "textCounter.speed.slow": {
+    "other": "Langsom"
+  },
+  "textCounter.speed.average": {
+    "other": "Gennemsnit"
+  },
+  "textCounter.speed.fast": {
+    "other": "Hurtig"
+  },
+  "textCounter.speed.custom": {
+    "other": "Tilpasset"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "Læsning (ord pr. minut)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "Tale (ord pr. minut)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "Tidsberegnerne bruger i øjeblikket engelske standardhastigheder. Skift til \"Tilpasset\" for at indtaste nøjagtige værdier."
+  },
+  "textCounter.advanced.title": {
+    "other": "Avancerede indstillinger"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "Deaktiver ordtælling"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "For logografiske og brahmiske sprog adskiller mellemrum ikke ord."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "Behandl hver linje som et afsnit"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "Tæl enkelte linjeskift som afsnitsskift i stedet for at kræve blanke linjer. Linjetælleren skjules."
+  },
+  "textCounter.privacy.summary": {
+    "other": "Information om privatliv"
+  },
+  "textCounter.privacy.body": {
+    "other": "Dette værktøj kører udelukkende i din browser. Du kan afbryde forbindelsen til internettet, og det vil stadig virke, din tekst bliver aldrig sendt nogen steder hen."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "Sådan bekræfter du teknisk:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "For at bekræfte kan du åbne browserens DevTools (F12) → fanen Netværk, derefter skrive i tekstfeltet og bekræfte, at der ikke foretages nogen anmodninger, efter at siden er færdig med at indlæse."
+  },
+  "tools.title": {
+    "other": "Værktøjer"
+  },
+  "tools.description": {
+    "other": "Nogle praktiske værktøjer. Jeg kunne ikke finde nogen der virkelig passede til mine behov."
+  },
+  "tools.items.counter.title": {
+    "other": "Teksttæller"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "Tæl tegn, ord, sætninger, afsnit og anslå læse-/taletid."
+  },
+  "slashes.title": {
+    "other": "Slashes"
+  },
+  "slashes.description": {
+    "other": "En liste over alle hovedsider på dette websted."
   }
 }

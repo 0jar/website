@@ -1,719 +1,1667 @@
 {
-  "404": {
-    "title": "你好像迷路了 :))",
-    "description": "连猫咪都不知道这个地方在哪。",
-    "button": "返回首页",
-    "sitemap": "查看网站地图",
-    "enjoycat": "当你迷路时，欣赏一下这只猫："
+  "404.title": {
+    "other": "你好像迷路了 :))"
   },
-  "2048": {
-    "description": "合并方块，达到2048！",
-    "score": "分数",
-    "best": "最佳",
-    "gameOver": "游戏结束！",
-    "finalScore": "最终分数",
-    "tryAgain": "再试一次",
-    "youWin": "你赢了！",
-    "currentScore": "当前分数",
-    "keepPlaying": "继续游戏",
-    "newGame": "新游戏",
-    "howToPlay": "游戏方法",
-    "instructions1": "使用方向键或WASD移动方块。当两个相同数字的方块相碰时，它们会合并成一个！",
-    "instructions2": "每次移动后，会出现一个新方块（2或4）。",
-    "instructions3": "创建一个数字为2048的方块来赢得游戏！",
-    "controls": "控制",
-    "moveLeft": "向左移动",
-    "moveRight": "向右移动",
-    "moveUp": "向上移动",
-    "moveDown": "向下移动",
-    "touchInstructions": "在移动设备上，滑动来移动方块或使用屏幕上的控制按钮。",
-    "undo": "撤销",
-    "title": "2048",
-    "instructions4": "达到2048后，您可以继续玩以获得更高的分数！"
+  "404.description": {
+    "other": "连猫咪都不知道这个地方在哪。"
   },
-  "nav": {
-    "home": "首页",
-    "about": "关于",
-    "projects": "项目",
-    "blog": "博客",
-    "now": "现在",
-    "uses": "工具",
-    "contact": "联系",
-    "guestbook": "留言簿",
-    "colophon": "版权信息",
-    "webring": "Webring",
-    "scrapbook": "随笔",
-    "slashes": "网站地图",
-    "brand": "品牌素材包",
-    "badges": "徽章",
-    "tools": "工具"
+  "404.button": {
+    "other": "返回首页"
   },
-  "languageNotice": {
-    "message": "此语言的翻译仍在进行中。某些内容可能不完整或缺失。",
-    "dismiss": "关闭"
+  "404.sitemap": {
+    "other": "查看网站地图"
   },
-  "language": {
-    "main": "主要语言",
-    "beta": "测试语言",
-    "other": "其他语言",
-    "auto": "自动（浏览器语言）",
-    "search": "搜索语言...",
-    "en": "英语",
-    "vi": "越南语",
-    "et": "爱沙尼亚语",
-    "ru": "俄语",
-    "da": "丹麦语",
-    "tr": "土耳其语",
-    "zh": "中文",
-    "pl": "波兰语",
-    "sv": "瑞典语",
-    "fi": "芬兰语",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "当你迷路时，欣赏一下这只猫："
   },
-  "greetings": {
-    "morning": "早安，勤劳的小蜜蜂",
-    "afternoon": "下午好呀！",
-    "evening": "晚上好好休息放松一下吧！",
-    "night": "还没睡？我也是呢。"
+  "2048.description": {
+    "other": "合并方块，达到2048！"
   },
-  "home": {
-    "buttons": {
-      "about": "关于我",
-      "projects": "看看我的项目"
-    },
-    "footer": "欢迎来到我的网站。随便逛逛吧。",
-    "heading": "你好，我是承靖",
-    "subheading": "经济在学，代码在敲，猫咪在抱。",
-    "contactButton": "联系我",
-    "aboutButton": "关于我",
-    "blogButton": "看看我的博客",
-    "guestbookButton": "签写留言簿",
-    "recentPosts": "最新博客文章",
-    "latestNow": "我现在在做什么",
-    "currentMood": "当前心情",
-    "currentStatus": "当前状态",
-    "time": "当前时间",
-    "yourTime": "你的时间",
-    "myTime": "我的时间",
-    "viewAllWebrings": "查看所有网站环",
-    "checkOutSites": "去看看这些网站吧！",
-    "androidCountdown": "安卓将在 X 天内变成一个封闭的操作系统"
+  "2048.score": {
+    "other": "分数"
   },
-  "guestbook": {
-    "title": "留言簿",
-    "description": "在我的留言簿上留言吧！",
-    "poweredBy": "技术支持由",
-    "atabook": "Atabook"
+  "2048.best": {
+    "other": "最佳"
   },
-  "about": {
-    "title": "关于我",
-    "description": "关于我是谁、我来自哪里、我的热情所在以及我正在为之奋斗的目标的故事。",
-    "chapters": {
-      "6": {
-        "title": "我还没说完呢",
-        "content1": "所以这是\"别人\"不应该看到的部分。",
-        "content2": "请允许我自称为\"我\"。我还是很生气。非常生气。我仍然在后悔自己的一部分从未有机会真正活过。仍然有些早上醒来，感觉一切都偏离了轨道，却不知道为什么。有时候我想过逃跑然后消失，换个新名字，住在新城市，说一种新语言。或者有时候是反过来，放下一切。而且有一次我差点就真的这么做了。",
-        "content3": "有些日子我觉得自己不再是人了。有些时候我觉得自己更像是一个试图凝聚成形的记忆。像是我自己也无法再触及的某种柔软之物的回响。但也有一些日子，我像身体里通了电一样燃烧。我能感受到周围的每一个细节，从皮肤上的阳光，到正在播放的歌单里轻柔的音符，到人们在感到足够安全可以展现自我时眼神和面容的变化。这些微小的东西，不知怎地，仍然支撑着我活下去。",
-        "content4": "我还没完成成为某个我也不知道是谁或什么样的版本。但我确定一件事，那就是我已经受够了总是假装自己很好，我再也不会保持沉默了。"
-      }
-    }
+  "2048.gameOver": {
+    "other": "游戏结束！"
   },
-  "projects": {
-    "title": "我的项目",
-    "description": "我参与或正在进行的个人、学术和社会活动项目的汇总。有些已经完成，有些还在进行中。",
-    "status": {
-      "completed": "已完成",
-      "inProgress": "进行中",
-      "planned": "计划中"
-    },
-    "categories": {
-      "personal": "个人",
-      "academic": "学术",
-      "activism": "社会活动"
-    },
-    "details": {
-      "what": "这是什么",
-      "learned": "我学到了什么",
-      "why": "这个项目对我很重要，因为"
-    },
-    "cardActions": {
-      "clickForDetails": "点击查看详情",
-      "clickToClose": "点击关闭"
-    },
-    "statusLabels": {
-      "completed": "已完成",
-      "inProgress": "进行中",
-      "planned": "计划中"
-    },
-    "buttons": {
-      "showRandom": "再显示几个项目",
-      "hideRandom": "隐藏吧，太多了"
-    },
-    "filters": {
-      "all": "全部"
-    },
-    "clickToFlip": "翻转",
-    "what": "这是什么？",
-    "learned": "我学到了什么",
-    "why": "我为什么要做这个？"
+  "2048.finalScore": {
+    "other": "最终分数"
   },
-  "blog": {
-    "title": "博客",
-    "description": "一些想法，一些心情，偶尔还有一些抱怨。随时写，什么情绪都有。",
-    "language": "语言",
-    "languageFilter": "按语言筛选",
-    "tag": "标签",
-    "sort": "排序文章",
-    "category": "类别",
-    "noPosts": "还没有文章哦，稍后再来看看吧！",
-    "search": "搜索文章...",
-    "sortNew": "最新优先",
-    "sortOld": "最旧优先",
-    "sortReadTime": "阅读时间",
-    "sortABC": "按字母排序",
-    "filter": "筛选",
-    "filterDescription": "筛选博客文章",
-    "activeFilter": "活动过滤器：",
-    "filterNoMatch": "没有符合筛选条件的文章。试着调整一下吧～",
-    "clearFilter": "清除所有过滤器",
-    "mood": "心情",
-    "cat": "喵星人认证",
-    "prev": "上一篇文章",
-    "next": "下一篇文章",
-    "jumpToPost": "跳转到文章",
-    "back": "返回博客列表",
-    "showingPosts": "正在显示 {{total}} 篇中的第 {{current}} 篇",
-    "minRead": "分钟阅读",
-    "rss": "RSS 订阅源",
-    "subscribeRSS": "通过 RSS 订阅",
-    "allPosts": "所有文章源",
-    "languageFeeds": "特定语言源",
-    "rssDescription": "在您喜欢的阅读器中订阅我的 RSS 源，以便第一时间获取新文章通知。",
-    "atom": "Atom 订阅源",
-    "subscribeAtom": "通过 Atom 订阅",
-    "atomDescription": "在您喜欢的阅读器中订阅我的 Atom 源，以便第一时间获取新文章通知。",
-    "availableIn": "此页面也有以下语言版本",
-    "comments": "评论",
-    "webmentions": "网络提及",
-    "webmentionsNone": "暂无网络提及。成为第一个回应的人吧！",
-    "webmentionLike": "赞了此文",
-    "webmentionRepost": "转发了此文",
-    "webmentionReply": "回复了",
-    "webmentionMention": "提及了此文",
-    "tagLabels": {
-      "first-post": "第一篇文章",
-      "identity": "身份认同",
-      "belonging": "归属感",
-      "introspection": "内省",
-      "browsers": "浏览器",
-      "chrome": "Chrome",
-      "open-web": "开放网络",
-      "app-defaults": "默认应用",
-      "software": "软件",
-      "tools": "工具",
-      "new-year": "新年",
-      "reflection": "反思",
-      "health": "健康",
-      "tet": "越南新年",
-      "vietnam": "越南",
-      "military": "军事",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "安全加固",
-      "values": "价值观",
-      "personal-philosophy": "个人哲学"
-    },
-    "categoryLabels": {
-      "personal": "个人",
-      "meta": "元",
-      "identity": "身份认同",
-      "technical": "技术",
-      "privacy": "隐私",
-      "opinions": "观点",
-      "life": "生活",
-      "security": "安全",
-      "guides": "指南"
-    }
+  "2048.tryAgain": {
+    "other": "再试一次"
   },
-  "now": {
-    "title": "现在",
-    "description": "我正在做、正在想、正在琢磨的事情。",
-    "lastUpdated": "最后更新",
-    "whatIsNow": "/now 页面是什么？",
-    "whatIsNowDescription": "/now 页面是个人网站上的一页，用来告诉大家这个人目前、当天或最近专注于什么。你可以在这里了解更多：",
-    "categories": {
-      "reading": "正在读",
-      "coding": "正在写代码",
-      "drinking": "正在喝",
-      "listening": "正在听",
-      "premid": "Discord活动",
-      "thinking": "正在想",
-      "studying": "正在学",
-      "planning": "正在计划"
-    }
+  "2048.youWin": {
+    "other": "你赢了！"
   },
-  "uses": {
-    "title": "工具",
-    "description": "我日常使用的所有东西的汇总。这个页面的灵感来自",
-    "websiteDescription": "一个大家分享日常工作和生活中使用的东西的地方。",
-    "categories": {
-      "hardware": "硬件设备",
-      "mobile": "移动设备",
-      "audio": "耳机",
-      "os": "操作系统 & 浏览器",
-      "development": "编程",
-      "email": "效率应用",
-      "privacy": "安全 & 隐私",
-      "mobile_tools": "手机折腾工具",
-      "mapping": "地图",
-      "gaming": "游戏",
-      "multimedia": "多媒体",
-      "design": "设计 & 绘画",
-      "photo": "照片编辑",
-      "video": "视频 & 音频",
-      "media": "媒体服务"
-    },
-    "subsections": {
-      "design": "设计 & 绘画",
-      "photo": "照片编辑",
-      "video": "视频 & 音频",
-      "media": "媒体服务"
-    },
-    "hidden": {
-      "clickToReveal": "点击 5 次显示",
-      "clicksLeft": "(还需点击 {{clicks}} 次才能显示)",
-      "platformPrefix": "隐藏平台"
-    }
+  "2048.currentScore": {
+    "other": "当前分数"
   },
-  "contact": {
-    "title": "联系",
-    "description": "联系我的方式。",
-    "message": "别害羞，来打个招呼吧。如果你想专业点，也可以预约 1 对 1 交流",
-    "disclaimer": "我会回复邮件的。嗯，大概吧。除非我被猫或其他什么东西分心了",
-    "sections": {
-      "contactMe": "联系我",
-      "socialMedia": "我在社交媒体上",
-      "otherPlatforms": "我在其他平台上"
-    },
-    "sectionTitles": {
-      "contactMe": "联系我",
-      "socialMedia": "我在社交媒体上",
-      "otherPlatforms": "我在其他平台上",
-      "keys": "公钥"
-    },
-    "links": {
-      "universityEmail": "学校邮箱",
-      "bookMeeting": "预约与我 1 对 1 交流",
-      "messengerNote": "我不太活跃在 Facebook 和 Messenger 上。如果你通过这里发消息，我不能保证很快回复。",
-      "pgpKey": "PGP 公钥",
-      "sshKey": "SSH 公钥"
-    }
+  "2048.keepPlaying": {
+    "other": "继续游戏"
   },
-  "moodCat": {
-    "title": "今日精选猫咪图",
-    "hover": "猫咪正在默默地评判你",
-    "refresh": "换张猫咪图看看",
-    "seeMore": "查看更多猫咪"
+  "2048.newGame": {
+    "other": "新游戏"
   },
-  "tetris": {
-    "title": "俄罗斯方块",
-    "description": "一个经典的下落方块和消除行的游戏",
-    "gameInfo": "游戏信息",
-    "score": "分数",
-    "level": "等级",
-    "status": "状态",
-    "next": "下一个",
-    "gameOver": "游戏结束",
-    "paused": "已暂停",
-    "playing": "游戏中",
-    "ready": "准备好",
-    "playAgain": "再玩一次",
-    "pause": "暂停",
-    "resume": "继续",
-    "start": "开始",
-    "reset": "重置",
-    "controls": "控制",
-    "moveLeft": "向左移动",
-    "moveRight": "向右移动",
-    "moveDown": "向下移动",
-    "rotate": "旋转",
-    "hardDrop": "快速下落",
-    "pauseGame": "暂停游戏",
-    "musicOn": "音乐开",
-    "musicOff": "音乐关",
-    "nowPlaying": "正在播放",
-    "spacebar": "空格键"
+  "2048.howToPlay": {
+    "other": "游戏方法"
   },
-  "scrapbook": {
-    "title": "开发日志",
-    "description": "我搭建这个网站时的一些开发日志。",
-    "noEntries": "暂无记录。"
+  "2048.instructions1": {
+    "other": "使用方向键或WASD移动方块。当两个相同数字的方块相碰时，它们会合并成一个！"
   },
-  "settings": {
-    "title": "设置",
-    "theme": "主题",
-    "themeAuto": "自动",
-    "themeLight": "浅色主题",
-    "themeDark": "深色主题",
-    "stars": "闪烁星星",
-    "reduceMotion": "减少动画",
-    "highContrast": "高对比度",
-    "dyslexiaFont": "阅读障碍字体",
-    "timezone": "时区",
-    "tzYours": "你的",
-    "tzAuthor": "承靖的",
-    "music": "音乐",
-    "musicUnavailable": "暂时不可用"
+  "2048.instructions2": {
+    "other": "每次移动后，会出现一个新方块（2或4）。"
   },
-  "webrings": {
-    "title": "网站环",
-    "description": "我加入的网站环。探索更多独立网站和个人博客。",
-    "intro1": "网站环是由志同道合的人创建的网站集合，通常围绕某个主题、美学或共同兴趣。（来自 safonts 网站环）",
-    "intro2": "本网站是这些网站环的一部分。点击链接访问我邻居的网站，如果该网站环有随机功能，也可以访问其他成员。选择你喜欢的任何环！",
-    "previous": "上一个",
-    "random": "随机",
-    "next": "下一个",
-    "previousAria": "{{name}} 中的上一个网站",
-    "randomAria": "{{name}} 中的随机网站",
-    "nextAria": "{{name}} 中的下一个网站",
-    "pending": {
-      "title": "等待批准",
-      "description": "这些是我已申请加入并等待批准的网站环。",
-      "badge": "待批准"
-    }
+  "2048.instructions3": {
+    "other": "创建一个数字为2048的方块来赢得游戏！"
   },
-  "badges": {
-    "title": "网页徽章合集",
-    "description": "我的网站上使用的经典网页徽章和按钮合集。",
-    "pageTitle": "经典网页徽章合集",
-    "pageDescription": "我收集这些 88x31 的徽章是为了展示我和这个网站真正关心的事物。这是对 Geocities 时代的怀旧，那时的互联网还没被企业化和 AI 生成的垃圾内容填满。如果你有希望我添加的徽章，尽管告诉我。",
-    "myBadgeTitle": "我的徽章（点击展开）",
-    "myBadgeIntro": "使用此徽章链接到我的网站：",
-    "hotlinkUrl": "直链 URL (Hotlink)：",
-    "htmlCodeTitle": "HTML 代码",
-    "embeddingSuggestionsTitle": "嵌入建议",
-    "suggestion1": "在 CSS 中使用",
-    "suggestion1b": "以保留像素艺术风格。",
-    "suggestion2": "直接链接到我的主页，地址为",
-    "suggestion3": "徽章尺寸为 88x31 像素，建议在 HTML 中将宽高加倍至",
-    "suggestion3b": "以便在高分辨率屏幕上更易于阅读。",
-    "collectionHeading": "徽章合集",
-    "search": "搜索徽章...",
-    "filterByCategory": "按类别筛选",
-    "verboseView": "详细视图",
-    "badgeOnlyView": "仅徽章",
-    "showingCount": "显示 {{count}} 个徽章",
-    "showingFiltered": "显示 {{total}} 个徽章中的 {{filtered}} 个",
-    "noResults": "未找到符合搜索条件的徽章",
-    "categories": {
-      "all": "全部",
-      "personal": "个人",
-      "friends": "朋友",
-      "other-sites": "其他网站",
-      "software": "软件",
-      "web": "网页",
-      "fun": "娱乐"
-    }
+  "2048.controls": {
+    "other": "控制"
   },
-  "brand": {
-    "pageTitle": "品牌",
-    "pageDescription": "视觉识别和品牌元素。如果你想引用或链接到本站，请使用这些素材。",
-    "name": {
-      "title": "名称",
-      "nameLabel": "名字",
-      "displayNameLabel": "显示名称",
-      "symbolNote": "“所以”符号 (∴) 始终是我显示名称的一部分。它代表结果、逻辑结论、连接以及思维过程的终点；它直接且形状稳定。"
-    },
-    "logo": {
-      "title": "标志",
-      "faceOnly": "仅头像",
-      "faceAndBody": "半身像",
-      "dimensions1": "384×384px (或其倍数)",
-      "dimensions2": "512×512px (或其倍数)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "徽章",
-      "urlLabel": "直接链接",
-      "htmlLabel": "HTML 代码"
-    },
-    "colors": {
-      "title": "颜色",
-      "names": {
-        "primary": "主色",
-        "background": "背景",
-        "card": "卡片",
-        "foreground": "前景",
-        "muted": "柔和",
-        "border": "边框"
-      },
-      "descriptions": {
-        "primary": "主要强调色",
-        "background": "页面背景",
-        "card": "卡片背景",
-        "foreground": "主要文本颜色",
-        "muted": "次要元素",
-        "border": "边框和分割线"
-      },
-      "darkMode": "深色模式",
-      "lightMode": "浅色模式"
-    },
-    "fonts": {
-      "title": "字体",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "标题",
-        "body": "正文和界面 (UI)",
-        "notoSansSC": "中文文本",
-        "monaspice": "代码和等宽文本",
-        "hanNomGothic": "越南语字喃 (Chữ Nôm)"
-      },
-      "weight": "字重：",
-      "viewOnGoogleFonts": "在字体库中查看",
-      "languages": {
-        "english": "英语",
-        "vietnamese": "越南语",
-        "polish": "波兰语",
-        "russian": "俄语",
-        "japanese": "日语",
-        "hebrew": "希伯来语",
-        "thai": "泰语",
-        "symbols": "符号",
-        "chineseSimplified": "中文 (简体)",
-        "chineseTraditional": "中文 (繁体)",
-        "vietnameseHanNom": "越南语 (字喃)"
-      }
-    },
-    "usage": {
-      "title": "几点说明",
-      "point1Title": "随意使用",
-      "point1Text": "使用徽章、Logo 或链接到本站无需申请许可。拿去用，做热链 (hotlink)，或者直接甩到你的网站上。我不在乎。实际上，我反而会很开心。",
-      "point2Title": "保持徽章的像素风格",
-      "point2Text": "如果你使用徽章 (badge)，请务必在 CSS 中添加 'image-rendering: pixelated' (Firefox 用 'crisp-edges')。没有它，浏览器会把像素搞得模糊不清，看起来像垃圾一样。这是像素艺术，请把它当成像素艺术来对待。",
-      "point3Title": "署名很好，但非必须",
-      "point3Text": "如果你写文章介绍本站或在博客中使用这些素材，能加个回链我会很感激。但如果你只是把我的徽章加到友情链接页，那就不用做多余的事了。我提供的徽章 HTML 代码已经包含链接了。",
-      "point4Title": "别搞些奇怪的",
-      "point4Text": "别用这些素材来冒充我，声称我支持某些我并不支持的东西，或者搞得像我跟什么不正经的东西有关系似的。我相信你分得清“链接到喜欢的网站”和“冒充他人”的区别。如果你不确定自己在做的事是不是很怪，那八成就是很怪。",
-      "footer": "就这样，只要用得体面点，咱们就没问题。"
-    }
+  "2048.moveLeft": {
+    "other": "向左移动"
   },
-  "colophon": {
-    "title": "网站信息",
-    "description": "这个网站背后的故事",
-    "siteHistory": {
-      "title": "网站历史",
-      "content1": "我是在2023年底注册了这个网站域名，但它的设计在这段时间里改变了很多次。第一个版本只是某个免费主机上的WordPress页面，第二个版本是Carrd.co页面，第三个版本基于Astro构建。当前版本是我完全重新设计并从头开始构建的。",
-      "content2": "每个版本都是一次进化，最新的这个版本更注重速度、可访问性（accessibility）和一点点更\"像我\"、更能体现\"我\"的感觉。"
-    },
-    "technologyStack": {
-      "title": "使用的技术栈",
-      "nextjs": "支持服务器端渲染和静态网站生成的 React 框架",
-      "react": "用于构建用户界面的 JavaScript 库",
-      "tailwind": "实用优先的 CSS 框架（写 CSS 而无需写太多 CSS）",
-      "shadcn": "基于 Radix UI 和 Tailwind 构建的可复用组件库",
-      "framer": "用于 React 的动画库",
-      "i18next": "国际化框架",
-      "typescript": "基于 JavaScript 的开源编程语言扩展"
-    },
-    "hosting": {
-      "title": "网站托管 (Hosting)",
-      "content1": "网站托管在",
-      "content2": "，支持从 GitHub 无缝运行 Web 代码。",
-      "content3": "域名由",
-      "content4": "管理，他们还提供了额外的安全防火墙和网站性能优化支持。"
-    },
-    "design": {
-      "title": "设计理念",
-      "p1": "本网站的设计注重无障碍性和性能。它无需启用 JavaScript 即可运行，使用语义化 HTML，并且不使用任何跟踪 Cookie，以此尊重您的隐私。",
-      "p2": "设计旨在现代美学与经典 Web 极简主义之间取得平衡。默认开启深色模式，因为我爱惜我的视网膜。"
-    },
-    "webStandards": {
-      "title": "Web 标准",
-      "intro": "本站实现了：",
-      "microformats": "微格式 (Microformats)",
-      "feeds": "RSS、Atom 和 JSON 订阅源",
-      "robots": "robots.txt 和 sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "无障碍访问",
-      "intro": "我致力于让所有人都能访问本站。功能包括：",
-      "item1": "语义化 HTML 结构",
-      "item2": "跳至内容链接",
-      "item3": "正确的标题层级",
-      "item4": "WCAG 2.1 AA 颜色对比度",
-      "item5": "支持键盘导航",
-      "item6": "尊重减弱动态效果首选项",
-      "reportText": "如果您遇到任何无障碍访问问题，请",
-      "contactLink": "告诉我"
-    },
-    "inspiration": {
-      "title": "灵感来源",
-      "content1": "这个页面的灵感来自",
-      "content2": "，而它的灵感又来自",
-      "content3": "最初的想法来自",
-      "maggie": "Maggie Appleton 的 colophon",
-      "gwern": "Gwern Branwen 的 colophon"
-    }
+  "2048.moveRight": {
+    "other": "向右移动"
   },
-  "footer": {
-    "copyright": "2026，∴ 承靖 (Jarema)，知识共享-署名 4.0 国际 (CC BY-4.0)",
-    "madeWith": "用所有的爱制作",
-    "andChaos": "和几天瞎搞代码的时光",
-    "uptime": "运行状态",
-    "siteStatus": "网站状态"
+  "2048.moveUp": {
+    "other": "向上移动"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "键盘快捷键",
-    "navigation": "导航",
-    "actions": "操作",
-    "close": "关闭",
-    "home": "首页",
-    "about": "关于我",
-    "blog": "博客",
-    "projects": "项目",
-    "now": "现在",
-    "uses": "使用工具",
-    "contact": "联系",
-    "colophon": "版本信息",
-    "slashes": "网站地图",
-    "scrapbook": "开发日志",
-    "tetris": "俄罗斯方块",
-    "cycleLanguage": "切换语言",
-    "cycleTheme": "切换主题",
-    "refreshCat": "刷新猫咪心情",
-    "openShortcuts": "打开快捷键列表",
-    "actionSearch": "打开操作搜索",
-    "webring": "Webrings"
+  "2048.moveDown": {
+    "other": "向下移动"
   },
-  "actionSearch": {
-    "2048": "玩 2048",
-    "title": "搜索操作",
-    "placeholder": "搜索操作...",
-    "noResults": "未找到操作",
-    "goTo": "跳转到页面",
-    "toggleTheme": "切换主题",
-    "switchDarkMode": "切换到深色模式",
-    "switchLightMode": "切换到浅色模式",
-    "appearance": "外观",
-    "cycleLanguage": "切换语言",
-    "refreshCat": "来只新的心情猫猫",
-    "playGame": "玩游戏",
-    "viewShortcuts": "查看所有快捷键",
-    "pressToOpen": "按 . 打开命令面板",
-    "escToClose": "按 ESC 关闭",
-    "fun": "趣味",
-    "games": "游戏",
-    "tetris": "玩俄罗斯方块",
-    "help": "帮助",
-    "projects": {
-      "category": "浏览项目卡片",
-      "closeCard": "关闭翻转卡片",
-      "left": "向左浏览",
-      "right": "向右浏览",
-      "up": "向上浏览",
-      "down": "向下浏览",
-      "flipCard": "翻转项目卡片：{{title}}"
-    },
-    "blog": {
-      "category": "浏览博客文章",
-      "next": "下一篇文章",
-      "prev": "上一篇文章",
-      "search": "搜索博客文章",
-      "filterTag": "筛选博客文章",
-      "jumpToPost": "跳转到文章 {{i}}",
-      "back": "返回博客列表"
-    },
-    "about": {
-      "category": "浏览关于页面部分",
-      "jumpToChapter": "跳转到章节 {{i}}"
-    },
-    "uses": {
-      "category": "浏览使用工具部分",
-      "jumpToCategory": "跳转到 {{category}}"
-    },
-    "now": {
-      "category": "浏览 Now 页面部分",
-      "jumpToCategory": "跳转到 {{category}}"
-    },
-    "colophon": {
-      "category": "浏览尾注部分",
-      "jumpToSection": "跳转到 {{section}}"
-    },
-    "tools": "工具"
+  "2048.touchInstructions": {
+    "other": "在移动设备上，滑动来移动方块或使用屏幕上的控制按钮。"
   },
-  "textCounter": {
-    "title": "文本计数器",
-    "description": "统计字符、字词、句子、段落，并计算演讲/阅读时间。",
-    "placeholder": "开始输入或在此处粘贴您的文本...",
-    "clear": "清除",
-    "stats": {
-      "characters": "字符数",
-      "charactersNoSpaces": "字符数（不含空格）",
-      "words": "字词数",
-      "sentences": "句子数",
-      "paragraphs": "段落数",
-      "lines": "行数",
-      "readingTime": "阅读时间",
-      "speakingTime": "演讲时间"
-    },
-    "textLanguage": "文本语言",
-    "languages": {
-      "en": "英语",
-      "vi": "越南语",
-      "et": "爱沙尼亚语",
-      "zh": "中文",
-      "ru": "俄语",
-      "custom": "其他 / 自定义",
-      "advanced": "高级设置"
-    },
-    "speed": {
-      "label": "速度",
-      "slow": "慢",
-      "average": "中等",
-      "fast": "快",
-      "custom": "自定义",
-      "readingWpm": "阅读（词/分钟）",
-      "speakingWpm": "演讲（词/分钟）",
-      "englishDefaultsWarning": "时间估算器目前使用的是英语默认速度。请切换到“自定义”以输入准确的数值。"
-    },
-    "advanced": {
-      "title": "高级设置",
-      "disableWords": "停用字词统计",
-      "disableWordsDesc": "对于表意文字和婆罗米系文字，空格并不用于分隔字词。",
-      "newlineAsParagraph": "将每行视为一个段落",
-      "newlineAsParagraphDesc": "将单个换行符计为段落分隔，而不需要空行。行计数器将被隐藏。"
-    },
-    "privacy": {
-      "summary": "隐私信息",
-      "body": "此工具完全在您的浏览器中运行。您可以断开互联网连接，它仍然可以工作，您的文本绝不会被发送到任何地方。",
-      "technicalLabel": "技术验证方法：",
-      "technical": "如需验证，请打开浏览器的开发者工具 (F12) → 网络 (Network) 选项卡，然后在文本区域中输入内容，并确认在页面加载完成后没有发出任何请求。"
-    }
+  "2048.undo": {
+    "other": "撤销"
   },
-  "tools": {
-    "title": "工具",
-    "description": "一些有用的小工具。因为我找不到真正符合我需求的，所以自己做了。",
-    "items": {
-      "counter": {
-        "title": "文本计数器",
-        "icon": "🔤",
-        "description": "统计字符、字词、句子、段落，并估算阅读/演讲时间。"
-      }
-    }
+  "2048.title": {
+    "other": "2048"
   },
-  "slashes": {
-    "title": "斜杠",
-    "description": "本网站所有主要页面的列表。"
+  "2048.instructions4": {
+    "other": "达到2048后，您可以继续玩以获得更高的分数！"
+  },
+  "nav.home": {
+    "other": "首页"
+  },
+  "nav.about": {
+    "other": "关于"
+  },
+  "nav.projects": {
+    "other": "项目"
+  },
+  "nav.blog": {
+    "other": "博客"
+  },
+  "nav.now": {
+    "other": "现在"
+  },
+  "nav.uses": {
+    "other": "工具"
+  },
+  "nav.contact": {
+    "other": "联系"
+  },
+  "nav.guestbook": {
+    "other": "留言簿"
+  },
+  "nav.colophon": {
+    "other": "版权信息"
+  },
+  "nav.webring": {
+    "other": "Webring"
+  },
+  "nav.scrapbook": {
+    "other": "随笔"
+  },
+  "nav.slashes": {
+    "other": "网站地图"
+  },
+  "nav.brand": {
+    "other": "品牌素材包"
+  },
+  "nav.badges": {
+    "other": "徽章"
+  },
+  "nav.tools": {
+    "other": "工具"
+  },
+  "languageNotice.message": {
+    "other": "此语言的翻译仍在进行中。某些内容可能不完整或缺失。"
+  },
+  "languageNotice.dismiss": {
+    "other": "关闭"
+  },
+  "language.main": {
+    "other": "主要语言"
+  },
+  "language.beta": {
+    "other": "测试语言"
+  },
+  "language.other": {
+    "other": "其他语言"
+  },
+  "language.auto": {
+    "other": "自动（浏览器语言）"
+  },
+  "language.search": {
+    "other": "搜索语言..."
+  },
+  "language.en": {
+    "other": "英语"
+  },
+  "language.vi": {
+    "other": "越南语"
+  },
+  "language.et": {
+    "other": "爱沙尼亚语"
+  },
+  "language.ru": {
+    "other": "俄语"
+  },
+  "language.da": {
+    "other": "丹麦语"
+  },
+  "language.tr": {
+    "other": "土耳其语"
+  },
+  "language.zh": {
+    "other": "中文"
+  },
+  "language.pl": {
+    "other": "波兰语"
+  },
+  "language.sv": {
+    "other": "瑞典语"
+  },
+  "language.fi": {
+    "other": "芬兰语"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "早安，勤劳的小蜜蜂"
+  },
+  "greetings.afternoon": {
+    "other": "下午好呀！"
+  },
+  "greetings.evening": {
+    "other": "晚上好好休息放松一下吧！"
+  },
+  "greetings.night": {
+    "other": "还没睡？我也是呢。"
+  },
+  "home.buttons.about": {
+    "other": "关于我"
+  },
+  "home.buttons.projects": {
+    "other": "看看我的项目"
+  },
+  "home.footer": {
+    "other": "欢迎来到我的网站。随便逛逛吧。"
+  },
+  "home.heading": {
+    "other": "你好，我是承靖"
+  },
+  "home.subheading": {
+    "other": "经济在学，代码在敲，猫咪在抱。"
+  },
+  "home.contactButton": {
+    "other": "联系我"
+  },
+  "home.aboutButton": {
+    "other": "关于我"
+  },
+  "home.blogButton": {
+    "other": "看看我的博客"
+  },
+  "home.guestbookButton": {
+    "other": "签写留言簿"
+  },
+  "home.recentPosts": {
+    "other": "最新博客文章"
+  },
+  "home.latestNow": {
+    "other": "我现在在做什么"
+  },
+  "home.currentMood": {
+    "other": "当前心情"
+  },
+  "home.currentStatus": {
+    "other": "当前状态"
+  },
+  "home.time": {
+    "other": "当前时间"
+  },
+  "home.yourTime": {
+    "other": "你的时间"
+  },
+  "home.myTime": {
+    "other": "我的时间"
+  },
+  "home.viewAllWebrings": {
+    "other": "查看所有网站环"
+  },
+  "home.checkOutSites": {
+    "other": "去看看这些网站吧！"
+  },
+  "home.androidCountdown": {
+    "other": "安卓将在 X 天内变成一个封闭的操作系统"
+  },
+  "guestbook.title": {
+    "other": "留言簿"
+  },
+  "guestbook.description": {
+    "other": "在我的留言簿上留言吧！"
+  },
+  "guestbook.poweredBy": {
+    "other": "技术支持由"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "关于我"
+  },
+  "about.description": {
+    "other": "关于我是谁、我来自哪里、我的热情所在以及我正在为之奋斗的目标的故事。"
+  },
+  "about.chapters.6.title": {
+    "other": "我还没说完呢"
+  },
+  "about.chapters.6.content1": {
+    "other": "所以这是\"别人\"不应该看到的部分。"
+  },
+  "about.chapters.6.content2": {
+    "other": "请允许我自称为\"我\"。我还是很生气。非常生气。我仍然在后悔自己的一部分从未有机会真正活过。仍然有些早上醒来，感觉一切都偏离了轨道，却不知道为什么。有时候我想过逃跑然后消失，换个新名字，住在新城市，说一种新语言。或者有时候是反过来，放下一切。而且有一次我差点就真的这么做了。"
+  },
+  "about.chapters.6.content3": {
+    "other": "有些日子我觉得自己不再是人了。有些时候我觉得自己更像是一个试图凝聚成形的记忆。像是我自己也无法再触及的某种柔软之物的回响。但也有一些日子，我像身体里通了电一样燃烧。我能感受到周围的每一个细节，从皮肤上的阳光，到正在播放的歌单里轻柔的音符，到人们在感到足够安全可以展现自我时眼神和面容的变化。这些微小的东西，不知怎地，仍然支撑着我活下去。"
+  },
+  "about.chapters.6.content4": {
+    "other": "我还没完成成为某个我也不知道是谁或什么样的版本。但我确定一件事，那就是我已经受够了总是假装自己很好，我再也不会保持沉默了。"
+  },
+  "projects.title": {
+    "other": "我的项目"
+  },
+  "projects.description": {
+    "other": "我参与或正在进行的个人、学术和社会活动项目的汇总。有些已经完成，有些还在进行中。"
+  },
+  "projects.status.completed": {
+    "other": "已完成"
+  },
+  "projects.status.inProgress": {
+    "other": "进行中"
+  },
+  "projects.status.planned": {
+    "other": "计划中"
+  },
+  "projects.categories.personal": {
+    "other": "个人"
+  },
+  "projects.categories.academic": {
+    "other": "学术"
+  },
+  "projects.categories.activism": {
+    "other": "社会活动"
+  },
+  "projects.details.what": {
+    "other": "这是什么"
+  },
+  "projects.details.learned": {
+    "other": "我学到了什么"
+  },
+  "projects.details.why": {
+    "other": "这个项目对我很重要，因为"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "点击查看详情"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "点击关闭"
+  },
+  "projects.statusLabels.completed": {
+    "other": "已完成"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "进行中"
+  },
+  "projects.statusLabels.planned": {
+    "other": "计划中"
+  },
+  "projects.buttons.showRandom": {
+    "other": "再显示几个项目"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "隐藏吧，太多了"
+  },
+  "projects.filters.all": {
+    "other": "全部"
+  },
+  "projects.clickToFlip": {
+    "other": "翻转"
+  },
+  "projects.what": {
+    "other": "这是什么？"
+  },
+  "projects.learned": {
+    "other": "我学到了什么"
+  },
+  "projects.why": {
+    "other": "我为什么要做这个？"
+  },
+  "blog.title": {
+    "other": "博客"
+  },
+  "blog.description": {
+    "other": "一些想法，一些心情，偶尔还有一些抱怨。随时写，什么情绪都有。"
+  },
+  "blog.language": {
+    "other": "语言"
+  },
+  "blog.languageFilter": {
+    "other": "按语言筛选"
+  },
+  "blog.tag": {
+    "other": "标签"
+  },
+  "blog.sort": {
+    "other": "排序文章"
+  },
+  "blog.category": {
+    "other": "类别"
+  },
+  "blog.noPosts": {
+    "other": "还没有文章哦，稍后再来看看吧！"
+  },
+  "blog.search": {
+    "other": "搜索文章..."
+  },
+  "blog.sortNew": {
+    "other": "最新优先"
+  },
+  "blog.sortOld": {
+    "other": "最旧优先"
+  },
+  "blog.sortReadTime": {
+    "other": "阅读时间"
+  },
+  "blog.sortABC": {
+    "other": "按字母排序"
+  },
+  "blog.filter": {
+    "other": "筛选"
+  },
+  "blog.filterDescription": {
+    "other": "筛选博客文章"
+  },
+  "blog.activeFilter": {
+    "other": "活动过滤器："
+  },
+  "blog.filterNoMatch": {
+    "other": "没有符合筛选条件的文章。试着调整一下吧～"
+  },
+  "blog.clearFilter": {
+    "other": "清除所有过滤器"
+  },
+  "blog.mood": {
+    "other": "心情"
+  },
+  "blog.cat": {
+    "other": "喵星人认证"
+  },
+  "blog.prev": {
+    "other": "上一篇文章"
+  },
+  "blog.next": {
+    "other": "下一篇文章"
+  },
+  "blog.jumpToPost": {
+    "other": "跳转到文章"
+  },
+  "blog.back": {
+    "other": "返回博客列表"
+  },
+  "blog.showingPosts": {
+    "other": "正在显示 {{total}} 篇中的第 {{current}} 篇"
+  },
+  "blog.minRead": {
+    "other": "分钟阅读"
+  },
+  "blog.rss": {
+    "other": "RSS 订阅源"
+  },
+  "blog.subscribeRSS": {
+    "other": "通过 RSS 订阅"
+  },
+  "blog.allPosts": {
+    "other": "所有文章源"
+  },
+  "blog.languageFeeds": {
+    "other": "特定语言源"
+  },
+  "blog.rssDescription": {
+    "other": "在您喜欢的阅读器中订阅我的 RSS 源，以便第一时间获取新文章通知。"
+  },
+  "blog.atom": {
+    "other": "Atom 订阅源"
+  },
+  "blog.subscribeAtom": {
+    "other": "通过 Atom 订阅"
+  },
+  "blog.atomDescription": {
+    "other": "在您喜欢的阅读器中订阅我的 Atom 源，以便第一时间获取新文章通知。"
+  },
+  "blog.availableIn": {
+    "other": "此页面也有以下语言版本"
+  },
+  "blog.comments": {
+    "other": "评论"
+  },
+  "blog.webmentions": {
+    "other": "网络提及"
+  },
+  "blog.webmentionsNone": {
+    "other": "暂无网络提及。成为第一个回应的人吧！"
+  },
+  "blog.webmentionLike": {
+    "other": "赞了此文"
+  },
+  "blog.webmentionRepost": {
+    "other": "转发了此文"
+  },
+  "blog.webmentionReply": {
+    "other": "回复了"
+  },
+  "blog.webmentionMention": {
+    "other": "提及了此文"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "第一篇文章"
+  },
+  "blog.tagLabels.identity": {
+    "other": "身份认同"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "归属感"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "内省"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "浏览器"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "开放网络"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "默认应用"
+  },
+  "blog.tagLabels.software": {
+    "other": "软件"
+  },
+  "blog.tagLabels.tools": {
+    "other": "工具"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "新年"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "反思"
+  },
+  "blog.tagLabels.health": {
+    "other": "健康"
+  },
+  "blog.tagLabels.tet": {
+    "other": "越南新年"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "越南"
+  },
+  "blog.tagLabels.military": {
+    "other": "军事"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "安全加固"
+  },
+  "blog.tagLabels.values": {
+    "other": "价值观"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "个人哲学"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "个人"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "元"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "身份认同"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "技术"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "隐私"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "观点"
+  },
+  "blog.categoryLabels.life": {
+    "other": "生活"
+  },
+  "blog.categoryLabels.security": {
+    "other": "安全"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "指南"
+  },
+  "now.title": {
+    "other": "现在"
+  },
+  "now.description": {
+    "other": "我正在做、正在想、正在琢磨的事情。"
+  },
+  "now.lastUpdated": {
+    "other": "最后更新"
+  },
+  "now.whatIsNow": {
+    "other": "/now 页面是什么？"
+  },
+  "now.whatIsNowDescription": {
+    "other": "/now 页面是个人网站上的一页，用来告诉大家这个人目前、当天或最近专注于什么。你可以在这里了解更多："
+  },
+  "now.categories.reading": {
+    "other": "正在读"
+  },
+  "now.categories.coding": {
+    "other": "正在写代码"
+  },
+  "now.categories.drinking": {
+    "other": "正在喝"
+  },
+  "now.categories.listening": {
+    "other": "正在听"
+  },
+  "now.categories.premid": {
+    "other": "Discord活动"
+  },
+  "now.categories.thinking": {
+    "other": "正在想"
+  },
+  "now.categories.studying": {
+    "other": "正在学"
+  },
+  "now.categories.planning": {
+    "other": "正在计划"
+  },
+  "uses.title": {
+    "other": "工具"
+  },
+  "uses.description": {
+    "other": "我日常使用的所有东西的汇总。这个页面的灵感来自"
+  },
+  "uses.websiteDescription": {
+    "other": "一个大家分享日常工作和生活中使用的东西的地方。"
+  },
+  "uses.categories.hardware": {
+    "other": "硬件设备"
+  },
+  "uses.categories.mobile": {
+    "other": "移动设备"
+  },
+  "uses.categories.audio": {
+    "other": "耳机"
+  },
+  "uses.categories.os": {
+    "other": "操作系统 & 浏览器"
+  },
+  "uses.categories.development": {
+    "other": "编程"
+  },
+  "uses.categories.email": {
+    "other": "效率应用"
+  },
+  "uses.categories.privacy": {
+    "other": "安全 & 隐私"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "手机折腾工具"
+  },
+  "uses.categories.mapping": {
+    "other": "地图"
+  },
+  "uses.categories.gaming": {
+    "other": "游戏"
+  },
+  "uses.categories.multimedia": {
+    "other": "多媒体"
+  },
+  "uses.categories.design": {
+    "other": "设计 & 绘画"
+  },
+  "uses.categories.photo": {
+    "other": "照片编辑"
+  },
+  "uses.categories.video": {
+    "other": "视频 & 音频"
+  },
+  "uses.categories.media": {
+    "other": "媒体服务"
+  },
+  "uses.subsections.design": {
+    "other": "设计 & 绘画"
+  },
+  "uses.subsections.photo": {
+    "other": "照片编辑"
+  },
+  "uses.subsections.video": {
+    "other": "视频 & 音频"
+  },
+  "uses.subsections.media": {
+    "other": "媒体服务"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "点击 5 次显示"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "(还需点击 {{clicks}} 次才能显示)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "隐藏平台"
+  },
+  "contact.title": {
+    "other": "联系"
+  },
+  "contact.description": {
+    "other": "联系我的方式。"
+  },
+  "contact.message": {
+    "other": "别害羞，来打个招呼吧。如果你想专业点，也可以预约 1 对 1 交流"
+  },
+  "contact.disclaimer": {
+    "other": "我会回复邮件的。嗯，大概吧。除非我被猫或其他什么东西分心了"
+  },
+  "contact.sections.contactMe": {
+    "other": "联系我"
+  },
+  "contact.sections.socialMedia": {
+    "other": "我在社交媒体上"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "我在其他平台上"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "联系我"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "我在社交媒体上"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "我在其他平台上"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "公钥"
+  },
+  "contact.links.universityEmail": {
+    "other": "学校邮箱"
+  },
+  "contact.links.bookMeeting": {
+    "other": "预约与我 1 对 1 交流"
+  },
+  "contact.links.messengerNote": {
+    "other": "我不太活跃在 Facebook 和 Messenger 上。如果你通过这里发消息，我不能保证很快回复。"
+  },
+  "contact.links.pgpKey": {
+    "other": "PGP 公钥"
+  },
+  "contact.links.sshKey": {
+    "other": "SSH 公钥"
+  },
+  "moodCat.title": {
+    "other": "今日精选猫咪图"
+  },
+  "moodCat.hover": {
+    "other": "猫咪正在默默地评判你"
+  },
+  "moodCat.refresh": {
+    "other": "换张猫咪图看看"
+  },
+  "moodCat.seeMore": {
+    "other": "查看更多猫咪"
+  },
+  "tetris.title": {
+    "other": "俄罗斯方块"
+  },
+  "tetris.description": {
+    "other": "一个经典的下落方块和消除行的游戏"
+  },
+  "tetris.gameInfo": {
+    "other": "游戏信息"
+  },
+  "tetris.score": {
+    "other": "分数"
+  },
+  "tetris.level": {
+    "other": "等级"
+  },
+  "tetris.status": {
+    "other": "状态"
+  },
+  "tetris.next": {
+    "other": "下一个"
+  },
+  "tetris.gameOver": {
+    "other": "游戏结束"
+  },
+  "tetris.paused": {
+    "other": "已暂停"
+  },
+  "tetris.playing": {
+    "other": "游戏中"
+  },
+  "tetris.ready": {
+    "other": "准备好"
+  },
+  "tetris.playAgain": {
+    "other": "再玩一次"
+  },
+  "tetris.pause": {
+    "other": "暂停"
+  },
+  "tetris.resume": {
+    "other": "继续"
+  },
+  "tetris.start": {
+    "other": "开始"
+  },
+  "tetris.reset": {
+    "other": "重置"
+  },
+  "tetris.controls": {
+    "other": "控制"
+  },
+  "tetris.moveLeft": {
+    "other": "向左移动"
+  },
+  "tetris.moveRight": {
+    "other": "向右移动"
+  },
+  "tetris.moveDown": {
+    "other": "向下移动"
+  },
+  "tetris.rotate": {
+    "other": "旋转"
+  },
+  "tetris.hardDrop": {
+    "other": "快速下落"
+  },
+  "tetris.pauseGame": {
+    "other": "暂停游戏"
+  },
+  "tetris.musicOn": {
+    "other": "音乐开"
+  },
+  "tetris.musicOff": {
+    "other": "音乐关"
+  },
+  "tetris.nowPlaying": {
+    "other": "正在播放"
+  },
+  "tetris.spacebar": {
+    "other": "空格键"
+  },
+  "scrapbook.title": {
+    "other": "开发日志"
+  },
+  "scrapbook.description": {
+    "other": "我搭建这个网站时的一些开发日志。"
+  },
+  "scrapbook.noEntries": {
+    "other": "暂无记录。"
+  },
+  "settings.title": {
+    "other": "设置"
+  },
+  "settings.theme": {
+    "other": "主题"
+  },
+  "settings.themeAuto": {
+    "other": "自动"
+  },
+  "settings.themeLight": {
+    "other": "浅色主题"
+  },
+  "settings.themeDark": {
+    "other": "深色主题"
+  },
+  "settings.stars": {
+    "other": "闪烁星星"
+  },
+  "settings.reduceMotion": {
+    "other": "减少动画"
+  },
+  "settings.highContrast": {
+    "other": "高对比度"
+  },
+  "settings.dyslexiaFont": {
+    "other": "阅读障碍字体"
+  },
+  "settings.timezone": {
+    "other": "时区"
+  },
+  "settings.tzYours": {
+    "other": "你的"
+  },
+  "settings.tzAuthor": {
+    "other": "承靖的"
+  },
+  "settings.music": {
+    "other": "音乐"
+  },
+  "settings.musicUnavailable": {
+    "other": "暂时不可用"
+  },
+  "webrings.title": {
+    "other": "网站环"
+  },
+  "webrings.description": {
+    "other": "我加入的网站环。探索更多独立网站和个人博客。"
+  },
+  "webrings.intro1": {
+    "other": "网站环是由志同道合的人创建的网站集合，通常围绕某个主题、美学或共同兴趣。（来自 safonts 网站环）"
+  },
+  "webrings.intro2": {
+    "other": "本网站是这些网站环的一部分。点击链接访问我邻居的网站，如果该网站环有随机功能，也可以访问其他成员。选择你喜欢的任何环！"
+  },
+  "webrings.previous": {
+    "other": "上一个"
+  },
+  "webrings.random": {
+    "other": "随机"
+  },
+  "webrings.next": {
+    "other": "下一个"
+  },
+  "webrings.previousAria": {
+    "other": "{{name}} 中的上一个网站"
+  },
+  "webrings.randomAria": {
+    "other": "{{name}} 中的随机网站"
+  },
+  "webrings.nextAria": {
+    "other": "{{name}} 中的下一个网站"
+  },
+  "webrings.pending.title": {
+    "other": "等待批准"
+  },
+  "webrings.pending.description": {
+    "other": "这些是我已申请加入并等待批准的网站环。"
+  },
+  "webrings.pending.badge": {
+    "other": "待批准"
+  },
+  "badges.title": {
+    "other": "网页徽章合集"
+  },
+  "badges.description": {
+    "other": "我的网站上使用的经典网页徽章和按钮合集。"
+  },
+  "badges.pageTitle": {
+    "other": "经典网页徽章合集"
+  },
+  "badges.pageDescription": {
+    "other": "我收集这些 88x31 的徽章是为了展示我和这个网站真正关心的事物。这是对 Geocities 时代的怀旧，那时的互联网还没被企业化和 AI 生成的垃圾内容填满。如果你有希望我添加的徽章，尽管告诉我。"
+  },
+  "badges.myBadgeTitle": {
+    "other": "我的徽章（点击展开）"
+  },
+  "badges.myBadgeIntro": {
+    "other": "使用此徽章链接到我的网站："
+  },
+  "badges.hotlinkUrl": {
+    "other": "直链 URL (Hotlink)："
+  },
+  "badges.htmlCodeTitle": {
+    "other": "HTML 代码"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "嵌入建议"
+  },
+  "badges.suggestion1": {
+    "other": "在 CSS 中使用"
+  },
+  "badges.suggestion1b": {
+    "other": "以保留像素艺术风格。"
+  },
+  "badges.suggestion2": {
+    "other": "直接链接到我的主页，地址为"
+  },
+  "badges.suggestion3": {
+    "other": "徽章尺寸为 88x31 像素，建议在 HTML 中将宽高加倍至"
+  },
+  "badges.suggestion3b": {
+    "other": "以便在高分辨率屏幕上更易于阅读。"
+  },
+  "badges.collectionHeading": {
+    "other": "徽章合集"
+  },
+  "badges.search": {
+    "other": "搜索徽章..."
+  },
+  "badges.filterByCategory": {
+    "other": "按类别筛选"
+  },
+  "badges.verboseView": {
+    "other": "详细视图"
+  },
+  "badges.badgeOnlyView": {
+    "other": "仅徽章"
+  },
+  "badges.showingCount": {
+    "other": "显示 {{count}} 个徽章"
+  },
+  "badges.showingFiltered": {
+    "other": "显示 {{total}} 个徽章中的 {{filtered}} 个"
+  },
+  "badges.noResults": {
+    "other": "未找到符合搜索条件的徽章"
+  },
+  "badges.categories.all": {
+    "other": "全部"
+  },
+  "badges.categories.personal": {
+    "other": "个人"
+  },
+  "badges.categories.friends": {
+    "other": "朋友"
+  },
+  "badges.categories.other-sites": {
+    "other": "其他网站"
+  },
+  "badges.categories.software": {
+    "other": "软件"
+  },
+  "badges.categories.web": {
+    "other": "网页"
+  },
+  "badges.categories.fun": {
+    "other": "娱乐"
+  },
+  "brand.pageTitle": {
+    "other": "品牌"
+  },
+  "brand.pageDescription": {
+    "other": "视觉识别和品牌元素。如果你想引用或链接到本站，请使用这些素材。"
+  },
+  "brand.name.title": {
+    "other": "名称"
+  },
+  "brand.name.nameLabel": {
+    "other": "名字"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "显示名称"
+  },
+  "brand.name.symbolNote": {
+    "other": "“所以”符号 (∴) 始终是我显示名称的一部分。它代表结果、逻辑结论、连接以及思维过程的终点；它直接且形状稳定。"
+  },
+  "brand.logo.title": {
+    "other": "标志"
+  },
+  "brand.logo.faceOnly": {
+    "other": "仅头像"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "半身像"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (或其倍数)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (或其倍数)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "徽章"
+  },
+  "brand.badge.urlLabel": {
+    "other": "直接链接"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "HTML 代码"
+  },
+  "brand.colors.title": {
+    "other": "颜色"
+  },
+  "brand.colors.names.primary": {
+    "other": "主色"
+  },
+  "brand.colors.names.background": {
+    "other": "背景"
+  },
+  "brand.colors.names.card": {
+    "other": "卡片"
+  },
+  "brand.colors.names.foreground": {
+    "other": "前景"
+  },
+  "brand.colors.names.muted": {
+    "other": "柔和"
+  },
+  "brand.colors.names.border": {
+    "other": "边框"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "主要强调色"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "页面背景"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "卡片背景"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "主要文本颜色"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "次要元素"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "边框和分割线"
+  },
+  "brand.colors.darkMode": {
+    "other": "深色模式"
+  },
+  "brand.colors.lightMode": {
+    "other": "浅色模式"
+  },
+  "brand.fonts.title": {
+    "other": "字体"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "标题"
+  },
+  "brand.fonts.usage.body": {
+    "other": "正文和界面 (UI)"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "中文文本"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "代码和等宽文本"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "越南语字喃 (Chữ Nôm)"
+  },
+  "brand.fonts.weight": {
+    "other": "字重："
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "在字体库中查看"
+  },
+  "brand.fonts.languages.english": {
+    "other": "英语"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "越南语"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "波兰语"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "俄语"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "日语"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "希伯来语"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "泰语"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "符号"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "中文 (简体)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "中文 (繁体)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "越南语 (字喃)"
+  },
+  "brand.usage.title": {
+    "other": "几点说明"
+  },
+  "brand.usage.point1Title": {
+    "other": "随意使用"
+  },
+  "brand.usage.point1Text": {
+    "other": "使用徽章、Logo 或链接到本站无需申请许可。拿去用，做热链 (hotlink)，或者直接甩到你的网站上。我不在乎。实际上，我反而会很开心。"
+  },
+  "brand.usage.point2Title": {
+    "other": "保持徽章的像素风格"
+  },
+  "brand.usage.point2Text": {
+    "other": "如果你使用徽章 (badge)，请务必在 CSS 中添加 'image-rendering: pixelated' (Firefox 用 'crisp-edges')。没有它，浏览器会把像素搞得模糊不清，看起来像垃圾一样。这是像素艺术，请把它当成像素艺术来对待。"
+  },
+  "brand.usage.point3Title": {
+    "other": "署名很好，但非必须"
+  },
+  "brand.usage.point3Text": {
+    "other": "如果你写文章介绍本站或在博客中使用这些素材，能加个回链我会很感激。但如果你只是把我的徽章加到友情链接页，那就不用做多余的事了。我提供的徽章 HTML 代码已经包含链接了。"
+  },
+  "brand.usage.point4Title": {
+    "other": "别搞些奇怪的"
+  },
+  "brand.usage.point4Text": {
+    "other": "别用这些素材来冒充我，声称我支持某些我并不支持的东西，或者搞得像我跟什么不正经的东西有关系似的。我相信你分得清“链接到喜欢的网站”和“冒充他人”的区别。如果你不确定自己在做的事是不是很怪，那八成就是很怪。"
+  },
+  "brand.usage.footer": {
+    "other": "就这样，只要用得体面点，咱们就没问题。"
+  },
+  "colophon.title": {
+    "other": "网站信息"
+  },
+  "colophon.description": {
+    "other": "这个网站背后的故事"
+  },
+  "colophon.siteHistory.title": {
+    "other": "网站历史"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "我是在2023年底注册了这个网站域名，但它的设计在这段时间里改变了很多次。第一个版本只是某个免费主机上的WordPress页面，第二个版本是Carrd.co页面，第三个版本基于Astro构建。当前版本是我完全重新设计并从头开始构建的。"
+  },
+  "colophon.siteHistory.content2": {
+    "other": "每个版本都是一次进化，最新的这个版本更注重速度、可访问性（accessibility）和一点点更\"像我\"、更能体现\"我\"的感觉。"
+  },
+  "colophon.technologyStack.title": {
+    "other": "使用的技术栈"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "支持服务器端渲染和静态网站生成的 React 框架"
+  },
+  "colophon.technologyStack.react": {
+    "other": "用于构建用户界面的 JavaScript 库"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "实用优先的 CSS 框架（写 CSS 而无需写太多 CSS）"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "基于 Radix UI 和 Tailwind 构建的可复用组件库"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "用于 React 的动画库"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "国际化框架"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "基于 JavaScript 的开源编程语言扩展"
+  },
+  "colophon.hosting.title": {
+    "other": "网站托管 (Hosting)"
+  },
+  "colophon.hosting.content1": {
+    "other": "网站托管在"
+  },
+  "colophon.hosting.content2": {
+    "other": "，支持从 GitHub 无缝运行 Web 代码。"
+  },
+  "colophon.hosting.content3": {
+    "other": "域名由"
+  },
+  "colophon.hosting.content4": {
+    "other": "管理，他们还提供了额外的安全防火墙和网站性能优化支持。"
+  },
+  "colophon.design.title": {
+    "other": "设计理念"
+  },
+  "colophon.design.p1": {
+    "other": "本网站的设计注重无障碍性和性能。它无需启用 JavaScript 即可运行，使用语义化 HTML，并且不使用任何跟踪 Cookie，以此尊重您的隐私。"
+  },
+  "colophon.design.p2": {
+    "other": "设计旨在现代美学与经典 Web 极简主义之间取得平衡。默认开启深色模式，因为我爱惜我的视网膜。"
+  },
+  "colophon.webStandards.title": {
+    "other": "Web 标准"
+  },
+  "colophon.webStandards.intro": {
+    "other": "本站实现了："
+  },
+  "colophon.webStandards.microformats": {
+    "other": "微格式 (Microformats)"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "RSS、Atom 和 JSON 订阅源"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt 和 sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "无障碍访问"
+  },
+  "colophon.accessibility.intro": {
+    "other": "我致力于让所有人都能访问本站。功能包括："
+  },
+  "colophon.accessibility.item1": {
+    "other": "语义化 HTML 结构"
+  },
+  "colophon.accessibility.item2": {
+    "other": "跳至内容链接"
+  },
+  "colophon.accessibility.item3": {
+    "other": "正确的标题层级"
+  },
+  "colophon.accessibility.item4": {
+    "other": "WCAG 2.1 AA 颜色对比度"
+  },
+  "colophon.accessibility.item5": {
+    "other": "支持键盘导航"
+  },
+  "colophon.accessibility.item6": {
+    "other": "尊重减弱动态效果首选项"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "如果您遇到任何无障碍访问问题，请"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "告诉我"
+  },
+  "colophon.inspiration.title": {
+    "other": "灵感来源"
+  },
+  "colophon.inspiration.content1": {
+    "other": "这个页面的灵感来自"
+  },
+  "colophon.inspiration.content2": {
+    "other": "，而它的灵感又来自"
+  },
+  "colophon.inspiration.content3": {
+    "other": "最初的想法来自"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Maggie Appleton 的 colophon"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Gwern Branwen 的 colophon"
+  },
+  "footer.copyright": {
+    "other": "2026，∴ 承靖 (Jarema)，知识共享-署名 4.0 国际 (CC BY-4.0)"
+  },
+  "footer.madeWith": {
+    "other": "用所有的爱制作"
+  },
+  "footer.andChaos": {
+    "other": "和几天瞎搞代码的时光"
+  },
+  "footer.uptime": {
+    "other": "运行状态"
+  },
+  "footer.siteStatus": {
+    "other": "网站状态"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "键盘快捷键"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "导航"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "操作"
+  },
+  "keyboardShortcuts.close": {
+    "other": "关闭"
+  },
+  "keyboardShortcuts.home": {
+    "other": "首页"
+  },
+  "keyboardShortcuts.about": {
+    "other": "关于我"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "博客"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "项目"
+  },
+  "keyboardShortcuts.now": {
+    "other": "现在"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "使用工具"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "联系"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "版本信息"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "网站地图"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "开发日志"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "俄罗斯方块"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "切换语言"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "切换主题"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "刷新猫咪心情"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "打开快捷键列表"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "打开操作搜索"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Webrings"
+  },
+  "actionSearch.2048": {
+    "other": "玩 2048"
+  },
+  "actionSearch.title": {
+    "other": "搜索操作"
+  },
+  "actionSearch.placeholder": {
+    "other": "搜索操作..."
+  },
+  "actionSearch.noResults": {
+    "other": "未找到操作"
+  },
+  "actionSearch.goTo": {
+    "other": "跳转到页面"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "切换主题"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "切换到深色模式"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "切换到浅色模式"
+  },
+  "actionSearch.appearance": {
+    "other": "外观"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "切换语言"
+  },
+  "actionSearch.refreshCat": {
+    "other": "来只新的心情猫猫"
+  },
+  "actionSearch.playGame": {
+    "other": "玩游戏"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "查看所有快捷键"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "按 . 打开命令面板"
+  },
+  "actionSearch.escToClose": {
+    "other": "按 ESC 关闭"
+  },
+  "actionSearch.fun": {
+    "other": "趣味"
+  },
+  "actionSearch.games": {
+    "other": "游戏"
+  },
+  "actionSearch.tetris": {
+    "other": "玩俄罗斯方块"
+  },
+  "actionSearch.help": {
+    "other": "帮助"
+  },
+  "actionSearch.projects.category": {
+    "other": "浏览项目卡片"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "关闭翻转卡片"
+  },
+  "actionSearch.projects.left": {
+    "other": "向左浏览"
+  },
+  "actionSearch.projects.right": {
+    "other": "向右浏览"
+  },
+  "actionSearch.projects.up": {
+    "other": "向上浏览"
+  },
+  "actionSearch.projects.down": {
+    "other": "向下浏览"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "翻转项目卡片：{{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "浏览博客文章"
+  },
+  "actionSearch.blog.next": {
+    "other": "下一篇文章"
+  },
+  "actionSearch.blog.prev": {
+    "other": "上一篇文章"
+  },
+  "actionSearch.blog.search": {
+    "other": "搜索博客文章"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "筛选博客文章"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "跳转到文章 {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "返回博客列表"
+  },
+  "actionSearch.about.category": {
+    "other": "浏览关于页面部分"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "跳转到章节 {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "浏览使用工具部分"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "跳转到 {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "浏览 Now 页面部分"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "跳转到 {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "浏览尾注部分"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "跳转到 {{section}}"
+  },
+  "actionSearch.tools": {
+    "other": "工具"
+  },
+  "textCounter.title": {
+    "other": "文本计数器"
+  },
+  "textCounter.description": {
+    "other": "统计字符、字词、句子、段落，并计算演讲/阅读时间。"
+  },
+  "textCounter.placeholder": {
+    "other": "开始输入或在此处粘贴您的文本..."
+  },
+  "textCounter.clear": {
+    "other": "清除"
+  },
+  "textCounter.stats.characters": {
+    "other": "字符数"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "字符数（不含空格）"
+  },
+  "textCounter.stats.words": {
+    "other": "字词数"
+  },
+  "textCounter.stats.sentences": {
+    "other": "句子数"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "段落数"
+  },
+  "textCounter.stats.lines": {
+    "other": "行数"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "阅读时间"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "演讲时间"
+  },
+  "textCounter.textLanguage": {
+    "other": "文本语言"
+  },
+  "textCounter.languages.en": {
+    "other": "英语"
+  },
+  "textCounter.languages.vi": {
+    "other": "越南语"
+  },
+  "textCounter.languages.et": {
+    "other": "爱沙尼亚语"
+  },
+  "textCounter.languages.zh": {
+    "other": "中文"
+  },
+  "textCounter.languages.ru": {
+    "other": "俄语"
+  },
+  "textCounter.languages.custom": {
+    "other": "其他 / 自定义"
+  },
+  "textCounter.languages.advanced": {
+    "other": "高级设置"
+  },
+  "textCounter.speed.label": {
+    "other": "速度"
+  },
+  "textCounter.speed.slow": {
+    "other": "慢"
+  },
+  "textCounter.speed.average": {
+    "other": "中等"
+  },
+  "textCounter.speed.fast": {
+    "other": "快"
+  },
+  "textCounter.speed.custom": {
+    "other": "自定义"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "阅读（词/分钟）"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "演讲（词/分钟）"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "时间估算器目前使用的是英语默认速度。请切换到“自定义”以输入准确的数值。"
+  },
+  "textCounter.advanced.title": {
+    "other": "高级设置"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "停用字词统计"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "对于表意文字和婆罗米系文字，空格并不用于分隔字词。"
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "将每行视为一个段落"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "将单个换行符计为段落分隔，而不需要空行。行计数器将被隐藏。"
+  },
+  "textCounter.privacy.summary": {
+    "other": "隐私信息"
+  },
+  "textCounter.privacy.body": {
+    "other": "此工具完全在您的浏览器中运行。您可以断开互联网连接，它仍然可以工作，您的文本绝不会被发送到任何地方。"
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "技术验证方法："
+  },
+  "textCounter.privacy.technical": {
+    "other": "如需验证，请打开浏览器的开发者工具 (F12) → 网络 (Network) 选项卡，然后在文本区域中输入内容，并确认在页面加载完成后没有发出任何请求。"
+  },
+  "tools.title": {
+    "other": "工具"
+  },
+  "tools.description": {
+    "other": "一些有用的小工具。因为我找不到真正符合我需求的，所以自己做了。"
+  },
+  "tools.items.counter.title": {
+    "other": "文本计数器"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "统计字符、字词、句子、段落，并估算阅读/演讲时间。"
+  },
+  "slashes.title": {
+    "other": "斜杠"
+  },
+  "slashes.description": {
+    "other": "本网站所有主要页面的列表。"
   }
 }

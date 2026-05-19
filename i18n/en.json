@@ -1,762 +1,1754 @@
 {
-  "404": {
-    "title": "You've wandered off the map",
-    "description": "The cat doesn't even know this place.",
-    "button": "Go back home",
-    "sitemap": "View site map",
-    "enjoycat": "While you're lost, enjoy this cat:"
+  "404.title": {
+    "other": "You've wandered off the map"
   },
-  "2048": {
-    "title": "2048",
-    "description": "Join the tiles, get to 2048!",
-    "score": "Score",
-    "best": "Best",
-    "gameOver": "Game Over!",
-    "finalScore": "Final score",
-    "tryAgain": "Try again",
-    "youWin": "You win!",
-    "currentScore": "Current score",
-    "keepPlaying": "Keep playing",
-    "newGame": "New game",
-    "howToPlay": "How to play",
-    "instructions1": "Use your arrow keys or WASD to move the tiles. When two tiles with the same number touch, they merge into one!",
-    "instructions2": "After each move, a new tile appears (either 2 or 4).",
-    "instructions3": "Create a tile with the number 2048 to win the game!",
-    "instructions4": "After reaching 2048, you can continue playing to achieve even higher scores!",
-    "controls": "Controls",
-    "moveLeft": "Move left",
-    "moveRight": "Move right",
-    "moveUp": "Move up",
-    "moveDown": "Move down",
-    "touchInstructions": "On mobile devices, use the on-screen controls to move tiles.",
-    "undo": "Undo"
+  "404.description": {
+    "other": "The cat doesn't even know this place."
   },
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "blog": "Blog",
-    "now": "Now",
-    "uses": "Uses",
-    "contact": "Contact",
-    "guestbook": "Guestbook",
-    "colophon": "Colophon",
-    "webring": "Webrings",
-    "badges": "Badges",
-    "scrapbook": "Scrapbook",
-    "slashes": "Slashes",
-    "brand": "Brand kit",
-    "tools": "Tools"
+  "404.button": {
+    "other": "Go back home"
   },
-  "languageNotice": {
-    "message": "Translations for this language are still under construction. Some content may be incomplete or missing.",
-    "dismiss": "Dismiss"
+  "404.sitemap": {
+    "other": "View site map"
   },
-  "language": {
-    "main": "Main languages",
-    "beta": "Languages in beta",
-    "other": "Other languages",
-    "auto": "Auto (browser language)",
-    "search": "Search languages...",
-    "en": "English",
-    "vi": "Vietnamese",
-    "ru": "Russian",
-    "et": "Estonian",
-    "da": "Danish",
-    "tr": "Turkish",
-    "zh": "Chinese",
-    "pl": "Polish",
-    "sv": "Swedish",
-    "fi": "Finnish",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "While you're lost, enjoy this cat:"
   },
-  "greetings": {
-    "morning": "Good morning, traveler.",
-    "afternoon": "Good afternoon, wanderer.",
-    "evening": "Good evening, explorer.",
-    "night": "Still awake? Me too."
+  "2048.title": {
+    "other": "2048"
   },
-  "home": {
-    "buttons": {
-      "about": "About me",
-      "projects": "See my projects"
-    },
-    "footer": "Welcome to my digital garden. Feel free to explore.",
-    "heading": "hi there, i'm Jarema",
-    "subheading": "Economics major, sometimes coder, most times cat whisperer.",
-    "contactButton": "Contact me",
-    "aboutButton": "About me",
-    "blogButton": "Read my blog",
-    "guestbookButton": "Sign my guestbook",
-    "recentPosts": "Recent blog posts",
-    "latestNow": "What I'm up to now",
-    "currentMood": "Current mood",
-    "currentStatus": "Current status",
-    "time": "Time",
-    "yourTime": "Your time",
-    "myTime": "My time",
-    "viewAllWebrings": "View all webrings",
-    "checkOutSites": "Check these sites out!",
-    "androidCountdown": "Android will become a locked-down operating system in X days"
+  "2048.description": {
+    "other": "Join the tiles, get to 2048!"
   },
-  "guestbook": {
-    "title": "Guestbook",
-    "description": "Leave a message on my guestbook!",
-    "poweredBy": "Powered by",
-    "atabook": "Atabook"
+  "2048.score": {
+    "other": "Score"
   },
-  "about": {
-    "title": "About me",
-    "description": "Basic facts about me, in a bento board.",
-    "stats": {
-      "self": "self",
-      "languages": "languages",
-      "siteVersions": "site versions",
-      "yearsOnline": "years online"
-    },
-    "terminal": {
-      "fastfetch": {
-        "os": "Fedora Linux",
-        "host": "jarema.me",
-        "uptime": "99.99%",
-        "shell": "bash",
-        "theme": "Starry Space [Jarema]",
-        "cpu": "1 human brain cell + cat brain",
-        "gpu": "Astro + Tailwind"
-      },
-      "whoami": {
-        "line1": "That one weird dreamy moody boy",
-        "line2": "Economics at a diplomacy school",
-        "line3": "Writes about tech and economics",
-        "line4": "Hanoi -> Tartu -> somewhere in between",
-        "line5": "ADHD, still figuring things out",
-        "line6": "Glad you're here :3"
-      }
-    },
-    "interests": {
-      "title": "Interests",
-      "languagesTitle": "Languages",
-      "levels": {
-        "native": "Native",
-        "c2": "C2",
-        "b2": "B2",
-        "a2": "A2",
-        "a1": "A1"
-      }
-    },
-    "timeline": {
-      "copyHash": "Copy hash",
-      "copyHashTitle": "Copy full SHA"
-    },
-    "chapters": {
-      "6": {
-        "title": "i'm not done yet",
-        "content1": "so here's the part they weren't supposed to read.",
-        "content2": "i'm still angry. still grieving a version of myself that was never allowed to exist. still waking up some days wondering why everything feels a few degrees off. sometimes i think about running away, just disappearing, new name, new city, new language. sometimes i almost do it.",
-        "content3": "there are days i don't even feel human. more like a memory trying to solidify. more like an echo of something softer i can't reach anymore. other days, i'm electric. i feel every detail, sunlight on skin, quiet playlists, the way people's faces shift when they're finally safe enough to be themselves. it keeps me alive, somehow.",
-        "content4": "i'm not done becoming whoever the hell i'm supposed to be. but i am done pretending that i'm okay with staying silent."
-      }
-    }
+  "2048.best": {
+    "other": "Best"
   },
-  "projects": {
-    "title": "My projects",
-    "description": "A collection of personal, academic, and activism projects I've worked on. Some finished, some still cooking.",
-    "status": {
-      "completed": "Completed",
-      "inProgress": "Still cooking",
-      "planned": "Planned"
-    },
-    "statusLabels": {
-      "completed": "Completed",
-      "inProgress": "In progress",
-      "planned": "Planned"
-    },
-    "categories": {
-      "personal": "Personal",
-      "academic": "Academic",
-      "activism": "Activism"
-    },
-    "details": {
-      "what": "What it is",
-      "learned": "What I learned",
-      "why": "Why it matters"
-    },
-    "cardActions": {
-      "clickForDetails": "Click for details",
-      "clickToClose": "Click to close"
-    },
-    "buttons": {
-      "showRandom": "Show more randomness",
-      "hideRandom": "Hide the chaos",
-      "visit": "Visit project"
-    },
-    "filters": {
-      "all": "All"
-    },
-    "clickToFlip": "Click to flip",
-    "what": "What is it?",
-    "learned": "What I learned",
-    "why": "Why did I build it?"
+  "2048.gameOver": {
+    "other": "Game Over!"
   },
-  "blog": {
-    "title": "Blog",
-    "description": "Thoughts, reflections, and occasional rants. Written at various hours and states of mind.",
-    "language": "Language",
-    "languageFilter": "Filter by language",
-    "tag": "Tag",
-    "category": "Category",
-    "sort": "Sort posts",
-    "noPosts": "No posts yet. Check back soon!",
-    "search": "Search posts...",
-    "sortNew": "Newest first",
-    "sortOld": "Oldest first",
-    "sortReadTime": "Reading time",
-    "sortABC": "Alphabetical",
-    "filter": "Filter",
-    "filterDescription": "Filter blog posts",
-    "activeFilter": "Active filters:",
-    "filterNoMatch": "No posts match your filters. Try adjusting your search criteria.",
-    "clearFilter": "Clear all filters",
-    "mood": "Mood",
-    "cat": "Cat approved",
-    "prev": "Previous post",
-    "next": "Next post",
-    "jumpToPost": "Jump to post",
-    "back": "Back to blog list",
-    "showingPosts": "Showing {{current}} of {{total}} posts",
-    "minRead": "min read",
-    "rss": "RSS feed",
-    "subscribeRSS": "Subscribe via RSS",
-    "allPosts": "Feed of all posts",
-    "languageFeeds": "Language-specific feeds",
-    "rssDescription": "Subscribe to my RSS feeds in your favorite RSS reader to get notified about new posts.",
-    "atom": "Atom feed",
-    "subscribeAtom": "Subscribe via Atom",
-    "atomDescription": "Subscribe to my Atom feeds in your favorite RSS reader to get notified about new posts.",
-    "availableIn": "This page is also available in",
-    "comments": "Comments",
-    "webmentions": "Webmentions",
-    "webmentionsNone": "No webmentions yet. Be the first to respond!",
-    "webmentionLike": "liked this",
-    "webmentionRepost": "reposted this",
-    "webmentionReply": "replied",
-    "webmentionMention": "mentioned this",
-    "tagLabels": {
-      "first-post": "first post",
-      "identity": "identity",
-      "belonging": "belonging",
-      "introspection": "introspection",
-      "browsers": "browsers",
-      "chrome": "Chrome",
-      "open-web": "open web",
-      "app-defaults": "app defaults",
-      "software": "software",
-      "tools": "tools",
-      "new-year": "new year",
-      "reflection": "reflection",
-      "health": "health",
-      "tet": "Tet Holiday",
-      "vietnam": "Vietnam",
-      "military": "military",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "hardening",
-      "values": "values",
-      "personal-philosophy": "personal philosophy"
-    },
-    "categoryLabels": {
-      "personal": "Personal",
-      "meta": "Meta",
-      "identity": "Identity",
-      "technical": "Technical",
-      "privacy": "Privacy",
-      "opinions": "Opinions",
-      "life": "Life",
-      "security": "Security",
-      "guides": "Guides"
-    }
+  "2048.finalScore": {
+    "other": "Final score"
   },
-  "now": {
-    "title": "Now",
-    "description": "What I'm doing, thinking about, and focusing on right now.",
-    "lastUpdated": "Last updated",
-    "whatIsNow": "What is a /now page?",
-    "whatIsNowDescription": "A now page is a page on a personal website that tells you what a person is focused on at the current time, day, or very recently. You can learn more at",
-    "categories": {
-      "reading": "Reading",
-      "coding": "Coding",
-      "drinking": "Drinking",
-      "listening": "Listening",
-      "premid": "Discord activity",
-      "thinking": "Thinking",
-      "studying": "Studying",
-      "planning": "Planning"
-    }
+  "2048.tryAgain": {
+    "other": "Try again"
   },
-  "uses": {
-    "title": "Uses",
-    "description": "All the things I use on a daily basis. Also available on",
-    "websiteDescription": "a website where people share the stuff they use.",
-    "categories": {
-      "hardware": "Hardware",
-      "mobile": "Mobile",
-      "audio": "Audio",
-      "os": "Operating system & browsers",
-      "development": "Development",
-      "email": "Email & productivity",
-      "privacy": "Privacy & security",
-      "mobile_tools": "Mobile device tools",
-      "mapping": "Mapping",
-      "gaming": "Gaming",
-      "multimedia": "Multimedia",
-      "design": "Design & illustration",
-      "photo": "Photo editing",
-      "video": "Video & audio",
-      "media": "Streaming services"
-    },
-    "subsections": {
-      "design": "Design & illustration",
-      "photo": "Photo editing",
-      "video": "Video & audio",
-      "media": "Media services"
-    },
-    "hidden": {
-      "clickToReveal": "Click 5 times to reveal",
-      "clicksLeft": "({{clicks}} clicks to reveal)",
-      "platformPrefix": "Hidden platform"
-    }
+  "2048.youWin": {
+    "other": "You win!"
   },
-  "contact": {
-    "title": "Contact",
-    "description": "Ways to reach out and connect with me.",
-    "message": "don't be shy. say hi. or book a 1:1 if you're feeling professional :)",
-    "disclaimer": "i do respond to emails. probably. unless i get distracted by a bird or something idk",
-    "sections": {
-      "contactMe": "Contact me",
-      "socialMedia": "Me on social media",
-      "otherPlatforms": "Me on other platforms"
-    },
-    "sectionTitles": {
-      "contactMe": "Contact me",
-      "socialMedia": "Me on social media",
-      "otherPlatforms": "Me on other platforms",
-      "keys": "Public keys"
-    },
-    "links": {
-      "universityEmail": "University email",
-      "bookMeeting": "Book a meeting with me",
-      "messengerNote": "I'm very inactive on Facebook and Messenger. Replies will be on a best-effort basis.",
-      "pgpKey": "PGP public key",
-      "sshKey": "SSH public key"
-    }
+  "2048.currentScore": {
+    "other": "Current score"
   },
-  "moodCat": {
-    "title": "Cat of the day",
-    "hover": "judging you softly",
-    "refresh": "New cat, who dis?",
-    "seeMore": "See more cats"
+  "2048.keepPlaying": {
+    "other": "Keep playing"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "A classic game of falling blocks and disappearing lines",
-    "gameInfo": "Game info",
-    "score": "Score",
-    "level": "Level",
-    "status": "Status",
-    "next": "Next",
-    "gameOver": "Game over",
-    "paused": "Paused",
-    "playing": "Playing",
-    "ready": "Ready",
-    "playAgain": "Play again",
-    "pause": "Pause",
-    "resume": "Resume",
-    "start": "Start",
-    "reset": "Reset",
-    "controls": "Controls",
-    "moveLeft": "Move left",
-    "moveRight": "Move right",
-    "moveDown": "Move down",
-    "rotate": "Rotate block",
-    "hardDrop": "Hard drop",
-    "pauseGame": "Pause game",
-    "musicOn": "Music on",
-    "musicOff": "Music off",
-    "nowPlaying": "Now playing",
-    "spacebar": "Space"
+  "2048.newGame": {
+    "other": "New game"
   },
-  "scrapbook": {
-    "title": "Devlog",
-    "description": "Some development logs when I was building this site.",
-    "noEntries": "No entries yet."
+  "2048.howToPlay": {
+    "other": "How to play"
   },
-  "settings": {
-    "title": "Settings",
-    "theme": "Theme",
-    "themeAuto": "Auto",
-    "themeLight": "Light theme",
-    "themeDark": "Dark theme",
-    "stars": "Twinkling stars",
-    "reduceMotion": "Reduce motion",
-    "highContrast": "High contrast",
-    "fontFamily": "Font",
-    "fontSystem": "System",
-    "fontPersonal": "Personal",
-    "timezone": "Timezone",
-    "tzYours": "Yours",
-    "tzAuthor": "Jarema's",
-    "music": "Music",
-    "musicUnavailable": "Currently unavailable"
+  "2048.instructions1": {
+    "other": "Use your arrow keys or WASD to move the tiles. When two tiles with the same number touch, they merge into one!"
   },
-  "slashes": {
-    "title": "Slashes",
-    "description": "A list of all main pages on this site."
+  "2048.instructions2": {
+    "other": "After each move, a new tile appears (either 2 or 4)."
   },
-  "webrings": {
-    "title": "Webrings",
-    "description": "Webrings I'm part of. Discover more independent websites and personal blogs.",
-    "intro1": "A webring is a collection of websites made by like-minded folks, usually centered around a topic, aesthetic, or common interest. (from the safonts webring)",
-    "intro2": "This website is part of these webrings. Click on the links to visit my neighbors' sites, and other members', if that webring has random functionality. Choose any ring you like!",
-    "previous": "Previous",
-    "random": "Random",
-    "next": "Next",
-    "previousAria": "Previous site in {{name}}",
-    "randomAria": "Random site in {{name}}",
-    "nextAria": "Next site in {{name}}",
-    "pending": {
-      "title": "Pending approval",
-      "description": "These are webrings I've applied to join and am waiting for approval.",
-      "badge": "Pending"
-    }
+  "2048.instructions3": {
+    "other": "Create a tile with the number 2048 to win the game!"
   },
-  "badges": {
-    "title": "Web badges collection",
-    "description": "A collection of classic web badges and buttons used on my website.",
-    "pageTitle": "Classic web badges collection",
-    "pageDescription": "I've collected these 88x31 badges to show what I and this site actually care about. They're a throwback to the Geocities era when the internet was less corporate/AI slop. If you have a badge you'd like me to add here, just ask me.",
-    "myBadgeTitle": "My badge (click to expand)",
-    "myBadgeIntro": "Use this badge to link to my website:",
-    "hotlinkUrl": "Hotlink URL:",
-    "htmlCodeTitle": "HTML code",
-    "embeddingSuggestionsTitle": "Suggestions for embedding",
-    "suggestion1": "Use",
-    "suggestion1b": "in your CSS to preserve the pixel art style.",
-    "suggestion2": "Link directly to my homepage at",
-    "suggestion3": "The badge is 88x31 pixels, double the width and height in your HTML to",
-    "suggestion3b": "to make them easier to read on higher-resolution screens.",
-    "collectionHeading": "Badges collection",
-    "search": "Search badges...",
-    "filterByCategory": "Filter by category",
-    "verboseView": "Verbose",
-    "badgeOnlyView": "Badge only",
-    "showingCount": "Showing {{count}} badges",
-    "showingFiltered": "Showing {{filtered}} of {{total}} badges",
-    "noResults": "No badges found matching your search criteria",
-    "categories": {
-      "all": "All",
-      "personal": "Personal",
-      "friends": "Friends",
-      "other-sites": "Other sites",
-      "software": "Software",
-      "web": "Web",
-      "fun": "Fun"
-    }
+  "2048.instructions4": {
+    "other": "After reaching 2048, you can continue playing to achieve even higher scores!"
   },
-  "brand": {
-    "pageTitle": "Brand",
-    "pageDescription": "Visual identity and brand elements. Use these if you want to reference or link to this site.",
-    "name": {
-      "title": "Name",
-      "nameLabel": "Name",
-      "displayNameLabel": "Display name",
-      "symbolNote": "The therefore symbol (∴) is always part of my display name. It represents the results, logical conclusions, connections, the end of a thought process, it's direct and it's a stable shape."
-    },
-    "logo": {
-      "title": "Logo",
-      "faceOnly": "Face only",
-      "faceAndBody": "Face and body",
-      "dimensions1": "384×384px (or its multiples)",
-      "dimensions2": "512×512px (or its multiples)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "Badge",
-      "urlLabel": "Direct URL",
-      "htmlLabel": "HTML code"
-    },
-    "colors": {
-      "title": "Colors",
-      "names": {
-        "primary": "Primary",
-        "background": "Background",
-        "card": "Card",
-        "foreground": "Foreground",
-        "muted": "Muted",
-        "border": "Border"
-      },
-      "descriptions": {
-        "primary": "Main accent color",
-        "background": "Page background",
-        "card": "Card background",
-        "foreground": "Main text color",
-        "muted": "Muted elements",
-        "border": "Borders and dividers"
-      },
-      "darkMode": "Dark mode",
-      "lightMode": "Light mode"
-    },
-    "fonts": {
-      "title": "Fonts",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "Headings and titles",
-        "body": "Body text and UI elements",
-        "notoSansSC": "Chinese text",
-        "monaspice": "Code and monospace text",
-        "hanNomGothic": "Vietnamese Chữ Nôm"
-      },
-      "weight": "Weight:",
-      "viewOnGoogleFonts": "View on font repository",
-      "languages": {
-        "english": "English",
-        "vietnamese": "Vietnamese",
-        "polish": "Polish",
-        "russian": "Russian",
-        "japanese": "Japanese",
-        "hebrew": "Hebrew",
-        "thai": "Thai",
-        "symbols": "Symbols",
-        "chineseSimplified": "Chinese (Simplified)",
-        "chineseTraditional": "Chinese (Traditional)",
-        "vietnameseHanNom": "Vietnamese Chữ Nôm"
-      }
-    },
-    "usage": {
-      "title": "A few notes",
-      "point1Title": "Feel free to use these",
-      "point1Text": "You don't need to ask permission to use the badge, logo, or link to this site. Grab them, hotlink them, slap them on your website. I don't care. Actually, I'd be delighted.",
-      "point2Title": "Keep the badge's pixelated style",
-      "point2Text": "If you're using the badge, please use image-rendering: pixelated (or crisp-edges for Firefox) in your CSS. Without it, browsers will blur the pixels and it'll look like garbage. It's pixel art, please treat it like pixel art.",
-      "point3Title": "Attribution is nice but optional",
-      "point3Text": "If you're writing about the site or using these in a blog post or article, a link back would be appreciated. But if you're just adding my badge to your links page, you don't need to do anything extra. My HTML snippet for the badge itself already links here.",
-      "point4Title": "Don't be weird about it",
-      "point4Text": "Don't use these to impersonate me, claim I endorsed something I didn't, or make it look like I'm affiliated with something sketchy. I trust you know the difference between linking to a site you like and pretending to be someone else. If you're unsure whether what you're doing is weird, it probably is.",
-      "footer": "That's it, just use them respectfully and we're good."
-    }
+  "2048.controls": {
+    "other": "Controls"
   },
-  "colophon": {
-    "title": "Colophon",
-    "description": "The story behind this website and how it was built",
-    "siteHistory": {
-      "title": "Site history",
-      "content1": "This site was just registered in late 2023, yet the design has changed a lot over the span of its life. The first version was just a basic WordPress site hosted on a sketchy free hosting provider, the second was Carrd-based, and the third was built with Astro. This current iteration (the fourth version) is a complete redesign built from scratch with modern web technologies.",
-      "content2": "Each version has been an evolution, with this latest one focusing on performance, accessibility, full keyboard navigation, and a more personal touch that better represents who I am and what I care about."
-    },
-    "technologyStack": {
-      "title": "Technology stack",
-      "nextjs": "React framework that enables server-side rendering and static site generation",
-      "react": "JavaScript library for building user interfaces",
-      "tailwind": "Utility-first CSS framework",
-      "shadcn": "Reusable component library built with Radix UI and Tailwind",
-      "framer": "Animation library for React",
-      "i18next": "Internationalization framework",
-      "typescript": "Strongly typed programming language that builds on JavaScript"
-    },
-    "hosting": {
-      "title": "Hosting & deployment",
-      "content1": "The site is hosted on",
-      "content2": "which provides seamless deployment from GitHub, automatic HTTPS, and global CDN distribution.",
-      "content3": "The domain is managed through",
-      "content4": "which provides additional security and performance benefits."
-    },
-    "design": {
-      "title": "Design philosophy",
-      "p1": "This website is designed with accessibility and performance in mind. It works without JavaScript enabled, uses semantic HTML, and respects your privacy by not using any tracking cookies.",
-      "p2": "The design aims for a balance between modern aesthetics and classic web simplicity. Dark mode is the default because I like my retinas."
-    },
-    "webStandards": {
-      "title": "Web standards",
-      "intro": "This site implements:",
-      "microformats": "microformats",
-      "feeds": "RSS, Atom, and JSON feeds",
-      "robots": "robots.txt and sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "Accessibility",
-      "intro": "I strive to make this site accessible to everyone. Features include:",
-      "item1": "Semantic HTML structure",
-      "item2": "Skip-to-content links",
-      "item3": "Proper heading hierarchy",
-      "item4": "WCAG 2.1 AA color contrast",
-      "item5": "Keyboard navigable",
-      "item6": "Respects reduced motion preferences",
-      "reportText": "If you encounter any accessibility issues, please",
-      "contactLink": "let me know"
-    },
-    "inspiration": {
-      "title": "Inspiration",
-      "content1": "This page draws inspiration from",
-      "content2": "which in turn draws inspiration from",
-      "content3": "Original idea on",
-      "maggie": "Maggie Appleton's colophon",
-      "gwern": "Gwern Branwen's colophon"
-    }
+  "2048.moveLeft": {
+    "other": "Move left"
   },
-  "footer": {
-    "copyright": "2026, ∴ Jarema, CC BY 4.0",
-    "madeWith": "made with love",
-    "andChaos": "and a few weeks of screwing around",
-    "uptime": "Uptime",
-    "siteStatus": "Site status"
+  "2048.moveRight": {
+    "other": "Move right"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Keyboard shortcuts",
-    "navigation": "Navigation",
-    "actions": "Actions",
-    "close": "Close",
-    "home": "Home",
-    "about": "About",
-    "blog": "Blog",
-    "projects": "Projects",
-    "now": "Now",
-    "uses": "Uses",
-    "contact": "Contact",
-    "colophon": "Colophon",
-    "webring": "Webrings",
-    "slashes": "Slashes",
-    "scrapbook": "Devlog",
-    "tetris": "Tetris",
-    "cycleLanguage": "Cycle through languages",
-    "cycleTheme": "Cycle through themes",
-    "refreshCat": "Refresh mood cat",
-    "openShortcuts": "Open keyboard shortcuts",
-    "actionSearch": "Open Action Search"
+  "2048.moveUp": {
+    "other": "Move up"
   },
-  "actionSearch": {
-    "2048": "Play 2048",
-    "title": "Search actions",
-    "placeholder": "Search actions...",
-    "noResults": "No actions found",
-    "goTo": "Go to page",
-    "toggleTheme": "Toggle theme",
-    "switchDarkMode": "Switch to dark mode",
-    "switchLightMode": "Switch to light mode",
-    "appearance": "Appearance",
-    "cycleLanguage": "Cycle through languages",
-    "refreshCat": "Get a new mood cat",
-    "playGame": "Play game",
-    "viewShortcuts": "View all shortcuts",
-    "pressToOpen": "Press . to open command palette",
-    "escToClose": "ESC to close",
-    "fun": "Fun",
-    "tools": "Tools",
-    "games": "Games",
-    "tetris": "Play Tetris",
-    "help": "Help",
-    "projects": {
-      "category": "Navigate through project cards",
-      "closeCard": "Close flipped card",
-      "left": "Navigate left",
-      "right": "Navigate right",
-      "up": "Navigate up",
-      "down": "Navigate down",
-      "flipCard": "Flip project card: {{title}}"
-    },
-    "blog": {
-      "category": "Navigate through blog posts",
-      "next": "To next post",
-      "prev": "To previous post",
-      "search": "Search blog posts",
-      "filterTag": "Filter blog posts",
-      "jumpToPost": "Jump to post {{i}}",
-      "back": "Back to blog list"
-    },
-    "about": {
-      "category": "Navigate through about sections",
-      "jumpToChapter": "Jump to chapter {{i}}"
-    },
-    "uses": {
-      "category": "Navigate through uses sections",
-      "jumpToCategory": "Jump to {{category}}"
-    },
-    "now": {
-      "category": "Navigate through now sections",
-      "jumpToCategory": "Jump to {{category}}"
-    },
-    "colophon": {
-      "category": "Navigate through colophon sections",
-      "jumpToSection": "Jump to {{section}}"
-    }
+  "2048.moveDown": {
+    "other": "Move down"
   },
-  "textCounter": {
-    "title": "Text counter",
-    "description": "Count characters, words, sentences, paragraphs, and calculate speaking/reading time.",
-    "placeholder": "Start typing or paste your text here...",
-    "clear": "Clear",
-    "stats": {
-      "characters": "Characters",
-      "charactersNoSpaces": "Characters (no spaces)",
-      "words": "Words",
-      "sentences": "Sentences",
-      "paragraphs": "Paragraphs",
-      "lines": "Lines",
-      "readingTime": "Reading time",
-      "speakingTime": "Speaking time"
-    },
-    "textLanguage": "Text language",
-    "languages": {
-      "en": "English",
-      "vi": "Vietnamese",
-      "et": "Estonian",
-      "zh": "Chinese",
-      "ru": "Russian",
-      "custom": "Other / custom",
-      "advanced": "Advanced settings"
-    },
-    "speed": {
-      "label": "Speed",
-      "slow": "Slow",
-      "average": "Average",
-      "fast": "Fast",
-      "custom": "Custom",
-      "readingWpm": "Reading (WPM)",
-      "speakingWpm": "Speaking (WPM)",
-      "englishDefaultsWarning": "The time estimators are currently using English default speeds. Switch to \"Custom\" to input exact values."
-    },
-    "advanced": {
-      "title": "Advanced settings",
-      "disableWords": "Disable word count",
-      "disableWordsDesc": "For logographic and Brahmic languages, spaces don't separate words.",
-      "newlineAsParagraph": "Treat each line as a paragraph",
-      "newlineAsParagraphDesc": "Count single newlines as paragraph breaks instead of requiring blank lines. The line counter will be hidden."
-    },
-    "privacy": {
-      "summary": "Privacy",
-      "body": "This tool runs entirely in your browser. You can disconnect from the internet and it will still work, your text is never sent anywhere.",
-      "technicalLabel": "Technical info:",
-      "technical": "To verify, open browser DevTools (F12) → Network tab, then type in the text area and confirm no requests are made after the page finishes loading."
-    }
+  "2048.touchInstructions": {
+    "other": "On mobile devices, use the on-screen controls to move tiles."
   },
-  "tools": {
-    "title": "Tools",
-    "description": "Some handy utilities. Well, because I couldn't find any that really fit my needs.",
-    "items": {
-      "counter": {
-        "title": "Text counter",
-        "icon": "🔤",
-        "description": "Count characters, words, sentences, paragraphs, and estimate reading/speaking time."
-      }
-    }
+  "2048.undo": {
+    "other": "Undo"
+  },
+  "nav.home": {
+    "other": "Home"
+  },
+  "nav.about": {
+    "other": "About"
+  },
+  "nav.projects": {
+    "other": "Projects"
+  },
+  "nav.blog": {
+    "other": "Blog"
+  },
+  "nav.now": {
+    "other": "Now"
+  },
+  "nav.uses": {
+    "other": "Uses"
+  },
+  "nav.contact": {
+    "other": "Contact"
+  },
+  "nav.guestbook": {
+    "other": "Guestbook"
+  },
+  "nav.colophon": {
+    "other": "Colophon"
+  },
+  "nav.webring": {
+    "other": "Webrings"
+  },
+  "nav.badges": {
+    "other": "Badges"
+  },
+  "nav.scrapbook": {
+    "other": "Scrapbook"
+  },
+  "nav.slashes": {
+    "other": "Slashes"
+  },
+  "nav.brand": {
+    "other": "Brand kit"
+  },
+  "nav.tools": {
+    "other": "Tools"
+  },
+  "languageNotice.message": {
+    "other": "Translations for this language are still under construction. Some content may be incomplete or missing."
+  },
+  "languageNotice.dismiss": {
+    "other": "Dismiss"
+  },
+  "language.main": {
+    "other": "Main languages"
+  },
+  "language.beta": {
+    "other": "Languages in beta"
+  },
+  "language.other": {
+    "other": "Other languages"
+  },
+  "language.auto": {
+    "other": "Auto (browser language)"
+  },
+  "language.search": {
+    "other": "Search languages..."
+  },
+  "language.en": {
+    "other": "English"
+  },
+  "language.vi": {
+    "other": "Vietnamese"
+  },
+  "language.ru": {
+    "other": "Russian"
+  },
+  "language.et": {
+    "other": "Estonian"
+  },
+  "language.da": {
+    "other": "Danish"
+  },
+  "language.tr": {
+    "other": "Turkish"
+  },
+  "language.zh": {
+    "other": "Chinese"
+  },
+  "language.pl": {
+    "other": "Polish"
+  },
+  "language.sv": {
+    "other": "Swedish"
+  },
+  "language.fi": {
+    "other": "Finnish"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "Good morning, traveler."
+  },
+  "greetings.afternoon": {
+    "other": "Good afternoon, wanderer."
+  },
+  "greetings.evening": {
+    "other": "Good evening, explorer."
+  },
+  "greetings.night": {
+    "other": "Still awake? Me too."
+  },
+  "home.buttons.about": {
+    "other": "About me"
+  },
+  "home.buttons.projects": {
+    "other": "See my projects"
+  },
+  "home.footer": {
+    "other": "Welcome to my digital garden. Feel free to explore."
+  },
+  "home.heading": {
+    "other": "hi there, i'm Jarema"
+  },
+  "home.subheading": {
+    "other": "Economics major, sometimes coder, most times cat whisperer."
+  },
+  "home.contactButton": {
+    "other": "Contact me"
+  },
+  "home.aboutButton": {
+    "other": "About me"
+  },
+  "home.blogButton": {
+    "other": "Read my blog"
+  },
+  "home.guestbookButton": {
+    "other": "Sign my guestbook"
+  },
+  "home.recentPosts": {
+    "other": "Recent blog posts"
+  },
+  "home.latestNow": {
+    "other": "What I'm up to now"
+  },
+  "home.currentMood": {
+    "other": "Current mood"
+  },
+  "home.currentStatus": {
+    "other": "Current status"
+  },
+  "home.time": {
+    "other": "Time"
+  },
+  "home.yourTime": {
+    "other": "Your time"
+  },
+  "home.myTime": {
+    "other": "My time"
+  },
+  "home.viewAllWebrings": {
+    "other": "View all webrings"
+  },
+  "home.checkOutSites": {
+    "other": "Check these sites out!"
+  },
+  "home.androidCountdown": {
+    "other": "Android will become a locked-down operating system in X days"
+  },
+  "guestbook.title": {
+    "other": "Guestbook"
+  },
+  "guestbook.description": {
+    "other": "Leave a message on my guestbook!"
+  },
+  "guestbook.poweredBy": {
+    "other": "Powered by"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "About me"
+  },
+  "about.description": {
+    "other": "Basic facts about me, in a bento board."
+  },
+  "about.stats.self": {
+    "other": "self"
+  },
+  "about.stats.languages": {
+    "other": "languages"
+  },
+  "about.stats.siteVersions": {
+    "other": "site versions"
+  },
+  "about.stats.yearsOnline": {
+    "other": "years online"
+  },
+  "about.terminal.fastfetch.os": {
+    "other": "Fedora Linux"
+  },
+  "about.terminal.fastfetch.host": {
+    "other": "jarema.me"
+  },
+  "about.terminal.fastfetch.uptime": {
+    "other": "99.99%"
+  },
+  "about.terminal.fastfetch.shell": {
+    "other": "bash"
+  },
+  "about.terminal.fastfetch.theme": {
+    "other": "Starry Space [Jarema]"
+  },
+  "about.terminal.fastfetch.cpu": {
+    "other": "1 human brain cell + cat brain"
+  },
+  "about.terminal.fastfetch.gpu": {
+    "other": "Astro + Tailwind"
+  },
+  "about.terminal.whoami.line1": {
+    "other": "That one weird dreamy moody boy"
+  },
+  "about.terminal.whoami.line2": {
+    "other": "Economics at a diplomacy school"
+  },
+  "about.terminal.whoami.line3": {
+    "other": "Writes about tech and economics"
+  },
+  "about.terminal.whoami.line4": {
+    "other": "Hanoi -> Tartu -> somewhere in between"
+  },
+  "about.terminal.whoami.line5": {
+    "other": "ADHD, still figuring things out"
+  },
+  "about.terminal.whoami.line6": {
+    "other": "Glad you're here :3"
+  },
+  "about.interests.title": {
+    "other": "Interests"
+  },
+  "about.interests.languagesTitle": {
+    "other": "Languages"
+  },
+  "about.interests.levels.native": {
+    "other": "Native"
+  },
+  "about.interests.levels.c2": {
+    "other": "C2"
+  },
+  "about.interests.levels.b2": {
+    "other": "B2"
+  },
+  "about.interests.levels.a2": {
+    "other": "A2"
+  },
+  "about.interests.levels.a1": {
+    "other": "A1"
+  },
+  "about.timeline.copyHash": {
+    "other": "Copy hash"
+  },
+  "about.timeline.copyHashTitle": {
+    "other": "Copy full SHA"
+  },
+  "about.chapters.6.title": {
+    "other": "i'm not done yet"
+  },
+  "about.chapters.6.content1": {
+    "other": "so here's the part they weren't supposed to read."
+  },
+  "about.chapters.6.content2": {
+    "other": "i'm still angry. still grieving a version of myself that was never allowed to exist. still waking up some days wondering why everything feels a few degrees off. sometimes i think about running away, just disappearing, new name, new city, new language. sometimes i almost do it."
+  },
+  "about.chapters.6.content3": {
+    "other": "there are days i don't even feel human. more like a memory trying to solidify. more like an echo of something softer i can't reach anymore. other days, i'm electric. i feel every detail, sunlight on skin, quiet playlists, the way people's faces shift when they're finally safe enough to be themselves. it keeps me alive, somehow."
+  },
+  "about.chapters.6.content4": {
+    "other": "i'm not done becoming whoever the hell i'm supposed to be. but i am done pretending that i'm okay with staying silent."
+  },
+  "projects.title": {
+    "other": "My projects"
+  },
+  "projects.description": {
+    "other": "A collection of personal, academic, and activism projects I've worked on. Some finished, some still cooking."
+  },
+  "projects.status.completed": {
+    "other": "Completed"
+  },
+  "projects.status.inProgress": {
+    "other": "Still cooking"
+  },
+  "projects.status.planned": {
+    "other": "Planned"
+  },
+  "projects.statusLabels.completed": {
+    "other": "Completed"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "In progress"
+  },
+  "projects.statusLabels.planned": {
+    "other": "Planned"
+  },
+  "projects.categories.personal": {
+    "other": "Personal"
+  },
+  "projects.categories.academic": {
+    "other": "Academic"
+  },
+  "projects.categories.activism": {
+    "other": "Activism"
+  },
+  "projects.details.what": {
+    "other": "What it is"
+  },
+  "projects.details.learned": {
+    "other": "What I learned"
+  },
+  "projects.details.why": {
+    "other": "Why it matters"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "Click for details"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "Click to close"
+  },
+  "projects.buttons.showRandom": {
+    "other": "Show more randomness"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "Hide the chaos"
+  },
+  "projects.buttons.visit": {
+    "other": "Visit project"
+  },
+  "projects.filters.all": {
+    "other": "All"
+  },
+  "projects.clickToFlip": {
+    "other": "Click to flip"
+  },
+  "projects.what": {
+    "other": "What is it?"
+  },
+  "projects.learned": {
+    "other": "What I learned"
+  },
+  "projects.why": {
+    "other": "Why did I build it?"
+  },
+  "blog.title": {
+    "other": "Blog"
+  },
+  "blog.description": {
+    "other": "Thoughts, reflections, and occasional rants. Written at various hours and states of mind."
+  },
+  "blog.language": {
+    "other": "Language"
+  },
+  "blog.languageFilter": {
+    "other": "Filter by language"
+  },
+  "blog.tag": {
+    "other": "Tag"
+  },
+  "blog.category": {
+    "other": "Category"
+  },
+  "blog.sort": {
+    "other": "Sort posts"
+  },
+  "blog.noPosts": {
+    "other": "No posts yet. Check back soon!"
+  },
+  "blog.search": {
+    "other": "Search posts..."
+  },
+  "blog.sortNew": {
+    "other": "Newest first"
+  },
+  "blog.sortOld": {
+    "other": "Oldest first"
+  },
+  "blog.sortReadTime": {
+    "other": "Reading time"
+  },
+  "blog.sortABC": {
+    "other": "Alphabetical"
+  },
+  "blog.filter": {
+    "other": "Filter"
+  },
+  "blog.filterDescription": {
+    "other": "Filter blog posts"
+  },
+  "blog.activeFilter": {
+    "other": "Active filters:"
+  },
+  "blog.filterNoMatch": {
+    "other": "No posts match your filters. Try adjusting your search criteria."
+  },
+  "blog.clearFilter": {
+    "other": "Clear all filters"
+  },
+  "blog.mood": {
+    "other": "Mood"
+  },
+  "blog.cat": {
+    "other": "Cat approved"
+  },
+  "blog.prev": {
+    "other": "Previous post"
+  },
+  "blog.next": {
+    "other": "Next post"
+  },
+  "blog.jumpToPost": {
+    "other": "Jump to post"
+  },
+  "blog.back": {
+    "other": "Back to blog list"
+  },
+  "blog.showingPosts": {
+    "other": "Showing {{current}} of {{total}} posts"
+  },
+  "blog.minRead": {
+    "other": "min read"
+  },
+  "blog.rss": {
+    "other": "RSS feed"
+  },
+  "blog.subscribeRSS": {
+    "other": "Subscribe via RSS"
+  },
+  "blog.allPosts": {
+    "other": "Feed of all posts"
+  },
+  "blog.languageFeeds": {
+    "other": "Language-specific feeds"
+  },
+  "blog.rssDescription": {
+    "other": "Subscribe to my RSS feeds in your favorite RSS reader to get notified about new posts."
+  },
+  "blog.atom": {
+    "other": "Atom feed"
+  },
+  "blog.subscribeAtom": {
+    "other": "Subscribe via Atom"
+  },
+  "blog.atomDescription": {
+    "other": "Subscribe to my Atom feeds in your favorite RSS reader to get notified about new posts."
+  },
+  "blog.availableIn": {
+    "other": "This page is also available in"
+  },
+  "blog.comments": {
+    "other": "Comments"
+  },
+  "blog.webmentions": {
+    "other": "Webmentions"
+  },
+  "blog.webmentionsNone": {
+    "other": "No webmentions yet. Be the first to respond!"
+  },
+  "blog.webmentionLike": {
+    "other": "liked this"
+  },
+  "blog.webmentionRepost": {
+    "other": "reposted this"
+  },
+  "blog.webmentionReply": {
+    "other": "replied"
+  },
+  "blog.webmentionMention": {
+    "other": "mentioned this"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "first post"
+  },
+  "blog.tagLabels.identity": {
+    "other": "identity"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "belonging"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "introspection"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "browsers"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "open web"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "app defaults"
+  },
+  "blog.tagLabels.software": {
+    "other": "software"
+  },
+  "blog.tagLabels.tools": {
+    "other": "tools"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "new year"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "reflection"
+  },
+  "blog.tagLabels.health": {
+    "other": "health"
+  },
+  "blog.tagLabels.tet": {
+    "other": "Tet Holiday"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "Vietnam"
+  },
+  "blog.tagLabels.military": {
+    "other": "military"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "hardening"
+  },
+  "blog.tagLabels.values": {
+    "other": "values"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "personal philosophy"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "Personal"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "Meta"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "Identity"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "Technical"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "Privacy"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "Opinions"
+  },
+  "blog.categoryLabels.life": {
+    "other": "Life"
+  },
+  "blog.categoryLabels.security": {
+    "other": "Security"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "Guides"
+  },
+  "now.title": {
+    "other": "Now"
+  },
+  "now.description": {
+    "other": "What I'm doing, thinking about, and focusing on right now."
+  },
+  "now.lastUpdated": {
+    "other": "Last updated"
+  },
+  "now.whatIsNow": {
+    "other": "What is a /now page?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "A now page is a page on a personal website that tells you what a person is focused on at the current time, day, or very recently. You can learn more at"
+  },
+  "now.categories.reading": {
+    "other": "Reading"
+  },
+  "now.categories.coding": {
+    "other": "Coding"
+  },
+  "now.categories.drinking": {
+    "other": "Drinking"
+  },
+  "now.categories.listening": {
+    "other": "Listening"
+  },
+  "now.categories.premid": {
+    "other": "Discord activity"
+  },
+  "now.categories.thinking": {
+    "other": "Thinking"
+  },
+  "now.categories.studying": {
+    "other": "Studying"
+  },
+  "now.categories.planning": {
+    "other": "Planning"
+  },
+  "uses.title": {
+    "other": "Uses"
+  },
+  "uses.description": {
+    "other": "All the things I use on a daily basis. Also available on"
+  },
+  "uses.websiteDescription": {
+    "other": "a website where people share the stuff they use."
+  },
+  "uses.categories.hardware": {
+    "other": "Hardware"
+  },
+  "uses.categories.mobile": {
+    "other": "Mobile"
+  },
+  "uses.categories.audio": {
+    "other": "Audio"
+  },
+  "uses.categories.os": {
+    "other": "Operating system & browsers"
+  },
+  "uses.categories.development": {
+    "other": "Development"
+  },
+  "uses.categories.email": {
+    "other": "Email & productivity"
+  },
+  "uses.categories.privacy": {
+    "other": "Privacy & security"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Mobile device tools"
+  },
+  "uses.categories.mapping": {
+    "other": "Mapping"
+  },
+  "uses.categories.gaming": {
+    "other": "Gaming"
+  },
+  "uses.categories.multimedia": {
+    "other": "Multimedia"
+  },
+  "uses.categories.design": {
+    "other": "Design & illustration"
+  },
+  "uses.categories.photo": {
+    "other": "Photo editing"
+  },
+  "uses.categories.video": {
+    "other": "Video & audio"
+  },
+  "uses.categories.media": {
+    "other": "Streaming services"
+  },
+  "uses.subsections.design": {
+    "other": "Design & illustration"
+  },
+  "uses.subsections.photo": {
+    "other": "Photo editing"
+  },
+  "uses.subsections.video": {
+    "other": "Video & audio"
+  },
+  "uses.subsections.media": {
+    "other": "Media services"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "Click 5 times to reveal"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "({{clicks}} clicks to reveal)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "Hidden platform"
+  },
+  "contact.title": {
+    "other": "Contact"
+  },
+  "contact.description": {
+    "other": "Ways to reach out and connect with me."
+  },
+  "contact.message": {
+    "other": "don't be shy. say hi. or book a 1:1 if you're feeling professional :)"
+  },
+  "contact.disclaimer": {
+    "other": "i do respond to emails. probably. unless i get distracted by a bird or something idk"
+  },
+  "contact.sections.contactMe": {
+    "other": "Contact me"
+  },
+  "contact.sections.socialMedia": {
+    "other": "Me on social media"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "Me on other platforms"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "Contact me"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "Me on social media"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "Me on other platforms"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "Public keys"
+  },
+  "contact.links.universityEmail": {
+    "other": "University email"
+  },
+  "contact.links.bookMeeting": {
+    "other": "Book a meeting with me"
+  },
+  "contact.links.messengerNote": {
+    "other": "I'm very inactive on Facebook and Messenger. Replies will be on a best-effort basis."
+  },
+  "contact.links.pgpKey": {
+    "other": "PGP public key"
+  },
+  "contact.links.sshKey": {
+    "other": "SSH public key"
+  },
+  "moodCat.title": {
+    "other": "Cat of the day"
+  },
+  "moodCat.hover": {
+    "other": "judging you softly"
+  },
+  "moodCat.refresh": {
+    "other": "New cat, who dis?"
+  },
+  "moodCat.seeMore": {
+    "other": "See more cats"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "A classic game of falling blocks and disappearing lines"
+  },
+  "tetris.gameInfo": {
+    "other": "Game info"
+  },
+  "tetris.score": {
+    "other": "Score"
+  },
+  "tetris.level": {
+    "other": "Level"
+  },
+  "tetris.status": {
+    "other": "Status"
+  },
+  "tetris.next": {
+    "other": "Next"
+  },
+  "tetris.gameOver": {
+    "other": "Game over"
+  },
+  "tetris.paused": {
+    "other": "Paused"
+  },
+  "tetris.playing": {
+    "other": "Playing"
+  },
+  "tetris.ready": {
+    "other": "Ready"
+  },
+  "tetris.playAgain": {
+    "other": "Play again"
+  },
+  "tetris.pause": {
+    "other": "Pause"
+  },
+  "tetris.resume": {
+    "other": "Resume"
+  },
+  "tetris.start": {
+    "other": "Start"
+  },
+  "tetris.reset": {
+    "other": "Reset"
+  },
+  "tetris.controls": {
+    "other": "Controls"
+  },
+  "tetris.moveLeft": {
+    "other": "Move left"
+  },
+  "tetris.moveRight": {
+    "other": "Move right"
+  },
+  "tetris.moveDown": {
+    "other": "Move down"
+  },
+  "tetris.rotate": {
+    "other": "Rotate block"
+  },
+  "tetris.hardDrop": {
+    "other": "Hard drop"
+  },
+  "tetris.pauseGame": {
+    "other": "Pause game"
+  },
+  "tetris.musicOn": {
+    "other": "Music on"
+  },
+  "tetris.musicOff": {
+    "other": "Music off"
+  },
+  "tetris.nowPlaying": {
+    "other": "Now playing"
+  },
+  "tetris.spacebar": {
+    "other": "Space"
+  },
+  "scrapbook.title": {
+    "other": "Devlog"
+  },
+  "scrapbook.description": {
+    "other": "Some development logs when I was building this site."
+  },
+  "scrapbook.noEntries": {
+    "other": "No entries yet."
+  },
+  "settings.title": {
+    "other": "Settings"
+  },
+  "settings.theme": {
+    "other": "Theme"
+  },
+  "settings.themeAuto": {
+    "other": "Auto"
+  },
+  "settings.themeLight": {
+    "other": "Light theme"
+  },
+  "settings.themeDark": {
+    "other": "Dark theme"
+  },
+  "settings.stars": {
+    "other": "Twinkling stars"
+  },
+  "settings.reduceMotion": {
+    "other": "Reduce motion"
+  },
+  "settings.highContrast": {
+    "other": "High contrast"
+  },
+  "settings.fontFamily": {
+    "other": "Font"
+  },
+  "settings.fontSystem": {
+    "other": "System"
+  },
+  "settings.fontPersonal": {
+    "other": "Personal"
+  },
+  "settings.timezone": {
+    "other": "Timezone"
+  },
+  "settings.tzYours": {
+    "other": "Yours"
+  },
+  "settings.tzAuthor": {
+    "other": "Jarema's"
+  },
+  "settings.music": {
+    "other": "Music"
+  },
+  "settings.musicUnavailable": {
+    "other": "Currently unavailable"
+  },
+  "slashes.title": {
+    "other": "Slashes"
+  },
+  "slashes.description": {
+    "other": "A list of all main pages on this site."
+  },
+  "webrings.title": {
+    "other": "Webrings"
+  },
+  "webrings.description": {
+    "other": "Webrings I'm part of. Discover more independent websites and personal blogs."
+  },
+  "webrings.intro1": {
+    "other": "A webring is a collection of websites made by like-minded folks, usually centered around a topic, aesthetic, or common interest. (from the safonts webring)"
+  },
+  "webrings.intro2": {
+    "other": "This website is part of these webrings. Click on the links to visit my neighbors' sites, and other members', if that webring has random functionality. Choose any ring you like!"
+  },
+  "webrings.previous": {
+    "other": "Previous"
+  },
+  "webrings.random": {
+    "other": "Random"
+  },
+  "webrings.next": {
+    "other": "Next"
+  },
+  "webrings.previousAria": {
+    "other": "Previous site in {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "Random site in {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "Next site in {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "Pending approval"
+  },
+  "webrings.pending.description": {
+    "other": "These are webrings I've applied to join and am waiting for approval."
+  },
+  "webrings.pending.badge": {
+    "other": "Pending"
+  },
+  "badges.title": {
+    "other": "Web badges collection"
+  },
+  "badges.description": {
+    "other": "A collection of classic web badges and buttons used on my website."
+  },
+  "badges.pageTitle": {
+    "other": "Classic web badges collection"
+  },
+  "badges.pageDescription": {
+    "other": "I've collected these 88x31 badges to show what I and this site actually care about. They're a throwback to the Geocities era when the internet was less corporate/AI slop. If you have a badge you'd like me to add here, just ask me."
+  },
+  "badges.myBadgeTitle": {
+    "other": "My badge (click to expand)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "Use this badge to link to my website:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "Hotlink URL:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "HTML code"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "Suggestions for embedding"
+  },
+  "badges.suggestion1": {
+    "other": "Use"
+  },
+  "badges.suggestion1b": {
+    "other": "in your CSS to preserve the pixel art style."
+  },
+  "badges.suggestion2": {
+    "other": "Link directly to my homepage at"
+  },
+  "badges.suggestion3": {
+    "other": "The badge is 88x31 pixels, double the width and height in your HTML to"
+  },
+  "badges.suggestion3b": {
+    "other": "to make them easier to read on higher-resolution screens."
+  },
+  "badges.collectionHeading": {
+    "other": "Badges collection"
+  },
+  "badges.search": {
+    "other": "Search badges..."
+  },
+  "badges.filterByCategory": {
+    "other": "Filter by category"
+  },
+  "badges.verboseView": {
+    "other": "Verbose"
+  },
+  "badges.badgeOnlyView": {
+    "other": "Badge only"
+  },
+  "badges.showingCount": {
+    "other": "Showing {{count}} badges"
+  },
+  "badges.showingFiltered": {
+    "other": "Showing {{filtered}} of {{total}} badges"
+  },
+  "badges.noResults": {
+    "other": "No badges found matching your search criteria"
+  },
+  "badges.categories.all": {
+    "other": "All"
+  },
+  "badges.categories.personal": {
+    "other": "Personal"
+  },
+  "badges.categories.friends": {
+    "other": "Friends"
+  },
+  "badges.categories.other-sites": {
+    "other": "Other sites"
+  },
+  "badges.categories.software": {
+    "other": "Software"
+  },
+  "badges.categories.web": {
+    "other": "Web"
+  },
+  "badges.categories.fun": {
+    "other": "Fun"
+  },
+  "brand.pageTitle": {
+    "other": "Brand"
+  },
+  "brand.pageDescription": {
+    "other": "Visual identity and brand elements. Use these if you want to reference or link to this site."
+  },
+  "brand.name.title": {
+    "other": "Name"
+  },
+  "brand.name.nameLabel": {
+    "other": "Name"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "Display name"
+  },
+  "brand.name.symbolNote": {
+    "other": "The therefore symbol (∴) is always part of my display name. It represents the results, logical conclusions, connections, the end of a thought process, it's direct and it's a stable shape."
+  },
+  "brand.logo.title": {
+    "other": "Logo"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Face only"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Face and body"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (or its multiples)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (or its multiples)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "Badge"
+  },
+  "brand.badge.urlLabel": {
+    "other": "Direct URL"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "HTML code"
+  },
+  "brand.colors.title": {
+    "other": "Colors"
+  },
+  "brand.colors.names.primary": {
+    "other": "Primary"
+  },
+  "brand.colors.names.background": {
+    "other": "Background"
+  },
+  "brand.colors.names.card": {
+    "other": "Card"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Foreground"
+  },
+  "brand.colors.names.muted": {
+    "other": "Muted"
+  },
+  "brand.colors.names.border": {
+    "other": "Border"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Main accent color"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Page background"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Card background"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Main text color"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "Muted elements"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Borders and dividers"
+  },
+  "brand.colors.darkMode": {
+    "other": "Dark mode"
+  },
+  "brand.colors.lightMode": {
+    "other": "Light mode"
+  },
+  "brand.fonts.title": {
+    "other": "Fonts"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "Headings and titles"
+  },
+  "brand.fonts.usage.body": {
+    "other": "Body text and UI elements"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "Chinese text"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "Code and monospace text"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "Vietnamese Chữ Nôm"
+  },
+  "brand.fonts.weight": {
+    "other": "Weight:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "View on font repository"
+  },
+  "brand.fonts.languages.english": {
+    "other": "English"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "Vietnamese"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "Polish"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "Russian"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "Japanese"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "Hebrew"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "Thai"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "Symbols"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "Chinese (Simplified)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "Chinese (Traditional)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "Vietnamese Chữ Nôm"
+  },
+  "brand.usage.title": {
+    "other": "A few notes"
+  },
+  "brand.usage.point1Title": {
+    "other": "Feel free to use these"
+  },
+  "brand.usage.point1Text": {
+    "other": "You don't need to ask permission to use the badge, logo, or link to this site. Grab them, hotlink them, slap them on your website. I don't care. Actually, I'd be delighted."
+  },
+  "brand.usage.point2Title": {
+    "other": "Keep the badge's pixelated style"
+  },
+  "brand.usage.point2Text": {
+    "other": "If you're using the badge, please use image-rendering: pixelated (or crisp-edges for Firefox) in your CSS. Without it, browsers will blur the pixels and it'll look like garbage. It's pixel art, please treat it like pixel art."
+  },
+  "brand.usage.point3Title": {
+    "other": "Attribution is nice but optional"
+  },
+  "brand.usage.point3Text": {
+    "other": "If you're writing about the site or using these in a blog post or article, a link back would be appreciated. But if you're just adding my badge to your links page, you don't need to do anything extra. My HTML snippet for the badge itself already links here."
+  },
+  "brand.usage.point4Title": {
+    "other": "Don't be weird about it"
+  },
+  "brand.usage.point4Text": {
+    "other": "Don't use these to impersonate me, claim I endorsed something I didn't, or make it look like I'm affiliated with something sketchy. I trust you know the difference between linking to a site you like and pretending to be someone else. If you're unsure whether what you're doing is weird, it probably is."
+  },
+  "brand.usage.footer": {
+    "other": "That's it, just use them respectfully and we're good."
+  },
+  "colophon.title": {
+    "other": "Colophon"
+  },
+  "colophon.description": {
+    "other": "The story behind this website and how it was built"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Site history"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "This site was just registered in late 2023, yet the design has changed a lot over the span of its life. The first version was just a basic WordPress site hosted on a sketchy free hosting provider, the second was Carrd-based, and the third was built with Astro. This current iteration (the fourth version) is a complete redesign built from scratch with modern web technologies."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Each version has been an evolution, with this latest one focusing on performance, accessibility, full keyboard navigation, and a more personal touch that better represents who I am and what I care about."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Technology stack"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "React framework that enables server-side rendering and static site generation"
+  },
+  "colophon.technologyStack.react": {
+    "other": "JavaScript library for building user interfaces"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Utility-first CSS framework"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Reusable component library built with Radix UI and Tailwind"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "Animation library for React"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Internationalization framework"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "Strongly typed programming language that builds on JavaScript"
+  },
+  "colophon.hosting.title": {
+    "other": "Hosting & deployment"
+  },
+  "colophon.hosting.content1": {
+    "other": "The site is hosted on"
+  },
+  "colophon.hosting.content2": {
+    "other": "which provides seamless deployment from GitHub, automatic HTTPS, and global CDN distribution."
+  },
+  "colophon.hosting.content3": {
+    "other": "The domain is managed through"
+  },
+  "colophon.hosting.content4": {
+    "other": "which provides additional security and performance benefits."
+  },
+  "colophon.design.title": {
+    "other": "Design philosophy"
+  },
+  "colophon.design.p1": {
+    "other": "This website is designed with accessibility and performance in mind. It works without JavaScript enabled, uses semantic HTML, and respects your privacy by not using any tracking cookies."
+  },
+  "colophon.design.p2": {
+    "other": "The design aims for a balance between modern aesthetics and classic web simplicity. Dark mode is the default because I like my retinas."
+  },
+  "colophon.webStandards.title": {
+    "other": "Web standards"
+  },
+  "colophon.webStandards.intro": {
+    "other": "This site implements:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "microformats"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "RSS, Atom, and JSON feeds"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt and sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "Accessibility"
+  },
+  "colophon.accessibility.intro": {
+    "other": "I strive to make this site accessible to everyone. Features include:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "Semantic HTML structure"
+  },
+  "colophon.accessibility.item2": {
+    "other": "Skip-to-content links"
+  },
+  "colophon.accessibility.item3": {
+    "other": "Proper heading hierarchy"
+  },
+  "colophon.accessibility.item4": {
+    "other": "WCAG 2.1 AA color contrast"
+  },
+  "colophon.accessibility.item5": {
+    "other": "Keyboard navigable"
+  },
+  "colophon.accessibility.item6": {
+    "other": "Respects reduced motion preferences"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "If you encounter any accessibility issues, please"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "let me know"
+  },
+  "colophon.inspiration.title": {
+    "other": "Inspiration"
+  },
+  "colophon.inspiration.content1": {
+    "other": "This page draws inspiration from"
+  },
+  "colophon.inspiration.content2": {
+    "other": "which in turn draws inspiration from"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Original idea on"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Maggie Appleton's colophon"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Gwern Branwen's colophon"
+  },
+  "footer.copyright": {
+    "other": "2026, ∴ Jarema, CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "made with love"
+  },
+  "footer.andChaos": {
+    "other": "and a few weeks of screwing around"
+  },
+  "footer.uptime": {
+    "other": "Uptime"
+  },
+  "footer.siteStatus": {
+    "other": "Site status"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Keyboard shortcuts"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Navigation"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Actions"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Close"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Home"
+  },
+  "keyboardShortcuts.about": {
+    "other": "About"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blog"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Projects"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Now"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Uses"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "Contact"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Colophon"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Webrings"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "Slashes"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Devlog"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Cycle through languages"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Cycle through themes"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Refresh mood cat"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Open keyboard shortcuts"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Open Action Search"
+  },
+  "actionSearch.2048": {
+    "other": "Play 2048"
+  },
+  "actionSearch.title": {
+    "other": "Search actions"
+  },
+  "actionSearch.placeholder": {
+    "other": "Search actions..."
+  },
+  "actionSearch.noResults": {
+    "other": "No actions found"
+  },
+  "actionSearch.goTo": {
+    "other": "Go to page"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Toggle theme"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Switch to dark mode"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Switch to light mode"
+  },
+  "actionSearch.appearance": {
+    "other": "Appearance"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Cycle through languages"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Get a new mood cat"
+  },
+  "actionSearch.playGame": {
+    "other": "Play game"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "View all shortcuts"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "Press . to open command palette"
+  },
+  "actionSearch.escToClose": {
+    "other": "ESC to close"
+  },
+  "actionSearch.fun": {
+    "other": "Fun"
+  },
+  "actionSearch.tools": {
+    "other": "Tools"
+  },
+  "actionSearch.games": {
+    "other": "Games"
+  },
+  "actionSearch.tetris": {
+    "other": "Play Tetris"
+  },
+  "actionSearch.help": {
+    "other": "Help"
+  },
+  "actionSearch.projects.category": {
+    "other": "Navigate through project cards"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Close flipped card"
+  },
+  "actionSearch.projects.left": {
+    "other": "Navigate left"
+  },
+  "actionSearch.projects.right": {
+    "other": "Navigate right"
+  },
+  "actionSearch.projects.up": {
+    "other": "Navigate up"
+  },
+  "actionSearch.projects.down": {
+    "other": "Navigate down"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Flip project card: {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Navigate through blog posts"
+  },
+  "actionSearch.blog.next": {
+    "other": "To next post"
+  },
+  "actionSearch.blog.prev": {
+    "other": "To previous post"
+  },
+  "actionSearch.blog.search": {
+    "other": "Search blog posts"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Filter blog posts"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "Jump to post {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "Back to blog list"
+  },
+  "actionSearch.about.category": {
+    "other": "Navigate through about sections"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "Jump to chapter {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "Navigate through uses sections"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "Jump to {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "Navigate through now sections"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "Jump to {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Navigate through colophon sections"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "Jump to {{section}}"
+  },
+  "textCounter.title": {
+    "other": "Text counter"
+  },
+  "textCounter.description": {
+    "other": "Count characters, words, sentences, paragraphs, and calculate speaking/reading time."
+  },
+  "textCounter.placeholder": {
+    "other": "Start typing or paste your text here..."
+  },
+  "textCounter.clear": {
+    "other": "Clear"
+  },
+  "textCounter.stats.characters": {
+    "other": "Characters"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "Characters (no spaces)"
+  },
+  "textCounter.stats.words": {
+    "other": "Words"
+  },
+  "textCounter.stats.sentences": {
+    "other": "Sentences"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "Paragraphs"
+  },
+  "textCounter.stats.lines": {
+    "other": "Lines"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "Reading time"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "Speaking time"
+  },
+  "textCounter.textLanguage": {
+    "other": "Text language"
+  },
+  "textCounter.languages.en": {
+    "other": "English"
+  },
+  "textCounter.languages.vi": {
+    "other": "Vietnamese"
+  },
+  "textCounter.languages.et": {
+    "other": "Estonian"
+  },
+  "textCounter.languages.zh": {
+    "other": "Chinese"
+  },
+  "textCounter.languages.ru": {
+    "other": "Russian"
+  },
+  "textCounter.languages.custom": {
+    "other": "Other / custom"
+  },
+  "textCounter.languages.advanced": {
+    "other": "Advanced settings"
+  },
+  "textCounter.speed.label": {
+    "other": "Speed"
+  },
+  "textCounter.speed.slow": {
+    "other": "Slow"
+  },
+  "textCounter.speed.average": {
+    "other": "Average"
+  },
+  "textCounter.speed.fast": {
+    "other": "Fast"
+  },
+  "textCounter.speed.custom": {
+    "other": "Custom"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "Reading (WPM)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "Speaking (WPM)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "The time estimators are currently using English default speeds. Switch to \"Custom\" to input exact values."
+  },
+  "textCounter.advanced.title": {
+    "other": "Advanced settings"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "Disable word count"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "For logographic and Brahmic languages, spaces don't separate words."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "Treat each line as a paragraph"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "Count single newlines as paragraph breaks instead of requiring blank lines. The line counter will be hidden."
+  },
+  "textCounter.privacy.summary": {
+    "other": "Privacy"
+  },
+  "textCounter.privacy.body": {
+    "other": "This tool runs entirely in your browser. You can disconnect from the internet and it will still work, your text is never sent anywhere."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "Technical info:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "To verify, open browser DevTools (F12) → Network tab, then type in the text area and confirm no requests are made after the page finishes loading."
+  },
+  "tools.title": {
+    "other": "Tools"
+  },
+  "tools.description": {
+    "other": "Some handy utilities. Well, because I couldn't find any that really fit my needs."
+  },
+  "tools.items.counter.title": {
+    "other": "Text counter"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "Count characters, words, sentences, paragraphs, and estimate reading/speaking time."
   }
 }

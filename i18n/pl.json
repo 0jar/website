@@ -1,719 +1,1667 @@
 {
-  "404": {
-    "title": "Zgubiłeś się",
-    "description": "Nawet kot nie zna tego miejsca.",
-    "button": "Wróć do domu",
-    "sitemap": "Zobacz mapę strony",
-    "enjoycat": "Skoro już się zgubiłeś, zobacz tego kota:"
+  "404.title": {
+    "other": "Zgubiłeś się"
   },
-  "2048": {
-    "description": "Łącz płytki, dojdź do 2048!",
-    "score": "Wynik",
-    "best": "Rekord",
-    "gameOver": "Koniec gry!",
-    "finalScore": "Końcowy wynik",
-    "tryAgain": "Spróbuj ponownie",
-    "youWin": "Wygrałeś!",
-    "currentScore": "Aktualny wynik",
-    "keepPlaying": "Graj dalej",
-    "newGame": "Nowa gra",
-    "howToPlay": "Jak grać",
-    "instructions1": "Użyj strzałek lub WASD, by przesuwać płytki. Gdy dwie płytki z tą samą liczbą się zetkną, łączą się w jedną!",
-    "instructions2": "Po każdym ruchu pojawia się nowa płytka (2 lub 4).",
-    "instructions3": "Stwórz płytkę z liczbą 2048, by wygrać!",
-    "controls": "Sterowanie",
-    "moveLeft": "W lewo",
-    "moveRight": "W prawo",
-    "moveUp": "W górę",
-    "moveDown": "W dół",
-    "touchInstructions": "Na telefonie użyj przycisków na ekranie.",
-    "undo": "Cofnij",
-    "title": "2048",
-    "instructions4": "Po zdobyciu 2048, możesz kontynuować grę, aby osiągnąć jeszcze wyższe wyniki!"
+  "404.description": {
+    "other": "Nawet kot nie zna tego miejsca."
   },
-  "nav": {
-    "home": "Strona główna",
-    "about": "O mnie",
-    "projects": "Projekty",
-    "blog": "Blog",
-    "now": "Teraz",
-    "uses": "Używam",
-    "contact": "Kontakt",
-    "guestbook": "Księga gości",
-    "colophon": "Kolofon",
-    "webring": "Webring",
-    "scrapbook": "Devlog",
-    "slashes": "Mapa strony",
-    "brand": "Zestaw marki",
-    "badges": "Odznaki",
-    "tools": "Narzędzia"
+  "404.button": {
+    "other": "Wróć do domu"
   },
-  "languageNotice": {
-    "message": "Tłumaczenie na ten język jest w trakcie tworzenia. Niektóre treści mogą być niekompletne lub brakujące.",
-    "dismiss": "Zamknij"
+  "404.sitemap": {
+    "other": "Zobacz mapę strony"
   },
-  "language": {
-    "main": "Główne języki",
-    "beta": "Języki w wersji beta",
-    "other": "Inne języki",
-    "auto": "Auto (język przeglądarki)",
-    "search": "Szukaj języków...",
-    "en": "Angielski",
-    "vi": "Wietnamski",
-    "ru": "Rosyjski",
-    "et": "Estoński",
-    "da": "Duński",
-    "tr": "Turecki",
-    "zh": "Chiński",
-    "pl": "Polski",
-    "sv": "Szwedzki",
-    "fi": "Fiński",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "Skoro już się zgubiłeś, zobacz tego kota:"
   },
-  "greetings": {
-    "morning": "Dzień dobry, podróżniku.",
-    "afternoon": "Miłego popołudnia, wędrowcze.",
-    "evening": "Dobry wieczór, odkrywco.",
-    "night": "Jeszcze nie śpisz? Ja też."
+  "2048.description": {
+    "other": "Łącz płytki, dojdź do 2048!"
   },
-  "home": {
-    "buttons": {
-      "about": "O mnie",
-      "projects": "Zobacz moje projekty"
-    },
-    "footer": "Witaj w moim cyfrowym ogrodzie. Czuj się swobodnie, eksploruj.",
-    "heading": "cześć, jestem Jarema",
-    "subheading": "Student ekonomii, czasem programista, najczęściej koci opiekun.",
-    "contactButton": "Skontaktuj się ze mną",
-    "aboutButton": "O mnie",
-    "blogButton": "Czytaj mojego bloga",
-    "guestbookButton": "Podpisz się w mojej książce gości",
-    "recentPosts": "Ostatnie wpisy na blogu",
-    "latestNow": "Co robię teraz",
-    "currentMood": "Obecny nastrój",
-    "currentStatus": "Obecny status",
-    "time": "Aktualny czas",
-    "yourTime": "Twój czas",
-    "myTime": "Mój czas",
-    "viewAllWebrings": "Zobacz wszystkie webringi",
-    "checkOutSites": "Sprawdź te strony!",
-    "androidCountdown": "Android stanie się zamkniętym systemem operacyjnym za X dni"
+  "2048.score": {
+    "other": "Wynik"
   },
-  "guestbook": {
-    "title": "Księga gości",
-    "description": "Zostaw wpis w mojej księdze gości!",
-    "poweredBy": "Zasilane przez",
-    "atabook": "Atabook"
+  "2048.best": {
+    "other": "Rekord"
   },
-  "about": {
-    "title": "O mnie",
-    "description": "Historia o tym, kim jestem, skąd pochodzę, jaka jest moja pasja i do czego dążę.",
-    "chapters": {
-      "6": {
-        "title": "jeszcze nie skończyłem",
-        "content1": "więc tu jest ta część, której nie mieli przeczytać.",
-        "content2": "wciąż jestem zły. wciąż opłakuję wersję siebie, której nigdy nie pozwolono istnieć. wciąż budzę się czasem i zastanawiam, czemu wszystko wydaje się nieco nie tak. czasem myślę o ucieczce, zniknięciu, nowym imieniu, nowym mieście, nowym języku. czasem prawie to robię.",
-        "content3": "są dni, kiedy nie czuję się nawet człowiekiem. bardziej jak wspomnienie próbujące się utrwalić. bardziej jak echo czegoś miękkiego, do czego już nie mogę sięgnąć. innym razem jestem pełen energii. czuję każdy szczegół: słońce na skórze, ciche playlisty, to jak zmieniają się twarze ludzi, gdy wreszcie mogą być sobą. to jakoś trzyma mnie przy życiu.",
-        "content4": "jeszcze nie skończyłem stawać się tym, kim mam być. ale skończyłem udawać, że wystarcza mi milczenie."
-      }
-    }
+  "2048.gameOver": {
+    "other": "Koniec gry!"
   },
-  "projects": {
-    "title": "Moje projekty",
-    "description": "Kolekcja projektów osobistych, akademickich i aktywistycznych, nad którymi pracowałem. Niektóre skończone, inne jeszcze się tworzą.",
-    "status": {
-      "completed": "Ukończony",
-      "inProgress": "W trakcie",
-      "planned": "Zaplanowany"
-    },
-    "statusLabels": {
-      "completed": "Ukończony",
-      "inProgress": "W trakcie",
-      "planned": "Zaplanowany"
-    },
-    "categories": {
-      "personal": "Osobiste",
-      "academic": "Akademickie",
-      "activism": "Aktywizm"
-    },
-    "details": {
-      "what": "Czym jest",
-      "learned": "Czego się nauczyłem",
-      "why": "Dlaczego to ważne"
-    },
-    "cardActions": {
-      "clickForDetails": "Kliknij, aby zobaczyć szczegóły",
-      "clickToClose": "Kliknij, aby zamknąć"
-    },
-    "buttons": {
-      "showRandom": "Pokaż więcej losowych",
-      "hideRandom": "Ukryj chaos"
-    },
-    "filters": {
-      "all": "Wszystkie"
-    },
-    "clickToFlip": "Kliknij, aby odwrócić",
-    "what": "Co to jest?",
-    "learned": "Czego się nauczyłem",
-    "why": "Dlaczego to zbudowałem?"
+  "2048.finalScore": {
+    "other": "Końcowy wynik"
   },
-  "blog": {
-    "title": "Blog",
-    "description": "Myśli, refleksje i czasem narzekania. Pisane o różnych porach i w różnych nastrojach.",
-    "language": "Język",
-    "languageFilter": "Filtruj według języka",
-    "tag": "Tag",
-    "sort": "Sortuj wpisy",
-    "category": "Kategoria",
-    "noPosts": "Brak wpisów. Wpadnij później!",
-    "search": "Szukaj wpisów...",
-    "sortNew": "Najnowsze najpierw",
-    "sortOld": "Najstarsze najpierw",
-    "sortReadTime": "Czas czytania",
-    "sortABC": "Alfabetycznie",
-    "filter": "Filtr",
-    "filterDescription": "Filtruj wpisy na blogu",
-    "activeFilter": "Aktywne filtry:",
-    "filterNoMatch": "Brak wpisów spełniających kryteria. Spróbuj zmienić wyszukiwanie.",
-    "clearFilter": "Wyczyść wszystkie filtry",
-    "mood": "Nastrój",
-    "cat": "Zatwierdzone przez kota",
-    "prev": "Poprzedni wpis",
-    "next": "Następny wpis",
-    "jumpToPost": "Przejdź do wpisu",
-    "back": "Powrót do listy bloga",
-    "showingPosts": "Wyświetlono {{current}} z {{total}} wpisów",
-    "minRead": "min czytania",
-    "rss": "Kanał RSS",
-    "subscribeRSS": "Subskrybuj przez RSS",
-    "allPosts": "Kanał wszystkich wpisów",
-    "languageFeeds": "Kanały dla poszczególnych języków",
-    "rssDescription": "Zasubskrybuj moje kanały RSS w swoim ulubionym czytniku, aby otrzymywać powiadomienia o nowych wpisach.",
-    "atom": "Kanał Atom",
-    "subscribeAtom": "Subskrybuj przez Atom",
-    "atomDescription": "Zasubskrybuj moje kanały Atom w swoim ulubionym czytniku, aby otrzymywać powiadomienia o nowych wpisach.",
-    "availableIn": "Ta strona jest także dostępna w",
-    "comments": "Komentarze",
-    "webmentions": "Wzmianki",
-    "webmentionsNone": "Brak webmentions. Bądź pierwszą osobą, która odpowie!",
-    "webmentionLike": "polubił(a) to",
-    "webmentionRepost": "udostępnił(a) to",
-    "webmentionReply": "odpowiedział(a)",
-    "webmentionMention": "wspomniał(a) o tym",
-    "tagLabels": {
-      "first-post": "pierwszy wpis",
-      "identity": "tożsamość",
-      "belonging": "przynależność",
-      "introspection": "introspekcja",
-      "browsers": "przeglądarki",
-      "chrome": "Chrome",
-      "open-web": "otwarty internet",
-      "app-defaults": "domyślne aplikacje",
-      "software": "oprogramowanie",
-      "tools": "narzędzia",
-      "new-year": "nowy rok",
-      "reflection": "refleksja",
-      "health": "zdrowie",
-      "tet": "Święto Tet",
-      "vietnam": "Wietnam",
-      "military": "wojsko",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "utwardzanie",
-      "values": "wartości",
-      "personal-philosophy": "osobista filozofia"
-    },
-    "categoryLabels": {
-      "personal": "Osobiste",
-      "meta": "Meta",
-      "identity": "Tożsamość",
-      "technical": "Techniczne",
-      "privacy": "Prywatność",
-      "opinions": "Opinie",
-      "life": "Życie",
-      "security": "Bezpieczeństwo",
-      "guides": "Poradniki"
-    }
+  "2048.tryAgain": {
+    "other": "Spróbuj ponownie"
   },
-  "now": {
-    "title": "Teraz",
-    "description": "Czym się zajmuję, o czym myślę i na czym się skupiam w tej chwili.",
-    "lastUpdated": "Ostatnia aktualizacja",
-    "whatIsNow": "Czym jest strona /now?",
-    "whatIsNowDescription": "Strona /now to podstrona na osobistej stronie internetowej, która informuje, na czym dana osoba skupia się w obecnej chwili, dniu lub w ostatnim czasie. Więcej informacji znajdziesz na",
-    "categories": {
-      "reading": "Czytam",
-      "coding": "Koduję",
-      "drinking": "Piję",
-      "listening": "Słucham",
-      "premid": "Aktywność na Discordzie",
-      "thinking": "Myślę",
-      "studying": "Uczę się",
-      "planning": "Planuję"
-    }
+  "2048.youWin": {
+    "other": "Wygrałeś!"
   },
-  "uses": {
-    "title": "Używam",
-    "description": "Wszystko, czego używam na co dzień. Zainspirowane przez",
-    "websiteDescription": "stronę, gdzie ludzie dzielą się tym, czego używają.",
-    "categories": {
-      "hardware": "Sprzęt",
-      "mobile": "Mobilne",
-      "audio": "Audio",
-      "os": "System & Przeglądarki",
-      "development": "Programowanie",
-      "email": "E-mail & Produktywność",
-      "privacy": "Prywatność & Bezpieczeństwo",
-      "mobile_tools": "Narzędzia mobilne",
-      "mapping": "Mapy",
-      "gaming": "Gry",
-      "multimedia": "Multimedia",
-      "design": "Projektowanie & Ilustracja",
-      "photo": "Edycja zdjęć",
-      "video": "Wideo & Audio",
-      "media": "Serwisy streamingowe"
-    },
-    "subsections": {
-      "design": "Projektowanie & Ilustracja",
-      "photo": "Edycja zdjęć",
-      "video": "Wideo & Audio",
-      "media": "Serwisy medialne"
-    },
-    "hidden": {
-      "clickToReveal": "Kliknij 5 razy, by pokazać",
-      "clicksLeft": "(jeszcze {{clicks}} kliknięć, by pokazać)",
-      "platformPrefix": "Ukryta Platforma"
-    }
+  "2048.currentScore": {
+    "other": "Aktualny wynik"
   },
-  "contact": {
-    "title": "Kontakt",
-    "description": "Jak się ze mną skontaktować.",
-    "message": "nie krępuj się. napisz cześć. albo umów się na 1:1, jeśli masz ochotę na poważnie :)",
-    "disclaimer": "odpowiadam na maile. chyba. chyba że rozproszy mnie kot albo coś innego ;)",
-    "sections": {
-      "contactMe": "Skontaktuj się ze mną",
-      "socialMedia": "Moje media społecznościowe",
-      "otherPlatforms": "Jestem też tutaj"
-    },
-    "sectionTitles": {
-      "contactMe": "Skontaktuj się ze mną",
-      "socialMedia": "Moje media społecznościowe",
-      "otherPlatforms": "Jestem też tutaj",
-      "keys": "Klucze publiczne"
-    },
-    "links": {
-      "universityEmail": "Mail uczelniany",
-      "bookMeeting": "Umów spotkanie ze mną",
-      "messengerNote": "Jestem bardzo nieaktywny na Facebooku i Messengerze. Odpowiadam, jak się uda.",
-      "pgpKey": "Klucz publiczny PGP",
-      "sshKey": "Klucz publiczny SSH"
-    }
+  "2048.keepPlaying": {
+    "other": "Graj dalej"
   },
-  "moodCat": {
-    "title": "Kot dnia",
-    "hover": "delikatnie cię ocenia",
-    "refresh": "Nowy kot, kto to?",
-    "seeMore": "Zobacz więcej kotów"
+  "2048.newGame": {
+    "other": "Nowa gra"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "Klasyczna gra z opadającymi klockami i znikającymi liniami",
-    "gameInfo": "Informacje o grze",
-    "score": "Wynik",
-    "level": "Poziom",
-    "status": "Status",
-    "next": "Następny",
-    "gameOver": "Koniec gry",
-    "paused": "Pauza",
-    "playing": "Grasz",
-    "ready": "Gotowy",
-    "playAgain": "Zagraj ponownie",
-    "pause": "Pauza",
-    "resume": "Wznów",
-    "start": "Start",
-    "reset": "Zresetuj",
-    "controls": "Sterowanie",
-    "moveLeft": "W lewo",
-    "moveRight": "W prawo",
-    "moveDown": "W dół",
-    "rotate": "Obróć",
-    "hardDrop": "Szybki rzut",
-    "pauseGame": "Pauza",
-    "musicOn": "Muzyka włączona",
-    "musicOff": "Muzyka wyłączona",
-    "nowPlaying": "Teraz gra",
-    "spacebar": "Spacja"
+  "2048.howToPlay": {
+    "other": "Jak grać"
   },
-  "scrapbook": {
-    "title": "Devlog",
-    "description": "Niektóre logi deweloperskie z czasu tworzenia tej strony.",
-    "noEntries": "Brak wpisów."
+  "2048.instructions1": {
+    "other": "Użyj strzałek lub WASD, by przesuwać płytki. Gdy dwie płytki z tą samą liczbą się zetkną, łączą się w jedną!"
   },
-  "settings": {
-    "title": "Ustawienia",
-    "theme": "Motyw",
-    "themeAuto": "Auto",
-    "themeLight": "Jasny motyw",
-    "themeDark": "Ciemny motyw",
-    "stars": "Migoczące gwiazdy",
-    "reduceMotion": "Ogranicz animacje",
-    "highContrast": "Wysoki kontrast",
-    "dyslexiaFont": "Czcionka dla dyslektyków",
-    "timezone": "Strefa czasowa",
-    "tzYours": "Twoja",
-    "tzAuthor": "Jaremy",
-    "music": "Muzyka",
-    "musicUnavailable": "Obecnie niedostępna"
+  "2048.instructions2": {
+    "other": "Po każdym ruchu pojawia się nowa płytka (2 lub 4)."
   },
-  "webrings": {
-    "title": "Webringi",
-    "description": "Webringi, do których należę. Odkryj więcej niezależnych stron i blogów osobistych.",
-    "intro1": "Webring to zbiór stron stworzonych przez osoby o podobnych poglądach, zazwyczaj skupionych wokół tematu, estetyki lub wspólnych zainteresowań. (z webringu safonts)",
-    "intro2": "Ta strona jest częścią tych webringów. Kliknij w linki, aby odwiedzić strony moich sąsiadów oraz innych członków, jeśli dany webring ma funkcję losowania. Wybierz dowolny krąg!",
-    "previous": "Poprzednia",
-    "random": "Losowa",
-    "next": "Następna",
-    "previousAria": "Poprzednia strona w {{name}}",
-    "randomAria": "Losowa strona w {{name}}",
-    "nextAria": "Następna strona w {{name}}",
-    "pending": {
-      "title": "Oczekuje na zatwierdzenie",
-      "description": "To są webringi, do których aplikowałem i czekam na zatwierdzenie.",
-      "badge": "Oczekuje"
-    }
+  "2048.instructions3": {
+    "other": "Stwórz płytkę z liczbą 2048, by wygrać!"
   },
-  "badges": {
-    "title": "Kolekcja odznak webowych",
-    "description": "Zbiór klasycznych odznak i przycisków używanych na mojej stronie.",
-    "pageTitle": "Kolekcja klasycznych odznak",
-    "pageDescription": "Zebrałem te odznaki 88x31, aby pokazać, na czym zależy mi i tej stronie. To powrót do ery Geocities, kiedy internet nie był jeszcze zalany korporacyjnym i generowanym przez AI chłamem. Jeśli masz odznakę, którą chciałbyś, żebym tu dodał, po prostu daj znać.",
-    "myBadgeTitle": "Moja odznaka (kliknij, aby rozwinąć)",
-    "myBadgeIntro": "Użyj tej odznaki, aby zalinkować moją stronę:",
-    "hotlinkUrl": "Adres Hotlink:",
-    "htmlCodeTitle": "Kod HTML",
-    "embeddingSuggestionsTitle": "Sugestie dotyczące osadzania",
-    "suggestion1": "Użyj",
-    "suggestion1b": "w swoim CSS, aby zachować styl pixel art.",
-    "suggestion2": "Linkuj bezpośrednio do mojej strony głównej pod adresem",
-    "suggestion3": "Odznaka ma wymiary 88x31 pikseli, podwoi szerokość i wysokość w HTML do",
-    "suggestion3b": "aby były łatwiejsze do odczytania na ekranach o wysokiej rozdzielczości.",
-    "collectionHeading": "Kolekcja odznak",
-    "search": "Szukaj odznak...",
-    "filterByCategory": "Filtruj według kategorii",
-    "verboseView": "Szczegółowy",
-    "badgeOnlyView": "Tylko odznaka",
-    "showingCount": "Wyświetlono {{count}} odznak",
-    "showingFiltered": "Wyświetlono {{filtered}} z {{total}} odznak",
-    "noResults": "Nie znaleziono odznak pasujących do kryteriów wyszukiwania",
-    "categories": {
-      "all": "Wszystkie",
-      "personal": "Osobiste",
-      "friends": "Znajomi",
-      "other-sites": "Inne strony",
-      "software": "Oprogramowanie",
-      "web": "Strony",
-      "fun": "Rozrywka"
-    }
+  "2048.controls": {
+    "other": "Sterowanie"
   },
-  "brand": {
-    "pageTitle": "Marka",
-    "pageDescription": "Identyfikacja wizualna i elementy marki. Użyj ich, jeśli chcesz wspomnieć o tej stronie lub do niej podlinkować.",
-    "name": {
-      "title": "Nazwa",
-      "nameLabel": "Imię",
-      "displayNameLabel": "Nazwa wyświetlana",
-      "symbolNote": "Symbol 'dlatego' (∴) jest zawsze częścią mojej nazwy wyświetlanej. Reprezentuje wyniki, logiczne wnioski, połączenia, koniec procesu myślowego; jest bezpośredni i ma stabilny kształt."
-    },
-    "logo": {
-      "title": "Logo",
-      "faceOnly": "Tylko twarz",
-      "faceAndBody": "Twarz i tułów",
-      "dimensions1": "384×384px (lub wielokrotności)",
-      "dimensions2": "512×512px (lub wielokrotności)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "Odznaka",
-      "urlLabel": "Bezpośredni URL",
-      "htmlLabel": "Kod HTML"
-    },
-    "colors": {
-      "title": "Kolory",
-      "names": {
-        "primary": "Główny",
-        "background": "Tło",
-        "card": "Karta",
-        "foreground": "Pierwszy plan",
-        "muted": "Przygaszony",
-        "border": "Obramowanie"
-      },
-      "descriptions": {
-        "primary": "Główny kolor akcentu",
-        "background": "Tło strony",
-        "card": "Tło karty",
-        "foreground": "Główny kolor tekstu",
-        "muted": "Elementy poboczne",
-        "border": "Obramowania i podziały"
-      },
-      "darkMode": "Tryb ciemny",
-      "lightMode": "Tryb jasny"
-    },
-    "fonts": {
-      "title": "Czcionki",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "Nagłówki i tytuły",
-        "body": "Tekst główny i interfejs",
-        "notoSansSC": "Tekst chiński",
-        "monaspice": "Kod i tekst o stałej szerokości",
-        "hanNomGothic": "Wietnamski Chữ Nôm"
-      },
-      "weight": "Waga:",
-      "viewOnGoogleFonts": "Zobacz w repozytorium",
-      "languages": {
-        "english": "Angielski",
-        "vietnamese": "Wietnamski",
-        "polish": "Polski",
-        "russian": "Rosyjski",
-        "japanese": "Japoński",
-        "hebrew": "Hebrajski",
-        "thai": "Tajski",
-        "symbols": "Symbole",
-        "chineseSimplified": "Chiński (Uproszczony)",
-        "chineseTraditional": "Chiński (Tradycyjny)",
-        "vietnameseHanNom": "Wietnamski (Chữ Nôm)"
-      }
-    },
-    "usage": {
-      "title": "Kilka uwag",
-      "point1Title": "Śmiało korzystaj",
-      "point1Text": "Nie musisz pytać o zgodę na użycie odznaki, logo czy linkowanie do tej strony. Bierz, hotlinkuj, wrzucaj na swoją stronę. Nie obchodzi mnie to. A wręcz byłoby mi miło.",
-      "point2Title": "Zachowaj pikselowy styl odznaki",
-      "point2Text": "Jeśli używasz odznaki (badge), proszę dodaj 'image-rendering: pixelated' (lub 'crisp-edges' w Firefox) w swoim CSS. Bez tego przeglądarki rozmyją piksele i będzie to wyglądać jak śmieć. To pixel art, traktuj to jak pixel art.",
-      "point3Title": "Atrybucja jest miła, ale opcjonalna",
-      "point3Text": "Jeśli piszesz o stronie lub używasz tych materiałów w poście na blogu, link zwrotny byłby mile widziany. Ale jeśli tylko wrzucasz moją odznakę na swoją stronę z linkami, nie musisz robić nic więcej. Mój kod HTML dla odznaki już tu linkuje.",
-      "point4Title": "Bez dziwactw",
-      "point4Text": "Nie używaj tego, żeby się pode mnie podszywać, twierdzić, że popieram coś, czego nie popieram, albo sprawiać wrażenie, że jestem powiązany z czymś podejrzanym. Wierzę, że znasz różnicę między linkowaniem do strony, którą lubisz, a udawaniem kogoś innego. Jeśli nie jesteś pewien, czy to co robisz jest dziwne, to prawdopodobnie jest.",
-      "footer": "To tyle, po prostu używaj z szacunkiem i będzie git."
-    }
+  "2048.moveLeft": {
+    "other": "W lewo"
   },
-  "colophon": {
-    "title": "Kolofon",
-    "description": "Historia tej strony i jak powstała",
-    "siteHistory": {
-      "title": "Historia strony",
-      "content1": "Strona została zarejestrowana dopiero pod koniec 2023 roku, ale jej wygląd zmieniał się wielokrotnie. Pierwsza wersja to prosty WordPress na podejrzanym darmowym hostingu, druga była oparta na Carrd, trzecia powstała na Astro. Ta obecna (czwarta) to pełny redesign od zera, z użyciem nowoczesnych technologii webowych.",
-      "content2": "Każda wersja to ewolucja, a ta najnowsza skupia się na wydajności, dostępności i bardziej osobistym podejściu, które lepiej oddaje to, kim jestem i co mnie porusza."
-    },
-    "technologyStack": {
-      "title": "Stos technologiczny",
-      "nextjs": "Framework React umożliwiający SSR i generowanie stron statycznych",
-      "react": "Biblioteka JavaScript do budowania interfejsów",
-      "tailwind": "Narzędziowy framework CSS",
-      "shadcn": "Biblioteka komponentów zbudowana z Radix UI i Tailwind",
-      "framer": "Biblioteka animacji dla React",
-      "i18next": "Framework do internacjonalizacji",
-      "typescript": "Silnie typowany język programowania oparty na JavaScript"
-    },
-    "hosting": {
-      "title": "Hosting i wdrożenie",
-      "content1": "Strona hostowana na",
-      "content2": "co zapewnia płynne wdrożenia z GitHub, automatyczny HTTPS i globalny CDN.",
-      "content3": "Domena zarządzana przez",
-      "content4": "co daje dodatkowe korzyści bezpieczeństwa i wydajności."
-    },
-    "design": {
-      "title": "Filozofia projektowania",
-      "p1": "Ta strona została zaprojektowana z myślą o dostępności i wydajności. Działa bez włączonego JavaScriptu, używa semantycznego HTML i szanuje twoją prywatność, nie używając żadnych plików cookie do śledzenia.",
-      "p2": "Projekt dąży do równowagi między nowoczesną estetyką a klasyczną prostotą sieci. Tryb ciemny jest domyślny, bo lubię swoje siatkówki."
-    },
-    "webStandards": {
-      "title": "Standardy sieciowe",
-      "intro": "Ta strona wdraża:",
-      "microformats": "mikroformaty",
-      "feeds": "kanały RSS, Atom i JSON",
-      "robots": "robots.txt i sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "Dostępność",
-      "intro": "Staram się, aby ta strona była dostępna dla każdego. Funkcje obejmują:",
-      "item1": "Semantyczna struktura HTML",
-      "item2": "Linki do pomijania treści",
-      "item3": "Prawidłowa hierarchia nagłówków",
-      "item4": "Kontrast kolorów WCAG 2.1 AA",
-      "item5": "Nawigacja klawiaturą",
-      "item6": "Respektowanie preferencji ograniczenia ruchu",
-      "reportText": "Jeśli napotkasz jakiekolwiek problemy z dostępnością, proszę",
-      "contactLink": "daj mi znać"
-    },
-    "inspiration": {
-      "title": "Inspiracje",
-      "content1": "Ta strona czerpie inspirację z",
-      "content2": "która z kolei czerpie z",
-      "content3": "Oryginalny pomysł na",
-      "maggie": "Kolofon Maggie Appleton",
-      "gwern": "Kolofon Gwerna Branwena"
-    }
+  "2048.moveRight": {
+    "other": "W prawo"
   },
-  "footer": {
-    "copyright": "2026, ∴ Jarema, CC BY 4.0",
-    "madeWith": "zrobione z miłością",
-    "andChaos": "i kilkoma dniami kodowania",
-    "uptime": "Uptime",
-    "siteStatus": "Status strony"
+  "2048.moveUp": {
+    "other": "W górę"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Skróty klawiaturowe",
-    "navigation": "Nawigacja",
-    "actions": "Akcje",
-    "close": "Zamknij",
-    "home": "Strona główna",
-    "about": "O mnie",
-    "blog": "Blog",
-    "projects": "Projekty",
-    "now": "Teraz",
-    "uses": "Używam",
-    "contact": "Kontakt",
-    "colophon": "Kolofon",
-    "slashes": "Mapa strony",
-    "scrapbook": "Devlog",
-    "tetris": "Tetris",
-    "cycleLanguage": "Zmień język",
-    "cycleTheme": "Zmień motyw",
-    "refreshCat": "Odśwież kota nastroju",
-    "openShortcuts": "Otwórz skróty klawiaturowe",
-    "actionSearch": "Otwórz wyszukiwarkę akcji",
-    "webring": "Webringi"
+  "2048.moveDown": {
+    "other": "W dół"
   },
-  "actionSearch": {
-    "2048": "Zagraj w 2048",
-    "title": "Szukaj akcji",
-    "placeholder": "Szukaj akcji...",
-    "noResults": "Nie znaleziono akcji",
-    "goTo": "Przejdź do strony",
-    "toggleTheme": "Zmień motyw",
-    "switchDarkMode": "Przełącz na tryb ciemny",
-    "switchLightMode": "Przełącz na tryb jasny",
-    "appearance": "Wygląd",
-    "cycleLanguage": "Zmień język",
-    "refreshCat": "Nowy kot nastroju",
-    "playGame": "Zagraj w grę",
-    "viewShortcuts": "Zobacz wszystkie skróty",
-    "pressToOpen": "Naciśnij . aby otworzyć paletę poleceń",
-    "escToClose": "ESC aby zamknąć",
-    "fun": "Zabawa",
-    "games": "Gry",
-    "tetris": "Zagraj w Tetris",
-    "help": "Pomoc",
-    "projects": {
-      "category": "Nawigacja po kartach projektów",
-      "closeCard": "Zamknij odwróconą kartę",
-      "left": "Przejdź w lewo",
-      "right": "Przejdź w prawo",
-      "up": "Przejdź w górę",
-      "down": "Przejdź w dół",
-      "flipCard": "Obróć kartę projektu: {{title}}"
-    },
-    "blog": {
-      "category": "Nawigacja po wpisach na blogu",
-      "next": "Do następnego wpisu",
-      "prev": "Do poprzedniego wpisu",
-      "search": "Szukaj wpisów",
-      "filterTag": "Filtruj wpisy",
-      "jumpToPost": "Przejdź do wpisu {{i}}",
-      "back": "Powrót do listy bloga"
-    },
-    "about": {
-      "category": "Nawigacja po sekcjach 'O mnie'",
-      "jumpToChapter": "Przejdź do rozdziału {{i}}"
-    },
-    "uses": {
-      "category": "Nawigacja po sekcjach 'Używam'",
-      "jumpToCategory": "Przejdź do {{category}}"
-    },
-    "now": {
-      "category": "Nawigacja po sekcjach 'Teraz'",
-      "jumpToCategory": "Przejdź do {{category}}"
-    },
-    "colophon": {
-      "category": "Nawigacja po sekcjach kolofonu",
-      "jumpToSection": "Przejdź do sekcji {{section}}"
-    },
-    "tools": "Narzędzia"
+  "2048.touchInstructions": {
+    "other": "Na telefonie użyj przycisków na ekranie."
   },
-  "textCounter": {
-    "title": "Licznik tekstu",
-    "description": "Licz znaki, słowa, zdania, akapity i obliczaj czas mówienia/czytania.",
-    "placeholder": "Zacznij pisać lub wklej swój tekst tutaj...",
-    "clear": "Wyczyść",
-    "stats": {
-      "characters": "Znaki",
-      "charactersNoSpaces": "Znaki (bez spacji)",
-      "words": "Słowa",
-      "sentences": "Zdania",
-      "paragraphs": "Akapity",
-      "lines": "Linie",
-      "readingTime": "Czas czytania",
-      "speakingTime": "Czas mówienia"
-    },
-    "textLanguage": "Język tekstu",
-    "languages": {
-      "en": "Angielski",
-      "vi": "Wietnamski",
-      "et": "Estoński",
-      "zh": "Chiński",
-      "ru": "Rosyjski",
-      "custom": "Inny / niestandardowy",
-      "advanced": "Ustawienia zaawansowane"
-    },
-    "speed": {
-      "label": "Prędkość",
-      "slow": "Wolno",
-      "average": "Średnio",
-      "fast": "Szybko",
-      "custom": "Niestandardowa",
-      "readingWpm": "Czytanie (słowa na minutę)",
-      "speakingWpm": "Mówienie (słowa na minutę)",
-      "englishDefaultsWarning": "Szacowany czas korzysta obecnie z domyślnych prędkości dla języka angielskiego. Zmień na \"Niestandardowa\" aby wprowadzić dokładne wartości."
-    },
-    "advanced": {
-      "title": "Ustawienia zaawansowane",
-      "disableWords": "Wyłącz licznik słów",
-      "disableWordsDesc": "W językach logograficznych i bramijskich spacje nie rozdzielają słów.",
-      "newlineAsParagraph": "Traktuj każdą linię jako akapit",
-      "newlineAsParagraphDesc": "Licz pojedyncze przejścia do nowej linii jako podziały akapitów zamiast wymagać pustych linii. Licznik linii zostanie ukryty."
-    },
-    "privacy": {
-      "summary": "Informacje o prywatności",
-      "body": "To narzędzie działa całkowicie w Twojej przeglądarce. Możesz odłączyć się od internetu, a ono nadal będzie działać, Twój tekst nigdy nie jest nigdzie wysyłany.",
-      "technicalLabel": "Sposób weryfikacji technicznej:",
-      "technical": "Aby to sprawdzić, otwórz DevTools przeglądarki (F12) → zakładkę Sieć (Network), a następnie wpisz coś w polu tekstowym i upewnij się, że po zakończeniu ładowania strony nie są wysyłane żadne żądania."
-    }
+  "2048.undo": {
+    "other": "Cofnij"
   },
-  "tools": {
-    "title": "Narzędzia",
-    "description": "Kilka przydatnych narzędzi. Cóż, bo nie mogłem znaleźć żadnych które naprawdę by mi odpowiadały.",
-    "items": {
-      "counter": {
-        "title": "Licznik tekstu",
-        "icon": "🔤",
-        "description": "Licz znaki, słowa, zdania, akapity i szacuj czas czytania/mówienia."
-      }
-    }
+  "2048.title": {
+    "other": "2048"
   },
-  "slashes": {
-    "title": "Slashes",
-    "description": "Lista wszystkich głównych stron w tej witrynie."
+  "2048.instructions4": {
+    "other": "Po zdobyciu 2048, możesz kontynuować grę, aby osiągnąć jeszcze wyższe wyniki!"
+  },
+  "nav.home": {
+    "other": "Strona główna"
+  },
+  "nav.about": {
+    "other": "O mnie"
+  },
+  "nav.projects": {
+    "other": "Projekty"
+  },
+  "nav.blog": {
+    "other": "Blog"
+  },
+  "nav.now": {
+    "other": "Teraz"
+  },
+  "nav.uses": {
+    "other": "Używam"
+  },
+  "nav.contact": {
+    "other": "Kontakt"
+  },
+  "nav.guestbook": {
+    "other": "Księga gości"
+  },
+  "nav.colophon": {
+    "other": "Kolofon"
+  },
+  "nav.webring": {
+    "other": "Webring"
+  },
+  "nav.scrapbook": {
+    "other": "Devlog"
+  },
+  "nav.slashes": {
+    "other": "Mapa strony"
+  },
+  "nav.brand": {
+    "other": "Zestaw marki"
+  },
+  "nav.badges": {
+    "other": "Odznaki"
+  },
+  "nav.tools": {
+    "other": "Narzędzia"
+  },
+  "languageNotice.message": {
+    "other": "Tłumaczenie na ten język jest w trakcie tworzenia. Niektóre treści mogą być niekompletne lub brakujące."
+  },
+  "languageNotice.dismiss": {
+    "other": "Zamknij"
+  },
+  "language.main": {
+    "other": "Główne języki"
+  },
+  "language.beta": {
+    "other": "Języki w wersji beta"
+  },
+  "language.other": {
+    "other": "Inne języki"
+  },
+  "language.auto": {
+    "other": "Auto (język przeglądarki)"
+  },
+  "language.search": {
+    "other": "Szukaj języków..."
+  },
+  "language.en": {
+    "other": "Angielski"
+  },
+  "language.vi": {
+    "other": "Wietnamski"
+  },
+  "language.ru": {
+    "other": "Rosyjski"
+  },
+  "language.et": {
+    "other": "Estoński"
+  },
+  "language.da": {
+    "other": "Duński"
+  },
+  "language.tr": {
+    "other": "Turecki"
+  },
+  "language.zh": {
+    "other": "Chiński"
+  },
+  "language.pl": {
+    "other": "Polski"
+  },
+  "language.sv": {
+    "other": "Szwedzki"
+  },
+  "language.fi": {
+    "other": "Fiński"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "Dzień dobry, podróżniku."
+  },
+  "greetings.afternoon": {
+    "other": "Miłego popołudnia, wędrowcze."
+  },
+  "greetings.evening": {
+    "other": "Dobry wieczór, odkrywco."
+  },
+  "greetings.night": {
+    "other": "Jeszcze nie śpisz? Ja też."
+  },
+  "home.buttons.about": {
+    "other": "O mnie"
+  },
+  "home.buttons.projects": {
+    "other": "Zobacz moje projekty"
+  },
+  "home.footer": {
+    "other": "Witaj w moim cyfrowym ogrodzie. Czuj się swobodnie, eksploruj."
+  },
+  "home.heading": {
+    "other": "cześć, jestem Jarema"
+  },
+  "home.subheading": {
+    "other": "Student ekonomii, czasem programista, najczęściej koci opiekun."
+  },
+  "home.contactButton": {
+    "other": "Skontaktuj się ze mną"
+  },
+  "home.aboutButton": {
+    "other": "O mnie"
+  },
+  "home.blogButton": {
+    "other": "Czytaj mojego bloga"
+  },
+  "home.guestbookButton": {
+    "other": "Podpisz się w mojej książce gości"
+  },
+  "home.recentPosts": {
+    "other": "Ostatnie wpisy na blogu"
+  },
+  "home.latestNow": {
+    "other": "Co robię teraz"
+  },
+  "home.currentMood": {
+    "other": "Obecny nastrój"
+  },
+  "home.currentStatus": {
+    "other": "Obecny status"
+  },
+  "home.time": {
+    "other": "Aktualny czas"
+  },
+  "home.yourTime": {
+    "other": "Twój czas"
+  },
+  "home.myTime": {
+    "other": "Mój czas"
+  },
+  "home.viewAllWebrings": {
+    "other": "Zobacz wszystkie webringi"
+  },
+  "home.checkOutSites": {
+    "other": "Sprawdź te strony!"
+  },
+  "home.androidCountdown": {
+    "other": "Android stanie się zamkniętym systemem operacyjnym za X dni"
+  },
+  "guestbook.title": {
+    "other": "Księga gości"
+  },
+  "guestbook.description": {
+    "other": "Zostaw wpis w mojej księdze gości!"
+  },
+  "guestbook.poweredBy": {
+    "other": "Zasilane przez"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "O mnie"
+  },
+  "about.description": {
+    "other": "Historia o tym, kim jestem, skąd pochodzę, jaka jest moja pasja i do czego dążę."
+  },
+  "about.chapters.6.title": {
+    "other": "jeszcze nie skończyłem"
+  },
+  "about.chapters.6.content1": {
+    "other": "więc tu jest ta część, której nie mieli przeczytać."
+  },
+  "about.chapters.6.content2": {
+    "other": "wciąż jestem zły. wciąż opłakuję wersję siebie, której nigdy nie pozwolono istnieć. wciąż budzę się czasem i zastanawiam, czemu wszystko wydaje się nieco nie tak. czasem myślę o ucieczce, zniknięciu, nowym imieniu, nowym mieście, nowym języku. czasem prawie to robię."
+  },
+  "about.chapters.6.content3": {
+    "other": "są dni, kiedy nie czuję się nawet człowiekiem. bardziej jak wspomnienie próbujące się utrwalić. bardziej jak echo czegoś miękkiego, do czego już nie mogę sięgnąć. innym razem jestem pełen energii. czuję każdy szczegół: słońce na skórze, ciche playlisty, to jak zmieniają się twarze ludzi, gdy wreszcie mogą być sobą. to jakoś trzyma mnie przy życiu."
+  },
+  "about.chapters.6.content4": {
+    "other": "jeszcze nie skończyłem stawać się tym, kim mam być. ale skończyłem udawać, że wystarcza mi milczenie."
+  },
+  "projects.title": {
+    "other": "Moje projekty"
+  },
+  "projects.description": {
+    "other": "Kolekcja projektów osobistych, akademickich i aktywistycznych, nad którymi pracowałem. Niektóre skończone, inne jeszcze się tworzą."
+  },
+  "projects.status.completed": {
+    "other": "Ukończony"
+  },
+  "projects.status.inProgress": {
+    "other": "W trakcie"
+  },
+  "projects.status.planned": {
+    "other": "Zaplanowany"
+  },
+  "projects.statusLabels.completed": {
+    "other": "Ukończony"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "W trakcie"
+  },
+  "projects.statusLabels.planned": {
+    "other": "Zaplanowany"
+  },
+  "projects.categories.personal": {
+    "other": "Osobiste"
+  },
+  "projects.categories.academic": {
+    "other": "Akademickie"
+  },
+  "projects.categories.activism": {
+    "other": "Aktywizm"
+  },
+  "projects.details.what": {
+    "other": "Czym jest"
+  },
+  "projects.details.learned": {
+    "other": "Czego się nauczyłem"
+  },
+  "projects.details.why": {
+    "other": "Dlaczego to ważne"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "Kliknij, aby zobaczyć szczegóły"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "Kliknij, aby zamknąć"
+  },
+  "projects.buttons.showRandom": {
+    "other": "Pokaż więcej losowych"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "Ukryj chaos"
+  },
+  "projects.filters.all": {
+    "other": "Wszystkie"
+  },
+  "projects.clickToFlip": {
+    "other": "Kliknij, aby odwrócić"
+  },
+  "projects.what": {
+    "other": "Co to jest?"
+  },
+  "projects.learned": {
+    "other": "Czego się nauczyłem"
+  },
+  "projects.why": {
+    "other": "Dlaczego to zbudowałem?"
+  },
+  "blog.title": {
+    "other": "Blog"
+  },
+  "blog.description": {
+    "other": "Myśli, refleksje i czasem narzekania. Pisane o różnych porach i w różnych nastrojach."
+  },
+  "blog.language": {
+    "other": "Język"
+  },
+  "blog.languageFilter": {
+    "other": "Filtruj według języka"
+  },
+  "blog.tag": {
+    "other": "Tag"
+  },
+  "blog.sort": {
+    "other": "Sortuj wpisy"
+  },
+  "blog.category": {
+    "other": "Kategoria"
+  },
+  "blog.noPosts": {
+    "other": "Brak wpisów. Wpadnij później!"
+  },
+  "blog.search": {
+    "other": "Szukaj wpisów..."
+  },
+  "blog.sortNew": {
+    "other": "Najnowsze najpierw"
+  },
+  "blog.sortOld": {
+    "other": "Najstarsze najpierw"
+  },
+  "blog.sortReadTime": {
+    "other": "Czas czytania"
+  },
+  "blog.sortABC": {
+    "other": "Alfabetycznie"
+  },
+  "blog.filter": {
+    "other": "Filtr"
+  },
+  "blog.filterDescription": {
+    "other": "Filtruj wpisy na blogu"
+  },
+  "blog.activeFilter": {
+    "other": "Aktywne filtry:"
+  },
+  "blog.filterNoMatch": {
+    "other": "Brak wpisów spełniających kryteria. Spróbuj zmienić wyszukiwanie."
+  },
+  "blog.clearFilter": {
+    "other": "Wyczyść wszystkie filtry"
+  },
+  "blog.mood": {
+    "other": "Nastrój"
+  },
+  "blog.cat": {
+    "other": "Zatwierdzone przez kota"
+  },
+  "blog.prev": {
+    "other": "Poprzedni wpis"
+  },
+  "blog.next": {
+    "other": "Następny wpis"
+  },
+  "blog.jumpToPost": {
+    "other": "Przejdź do wpisu"
+  },
+  "blog.back": {
+    "other": "Powrót do listy bloga"
+  },
+  "blog.showingPosts": {
+    "other": "Wyświetlono {{current}} z {{total}} wpisów"
+  },
+  "blog.minRead": {
+    "other": "min czytania"
+  },
+  "blog.rss": {
+    "other": "Kanał RSS"
+  },
+  "blog.subscribeRSS": {
+    "other": "Subskrybuj przez RSS"
+  },
+  "blog.allPosts": {
+    "other": "Kanał wszystkich wpisów"
+  },
+  "blog.languageFeeds": {
+    "other": "Kanały dla poszczególnych języków"
+  },
+  "blog.rssDescription": {
+    "other": "Zasubskrybuj moje kanały RSS w swoim ulubionym czytniku, aby otrzymywać powiadomienia o nowych wpisach."
+  },
+  "blog.atom": {
+    "other": "Kanał Atom"
+  },
+  "blog.subscribeAtom": {
+    "other": "Subskrybuj przez Atom"
+  },
+  "blog.atomDescription": {
+    "other": "Zasubskrybuj moje kanały Atom w swoim ulubionym czytniku, aby otrzymywać powiadomienia o nowych wpisach."
+  },
+  "blog.availableIn": {
+    "other": "Ta strona jest także dostępna w"
+  },
+  "blog.comments": {
+    "other": "Komentarze"
+  },
+  "blog.webmentions": {
+    "other": "Wzmianki"
+  },
+  "blog.webmentionsNone": {
+    "other": "Brak webmentions. Bądź pierwszą osobą, która odpowie!"
+  },
+  "blog.webmentionLike": {
+    "other": "polubił(a) to"
+  },
+  "blog.webmentionRepost": {
+    "other": "udostępnił(a) to"
+  },
+  "blog.webmentionReply": {
+    "other": "odpowiedział(a)"
+  },
+  "blog.webmentionMention": {
+    "other": "wspomniał(a) o tym"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "pierwszy wpis"
+  },
+  "blog.tagLabels.identity": {
+    "other": "tożsamość"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "przynależność"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "introspekcja"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "przeglądarki"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "otwarty internet"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "domyślne aplikacje"
+  },
+  "blog.tagLabels.software": {
+    "other": "oprogramowanie"
+  },
+  "blog.tagLabels.tools": {
+    "other": "narzędzia"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "nowy rok"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "refleksja"
+  },
+  "blog.tagLabels.health": {
+    "other": "zdrowie"
+  },
+  "blog.tagLabels.tet": {
+    "other": "Święto Tet"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "Wietnam"
+  },
+  "blog.tagLabels.military": {
+    "other": "wojsko"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "utwardzanie"
+  },
+  "blog.tagLabels.values": {
+    "other": "wartości"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "osobista filozofia"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "Osobiste"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "Meta"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "Tożsamość"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "Techniczne"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "Prywatność"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "Opinie"
+  },
+  "blog.categoryLabels.life": {
+    "other": "Życie"
+  },
+  "blog.categoryLabels.security": {
+    "other": "Bezpieczeństwo"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "Poradniki"
+  },
+  "now.title": {
+    "other": "Teraz"
+  },
+  "now.description": {
+    "other": "Czym się zajmuję, o czym myślę i na czym się skupiam w tej chwili."
+  },
+  "now.lastUpdated": {
+    "other": "Ostatnia aktualizacja"
+  },
+  "now.whatIsNow": {
+    "other": "Czym jest strona /now?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "Strona /now to podstrona na osobistej stronie internetowej, która informuje, na czym dana osoba skupia się w obecnej chwili, dniu lub w ostatnim czasie. Więcej informacji znajdziesz na"
+  },
+  "now.categories.reading": {
+    "other": "Czytam"
+  },
+  "now.categories.coding": {
+    "other": "Koduję"
+  },
+  "now.categories.drinking": {
+    "other": "Piję"
+  },
+  "now.categories.listening": {
+    "other": "Słucham"
+  },
+  "now.categories.premid": {
+    "other": "Aktywność na Discordzie"
+  },
+  "now.categories.thinking": {
+    "other": "Myślę"
+  },
+  "now.categories.studying": {
+    "other": "Uczę się"
+  },
+  "now.categories.planning": {
+    "other": "Planuję"
+  },
+  "uses.title": {
+    "other": "Używam"
+  },
+  "uses.description": {
+    "other": "Wszystko, czego używam na co dzień. Zainspirowane przez"
+  },
+  "uses.websiteDescription": {
+    "other": "stronę, gdzie ludzie dzielą się tym, czego używają."
+  },
+  "uses.categories.hardware": {
+    "other": "Sprzęt"
+  },
+  "uses.categories.mobile": {
+    "other": "Mobilne"
+  },
+  "uses.categories.audio": {
+    "other": "Audio"
+  },
+  "uses.categories.os": {
+    "other": "System & Przeglądarki"
+  },
+  "uses.categories.development": {
+    "other": "Programowanie"
+  },
+  "uses.categories.email": {
+    "other": "E-mail & Produktywność"
+  },
+  "uses.categories.privacy": {
+    "other": "Prywatność & Bezpieczeństwo"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Narzędzia mobilne"
+  },
+  "uses.categories.mapping": {
+    "other": "Mapy"
+  },
+  "uses.categories.gaming": {
+    "other": "Gry"
+  },
+  "uses.categories.multimedia": {
+    "other": "Multimedia"
+  },
+  "uses.categories.design": {
+    "other": "Projektowanie & Ilustracja"
+  },
+  "uses.categories.photo": {
+    "other": "Edycja zdjęć"
+  },
+  "uses.categories.video": {
+    "other": "Wideo & Audio"
+  },
+  "uses.categories.media": {
+    "other": "Serwisy streamingowe"
+  },
+  "uses.subsections.design": {
+    "other": "Projektowanie & Ilustracja"
+  },
+  "uses.subsections.photo": {
+    "other": "Edycja zdjęć"
+  },
+  "uses.subsections.video": {
+    "other": "Wideo & Audio"
+  },
+  "uses.subsections.media": {
+    "other": "Serwisy medialne"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "Kliknij 5 razy, by pokazać"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "(jeszcze {{clicks}} kliknięć, by pokazać)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "Ukryta Platforma"
+  },
+  "contact.title": {
+    "other": "Kontakt"
+  },
+  "contact.description": {
+    "other": "Jak się ze mną skontaktować."
+  },
+  "contact.message": {
+    "other": "nie krępuj się. napisz cześć. albo umów się na 1:1, jeśli masz ochotę na poważnie :)"
+  },
+  "contact.disclaimer": {
+    "other": "odpowiadam na maile. chyba. chyba że rozproszy mnie kot albo coś innego ;)"
+  },
+  "contact.sections.contactMe": {
+    "other": "Skontaktuj się ze mną"
+  },
+  "contact.sections.socialMedia": {
+    "other": "Moje media społecznościowe"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "Jestem też tutaj"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "Skontaktuj się ze mną"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "Moje media społecznościowe"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "Jestem też tutaj"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "Klucze publiczne"
+  },
+  "contact.links.universityEmail": {
+    "other": "Mail uczelniany"
+  },
+  "contact.links.bookMeeting": {
+    "other": "Umów spotkanie ze mną"
+  },
+  "contact.links.messengerNote": {
+    "other": "Jestem bardzo nieaktywny na Facebooku i Messengerze. Odpowiadam, jak się uda."
+  },
+  "contact.links.pgpKey": {
+    "other": "Klucz publiczny PGP"
+  },
+  "contact.links.sshKey": {
+    "other": "Klucz publiczny SSH"
+  },
+  "moodCat.title": {
+    "other": "Kot dnia"
+  },
+  "moodCat.hover": {
+    "other": "delikatnie cię ocenia"
+  },
+  "moodCat.refresh": {
+    "other": "Nowy kot, kto to?"
+  },
+  "moodCat.seeMore": {
+    "other": "Zobacz więcej kotów"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "Klasyczna gra z opadającymi klockami i znikającymi liniami"
+  },
+  "tetris.gameInfo": {
+    "other": "Informacje o grze"
+  },
+  "tetris.score": {
+    "other": "Wynik"
+  },
+  "tetris.level": {
+    "other": "Poziom"
+  },
+  "tetris.status": {
+    "other": "Status"
+  },
+  "tetris.next": {
+    "other": "Następny"
+  },
+  "tetris.gameOver": {
+    "other": "Koniec gry"
+  },
+  "tetris.paused": {
+    "other": "Pauza"
+  },
+  "tetris.playing": {
+    "other": "Grasz"
+  },
+  "tetris.ready": {
+    "other": "Gotowy"
+  },
+  "tetris.playAgain": {
+    "other": "Zagraj ponownie"
+  },
+  "tetris.pause": {
+    "other": "Pauza"
+  },
+  "tetris.resume": {
+    "other": "Wznów"
+  },
+  "tetris.start": {
+    "other": "Start"
+  },
+  "tetris.reset": {
+    "other": "Zresetuj"
+  },
+  "tetris.controls": {
+    "other": "Sterowanie"
+  },
+  "tetris.moveLeft": {
+    "other": "W lewo"
+  },
+  "tetris.moveRight": {
+    "other": "W prawo"
+  },
+  "tetris.moveDown": {
+    "other": "W dół"
+  },
+  "tetris.rotate": {
+    "other": "Obróć"
+  },
+  "tetris.hardDrop": {
+    "other": "Szybki rzut"
+  },
+  "tetris.pauseGame": {
+    "other": "Pauza"
+  },
+  "tetris.musicOn": {
+    "other": "Muzyka włączona"
+  },
+  "tetris.musicOff": {
+    "other": "Muzyka wyłączona"
+  },
+  "tetris.nowPlaying": {
+    "other": "Teraz gra"
+  },
+  "tetris.spacebar": {
+    "other": "Spacja"
+  },
+  "scrapbook.title": {
+    "other": "Devlog"
+  },
+  "scrapbook.description": {
+    "other": "Niektóre logi deweloperskie z czasu tworzenia tej strony."
+  },
+  "scrapbook.noEntries": {
+    "other": "Brak wpisów."
+  },
+  "settings.title": {
+    "other": "Ustawienia"
+  },
+  "settings.theme": {
+    "other": "Motyw"
+  },
+  "settings.themeAuto": {
+    "other": "Auto"
+  },
+  "settings.themeLight": {
+    "other": "Jasny motyw"
+  },
+  "settings.themeDark": {
+    "other": "Ciemny motyw"
+  },
+  "settings.stars": {
+    "other": "Migoczące gwiazdy"
+  },
+  "settings.reduceMotion": {
+    "other": "Ogranicz animacje"
+  },
+  "settings.highContrast": {
+    "other": "Wysoki kontrast"
+  },
+  "settings.dyslexiaFont": {
+    "other": "Czcionka dla dyslektyków"
+  },
+  "settings.timezone": {
+    "other": "Strefa czasowa"
+  },
+  "settings.tzYours": {
+    "other": "Twoja"
+  },
+  "settings.tzAuthor": {
+    "other": "Jaremy"
+  },
+  "settings.music": {
+    "other": "Muzyka"
+  },
+  "settings.musicUnavailable": {
+    "other": "Obecnie niedostępna"
+  },
+  "webrings.title": {
+    "other": "Webringi"
+  },
+  "webrings.description": {
+    "other": "Webringi, do których należę. Odkryj więcej niezależnych stron i blogów osobistych."
+  },
+  "webrings.intro1": {
+    "other": "Webring to zbiór stron stworzonych przez osoby o podobnych poglądach, zazwyczaj skupionych wokół tematu, estetyki lub wspólnych zainteresowań. (z webringu safonts)"
+  },
+  "webrings.intro2": {
+    "other": "Ta strona jest częścią tych webringów. Kliknij w linki, aby odwiedzić strony moich sąsiadów oraz innych członków, jeśli dany webring ma funkcję losowania. Wybierz dowolny krąg!"
+  },
+  "webrings.previous": {
+    "other": "Poprzednia"
+  },
+  "webrings.random": {
+    "other": "Losowa"
+  },
+  "webrings.next": {
+    "other": "Następna"
+  },
+  "webrings.previousAria": {
+    "other": "Poprzednia strona w {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "Losowa strona w {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "Następna strona w {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "Oczekuje na zatwierdzenie"
+  },
+  "webrings.pending.description": {
+    "other": "To są webringi, do których aplikowałem i czekam na zatwierdzenie."
+  },
+  "webrings.pending.badge": {
+    "other": "Oczekuje"
+  },
+  "badges.title": {
+    "other": "Kolekcja odznak webowych"
+  },
+  "badges.description": {
+    "other": "Zbiór klasycznych odznak i przycisków używanych na mojej stronie."
+  },
+  "badges.pageTitle": {
+    "other": "Kolekcja klasycznych odznak"
+  },
+  "badges.pageDescription": {
+    "other": "Zebrałem te odznaki 88x31, aby pokazać, na czym zależy mi i tej stronie. To powrót do ery Geocities, kiedy internet nie był jeszcze zalany korporacyjnym i generowanym przez AI chłamem. Jeśli masz odznakę, którą chciałbyś, żebym tu dodał, po prostu daj znać."
+  },
+  "badges.myBadgeTitle": {
+    "other": "Moja odznaka (kliknij, aby rozwinąć)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "Użyj tej odznaki, aby zalinkować moją stronę:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "Adres Hotlink:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "Kod HTML"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "Sugestie dotyczące osadzania"
+  },
+  "badges.suggestion1": {
+    "other": "Użyj"
+  },
+  "badges.suggestion1b": {
+    "other": "w swoim CSS, aby zachować styl pixel art."
+  },
+  "badges.suggestion2": {
+    "other": "Linkuj bezpośrednio do mojej strony głównej pod adresem"
+  },
+  "badges.suggestion3": {
+    "other": "Odznaka ma wymiary 88x31 pikseli, podwoi szerokość i wysokość w HTML do"
+  },
+  "badges.suggestion3b": {
+    "other": "aby były łatwiejsze do odczytania na ekranach o wysokiej rozdzielczości."
+  },
+  "badges.collectionHeading": {
+    "other": "Kolekcja odznak"
+  },
+  "badges.search": {
+    "other": "Szukaj odznak..."
+  },
+  "badges.filterByCategory": {
+    "other": "Filtruj według kategorii"
+  },
+  "badges.verboseView": {
+    "other": "Szczegółowy"
+  },
+  "badges.badgeOnlyView": {
+    "other": "Tylko odznaka"
+  },
+  "badges.showingCount": {
+    "other": "Wyświetlono {{count}} odznak"
+  },
+  "badges.showingFiltered": {
+    "other": "Wyświetlono {{filtered}} z {{total}} odznak"
+  },
+  "badges.noResults": {
+    "other": "Nie znaleziono odznak pasujących do kryteriów wyszukiwania"
+  },
+  "badges.categories.all": {
+    "other": "Wszystkie"
+  },
+  "badges.categories.personal": {
+    "other": "Osobiste"
+  },
+  "badges.categories.friends": {
+    "other": "Znajomi"
+  },
+  "badges.categories.other-sites": {
+    "other": "Inne strony"
+  },
+  "badges.categories.software": {
+    "other": "Oprogramowanie"
+  },
+  "badges.categories.web": {
+    "other": "Strony"
+  },
+  "badges.categories.fun": {
+    "other": "Rozrywka"
+  },
+  "brand.pageTitle": {
+    "other": "Marka"
+  },
+  "brand.pageDescription": {
+    "other": "Identyfikacja wizualna i elementy marki. Użyj ich, jeśli chcesz wspomnieć o tej stronie lub do niej podlinkować."
+  },
+  "brand.name.title": {
+    "other": "Nazwa"
+  },
+  "brand.name.nameLabel": {
+    "other": "Imię"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "Nazwa wyświetlana"
+  },
+  "brand.name.symbolNote": {
+    "other": "Symbol 'dlatego' (∴) jest zawsze częścią mojej nazwy wyświetlanej. Reprezentuje wyniki, logiczne wnioski, połączenia, koniec procesu myślowego; jest bezpośredni i ma stabilny kształt."
+  },
+  "brand.logo.title": {
+    "other": "Logo"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Tylko twarz"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Twarz i tułów"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (lub wielokrotności)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (lub wielokrotności)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "Odznaka"
+  },
+  "brand.badge.urlLabel": {
+    "other": "Bezpośredni URL"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "Kod HTML"
+  },
+  "brand.colors.title": {
+    "other": "Kolory"
+  },
+  "brand.colors.names.primary": {
+    "other": "Główny"
+  },
+  "brand.colors.names.background": {
+    "other": "Tło"
+  },
+  "brand.colors.names.card": {
+    "other": "Karta"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Pierwszy plan"
+  },
+  "brand.colors.names.muted": {
+    "other": "Przygaszony"
+  },
+  "brand.colors.names.border": {
+    "other": "Obramowanie"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Główny kolor akcentu"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Tło strony"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Tło karty"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Główny kolor tekstu"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "Elementy poboczne"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Obramowania i podziały"
+  },
+  "brand.colors.darkMode": {
+    "other": "Tryb ciemny"
+  },
+  "brand.colors.lightMode": {
+    "other": "Tryb jasny"
+  },
+  "brand.fonts.title": {
+    "other": "Czcionki"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "Nagłówki i tytuły"
+  },
+  "brand.fonts.usage.body": {
+    "other": "Tekst główny i interfejs"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "Tekst chiński"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "Kod i tekst o stałej szerokości"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "Wietnamski Chữ Nôm"
+  },
+  "brand.fonts.weight": {
+    "other": "Waga:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "Zobacz w repozytorium"
+  },
+  "brand.fonts.languages.english": {
+    "other": "Angielski"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "Wietnamski"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "Polski"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "Rosyjski"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "Japoński"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "Hebrajski"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "Tajski"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "Symbole"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "Chiński (Uproszczony)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "Chiński (Tradycyjny)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "Wietnamski (Chữ Nôm)"
+  },
+  "brand.usage.title": {
+    "other": "Kilka uwag"
+  },
+  "brand.usage.point1Title": {
+    "other": "Śmiało korzystaj"
+  },
+  "brand.usage.point1Text": {
+    "other": "Nie musisz pytać o zgodę na użycie odznaki, logo czy linkowanie do tej strony. Bierz, hotlinkuj, wrzucaj na swoją stronę. Nie obchodzi mnie to. A wręcz byłoby mi miło."
+  },
+  "brand.usage.point2Title": {
+    "other": "Zachowaj pikselowy styl odznaki"
+  },
+  "brand.usage.point2Text": {
+    "other": "Jeśli używasz odznaki (badge), proszę dodaj 'image-rendering: pixelated' (lub 'crisp-edges' w Firefox) w swoim CSS. Bez tego przeglądarki rozmyją piksele i będzie to wyglądać jak śmieć. To pixel art, traktuj to jak pixel art."
+  },
+  "brand.usage.point3Title": {
+    "other": "Atrybucja jest miła, ale opcjonalna"
+  },
+  "brand.usage.point3Text": {
+    "other": "Jeśli piszesz o stronie lub używasz tych materiałów w poście na blogu, link zwrotny byłby mile widziany. Ale jeśli tylko wrzucasz moją odznakę na swoją stronę z linkami, nie musisz robić nic więcej. Mój kod HTML dla odznaki już tu linkuje."
+  },
+  "brand.usage.point4Title": {
+    "other": "Bez dziwactw"
+  },
+  "brand.usage.point4Text": {
+    "other": "Nie używaj tego, żeby się pode mnie podszywać, twierdzić, że popieram coś, czego nie popieram, albo sprawiać wrażenie, że jestem powiązany z czymś podejrzanym. Wierzę, że znasz różnicę między linkowaniem do strony, którą lubisz, a udawaniem kogoś innego. Jeśli nie jesteś pewien, czy to co robisz jest dziwne, to prawdopodobnie jest."
+  },
+  "brand.usage.footer": {
+    "other": "To tyle, po prostu używaj z szacunkiem i będzie git."
+  },
+  "colophon.title": {
+    "other": "Kolofon"
+  },
+  "colophon.description": {
+    "other": "Historia tej strony i jak powstała"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Historia strony"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "Strona została zarejestrowana dopiero pod koniec 2023 roku, ale jej wygląd zmieniał się wielokrotnie. Pierwsza wersja to prosty WordPress na podejrzanym darmowym hostingu, druga była oparta na Carrd, trzecia powstała na Astro. Ta obecna (czwarta) to pełny redesign od zera, z użyciem nowoczesnych technologii webowych."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Każda wersja to ewolucja, a ta najnowsza skupia się na wydajności, dostępności i bardziej osobistym podejściu, które lepiej oddaje to, kim jestem i co mnie porusza."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Stos technologiczny"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "Framework React umożliwiający SSR i generowanie stron statycznych"
+  },
+  "colophon.technologyStack.react": {
+    "other": "Biblioteka JavaScript do budowania interfejsów"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Narzędziowy framework CSS"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Biblioteka komponentów zbudowana z Radix UI i Tailwind"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "Biblioteka animacji dla React"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Framework do internacjonalizacji"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "Silnie typowany język programowania oparty na JavaScript"
+  },
+  "colophon.hosting.title": {
+    "other": "Hosting i wdrożenie"
+  },
+  "colophon.hosting.content1": {
+    "other": "Strona hostowana na"
+  },
+  "colophon.hosting.content2": {
+    "other": "co zapewnia płynne wdrożenia z GitHub, automatyczny HTTPS i globalny CDN."
+  },
+  "colophon.hosting.content3": {
+    "other": "Domena zarządzana przez"
+  },
+  "colophon.hosting.content4": {
+    "other": "co daje dodatkowe korzyści bezpieczeństwa i wydajności."
+  },
+  "colophon.design.title": {
+    "other": "Filozofia projektowania"
+  },
+  "colophon.design.p1": {
+    "other": "Ta strona została zaprojektowana z myślą o dostępności i wydajności. Działa bez włączonego JavaScriptu, używa semantycznego HTML i szanuje twoją prywatność, nie używając żadnych plików cookie do śledzenia."
+  },
+  "colophon.design.p2": {
+    "other": "Projekt dąży do równowagi między nowoczesną estetyką a klasyczną prostotą sieci. Tryb ciemny jest domyślny, bo lubię swoje siatkówki."
+  },
+  "colophon.webStandards.title": {
+    "other": "Standardy sieciowe"
+  },
+  "colophon.webStandards.intro": {
+    "other": "Ta strona wdraża:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "mikroformaty"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "kanały RSS, Atom i JSON"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt i sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "Dostępność"
+  },
+  "colophon.accessibility.intro": {
+    "other": "Staram się, aby ta strona była dostępna dla każdego. Funkcje obejmują:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "Semantyczna struktura HTML"
+  },
+  "colophon.accessibility.item2": {
+    "other": "Linki do pomijania treści"
+  },
+  "colophon.accessibility.item3": {
+    "other": "Prawidłowa hierarchia nagłówków"
+  },
+  "colophon.accessibility.item4": {
+    "other": "Kontrast kolorów WCAG 2.1 AA"
+  },
+  "colophon.accessibility.item5": {
+    "other": "Nawigacja klawiaturą"
+  },
+  "colophon.accessibility.item6": {
+    "other": "Respektowanie preferencji ograniczenia ruchu"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "Jeśli napotkasz jakiekolwiek problemy z dostępnością, proszę"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "daj mi znać"
+  },
+  "colophon.inspiration.title": {
+    "other": "Inspiracje"
+  },
+  "colophon.inspiration.content1": {
+    "other": "Ta strona czerpie inspirację z"
+  },
+  "colophon.inspiration.content2": {
+    "other": "która z kolei czerpie z"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Oryginalny pomysł na"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Kolofon Maggie Appleton"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Kolofon Gwerna Branwena"
+  },
+  "footer.copyright": {
+    "other": "2026, ∴ Jarema, CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "zrobione z miłością"
+  },
+  "footer.andChaos": {
+    "other": "i kilkoma dniami kodowania"
+  },
+  "footer.uptime": {
+    "other": "Uptime"
+  },
+  "footer.siteStatus": {
+    "other": "Status strony"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Skróty klawiaturowe"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Nawigacja"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Akcje"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Zamknij"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Strona główna"
+  },
+  "keyboardShortcuts.about": {
+    "other": "O mnie"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blog"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Projekty"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Teraz"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Używam"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "Kontakt"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Kolofon"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "Mapa strony"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Devlog"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Zmień język"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Zmień motyw"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Odśwież kota nastroju"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Otwórz skróty klawiaturowe"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Otwórz wyszukiwarkę akcji"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Webringi"
+  },
+  "actionSearch.2048": {
+    "other": "Zagraj w 2048"
+  },
+  "actionSearch.title": {
+    "other": "Szukaj akcji"
+  },
+  "actionSearch.placeholder": {
+    "other": "Szukaj akcji..."
+  },
+  "actionSearch.noResults": {
+    "other": "Nie znaleziono akcji"
+  },
+  "actionSearch.goTo": {
+    "other": "Przejdź do strony"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Zmień motyw"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Przełącz na tryb ciemny"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Przełącz na tryb jasny"
+  },
+  "actionSearch.appearance": {
+    "other": "Wygląd"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Zmień język"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Nowy kot nastroju"
+  },
+  "actionSearch.playGame": {
+    "other": "Zagraj w grę"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "Zobacz wszystkie skróty"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "Naciśnij . aby otworzyć paletę poleceń"
+  },
+  "actionSearch.escToClose": {
+    "other": "ESC aby zamknąć"
+  },
+  "actionSearch.fun": {
+    "other": "Zabawa"
+  },
+  "actionSearch.games": {
+    "other": "Gry"
+  },
+  "actionSearch.tetris": {
+    "other": "Zagraj w Tetris"
+  },
+  "actionSearch.help": {
+    "other": "Pomoc"
+  },
+  "actionSearch.projects.category": {
+    "other": "Nawigacja po kartach projektów"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Zamknij odwróconą kartę"
+  },
+  "actionSearch.projects.left": {
+    "other": "Przejdź w lewo"
+  },
+  "actionSearch.projects.right": {
+    "other": "Przejdź w prawo"
+  },
+  "actionSearch.projects.up": {
+    "other": "Przejdź w górę"
+  },
+  "actionSearch.projects.down": {
+    "other": "Przejdź w dół"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Obróć kartę projektu: {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Nawigacja po wpisach na blogu"
+  },
+  "actionSearch.blog.next": {
+    "other": "Do następnego wpisu"
+  },
+  "actionSearch.blog.prev": {
+    "other": "Do poprzedniego wpisu"
+  },
+  "actionSearch.blog.search": {
+    "other": "Szukaj wpisów"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Filtruj wpisy"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "Przejdź do wpisu {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "Powrót do listy bloga"
+  },
+  "actionSearch.about.category": {
+    "other": "Nawigacja po sekcjach 'O mnie'"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "Przejdź do rozdziału {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "Nawigacja po sekcjach 'Używam'"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "Przejdź do {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "Nawigacja po sekcjach 'Teraz'"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "Przejdź do {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Nawigacja po sekcjach kolofonu"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "Przejdź do sekcji {{section}}"
+  },
+  "actionSearch.tools": {
+    "other": "Narzędzia"
+  },
+  "textCounter.title": {
+    "other": "Licznik tekstu"
+  },
+  "textCounter.description": {
+    "other": "Licz znaki, słowa, zdania, akapity i obliczaj czas mówienia/czytania."
+  },
+  "textCounter.placeholder": {
+    "other": "Zacznij pisać lub wklej swój tekst tutaj..."
+  },
+  "textCounter.clear": {
+    "other": "Wyczyść"
+  },
+  "textCounter.stats.characters": {
+    "other": "Znaki"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "Znaki (bez spacji)"
+  },
+  "textCounter.stats.words": {
+    "other": "Słowa"
+  },
+  "textCounter.stats.sentences": {
+    "other": "Zdania"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "Akapity"
+  },
+  "textCounter.stats.lines": {
+    "other": "Linie"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "Czas czytania"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "Czas mówienia"
+  },
+  "textCounter.textLanguage": {
+    "other": "Język tekstu"
+  },
+  "textCounter.languages.en": {
+    "other": "Angielski"
+  },
+  "textCounter.languages.vi": {
+    "other": "Wietnamski"
+  },
+  "textCounter.languages.et": {
+    "other": "Estoński"
+  },
+  "textCounter.languages.zh": {
+    "other": "Chiński"
+  },
+  "textCounter.languages.ru": {
+    "other": "Rosyjski"
+  },
+  "textCounter.languages.custom": {
+    "other": "Inny / niestandardowy"
+  },
+  "textCounter.languages.advanced": {
+    "other": "Ustawienia zaawansowane"
+  },
+  "textCounter.speed.label": {
+    "other": "Prędkość"
+  },
+  "textCounter.speed.slow": {
+    "other": "Wolno"
+  },
+  "textCounter.speed.average": {
+    "other": "Średnio"
+  },
+  "textCounter.speed.fast": {
+    "other": "Szybko"
+  },
+  "textCounter.speed.custom": {
+    "other": "Niestandardowa"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "Czytanie (słowa na minutę)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "Mówienie (słowa na minutę)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "Szacowany czas korzysta obecnie z domyślnych prędkości dla języka angielskiego. Zmień na \"Niestandardowa\" aby wprowadzić dokładne wartości."
+  },
+  "textCounter.advanced.title": {
+    "other": "Ustawienia zaawansowane"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "Wyłącz licznik słów"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "W językach logograficznych i bramijskich spacje nie rozdzielają słów."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "Traktuj każdą linię jako akapit"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "Licz pojedyncze przejścia do nowej linii jako podziały akapitów zamiast wymagać pustych linii. Licznik linii zostanie ukryty."
+  },
+  "textCounter.privacy.summary": {
+    "other": "Informacje o prywatności"
+  },
+  "textCounter.privacy.body": {
+    "other": "To narzędzie działa całkowicie w Twojej przeglądarce. Możesz odłączyć się od internetu, a ono nadal będzie działać, Twój tekst nigdy nie jest nigdzie wysyłany."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "Sposób weryfikacji technicznej:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "Aby to sprawdzić, otwórz DevTools przeglądarki (F12) → zakładkę Sieć (Network), a następnie wpisz coś w polu tekstowym i upewnij się, że po zakończeniu ładowania strony nie są wysyłane żadne żądania."
+  },
+  "tools.title": {
+    "other": "Narzędzia"
+  },
+  "tools.description": {
+    "other": "Kilka przydatnych narzędzi. Cóż, bo nie mogłem znaleźć żadnych które naprawdę by mi odpowiadały."
+  },
+  "tools.items.counter.title": {
+    "other": "Licznik tekstu"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "Licz znaki, słowa, zdania, akapity i szacuj czas czytania/mówienia."
+  },
+  "slashes.title": {
+    "other": "Slashes"
+  },
+  "slashes.description": {
+    "other": "Lista wszystkich głównych stron w tej witrynie."
   }
 }

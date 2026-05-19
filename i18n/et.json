@@ -1,719 +1,1667 @@
 {
-  "404": {
-    "title": "Sa oled kaardilt välja rännanud",
-    "description": "Kass isegi ei tea seda kohta.",
-    "button": "Mine tagasi koju",
-    "sitemap": "Vaata saidikaarti",
-    "enjoycat": "Seni, kuni sa kadunud oled, naudi seda kassi:"
+  "404.title": {
+    "other": "Sa oled kaardilt välja rännanud"
   },
-  "2048": {
-    "description": "Ühenda klotsid, jõua 2048-ni!",
-    "score": "Skoor",
-    "best": "Parim",
-    "gameOver": "Mäng läbi!",
-    "finalScore": "Lõppskoor",
-    "tryAgain": "Proovi uuesti",
-    "youWin": "Sa võidad!",
-    "currentScore": "Praegune tulemus",
-    "keepPlaying": "Jätka mängimist",
-    "newGame": "Uus mäng",
-    "howToPlay": "Mängujuhend",
-    "instructions1": "Kasuta nooleklahve või WASD-i klotside liigutamiseks. Kui kaks sama numbriga klotsi puutuvad kokku, ühinevad nad üheks!",
-    "instructions2": "Pärast igat käiku ilmub uus klots (kas 2 või 4).",
-    "instructions3": "Loo klots numbriga 2048, et mäng võita!",
-    "controls": "Juhtimiselemendid",
-    "moveLeft": "Liiguta vasakule",
-    "moveRight": "Liiguta paremale",
-    "moveUp": "Liiguta üles",
-    "moveDown": "Liiguta alla",
-    "touchInstructions": "Mobiilseadmetes kasuta ekraanil olevaid nuppe.",
-    "undo": "Võta tagasi",
-    "title": "2048",
-    "instructions4": "Pärast 2048 saavutamist võid jätkata mängimist, et saada veelgi suurem skoor."
+  "404.description": {
+    "other": "Kass isegi ei tea seda kohta."
   },
-  "nav": {
-    "home": "Avaleht",
-    "about": "Minust",
-    "projects": "Projektid",
-    "blog": "Blogi",
-    "now": "Nüüd",
-    "uses": "Kasutused",
-    "contact": "Kontakt",
-    "guestbook": "Külalisteraamat",
-    "colophon": "Kolofon",
-    "webring": "Veebiring",
-    "scrapbook": "Arenduspäevik",
-    "slashes": "Sisukaart",
-    "brand": "Brändikomplekt",
-    "badges": "Märgid",
-    "tools": "Tööriistad "
+  "404.button": {
+    "other": "Mine tagasi koju"
   },
-  "languageNotice": {
-    "message": "Selle keele tõlked on veel pooleli. Osa sisust võib olla puudulik või puudu.",
-    "dismiss": "Sule"
+  "404.sitemap": {
+    "other": "Vaata saidikaarti"
   },
-  "language": {
-    "main": "Põhikeeled",
-    "beta": "Keeled beetaversioonis",
-    "other": "Teised keeled",
-    "auto": "Auto (brauseri keel)",
-    "search": "Otsi keeli...",
-    "en": "Inglise",
-    "vi": "Vietnami",
-    "et": "Eesti",
-    "ru": "Vene",
-    "da": "Taani",
-    "tr": "Türgi",
-    "zh": "Hiina",
-    "pl": "Poola",
-    "sv": "Rootsi",
-    "fi": "Soome",
-    "tok": "Toki Pona"
+  "404.enjoycat": {
+    "other": "Seni, kuni sa kadunud oled, naudi seda kassi:"
   },
-  "greetings": {
-    "morning": "Tere hommikust, rändur.",
-    "afternoon": "Tere päevast, uitaja.",
-    "evening": "Tere õhtust, avastaja.",
-    "night": "Veel üleval? Mina ka."
+  "2048.description": {
+    "other": "Ühenda klotsid, jõua 2048-ni!"
   },
-  "home": {
-    "buttons": {
-      "about": "Minust",
-      "projects": "Vaata mu projekte"
-    },
-    "footer": "Tere tulemast minu digiaeda. Uuri vabalt ringi.",
-    "heading": "tere, mina olen Jarema",
-    "subheading": "Majandusteaduse tudeng, vahel koodija, enamasti kasside sosistaja.",
-    "contactButton": "Võta ühendust",
-    "aboutButton": "Loe minust",
-    "blogButton": "Loe mu blogi",
-    "guestbookButton": "Kirjuta mu külalisteraamatusse",
-    "recentPosts": "Hiljutised blogipostitused",
-    "latestNow": "Mida ma hetkel teen",
-    "currentMood": "Praegune tuju",
-    "currentStatus": "Praegune staatus",
-    "time": "Praegune aeg",
-    "yourTime": "Sinu aeg",
-    "myTime": "Minu aeg",
-    "viewAllWebrings": "Vaata kõiki veebiringid",
-    "checkOutSites": "Vaata neid saite!",
-    "androidCountdown": "Android muutub X päeva jooksul suletud operatsioonisüsteemiks"
+  "2048.score": {
+    "other": "Skoor"
   },
-  "guestbook": {
-    "title": "Külalisteraamat",
-    "description": "Jäta teade minu külalisteraamatusse",
-    "poweredBy": "Toetab",
-    "atabook": "Atabook"
+  "2048.best": {
+    "other": "Parim"
   },
-  "about": {
-    "title": "Minust",
-    "description": "Lugu sellest, kes ma olen, kust ma tulen, mis on mu kirg ja mille poole ma püüdlen.",
-    "chapters": {
-      "6": {
-        "title": "ma tahtsin veel midagi öelda",
-        "content1": "so here's the part they weren't supposed to read.",
-        "content2": "i'm still angry. still grieving a version of myself that was never allowed to exist. still waking up some days wondering why everything feels a few degrees off. sometimes i think about running away, just disappearing, new name, new city, new language. sometimes i almost do it.",
-        "content3": "there are days i don't even feel human. more like a memory trying to solidify. more like an echo of something softer i can't reach anymore. other days, i'm electric. i feel every detail, sunlight on skin, quiet playlists, the way people's faces shift when they're finally safe enough to be themselves. it keeps me alive, somehow.",
-        "content4": "i'm not done becoming whoever the hell i'm supposed to be. but i am done pretending that i'm okay with staying silent."
-      }
-    }
+  "2048.gameOver": {
+    "other": "Mäng läbi!"
   },
-  "projects": {
-    "title": "Minu projektid",
-    "description": "Kogumik isiklikest, akadeemilistest ja aktivismi projektidest, millega olen tegelenud. Mõned valmis, mõned veel valmimas.",
-    "status": {
-      "completed": "Valmis",
-      "inProgress": "Veel valmimas",
-      "planned": "Plaanitud"
-    },
-    "statusLabels": {
-      "completed": "Valmis",
-      "inProgress": "Töös",
-      "planned": "Plaanitud"
-    },
-    "categories": {
-      "personal": "Isiklik",
-      "academic": "Akadeemiline",
-      "activism": "Aktivism"
-    },
-    "details": {
-      "what": "Mis see on",
-      "learned": "Mida ma õppisin",
-      "why": "Miks see on minu jaoks oluline"
-    },
-    "cardActions": {
-      "clickForDetails": "Klõpsa detailide nägemiseks",
-      "clickToClose": "Klõpsa sulgemiseks"
-    },
-    "buttons": {
-      "showRandom": "Näita rohkem juhuslikkust",
-      "hideRandom": "Peida kaos"
-    },
-    "filters": {
-      "all": "Kõik"
-    },
-    "clickToFlip": "Klõpsake pööramiseks",
-    "what": "Mis see on?",
-    "learned": "Mida ma õppisin",
-    "why": "Miks ma selle ehitasin?"
+  "2048.finalScore": {
+    "other": "Lõppskoor"
   },
-  "blog": {
-    "title": "Blogi",
-    "description": "Mõtteid, mõtisklusi ja aeg-ajalt ka pahameelehooge. Sündinud eri hetkedel ja meeleoludes.",
-    "language": "Keel",
-    "languageFilter": "Filtreeri keele järgi",
-    "tag": "Märksõnad",
-    "sort": "Sorteeri postitusi",
-    "category": "Kategooria",
-    "noPosts": "Blogipostitusi veel pole. Vaata varsti uuesti!",
-    "search": "Otsi postitusi...",
-    "sortNew": "Kuupäeva järgi (uuemad ees)",
-    "sortOld": "Kuupäeva järgi (vanimad ees)",
-    "sortReadTime": "Lugemisaja järgi (lühemad ees)",
-    "sortABC": "Tähestikuline järjestus (A-Z)",
-    "filter": "Filtrid",
-    "filterDescription": "Filtreeri blogipostitusi",
-    "activeFilter": "Aktiivsed filtrid:",
-    "filterNoMatch": "Sinu filtrid ei andnud tulemusi. Proovi mõnd filtrit muuta või eemaldada.",
-    "clearFilter": "Tühjenda kõik filtrid",
-    "mood": "Meeleolu",
-    "cat": "Kassi heakskiit",
-    "prev": "Eelmine blogipostitus",
-    "next": "Järgmine blogipostitus",
-    "jumpToPost": "Hüppa postitusse",
-    "back": "Tagasi blogi nimekirja",
-    "showingPosts": "Kuvatakse {{current}} blogipostitust {{total}}-st",
-    "minRead": "minutit lugemist",
-    "rss": "RSS-voog",
-    "subscribeRSS": "Telli RSS-i kaudu",
-    "allPosts": "Kõigi postituste voog",
-    "languageFeeds": "Keelepõhised vood",
-    "rssDescription": "Telli minu RSS-vood oma lemmiklugejas, et saada teavitusi uutest postitustest.",
-    "atom": "Atomi voog",
-    "subscribeAtom": "Telli Atomi kaudu",
-    "atomDescription": "Telli minu Atomi vood oma lemmiklugejas, et saada teavitusi uutest postitustest.",
-    "availableIn": "Lehte saab lugeda ka keeltes",
-    "comments": "Kommentaarid",
-    "webmentions": "Veebiviited",
-    "webmentionsNone": "Veebiviiteid veel pole. Ole esimene, kes vastab!",
-    "webmentionLike": "meeldis see",
-    "webmentionRepost": "jagas seda",
-    "webmentionReply": "vastas",
-    "webmentionMention": "mainis seda",
-    "tagLabels": {
-      "first-post": "esimene postitus",
-      "identity": "identiteet",
-      "belonging": "kuuluvus",
-      "introspection": "enesevaatlus",
-      "browsers": "brauserid",
-      "chrome": "Chrome",
-      "open-web": "avatud veeb",
-      "app-defaults": "vaikerakendused",
-      "software": "tarkvara",
-      "tools": "tööriistad",
-      "new-year": "uus aasta",
-      "reflection": "mõtisklus",
-      "health": "tervis",
-      "tet": "Tet-püha",
-      "vietnam": "Vietnam",
-      "military": "sõjavägi",
-      "fedora": "Fedora",
-      "linux": "Linux",
-      "hardening": "tugevdamine",
-      "values": "väärtused",
-      "personal-philosophy": "isiklik filosoofia"
-    },
-    "categoryLabels": {
-      "personal": "Isiklik",
-      "meta": "Meta",
-      "identity": "Identiteet",
-      "technical": "Tehniline",
-      "privacy": "Privaatsus",
-      "opinions": "Arvamused",
-      "life": "Elu",
-      "security": "Turvalisus",
-      "guides": "Juhendid"
-    }
+  "2048.tryAgain": {
+    "other": "Proovi uuesti"
   },
-  "now": {
-    "title": "Nüüd",
-    "description": "Mida ma praegu teen, millest mõtlen ja millele keskendun.",
-    "lastUpdated": "Viimati uuendatud",
-    "whatIsNow": "Mis on /now leht?",
-    "whatIsNowDescription": "Now-leht on leht isiklikul veebisaidil, mis ütleb teile, millele inimene hetkel, täna või väga hiljuti keskendub. Rohkem infot leiate aadressil",
-    "categories": {
-      "reading": "Lugemine",
-      "coding": "Kodeerimine",
-      "drinking": "Joomine",
-      "listening": "Kuulamine",
-      "premid": "Discordi tegevus",
-      "thinking": "Mõtlemine",
-      "studying": "Õppimine",
-      "planning": "Planeerimine"
-    }
+  "2048.youWin": {
+    "other": "Sa võidad!"
   },
-  "uses": {
-    "title": "Kasutused",
-    "description": "Kõik asjad, mida ma iga päev kasutan. Sarnaselt",
-    "websiteDescription": "lehele, mis kogub teiste kasutatavaid asju.",
-    "categories": {
-      "hardware": "Riistvara",
-      "mobile": "Mobiil",
-      "audio": "Heli",
-      "os": "Operatsioonisüsteem ja brauserid",
-      "development": "Arendustööriistad",
-      "email": "E-post ja produktiivsus",
-      "privacy": "Privaatsus ja turvalisus",
-      "mobile_tools": "Mobiilseadmete tarkvaratööriistad",
-      "mapping": "Kaardistamine",
-      "gaming": "Mängimine",
-      "multimedia": "Multimeedia",
-      "design": "Disain ja illustratsioon",
-      "photo": "Fototöötlus",
-      "video": "Video ja heli",
-      "media": "Voogedastusteenused"
-    },
-    "subsections": {
-      "design": "Disain ja illustratsioon",
-      "photo": "Fototöötlus",
-      "video": "Video ja heli",
-      "media": "Voogedastusteenused"
-    },
-    "hidden": {
-      "clickToReveal": "Vajutage 5 korda, et kuvada",
-      "clicksLeft": "({{clicks}} klõpsu veel, et paljastada)",
-      "platformPrefix": "Peidetud platvorm"
-    }
+  "2048.currentScore": {
+    "other": "Praegune tulemus"
   },
-  "contact": {
-    "title": "Kontakt",
-    "description": "Võimalused minuga ühendust võtta ja ühendust luua.",
-    "message": "ära ole häbelik. ütle tere. või broneeri 1:1, kui tunned end professionaalselt :)",
-    "disclaimer": "vastan meilidele küll. tõenäoliselt. kui mind just mõni lind vms ei hauta",
-    "sections": {
-      "contactMe": "Võtke minuga ühendust",
-      "socialMedia": "Mina sotsiaalmeedias",
-      "otherPlatforms": "Mina teistel platvormidel"
-    },
-    "sectionTitles": {
-      "contactMe": "Võtke minuga ühendust",
-      "socialMedia": "Mina sotsiaalmeedias",
-      "otherPlatforms": "Mina teistel platvormidel",
-      "keys": "Avalikud võtmed"
-    },
-    "links": {
-      "universityEmail": "Ülikooli e-post",
-      "bookMeeting": "Broneeri minuga kohtumine",
-      "messengerNote": "Olen Facebookis ja Messengeris väga passiivne. Vastan parima võimaluse piires.",
-      "pgpKey": "PGP avalik võti",
-      "sshKey": "SSH avalik võti"
-    }
+  "2048.keepPlaying": {
+    "other": "Jätka mängimist"
   },
-  "moodCat": {
-    "title": "Päeva kass",
-    "hover": "hindab sind pehmelt",
-    "refresh": "Uus kass, kes see?",
-    "seeMore": "Vaata rohkem liiva"
+  "2048.newGame": {
+    "other": "Uus mäng"
   },
-  "tetris": {
-    "title": "Tetris",
-    "description": "Klassikaline kukkuvate klotside ja kaduvate ridade mäng",
-    "gameInfo": "Mängu info",
-    "score": "Skoor",
-    "level": "Tase",
-    "status": "Staatus",
-    "next": "Järgmine",
-    "gameOver": "Mäng läbi",
-    "paused": "Peatatud",
-    "playing": "Mängib",
-    "ready": "Valmis",
-    "playAgain": "Mängi uuesti",
-    "pause": "Paus",
-    "resume": "Jätka mängu",
-    "start": "Alusta",
-    "reset": "Lähtesta",
-    "controls": "Juhtimiselemendid",
-    "moveLeft": "Liiguta vasakule",
-    "moveRight": "Liiguta paremale",
-    "moveDown": "Liiguta alla",
-    "rotate": "Pööra klotsi",
-    "hardDrop": "Kõva langemine",
-    "pauseGame": "Mängu peatamine",
-    "musicOn": "Muusika sees",
-    "musicOff": "Muusika välja lülitatud",
-    "nowPlaying": "Praegu mängib",
-    "spacebar": "Tühik"
+  "2048.howToPlay": {
+    "other": "Mängujuhend"
   },
-  "scrapbook": {
-    "title": "Devlogi",
-    "description": "Mõned arenduslogid sellest ajast, kui ma seda lehte ehitasin.",
-    "noEntries": "Sissekandeid veel pole."
+  "2048.instructions1": {
+    "other": "Kasuta nooleklahve või WASD-i klotside liigutamiseks. Kui kaks sama numbriga klotsi puutuvad kokku, ühinevad nad üheks!"
   },
-  "settings": {
-    "title": "Seaded",
-    "theme": "Teema",
-    "themeAuto": "Automaatne",
-    "themeLight": "Hele teema",
-    "themeDark": "Tume teema",
-    "stars": "Vilkuvad tähed",
-    "reduceMotion": "Vähenda liikumist",
-    "highContrast": "Kõrge kontrastsus",
-    "dyslexiaFont": "Düsleksiasõbralik font",
-    "timezone": "Ajavöönd",
-    "tzYours": "Sinu",
-    "tzAuthor": "Jarema",
-    "music": "Muusika",
-    "musicUnavailable": "Hetkel pole saadaval"
+  "2048.instructions2": {
+    "other": "Pärast igat käiku ilmub uus klots (kas 2 või 4)."
   },
-  "webrings": {
-    "title": "Veebiringid",
-    "description": "Veebiringid, kuhu ma kuulun. Avasta rohkem iseseisvaid veebilehti ja isiklikke blogisid.",
-    "intro1": "Veebiring on sarnaselt mõtlevate inimeste loodud veebilehtede kogumik, mis on tavaliselt koondunud mingi teema, esteetika või ühise huvi ümber. (safonts veebiringilt)",
-    "intro2": "See veebileht on osa neist veebiringidest. Klõpsa linkidel, et külastada mu naabrite lehti, ja teisi liikmeid, kui sellel ringil on juhuslikkuse funktsioon. Vali milline tahes ring!",
-    "previous": "Eelmine",
-    "random": "Juhuslik",
-    "next": "Järgmine",
-    "previousAria": "Eelmine leht ringis {{name}}",
-    "randomAria": "Juhuslik leht ringis {{name}}",
-    "nextAria": "Järgmine leht ringis {{name}}",
-    "pending": {
-      "title": "Ootel kinnitust",
-      "description": "Need on veebiringid, millega ma olen liitumiseks kandideerinud ja ootan kinnitust.",
-      "badge": "Ootel"
-    }
+  "2048.instructions3": {
+    "other": "Loo klots numbriga 2048, et mäng võita!"
   },
-  "badges": {
-    "title": "Veebimärkide kogu",
-    "description": "Klassikaliste veebimärkide ja nuppude kogu, mida kasutan oma veebilehel.",
-    "pageTitle": "Klassikaline veebimärkide kogu",
-    "pageDescription": "Olen kogunud need 88x31 märgid, et näidata, millest mina ja see leht tegelikult hoolime. Need on tagasivaade Geocities'i ajastule, kui internet oli vähem täis korporatiivset ja tehisintellekti saasta. Kui sul on märk, mida sooviksid siia lisada, anna mulle lihtsalt teada.",
-    "myBadgeTitle": "Minu märk (klõpsa laiendamiseks)",
-    "myBadgeIntro": "Kasuta seda märki minu veebilehele viitamiseks:",
-    "hotlinkUrl": "Püsilink:",
-    "htmlCodeTitle": "HTML-kood",
-    "embeddingSuggestionsTitle": "Soovitused vistutamiseks",
-    "suggestion1": "Kasuta",
-    "suggestion1b": "oma CSS-is, et säilitada pikselkunsti stiil.",
-    "suggestion2": "Viita otse minu avalehele aadressil",
-    "suggestion3": "Märk on 88x31 pikslit, kahekordista oma HTML-is laius ja kõrgus mõõtudeni",
-    "suggestion3b": "et teha need kõrge resolutsiooniga ekraanidel paremini loetavaks.",
-    "collectionHeading": "Märkide kogu",
-    "search": "Otsi märke...",
-    "filterByCategory": "Filtreeri kategooria järgi",
-    "verboseView": "Üksikasjalik",
-    "badgeOnlyView": "Ainult märk",
-    "showingCount": "Kuvatud {{count}} märki",
-    "showingFiltered": "Kuvatud {{filtered}} märki {{total}}-st",
-    "noResults": "Otsingukriteeriumidele vastavaid märke ei leitud",
-    "categories": {
-      "all": "Kõik",
-      "personal": "Isiklik",
-      "friends": "Sõbrad",
-      "other-sites": "Muud saidid",
-      "software": "Tarkvara",
-      "web": "Veeb",
-      "fun": "Meelelahutus"
-    }
+  "2048.controls": {
+    "other": "Juhtimiselemendid"
   },
-  "brand": {
-    "pageTitle": "Bränd",
-    "pageDescription": "Visuaalne identiteet ja brändielemendid. Kasuta neid, kui soovid sellele saidile viidata või linkida.",
-    "name": {
-      "title": "Nimi",
-      "nameLabel": "Nimi",
-      "displayNameLabel": "Kuvatav nimi",
-      "symbolNote": "Sümbol 'järelikult' (∴) on alati osa minu kuvatavast nimest. See tähistab tulemusi, loogilisi järeldusi, seoseid, mõttekäigu lõppu; see on otsene ja stabiilne kujund."
-    },
-    "logo": {
-      "title": "Logo",
-      "faceOnly": "Ainult nägu",
-      "faceAndBody": "Nägu ja keha",
-      "dimensions1": "384×384px (või selle kordsed)",
-      "dimensions2": "512×512px (või selle kordsed)",
-      "formats": {
-        "png": "PNG",
-        "svg": "SVG"
-      }
-    },
-    "badge": {
-      "title": "Märk",
-      "urlLabel": "Otsene URL",
-      "htmlLabel": "HTML-kood"
-    },
-    "colors": {
-      "title": "Värvid",
-      "names": {
-        "primary": "Põhivärv",
-        "background": "Taust",
-        "card": "Kaart",
-        "foreground": "Esiplaan",
-        "muted": "Summutatud",
-        "border": "Ääris"
-      },
-      "descriptions": {
-        "primary": "Peamine aktsentvärv",
-        "background": "Lehe taust",
-        "card": "Kaardi taust",
-        "foreground": "Peamine tekstivärv",
-        "muted": "Vähemolulised elemendid",
-        "border": "Äärised ja eraldajad"
-      },
-      "darkMode": "Tume režiim",
-      "lightMode": "Hele režiim"
-    },
-    "fonts": {
-      "title": "Fondid",
-      "names": {
-        "heading": "Lexend",
-        "body": "Lexend",
-        "notoSansSC": "Noto Sans SC",
-        "monaspice": "MonaspiceNe Nerd Font",
-        "hanNomGothic": "Han Nom Gothic"
-      },
-      "usage": {
-        "heading": "Pealkirjad",
-        "body": "Põhitekst ja kasutajaliides",
-        "notoSansSC": "Hiina keel",
-        "monaspice": "Kood ja monovahekirja tekst",
-        "hanNomGothic": "Vietnami Chữ Nôm"
-      },
-      "weight": "Paksus:",
-      "viewOnGoogleFonts": "Vaata fondihoidlas",
-      "languages": {
-        "english": "Inglise",
-        "vietnamese": "Vietnami",
-        "polish": "Poola",
-        "russian": "Vene",
-        "japanese": "Jaapani",
-        "hebrew": "Heebrea",
-        "thai": "Tai",
-        "symbols": "Sümbolid",
-        "chineseSimplified": "Hiina (Lihtsustatud)",
-        "chineseTraditional": "Hiina (Traditsiooniline)",
-        "vietnameseHanNom": "Vietnami (Chữ Nôm)"
-      }
-    },
-    "usage": {
-      "title": "Paar märkust",
-      "point1Title": "Kasuta julgelt",
-      "point1Text": "Sa ei pea küsima luba, et kasutada märki, logo või sellele saidile linkida. Lihtsalt võta need, hotlinki, viska oma kodulehele. Mul on ükskõik. Tegelikult oleks mul isegi hea meel.",
-      "point2Title": "Säilita märgi piksli-stiil",
-      "point2Text": "Kui kasutad märki (badge), palun kasuta oma CSS-is 'image-rendering: pixelated' (või Firefoxi puhul 'crisp-edges'). Ilma selleta muudavad brauserid pikslid uduseks ja see näeb välja nagu prügi. See on pikslikunst, palun kohtle seda kui pikslikunsti.",
-      "point3Title": "Viitamine on tore, aga vabatahtlik",
-      "point3Text": "Kui kirjutad sellest saidist või kasutad neid materjale blogipostituses või artiklis, oleks tagasilink teretulnud. Aga kui lisad minu märgi lihtsalt oma linkide lehele, ei pea sa midagi lisaks tegema. Märgi HTML-kood viitab juba ise siia.",
-      "point4Title": "Ära tee midagi kahtlast",
-      "point4Text": "Ära kasuta neid minu teesklemiseks, väitmaks, et toetan midagi, mida ma ei toeta, või jätmaks muljet, et olen seotud millegi kahtlasega. Usun, et tead vahet lingi jagamisel saidile, mis sulle meeldib, ja kellegi teisena esinemisel. Kui sa pole kindel, kas see, mida teed, on imelik, siis tõenäoliselt ongi.",
-      "footer": "Ongi kõik, kasuta neid lihtsalt lugupidavalt ja kõik on korras."
-    }
+  "2048.moveLeft": {
+    "other": "Liiguta vasakule"
   },
-  "colophon": {
-    "title": "Kolofon",
-    "description": "Selle veebisaidi taga peituv lugu ja selle loomine",
-    "siteHistory": {
-      "title": "Saidi ajalugu",
-      "content1": "This site was just registered in late 2023, yet the design has changed a lot over the span of its life. The first version was just a basic WordPress site hosted on a sketchy free hosting provider, the second was Carrd-based, and the third was built with Astro. This current iteration (the fourth version) is a complete redesign built from scratch with modern web technologies.",
-      "content2": "Each version has been an evolution, with this latest one focusing on performance, accessibility, full keyboard navigation, and a more personal touch that better represents who I am and what I care about."
-    },
-    "technologyStack": {
-      "title": "Tehnoloogiapakk",
-      "nextjs": "React raamistik, mis võimaldab serveripoolset renderdamist ja staatiliste saitide loomist",
-      "react": "JavaScripti teek kasutajaliideste loomiseks",
-      "tailwind": "Sagedusele keskenduv CSS raamistik",
-      "shadcn": "Taaskasutatavate komponentide teek, ehitatud Radix UI ja Tailwindiga",
-      "framer": "Animatsiooniteek Reactile",
-      "i18next": "Rahvusvahelistumise raamistik",
-      "typescript": "Tugevalt tipitud programmeerimiskeel, mis põhineb JavaScriptil"
-    },
-    "hosting": {
-      "title": "Majutus ja juurutamine",
-      "content1": "Sait on majutatud",
-      "content2": "mis pakub sujuvat juurutamist GitHubist, automaatset HTTPS-i ja globaalset CDN-jaotust.",
-      "content3": "Domeeni hallatakse läbi",
-      "content4": "mis pakub täiendavat turvalisust ja jõudlust."
-    },
-    "design": {
-      "title": "Disainifilosoofia",
-      "p1": "See veebileht on loodud ligipääsetavust ja jõudlust silmas pidades. See töötab ilma JavaScriptita, kasutab semantilist HTML-i ja austab teie privaatsust, vältides jälgimisküpsiseid.",
-      "p2": "Disaini eesmärk on leida tasakaal kaasaegse esteetika ja klassikalise veebi lihtsuse vahel. Tume režiim on vaikimisi sisse lülitatud, sest mulle meeldivad mu võrkkestad."
-    },
-    "webStandards": {
-      "title": "Veebistandardid",
-      "intro": "See sait rakendab:",
-      "microformats": "mikrovormingud",
-      "feeds": "RSS, Atom ja JSON vood",
-      "robots": "robots.txt ja sitemap.xml",
-      "humans": "humans.txt"
-    },
-    "accessibility": {
-      "title": "Ligipääsetavus",
-      "intro": "Püüan teha selle saidi kõigile kättesaadavaks. Funktsioonide hulka kuuluvad:",
-      "item1": "Semantiline HTML struktuur",
-      "item2": "Sisu vahelejätmise lingid",
-      "item3": "Õige pealkirjade hierarhia",
-      "item4": "WCAG 2.1 AA värvikontrast",
-      "item5": "Klaviatuuriga navigeeritav",
-      "item6": "Arvestab vähendatud liikumise eelistusi",
-      "reportText": "Kui märkate ligipääsetavuse probleeme, siis",
-      "contactLink": "andke mulle teada"
-    },
-    "inspiration": {
-      "title": "Inspiratsioon",
-      "content1": "See leht ammutab inspiratsiooni",
-      "content2": "mis omakorda on inspireeritud",
-      "content3": "Algne idee teemal",
-      "maggie": "Maggie Appletoni kolofoon",
-      "gwern": "Gwern Branweni kolofoon"
-    }
+  "2048.moveRight": {
+    "other": "Liiguta paremale"
   },
-  "footer": {
-    "copyright": "2026, ∴ Jarema, CC BY 4.0",
-    "madeWith": "armastusega tehtud",
-    "andChaos": "ja paar nädalat mängimist",
-    "uptime": "Ülekoormus",
-    "siteStatus": "Saidi olek"
+  "2048.moveUp": {
+    "other": "Liiguta üles"
   },
-  "keyboardShortcuts": {
-    "2048": "2048",
-    "title": "Kiirklahvid",
-    "navigation": "Navigatsioon",
-    "actions": "Toimingud",
-    "close": "Sule",
-    "home": "Avaleht",
-    "about": "Minust",
-    "blog": "Blogi",
-    "projects": "Projektid",
-    "now": "Praegu",
-    "uses": "Kasutab",
-    "contact": "Kontakt",
-    "colophon": "Kolofoon",
-    "slashes": "Sisukaart",
-    "scrapbook": "Devlogi",
-    "tetris": "Tetris",
-    "cycleLanguage": "Keelte vahel liikumine",
-    "cycleTheme": "Heledate/tumedate teemade vaheldumisi vahetamine",
-    "refreshCat": "Värskenda kassi",
-    "openShortcuts": "Ava klaviatuuri otseteed",
-    "actionSearch": "Ava tegevuste otsing",
-    "webring": "Veebiringid"
+  "2048.moveDown": {
+    "other": "Liiguta alla"
   },
-  "actionSearch": {
-    "2048": "Mängi 2048",
-    "title": "Otsingutoimingud",
-    "placeholder": "Otsingutoimingud...",
-    "noResults": "Toiminguid ei leitud",
-    "goTo": "Mine lehele",
-    "toggleTheme": "Heleda/tumeda teema vahetamine",
-    "switchDarkMode": "Lülitu tumedale režiimile",
-    "switchLightMode": "Lülitu heledale režiimile",
-    "appearance": "Välimus",
-    "cycleLanguage": "Keelte vahel liikumine",
-    "refreshCat": "Hangi uus tuju kass",
-    "playGame": "Mängi mängu",
-    "viewShortcuts": "Vaata kõiki otseteid",
-    "pressToOpen": "Käskude paleti avamiseks vajutage klahvi .",
-    "escToClose": "ESC sulgemiseks",
-    "fun": "Lõbu",
-    "games": "Mängud",
-    "tetris": "Mängi Tetrist",
-    "help": "Abi",
-    "projects": {
-      "category": "Navigeeri projektide seas",
-      "closeCard": "Sulge avatud kaart",
-      "left": "Navigeeri vasakule",
-      "right": "Navigeeri paremale",
-      "up": "Navigeeri üles",
-      "down": "Navigeeri alla",
-      "flipCard": "Pööra projektikaarti: {{title}}"
-    },
-    "blog": {
-      "category": "Navigeeri blogipostitustes",
-      "next": "Järgmise postituse juurde",
-      "prev": "Eelmise postituse juurde",
-      "search": "Otsi blogipostitusi",
-      "filterTag": "Filtreeri blogipostitusi",
-      "jumpToPost": "Hüppa postitusse {{i}}",
-      "back": "Tagasi bloginimekirja"
-    },
-    "about": {
-      "category": "Navigeeri sektsioonides",
-      "jumpToChapter": "Hüppa peatükki {{i}}"
-    },
-    "uses": {
-      "category": "Navigeeri tööriistade seas",
-      "jumpToCategory": "Hüppa kategooriasse {{category}}"
-    },
-    "now": {
-      "category": "Navigeeri praegustes tegevustes",
-      "jumpToCategory": "Hüppa kategooriasse {{category}}"
-    },
-    "colophon": {
-      "category": "Navigeeri kolofooni sektsioonides",
-      "jumpToSection": "Hüppa sektsiooni {{section}}"
-    },
-    "tools": "Tööriistad"
+  "2048.touchInstructions": {
+    "other": "Mobiilseadmetes kasuta ekraanil olevaid nuppe."
   },
-  "textCounter": {
-    "title": "Tekstiloendur",
-    "description": "Loenda tähemärke, sõnu, lauseid, lõike ning arvuta lugemis-/kõneaeg.",
-    "placeholder": "Alusta kirjutamist või kleebi oma tekst siia...",
-    "clear": "Puhasta",
-    "stats": {
-      "characters": "Tähemärgid",
-      "charactersNoSpaces": "Tähemärgid (tühikuteta)",
-      "words": "Sõnad",
-      "sentences": "Laused",
-      "paragraphs": "Lõigud",
-      "lines": "Read",
-      "readingTime": "Lugemisaeg",
-      "speakingTime": "Kõneaeg"
-    },
-    "textLanguage": "Teksti keel",
-    "languages": {
-      "en": "Inglise",
-      "vi": "Vietnami",
-      "et": "Eesti",
-      "zh": "Hiina",
-      "ru": "Vene",
-      "custom": "Muu / kohandatud",
-      "advanced": "Täpsemad seaded"
-    },
-    "speed": {
-      "label": "Kiirus",
-      "slow": "Aeglane",
-      "average": "Keskmine",
-      "fast": "Kiire",
-      "custom": "Kohandatud",
-      "readingWpm": "Lugemine (sõna minutis)",
-      "speakingWpm": "Rääkimine (sõna minutis)",
-      "englishDefaultsWarning": "Aja hindajad kasutavad praegu ingliskeelseid vaikekiirusi. Lülitu valikule \"Kohandatud\" et sisestada täpsed väärtused."
-    },
-    "advanced": {
-      "title": "Täpsemad seaded",
-      "disableWords": "Keela sõnade loendamine",
-      "disableWordsDesc": "Logograafiliste ja braahmi keelte puhul ei eralda tühikud sõnu.",
-      "newlineAsParagraph": "Käsitle iga rida lõiguna",
-      "newlineAsParagraphDesc": "Loenda üksikuid reavahetusi lõiguvahedena selle asemel et nõuda tühje ridu. Ridade loendur peidetakse."
-    },
-    "privacy": {
-      "summary": "Privaatsusteave",
-      "body": "See tööriist töötab täielikult sinu brauseris. Sa võid internetiühenduse katkestada ja see töötab ikka, sinu teksti ei saadeta kunagi kuhugi.",
-      "technicalLabel": "Tehniline kontroll:",
-      "technical": "Kontrollimiseks ava brauseri DevTools (F12) → vahekaart Network, seejärel kirjuta tekstikasti ja veendu, et pärast lehe laadimist ei tehta ühtegi päringut."
-    }
+  "2048.undo": {
+    "other": "Võta tagasi"
   },
-  "tools": {
-    "title": "Tööriistad",
-    "description": "Mõned käepärased utiliidid. Sest ma ei leidnud ühtegi mis oleks minu vajadustele vastanud.",
-    "items": {
-      "counter": {
-        "title": "Tekstiloendur",
-        "icon": "🔤",
-        "description": "Loenda tähemärke, sõnu, lauseid, lõike ja hinda lugemis-/kõneaega."
-      }
-    }
+  "2048.title": {
+    "other": "2048"
   },
-  "slashes": {
-    "title": "Kaldkriipsud",
-    "description": "Nimekiri kõikidest selle saidi pealehtedest."
+  "2048.instructions4": {
+    "other": "Pärast 2048 saavutamist võid jätkata mängimist, et saada veelgi suurem skoor."
+  },
+  "nav.home": {
+    "other": "Avaleht"
+  },
+  "nav.about": {
+    "other": "Minust"
+  },
+  "nav.projects": {
+    "other": "Projektid"
+  },
+  "nav.blog": {
+    "other": "Blogi"
+  },
+  "nav.now": {
+    "other": "Nüüd"
+  },
+  "nav.uses": {
+    "other": "Kasutused"
+  },
+  "nav.contact": {
+    "other": "Kontakt"
+  },
+  "nav.guestbook": {
+    "other": "Külalisteraamat"
+  },
+  "nav.colophon": {
+    "other": "Kolofon"
+  },
+  "nav.webring": {
+    "other": "Veebiring"
+  },
+  "nav.scrapbook": {
+    "other": "Arenduspäevik"
+  },
+  "nav.slashes": {
+    "other": "Sisukaart"
+  },
+  "nav.brand": {
+    "other": "Brändikomplekt"
+  },
+  "nav.badges": {
+    "other": "Märgid"
+  },
+  "nav.tools": {
+    "other": "Tööriistad "
+  },
+  "languageNotice.message": {
+    "other": "Selle keele tõlked on veel pooleli. Osa sisust võib olla puudulik või puudu."
+  },
+  "languageNotice.dismiss": {
+    "other": "Sule"
+  },
+  "language.main": {
+    "other": "Põhikeeled"
+  },
+  "language.beta": {
+    "other": "Keeled beetaversioonis"
+  },
+  "language.other": {
+    "other": "Teised keeled"
+  },
+  "language.auto": {
+    "other": "Auto (brauseri keel)"
+  },
+  "language.search": {
+    "other": "Otsi keeli..."
+  },
+  "language.en": {
+    "other": "Inglise"
+  },
+  "language.vi": {
+    "other": "Vietnami"
+  },
+  "language.et": {
+    "other": "Eesti"
+  },
+  "language.ru": {
+    "other": "Vene"
+  },
+  "language.da": {
+    "other": "Taani"
+  },
+  "language.tr": {
+    "other": "Türgi"
+  },
+  "language.zh": {
+    "other": "Hiina"
+  },
+  "language.pl": {
+    "other": "Poola"
+  },
+  "language.sv": {
+    "other": "Rootsi"
+  },
+  "language.fi": {
+    "other": "Soome"
+  },
+  "language.tok": {
+    "other": "Toki Pona"
+  },
+  "greetings.morning": {
+    "other": "Tere hommikust, rändur."
+  },
+  "greetings.afternoon": {
+    "other": "Tere päevast, uitaja."
+  },
+  "greetings.evening": {
+    "other": "Tere õhtust, avastaja."
+  },
+  "greetings.night": {
+    "other": "Veel üleval? Mina ka."
+  },
+  "home.buttons.about": {
+    "other": "Minust"
+  },
+  "home.buttons.projects": {
+    "other": "Vaata mu projekte"
+  },
+  "home.footer": {
+    "other": "Tere tulemast minu digiaeda. Uuri vabalt ringi."
+  },
+  "home.heading": {
+    "other": "tere, mina olen Jarema"
+  },
+  "home.subheading": {
+    "other": "Majandusteaduse tudeng, vahel koodija, enamasti kasside sosistaja."
+  },
+  "home.contactButton": {
+    "other": "Võta ühendust"
+  },
+  "home.aboutButton": {
+    "other": "Loe minust"
+  },
+  "home.blogButton": {
+    "other": "Loe mu blogi"
+  },
+  "home.guestbookButton": {
+    "other": "Kirjuta mu külalisteraamatusse"
+  },
+  "home.recentPosts": {
+    "other": "Hiljutised blogipostitused"
+  },
+  "home.latestNow": {
+    "other": "Mida ma hetkel teen"
+  },
+  "home.currentMood": {
+    "other": "Praegune tuju"
+  },
+  "home.currentStatus": {
+    "other": "Praegune staatus"
+  },
+  "home.time": {
+    "other": "Praegune aeg"
+  },
+  "home.yourTime": {
+    "other": "Sinu aeg"
+  },
+  "home.myTime": {
+    "other": "Minu aeg"
+  },
+  "home.viewAllWebrings": {
+    "other": "Vaata kõiki veebiringid"
+  },
+  "home.checkOutSites": {
+    "other": "Vaata neid saite!"
+  },
+  "home.androidCountdown": {
+    "other": "Android muutub X päeva jooksul suletud operatsioonisüsteemiks"
+  },
+  "guestbook.title": {
+    "other": "Külalisteraamat"
+  },
+  "guestbook.description": {
+    "other": "Jäta teade minu külalisteraamatusse"
+  },
+  "guestbook.poweredBy": {
+    "other": "Toetab"
+  },
+  "guestbook.atabook": {
+    "other": "Atabook"
+  },
+  "about.title": {
+    "other": "Minust"
+  },
+  "about.description": {
+    "other": "Lugu sellest, kes ma olen, kust ma tulen, mis on mu kirg ja mille poole ma püüdlen."
+  },
+  "about.chapters.6.title": {
+    "other": "ma tahtsin veel midagi öelda"
+  },
+  "about.chapters.6.content1": {
+    "other": "so here's the part they weren't supposed to read."
+  },
+  "about.chapters.6.content2": {
+    "other": "i'm still angry. still grieving a version of myself that was never allowed to exist. still waking up some days wondering why everything feels a few degrees off. sometimes i think about running away, just disappearing, new name, new city, new language. sometimes i almost do it."
+  },
+  "about.chapters.6.content3": {
+    "other": "there are days i don't even feel human. more like a memory trying to solidify. more like an echo of something softer i can't reach anymore. other days, i'm electric. i feel every detail, sunlight on skin, quiet playlists, the way people's faces shift when they're finally safe enough to be themselves. it keeps me alive, somehow."
+  },
+  "about.chapters.6.content4": {
+    "other": "i'm not done becoming whoever the hell i'm supposed to be. but i am done pretending that i'm okay with staying silent."
+  },
+  "projects.title": {
+    "other": "Minu projektid"
+  },
+  "projects.description": {
+    "other": "Kogumik isiklikest, akadeemilistest ja aktivismi projektidest, millega olen tegelenud. Mõned valmis, mõned veel valmimas."
+  },
+  "projects.status.completed": {
+    "other": "Valmis"
+  },
+  "projects.status.inProgress": {
+    "other": "Veel valmimas"
+  },
+  "projects.status.planned": {
+    "other": "Plaanitud"
+  },
+  "projects.statusLabels.completed": {
+    "other": "Valmis"
+  },
+  "projects.statusLabels.inProgress": {
+    "other": "Töös"
+  },
+  "projects.statusLabels.planned": {
+    "other": "Plaanitud"
+  },
+  "projects.categories.personal": {
+    "other": "Isiklik"
+  },
+  "projects.categories.academic": {
+    "other": "Akadeemiline"
+  },
+  "projects.categories.activism": {
+    "other": "Aktivism"
+  },
+  "projects.details.what": {
+    "other": "Mis see on"
+  },
+  "projects.details.learned": {
+    "other": "Mida ma õppisin"
+  },
+  "projects.details.why": {
+    "other": "Miks see on minu jaoks oluline"
+  },
+  "projects.cardActions.clickForDetails": {
+    "other": "Klõpsa detailide nägemiseks"
+  },
+  "projects.cardActions.clickToClose": {
+    "other": "Klõpsa sulgemiseks"
+  },
+  "projects.buttons.showRandom": {
+    "other": "Näita rohkem juhuslikkust"
+  },
+  "projects.buttons.hideRandom": {
+    "other": "Peida kaos"
+  },
+  "projects.filters.all": {
+    "other": "Kõik"
+  },
+  "projects.clickToFlip": {
+    "other": "Klõpsake pööramiseks"
+  },
+  "projects.what": {
+    "other": "Mis see on?"
+  },
+  "projects.learned": {
+    "other": "Mida ma õppisin"
+  },
+  "projects.why": {
+    "other": "Miks ma selle ehitasin?"
+  },
+  "blog.title": {
+    "other": "Blogi"
+  },
+  "blog.description": {
+    "other": "Mõtteid, mõtisklusi ja aeg-ajalt ka pahameelehooge. Sündinud eri hetkedel ja meeleoludes."
+  },
+  "blog.language": {
+    "other": "Keel"
+  },
+  "blog.languageFilter": {
+    "other": "Filtreeri keele järgi"
+  },
+  "blog.tag": {
+    "other": "Märksõnad"
+  },
+  "blog.sort": {
+    "other": "Sorteeri postitusi"
+  },
+  "blog.category": {
+    "other": "Kategooria"
+  },
+  "blog.noPosts": {
+    "other": "Blogipostitusi veel pole. Vaata varsti uuesti!"
+  },
+  "blog.search": {
+    "other": "Otsi postitusi..."
+  },
+  "blog.sortNew": {
+    "other": "Kuupäeva järgi (uuemad ees)"
+  },
+  "blog.sortOld": {
+    "other": "Kuupäeva järgi (vanimad ees)"
+  },
+  "blog.sortReadTime": {
+    "other": "Lugemisaja järgi (lühemad ees)"
+  },
+  "blog.sortABC": {
+    "other": "Tähestikuline järjestus (A-Z)"
+  },
+  "blog.filter": {
+    "other": "Filtrid"
+  },
+  "blog.filterDescription": {
+    "other": "Filtreeri blogipostitusi"
+  },
+  "blog.activeFilter": {
+    "other": "Aktiivsed filtrid:"
+  },
+  "blog.filterNoMatch": {
+    "other": "Sinu filtrid ei andnud tulemusi. Proovi mõnd filtrit muuta või eemaldada."
+  },
+  "blog.clearFilter": {
+    "other": "Tühjenda kõik filtrid"
+  },
+  "blog.mood": {
+    "other": "Meeleolu"
+  },
+  "blog.cat": {
+    "other": "Kassi heakskiit"
+  },
+  "blog.prev": {
+    "other": "Eelmine blogipostitus"
+  },
+  "blog.next": {
+    "other": "Järgmine blogipostitus"
+  },
+  "blog.jumpToPost": {
+    "other": "Hüppa postitusse"
+  },
+  "blog.back": {
+    "other": "Tagasi blogi nimekirja"
+  },
+  "blog.showingPosts": {
+    "other": "Kuvatakse {{current}} blogipostitust {{total}}-st"
+  },
+  "blog.minRead": {
+    "other": "minutit lugemist"
+  },
+  "blog.rss": {
+    "other": "RSS-voog"
+  },
+  "blog.subscribeRSS": {
+    "other": "Telli RSS-i kaudu"
+  },
+  "blog.allPosts": {
+    "other": "Kõigi postituste voog"
+  },
+  "blog.languageFeeds": {
+    "other": "Keelepõhised vood"
+  },
+  "blog.rssDescription": {
+    "other": "Telli minu RSS-vood oma lemmiklugejas, et saada teavitusi uutest postitustest."
+  },
+  "blog.atom": {
+    "other": "Atomi voog"
+  },
+  "blog.subscribeAtom": {
+    "other": "Telli Atomi kaudu"
+  },
+  "blog.atomDescription": {
+    "other": "Telli minu Atomi vood oma lemmiklugejas, et saada teavitusi uutest postitustest."
+  },
+  "blog.availableIn": {
+    "other": "Lehte saab lugeda ka keeltes"
+  },
+  "blog.comments": {
+    "other": "Kommentaarid"
+  },
+  "blog.webmentions": {
+    "other": "Veebiviited"
+  },
+  "blog.webmentionsNone": {
+    "other": "Veebiviiteid veel pole. Ole esimene, kes vastab!"
+  },
+  "blog.webmentionLike": {
+    "other": "meeldis see"
+  },
+  "blog.webmentionRepost": {
+    "other": "jagas seda"
+  },
+  "blog.webmentionReply": {
+    "other": "vastas"
+  },
+  "blog.webmentionMention": {
+    "other": "mainis seda"
+  },
+  "blog.tagLabels.first-post": {
+    "other": "esimene postitus"
+  },
+  "blog.tagLabels.identity": {
+    "other": "identiteet"
+  },
+  "blog.tagLabels.belonging": {
+    "other": "kuuluvus"
+  },
+  "blog.tagLabels.introspection": {
+    "other": "enesevaatlus"
+  },
+  "blog.tagLabels.browsers": {
+    "other": "brauserid"
+  },
+  "blog.tagLabels.chrome": {
+    "other": "Chrome"
+  },
+  "blog.tagLabels.open-web": {
+    "other": "avatud veeb"
+  },
+  "blog.tagLabels.app-defaults": {
+    "other": "vaikerakendused"
+  },
+  "blog.tagLabels.software": {
+    "other": "tarkvara"
+  },
+  "blog.tagLabels.tools": {
+    "other": "tööriistad"
+  },
+  "blog.tagLabels.new-year": {
+    "other": "uus aasta"
+  },
+  "blog.tagLabels.reflection": {
+    "other": "mõtisklus"
+  },
+  "blog.tagLabels.health": {
+    "other": "tervis"
+  },
+  "blog.tagLabels.tet": {
+    "other": "Tet-püha"
+  },
+  "blog.tagLabels.vietnam": {
+    "other": "Vietnam"
+  },
+  "blog.tagLabels.military": {
+    "other": "sõjavägi"
+  },
+  "blog.tagLabels.fedora": {
+    "other": "Fedora"
+  },
+  "blog.tagLabels.linux": {
+    "other": "Linux"
+  },
+  "blog.tagLabels.hardening": {
+    "other": "tugevdamine"
+  },
+  "blog.tagLabels.values": {
+    "other": "väärtused"
+  },
+  "blog.tagLabels.personal-philosophy": {
+    "other": "isiklik filosoofia"
+  },
+  "blog.categoryLabels.personal": {
+    "other": "Isiklik"
+  },
+  "blog.categoryLabels.meta": {
+    "other": "Meta"
+  },
+  "blog.categoryLabels.identity": {
+    "other": "Identiteet"
+  },
+  "blog.categoryLabels.technical": {
+    "other": "Tehniline"
+  },
+  "blog.categoryLabels.privacy": {
+    "other": "Privaatsus"
+  },
+  "blog.categoryLabels.opinions": {
+    "other": "Arvamused"
+  },
+  "blog.categoryLabels.life": {
+    "other": "Elu"
+  },
+  "blog.categoryLabels.security": {
+    "other": "Turvalisus"
+  },
+  "blog.categoryLabels.guides": {
+    "other": "Juhendid"
+  },
+  "now.title": {
+    "other": "Nüüd"
+  },
+  "now.description": {
+    "other": "Mida ma praegu teen, millest mõtlen ja millele keskendun."
+  },
+  "now.lastUpdated": {
+    "other": "Viimati uuendatud"
+  },
+  "now.whatIsNow": {
+    "other": "Mis on /now leht?"
+  },
+  "now.whatIsNowDescription": {
+    "other": "Now-leht on leht isiklikul veebisaidil, mis ütleb teile, millele inimene hetkel, täna või väga hiljuti keskendub. Rohkem infot leiate aadressil"
+  },
+  "now.categories.reading": {
+    "other": "Lugemine"
+  },
+  "now.categories.coding": {
+    "other": "Kodeerimine"
+  },
+  "now.categories.drinking": {
+    "other": "Joomine"
+  },
+  "now.categories.listening": {
+    "other": "Kuulamine"
+  },
+  "now.categories.premid": {
+    "other": "Discordi tegevus"
+  },
+  "now.categories.thinking": {
+    "other": "Mõtlemine"
+  },
+  "now.categories.studying": {
+    "other": "Õppimine"
+  },
+  "now.categories.planning": {
+    "other": "Planeerimine"
+  },
+  "uses.title": {
+    "other": "Kasutused"
+  },
+  "uses.description": {
+    "other": "Kõik asjad, mida ma iga päev kasutan. Sarnaselt"
+  },
+  "uses.websiteDescription": {
+    "other": "lehele, mis kogub teiste kasutatavaid asju."
+  },
+  "uses.categories.hardware": {
+    "other": "Riistvara"
+  },
+  "uses.categories.mobile": {
+    "other": "Mobiil"
+  },
+  "uses.categories.audio": {
+    "other": "Heli"
+  },
+  "uses.categories.os": {
+    "other": "Operatsioonisüsteem ja brauserid"
+  },
+  "uses.categories.development": {
+    "other": "Arendustööriistad"
+  },
+  "uses.categories.email": {
+    "other": "E-post ja produktiivsus"
+  },
+  "uses.categories.privacy": {
+    "other": "Privaatsus ja turvalisus"
+  },
+  "uses.categories.mobile_tools": {
+    "other": "Mobiilseadmete tarkvaratööriistad"
+  },
+  "uses.categories.mapping": {
+    "other": "Kaardistamine"
+  },
+  "uses.categories.gaming": {
+    "other": "Mängimine"
+  },
+  "uses.categories.multimedia": {
+    "other": "Multimeedia"
+  },
+  "uses.categories.design": {
+    "other": "Disain ja illustratsioon"
+  },
+  "uses.categories.photo": {
+    "other": "Fototöötlus"
+  },
+  "uses.categories.video": {
+    "other": "Video ja heli"
+  },
+  "uses.categories.media": {
+    "other": "Voogedastusteenused"
+  },
+  "uses.subsections.design": {
+    "other": "Disain ja illustratsioon"
+  },
+  "uses.subsections.photo": {
+    "other": "Fototöötlus"
+  },
+  "uses.subsections.video": {
+    "other": "Video ja heli"
+  },
+  "uses.subsections.media": {
+    "other": "Voogedastusteenused"
+  },
+  "uses.hidden.clickToReveal": {
+    "other": "Vajutage 5 korda, et kuvada"
+  },
+  "uses.hidden.clicksLeft": {
+    "other": "({{clicks}} klõpsu veel, et paljastada)"
+  },
+  "uses.hidden.platformPrefix": {
+    "other": "Peidetud platvorm"
+  },
+  "contact.title": {
+    "other": "Kontakt"
+  },
+  "contact.description": {
+    "other": "Võimalused minuga ühendust võtta ja ühendust luua."
+  },
+  "contact.message": {
+    "other": "ära ole häbelik. ütle tere. või broneeri 1:1, kui tunned end professionaalselt :)"
+  },
+  "contact.disclaimer": {
+    "other": "vastan meilidele küll. tõenäoliselt. kui mind just mõni lind vms ei hauta"
+  },
+  "contact.sections.contactMe": {
+    "other": "Võtke minuga ühendust"
+  },
+  "contact.sections.socialMedia": {
+    "other": "Mina sotsiaalmeedias"
+  },
+  "contact.sections.otherPlatforms": {
+    "other": "Mina teistel platvormidel"
+  },
+  "contact.sectionTitles.contactMe": {
+    "other": "Võtke minuga ühendust"
+  },
+  "contact.sectionTitles.socialMedia": {
+    "other": "Mina sotsiaalmeedias"
+  },
+  "contact.sectionTitles.otherPlatforms": {
+    "other": "Mina teistel platvormidel"
+  },
+  "contact.sectionTitles.keys": {
+    "other": "Avalikud võtmed"
+  },
+  "contact.links.universityEmail": {
+    "other": "Ülikooli e-post"
+  },
+  "contact.links.bookMeeting": {
+    "other": "Broneeri minuga kohtumine"
+  },
+  "contact.links.messengerNote": {
+    "other": "Olen Facebookis ja Messengeris väga passiivne. Vastan parima võimaluse piires."
+  },
+  "contact.links.pgpKey": {
+    "other": "PGP avalik võti"
+  },
+  "contact.links.sshKey": {
+    "other": "SSH avalik võti"
+  },
+  "moodCat.title": {
+    "other": "Päeva kass"
+  },
+  "moodCat.hover": {
+    "other": "hindab sind pehmelt"
+  },
+  "moodCat.refresh": {
+    "other": "Uus kass, kes see?"
+  },
+  "moodCat.seeMore": {
+    "other": "Vaata rohkem liiva"
+  },
+  "tetris.title": {
+    "other": "Tetris"
+  },
+  "tetris.description": {
+    "other": "Klassikaline kukkuvate klotside ja kaduvate ridade mäng"
+  },
+  "tetris.gameInfo": {
+    "other": "Mängu info"
+  },
+  "tetris.score": {
+    "other": "Skoor"
+  },
+  "tetris.level": {
+    "other": "Tase"
+  },
+  "tetris.status": {
+    "other": "Staatus"
+  },
+  "tetris.next": {
+    "other": "Järgmine"
+  },
+  "tetris.gameOver": {
+    "other": "Mäng läbi"
+  },
+  "tetris.paused": {
+    "other": "Peatatud"
+  },
+  "tetris.playing": {
+    "other": "Mängib"
+  },
+  "tetris.ready": {
+    "other": "Valmis"
+  },
+  "tetris.playAgain": {
+    "other": "Mängi uuesti"
+  },
+  "tetris.pause": {
+    "other": "Paus"
+  },
+  "tetris.resume": {
+    "other": "Jätka mängu"
+  },
+  "tetris.start": {
+    "other": "Alusta"
+  },
+  "tetris.reset": {
+    "other": "Lähtesta"
+  },
+  "tetris.controls": {
+    "other": "Juhtimiselemendid"
+  },
+  "tetris.moveLeft": {
+    "other": "Liiguta vasakule"
+  },
+  "tetris.moveRight": {
+    "other": "Liiguta paremale"
+  },
+  "tetris.moveDown": {
+    "other": "Liiguta alla"
+  },
+  "tetris.rotate": {
+    "other": "Pööra klotsi"
+  },
+  "tetris.hardDrop": {
+    "other": "Kõva langemine"
+  },
+  "tetris.pauseGame": {
+    "other": "Mängu peatamine"
+  },
+  "tetris.musicOn": {
+    "other": "Muusika sees"
+  },
+  "tetris.musicOff": {
+    "other": "Muusika välja lülitatud"
+  },
+  "tetris.nowPlaying": {
+    "other": "Praegu mängib"
+  },
+  "tetris.spacebar": {
+    "other": "Tühik"
+  },
+  "scrapbook.title": {
+    "other": "Devlogi"
+  },
+  "scrapbook.description": {
+    "other": "Mõned arenduslogid sellest ajast, kui ma seda lehte ehitasin."
+  },
+  "scrapbook.noEntries": {
+    "other": "Sissekandeid veel pole."
+  },
+  "settings.title": {
+    "other": "Seaded"
+  },
+  "settings.theme": {
+    "other": "Teema"
+  },
+  "settings.themeAuto": {
+    "other": "Automaatne"
+  },
+  "settings.themeLight": {
+    "other": "Hele teema"
+  },
+  "settings.themeDark": {
+    "other": "Tume teema"
+  },
+  "settings.stars": {
+    "other": "Vilkuvad tähed"
+  },
+  "settings.reduceMotion": {
+    "other": "Vähenda liikumist"
+  },
+  "settings.highContrast": {
+    "other": "Kõrge kontrastsus"
+  },
+  "settings.dyslexiaFont": {
+    "other": "Düsleksiasõbralik font"
+  },
+  "settings.timezone": {
+    "other": "Ajavöönd"
+  },
+  "settings.tzYours": {
+    "other": "Sinu"
+  },
+  "settings.tzAuthor": {
+    "other": "Jarema"
+  },
+  "settings.music": {
+    "other": "Muusika"
+  },
+  "settings.musicUnavailable": {
+    "other": "Hetkel pole saadaval"
+  },
+  "webrings.title": {
+    "other": "Veebiringid"
+  },
+  "webrings.description": {
+    "other": "Veebiringid, kuhu ma kuulun. Avasta rohkem iseseisvaid veebilehti ja isiklikke blogisid."
+  },
+  "webrings.intro1": {
+    "other": "Veebiring on sarnaselt mõtlevate inimeste loodud veebilehtede kogumik, mis on tavaliselt koondunud mingi teema, esteetika või ühise huvi ümber. (safonts veebiringilt)"
+  },
+  "webrings.intro2": {
+    "other": "See veebileht on osa neist veebiringidest. Klõpsa linkidel, et külastada mu naabrite lehti, ja teisi liikmeid, kui sellel ringil on juhuslikkuse funktsioon. Vali milline tahes ring!"
+  },
+  "webrings.previous": {
+    "other": "Eelmine"
+  },
+  "webrings.random": {
+    "other": "Juhuslik"
+  },
+  "webrings.next": {
+    "other": "Järgmine"
+  },
+  "webrings.previousAria": {
+    "other": "Eelmine leht ringis {{name}}"
+  },
+  "webrings.randomAria": {
+    "other": "Juhuslik leht ringis {{name}}"
+  },
+  "webrings.nextAria": {
+    "other": "Järgmine leht ringis {{name}}"
+  },
+  "webrings.pending.title": {
+    "other": "Ootel kinnitust"
+  },
+  "webrings.pending.description": {
+    "other": "Need on veebiringid, millega ma olen liitumiseks kandideerinud ja ootan kinnitust."
+  },
+  "webrings.pending.badge": {
+    "other": "Ootel"
+  },
+  "badges.title": {
+    "other": "Veebimärkide kogu"
+  },
+  "badges.description": {
+    "other": "Klassikaliste veebimärkide ja nuppude kogu, mida kasutan oma veebilehel."
+  },
+  "badges.pageTitle": {
+    "other": "Klassikaline veebimärkide kogu"
+  },
+  "badges.pageDescription": {
+    "other": "Olen kogunud need 88x31 märgid, et näidata, millest mina ja see leht tegelikult hoolime. Need on tagasivaade Geocities'i ajastule, kui internet oli vähem täis korporatiivset ja tehisintellekti saasta. Kui sul on märk, mida sooviksid siia lisada, anna mulle lihtsalt teada."
+  },
+  "badges.myBadgeTitle": {
+    "other": "Minu märk (klõpsa laiendamiseks)"
+  },
+  "badges.myBadgeIntro": {
+    "other": "Kasuta seda märki minu veebilehele viitamiseks:"
+  },
+  "badges.hotlinkUrl": {
+    "other": "Püsilink:"
+  },
+  "badges.htmlCodeTitle": {
+    "other": "HTML-kood"
+  },
+  "badges.embeddingSuggestionsTitle": {
+    "other": "Soovitused vistutamiseks"
+  },
+  "badges.suggestion1": {
+    "other": "Kasuta"
+  },
+  "badges.suggestion1b": {
+    "other": "oma CSS-is, et säilitada pikselkunsti stiil."
+  },
+  "badges.suggestion2": {
+    "other": "Viita otse minu avalehele aadressil"
+  },
+  "badges.suggestion3": {
+    "other": "Märk on 88x31 pikslit, kahekordista oma HTML-is laius ja kõrgus mõõtudeni"
+  },
+  "badges.suggestion3b": {
+    "other": "et teha need kõrge resolutsiooniga ekraanidel paremini loetavaks."
+  },
+  "badges.collectionHeading": {
+    "other": "Märkide kogu"
+  },
+  "badges.search": {
+    "other": "Otsi märke..."
+  },
+  "badges.filterByCategory": {
+    "other": "Filtreeri kategooria järgi"
+  },
+  "badges.verboseView": {
+    "other": "Üksikasjalik"
+  },
+  "badges.badgeOnlyView": {
+    "other": "Ainult märk"
+  },
+  "badges.showingCount": {
+    "other": "Kuvatud {{count}} märki"
+  },
+  "badges.showingFiltered": {
+    "other": "Kuvatud {{filtered}} märki {{total}}-st"
+  },
+  "badges.noResults": {
+    "other": "Otsingukriteeriumidele vastavaid märke ei leitud"
+  },
+  "badges.categories.all": {
+    "other": "Kõik"
+  },
+  "badges.categories.personal": {
+    "other": "Isiklik"
+  },
+  "badges.categories.friends": {
+    "other": "Sõbrad"
+  },
+  "badges.categories.other-sites": {
+    "other": "Muud saidid"
+  },
+  "badges.categories.software": {
+    "other": "Tarkvara"
+  },
+  "badges.categories.web": {
+    "other": "Veeb"
+  },
+  "badges.categories.fun": {
+    "other": "Meelelahutus"
+  },
+  "brand.pageTitle": {
+    "other": "Bränd"
+  },
+  "brand.pageDescription": {
+    "other": "Visuaalne identiteet ja brändielemendid. Kasuta neid, kui soovid sellele saidile viidata või linkida."
+  },
+  "brand.name.title": {
+    "other": "Nimi"
+  },
+  "brand.name.nameLabel": {
+    "other": "Nimi"
+  },
+  "brand.name.displayNameLabel": {
+    "other": "Kuvatav nimi"
+  },
+  "brand.name.symbolNote": {
+    "other": "Sümbol 'järelikult' (∴) on alati osa minu kuvatavast nimest. See tähistab tulemusi, loogilisi järeldusi, seoseid, mõttekäigu lõppu; see on otsene ja stabiilne kujund."
+  },
+  "brand.logo.title": {
+    "other": "Logo"
+  },
+  "brand.logo.faceOnly": {
+    "other": "Ainult nägu"
+  },
+  "brand.logo.faceAndBody": {
+    "other": "Nägu ja keha"
+  },
+  "brand.logo.dimensions1": {
+    "other": "384×384px (või selle kordsed)"
+  },
+  "brand.logo.dimensions2": {
+    "other": "512×512px (või selle kordsed)"
+  },
+  "brand.logo.formats.png": {
+    "other": "PNG"
+  },
+  "brand.logo.formats.svg": {
+    "other": "SVG"
+  },
+  "brand.badge.title": {
+    "other": "Märk"
+  },
+  "brand.badge.urlLabel": {
+    "other": "Otsene URL"
+  },
+  "brand.badge.htmlLabel": {
+    "other": "HTML-kood"
+  },
+  "brand.colors.title": {
+    "other": "Värvid"
+  },
+  "brand.colors.names.primary": {
+    "other": "Põhivärv"
+  },
+  "brand.colors.names.background": {
+    "other": "Taust"
+  },
+  "brand.colors.names.card": {
+    "other": "Kaart"
+  },
+  "brand.colors.names.foreground": {
+    "other": "Esiplaan"
+  },
+  "brand.colors.names.muted": {
+    "other": "Summutatud"
+  },
+  "brand.colors.names.border": {
+    "other": "Ääris"
+  },
+  "brand.colors.descriptions.primary": {
+    "other": "Peamine aktsentvärv"
+  },
+  "brand.colors.descriptions.background": {
+    "other": "Lehe taust"
+  },
+  "brand.colors.descriptions.card": {
+    "other": "Kaardi taust"
+  },
+  "brand.colors.descriptions.foreground": {
+    "other": "Peamine tekstivärv"
+  },
+  "brand.colors.descriptions.muted": {
+    "other": "Vähemolulised elemendid"
+  },
+  "brand.colors.descriptions.border": {
+    "other": "Äärised ja eraldajad"
+  },
+  "brand.colors.darkMode": {
+    "other": "Tume režiim"
+  },
+  "brand.colors.lightMode": {
+    "other": "Hele režiim"
+  },
+  "brand.fonts.title": {
+    "other": "Fondid"
+  },
+  "brand.fonts.names.heading": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.body": {
+    "other": "Lexend"
+  },
+  "brand.fonts.names.notoSansSC": {
+    "other": "Noto Sans SC"
+  },
+  "brand.fonts.names.monaspice": {
+    "other": "MonaspiceNe Nerd Font"
+  },
+  "brand.fonts.names.hanNomGothic": {
+    "other": "Han Nom Gothic"
+  },
+  "brand.fonts.usage.heading": {
+    "other": "Pealkirjad"
+  },
+  "brand.fonts.usage.body": {
+    "other": "Põhitekst ja kasutajaliides"
+  },
+  "brand.fonts.usage.notoSansSC": {
+    "other": "Hiina keel"
+  },
+  "brand.fonts.usage.monaspice": {
+    "other": "Kood ja monovahekirja tekst"
+  },
+  "brand.fonts.usage.hanNomGothic": {
+    "other": "Vietnami Chữ Nôm"
+  },
+  "brand.fonts.weight": {
+    "other": "Paksus:"
+  },
+  "brand.fonts.viewOnGoogleFonts": {
+    "other": "Vaata fondihoidlas"
+  },
+  "brand.fonts.languages.english": {
+    "other": "Inglise"
+  },
+  "brand.fonts.languages.vietnamese": {
+    "other": "Vietnami"
+  },
+  "brand.fonts.languages.polish": {
+    "other": "Poola"
+  },
+  "brand.fonts.languages.russian": {
+    "other": "Vene"
+  },
+  "brand.fonts.languages.japanese": {
+    "other": "Jaapani"
+  },
+  "brand.fonts.languages.hebrew": {
+    "other": "Heebrea"
+  },
+  "brand.fonts.languages.thai": {
+    "other": "Tai"
+  },
+  "brand.fonts.languages.symbols": {
+    "other": "Sümbolid"
+  },
+  "brand.fonts.languages.chineseSimplified": {
+    "other": "Hiina (Lihtsustatud)"
+  },
+  "brand.fonts.languages.chineseTraditional": {
+    "other": "Hiina (Traditsiooniline)"
+  },
+  "brand.fonts.languages.vietnameseHanNom": {
+    "other": "Vietnami (Chữ Nôm)"
+  },
+  "brand.usage.title": {
+    "other": "Paar märkust"
+  },
+  "brand.usage.point1Title": {
+    "other": "Kasuta julgelt"
+  },
+  "brand.usage.point1Text": {
+    "other": "Sa ei pea küsima luba, et kasutada märki, logo või sellele saidile linkida. Lihtsalt võta need, hotlinki, viska oma kodulehele. Mul on ükskõik. Tegelikult oleks mul isegi hea meel."
+  },
+  "brand.usage.point2Title": {
+    "other": "Säilita märgi piksli-stiil"
+  },
+  "brand.usage.point2Text": {
+    "other": "Kui kasutad märki (badge), palun kasuta oma CSS-is 'image-rendering: pixelated' (või Firefoxi puhul 'crisp-edges'). Ilma selleta muudavad brauserid pikslid uduseks ja see näeb välja nagu prügi. See on pikslikunst, palun kohtle seda kui pikslikunsti."
+  },
+  "brand.usage.point3Title": {
+    "other": "Viitamine on tore, aga vabatahtlik"
+  },
+  "brand.usage.point3Text": {
+    "other": "Kui kirjutad sellest saidist või kasutad neid materjale blogipostituses või artiklis, oleks tagasilink teretulnud. Aga kui lisad minu märgi lihtsalt oma linkide lehele, ei pea sa midagi lisaks tegema. Märgi HTML-kood viitab juba ise siia."
+  },
+  "brand.usage.point4Title": {
+    "other": "Ära tee midagi kahtlast"
+  },
+  "brand.usage.point4Text": {
+    "other": "Ära kasuta neid minu teesklemiseks, väitmaks, et toetan midagi, mida ma ei toeta, või jätmaks muljet, et olen seotud millegi kahtlasega. Usun, et tead vahet lingi jagamisel saidile, mis sulle meeldib, ja kellegi teisena esinemisel. Kui sa pole kindel, kas see, mida teed, on imelik, siis tõenäoliselt ongi."
+  },
+  "brand.usage.footer": {
+    "other": "Ongi kõik, kasuta neid lihtsalt lugupidavalt ja kõik on korras."
+  },
+  "colophon.title": {
+    "other": "Kolofon"
+  },
+  "colophon.description": {
+    "other": "Selle veebisaidi taga peituv lugu ja selle loomine"
+  },
+  "colophon.siteHistory.title": {
+    "other": "Saidi ajalugu"
+  },
+  "colophon.siteHistory.content1": {
+    "other": "This site was just registered in late 2023, yet the design has changed a lot over the span of its life. The first version was just a basic WordPress site hosted on a sketchy free hosting provider, the second was Carrd-based, and the third was built with Astro. This current iteration (the fourth version) is a complete redesign built from scratch with modern web technologies."
+  },
+  "colophon.siteHistory.content2": {
+    "other": "Each version has been an evolution, with this latest one focusing on performance, accessibility, full keyboard navigation, and a more personal touch that better represents who I am and what I care about."
+  },
+  "colophon.technologyStack.title": {
+    "other": "Tehnoloogiapakk"
+  },
+  "colophon.technologyStack.nextjs": {
+    "other": "React raamistik, mis võimaldab serveripoolset renderdamist ja staatiliste saitide loomist"
+  },
+  "colophon.technologyStack.react": {
+    "other": "JavaScripti teek kasutajaliideste loomiseks"
+  },
+  "colophon.technologyStack.tailwind": {
+    "other": "Sagedusele keskenduv CSS raamistik"
+  },
+  "colophon.technologyStack.shadcn": {
+    "other": "Taaskasutatavate komponentide teek, ehitatud Radix UI ja Tailwindiga"
+  },
+  "colophon.technologyStack.framer": {
+    "other": "Animatsiooniteek Reactile"
+  },
+  "colophon.technologyStack.i18next": {
+    "other": "Rahvusvahelistumise raamistik"
+  },
+  "colophon.technologyStack.typescript": {
+    "other": "Tugevalt tipitud programmeerimiskeel, mis põhineb JavaScriptil"
+  },
+  "colophon.hosting.title": {
+    "other": "Majutus ja juurutamine"
+  },
+  "colophon.hosting.content1": {
+    "other": "Sait on majutatud"
+  },
+  "colophon.hosting.content2": {
+    "other": "mis pakub sujuvat juurutamist GitHubist, automaatset HTTPS-i ja globaalset CDN-jaotust."
+  },
+  "colophon.hosting.content3": {
+    "other": "Domeeni hallatakse läbi"
+  },
+  "colophon.hosting.content4": {
+    "other": "mis pakub täiendavat turvalisust ja jõudlust."
+  },
+  "colophon.design.title": {
+    "other": "Disainifilosoofia"
+  },
+  "colophon.design.p1": {
+    "other": "See veebileht on loodud ligipääsetavust ja jõudlust silmas pidades. See töötab ilma JavaScriptita, kasutab semantilist HTML-i ja austab teie privaatsust, vältides jälgimisküpsiseid."
+  },
+  "colophon.design.p2": {
+    "other": "Disaini eesmärk on leida tasakaal kaasaegse esteetika ja klassikalise veebi lihtsuse vahel. Tume režiim on vaikimisi sisse lülitatud, sest mulle meeldivad mu võrkkestad."
+  },
+  "colophon.webStandards.title": {
+    "other": "Veebistandardid"
+  },
+  "colophon.webStandards.intro": {
+    "other": "See sait rakendab:"
+  },
+  "colophon.webStandards.microformats": {
+    "other": "mikrovormingud"
+  },
+  "colophon.webStandards.feeds": {
+    "other": "RSS, Atom ja JSON vood"
+  },
+  "colophon.webStandards.robots": {
+    "other": "robots.txt ja sitemap.xml"
+  },
+  "colophon.webStandards.humans": {
+    "other": "humans.txt"
+  },
+  "colophon.accessibility.title": {
+    "other": "Ligipääsetavus"
+  },
+  "colophon.accessibility.intro": {
+    "other": "Püüan teha selle saidi kõigile kättesaadavaks. Funktsioonide hulka kuuluvad:"
+  },
+  "colophon.accessibility.item1": {
+    "other": "Semantiline HTML struktuur"
+  },
+  "colophon.accessibility.item2": {
+    "other": "Sisu vahelejätmise lingid"
+  },
+  "colophon.accessibility.item3": {
+    "other": "Õige pealkirjade hierarhia"
+  },
+  "colophon.accessibility.item4": {
+    "other": "WCAG 2.1 AA värvikontrast"
+  },
+  "colophon.accessibility.item5": {
+    "other": "Klaviatuuriga navigeeritav"
+  },
+  "colophon.accessibility.item6": {
+    "other": "Arvestab vähendatud liikumise eelistusi"
+  },
+  "colophon.accessibility.reportText": {
+    "other": "Kui märkate ligipääsetavuse probleeme, siis"
+  },
+  "colophon.accessibility.contactLink": {
+    "other": "andke mulle teada"
+  },
+  "colophon.inspiration.title": {
+    "other": "Inspiratsioon"
+  },
+  "colophon.inspiration.content1": {
+    "other": "See leht ammutab inspiratsiooni"
+  },
+  "colophon.inspiration.content2": {
+    "other": "mis omakorda on inspireeritud"
+  },
+  "colophon.inspiration.content3": {
+    "other": "Algne idee teemal"
+  },
+  "colophon.inspiration.maggie": {
+    "other": "Maggie Appletoni kolofoon"
+  },
+  "colophon.inspiration.gwern": {
+    "other": "Gwern Branweni kolofoon"
+  },
+  "footer.copyright": {
+    "other": "2026, ∴ Jarema, CC BY 4.0"
+  },
+  "footer.madeWith": {
+    "other": "armastusega tehtud"
+  },
+  "footer.andChaos": {
+    "other": "ja paar nädalat mängimist"
+  },
+  "footer.uptime": {
+    "other": "Ülekoormus"
+  },
+  "footer.siteStatus": {
+    "other": "Saidi olek"
+  },
+  "keyboardShortcuts.2048": {
+    "other": "2048"
+  },
+  "keyboardShortcuts.title": {
+    "other": "Kiirklahvid"
+  },
+  "keyboardShortcuts.navigation": {
+    "other": "Navigatsioon"
+  },
+  "keyboardShortcuts.actions": {
+    "other": "Toimingud"
+  },
+  "keyboardShortcuts.close": {
+    "other": "Sule"
+  },
+  "keyboardShortcuts.home": {
+    "other": "Avaleht"
+  },
+  "keyboardShortcuts.about": {
+    "other": "Minust"
+  },
+  "keyboardShortcuts.blog": {
+    "other": "Blogi"
+  },
+  "keyboardShortcuts.projects": {
+    "other": "Projektid"
+  },
+  "keyboardShortcuts.now": {
+    "other": "Praegu"
+  },
+  "keyboardShortcuts.uses": {
+    "other": "Kasutab"
+  },
+  "keyboardShortcuts.contact": {
+    "other": "Kontakt"
+  },
+  "keyboardShortcuts.colophon": {
+    "other": "Kolofoon"
+  },
+  "keyboardShortcuts.slashes": {
+    "other": "Sisukaart"
+  },
+  "keyboardShortcuts.scrapbook": {
+    "other": "Devlogi"
+  },
+  "keyboardShortcuts.tetris": {
+    "other": "Tetris"
+  },
+  "keyboardShortcuts.cycleLanguage": {
+    "other": "Keelte vahel liikumine"
+  },
+  "keyboardShortcuts.cycleTheme": {
+    "other": "Heledate/tumedate teemade vaheldumisi vahetamine"
+  },
+  "keyboardShortcuts.refreshCat": {
+    "other": "Värskenda kassi"
+  },
+  "keyboardShortcuts.openShortcuts": {
+    "other": "Ava klaviatuuri otseteed"
+  },
+  "keyboardShortcuts.actionSearch": {
+    "other": "Ava tegevuste otsing"
+  },
+  "keyboardShortcuts.webring": {
+    "other": "Veebiringid"
+  },
+  "actionSearch.2048": {
+    "other": "Mängi 2048"
+  },
+  "actionSearch.title": {
+    "other": "Otsingutoimingud"
+  },
+  "actionSearch.placeholder": {
+    "other": "Otsingutoimingud..."
+  },
+  "actionSearch.noResults": {
+    "other": "Toiminguid ei leitud"
+  },
+  "actionSearch.goTo": {
+    "other": "Mine lehele"
+  },
+  "actionSearch.toggleTheme": {
+    "other": "Heleda/tumeda teema vahetamine"
+  },
+  "actionSearch.switchDarkMode": {
+    "other": "Lülitu tumedale režiimile"
+  },
+  "actionSearch.switchLightMode": {
+    "other": "Lülitu heledale režiimile"
+  },
+  "actionSearch.appearance": {
+    "other": "Välimus"
+  },
+  "actionSearch.cycleLanguage": {
+    "other": "Keelte vahel liikumine"
+  },
+  "actionSearch.refreshCat": {
+    "other": "Hangi uus tuju kass"
+  },
+  "actionSearch.playGame": {
+    "other": "Mängi mängu"
+  },
+  "actionSearch.viewShortcuts": {
+    "other": "Vaata kõiki otseteid"
+  },
+  "actionSearch.pressToOpen": {
+    "other": "Käskude paleti avamiseks vajutage klahvi ."
+  },
+  "actionSearch.escToClose": {
+    "other": "ESC sulgemiseks"
+  },
+  "actionSearch.fun": {
+    "other": "Lõbu"
+  },
+  "actionSearch.games": {
+    "other": "Mängud"
+  },
+  "actionSearch.tetris": {
+    "other": "Mängi Tetrist"
+  },
+  "actionSearch.help": {
+    "other": "Abi"
+  },
+  "actionSearch.projects.category": {
+    "other": "Navigeeri projektide seas"
+  },
+  "actionSearch.projects.closeCard": {
+    "other": "Sulge avatud kaart"
+  },
+  "actionSearch.projects.left": {
+    "other": "Navigeeri vasakule"
+  },
+  "actionSearch.projects.right": {
+    "other": "Navigeeri paremale"
+  },
+  "actionSearch.projects.up": {
+    "other": "Navigeeri üles"
+  },
+  "actionSearch.projects.down": {
+    "other": "Navigeeri alla"
+  },
+  "actionSearch.projects.flipCard": {
+    "other": "Pööra projektikaarti: {{title}}"
+  },
+  "actionSearch.blog.category": {
+    "other": "Navigeeri blogipostitustes"
+  },
+  "actionSearch.blog.next": {
+    "other": "Järgmise postituse juurde"
+  },
+  "actionSearch.blog.prev": {
+    "other": "Eelmise postituse juurde"
+  },
+  "actionSearch.blog.search": {
+    "other": "Otsi blogipostitusi"
+  },
+  "actionSearch.blog.filterTag": {
+    "other": "Filtreeri blogipostitusi"
+  },
+  "actionSearch.blog.jumpToPost": {
+    "other": "Hüppa postitusse {{i}}"
+  },
+  "actionSearch.blog.back": {
+    "other": "Tagasi bloginimekirja"
+  },
+  "actionSearch.about.category": {
+    "other": "Navigeeri sektsioonides"
+  },
+  "actionSearch.about.jumpToChapter": {
+    "other": "Hüppa peatükki {{i}}"
+  },
+  "actionSearch.uses.category": {
+    "other": "Navigeeri tööriistade seas"
+  },
+  "actionSearch.uses.jumpToCategory": {
+    "other": "Hüppa kategooriasse {{category}}"
+  },
+  "actionSearch.now.category": {
+    "other": "Navigeeri praegustes tegevustes"
+  },
+  "actionSearch.now.jumpToCategory": {
+    "other": "Hüppa kategooriasse {{category}}"
+  },
+  "actionSearch.colophon.category": {
+    "other": "Navigeeri kolofooni sektsioonides"
+  },
+  "actionSearch.colophon.jumpToSection": {
+    "other": "Hüppa sektsiooni {{section}}"
+  },
+  "actionSearch.tools": {
+    "other": "Tööriistad"
+  },
+  "textCounter.title": {
+    "other": "Tekstiloendur"
+  },
+  "textCounter.description": {
+    "other": "Loenda tähemärke, sõnu, lauseid, lõike ning arvuta lugemis-/kõneaeg."
+  },
+  "textCounter.placeholder": {
+    "other": "Alusta kirjutamist või kleebi oma tekst siia..."
+  },
+  "textCounter.clear": {
+    "other": "Puhasta"
+  },
+  "textCounter.stats.characters": {
+    "other": "Tähemärgid"
+  },
+  "textCounter.stats.charactersNoSpaces": {
+    "other": "Tähemärgid (tühikuteta)"
+  },
+  "textCounter.stats.words": {
+    "other": "Sõnad"
+  },
+  "textCounter.stats.sentences": {
+    "other": "Laused"
+  },
+  "textCounter.stats.paragraphs": {
+    "other": "Lõigud"
+  },
+  "textCounter.stats.lines": {
+    "other": "Read"
+  },
+  "textCounter.stats.readingTime": {
+    "other": "Lugemisaeg"
+  },
+  "textCounter.stats.speakingTime": {
+    "other": "Kõneaeg"
+  },
+  "textCounter.textLanguage": {
+    "other": "Teksti keel"
+  },
+  "textCounter.languages.en": {
+    "other": "Inglise"
+  },
+  "textCounter.languages.vi": {
+    "other": "Vietnami"
+  },
+  "textCounter.languages.et": {
+    "other": "Eesti"
+  },
+  "textCounter.languages.zh": {
+    "other": "Hiina"
+  },
+  "textCounter.languages.ru": {
+    "other": "Vene"
+  },
+  "textCounter.languages.custom": {
+    "other": "Muu / kohandatud"
+  },
+  "textCounter.languages.advanced": {
+    "other": "Täpsemad seaded"
+  },
+  "textCounter.speed.label": {
+    "other": "Kiirus"
+  },
+  "textCounter.speed.slow": {
+    "other": "Aeglane"
+  },
+  "textCounter.speed.average": {
+    "other": "Keskmine"
+  },
+  "textCounter.speed.fast": {
+    "other": "Kiire"
+  },
+  "textCounter.speed.custom": {
+    "other": "Kohandatud"
+  },
+  "textCounter.speed.readingWpm": {
+    "other": "Lugemine (sõna minutis)"
+  },
+  "textCounter.speed.speakingWpm": {
+    "other": "Rääkimine (sõna minutis)"
+  },
+  "textCounter.speed.englishDefaultsWarning": {
+    "other": "Aja hindajad kasutavad praegu ingliskeelseid vaikekiirusi. Lülitu valikule \"Kohandatud\" et sisestada täpsed väärtused."
+  },
+  "textCounter.advanced.title": {
+    "other": "Täpsemad seaded"
+  },
+  "textCounter.advanced.disableWords": {
+    "other": "Keela sõnade loendamine"
+  },
+  "textCounter.advanced.disableWordsDesc": {
+    "other": "Logograafiliste ja braahmi keelte puhul ei eralda tühikud sõnu."
+  },
+  "textCounter.advanced.newlineAsParagraph": {
+    "other": "Käsitle iga rida lõiguna"
+  },
+  "textCounter.advanced.newlineAsParagraphDesc": {
+    "other": "Loenda üksikuid reavahetusi lõiguvahedena selle asemel et nõuda tühje ridu. Ridade loendur peidetakse."
+  },
+  "textCounter.privacy.summary": {
+    "other": "Privaatsusteave"
+  },
+  "textCounter.privacy.body": {
+    "other": "See tööriist töötab täielikult sinu brauseris. Sa võid internetiühenduse katkestada ja see töötab ikka, sinu teksti ei saadeta kunagi kuhugi."
+  },
+  "textCounter.privacy.technicalLabel": {
+    "other": "Tehniline kontroll:"
+  },
+  "textCounter.privacy.technical": {
+    "other": "Kontrollimiseks ava brauseri DevTools (F12) → vahekaart Network, seejärel kirjuta tekstikasti ja veendu, et pärast lehe laadimist ei tehta ühtegi päringut."
+  },
+  "tools.title": {
+    "other": "Tööriistad"
+  },
+  "tools.description": {
+    "other": "Mõned käepärased utiliidid. Sest ma ei leidnud ühtegi mis oleks minu vajadustele vastanud."
+  },
+  "tools.items.counter.title": {
+    "other": "Tekstiloendur"
+  },
+  "tools.items.counter.icon": {
+    "other": "🔤"
+  },
+  "tools.items.counter.description": {
+    "other": "Loenda tähemärke, sõnu, lauseid, lõike ja hinda lugemis-/kõneaega."
+  },
+  "slashes.title": {
+    "other": "Kaldkriipsud"
+  },
+  "slashes.description": {
+    "other": "Nimekiri kõikidest selle saidi pealehtedest."
   }
 }
