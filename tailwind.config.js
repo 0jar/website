@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+module.exports = {
+  content: ['./layouts/**/*.html', './content/**/*.md', './assets/**/*.js', './assets/**/*.tsx'],
   darkMode: 'class',
   theme: {
     container: {
@@ -90,5 +90,4 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
 };
