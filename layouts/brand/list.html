@@ -146,12 +146,13 @@
             </a>
           </div>
           <div class="brand-font-preview bg-background rounded p-6 grid md:grid-cols-2 gap-4">
+            {{ $font := . }}
             {{ $samplesLen := len .samples }}
             {{ range $i, $sample := .samples }}
               {{ $isLastOdd := and (eq $i (sub $samplesLen 1)) (ne (mod $samplesLen 2) 0) }}
               <div class="{{ if $isLastOdd }}md:col-span-2{{ end }}">
                 <p class="text-sm text-muted-foreground mb-1">{{ i18n (printf "brand.fonts.languages.%s" .key) | default .key }}</p>
-                <p class="text-base {{ $.class }} {{ if eq $.key "heading" }}font-bold{{ end }}">{{ .text }}</p>
+                <p class="text-base {{ $font.class }} {{ if eq $font.key "heading" }}font-bold{{ end }}">{{ .text }}</p>
               </div>
             {{ end }}
           </div>
