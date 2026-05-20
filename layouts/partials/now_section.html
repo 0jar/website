@@ -39,3 +39,6 @@
     {{ end }}
   </div>
 </section>
+
+{{ $lastfmJs := resources.Get "js/lastfm.ts" | js.Build (dict "minify" true) | fingerprint }}
+<script src="{{ $lastfmJs.RelPermalink }}" integrity="{{ $lastfmJs.Data.Integrity }}" defer></script>
