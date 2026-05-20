@@ -1,6 +1,6 @@
-# Jarema's digital garden, version 5 (Astro)
+# Jarema's digital garden, version 6 (Hugo)
 
-A personal website built with [Astro](https://astro.build).
+A personal website built with [Hugo](https://gohugo.io).
 
 This repository is hosted on [Codeberg](https://codeberg.org/jartf/website) and mirrored on [GitHub](https://github.com/jartf/website) and [GitLab](https://gitlab.com/jartf/website).
 
@@ -11,137 +11,71 @@ See the site in action:
 - [https://jarema.vercel.app](https://jarema.vercel.app) (backup)
 - [https://jarema.netlify.app](https://jarema.netlify.app) (backup)
 
-![Screenshot of the first fold of website's homepage in dark mode. The hero section centers a main heading, a short bio and a flex row of four action buttons. The lower section uses a two column layout. The left column displays three blog post cards with titles, excerpts, dates and read times. The right column displays a dynamic now section.](<salvestamata.png>)
+![Screenshot of the first fold of website's homepage in dark mode.](<salvestamata.png>)
 
 ## Architecture
 
-This is an Astro website using islands architecture, static HTML by default and React for some specific interactive components.
-
-### Key points
-
-- Static-first, most components are `.astro`
-- Interactive islands are implemented with React (`.tsx`) through Preact
-  - `client:only="preact"` is used for client-only UI (for example, command bar)
-  - `client:load` is used where hydration after SSR is wanted (for example, games)
-- Locale is inferred in middleware (see lines 5-8 of [src/middleware.ts](./src/middleware.ts)) and injected into `Astro.locals.lang`
-- Blog HTML is post-processed in middleware to wrap standalone images into `<figure><figcaption>` using image alt text
-
-### Deployment
-
-The project supports both Vercel and Netlify adapters. The adapter is selected based on environment variables:
-
-- Default adapter: `@astrojs/vercel`
-- If `NETLIFY` environment variable is set: `@astrojs/netlify`
-
-Both Vercel and Netlify deploy from the [GitHub mirror](https://github.com/jartf/website).
-
-Build output is static (`output: "static"`) with dynamic runtime endpoints only where explicitly configured.
-
-See line 7 of the [astro.config.mjs](./astro.config.mjs) for implementation :)
+This is a Hugo website relying strictly on static HTML and Hugo's native templates. Tailwind is used for styling.
 
 ## Features
 
-- Static site generation with Astro
+- Static site generation with Hugo
 - Tailwind CSS for styling
-- Content collections for blog posts, now, projects, uses, scrapbook, and webrings (see [src/content](./src/content))
+- JSON data directories for now, projects, scrapbook, uses, and webrings (see [`data/`](./data/))
 - Dark/light theme support
 - Multilingual support
 - Accessible (WCAG 2.1 AA)
 - Responsive design
 - RSS, Atom, JSON feeds per language, sitemap
 - IndieWeb conventions (h-card, IndieAuth, Webmention)
-- Global command bar and keyboard navigation
-- Games: 2048, Tetris
 - Tools: text counter
 
 ## Getting started
 
 ### Prerequisites
 
-- Node.js 18+
-- pnpm (preferred) or npm
-
-### Installation
-
-```bash
-# Install dependencies
-pnpm install
-
-# Start development server
-pnpm dev
-
-# Build for production
-pnpm build
-
-# Preview production build
-pnpm preview
-```
+- [Hugo Extended](https://gohugo.io/installation/)
 
 ### Commands
 
-| Command        | Action                                |
-|----------------|---------------------------------------|
-| `pnpm dev`     | Start dev server at `localhost:4321`  |
-| `pnpm build`   | Build production output to `./dist/`  |
-| `pnpm preview` | Preview production build              |
-| `pnpm check`   | Run Astro + TypeScript checks         |
+| Command        | Action                                                  |
+|----------------|---------------------------------------------------------|
+| `hugo server`  | Start dev server                                        |
+| `hugo`         | Build production output to `public/` directory          |
 
 ## Project structure
 
 ```text
-public/
-├── fonts/            # Self-hosted web fonts
-├── keys/             # Public PGP and SSH keys
-├── cursor/           # Custom cursor GIFs
-├── robots.txt        # Ask bad robots to go away politely :D
-├── site.webmanifest  # Manifest file
-└── ...               # Other static assets
-src/
-├── content.config.ts # Content collections config
-├── middleware.ts     # Injects lang into Astro.locals from URL
-├── env.d.ts          # TypeScript types
-├── components/       # .astro (static) and .tsx (React islands)
-│   ├── blog/         # Blog components
-│   ├── home/         # Homepage components
-│   ├── game/         # Game components
-│   ├── layout/       # Site layout components
-│   ├── KeyboardShortcut.astro  # Keyboard shortcut helper component
-│   └── T.astro       # Translation component
-├── content/          # Astro content collections data
-│   ├── blog/         # Blog posts, in Markdown
-│   ├── now/          # Now entries, in JSON
-│   ├── projects/     # Project entries, in JSON
-│   ├── scrapbook/    # Scrapbook entries, in JSON
-│   ├── uses/         # Uses page categories, in JSON
-│   └── webrings/     # Webring membership data, in JSON
-├── hooks/            # Hooks
-│   ├── game/         # Game hooks
-│   └── index.ts      # Other hooks
-├── i18n/             # Translations and language utilities
-│   ├── translations/ # JSON translation files (one per locale)
-│   ├── client.ts     # Client-side language utilities
-│   ├── index.ts      # Server-side i18n utilities
-│   └── routing.ts    # Locale routing helpers
-├── layouts/
-│   ├── BaseLayout.astro    # Main site layout
-│   └── RetroLayout.astro   # Layout for /retro/* (old style) pages
-├── lib/              # Shared utilities and constants
-│   ├── utils/        # General utility functions
-│   ├── constants.ts  # Site metadata, author info, service config
-│   ├── feed.ts       # RSS/Atom/JSON feed helpers
-│   └── now-utils.ts  # Helpers for the /now page
-├── pages/            # File-based routing
-│   ├── [locale]/     # Locale catch-all
-│   ├── blog/         # Blog pages
-│   ├── api/          # API endpoints
-│   ├── ...           # Other pages
-│   ├── atom.xml.ts   # Atom feed
-│   ├── feed.json.ts  # JSON feed
-│   ├── rss.xml.ts    # RSS feed
-│   ├── sitemap.xml.ts      # Sitemap
-│   ├── sitemap-index.xml.ts
-│   └── index.astro   # Homepage
-└── styles/           # Global styling
+.
+├── archetypes/        # Content templates
+├── assets/            # CSS and assets processed by Hugo Pipes
+├── content/           # Markdown content files (blog, pages, etc.)
+│   ├── about/
+│   ├── badges/
+│   ├── blog/
+│   ├── colophon/
+│   ├── contact/
+│   ├── guestbook/
+│   ├── now/
+│   ├── projects/
+│   ├── scrapbook/
+│   ├── slashes/
+│   ├── tools/
+│   ├── uses/
+│   └── webrings/
+├── data/              # JSON data files used across the site
+│   ├── about/
+│   ├── now/
+│   ├── projects/
+│   ├── scrapbook/
+│   ├── uses/
+│   └── webrings/
+├── i18n/              # Translation files for 12 languages
+├── layouts/           # HTML templates and partials
+├── static/            # Static assets (fonts, icons, raw files)
+├── themes/            # Configured Hugo themes
+├── hugo.toml          # Main Hugo configuration file
+└── tailwind.config.js # Tailwind CSS configuration
 ```
 
 ## Development
@@ -169,7 +103,7 @@ alternates:                   # Optional, for multilingual posts
 Your content goes here.
 ```
 
-**File naming:** `src/content/blog/YYYY/MM/slug.md` or `src/content/blog/slug.md`
+**File naming:** `content/blog/YYYY/MM/slug.md` or `content/blog/slug.md`
 
 ### Theming
 
@@ -179,50 +113,11 @@ The site supports dark and light modes:
 - Theme preference stored in `localStorage`
 - CSS variables in `:root` / `.light` / `.dark` selectors (see [src/styles/globals.css](./src/styles/globals.css))
 - Theme applied via `class` on `<html>` element
-- Respects user's system preference on first visit
+- Managed using Tailwind's dark mode classes `dark:`, configured in `tailwind.config.js`
 
 ### Internationalization (i18n)
 
 **12 languages** supported: English, Tiếng Việt, Русский, Eesti, Dansk, 中文, Türkçe, Polski, Svenska, Suomi, toki pona, 漢喃
-
-- Translations in [`src/i18n/translations/*.json`](./src/i18n/translations)
-- Use the [`T.astro`](./src/components/T.astro) component for static translations
-- Language state managed via `languageStore` nanostore
-- Language detection from browser or localStorage
-
-### Runtime endpoints
-
-- `GET /api/lastfm`: fetches recent Last.fm tracks
-- `GET /api/premid` and `POST /api/premid`: PreMID activity bridge
-- `GET /.well-known/discord`: host-based Discord verification token (because I have multiple domains)
-
-### Feeds and SEO
-
-- RSS endpoint: [`src/pages/rss.xml.ts`](./src/pages/rss.xml.ts)
-- Atom endpoint: [`src/pages/atom.xml.ts`](./src/pages/atom.xml.ts)
-- JSON feed endpoint: [`src/pages/feed.json.ts`](./src/pages/feed.json.ts)
-- Sitemap: [`src/pages/sitemap.xml.ts`](./src/pages/sitemap.xml.ts)
-- XML stylesheets are provided in [`public/*.xsl`](./public)
-
-### Component conventions
-
-**When to use `.astro` vs `.tsx`:**
-
-- Use `.astro` for static content, layouts, pages
-- Use `.tsx` with `client:only="react"` for interactive features (command bar, language toggle, games)
-
-**Island hydration examples:**
-
-```astro
-<!-- Static component -->
-<StaticComponent />
-
-<!-- Client-only interactive island -->
-<CommandBar client:only="react" />
-
-<!-- Hydrated interactive island -->
-<Game2048 client:load />
-```
 
 ## External integrations
 
@@ -230,7 +125,6 @@ The site supports dark and light modes:
 - IndieAuth: indieauth.com
 - Webmentions: webmention.io
 - Last.fm: music listening data via API
-- PreMID: Discord activity for the Now section
 - imood and status.cafe: mood and status widgets
 - Analytics: Umami script proxied under `/stats/*`
 
@@ -240,7 +134,7 @@ The site supports dark and light modes:
 
 This repository is dual-licensed.
 
-All source code is licensed under the [GNU General Public License v3](LICENSE).
+All source code is licensed under the [GNU Affero General Public License v3](LICENSE).
 
 All non-code content, such as text, posts, essays, documentation, photos, videos, and other materials, is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
 
