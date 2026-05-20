@@ -114,11 +114,17 @@
               <span class="text-sm font-medium" id="font-family-label">{{ i18n "settings.fontFamily" | default "Font" }}</span>
             </div>
             <select id="settings-font-select" aria-labelledby="font-family-label" class="font-preview-select px-3 py-1.5 text-sm font-medium bg-muted text-foreground border border-border rounded-md transition-all hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-              <option value="personal">Personal Font</option>
-              <option value="system">System Default</option>
-              <option value="atkinson">Atkinson Hyperlegible</option>
-              <option value="lexend">Lexend</option>
-              <option value="dyslexia">OpenDyslexic</option>
+              <option value="atkinson" style="font-family: 'Atkinson Hyperlegible', sans-serif;">Atkinson Hyperlegible</option>
+              <option value="basier" style="font-family: 'Basier Square', sans-serif;">Basier Square</option>
+              <option value="be-vietnam-pro" style="font-family: 'Be Vietnam Pro', sans-serif;">Be Vietnam Pro</option>
+              <option value="dyslexia" style="font-family: 'OpenDyslexic', sans-serif;">OpenDyslexic</option>
+              <option value="geist" style="font-family: 'Geist', sans-serif;">Geist</option>
+              <option value="grandstander" style="font-family: 'Grandstander', sans-serif;">Grandstander</option>
+              <option value="lexend" style="font-family: 'Lexend', ui-sans-serif, system-ui, sans-serif;">Lexend</option>
+              <option value="outfit" style="font-family: 'Outfit', sans-serif;">Outfit</option>
+              <option value="recursive" style="font-family: 'Recursive', sans-serif;">Recursive</option>
+              <option value="space-grotesk" style="font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;">Space Grotesk</option>
+              <option value="tiresias" style="font-family: 'Tiresias Infofont', sans-serif;">Tiresias Infofont</option>
             </select>
           </div>
 
@@ -285,13 +291,13 @@
     // Font toggle
     const fontSelect = document.getElementById('settings-font-select');
     if (fontSelect) {
-      fontSelect.value = localStorage.getItem('font-family') || 'personal';
+      fontSelect.value = localStorage.getItem('font-family') || 'lexend';
       fontSelect.addEventListener('change', () => {
         const font = fontSelect.value;
         localStorage.setItem('font-family', font);
-        const fontClasses = ['personal-fonts', 'atkinson-font', 'be-vietnam-pro-font', 'basier-font', 'dyslexia-font', 'geist-font', 'grandstander-font', 'lexend-font', 'outfit-font', 'recursive-font', 'space-grotesk-font', 'tiresias-font'];
+        const fontClasses = ['atkinson-font', 'be-vietnam-pro-font', 'basier-font', 'dyslexia-font', 'geist-font', 'grandstander-font', 'lexend-font', 'outfit-font', 'recursive-font', 'space-grotesk-font', 'tiresias-font'];
         document.documentElement.classList.remove(...fontClasses);
-        const fontClass = font === 'personal' ? 'personal-fonts' : font === 'system' ? '' : font + '-font';
+        const fontClass = font === 'system' ? '' : font + '-font';
         if (fontClass) document.documentElement.classList.add(fontClass);
       });
     }

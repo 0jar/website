@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://esm.sh https://status.cafe; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://ws.audioscrobbler.com https://status.cafe; font-src 'self';" />
 
   <title>{{ block "title" . }}{{ .Title }} - {{ site.Title }}{{ end }}</title>
   <meta name="description" content="{{ .Description | default site.Params.description }}" />
@@ -25,8 +24,8 @@
         document.documentElement.classList.add(resolved);
         document.documentElement.style.colorScheme = resolved;
 
-        var font = localStorage.getItem('font-family') || 'personal';
-        var fontClass = font === 'personal' ? 'personal-fonts' : font === 'system' ? '' : font + '-font';
+        var font = localStorage.getItem('font-family') || 'lexend';
+        var fontClass = font === 'system' ? '' : font + '-font';
         if (fontClass) document.documentElement.classList.add(fontClass);
       } catch (e) {
         document.documentElement.classList.add("dark");
