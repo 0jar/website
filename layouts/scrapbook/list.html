@@ -11,7 +11,7 @@
   {{ else }}
     {{ $msg = $val.content }}
   {{ end }}
-  
+
   {{ $commits = $commits | append (dict "hash" $hash "msg" $msg "date" $val.date "author" "Jarema" "badges" slice) }}
 {{ end }}
 
@@ -27,40 +27,34 @@
     {{ if eq (len $commits) 0 }}
       <p class="text-muted-foreground">{{ i18n "scrapbook.noEntries" | default "No entries found." }}</p>
     {{ else }}
-      <div class="relative pl-8 md:pl-0">
-        <div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
-        <div class="md:hidden absolute left-3 top-0 bottom-0 w-0.5 bg-border"></div>
-
-        <div class="space-y-12">
+      <article class="mt-4 bg-card text-card-foreground border rounded-lg p-4 shadow-sm overflow-hidden text-sm">
+        <div class="divide-y divide-border">
           {{ range $commits }}
-            <div class="relative md:w-1/2 md:odd:pr-12 md:even:pl-12 md:even:ml-auto group">
-              <!-- Marker -->
-              <div class="absolute left-[-29px] md:left-auto md:group-odd:right-[-6px] md:group-even:left-[-6px] top-1.5 w-3 h-3 bg-background border-2 border-primary rounded-full z-10 transition-colors group-hover:bg-primary"></div>
-              
-              <div class="border rounded-lg p-5 bg-card hover:shadow-md transition-all group-hover:border-primary/50 relative">
-                <!-- Arrow -->
-                <div class="hidden md:block absolute top-2.5 w-3 h-3 bg-card border-t border-r transform group-odd:right-[-6px] group-odd:rotate-45 group-odd:border-l-0 group-odd:border-b-0 group-odd:border-primary/50 group-even:left-[-6px] group-even:-rotate-135 group-even:border-primary/50 z-10 transition-colors"></div>
-                
-                <div class="flex items-center justify-between mb-3">
-                  <div class="flex items-center gap-2">
-                    <span class="font-mono text-sm text-primary bg-primary/10 px-2 py-0.5 rounded cursor-pointer hover:bg-primary/20 transition-colors" title="Commit hash: {{ .hash }}" onclick="navigator.clipboard.writeText('{{ .hash }}')">{{ .hash }}</span>
-                    {{ range .badges }}
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-secondary-foreground font-semibold" title="{{ .tooltip }}">{{ .text }}</span>
-                    {{ end }}
-                  </div>
-                  <time class="text-xs text-muted-foreground whitespace-nowrap" datetime="{{ .date }}" data-date="{{ .date }}">{{ time.Format "January 2, 2006" .date }}</time>
+            <div class="flex items-center gap-3 p-3 hover:bg-muted/50 transition-colors group">
+              <img src="/favicon.png" alt="{{ .author }}" width="24" height="24" class="rounded-sm flex-shrink-0" />
+              <span class="font-medium text-muted-foreground w-15">{{ .author }}</span>
+              <span class="px-2 py-0.5 bg-muted/80 text-muted-foreground rounded border border-border/50 hidden sm:block text-xs font-mono">{{ .hash }}</span>
+              <span class="flex-1 font-medium">{{ .msg }}</span>
+              {{ if gt (len .badges) 0 }}
+                <div class="hidden md:flex gap-1">
+                  {{ range .badges }}
+                    <span class="px-1.5 text-[12px] font-bold tracking-wider rounded-sm border border-primary/20 text-primary/70">{{ .text }}</span>
+                  {{ end }}
                 </div>
-                
-                <p class="text-sm leading-relaxed">{{ .msg }}</p>
-                <div class="mt-4 flex items-center gap-2 text-xs text-muted-foreground/70">
-                  <div class="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center text-[8px] text-primary font-bold">J</div>
-                  <span>{{ .author }}</span>
-                </div>
+              {{ end }}
+              <span class="text-xs text-muted-foreground whitespace-nowrap ml-auto">
+                <span class="sm:hidden">{{ time.Format "2006" .date }}</span>
+                <span class="hidden sm:inline" data-date="{{ .date }}">{{ time.Format "January 2, 2006" .date }}</span>
+              </span>
+              <div class="flex gap-1 opacity-100">
+                <button class="p-1 hover:bg-accent rounded text-muted-foreground copy-hash-btn" data-hash="{{ .hash }}" aria-label="{{ i18n "about.timeline.copyHash" | default "Copy hash" }}" title="{{ i18n "about.timeline.copyHashTitle" | default "Copy commit hash" }}">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                </button>
               </div>
             </div>
           {{ end }}
         </div>
-      </div>
+      </article>
     {{ end }}
   </div>
 </div>
