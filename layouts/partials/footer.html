@@ -1,4 +1,106 @@
-<footer class="w-full max-w-4xl mx-auto px-4 py-6 border-t border-border mt-8 text-sm text-muted-foreground text-center">
-  <p>&copy; {{ now.Format "2006" }} {{ site.Params.author.name | default "Jarema" }}. CC BY 4.0.</p>
-  <p class="mt-2">{{ i18n "footer.madeWith" | default "made with love" }}</p>
+<footer class="w-full border-t pt-1 xl:py-0" role="contentinfo">
+  <div class="container flex flex-col items-center justify-center gap-2 py-2 xl:flex-row xl:gap-1 relative">
+    <div
+      id="footer-tap-area"
+      class="flex flex-col xl:flex-row items-center gap-2 xl:gap-1 text-sm text-muted-foreground select-none cursor-default"
+    >
+      <p>{{ i18n "footer.copyright" | default "© Jarema" }}</p>
+      <span class="hidden xl:inline">•</span>
+      <p class="flex items-center gap-1.5 lowercase">
+        <span>{{ i18n "footer.madeWith" | default "Made with" }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="text-red-500" aria-hidden="true">
+          <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+        </svg>
+        <span>{{ i18n "footer.andChaos" | default "and chaos" }}</span>
+      </p>
+    </div>
+
+    <!-- Command bar button (desktop only) -->
+    <div class="hidden xl:block absolute right-4">
+      <button
+        id="footer-command-bar-trigger"
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring h-8 w-8 text-muted-foreground hover:text-foreground hover:bg-accent"
+        aria-label="Open command bar"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 8h.01"/><path d="M12 12h.01"/><path d="M14 8h.01"/><path d="M16 12h.01"/><path d="M18 8h.01"/><path d="M6 8h.01"/><path d="M7 16h10"/><path d="M8 12h.01"/><rect width="20" height="16" x="2" y="4" rx="2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex justify-center gap-2 pb-3 text-sm text-muted-foreground">
+    <a href="https://stats.uptimerobot.com/r43KzDQuuC" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors">{{ i18n "footer.uptime" | default "Uptime" }}</a>
+    <span aria-hidden="true">•</span>
+    <a href="https://jar.statuspage.io" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors">{{ i18n "footer.siteStatus" | default "Site Status" }}</a>
+  </div>
+
+  <nav class="pt-1 flex justify-center flex-wrap gap-2 mx-auto max-w-[670px]" aria-label="Web badges and external links">
+    {{ $footerBadges := slice
+      (dict "src" "/sweet.png" "alt" "Sweet homepage")
+      (dict "src" "/best_viewed_with_eyes.gif" "alt" "Best viewed with Eyes")
+      (dict "src" "/dumbass.gif" "alt" "Dumbass webmaster ahead")
+      (dict "src" "/join_logo.gif" "alt" "White cat sleeping on a red pillow, miaow")
+      (dict "src" "/bannars.gif" "alt" "The Realm of Dream")
+      (dict "src" "/clouds.gif" "alt" "Clouds are nice")
+      (dict "src" "/people_pledge_badge_party_cream_pink_88x31.png" "alt" "People Pledge" "href" "https://people.pledge.party/")
+      (dict "src" "/kagi-smallweb-yellow.gif" "alt" "Kagi Small Web" "href" "https://kagi.com/smallweb")
+      (dict "src" "/internetprivacy.gif" "alt" "Internet privacy Now!")
+      (dict "src" "/saynotoweb3_88x31.gif" "alt" "Keep the web free, say no to Web3" "href" "https://yesterweb.org/no-to-web3/")
+      (dict "src" "/humanstxt.png" "alt" "Humans.txt" "href" "/humans.txt")
+      (dict "src" "/got_html.gif" "alt" "Got HTML?")
+      (dict "src" "/js-warning.gif" "alt" "Page contains JavaScript!")
+      (dict "src" "/fedora.gif" "alt" "Fedora Linux" "href" "https://fedoraproject.org/")
+    }}
+    {{ range $footerBadges }}
+      {{ if isset . "href" }}
+        <a href="{{ .href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .alt }}" class="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded transition-transform duration-200 hover:-translate-y-1">
+          <img src="{{ .src }}" alt="{{ .alt }}" width="88" height="31" class="transition-all duration-200 hover:brightness-110" loading="lazy" />
+        </a>
+      {{ else }}
+        <img src="{{ .src }}" alt="{{ .alt }}" width="88" height="31" class="transition-all duration-200 hover:brightness-110 hover:-translate-y-1" loading="lazy" />
+      {{ end }}
+    {{ end }}
+  </nav>
+
+  <a class="flex justify-center mt-2 pb-3 transition-transform duration-200 hover:-translate-y-1" href="/badges/" aria-label="View all badges">
+    <img src="/badge.png" alt="Site badge" width="88" height="31" class="transition-all duration-200 hover:brightness-110" loading="lazy" />
+  </a>
+
+  <!-- Pride flag stripe -->
+  <svg height="15" width="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="block w-full" preserveAspectRatio="none">
+    <title>Decorative footer stripe</title>
+    <rect fill="#D60270" height="5" width="100%" x="0" y="0"></rect>
+    <rect fill="#9B4F96" height="5" width="100%" x="0" y="5"></rect>
+    <rect fill="#0038A8" height="5" width="100%" x="0" y="10"></rect>
+  </svg>
+  <div aria-hidden="true" class="h-3"></div>
 </footer>
+
+<script>
+  (function () {
+    var tapCount = 0;
+    var tapTimeout = null;
+    var footerTapArea = document.getElementById("footer-tap-area");
+    if (footerTapArea) {
+      footerTapArea.addEventListener("click", function (e) {
+        if (e.target && e.target.tagName === "A") return;
+        tapCount++;
+        if (tapTimeout) clearTimeout(tapTimeout);
+        tapTimeout = setTimeout(function () { tapCount = 0; }, 2000);
+        if (tapCount === 6) {
+          sessionStorage.setItem("showHiddenChapter", "true");
+          window.location.href = "/about/#chapter-6";
+          tapCount = 0;
+        }
+      });
+    }
+
+    var trigger = document.getElementById("footer-command-bar-trigger");
+    if (trigger) {
+      trigger.addEventListener("click", function () {
+        window.dispatchEvent(new KeyboardEvent("keydown", { key: ".", bubbles: true, cancelable: true }));
+      });
+    }
+  })();
+</script>

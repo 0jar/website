@@ -1,0 +1,120 @@
+{{ $page := . }}
+{{ $currentLang := .Language.Lang }}
+{{ $currentName := "English" }}
+{{ $currentFlag := "🇬🇧" }}
+
+{{ $mainLangs := slice 
+    (dict "code" "en" "name" "English" "flag" "🇬🇧" "aliases" "English")
+    (dict "code" "vi" "name" "Tiếng Việt" "flag" "🇻🇳" "aliases" "Vietnamese Tieng Viet")
+    (dict "code" "ru" "name" "Русский" "flag" "🇷🇺" "aliases" "Russian Russkii Russkiy")
+    (dict "code" "et" "name" "Eesti" "flag" "🇪🇪" "aliases" "Estonian")
+    (dict "code" "da" "name" "Dansk" "flag" "🇩🇰" "aliases" "Danish")
+    (dict "code" "zh" "name" "中文" "flag" "🇨🇳" "aliases" "Chinese Zhongwen Hanyu")
+}}
+{{ $betaLangs := slice
+    (dict "code" "tr" "name" "Türkçe" "flag" "🇹🇷" "aliases" "Turkish Turkce")
+    (dict "code" "pl" "name" "Polski" "flag" "🇵🇱" "aliases" "Polish")
+    (dict "code" "sv" "name" "Svenska" "flag" "🇸🇪" "aliases" "Swedish")
+    (dict "code" "fi" "name" "Suomi" "flag" "🇫🇮" "aliases" "Finnish")
+}}
+{{ $otherLangs := slice
+    (dict "code" "tok" "name" "toki pona" "flag" "😇" "aliases" "language of the good")
+    (dict "code" "vi-Hani" "name" "㗂越（漢喃）" "flag" "🇻🇳" "aliases" "Vietnamese Han Nom Hannom")
+}}
+
+{{ $sections := slice
+    (dict "key" "main" "label" (i18n "language.main" | default "Main Languages") "langs" $mainLangs)
+    (dict "key" "beta" "label" (i18n "language.beta" | default "Beta Languages") "langs" $betaLangs)
+    (dict "key" "other" "label" (i18n "language.other" | default "Other") "langs" $otherLangs)
+}}
+
+{{ range $sections }}
+  {{ range .langs }}
+    {{ if eq .code $currentLang }}
+      {{ $currentName = .name }}
+      {{ $currentFlag = .flag }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<details id="lang-toggle" class="group relative">
+  <summary
+    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden"
+    aria-label="{{ $currentName }} - Select language"
+  >
+    <span class="mr-2">{{ $currentFlag }}</span>
+    <span>{{ $currentName }}</span>
+    <svg class="ml-2 h-4 w-4 transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+    </svg>
+  </summary>
+
+  <div class="absolute right-0 mt-2 w-80 rounded-md border bg-popover p-1 text-popover-foreground shadow-md z-50 max-h-96 overflow-y-auto">
+    <div class="px-2 py-2">
+      <input id="lang-search" type="text" placeholder="{{ i18n "language.search" | default "Search languages..." }}" aria-label="{{ i18n "language.search" | default "Search languages..." }}"
+        class="w-full px-3 py-1.5 text-sm rounded-md border bg-background focus:outline-none focus:ring-1 focus:ring-ring" />
+    </div>
+
+    {{ range $index, $section := $sections }}
+      <div class="lang-section-group">
+        {{ if gt $index 0 }}<div class="my-1 h-px bg-border"></div>{{ end }}
+        <div class="px-2 py-1.5 text-xs font-semibold text-muted-foreground">{{ .label }}</div>
+        <div class="grid grid-cols-2 gap-1 lang-section">
+          {{ range .langs }}
+            {{ $l := . }}
+            {{ $link := "/" }}
+            {{ if ne $l.code "en" }}{{ $link = printf "/%s/" $l.code }}{{ end }}
+            {{ range $page.AllTranslations }}
+              {{ if eq .Language.Lang $l.code }}
+                {{ $link = .RelPermalink }}
+              {{ end }}
+            {{ end }}
+            
+            <a
+              href="{{ $link }}"
+              class="lang-item relative flex items-center rounded-sm px-2 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground {{ if eq $l.code $currentLang }}bg-accent{{ end }}"
+              data-search="{{ $l.name }} {{ $l.code }} {{ $l.aliases }}"
+              aria-label="{{ $l.name }}"
+            >
+              <span class="mr-2">{{ $l.flag }}</span>
+              <span class="truncate">{{ $l.name }}</span>
+              {{ if eq $l.code $currentLang }}
+                <svg class="ml-auto h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              {{ end }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</details>
+
+<script>
+  (function () {
+    const details = document.getElementById("lang-toggle");
+    const search = document.getElementById("lang-search");
+    if (!details || !search) return;
+
+    function filter(q) {
+      q = q.toLowerCase();
+      details.querySelectorAll(".lang-item").forEach(function (el) {
+        el.classList.toggle("hidden", q !== "" && !(el.getAttribute("data-search") || "").toLowerCase().includes(q));
+      });
+      details.querySelectorAll(".lang-section-group").forEach(function (g) {
+        g.classList.toggle("hidden", !g.querySelector(".lang-item:not(.hidden)"));
+      });
+    }
+
+    search.addEventListener("input", function () { filter(search.value); });
+
+    document.addEventListener("click", function (e) {
+      if (details.open && !details.contains(e.target)) details.open = false;
+    });
+
+    details.addEventListener("toggle", function () {
+      if (!details.open) { search.value = ""; filter(""); }
+    });
+  })();
+</script>

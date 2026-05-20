@@ -1,23 +1,108 @@
 {{ define "main" }}
-<div class="space-y-12">
-  <section class="text-center py-12">
-    <h1 class="text-4xl font-bold mb-4">{{ i18n "home.heading" | default "hi there, i'm Jarema" }}</h1>
-    <p class="text-xl text-muted-foreground">{{ i18n "home.subheading" | default "Economics major, sometimes coder, most times cat whisperer." }}</p>
-  </section>
-  
-  <section>
-    <h2 class="text-2xl font-bold mb-4">{{ i18n "home.recentPosts" | default "Recent blog posts" }}</h2>
-    <ul class="space-y-4">
-      {{ range first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
-      <li class="flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-border rounded-lg hover:bg-muted/50 transition-colors">
-        <a href="{{ .Permalink }}" class="text-lg font-medium hover:underline">{{ .Title }}</a>
-        <span class="text-muted-foreground text-sm mt-2 sm:mt-0">{{ .Date.Format "Jan 02, 2006" }}</span>
-      </li>
-      {{ end }}
-    </ul>
-    <div class="mt-4">
-      <a href="/blog/" class="text-primary hover:underline">Read all posts &rarr;</a>
+<div class="relative min-h-screen w-full overflow-hidden">
+  <div class="container mx-auto px-2 sm:px-4 lg:px-6 py-8 lg:py-12 relative z-10">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="relative pt-6 lg:pt-0 pb-6 mb-6 text-center">
+        <p class="text-lg text-muted-foreground mb-2" id="greeting"><span id="greeting-emoji">👋</span> {{ i18n "greetings.morning" | default "Good morning" }}</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{{ i18n "home.heading" | default "hi there, i'm Jarema" }}</h1>
+        <p class="text-lg md:text-xl text-muted-foreground mb-8">{{ i18n "home.subheading" | default "Economics major, sometimes coder, most times cat whisperer." }}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors h-11 px-8 bg-primary text-primary-foreground hover:bg-primary/90">{{ i18n "home.contactButton" | default "Contact Me" }}</a>
+          <a href="/about/" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors h-11 px-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground">{{ i18n "home.aboutButton" | default "About" }}</a>
+          <a href="/blog/" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors h-11 px-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground">{{ i18n "home.blogButton" | default "Blog" }}</a>
+          <a href="/guestbook/" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors h-11 px-8 border border-input bg-background hover:bg-accent hover:text-accent-foreground">{{ i18n "home.guestbookButton" | default "Sign my guestbook" }}</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-[1.75fr_1fr_1.75fr] gap-4 min-h-32">
+        <!-- status.cafe -->
+        <section class="border rounded-lg p-4 bg-card card-hover-effect" aria-labelledby="status-cafe-heading">
+          <h2 id="status-cafe-heading" class="text-lg font-bold mb-3 text-center">{{ i18n "home.currentStatus" | default "Current status on status.cafe" }}</h2>
+          <div class="text-center">
+            <div id="statuscafe" class="w-full text-sm" data-statuscafe-user="jarema"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div>
+            <script src="https://status.cafe/current-status.js?name=jarema" defer></script>
+            <noscript><a href="https://status.cafe/users/jarema" class="text-sm text-primary hover:underline">See my status.cafe profile here!</a></noscript>
+          </div>
+        </section>
+
+        <!-- Current mood -->
+        <section class="border rounded-lg p-4 bg-card card-hover-effect" aria-labelledby="current-mood-heading">
+          <h2 id="current-mood-heading" class="text-lg font-bold mb-3 text-center">{{ i18n "home.currentMood" | default "Mood" }}</h2>
+          <div class="text-center flex items-center justify-center">
+            <a href="https://imood.com/users/jarema" target="_blank" rel="noopener noreferrer">
+              <img src="https://moods.imood.com/display/uname-jarema/fg-ffffff/bg-000000/trans-1/imood.gif" alt="Current mood" class="inline-block pixelated h-[25px]" width="80" height="25" loading="lazy" decoding="async" />
+            </a>
+          </div>
+        </section>
+
+        <!-- Timezone -->
+        <section class="border rounded-lg p-4 bg-card card-hover-effect" aria-labelledby="timezone-heading">
+          <h2 id="timezone-heading" class="text-lg font-bold mb-3 text-center">{{ i18n "home.time" | default "Time" }}</h2>
+          <div class="flex items-center justify-center gap-6">
+            <div class="text-center">
+              <p id="user-time" class="text-xl font-monaspice font-bold">--:--:--</p>
+              <p class="text-xs text-muted-foreground mt-1">{{ i18n "home.yourTime" | default "Your Time" }}</p>
+            </div>
+            <div class="text-center">
+              <p id="author-time" class="text-xl font-monaspice font-bold" data-timezone="Europe/Tallinn">--:--:--</p>
+              <p class="text-xs text-muted-foreground mt-1">{{ i18n "home.myTime" | default "My Time" }} (EET)</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="mt-10 lg:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+        {{ partial "now_section.html" . }}
+        {{ partial "moodcat.html" . }}
+      </div>
+
+      <div class="mt-10 lg:mt-12">
+        {{ partial "recent_posts.html" . }}
+      </div>
+
+      <section class="mt-10 lg:mt-12" aria-labelledby="webrings-heading">
+        <h2 id="webrings-heading" class="text-2xl font-bold mb-4 text-center">
+          <a href="/webrings/" class="no-underline hover:underline focus:underline text-inherit">
+            {{ i18n "webrings.title" | default "Webrings" }}
+          </a>
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {{ range $id, $ring := site.Data.webrings }}
+            {{ if eq $ring.status "active" }}
+              <div class="border rounded-lg p-3 bg-card card-hover-effect">
+                <nav class="flex items-center justify-between gap-1 text-sm" aria-label="Navigate {{ $ring.name }}">
+                  <a href="{{ $ring.previous }}" class="text-primary hover:text-primary/80 transition-colors px-1" aria-label="Previous site in {{ $ring.name }}">←</a>
+                  <a href="{{ $ring.url }}" class="text-primary hover:underline font-medium mx-2 truncate flex-1 text-center" target="_blank" rel="noopener noreferrer">{{ $ring.name }}</a>
+                  {{ if $ring.random }}<a href="{{ $ring.random }}" class="text-primary hover:text-primary/80 transition-colors px-1" aria-label="Random site in {{ $ring.name }}">🎲</a>{{ end }}
+                  <a href="{{ $ring.next }}" class="text-primary hover:text-primary/80 transition-colors px-1" aria-label="Next site in {{ $ring.name }}">→</a>
+                </nav>
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="mt-4 text-center">
+          <a href="/webrings/" class="inline-flex items-center gap-2 px-3 py-1.5 text-sm border rounded-lg hover:bg-accent transition-colors">
+            {{ i18n "home.viewAllWebrings" | default "View all webrings" }} →
+          </a>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
 </div>
+
+<script>
+  function updateTimes() {
+    const userEl = document.getElementById("user-time");
+    const authorEl = document.getElementById("author-time");
+    if (!userEl || !authorEl) return;
+    const now = new Date();
+    const fmt = (tz) => now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", second: "2-digit", ...(tz && { timeZone: tz }) });
+    userEl.textContent = fmt();
+    const tz = authorEl.dataset.timezone;
+    if (tz) authorEl.textContent = fmt(tz);
+  }
+  updateTimes();
+  setInterval(updateTimes, 1000);
+</script>
 {{ end }}

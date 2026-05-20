@@ -1,10 +1,307 @@
-<header class="w-full max-w-4xl mx-auto px-4 py-6 flex items-center justify-between border-b border-border">
-  <a href="/" class="font-bold text-xl hover:opacity-80 transition-opacity">{{ site.Title }}</a>
-  <nav>
-    <ul class="flex space-x-6">
-      <li><a href="/about/" class="text-muted-foreground hover:text-foreground transition-colors">{{ i18n "nav.about" | default "About" }}</a></li>
-      <li><a href="/projects/" class="text-muted-foreground hover:text-foreground transition-colors">{{ i18n "nav.projects" | default "Projects" }}</a></li>
-      <li><a href="/blog/" class="text-muted-foreground hover:text-foreground transition-colors">{{ i18n "nav.blog" | default "Blog" }}</a></li>
-    </ul>
-  </nav>
+<header class="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
+  <div class="container flex h-16 items-center justify-between px-4">
+    <div class="flex items-center gap-2 min-w-0 flex-1">
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center gap-2 transition-opacity hover:opacity-80 rounded-md">
+          <div class="relative size-8 overflow-hidden">
+            <img src="/favicon-128.png" alt="Logo" width="32" height="32" class="size-8" aria-hidden="true" loading="eager" fetchpriority="high" />
+          </div>
+          <span class="font-heading font-bold text-xl sm:inline-block">{{ site.Params.author.displayName | default "Jarema" }}</span>
+        </a>
+      </div>
+
+      <nav class="hidden lg:flex items-center ml-6 min-w-0" aria-label="Main navigation">
+        <div class="flex items-center gap-4 lg:gap-6">
+          {{ $current := .RelPermalink }}
+          {{ $navItems := slice 
+              (dict "href" "/" "key" "home")
+              (dict "href" "/about/" "key" "about")
+              (dict "href" "/blog/" "key" "blog")
+              (dict "href" "/now/" "key" "now")
+              (dict "href" "/uses/" "key" "uses")
+              (dict "href" "/contact/" "key" "contact")
+              (dict "href" "/guestbook/" "key" "guestbook")
+              (dict "href" "/colophon/" "key" "colophon")
+              (dict "href" "/webrings/" "key" "webrings")
+              (dict "href" "/slashes/" "key" "slashes")
+          }}
+          {{ range $navItems }}
+            {{ $isActive := eq $current .href }}
+            <a
+              href="{{ .href }}"
+              class="text-sm transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm {{ if $isActive }}text-foreground font-medium{{ else }}text-muted-foreground hover:text-primary{{ end }}"
+              {{ if $isActive }}aria-current="page"{{ end }}
+            >
+              {{ i18n (printf "nav.%s" .key) | default (title .key) }}
+              {{ if $isActive }}<div class="h-0.5 bg-primary mt-0.5" aria-hidden="true"></div>{{ end }}
+            </a>
+          {{ end }}
+        </div>
+      </nav>
+    </div>
+
+    <div class="flex items-center gap-1.5 md:gap-2 flex-shrink-0">
+      {{ partial "language_toggle.html" . }}
+      
+      <!-- Settings menu -->
+      <details id="settings-menu" class="group relative">
+        <summary class="p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+        </summary>
+        <div class="absolute right-0 top-full mt-2 w-72 rounded-md border bg-background/95 backdrop-blur-sm shadow-lg py-3 px-4 z-50 space-y-4" role="group" aria-label="Settings">
+          <h3 class="text-lg font-semibold text-foreground">{{ i18n "settings.title" | default "Settings" }}</h3>
+          <hr class="border-border" />
+
+          <!-- Theme -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="18" height="18" class="text-muted-foreground" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" /></svg>
+              <span class="text-sm font-medium">{{ i18n "settings.theme" | default "Theme" }}</span>
+            </div>
+            <div class="flex rounded-md border border-border overflow-hidden" role="radiogroup" aria-label="Theme selection">
+              <button data-set-theme="system" class="settings-theme-btn px-2.5 py-1 text-xs font-medium transition-colors" role="radio" aria-checked="false" aria-label="Auto (system theme)">
+                Auto
+              </button>
+              <button data-set-theme="light" class="settings-theme-btn px-2 py-1 transition-colors border-x border-border" role="radio" aria-checked="false" aria-label="Light theme">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg>
+              </button>
+              <button data-set-theme="dark" class="settings-theme-btn px-2 py-1 transition-colors" role="radio" aria-checked="false" aria-label="Dark theme">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Twinkling stars -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="18" height="18" class="text-muted-foreground" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <span class="text-sm font-medium" id="settings-stars-label">{{ i18n "settings.stars" | default "Twinkling stars" }}</span>
+            </div>
+            <button id="settings-stars-toggle" type="button" role="switch" aria-checked="true" aria-labelledby="settings-stars-label" class="settings-toggle relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-border transition-colors bg-primary">
+              <span class="pointer-events-none block size-4 rounded-full shadow-sm transition-transform bg-white translate-x-4"></span>
+            </button>
+          </div>
+
+          <!-- Reduce motion -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="18" height="18" class="text-muted-foreground" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-dasharray="3 3" /></svg>
+              <span class="text-sm font-medium" id="settings-motion-label">{{ i18n "settings.reduceMotion" | default "Reduce motion" }}</span>
+            </div>
+            <button id="settings-motion-toggle" type="button" role="switch" aria-checked="false" aria-labelledby="settings-motion-label" class="settings-toggle relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-border transition-colors bg-muted">
+              <span class="pointer-events-none block size-4 rounded-full shadow-sm transition-transform bg-muted-foreground translate-x-0.5"></span>
+            </button>
+          </div>
+
+          <!-- High contrast -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="18" height="18" class="text-muted-foreground" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor" /></svg>
+              <span class="text-sm font-medium" id="settings-contrast-label">{{ i18n "settings.highContrast" | default "High contrast" }}</span>
+            </div>
+            <button id="settings-contrast-toggle" type="button" role="switch" aria-checked="false" aria-labelledby="settings-contrast-label" class="settings-toggle relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-border transition-colors bg-muted">
+              <span class="pointer-events-none block size-4 rounded-full shadow-sm transition-transform bg-muted-foreground translate-x-0.5"></span>
+            </button>
+          </div>
+
+          <!-- Font -->
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center gap-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="18" height="18" class="text-muted-foreground" aria-hidden="true"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+              <span class="text-sm font-medium" id="font-family-label">{{ i18n "settings.fontFamily" | default "Font" }}</span>
+            </div>
+            <select id="settings-font-select" aria-labelledby="font-family-label" class="font-preview-select px-3 py-1.5 text-sm font-medium bg-muted text-foreground border border-border rounded-md transition-all hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+              <option value="personal">Personal Font</option>
+              <option value="system">System Default</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="lexend">Lexend</option>
+              <option value="dyslexia">OpenDyslexic</option>
+            </select>
+          </div>
+
+          <hr class="border-border" />
+
+          <!-- Timezone -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="18" height="18" class="text-muted-foreground" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+              <span class="text-sm font-medium">{{ i18n "settings.timezone" | default "Timezone" }}</span>
+            </div>
+            <div class="flex rounded-md border border-border overflow-hidden" role="radiogroup" aria-label="Timezone selection">
+              <button data-set-tz="local" class="settings-tz-btn px-2.5 py-1 text-xs font-medium transition-colors bg-primary text-primary-foreground" role="radio" aria-checked="true">Yours</button>
+              <button data-set-tz="author" class="settings-tz-btn px-2.5 py-1 text-xs font-medium transition-colors border-l border-border text-muted-foreground hover:bg-muted" role="radio" aria-checked="false">Author</button>
+            </div>
+          </div>
+
+          <!-- Music -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="18" height="18" class="text-muted-foreground" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5Z" /><line x1="23" x2="17" y1="9" y2="15" /><line x1="17" x2="23" y1="9" y2="15" /></svg>
+              <div>
+                <span class="text-sm font-medium block">{{ i18n "settings.music" | default "Music" }}</span>
+                <span class="text-xs text-muted-foreground block">{{ i18n "settings.musicUnavailable" | default "Unavailable" }}</span>
+              </div>
+            </div>
+            <button type="button" disabled class="settings-toggle relative inline-flex h-5 w-9 shrink-0 cursor-not-allowed items-center rounded-full border border-border bg-muted opacity-50">
+              <span class="pointer-events-none block size-4 rounded-full shadow-sm bg-muted-foreground translate-x-0.5"></span>
+            </button>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- Mobile hamburger menu -->
+      <details class="group lg:hidden relative">
+        <summary class="p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" aria-label="Toggle navigation menu">
+          <svg class="group-open:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="hidden group-open:block" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </summary>
+        <nav class="absolute right-0 top-full mt-2 w-48 rounded-md border bg-background/95 backdrop-blur-sm shadow-lg py-2 z-50">
+          {{ range $navItems }}
+            {{ $isActive := eq $current .href }}
+            <a
+              href="{{ .href }}"
+              class="block px-4 py-2 text-sm transition-colors hover:bg-muted {{ if $isActive }}text-foreground font-medium bg-muted/50{{ else }}text-muted-foreground{{ end }}"
+              {{ if $isActive }}aria-current="page"{{ end }}
+            >
+              {{ i18n (printf "nav.%s" .key) | default (title .key) }}
+            </a>
+          {{ end }}
+        </nav>
+      </details>
+    </div>
+  </div>
 </header>
+
+<script>
+  (function() {
+    function setToggleState(btn, on) {
+      btn.setAttribute('aria-checked', String(on));
+      btn.classList.toggle('bg-primary', on);
+      btn.classList.toggle('bg-muted', !on);
+      const knob = btn.querySelector('span');
+      if (knob) {
+        knob.classList.toggle('translate-x-4', on);
+        knob.classList.toggle('translate-x-0.5', !on);
+        knob.classList.toggle('bg-white', on);
+        knob.classList.toggle('bg-muted-foreground', !on);
+      }
+    }
+
+    // Theme toggle
+    const themeBtns = document.querySelectorAll('.settings-theme-btn');
+    const updateThemeButtons = (theme) => {
+      themeBtns.forEach(btn => {
+        const isMatch = btn.getAttribute('data-set-theme') === theme;
+        btn.setAttribute('aria-checked', isMatch);
+        if (isMatch) {
+          btn.classList.add('bg-primary', 'text-primary-foreground');
+          btn.classList.remove('text-muted-foreground', 'hover:bg-muted');
+        } else {
+          btn.classList.remove('bg-primary', 'text-primary-foreground');
+          btn.classList.add('text-muted-foreground', 'hover:bg-muted');
+        }
+      });
+    };
+    
+    let currentTheme = localStorage.getItem('theme') || 'system';
+    updateThemeButtons(currentTheme);
+
+    themeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.getAttribute('data-set-theme');
+        localStorage.setItem('theme', theme);
+        
+        let resolved = theme === 'system' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(resolved);
+        document.documentElement.style.colorScheme = resolved;
+        
+        updateThemeButtons(theme);
+      });
+    });
+
+    // Toggle: Stars
+    const starsBtn = document.getElementById('settings-stars-toggle');
+    if (starsBtn) {
+      const on = (localStorage.getItem('stars-enabled') ?? 'true') === 'true';
+      setToggleState(starsBtn, on);
+      document.documentElement.toggleAttribute('data-no-stars', !on);
+      starsBtn.addEventListener('click', () => {
+        const next = starsBtn.getAttribute('aria-checked') !== 'true';
+        localStorage.setItem('stars-enabled', String(next));
+        setToggleState(starsBtn, next);
+        document.documentElement.toggleAttribute('data-no-stars', !next);
+      });
+    }
+
+    // Toggle: Reduce motion
+    const motionBtn = document.getElementById('settings-motion-toggle');
+    if (motionBtn) {
+      const on = (localStorage.getItem('reduce-motion') ?? 'false') === 'true';
+      setToggleState(motionBtn, on);
+      document.documentElement.classList.toggle('reduce-motion', on);
+      if (on && starsBtn) {
+        setToggleState(starsBtn, false);
+        starsBtn.disabled = true;
+        document.documentElement.toggleAttribute('data-no-stars', true);
+      }
+      motionBtn.addEventListener('click', () => {
+        const next = motionBtn.getAttribute('aria-checked') !== 'true';
+        localStorage.setItem('reduce-motion', String(next));
+        setToggleState(motionBtn, next);
+        document.documentElement.classList.toggle('reduce-motion', next);
+        if (starsBtn) {
+          starsBtn.disabled = next;
+          if (next) {
+            setToggleState(starsBtn, false);
+            document.documentElement.toggleAttribute('data-no-stars', true);
+          } else {
+            const saved = (localStorage.getItem('stars-enabled') ?? 'true') === 'true';
+            setToggleState(starsBtn, saved);
+            document.documentElement.toggleAttribute('data-no-stars', !saved);
+          }
+        }
+      });
+    }
+
+    // Toggle: High contrast
+    const contrastBtn = document.getElementById('settings-contrast-toggle');
+    if (contrastBtn) {
+      const on = (localStorage.getItem('high-contrast') ?? 'false') === 'true';
+      setToggleState(contrastBtn, on);
+      document.documentElement.classList.toggle('high-contrast', on);
+      contrastBtn.addEventListener('click', () => {
+        const next = contrastBtn.getAttribute('aria-checked') !== 'true';
+        localStorage.setItem('high-contrast', String(next));
+        setToggleState(contrastBtn, next);
+        document.documentElement.classList.toggle('high-contrast', next);
+      });
+    }
+
+    // Font toggle
+    const fontSelect = document.getElementById('settings-font-select');
+    if (fontSelect) {
+      fontSelect.value = localStorage.getItem('font-family') || 'personal';
+      fontSelect.addEventListener('change', () => {
+        const font = fontSelect.value;
+        localStorage.setItem('font-family', font);
+        const fontClasses = ['personal-fonts', 'atkinson-font', 'be-vietnam-pro-font', 'basier-font', 'dyslexia-font', 'geist-font', 'grandstander-font', 'lexend-font', 'outfit-font', 'recursive-font', 'space-grotesk-font', 'tiresias-font'];
+        document.documentElement.classList.remove(...fontClasses);
+        const fontClass = font === 'personal' ? 'personal-fonts' : font === 'system' ? '' : font + '-font';
+        if (fontClass) document.documentElement.classList.add(fontClass);
+      });
+    }
+
+    // Close menus on outside click
+    const menu = document.getElementById('settings-menu');
+    if (menu) {
+      document.addEventListener('click', (e) => {
+        if (menu.open && !menu.contains(e.target)) menu.open = false;
+      });
+    }
+  })();
+</script>
