@@ -7,6 +7,12 @@
 # exclude IntelliJ/WebStorm stuff
 .idea
 
+# Exclude remaining Astro files pending migration
+src/
+
+# Exclude Tailwind executables
+tailwindcss-linux-*
+
 # This section onward was copied from eSolia_2018's .gitignore file
 # Source: https://raw.githubusercontent.com/eSolia/eSolia_2018/refs/heads/main/.gitignore
 
