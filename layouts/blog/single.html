@@ -80,7 +80,26 @@
       </div>
     {{ end }}
 
-    <!-- Translation block removed because posts are universally mounted into all languages -->
+    {{ if .Params.alternates }}
+      <div class="mt-4 p-3 rounded-lg bg-muted/50 border">
+        <span class="text-sm text-muted-foreground">{{ i18n "blog.availableIn" | default "Also available in" }}: </span>
+        {{ range $i, $alt := .Params.alternates }}
+          {{ $langLabel := $alt.language }}
+          {{ range site.Languages }}
+            {{ if eq .Lang $alt.language }}
+              {{ $langLabel = .Label | default .Lang }}
+            {{ end }}
+          {{ end }}
+          {{ $link := printf "/blog/%s/" $alt.slug }}
+          {{ if ne $alt.language "en" }}
+            {{ $link = printf "/%s%s" $alt.language $link }}
+          {{ end }}
+          <a href="{{ $link }}" class="text-sm text-primary hover:underline">
+            {{ $langLabel }}
+          </a>{{ if ne (add $i 1) (len $.Params.alternates) }}<span class="text-muted-foreground">, </span>{{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
 
     <div class="mt-6 flex flex-wrap gap-2">
       {{ $encodedTitle := urlquery $title }}
