@@ -1,6 +1,5 @@
 ---
-url: "/atom.xml"
+url: "/atom/en.xml"
 layout: "atom"
 outputs: ["ATOM"]
-aliases: []
 ---
