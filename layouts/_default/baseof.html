@@ -54,5 +54,7 @@
 
     {{ partial "footer.html" . }}
   </div>
+  {{ $cmdJs := resources.Get "js/layout/CommandBar.ts" | js.Build (dict "minify" true) | fingerprint }}
+  <script src="{{ $cmdJs.RelPermalink }}" integrity="{{ $cmdJs.Data.Integrity }}" defer></script>
 </body>
 </html>
