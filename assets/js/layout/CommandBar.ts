@@ -89,6 +89,9 @@ function renderList() {
       const idx = filteredActions.indexOf(a);
       const item = document.createElement("div");
       item.className = `px-2 py-1.5 flex items-center justify-between rounded-md cursor-pointer transition-colors ${idx === selectedIndex ? "bg-muted" : "hover:bg-muted/50"}`;
+      item.setAttribute("role", "option");
+      item.setAttribute("aria-selected", idx === selectedIndex ? "true" : "false");
+      if (idx === selectedIndex) item.id = "cmd-selected-item";
       item.innerHTML = `
         <div class="flex items-center gap-2">
           <span class="flex-shrink-0 flex items-center justify-center w-5">${a.icon}</span>
@@ -135,7 +138,7 @@ function initCommandBar() {
           <input type="text" id="cmd-input" placeholder="Search actions (e.g. blog, mode, tetris)..." class="w-full pl-10 pr-4 h-10 bg-background border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-ring transition-shadow" aria-label="Search actions..." />
         </div>
       </div>
-      <div id="cmd-list" class="max-h-[60vh] overflow-y-auto pb-2"></div>
+      <div id="cmd-list" class="max-h-[60vh] overflow-y-auto pb-2" role="listbox" aria-label="Command actions"></div>
       <div class="p-2 border-t">
         <div class="flex items-center justify-between text-xs text-muted-foreground px-2">
           <span>Press . to open</span>
