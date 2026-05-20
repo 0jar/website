@@ -1,3 +1,63 @@
-baseURL = 'https://jarema.me/'
-locale = 'en-us'
-title = 'Jaremas digital garden'
+baseURL = "https://jarema.me/"
+title = "Jarema's digital garden"
+defaultContentLanguage = "en"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON", "ATOM"]
+  section = ["HTML", "RSS", "JSON", "ATOM"]
+
+[outputFormats.ATOM]
+  mediaType = "application/atom+xml"
+  baseName = "atom"
+  isHTML = false
+  isPlainText = false
+  noUgly = true
+
+[outputFormats.JSON]
+  mediaType = "application/json"
+  baseName = "index"
+  isHTML = false
+  isPlainText = true
+  noUgly = true
+
+[languages]
+  [languages.en]
+    label = "English"
+    weight = 1
+  [languages.vi]
+    label = "Tiếng Việt"
+    weight = 2
+  [languages.ru]
+    label = "Русский"
+    weight = 3
+  [languages.et]
+    label = "Eesti"
+    weight = 4
+  [languages.da]
+    label = "Dansk"
+    weight = 5
+  [languages.zh]
+    label = "中文"
+    weight = 6
+  [languages.tr]
+    label = "Türkçe"
+    weight = 7
+  [languages.pl]
+    label = "Polski"
+    weight = 8
+  [languages.sv]
+    label = "Svenska"
+    weight = 9
+  [languages.fi]
+    label = "Suomi"
+    weight = 10
+  [languages.tok]
+    label = "toki pona"
+    weight = 11
+  [languages.vi-Hani]
+    label = "㗂越（漢喃）"
+    weight = 12
+
+[mediaTypes]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
