@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $slashPages := slice
+  (dict "path" "/about" "name" "nav.about" "nameDefault" "About" "desc" "about.description" "descDefault" "Learn about me")
+  (dict "path" "/blog" "name" "nav.blog" "nameDefault" "Blog" "desc" "blog.description" "descDefault" "Read my posts")
+  (dict "path" "/contact" "name" "nav.contact" "nameDefault" "Contact" "desc" "contact.description" "descDefault" "Get in touch")
+  (dict "path" "/now" "name" "nav.now" "nameDefault" "Now" "desc" "now.description" "descDefault" "What I'm doing now")
+  (dict "path" "/uses" "name" "nav.uses" "nameDefault" "Uses" "desc" "uses.description" "descDefault" "Tech and tools I use")
+  (dict "path" "/colophon" "name" "nav.colophon" "nameDefault" "Colophon" "desc" "colophon.description" "descDefault" "How this site is built")
+  (dict "path" "/guestbook" "name" "nav.guestbook" "nameDefault" "Guestbook" "desc" "guestbook.description" "descDefault" "Leave a message")
+  (dict "path" "/webrings" "name" "nav.webring" "nameDefault" "Webrings" "desc" "webrings.description" "descDefault" "Web communities")
+  (dict "path" "/badges" "name" "nav.badges" "nameDefault" "Badges" "desc" "badges.description" "descDefault" "88x31 badges")
+  (dict "path" "/projects" "name" "nav.projects" "nameDefault" "Projects" "desc" "projects.description" "descDefault" "Things I've built")
+  (dict "path" "/scrapbook" "name" "nav.scrapbook" "nameDefault" "Devlog" "desc" "scrapbook.description" "descDefault" "Development log")
+  (dict "path" "/brand" "name" "nav.brand" "nameDefault" "Brand" "desc" "brand.pageDescription" "descDefault" "Visual identity and brand elements")
+  (dict "path" "/tools" "name" "nav.tools" "nameDefault" "Tools" "desc" "tools.description" "descDefault" "A collection of handy browser-based utilities")
+}}
+
+<div class="container mx-auto px-4 py-8 lg:py-12">
+  <div class="max-w-4xl mx-auto">
+    <header class="mb-8 text-center">
+      <h1 class="text-4xl font-bold mb-4">{{ i18n "slashes.title" | default "Slashes" }}</h1>
+      <p class="text-muted-foreground">{{ i18n "slashes.description" | default "Common slash pages on this site." }}</p>
+    </header>
+
+    <div class="space-y-3">
+      {{ range $slashPages }}
+        <a href="{{ .path | relLangURL }}" class="flex items-start justify-between p-4 border rounded-lg bg-card hover:border-primary/50 transition-colors group">
+          <div class="flex-1">
+            <span class="font-medium group-hover:text-primary transition-colors">{{ i18n .name | default .nameDefault }}</span>
+            <p class="text-sm text-muted-foreground">{{ i18n .desc | default .descDefault }}</p>
+          </div>
+          <span class="text-muted-foreground font-monaspice text-sm self-start text-right ml-4">{{ .path }}</span>
+        </a>
+      {{ end }}
+    </div>
+    
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

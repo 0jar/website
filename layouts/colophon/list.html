@@ -1,0 +1,72 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-8 lg:py-12">
+  <div class="max-w-3xl mx-auto">
+    <header class="mb-8 text-center">
+      <h1 class="text-4xl font-bold mb-4">{{ i18n "colophon.title" | default "Colophon" }}</h1>
+      <p class="text-lg text-muted-foreground">{{ i18n "colophon.description" | default "Technical details and credits for this website." }}</p>
+    </header>
+
+    <div class="prose text-md dark:prose-invert max-w-none space-y-8 text-justify">
+      <section id="site-history" class="scroll-mt-20">
+        <h2>{{ i18n "colophon.siteHistory.title" | default "Site history" }}</h2>
+        <p>{{ i18n "colophon.siteHistory.content1" | default "This site has undergone many iterations." }}</p>
+        <p>{{ i18n "colophon.siteHistory.content2" }}</p>
+      </section>
+
+      <section id="technology-stack" class="scroll-mt-20">
+        <h2>{{ i18n "colophon.technologyStack.title" | default "Technology stack" }}</h2>
+        <ul>
+          <li><strong>Hugo:</strong> Static site generator</li>
+          <li><strong>Tailwind CSS:</strong> {{ i18n "colophon.technologyStack.tailwind" | default "For styling" }}</li>
+          <li><strong>Vanilla JS:</strong> Replaced Astro and Nanostores for lightweight functionality</li>
+          <li><strong>Typography:</strong> Lexend (headings), Lexend (body)</li>
+        </ul>
+      </section>
+
+      <section id="hosting" class="scroll-mt-20">
+        <h2>{{ i18n "colophon.hosting.title" | default "Hosting & deployment" }}</h2>
+        <p>{{ i18n "colophon.hosting.content1" | default "Hosted on" }} <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a>, {{ i18n "colophon.hosting.content2" | default "deployed automatically." }}</p>
+        <p>{{ i18n "colophon.hosting.content3" | default "DNS via" }} <a href="https://cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare</a>, {{ i18n "colophon.hosting.content4" }}</p>
+      </section>
+
+      <section id="design-philosophy" class="scroll-mt-20">
+        <h2>{{ i18n "colophon.design.title" | default "Design philosophy" }}</h2>
+        <p>{{ i18n "colophon.design.p1" }}</p>
+        <p>{{ i18n "colophon.design.p2" }}</p>
+      </section>
+
+      <section id="web-standards" class="scroll-mt-20">
+        <h2>{{ i18n "colophon.webStandards.title" | default "Web standards" }}</h2>
+        <p>{{ i18n "colophon.webStandards.intro" }}</p>
+        <ul>
+          <li><a href="https://microformats.org/wiki/h-card" target="_blank" rel="noopener noreferrer">h-card</a> and <a href="https://microformats.org/wiki/h-entry" target="_blank" rel="noopener noreferrer">h-entry</a> {{ i18n "colophon.webStandards.microformats" }}</li>
+          <li>{{ i18n "colophon.webStandards.feeds" }}</li>
+          <li>{{ i18n "colophon.webStandards.robots" }}</li>
+          <li>{{ i18n "colophon.webStandards.humans" }}</li>
+        </ul>
+      </section>
+
+      <section id="accessibility" class="scroll-mt-20">
+        <h2>{{ i18n "colophon.accessibility.title" | default "Accessibility" }}</h2>
+        <p>{{ i18n "colophon.accessibility.intro" }}</p>
+        <ul>
+          <li>{{ i18n "colophon.accessibility.item1" }}</li>
+          <li>{{ i18n "colophon.accessibility.item2" }}</li>
+          <li>{{ i18n "colophon.accessibility.item3" }}</li>
+          <li>{{ i18n "colophon.accessibility.item4" }}</li>
+          <li>{{ i18n "colophon.accessibility.item5" }}</li>
+          <li>{{ i18n "colophon.accessibility.item6" }}</li>
+        </ul>
+        <p>{{ i18n "colophon.accessibility.reportText" | default "If you encounter accessibility issues, please" }} <a href="/contact/">{{ i18n "colophon.accessibility.contactLink" | default "contact me" }}</a>.</p>
+      </section>
+
+      <section id="inspiration" class="scroll-mt-20">
+        <h2>{{ i18n "colophon.inspiration.title" | default "Inspiration" }}</h2>
+        <p>{{ i18n "colophon.inspiration.content1" | default "Inspired by" }} <a href="https://maggieappleton.com/colophon" target="_blank" rel="noopener noreferrer">{{ i18n "colophon.inspiration.maggie" | default "Maggie Appleton" }}</a>, {{ i18n "colophon.inspiration.content2" | default "and" }} <a href="https://www.gwern.net/Colophon" target="_blank" rel="noopener noreferrer">{{ i18n "colophon.inspiration.gwern" | default "Gwern Branwen" }}</a>.</p>
+      </section>
+      
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ end }}

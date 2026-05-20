@@ -1,0 +1,388 @@
+{{ define "main" }}
+{{ $lang := .Language.Lang }}
+{{ $title := .Title }}
+{{ $date := .Date }}
+{{ $updated := .Lastmod }}
+{{ $readingTime := .ReadingTime }}
+{{ $mood := .Params.mood }}
+{{ $catApproved := .Params.catApproved }}
+{{ $tags := .Params.tags | default slice }}
+{{ $categories := .Params.categories | default slice }}
+{{ if and (not $categories) .Params.category }}{{ $categories = slice .Params.category }}{{ end }}
+
+{{ $postUrl := .Permalink }}
+
+<article class="h-entry container mx-auto px-4 py-8 lg:py-12 max-w-3xl">
+  <header class="mb-8">
+    <div class="text-sm text-muted-foreground mb-4">
+      <a href="/blog/" class="hover:text-primary transition-colors">
+        ← {{ i18n "blog.back" | default "Back to blog" }}
+      </a>
+    </div>
+
+    <h1 class="p-name text-3xl md:text-4xl font-bold mb-4">{{ $title }}</h1>
+    
+    {{ $excerpt := .Params.excerpt | default .Summary }}
+    {{ if $excerpt }}
+      <div class="p-summary my-6 p-4 rounded-r-xl rounded-l-sm bg-muted/20 border-l-4 border-primary text-muted-foreground text-sm md:text-base italic shadow-sm">
+        <strong class="font-semibold not-italic text-foreground mr-1">{{ i18n "blog.tldr" | default "TL;DR:" }}</strong>
+        {{ $excerpt }}
+      </div>
+    {{ end }}
+    <a href="{{ $postUrl }}" class="u-url u-uid" style="display: none;" aria-hidden="true">{{ $postUrl }}</a>
+
+    <div class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+      <time class="dt-published" datetime="{{ $date.Format "2006-01-02T15:04:05Z07:00" }}" data-date="{{ $date.Format "2006-01-02T15:04:05Z07:00" }}">
+        {{ $date.Format "2 January 2006 15:04" }}
+      </time>
+      {{ if and $updated (gt $updated.Unix $date.Unix) }}
+        <span aria-hidden="true">•</span>
+        <span>
+          {{ i18n "now.lastUpdated" | default "Last updated" }}
+          <time class="dt-updated" datetime="{{ $updated.Format "2006-01-02T15:04:05Z07:00" }}" data-date="{{ $updated.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{ $updated.Format "2 January 2006 15:04" }}
+          </time>
+        </span>
+      {{ end }}
+      <span aria-hidden="true">•</span>
+      <span><span id="reading-time-value">{{ $readingTime }}</span> {{ i18n "blog.minRead" | default "min read" }}</span>
+      {{ if $mood }}
+        <span aria-hidden="true">•</span>
+        <span>{{ i18n "blog.mood" | default "Mood" }}: {{ $mood }}</span>
+      {{ end }}
+      {{ if $catApproved }}
+        <span aria-hidden="true">•</span>
+        <span title="Cat approved!" aria-label="Cat approved">🐱 ✓</span>
+      {{ end }}
+    </div>
+
+    {{ if $tags }}
+      <div class="flex gap-2 flex-wrap mt-2" role="list" aria-label="{{ i18n "blog.tag" | default "Tags" }}">
+        {{ range $tags }}
+          {{ $slug := urlize . }}
+          {{ $label := i18n (printf "blog.tagLabels.%s" $slug) | default . }}
+          <span role="listitem" class="p-category text-xs px-2 py-1 rounded bg-muted text-muted-foreground hidden" aria-hidden="true">
+            {{ $label }}
+          </span>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ if $categories }}
+      <div class="flex gap-2 flex-wrap mt-2" role="list" aria-label="{{ i18n "blog.category" | default "Categories" }}">
+        {{ range $categories }}
+          {{ $slug := urlize . }}
+          {{ $label := i18n (printf "blog.categoryLabels.%s" $slug) | default . }}
+          <span role="listitem" class="p-category text-xs px-2 py-1 rounded border text-muted-foreground hidden" aria-hidden="true">
+            {{ $label }}
+          </span>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ if .IsTranslated }}
+      <div class="mt-4 p-3 rounded-lg bg-muted/50 border">
+        <span class="text-sm text-muted-foreground">{{ i18n "blog.availableIn" | default "Also available in" }}: </span>
+        {{ range $i, $translated := .Translations }}
+          <a href="{{ .Permalink }}" class="text-sm text-primary hover:underline">
+            {{ .Language.LanguageName | default .Language.Lang }}
+          </a>{{ if ne (add $i 1) (len $.Translations) }}<span class="text-muted-foreground">, </span>{{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <div class="mt-6 flex flex-wrap gap-2">
+      {{ $encodedTitle := urlquery $title }}
+      {{ $encodedUrl := urlquery $postUrl }}
+      {{ $btnClasses := "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 btn-share" }}
+
+      <!-- Copy button - client side only -->
+      <button id="copy-share-btn" data-url="{{ $postUrl }}" class="{{ $btnClasses }}" aria-label="Copy link" title="Copy link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="copy-icon"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon hidden"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </button>
+
+      <!-- Share links -->
+      <a href="https://twitter.com/intent/tweet?text={{ $encodedTitle }}&url={{ $encodedUrl }}" target="_blank" rel="noopener noreferrer" class="{{ $btnClasses }}" aria-label="Share on Twitter" title="Share on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+      </a>
+      <a href="https://bsky.app/intent/compose?text={{ $encodedTitle }}%20{{ $encodedUrl }}" target="_blank" rel="noopener noreferrer" class="{{ $btnClasses }}" aria-label="Share on Bluesky" title="Share on Bluesky">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.375 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.81 9.498 7.823 4.308 4.557-5.073 1.082-6.498-2.83-7.078a10.45 10.45 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.249-.83.624-5.789.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>
+      </a>
+      <a href="https://threads.net/intent/post?text={{ $encodedTitle }}%20{{ $encodedUrl }}" target="_blank" rel="noopener noreferrer" class="{{ $btnClasses }}" aria-label="Share on Threads" title="Share on Threads">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 0 0 10-10H2a10 10 0 0 0 10 10Z"/><path d="M22 12A10 10 0 0 0 12 2v10Z"/></svg>
+      </a>
+      <a href="https://reddit.com/submit?url={{ $encodedUrl }}&title={{ $encodedTitle }}" target="_blank" rel="noopener noreferrer" class="{{ $btnClasses }}" aria-label="Share on Reddit" title="Share on Reddit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2"/><path d="M9 14h6"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
+      </a>
+      <a href="https://mastodon.social/share?text={{ $encodedTitle }}%20{{ $encodedUrl }}" target="_blank" rel="noopener noreferrer" class="{{ $btnClasses }}" aria-label="Share on Mastodon" title="Share on Mastodon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.58 13.913c-.206 1.404-1.612 2.443-3.237 2.805-1.554.346-3.243.52-4.945.52-1.701 0-3.39-.174-4.944-.52-1.625-.362-3.031-1.401-3.237-2.805-.224-1.523-.224-3.11-.224-4.706V8.125c0-3.375 2.75-6.125 6.125-6.125h6.555c3.375 0 6.125 2.75 6.125 6.125v1.082c0 1.595 0 3.183-.218 4.706z"/><path d="M6 10v4"/><path d="M18 10v4"/><path d="M12 10v4"/></svg>
+      </a>
+      <a href="mailto:?subject={{ $encodedTitle }}&body={{ $encodedUrl }}" target="_blank" rel="noopener noreferrer" class="{{ $btnClasses }}" aria-label="Share via Email" title="Share via Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="p-author h-card hidden" aria-hidden="true">
+    <a class="p-name u-url" href="{{ site.BaseURL }}">Jarema</a>
+  </div>
+
+  <div class="e-content prose dark:prose-invert max-w-none blog-content">
+    {{ .Content }}
+  </div>
+
+  <!-- Webmentions -->
+  {{ $webmentionUrl := printf "https://jarema.me%s" .RelPermalink }}
+  {{ $apiUrl := printf "https://webmention.io/api/mentions.jf2?target=%s" (urlquery $webmentionUrl) }}
+
+  {{ $webmentions := dict "children" slice }}
+  {{ $res := try (resources.GetRemote $apiUrl) }}
+  {{ if and (not $res.Err) $res.Value }}
+    {{ $webmentions = unmarshal $res.Value.Content }}
+  {{ end }}
+
+  {{ $wmLikes := slice }}
+  {{ $wmReposts := slice }}
+  {{ $wmReplies := slice }}
+  {{ $wmMentions := slice }}
+
+  {{ if $webmentions.children }}
+    {{ range $webmentions.children }}
+      {{ $prop := index . "wm-property" }}
+      {{ if eq $prop "like-of" }}
+        {{ $wmLikes = $wmLikes | append . }}
+      {{ else if eq $prop "repost-of" }}
+        {{ $wmReposts = $wmReposts | append . }}
+      {{ else if eq $prop "in-reply-to" }}
+        {{ $wmReplies = $wmReplies | append . }}
+      {{ else if eq $prop "mention-of" }}
+        {{ $wmMentions = $wmMentions | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $hasWebmentions := gt (len $webmentions.children) 0 }}
+
+  <section class="mt-12 pt-8 border-t" aria-labelledby="webmentions-heading">
+    <h2 id="webmentions-heading" class="text-2xl font-bold mb-6">{{ i18n "blog.webmentions" | default "Webmentions" }}</h2>
+
+    {{ if $hasWebmentions }}
+      <div class="space-y-8">
+        {{ if gt (len $wmLikes) 0 }}
+          <div>
+            <h3 class="text-sm font-semibold text-muted-foreground mb-3">❤️ {{ len $wmLikes }} {{ i18n "blog.webmentionLike" | default "Likes" }}</h3>
+            <div class="flex flex-wrap gap-1" role="list">
+              {{ range $wmLikes }}
+                {{ $authorUrl := "" }}{{ if index . "author" }}{{ $authorUrl = index .author "url" }}{{ end }}{{ $url := index . "url" | default $authorUrl }}
+                {{ $authorName := "Anonymous" }}{{ if index . "author" }}{{ $authorName = index .author "name" | default "Anonymous" }}{{ end }}
+                {{ $authorPhoto := "" }}{{ if index . "author" }}{{ $authorPhoto = index .author "photo" }}{{ end }}
+                
+                <a role="listitem" href="{{ $url }}" target="_blank" rel="noopener noreferrer" title="{{ $authorName }}" class="block">
+                  {{ if $authorPhoto }}
+                    <img src="{{ $authorPhoto }}" alt="{{ $authorName }}" width="32" height="32" class="rounded-full" loading="lazy" />
+                  {{ else }}
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-xs font-medium">
+                      {{ substr $authorName 0 1 }}
+                    </span>
+                  {{ end }}
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+
+        {{ if gt (len $wmReposts) 0 }}
+          <div>
+            <h3 class="text-sm font-semibold text-muted-foreground mb-3">🔁 {{ len $wmReposts }} {{ i18n "blog.webmentionRepost" | default "Reposts" }}</h3>
+            <div class="flex flex-wrap gap-1" role="list">
+              {{ range $wmReposts }}
+                {{ $authorUrl := "" }}{{ if index . "author" }}{{ $authorUrl = index .author "url" }}{{ end }}{{ $url := index . "url" | default $authorUrl }}
+                {{ $authorName := "Anonymous" }}{{ if index . "author" }}{{ $authorName = index .author "name" | default "Anonymous" }}{{ end }}
+                {{ $authorPhoto := "" }}{{ if index . "author" }}{{ $authorPhoto = index .author "photo" }}{{ end }}
+                
+                <a role="listitem" href="{{ $url }}" target="_blank" rel="noopener noreferrer" title="{{ $authorName }}" class="block">
+                  {{ if $authorPhoto }}
+                    <img src="{{ $authorPhoto }}" alt="{{ $authorName }}" width="32" height="32" class="rounded-full" loading="lazy" />
+                  {{ else }}
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-xs font-medium">
+                      {{ substr $authorName 0 1 }}
+                    </span>
+                  {{ end }}
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+
+        {{ if gt (len $wmReplies) 0 }}
+          <div>
+            <h3 class="text-sm font-semibold text-muted-foreground mb-3">💬 {{ len $wmReplies }} {{ i18n "blog.webmentionReply" | default "Replies" }}</h3>
+            <ol class="space-y-4">
+              {{ range $wmReplies }}
+                {{ $authorUrl := "" }}{{ if index . "author" }}{{ $authorUrl = index .author "url" }}{{ end }}
+                {{ $authorName := "Anonymous" }}{{ if index . "author" }}{{ $authorName = index .author "name" | default "Anonymous" }}{{ end }}
+                {{ $authorPhoto := "" }}{{ if index . "author" }}{{ $authorPhoto = index .author "photo" }}{{ end }}
+                
+                <li class="flex gap-3 p-3 rounded-lg bg-muted/30">
+                  <a href="{{ $authorUrl }}" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    {{ if $authorPhoto }}
+                      <img src="{{ $authorPhoto }}" alt="" width="40" height="40" class="rounded-full" loading="lazy" />
+                    {{ else }}
+                      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted text-sm font-medium">
+                        {{ substr $authorName 0 1 }}
+                      </span>
+                    {{ end }}
+                  </a>
+                  <div class="min-w-0">
+                    <div class="flex items-baseline gap-2 text-sm">
+                      <a href="{{ $authorUrl }}" target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline truncate">
+                        {{ $authorName }}
+                      </a>
+                      {{ if index . "published" }}
+                        <time class="text-xs text-muted-foreground shrink-0" datetime="{{ index . "published" }}">
+                          {{ dateFormat "2 January 2006 15:04" (index . "published") }}
+                        </time>
+                      {{ end }}
+                    </div>
+                    {{ if index . "content" }}
+                      {{ if index .content "text" }}
+                        <p class="mt-1 text-sm text-muted-foreground line-clamp-3">{{ index .content "text" }}</p>
+                      {{ end }}
+                    {{ end }}
+                    {{ if index . "url" }}
+                      <a href="{{ index . "url" }}" target="_blank" rel="noopener noreferrer" class="text-xs text-primary hover:underline mt-1 inline-block">↗</a>
+                    {{ end }}
+                  </div>
+                </li>
+              {{ end }}
+            </ol>
+          </div>
+        {{ end }}
+
+        {{ if gt (len $wmMentions) 0 }}
+          <div>
+            <h3 class="text-sm font-semibold text-muted-foreground mb-3">🔗 {{ len $wmMentions }} {{ i18n "blog.webmentionMention" | default "Mentions" }}</h3>
+            <ul class="space-y-2">
+              {{ range $wmMentions }}
+                {{ $authorName := "Anonymous" }}{{ if index . "author" }}{{ $authorName = index .author "name" | default "Anonymous" }}{{ end }}
+                {{ $authorPhoto := "" }}{{ if index . "author" }}{{ $authorPhoto = index .author "photo" }}{{ end }}
+                {{ $displayName := $authorName }}{{ if eq $displayName "Anonymous" }}{{ if index . "url" }}{{ $displayName = index . "url" }}{{ end }}{{ end }}
+                
+                <li class="flex items-center gap-2 text-sm">
+                  {{ if $authorPhoto }}
+                    <img src="{{ $authorPhoto }}" alt="" width="24" height="24" class="rounded-full" loading="lazy" />
+                  {{ else }}
+                    <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-muted text-[10px] font-medium">
+                      {{ substr $authorName 0 1 }}
+                    </span>
+                  {{ end }}
+                  <a href="{{ index . "url" }}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline truncate">
+                    {{ $displayName }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="text-muted-foreground">{{ i18n "blog.webmentionsNone" | default "No webmentions yet." }}</p>
+    {{ end }}
+  </section>
+
+  <!-- Post navigation -->
+  <nav class="mt-12 pt-8 border-t" aria-label="Post navigation">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {{ with .NextInSection }}
+        <a href="{{ .Permalink }}" class="group p-4 border rounded-lg hover:border-primary/50 transition-colors md:text-right md:ml-auto md:col-start-2">
+          <span class="text-xs text-muted-foreground">{{ i18n "blog.next" | default "Next" }} →</span>
+          <p class="font-medium group-hover:text-primary transition-colors line-clamp-1">{{ .Title }}</p>
+        </a>
+      {{ end }}
+      {{ with .PrevInSection }}
+        <a href="{{ .Permalink }}" class="group p-4 border rounded-lg hover:border-primary/50 transition-colors md:col-start-1 md:row-start-1">
+          <span class="text-xs text-muted-foreground">← {{ i18n "blog.prev" | default "Previous" }}</span>
+          <p class="font-medium group-hover:text-primary transition-colors line-clamp-1">{{ .Title }}</p>
+        </a>
+      {{ end }}
+    </div>
+  </nav>
+</article>
+
+<script>
+  const copyIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>';
+  const checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+  async function copyHandler(button, text) {
+    if (!text?.trim()) return;
+    try {
+      await navigator.clipboard.writeText(text);
+      button.classList.add('copied');
+      button.innerHTML = checkIcon;
+      setTimeout(() => {
+        button.classList.remove('copied');
+        button.innerHTML = copyIcon;
+      }, 2000);
+    } catch (err) {
+      console.error('Copy failed:', err);
+    }
+  }
+
+  function createButton(label) {
+    const btn = document.createElement('button');
+    btn.className = 'copy-button absolute right-2 top-2 p-2 bg-muted/80 rounded hover:bg-muted text-muted-foreground hover:text-foreground transition-colors';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', 'Copy to clipboard');
+    btn.innerHTML = copyIcon;
+    return btn;
+  }
+
+  function addCopyButtons() {
+    const blogContent = document.querySelector('.blog-content');
+    if (blogContent) {
+      [
+        { selector: 'pre', label: 'Copy code', textSel: 'code' },
+        { selector: 'blockquote', label: 'Copy quote', textSel: null }
+      ].forEach(({ selector, label, textSel }) => {
+        blogContent.querySelectorAll(selector).forEach((el) => {
+          if (el.querySelector('.copy-button')) return;
+          el.style.position = 'relative';
+          const btn = createButton(label);
+          btn.addEventListener('click', () => copyHandler(btn, (textSel ? el.querySelector(textSel) : el)?.textContent || ''));
+          el.appendChild(btn);
+        });
+      });
+    }
+
+    const copyBtn = document.getElementById('copy-share-btn');
+    if (copyBtn) {
+      const url = copyBtn.getAttribute('data-url');
+      const copyIcon = copyBtn.querySelector('.copy-icon');
+      const checkIcon = copyBtn.querySelector('.check-icon');
+
+      copyBtn.addEventListener('click', async () => {
+        if (!url) return;
+        try {
+          await navigator.clipboard.writeText(url);
+          copyIcon?.classList.add('hidden');
+          checkIcon?.classList.remove('hidden');
+          setTimeout(() => {
+            copyIcon?.classList.remove('hidden');
+            checkIcon?.classList.add('hidden');
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy:', err);
+        }
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addCopyButtons);
+  } else {
+    addCopyButtons();
+  }
+</script>
+{{ end }}

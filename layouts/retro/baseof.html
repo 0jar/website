@@ -1,0 +1,162 @@
+{{ $title := .Title | default "Jarema - Retro version" }}
+{{ $authorName := "Jarema" }}
+{{ $currentYear := now.Format "2006" }}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="{{ .Language.Lang }}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>{{ $title }}</title>
+  <style>
+    /* basic retro styles */
+    body { background-color: #1A0F2E; color: #F2F2F2; font-family: "Times New Roman", Times, serif; margin: 0; padding: 0; }
+    a { color: #54D4FF; }
+  </style>
+</head>
+<body style="background-color: #1A0F2E; color: #F2F2F2; font-family: Times New Roman, Times, serif; margin: 0; padding: 0;">
+
+<table width="100%" cellpadding="0" cellspacing="0" style="max-width: 800px; margin: 0 auto;">
+  <tbody>
+    <tr>
+      <td colspan="3" style="background-color: #2A1F45; color: #F2F2F2; padding: 10px; text-align: center;">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td style="text-align: left;">
+                <font size="5" color="#F2F2F2"><b>☆ {{ $authorName }} ☆</b></font><br>
+                <font size="2" color="#54D4FF"><i>A personal website since 2024</i></font>
+              </td>
+              <td style="text-align: right; vertical-align: middle;">
+                <font size="2" color="#F2F2F2">
+                  [<a href="/retro/">Home</a>]
+                  [<a href="/retro/about/">About</a>]
+                  [<a href="/retro/blog/">Blog</a>]
+                  [<a href="/retro/projects/">Projects</a>]
+                  [<a href="/retro/contact/">Contact</a>]
+                </font>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding: 5px 0;">
+        <hr style="border: none; height: 3px; background-color: #54D4FF;">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding: 5px 10px;">
+        <table width="100%" cellpadding="5" cellspacing="0" style="background-color: #2A1F45; border: 2px solid #54D4FF;">
+          <tbody>
+            <tr>
+              <td>
+                <font size="3" color="#F2F2F2">
+                  <b>Note:</b> You are viewing the <b>retro version</b> of this website. Welcome!
+                </font>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding: 10px;">
+        <table width="100%" cellpadding="0" cellspacing="10">
+          <tbody>
+            <tr>
+              <td style="vertical-align: top; width: 75%; background-color: #2A1F45; color: #F2F2F2; padding: 15px; border: 2px inset #4A3F6F;">
+                {{ block "main" . }}{{ end }}
+              </td>
+              <td style="vertical-align: top; width: 25%; background-color: #2A1F45; color: #F2F2F2; padding: 10px; border: 2px inset #4A3F6F;">
+                <center><font size="3" color="#54D4FF"><b>Navigation</b></font></center>
+                <hr style="background-color: #4A3F6F; border: none; height: 2px;">
+                <ul style="padding-left: 20px; margin: 5px 0;">
+                  <li><a href="/retro/">Home</a></li>
+                  <li><a href="/retro/about/">About me</a></li>
+                  <li><a href="/retro/blog/">Blog</a></li>
+                  <li><a href="/retro/projects/">Projects</a></li>
+                  <li><a href="/retro/now/">Now</a></li>
+                  <li><a href="/retro/uses/">Uses</a></li>
+                  <li><a href="/retro/webrings/">Webrings</a></li>
+                  <li><a href="/retro/contact/">Contact</a></li>
+                </ul>
+                <hr style="background-color: #4A3F6F; border: none; height: 2px;">
+                <center><font size="3" color="#54D4FF"><b>Site info</b></font></center>
+                <hr style="background-color: #4A3F6F; border: none; height: 2px;">
+                <font size="2">
+                  <p><b>Last updated:</b><br>{{ now.Format "2 January 2006" }}</p>
+                  <p><b>Webmaster:</b><br>{{ $authorName }}</p>
+                </font>
+                <hr style="background-color: #4A3F6F; border: none; height: 2px;">
+                <center><font size="3" color="#54D4FF"><b>Links</b></font></center>
+                <hr style="background-color: #4A3F6F; border: none; height: 2px;">
+                <font size="2">
+                  <ul style="padding-left: 20px; margin: 5px 0;">
+                    <li><a href="https://github.com">GitHub</a></li>
+                    <li><a href="/rss.xml">RSS feed</a></li>
+                    <li><a href="/">Modern site</a></li>
+                  </ul>
+                </font>
+                <hr style="background-color: #4A3F6F; border: none; height: 2px;">
+                <center>
+                  <font size="2">
+                    <img src="/underconstruction.png" alt="Under construction" width="88" height="31" style="image-rendering: pixelated;"><br>
+                    <font>This site is always under construction!</font>
+                  </font>
+                </center>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="background-color: #2A1F45; color: #F2F2F2; padding: 10px; text-align: center;">
+        <font size="2" color="#F2F2F2">
+          <p>{{ $authorName }}, {{ $currentYear }} - No rights reserved<br><a href="mailto:hi@jarema.me">hi@jarema.me</a></p>
+          <p><font size="2">This page has been accessed <font color="#54D4FF"><b>∞</b></font> times since you loaded it!<br>You are visitor #42069 (probably)</font></p>
+          <p><font size="2">[<a href="/">View modern version</a>] | [<a href="/sitemap.xml">Sitemap</a>] | [<a href="/rss.xml">RSS</a>]</font></p>
+        </font>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="text-align: center; padding: 20px;">
+  <table cellpadding="5" cellspacing="5" style="margin: 0 auto;" align="center">
+    <tbody>
+      <tr style="text-align: center;">
+        <td><img src="/sweet.png" alt="Sweet homepage" width="88" height="31"></td>
+        <td><a href="https://www.anybrowser.org/campaign/"><img src="/any_browser.gif" alt="Best viewed with any browser" width="88" height="31"></a></td>
+        <td><img src="/lynxnow.gif" alt="Lynx Now!" width="88" height="31"></td>
+        <td><img src="/dumbass.gif" alt="Dumbass webmaster ahead" width="88" height="31"></td>
+        <td><img src="/join_logo.gif" alt="Miaow" width="88" height="31"></td>
+        <td><img src="/bannars.gif" alt="Miaow" width="88" height="31"></td>
+        <td><img src="/teto.gif" alt="Teto" width="88" height="31"></td>
+        <td><img src="/button2019.gif" alt="Still using buttons in 2019!" width="88" height="31"></td>
+      </tr>
+      <tr style="text-align: center;">
+        <td><a href="https://people.pledge.party"><img src="/people_pledge_badge_party_cream_pink_88x31.png" alt="People Pledge" width="88" height="31"></a></td>
+        <td><a href="https://kagi.com/smallweb"><img src="/kagi-smallweb-yellow.gif" alt="Kagi Small Web" width="88" height="31"></a></td>
+        <td><img src="/internetprivacy.gif" alt="Internet Privacy Now!" width="88" height="31"></td>
+        <td><a href="https://yesterweb.org/no-to-web3/"><img src="/saynotoweb3_88x31.gif" alt="Keep the web free, say no to Web3" width="88" height="31"></a></td>
+        <td><a href="/rss.xml"><img src="/valid-rss-rogers.png" alt="Valid RSS feed" width="88" height="31"></a></td>
+        <td><a href="/atom.xml"><img src="/valid-atom.png" alt="Valid Atom feed" width="88" height="31"></a></td>
+        <td><a href="/humans.txt"><img src="/humanstxt.png" alt="humans.txt" width="88" height="31"></a></td>
+        <td><img src="/got_html.gif" alt="Got HTML?" width="88" height="31"></td>
+      </tr>
+      <tr>
+        <td colspan="8" align="center">
+          <a href="https://fedoraproject.org/"><img src="/fedora.gif" alt="Fedora Linux" width="88" height="31"></a>
+          <a href="/blog/2025/08/anything-but-chrome"><img src="/anythingbut.gif" alt="Anything but Chrome" width="88" height="31"></a>
+          <img src="/retrokid.gif" alt="Retro" width="88" height="31">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

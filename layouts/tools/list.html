@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-8 lg:py-12">
+  <div class="max-w-4xl mx-auto">
+    <header class="mb-10 text-center">
+      <h1 class="text-4xl font-bold mb-4">{{ i18n "tools.title" | default "Tools" }}</h1>
+      <p class="text-muted-foreground text-lg max-w-xl mx-auto">{{ i18n "tools.description" | default "A collection of handy browser-based utilities" }}</p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {{ range .Pages }}
+        {{ $slug := .File.TranslationBaseName }}
+        {{ if eq $slug "_index" }}{{ $slug = path.Base .File.Dir }}{{ end }}
+        <a
+          href="{{ .RelPermalink }}"
+          class="group rounded-xl border bg-card p-6 flex flex-col transition-colors hover:border-foreground/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          <span class="text-3xl mb-3" aria-hidden="true">{{ i18n (printf "tools.items.%s.icon" $slug) | default "🔧" }}</span>
+          <h2 class="text-xl font-bold mb-2 group-hover:underline">{{ i18n (printf "tools.items.%s.title" $slug) | default .Title }}</h2>
+          <p class="text-muted-foreground text-sm flex-1">{{ i18n (printf "tools.items.%s.description" $slug) | default .Description }}</p>
+        </a>
+      {{ end }}
+    </div>
+    
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

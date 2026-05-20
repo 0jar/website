@@ -1,0 +1,252 @@
+{{ define "main" }}
+{{ $lang := .Language.Lang }}
+{{ $author := site.Params.author }}
+{{ $authorName := $author.name | default "Jarema" }}
+{{ $authorNote := $author.note | default "Economics major, sometimes coder, most times cat whisperer." }}
+{{ $authorEmail := $author.email | default "hello@jarema.me" }}
+{{ $authorCategory := $author.category | default "student" }}
+{{ $authorTimezone := "Antarctica/Davis" }}
+{{ $authorTimezoneLabel := "Davis, 🇦🇶" }}
+
+{{ $interests := slice }}
+{{ range site.Data.about.interests }}
+  {{ $interests = $interests | append . }}
+{{ end }}
+{{ $interests = sort $interests "order" "asc" }}
+
+{{ $languageList := slice 
+    (dict "langKey" "vi" "level" "native")
+    (dict "langKey" "en" "level" "c2")
+    (dict "langKey" "et" "level" "b2")
+    (dict "langKey" "ru" "level" "b2")
+}}
+
+{{ $commits := slice }}
+{{ range site.Data.about.logs }}
+  {{ $commits = $commits | append . }}
+{{ end }}
+{{ $commits = sort $commits "date" "desc" }}
+
+<div id="top" class="container mx-auto px-4 py-8 max-w-6xl">
+  <header class="text-center mb-12">
+    <h1 class="text-4xl font-bold mb-4">{{ i18n "about.title" | default "About Me" }}</h1>
+    <p class="text-muted-foreground text-lg max-w-2xl mx-auto">{{ i18n "about.description" | default "A bit more about myself, the things I like and the tools I use." }}</p>
+  </header>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-4">
+    <!-- Profile card -->
+    <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm md:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center justify-center gap-6">
+      <img src="/favicons.png" alt="{{ $authorName }}" width="120" height="120" class="u-photo rounded-full" />
+      <div class="text-center sm:text-left">
+        <h2 class="p-name text-2xl font-bold">{{ $authorName }}</h2>
+        <p class="p-note mt-2 text-muted-foreground">{{ $authorNote }}</p>
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-4">
+          <a href="/" class="u-url u-uid text-sm text-primary hover:underline">jarema.me</a>
+          <a class="u-email text-sm text-primary hover:underline" href="mailto:{{ $authorEmail }}">{{ $authorEmail }}</a>
+        </div>
+        <span class="p-category hidden">{{ $authorCategory }}</span>
+      </div>
+    </article>
+
+    <!-- Stats box -->
+    <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center text-center md:col-span-1 lg:col-span-1">
+      <div class="grid grid-cols-2 gap-4 w-full">
+        <div>
+          <div class="text-3xl font-bold text-primary">1</div>
+          <div class="text-xs text-muted-foreground mt-1">{{ i18n "about.stats.self" | default "Myself" }}</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-primary">6</div>
+          <div class="text-xs text-muted-foreground mt-1">{{ i18n "about.stats.languages" | default "Languages" }}</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-primary">5</div>
+          <div class="text-xs text-muted-foreground mt-1">{{ i18n "about.stats.siteVersions" | default "Site Versions" }}</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-primary">15+</div>
+          <div class="text-xs text-muted-foreground mt-1">{{ i18n "about.stats.yearsOnline" | default "Years Online" }}</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Time widget -->
+    <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center md:col-span-1 lg:col-span-1" aria-labelledby="timezone-heading">
+      <h2 id="timezone-heading" class="text-lg font-bold mb-3 text-center">{{ i18n "home.time" | default "Local Time" }}</h2>
+      <div class="flex flex-col gap-2 w-full">
+        <div class="text-center">
+          <p id="author-time" class="text-2xl font-bold text-primary" data-timezone="{{ $authorTimezone }}">--:--:--</p>
+          <p class="text-xs text-muted-foreground mt-1">{{ i18n "home.myTime" | default "My Time" }} ({{ $authorTimezoneLabel }})</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Interests box -->
+    <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center md:col-span-2 lg:col-span-1">
+      <h3 class="text-lg font-semibold mb-4">{{ i18n "about.interests.title" | default "Interests" }}</h3>
+      <div class="flex flex-wrap gap-2">
+        {{ range $interests }}
+          {{ $label := "" }}
+          {{ if reflect.IsMap .content }}
+            {{ $label = index .content $lang | default .content.en }}
+          {{ else }}
+            {{ $label = .content }}
+          {{ end }}
+          <span class="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-md border border-border">{{ $label }}</span>
+        {{ end }}
+      </div>
+    </article>
+
+    <!-- Terminal card -->
+    <article class="bg-[#0c0c0c] border border-border rounded-lg p-6 shadow-sm font-monaspice md:col-span-2 lg:col-span-2 md:row-span-2 overflow-x-auto text-sm">
+      <div class="flex items-center gap-2 mb-4 text-muted-foreground opacity-50">
+        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+      </div>
+      <p class="mb-2"><span class="text-primary">jar@jarema:~/gits/website</span>$ fastfetch</p>
+      <div class="flex gap-4">
+        <div class="hidden sm:block mt-2 text-primary font-bold whitespace-pre">
+​  o  ​
+     ​
+o   o
+        </div>
+        <div>
+          <p><span class="text-primary font-bold">├─ OS: </span>{{ i18n "about.terminal.fastfetch.os" | default "Fedora Linux 40 (Workstation Edition) x86_64" }}</p>
+          <p><span class="text-primary font-bold">├─ Host: </span>{{ i18n "about.terminal.fastfetch.host" | default "Modern 15 A5M (REV:1.0)" }}</p>
+          <p><span class="text-primary font-bold">├─ Uptime: </span>{{ i18n "about.terminal.fastfetch.uptime" | default "22 hours, 44 mins" }}</p>
+          <p><span class="text-primary font-bold">├─ Shell: </span>{{ i18n "about.terminal.fastfetch.shell" | default "bash 5.2.26" }}</p>
+          <p><span class="text-primary font-bold">├─ Theme: </span>{{ i18n "about.terminal.fastfetch.theme" | default "Adwaita [GTK2/3]" }}</p>
+          <p><span class="text-primary font-bold">├─ CPU: </span>{{ i18n "about.terminal.fastfetch.cpu" | default "AMD Ryzen 5 5500U with Radeon Graphics (12) @ 4.056GHz" }}</p>
+          <p><span class="text-primary font-bold">└─ GPU: </span>{{ i18n "about.terminal.fastfetch.gpu" | default "AMD ATI Radeon Vega Series / Radeon Vega Mobile Series" }}</p>
+        </div>
+      </div>
+      <p class="mt-2 mb-2"><span class="text-primary">jar@jarema:~/gits/website</span>$ whoami</p>
+      <div class="flex gap-4">
+        <div class="hidden sm:block"></div>
+        <div>
+          <p><span class="text-primary font-bold">jar</span>@jarema</p>
+          <p><span class="text-primary font-bold">├─ </span>{{ i18n "about.terminal.whoami.line1" | default "Also known as Jarema, but Jarema wasn't my birth name." }}</p>
+          <p><span class="text-primary font-bold">├─ </span>{{ i18n "about.terminal.whoami.line2" | default "Currently an economics major, though I do code on the side." }}</p>
+          <p><span class="text-primary font-bold">├─ </span>{{ i18n "about.terminal.whoami.line3" | default "I consider myself a digital minimalist and open-source enthusiast." }}</p>
+          <p><span class="text-primary font-bold">├─ </span>{{ i18n "about.terminal.whoami.line4" | default "A proud supporter of the Fediverse and indie web movements." }}</p>
+          <p><span class="text-primary font-bold">├─ </span>{{ i18n "about.terminal.whoami.line5" | default "Obsessed with learning new languages, especially Slavic ones." }}</p>
+          <p><span class="text-primary font-bold">└─ </span>{{ i18n "about.terminal.whoami.line6" | default "Meow." }}</p>
+        </div>
+      </div>
+      <p class="mt-2"><span class="text-primary">jar@jarema:~/gits/website</span>$
+      <span class="animate-blink">_</span></p>
+    </article>
+
+    <!-- Map box -->
+    <article class="bg-card text-card-foreground border rounded-lg overflow-hidden shadow-sm md:col-span-1 lg:col-span-1 md:row-span-2 relative">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://api.maptiler.com/tiles/satellite-night/?key=ZtNe0LkdF7pMF24Pxqme#4/21/105.8"
+        title="Map showing Jarema's location"
+        class="absolute inset-0 border-0"
+      ></iframe>
+    </article>
+
+    <!-- Languages box -->
+    <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center md:col-span-3 lg:col-span-1">
+      <h3 class="text-lg font-semibold mb-4">{{ i18n "about.interests.languagesTitle" | default "Spoken Languages" }}</h3>
+      <div class="flex flex-col gap-2 text-sm">
+        {{ range $languageList }}
+          <div class="flex justify-between items-center bg-accent/50 p-2 rounded border border-border">
+            <span class="font-medium">{{ i18n (printf "language.%s" .langKey) | default .langKey }}</span>
+            <span class="text-xs px-2 py-0.5 bg-primary/20 text-primary rounded">{{ i18n (printf "about.interests.levels.%s" .level) | default .level }}</span>
+          </div>
+        {{ end }}
+      </div>
+    </article>
+  </div>
+
+  <!-- Git history -->
+  <article class="mt-4 bg-card text-card-foreground border rounded-lg p-4 shadow-sm overflow-hidden text-sm">
+    <div class="divide-y divide-border">
+      {{ range $commits }}
+        {{ $msg := "" }}
+        {{ if reflect.IsMap .content }}
+          {{ $msg = index .content $lang | default .content.en }}
+        {{ else }}
+          {{ $msg = .content }}
+        {{ end }}
+        {{ $timeObj := time.AsTime .date }}
+        {{ $dateStr := $timeObj.Format "02 Jan 2006" }}
+        {{ if and (eq $timeObj.Month 1) (eq $timeObj.Day 1) }}
+          {{ $dateStr = $timeObj.Format "2006" }}
+        {{ end }}
+        <div class="flex items-center gap-3 p-3 hover:bg-muted/50 transition-colors group">
+          <img src="/favicons.png" alt="Jarema" width="24" height="24" class="rounded-sm flex-shrink-0" />
+          <span class="font-medium text-muted-foreground w-15">Jarema</span>
+          <span class="px-2 py-0.5 bg-muted/80 text-muted-foreground rounded border border-border/50 hidden sm:block text-xs font-monaspice">{{ substr .hash 0 10 }}</span>
+          <span class="flex-1 font-medium">{{ $msg }}</span>
+          {{ if .badges }}
+            <div class="hidden md:flex gap-1">
+              {{ range .badges }}
+                <span class="px-1.5 text-[12px] font-bold tracking-wider rounded-sm border border-primary/20 text-primary/70">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+          <span class="text-xs text-muted-foreground whitespace-nowrap ml-auto">
+            <span class="sm:hidden">{{ if ge (len $dateStr) 4 }}{{ substr $dateStr -4 }}{{ else }}{{ $dateStr }}{{ end }}</span>
+            <span class="hidden sm:inline">{{ $dateStr }}</span>
+          </span>
+          <div class="flex gap-1 opacity-100">
+            <button class="p-1 hover:bg-accent rounded text-muted-foreground copy-hash-btn" data-hash="{{ .hash }}" aria-label="{{ i18n "about.timeline.copyHash" | default "Copy Hash" }}" title="{{ i18n "about.timeline.copyHashTitle" | default "Copy" }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </article>
+
+  <div class="mt-8">
+    {{ .Content }}
+  </div>
+
+  <div id="chapter-6" class="hidden-chapter hidden mt-16 scroll-mt-20">
+    <div class="border border-border/50 rounded-lg p-6 bg-card/30 backdrop-blur-sm shadow-sm relative overflow-hidden">
+      <!-- Decor -->
+      <div class="absolute -top-10 -right-10 text-9xl opacity-5 pointer-events-none" aria-hidden="true">6</div>
+      
+      <div class="prose dark:prose-invert max-w-none relative z-10">
+        <h2 class="text-2xl font-bold flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+          {{ i18n "about.secret.title" | default "Chapter 6: The Secret" }}
+        </h2>
+        <div class="mt-4 text-muted-foreground">
+          <p>{{ i18n "about.secret.content" | default "You found the hidden chapter! This area is reserved for special announcements or just to hide random easter eggs." }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function updateTimes() {
+    const authorEl = document.getElementById("author-time");
+    if (!authorEl) return;
+    const now = new Date();
+    const fmt = (tz) => now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", second: "2-digit", ...(tz && { timeZone: tz }) });
+    const tz = authorEl.dataset.timezone;
+    if (tz) authorEl.textContent = fmt(tz);
+  }
+  updateTimes();
+  setInterval(updateTimes, 1000);
+
+  document.querySelectorAll('.copy-hash-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const hash = btn.getAttribute('data-hash');
+      if (hash) navigator.clipboard.writeText(hash);
+    });
+  });
+
+  if (sessionStorage.getItem("showHiddenChapter") === "true") {
+    document.querySelectorAll(".hidden-chapter").forEach(el => el.classList.remove("hidden"));
+  }
+</script>
+{{ end }}

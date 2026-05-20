@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $email := "hi@jarema.me" }}
+<div class="container mx-auto px-4 py-8 lg:py-12">
+  <div class="max-w-3xl mx-auto">
+    <header class="mb-8 text-center">
+      <h1 class="text-4xl font-bold mb-4">{{ i18n "guestbook.title" | default "Guestbook" }}</h1>
+      <p class="text-lg text-muted-foreground">{{ i18n "guestbook.description" | default "Leave a message in my guestbook!" }}</p>
+    </header>
+
+    <!-- Atabook iframe -->
+    <div class="border rounded-lg overflow-hidden bg-card">
+      <iframe
+        src="https://jarema.atabook.org"
+        class="w-full min-h-[800px] border-0"
+        title="Guestbook"
+        loading="lazy"
+        sandbox="allow-scripts allow-same-origin allow-forms"
+        referrerpolicy="no-referrer"
+      ></iframe>
+      <noscript>
+        <div class="p-6 text-center">
+          <p class="text-muted-foreground">
+            The guestbook requires JavaScript to be enabled.
+            Alternatively, you can <a href="mailto:{{ $email }}" class="text-primary hover:underline">email me</a> directly.
+          </p>
+        </div>
+      </noscript>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-muted-foreground">
+      <p>
+        {{ i18n "guestbook.poweredBy" | default "Powered by" }} <a href="https://atabook.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">{{ i18n "guestbook.atabook" | default "Atabook" }}</a> 💜
+      </p>
+    </div>
+  </div>
+</div>
+{{ end }}

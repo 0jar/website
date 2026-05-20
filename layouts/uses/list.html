@@ -1,0 +1,200 @@
+{{ define "main" }}
+{{ $locale := .Language.Lang }}
+{{ $icons := dict "hardware" "💻" "mobile" "📱" "audio" "🎧" "os" "🖥️" "development" "⌨️" "email" "📧" "privacy" "🔒" "mobile-tools" "🔧" "mapping" "🗺️" "gaming" "🎮" "multimedia" "🎨" "design" "🎨" "photo" "📷" "video" "🎬" "media" "🎵" }}
+
+<div class="container mx-auto px-4 py-8 lg:py-12">
+  <div class="max-w-4xl mx-auto">
+    <header class="mb-10 text-center">
+      <h1 class="text-4xl font-bold mb-4">{{ i18n "uses.title" | default "Uses" }}</h1>
+      <p class="text-muted-foreground text-lg mx-auto">
+        {{ i18n "uses.description" }}
+        <a href="https://uses.tech" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">uses.tech</a>,
+        {{ i18n "uses.websiteDescription" }}
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      {{ range $key, $category := site.Data.uses }}
+        <section id="{{ $category.title }}" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-2xl" aria-hidden="true">{{ index $icons $category.title | default "📌" }}</span>
+            <h2 class="text-2xl font-bold category-title">{{ i18n (printf "uses.categories.%s" $category.title) | default $category.title }}</h2>
+          </div>
+
+          {{ if $category.items }}
+            <div class="space-y-4 ml-4">
+              {{ range $category.items }}
+                <div class="flex items-start gap-3">
+                  <div class="flex-shrink-0 mt-1.5 w-3 h-3 rounded-full bg-primary"></div>
+                  <div class="flex-1">
+                    {{ if .link }}
+                      <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="text-lg font-medium hover:text-primary flex items-center">
+                        {{ .name }}<span class="text-xs ml-1 opacity-70">↗</span>
+                      </a>
+                    {{ else }}
+                      <h3 class="text-lg font-medium">{{ .name }}</h3>
+                    {{ end }}
+                    {{ if .description }}
+                      <p class="text-muted-foreground item-description">
+                        {{ if reflect.IsMap .description }}
+                          {{ index .description $locale | default .description.en }}
+                        {{ else }}
+                          {{ .description }}
+                        {{ end }}
+                      </p>
+                    {{ end }}
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{ if $category.subsections }}
+            {{ range $category.subsections }}
+              <div class="mt-6">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-lg" aria-hidden="true">{{ index $icons .title | default "📌" }}</span>
+                  <h3 class="text-xl font-medium subsection-title">{{ i18n (printf "uses.subsections.%s" .title) | default .title }}</h3>
+                </div>
+                <div class="space-y-4 ml-4">
+                  {{ range .items }}
+                    {{ $isHidden := strings.HasPrefix .name "Unspeakable" }}
+                    {{ if $isHidden }}
+                      {{ $platform := cond (eq .name "Unspeakable Platform 1") "revanced" "stremio" }}
+                      <div class="flex items-start gap-3 cursor-pointer group hidden-platform" data-platform="{{ $platform }}" data-clicks="0" role="button" tabindex="0" aria-label="Hidden platform - click 5 times to reveal">
+                        <div class="flex-shrink-0 mt-1.5 w-3 h-3 rounded-full bg-primary"></div>
+                        <div class="flex-1">
+                          <h4 class="text-lg font-medium flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="platform-lock">
+                              <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                            <span class="platform-name">{{ i18n "uses.hidden.platformPrefix" }} {{ if eq .name "Unspeakable Platform 1" }}1{{ else }}2{{ end }}</span>
+                            <span class="text-xs text-muted-foreground platform-counter">(5 clicks to reveal)</span>
+                          </h4>
+                          <p class="text-muted-foreground platform-description">{{ i18n "uses.hidden.clickToReveal" }}</p>
+                        </div>
+                      </div>
+                    {{ else }}
+                      <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 mt-1.5 w-3 h-3 rounded-full bg-primary"></div>
+                        <div class="flex-1">
+                          {{ if .link }}
+                            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="text-lg font-medium hover:text-primary flex items-center">
+                              {{ .name }}<span class="text-xs ml-1 opacity-70">↗</span>
+                            </a>
+                          {{ else }}
+                            <h4 class="text-lg font-medium">{{ .name }}</h4>
+                          {{ end }}
+                          {{ if .description }}
+                            <p class="text-muted-foreground item-description">
+                              {{ if reflect.IsMap .description }}
+                                {{ index .description $locale | default .description.en }}
+                              {{ else }}
+                                {{ .description }}
+                              {{ end }}
+                            </p>
+                          {{ end }}
+                        </div>
+                      </div>
+                    {{ end }}
+                  {{ end }}
+                </div>
+              </div>
+            {{ end }}
+          {{ end }}
+        </section>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<script>
+  const platformData = {
+    revanced: { name: 'ReVanced', description: 'A patcher for YouTube that removes ads and adds features', link: 'https://revanced.app/' },
+    stremio: { name: 'Stremio', description: 'A media center for streaming movies and TV shows', link: 'https://www.stremio.com/' }
+  };
+
+  function setupHiddenPlatforms() {
+    document.querySelectorAll('.hidden-platform').forEach((el) => {
+      const platform = el.getAttribute('data-platform');
+      if (!platform) return;
+
+      el.addEventListener('click', handleReveal);
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleReveal(); }
+      });
+
+      function handleReveal() {
+        let clicks = parseInt(el.getAttribute('data-clicks') || '0') + 1;
+        el.setAttribute('data-clicks', String(clicks));
+
+        const counter = el.querySelector('.platform-counter');
+        const remaining = 5 - clicks;
+
+        if (remaining > 0 && counter) {
+          counter.textContent = `(${remaining} click${remaining === 1 ? '' : 's'} to reveal)`;
+        } else if (clicks >= 5) {
+          const data = platformData[platform];
+          if (data) {
+            const nameEl = el.querySelector('.platform-name');
+            if (nameEl) {
+              const link = document.createElement('a');
+              link.href = data.link;
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+              link.className = 'hover:text-primary';
+              link.append(document.createTextNode(data.name), ' ');
+
+              const arrow = document.createElement('span');
+              arrow.className = 'text-xs opacity-70';
+              arrow.textContent = '↗';
+              link.appendChild(arrow);
+
+              nameEl.replaceChildren(link);
+            }
+
+            const descriptionEl = el.querySelector('.platform-description');
+            if (descriptionEl) descriptionEl.textContent = data.description;
+
+            if (counter) counter.remove();
+
+            const lock = el.querySelector('.platform-lock');
+            if (lock) {
+              const unlocked = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+              unlocked.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+              unlocked.setAttribute('width', '16');
+              unlocked.setAttribute('height', '16');
+              unlocked.setAttribute('viewBox', '0 0 24 24');
+              unlocked.setAttribute('fill', 'none');
+              unlocked.setAttribute('stroke', 'currentColor');
+              unlocked.setAttribute('stroke-width', '2');
+              unlocked.setAttribute('stroke-linecap', 'round');
+              unlocked.setAttribute('stroke-linejoin', 'round');
+              unlocked.classList.add('text-green-500');
+
+              const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+              rect.setAttribute('width', '18');
+              rect.setAttribute('height', '11');
+              rect.setAttribute('x', '3');
+              rect.setAttribute('y', '11');
+              rect.setAttribute('rx', '2');
+              rect.setAttribute('ry', '2');
+
+              const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+              path.setAttribute('d', 'M7 11V7a5 5 0 0 1 9.9-1');
+
+              unlocked.append(rect, path);
+              lock.replaceWith(unlocked);
+            }
+            el.classList.remove('cursor-pointer');
+            el.removeEventListener('click', handleReveal);
+          }
+        }
+      }
+    });
+  }
+
+  setupHiddenPlatforms();
+</script>
+{{ end }}

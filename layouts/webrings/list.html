@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{ $activeWebrings := slice }}
+{{ $pendingWebrings := slice }}
+{{ range site.Data.webrings }}
+  {{ if eq .status "active" }}
+    {{ $activeWebrings = $activeWebrings | append . }}
+  {{ else if eq .status "pending" }}
+    {{ $pendingWebrings = $pendingWebrings | append . }}
+  {{ end }}
+{{ end }}
+
+<div class="container mx-auto px-4 py-8 lg:py-12 max-w-4xl">
+  <header class="mb-10 text-center">
+    <h1 class="text-4xl font-bold mb-4">{{ i18n "webrings.title" | default "Webrings" }}</h1>
+    <p class="text-muted-foreground text-lg max-w-xl mx-auto">{{ i18n "webrings.description" | default "Webrings I'm part of. Discover more independent websites and personal blogs." }}</p>
+  </header>
+
+  <div class="mb-10 p-6 bg-muted/30 rounded-lg text-justify">
+    <p class="text-sm text-muted-foreground mb-3">{{ i18n "webrings.intro1" }}</p>
+    <p class="text-sm text-muted-foreground">{{ i18n "webrings.intro2" }}</p>
+  </div>
+
+  <div class="space-y-4 mb-12">
+    {{ range $activeWebrings }}
+      <article class="border rounded-lg p-5 bg-card hover:shadow-md transition-shadow">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex-1">
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold text-lg">{{ .name }}</a>
+            {{ if .description }}<p class="text-sm text-muted-foreground mt-1 line-clamp-2">{{ .description }}</p>{{ end }}
+          </div>
+          <nav class="flex items-center gap-2" aria-label="Navigate {{ .name }}">
+            <a href="{{ .previous }}" class="px-4 py-2 rounded border hover:bg-primary/10 hover:border-primary transition-colors text-sm" title="Previous site" aria-label="Previous site in {{ .name }}">←</a>
+            {{ if .random }}
+              <a href="{{ .random }}" class="px-4 py-2 rounded border hover:bg-primary/10 hover:border-primary transition-colors text-sm" title="Random site" aria-label="Random site in {{ .name }}">🎲</a>
+            {{ else }}
+              <span class="px-4 py-2 opacity-50" aria-hidden="true">🎲</span>
+            {{ end }}
+            <a href="{{ .next }}" class="px-4 py-2 rounded border hover:bg-primary/10 hover:border-primary transition-colors text-sm" title="Next site" aria-label="Next site in {{ .name }}">→</a>
+          </nav>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+
+  {{ if gt (len $pendingWebrings) 0 }}
+    <div class="mt-12">
+      <header class="mb-6">
+        <h2 class="text-2xl font-bold mb-2">{{ i18n "webrings.pending.title" | default "Pending" }}</h2>
+        <p class="text-muted-foreground text-sm">{{ i18n "webrings.pending.description" | default "Waiting to be added..." }}</p>
+      </header>
+      <div class="space-y-4">
+        {{ range $pendingWebrings }}
+          <article class="border rounded-lg p-5 bg-card/75">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex-1">
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold text-lg">{{ .name }}</a>
+                <span class="ml-2 text-xs px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-700 dark:text-yellow-300">{{ i18n "webrings.pending.badge" | default "Pending" }}</span>
+                {{ if .description }}<p class="text-sm text-muted-foreground mt-1 line-clamp-2">{{ .description }}</p>{{ end }}
+              </div>
+              <nav class="flex items-center gap-2 opacity-75" aria-label="Navigate {{ .name }} (pending)">
+                <a href="{{ .previous }}" class="px-4 py-2 rounded border hover:bg-primary/10 hover:border-primary transition-colors text-sm" title="Previous site" aria-label="Previous site in {{ .name }}">←</a>
+                {{ if .random }}
+                  <a href="{{ .random }}" class="px-4 py-2 rounded border hover:bg-primary/10 hover:border-primary transition-colors text-sm" title="Random site" aria-label="Random site in {{ .name }}">🎲</a>
+                {{ else }}
+                  <span class="px-4 py-2 opacity-50" aria-hidden="true">🎲</span>
+                {{ end }}
+                <a href="{{ .next }}" class="px-4 py-2 rounded border hover:bg-primary/10 hover:border-primary transition-colors text-sm" title="Next site" aria-label="Next site in {{ .name }}">→</a>
+              </nav>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,181 @@
+{{ define "main" }}
+{{ $colors := slice
+  (dict "key" "primary" "dark" (dict "value" "195 100% 65%" "hex" "#54D4FF") "light" (dict "value" "195 100% 40%" "hex" "#0099CC"))
+  (dict "key" "background" "dark" (dict "value" "270 30% 10%" "hex" "#1A0F2E") "light" (dict "value" "0 0% 100%" "hex" "#FFFFFF"))
+  (dict "key" "card" "dark" (dict "value" "270 25% 15%" "hex" "#2A1F45") "light" (dict "value" "0 0% 100%" "hex" "#FFFFFF"))
+  (dict "key" "foreground" "dark" (dict "value" "0 0% 95%" "hex" "#F2F2F2") "light" (dict "value" "240 10% 3.9%" "hex" "#0A0A0F"))
+  (dict "key" "muted" "dark" (dict "value" "270 25% 20%" "hex" "#3A2F5A") "light" (dict "value" "240 4.8% 95.9%" "hex" "#F4F4F5"))
+  (dict "key" "border" "dark" (dict "value" "270 25% 25%" "hex" "#4A3F6F") "light" (dict "value" "240 5.9% 90%" "hex" "#E4E4E7"))
+}}
+
+{{ $logos := slice
+  (dict "key" "faceOnly" "src" "/favicon" "alt" "Jarema logo - face only" "dimKey" "dimensions1")
+  (dict "key" "faceAndBody" "src" "/favicons" "alt" "Jarema logo - face and body" "dimKey" "dimensions2")
+}}
+
+{{ $fontSamples := slice
+  (dict "key" "english" "text" "Sphinx of black quartz, judge my vow")
+  (dict "key" "vietnamese" "text" "Bốn phương phẳng lặng, hai kinh vững vàng")
+  (dict "key" "polish" "text" "Pchnąć w tę łódź jeża lub ośm skrzyń fig")
+  (dict "key" "russian" "text" "Друг мой эльф! Яшке б свёз птиц южных чащ!")
+  (dict "key" "japanese" "text" "色は匂えど散りぬるを")
+  (dict "key" "hebrew" "text" "דג סקרן שט בים, מאוכזב ולפתע מצא חברה")
+  (dict "key" "thai" "text" "เป็นมนุษย์สุดประเสริฐเลิศคุณค่า")
+  (dict "key" "symbols" "text" "0123456789-= !@#$%^&*()_+")
+}}
+
+{{ $fonts := slice
+  (dict "key" "heading" "weight" "700" "class" "font-heading" "link" "https://fonts.google.com/specimen/Be+Vietnam+Pro" "samples" $fontSamples)
+  (dict "key" "body" "weight" "400, 700" "class" "font-body" "link" "https://fonts.google.com/specimen/Lexend" "samples" $fontSamples)
+  (dict "key" "monaspice" "weight" "400" "class" "font-monaspice" "link" "https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Monaspace" "samples" $fontSamples)
+  (dict "key" "notoSansSC" "weight" "400-700" "class" "font-zh-hans" "link" "https://fonts.google.com/specimen/Noto+Sans+SC" "samples" (slice (dict "key" "chineseSimplified" "text" "人有悲欢离合，月有阴晴圆缺，此事古难全。") (dict "key" "chineseTraditional" "text" "人有悲歡離合，月有陰晴圓缺，此事古難全。")))
+  (dict "key" "hanNomGothic" "weight" "400" "class" "font-vi-hani" "link" "https://hannom-rcv.org/font.html" "samples" (slice (dict "key" "vietnameseHanNom" "text" "身㛪辰𤽸分㛪𧷺，𠤩浽𠀧沉買渃𡽫，硍湼默油𢬣几揑，𦓡㛪刎𡨹𬌓𢚸𣘈。")))
+}}
+
+{{ $usagePoints := slice "point1" "point2" "point3" "point4" }}
+{{ $cardClasses := "bg-card border rounded-lg p-6" }}
+
+<div class="container mx-auto px-4 py-8 lg:py-12 max-w-4xl">
+  <header class="mb-12 text-center">
+    <h1 class="text-4xl font-bold mb-4">{{ i18n "brand.pageTitle" | default "Brand" }}</h1>
+    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">{{ i18n "brand.pageDescription" | default "Visual identity and brand elements. Use these if you want to reference or link to this site." }}</p>
+  </header>
+
+  <!-- Name -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">{{ i18n "brand.name.title" | default "Name" }}</h2>
+    <div class="{{ $cardClasses }} space-y-4">
+      <div>
+        <p class="text-sm text-muted-foreground mb-2">{{ i18n "brand.name.nameLabel" | default "Full name" }}</p>
+        <p class="text-2xl font-bold">Jarema</p>
+      </div>
+      <div>
+        <p class="text-sm text-muted-foreground mb-2">{{ i18n "brand.name.displayNameLabel" | default "Display name" }}</p>
+        <p class="text-2xl font-bold">∴ Jarema</p>
+        <p class="text-sm text-muted-foreground mt-2">{{ i18n "brand.name.symbolNote" | default "Note: The Therefore symbol (∴) is part of the styling, not the name itself." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">{{ i18n "brand.logo.title" | default "Logo" }}</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {{ range $logos }}
+        <div class="{{ $cardClasses }}">
+          <p class="text-sm font-medium mb-4">{{ i18n (printf "brand.logo.%s" .key) | default .key }}</p>
+          <div class="bg-background rounded p-8 mb-4 flex items-center justify-center">
+            <img src="{{ .src }}.png" alt="{{ .alt }}" width="128" height="128" class="pixelated" />
+          </div>
+          <div class="space-y-2">
+            <div class="flex gap-2">
+              <a href="{{ .src }}.png" target="_blank" class="flex-1 text-sm bg-muted hover:bg-muted/80 px-3 py-1.5 rounded text-center transition-colors">{{ i18n "brand.logo.formats.png" | default "PNG" }}</a>
+              <a href="{{ .src }}.svg" target="_blank" class="flex-1 text-sm bg-muted hover:bg-muted/80 px-3 py-1.5 rounded text-center transition-colors">{{ i18n "brand.logo.formats.svg" | default "SVG" }}</a>
+            </div>
+            <p class="text-sm text-muted-foreground">{{ i18n (printf "brand.logo.%s" .dimKey) | default .dimKey }}</p>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Badge -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">{{ i18n "brand.badge.title" | default "88x31 Badge" }}</h2>
+    <div class="{{ $cardClasses }}">
+      <div class="text-center mb-6">
+        <img src="/badge.png" alt="Jarema's badge" width="176" height="62" class="pixelated mx-auto" />
+      </div>
+      <div class="space-y-4">
+        <div>
+          <p class="text-sm text-muted-foreground mb-1">{{ i18n "brand.badge.urlLabel" | default "Image URL" }}</p>
+          <code class="block bg-muted p-2 rounded text-sm overflow-x-auto select-all">{{ site.BaseURL }}badge.png</code>
+        </div>
+        <div>
+          <p class="text-sm text-muted-foreground mb-1">{{ i18n "brand.badge.htmlLabel" | default "HTML Embed" }}</p>
+          <pre class="bg-muted p-2 rounded text-sm overflow-x-auto select-all"><code>&lt;a href="{{ site.BaseURL }}"&gt;
+  &lt;img src="{{ site.BaseURL }}badge.png" alt="{{ site.Title }}" width="88" height="31" style="image-rendering: pixelated;"&gt;
+&lt;/a&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Colors -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">{{ i18n "brand.colors.title" | default "Colors" }}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {{ range $colors }}
+        <div class="{{ $cardClasses }} p-4">
+          <div class="mb-3">
+            <p class="font-medium mb-1">{{ i18n (printf "brand.colors.names.%s" .key) | default .key }}</p>
+            <p class="text-sm text-muted-foreground">{{ i18n (printf "brand.colors.descriptions.%s" .key) | default .key }}</p>
+          </div>
+          <div class="space-y-3">
+            {{ $modes := slice (dict "modeKey" "darkMode" "data" .dark) (dict "modeKey" "lightMode" "data" .light) }}
+            {{ range $modes }}
+              <div>
+                <p class="text-sm text-muted-foreground mb-2">{{ i18n (printf "brand.colors.%s" .modeKey) | default .modeKey }}</p>
+                <div class="flex items-center gap-2 mb-1">
+                  <div class="w-8 h-8 rounded border border-border flex-shrink-0" style="background-color: {{ .data.hex }}"></div>
+                  <code class="text-sm bg-muted px-2 py-1 rounded flex-1">{{ .data.hex }}</code>
+                </div>
+                <code class="block text-sm bg-muted px-2 py-1 rounded">hsl({{ .data.value }})</code>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Fonts -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">{{ i18n "brand.fonts.title" | default "Typography" }}</h2>
+    <div class="space-y-6">
+      {{ range $fonts }}
+        <div class="{{ $cardClasses }}">
+          <div class="mb-4 flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-bold text-lg mb-1">{{ i18n (printf "brand.fonts.names.%s" .key) | default .key }}</h3>
+              <p class="text-sm text-muted-foreground mb-1">{{ i18n (printf "brand.fonts.usage.%s" .key) | default .key }}</p>
+              <p class="text-sm text-muted-foreground">{{ i18n "brand.fonts.weight" | default "Weights:" }} {{ .weight }}</p>
+            </div>
+            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="text-sm bg-muted hover:bg-muted/80 px-4 py-2 rounded transition-colors whitespace-nowrap">
+              {{ i18n "brand.fonts.viewOnGoogleFonts" | default "View Font" }}
+            </a>
+          </div>
+          <div class="brand-font-preview bg-background rounded p-6 grid md:grid-cols-2 gap-4">
+            {{ $samplesLen := len .samples }}
+            {{ range $i, $sample := .samples }}
+              {{ $isLastOdd := and (eq $i (sub $samplesLen 1)) (ne (mod $samplesLen 2) 0) }}
+              <div class="{{ if $isLastOdd }}md:col-span-2{{ end }}">
+                <p class="text-sm text-muted-foreground mb-1">{{ i18n (printf "brand.fonts.languages.%s" .key) | default .key }}</p>
+                <p class="text-base {{ $.class }} {{ if eq $.key "heading" }}font-bold{{ end }}">{{ .text }}</p>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Usage -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6">{{ i18n "brand.usage.title" | default "Usage Guidelines" }}</h2>
+    <div class="{{ $cardClasses }} space-y-4">
+      {{ range $usagePoints }}
+        <div>
+          <p class="font-medium mb-2">{{ i18n (printf "brand.usage.%sTitle" .) | default . }}</p>
+          <p class="text-sm text-muted-foreground">{{ i18n (printf "brand.usage.%sText" .) | default . }}</p>
+        </div>
+      {{ end }}
+    </div>
+    <p class="text-sm text-muted-foreground mt-4 text-center">{{ i18n "brand.usage.footer" | default "Be sensible!" }}</p>
+  </section>
+
+  <div class="text-center">
+    <a href="#" class="text-sm text-muted-foreground hover:text-primary transition-colors">↑ Back to top</a>
+  </div>
+</div>
+{{ end }}

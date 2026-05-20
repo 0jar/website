@@ -1,0 +1,82 @@
+{{ define "main" }}
+{{ $lang := .Language.Lang }}
+{{ $commits := slice }}
+
+{{ range $key, $val := site.Data.scrapbook }}
+  {{/* We can use a generated hash from the filename or key */}}
+  {{ $hash := md5 $key | truncate 10 "" }}
+  {{ $msg := "" }}
+  {{ if reflect.IsMap $val.content }}
+    {{ $msg = index $val.content $lang | default $val.content.en }}
+  {{ else }}
+    {{ $msg = $val.content }}
+  {{ end }}
+  
+  {{ $commits = $commits | append (dict "hash" $hash "msg" $msg "date" $val.date "author" "Jarema" "badges" slice) }}
+{{ end }}
+
+{{ $commits = sort $commits "date" "desc" }}
+
+<div class="container mx-auto px-4 py-8 lg:py-12">
+  <div class="max-w-3xl mx-auto">
+    <header class="mb-8 text-center">
+      <h1 class="text-4xl font-bold">{{ i18n "scrapbook.title" | default "Devlog" }}</h1>
+      <p class="mt-3 text-lg text-muted-foreground">{{ i18n "scrapbook.description" | default "Some development logs when I was building this site." }}</p>
+    </header>
+
+    {{ if eq (len $commits) 0 }}
+      <p class="text-muted-foreground">{{ i18n "scrapbook.noEntries" | default "No entries found." }}</p>
+    {{ else }}
+      <div class="relative pl-8 md:pl-0">
+        <div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
+        <div class="md:hidden absolute left-3 top-0 bottom-0 w-0.5 bg-border"></div>
+
+        <div class="space-y-12">
+          {{ range $commits }}
+            <div class="relative md:w-1/2 md:odd:pr-12 md:even:pl-12 md:even:ml-auto group">
+              <!-- Marker -->
+              <div class="absolute left-[-29px] md:left-auto md:group-odd:right-[-6px] md:group-even:left-[-6px] top-1.5 w-3 h-3 bg-background border-2 border-primary rounded-full z-10 transition-colors group-hover:bg-primary"></div>
+              
+              <div class="border rounded-lg p-5 bg-card hover:shadow-md transition-all group-hover:border-primary/50 relative">
+                <!-- Arrow -->
+                <div class="hidden md:block absolute top-2.5 w-3 h-3 bg-card border-t border-r transform group-odd:right-[-6px] group-odd:rotate-45 group-odd:border-l-0 group-odd:border-b-0 group-odd:border-primary/50 group-even:left-[-6px] group-even:-rotate-135 group-even:border-primary/50 z-10 transition-colors"></div>
+                
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-sm text-primary bg-primary/10 px-2 py-0.5 rounded cursor-pointer hover:bg-primary/20 transition-colors" title="Commit hash: {{ .hash }}" onclick="navigator.clipboard.writeText('{{ .hash }}')">{{ .hash }}</span>
+                    {{ range .badges }}
+                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-secondary-foreground font-semibold" title="{{ .tooltip }}">{{ .text }}</span>
+                    {{ end }}
+                  </div>
+                  <time class="text-xs text-muted-foreground whitespace-nowrap" datetime="{{ .date }}" data-date="{{ .date }}">{{ time.Format "January 2, 2006" .date }}</time>
+                </div>
+                
+                <p class="text-sm leading-relaxed">{{ .msg }}</p>
+                <div class="mt-4 flex items-center gap-2 text-xs text-muted-foreground/70">
+                  <div class="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center text-[8px] text-primary font-bold">J</div>
+                  <span>{{ .author }}</span>
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+  // Simple script to format dates according to local timezone on the client
+  document.querySelectorAll('time[data-date]').forEach(el => {
+    const dateStr = el.getAttribute('data-date');
+    if (dateStr) {
+      const date = new Date(dateStr);
+      el.textContent = date.toLocaleDateString(document.documentElement.lang || 'en', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    }
+  });
+</script>
+{{ end }}

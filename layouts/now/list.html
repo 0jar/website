@@ -1,0 +1,83 @@
+{{ define "main" }}
+{{ $lang := .Language.Lang }}
+{{ $nowItems := slice }}
+
+{{ range site.Data.now }}
+  {{ $nowItems = $nowItems | append . }}
+{{ end }}
+
+{{ $nowItems = sort $nowItems "date" "desc" }}
+
+{{ $iconMap := dict "Headphones" "🎧" "BookOpen" "📚" "Code" "💻" "Coffee" "☕" "Brain" "🧠" "GraduationCap" "🎓" "Activity" "📡" "Lightbulb" "💡" }}
+
+<div class="container mx-auto px-4 py-8 lg:py-12" id="now-page">
+  <div class="max-w-4xl mx-auto">
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-bold mb-4">{{ i18n "now.title" | default "Now" }}</h1>
+      <p class="text-muted-foreground text-lg mx-auto">{{ i18n "now.description" | default "What I'm currently up to, thinking about, and focused on." }}</p>
+      {{ if gt (len $nowItems) 0 }}
+        {{ $latest := index $nowItems 0 }}
+        <p class="text-sm text-muted-foreground/70 mt-4">
+          {{ i18n "now.lastUpdated" | default "Last updated" }}:
+          <time id="last-updated-date" data-date="{{ $latest.date }}" datetime="{{ $latest.date }}">
+            {{ time.Format "January 2, 2006" $latest.date }}
+          </time>
+        </p>
+      {{ end }}
+    </header>
+
+    <div class="mb-8 p-6 border rounded-lg bg-muted/30">
+      <h2 class="font-semibold mb-2">{{ i18n "now.whatIsNow" | default "What is a /now page?" }}</h2>
+      <p class="text-muted-foreground text-sm">
+        {{ i18n "now.whatIsNowDescription" | default "This page is a /now page, which means it serves as a public declaration of what I'm doing now. You can find more about this concept at" }}
+        <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">nownownow.com</a>
+      </p>
+    </div>
+
+    <div class="grid gap-6" id="now-items-container">
+      {{ range $nowItems }}
+        {{ $content := "" }}
+        {{ if reflect.IsMap .content }}
+          {{ $content = index .content $lang | default .content.en }}
+        {{ else }}
+          {{ $content = .content }}
+        {{ end }}
+        
+        {{ $contentSecondary := "" }}
+        {{ if .contentSecondary }}
+          {{ if reflect.IsMap .contentSecondary }}
+            {{ $contentSecondary = index .contentSecondary $lang | default .contentSecondary.en }}
+          {{ else }}
+            {{ $contentSecondary = .contentSecondary }}
+          {{ end }}
+        {{ end }}
+
+        <article class="border rounded-lg p-6 bg-card hover:shadow-md transition-shadow" data-category="{{ .category }}">
+          <div class="flex items-start gap-4">
+            <span class="text-3xl flex-shrink-0" aria-hidden="true">{{ index $iconMap .icon | default "📌" }}</span>
+            <div class="flex-1 min-w-0">
+              <h2 class="font-semibold text-lg mb-2">{{ i18n (printf "now.categories.%s" .category) | default .category }}</h2>
+              <div class="flex items-center gap-3 overflow-hidden">
+                {{ if .image }}
+                  <img src="{{ .image }}" alt="Cover art" class="w-12 h-12 rounded-lg flex-shrink-0" loading="lazy" decoding="async" />
+                {{ end }}
+                {{ if $contentSecondary }}
+                  <div class="flex-1 min-w-0 overflow-hidden">
+                    <p class="now-text font-semibold break-words block">{{ $content }}</p>
+                    <p class="now-subtext text-sm text-muted-foreground break-words">{{ $contentSecondary }}</p>
+                  </div>
+                {{ else }}
+                  <p class="now-text min-w-0">{{ $content }}</p>
+                {{ end }}
+              </div>
+              <time class="text-xs text-muted-foreground mt-3 block" datetime="{{ .date }}" data-date="{{ .date }}">
+                {{ time.Format "January 2, 2006 at 3:04 PM" .date }}
+              </time>
+            </div>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

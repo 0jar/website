@@ -1,0 +1,225 @@
+{{ define "main" }}
+{{ $textLangs := slice "en" "vi" "et" "zh" "ru" "custom" "advanced" }}
+{{ $stats := slice "characters" "charactersNoSpaces" "words" "sentences" "paragraphs" "lines" "readingTime" "speakingTime" }}
+{{ $speedPresets := slice "slow" "average" "fast" "custom" }}
+{{ $speeds := dict
+  "en" (dict "speaking" (slice 115 145 175) "reading" (slice 175 225 275))
+  "vi" (dict "speaking" (slice 120 160 190) "reading" (slice 185 245 290))
+  "et" (dict "speaking" (slice 115 145 175) "reading" (slice 160 200 240))
+  "ru" (dict "speaking" (slice 95 125 155) "reading" (slice 150 210 270))
+  "zh" (dict "speaking" (slice 120 160 200) "reading" (slice 200 265 330))
+}}
+{{ $controlCls := "mt-1 w-full px-3 py-1.5 text-sm rounded-lg border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring" }}
+
+<div class="container mx-auto px-4 py-8">
+  <div class="max-w-4xl mx-auto">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold mb-4">{{ i18n "textCounter.title" | default "Text Analyzer & Counter" }}</h1>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">{{ i18n "textCounter.description" | default "Analyze text and count words, characters, and reading time." }}</p>
+    </header>
+
+    <div class="flex flex-col md:flex-row md:items-end gap-4 mb-4">
+      <div class="shrink-0">
+        <label for="text-lang" class="text-sm font-medium">{{ i18n "textCounter.textLanguage" | default "Text Language" }}</label>
+        <select id="text-lang" class="{{ $controlCls }} block">
+          {{ range $textLangs }}
+            <option value="{{ . }}">{{ i18n (printf "textCounter.languages.%s" .) | default . }}</option>
+          {{ end }}
+        </select>
+      </div>
+
+      <fieldset class="shrink-0">
+        <legend class="text-sm font-medium mb-1">{{ i18n "textCounter.speed.label" | default "Speed" }}</legend>
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Speed preset">
+          {{ range $s := $speedPresets }}
+            <button type="button" aria-pressed="{{ if eq $s "average" }}true{{ else }}false{{ end }}" data-speed="{{ $s }}"
+              class="speed-btn px-3 py-1.5 text-sm rounded-full border transition-colors {{ if eq $s "average" }}bg-primary text-primary-foreground border-primary{{ end }}">
+              {{ i18n (printf "textCounter.speed.%s" $s) | default $s }}
+            </button>
+          {{ end }}
+        </div>
+      </fieldset>
+
+      <div class="flex gap-3 grow">
+        <label class="text-xs text-muted-foreground grow">
+          {{ i18n "textCounter.speed.readingWpm" | default "Reading WPM" }}
+          <input id="wpm-read" type="number" min="1" max="9999" value="225" readonly class="{{ $controlCls }} tabular-nums read-only:opacity-60" />
+        </label>
+        <label class="text-xs text-muted-foreground grow">
+          {{ i18n "textCounter.speed.speakingWpm" | default "Speaking WPM" }}
+          <input id="wpm-speak" type="number" min="1" max="9999" value="145" readonly class="{{ $controlCls }} tabular-nums read-only:opacity-60" />
+        </label>
+      </div>
+    </div>
+
+    <p id="speed-warn" class="text-xs text-yellow-600 dark:text-yellow-400 -mt-2 mb-4 hidden" role="alert">{{ i18n "textCounter.speed.englishDefaultsWarning" | default "Using English defaults" }}</p>
+
+    <fieldset class="mb-6 hidden" id="advanced-section">
+      <legend class="text-sm font-medium mb-2">{{ i18n "textCounter.advanced.title" | default "Advanced settings" }}</legend>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" id="toggle-no-words" class="mt-1 accent-primary" role="switch" />
+          <span>
+            <span class="text-sm font-medium">{{ i18n "textCounter.advanced.disableWords" | default "Disable words count" }}</span>
+            <span class="block text-xs text-muted-foreground">{{ i18n "textCounter.advanced.disableWordsDesc" | default "Check this if your language doesn't use spaces between words." }}</span>
+          </span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" id="toggle-line-para" class="mt-1 accent-primary" role="switch" />
+          <span>
+            <span class="text-sm font-medium">{{ i18n "textCounter.advanced.newlineAsParagraph" | default "Count newlines as paragraphs" }}</span>
+            <span class="block text-xs text-muted-foreground">{{ i18n "textCounter.advanced.newlineAsParagraphDesc" | default "By default, blank lines separate paragraphs." }}</span>
+          </span>
+        </label>
+      </div>
+    </fieldset>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6" role="status" aria-live="polite" aria-atomic="true">
+      {{ range $key := $stats }}
+        <div class="bg-card border rounded-lg p-4 text-center" data-card="{{ $key }}">
+          <div class="text-2xl font-bold tabular-nums" data-stat="{{ $key }}">{{ if (strings.Contains $key "Time") }}0s{{ else }}0{{ end }}</div>
+          <div class="text-xs text-muted-foreground mt-1">{{ i18n (printf "textCounter.stats.%s" $key) | default $key }}</div>
+        </div>
+      {{ end }}
+    </div>
+
+    <div class="relative">
+      <textarea id="text-input" placeholder="{{ i18n "textCounter.placeholder" | default "Paste or type your text here..." }}" autofocus aria-label="Text to analyze"
+        class="w-full min-h-[300px] md:min-h-[400px] p-4 rounded-lg border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y font-monaspice text-sm leading-relaxed"></textarea>
+      <button id="clear-btn" type="button" aria-label="Clear text" class="absolute top-3 right-3 text-xs px-2 py-1 rounded bg-muted text-muted-foreground hover:bg-muted/80 transition-colors hidden">
+        {{ i18n "textCounter.clear" | default "Clear" }}
+      </button>
+    </div>
+
+    <div id="speed-data" hidden data-v="{{ $speeds | jsonify }}"></div>
+
+    <details class="mt-8 text-sm border rounded-lg px-4 py-2 text-muted-foreground">
+      <summary class="cursor-pointer select-none font-medium text-foreground py-1">{{ i18n "textCounter.privacy.summary" | default "Privacy notice" }}</summary>
+      <div class="mt-2 mb-1 space-y-2">
+        <p>{{ i18n "textCounter.privacy.body" | default "This tool runs entirely in your browser. No data is sent to our servers." }}</p>
+        <p><span class="font-medium text-foreground">{{ i18n "textCounter.privacy.technicalLabel" | default "Technical detail:" }}</span> {{ i18n "textCounter.privacy.technical" | default "Javascript is required." }}</p>
+      </div>
+    </details>
+  </div>
+</div>
+
+<script>
+  const speeds = JSON.parse(document.getElementById("speed-data").dataset.v);
+  const presetIdx = { slow: 0, average: 1, fast: 2 };
+  const sentRe = /[.!?…。！？⋯]+(?:\s|$)/g;
+
+  let textLang = "en";
+  let speedPreset = "average";
+  let noWords = false;
+  let linePara = false;
+
+  const $ = (id) => document.getElementById(id);
+  const textarea = $("text-input");
+  const clearBtn = $("clear-btn");
+  const langSelect = $("text-lang");
+  const advancedEl = $("advanced-section");
+  const wpmRead = $("wpm-read");
+  const wpmSpeak = $("wpm-speak");
+  const warnEl = $("speed-warn");
+  const toggleNoWords = $("toggle-no-words");
+  const toggleLinePara = $("toggle-line-para");
+  const speedBtns = document.querySelectorAll(".speed-btn");
+  const statEls = new Map(Array.from(document.querySelectorAll("[data-stat]")).map(el => [el.dataset.stat, el]));
+  const cardEls = new Map(Array.from(document.querySelectorAll("[data-card]")).map(el => [el.dataset.card, el]));
+
+  function getWpm() {
+    const s = speeds[textLang] || speeds.en;
+    const i = presetIdx[speedPreset];
+    return i != null ? [s.reading[i], s.speaking[i]] : [+wpmRead.value || 225, +wpmSpeak.value || 140];
+  }
+
+  function syncWpm() {
+    const [r, s] = getWpm();
+    const isCustom = speedPreset === "custom";
+    wpmRead.readOnly = wpmSpeak.readOnly = !isCustom;
+    if (!isCustom) { wpmRead.value = String(r); wpmSpeak.value = String(s); }
+    const hasNoData = textLang === "custom" || textLang === "advanced";
+    warnEl.classList.toggle("hidden", !(hasNoData && !isCustom));
+  }
+
+  function fmtTime(units, wpm) {
+    if (!units || !wpm) return "0s";
+    const sec = Math.ceil((units / wpm) * 60);
+    const min = (sec / 60) | 0;
+    return min ? `${min}m ${sec % 60}s` : `${sec % 60}s`;
+  }
+
+  function update() {
+    syncWpm();
+    const v = textarea.value;
+    const trimmed = v.trim();
+    const hideWords = noWords || textLang === "zh";
+    const charsNoSpace = v.replace(/[\s\u3000]/g, "").length;
+    const words = hideWords ? 0 : trimmed ? trimmed.split(/\s+/).length : 0;
+    const sentences = trimmed ? (v.match(sentRe)?.length || 1) : 0;
+    const paragraphs = trimmed
+      ? linePara
+        ? v.split("\n").filter(Boolean).length
+        : v.split(/\n\s*\n/).filter((p) => p.trim()).length || 1
+      : 0;
+    const lines = v ? v.split("\n").length : 0;
+    const [r, s] = getWpm();
+    const timeUnits = textLang === "zh" ? charsNoSpace : words;
+
+    const data = {
+      characters: String(v.length),
+      charactersNoSpaces: String(charsNoSpace),
+      words: String(words),
+      sentences: String(sentences),
+      paragraphs: String(paragraphs),
+      lines: String(lines),
+      readingTime: fmtTime(timeUnits, r),
+      speakingTime: fmtTime(timeUnits, s),
+    };
+    for (const [k, el] of statEls) el.textContent = data[k] || "";
+    cardEls.get("words")?.classList.toggle("hidden", hideWords);
+    cardEls.get("lines")?.classList.toggle("hidden", linePara);
+    clearBtn.classList.toggle("hidden", !v.length);
+  }
+
+  function setActiveSpeed(preset) {
+    speedPreset = preset;
+    for (const b of speedBtns) {
+      const on = b.dataset.speed === preset;
+      b.classList.toggle("bg-primary", on);
+      b.classList.toggle("text-primary-foreground", on);
+      b.classList.toggle("border-primary", on);
+      b.setAttribute("aria-pressed", String(on));
+    }
+    update();
+  }
+
+  for (const btn of speedBtns) {
+    btn.addEventListener("click", () => setActiveSpeed(btn.dataset.speed));
+  }
+
+  langSelect.addEventListener("change", () => {
+    const prev = textLang;
+    textLang = langSelect.value;
+    advancedEl.classList.toggle("hidden", textLang !== "advanced");
+    if (prev === "zh" && textLang !== "zh" && textLang !== "advanced") {
+      noWords = false;
+      toggleNoWords.checked = false;
+    }
+    if (textLang === "zh") {
+      noWords = true;
+      toggleNoWords.checked = true;
+    }
+    update();
+  });
+
+  toggleNoWords.addEventListener("change", () => { noWords = toggleNoWords.checked; update(); });
+  toggleLinePara.addEventListener("change", () => { linePara = toggleLinePara.checked; update(); });
+  wpmRead.addEventListener("input", update);
+  wpmSpeak.addEventListener("input", update);
+  textarea.addEventListener("input", update);
+  clearBtn.addEventListener("click", () => { textarea.value = ""; update(); textarea.focus(); });
+
+  syncWpm();
+</script>
+{{ end }}
