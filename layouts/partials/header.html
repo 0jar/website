@@ -26,9 +26,10 @@
               (dict "href" "/slashes/" "key" "slashes")
           }}
           {{ range $navItems }}
-            {{ $isActive := eq $current .href }}
+            {{ $localizedHref := .href | relLangURL }}
+            {{ $isActive := eq $current $localizedHref }}
             <a
-              href="{{ .href }}"
+              href="{{ $localizedHref }}"
               class="text-sm transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm {{ if $isActive }}text-foreground font-medium{{ else }}text-muted-foreground hover:text-primary{{ end }}"
               {{ if $isActive }}aria-current="page"{{ end }}
             >
@@ -167,9 +168,10 @@
         </summary>
         <nav class="absolute right-0 top-full mt-2 w-48 rounded-md border bg-background/95 backdrop-blur-sm shadow-lg py-2 z-50">
           {{ range $navItems }}
-            {{ $isActive := eq $current .href }}
+            {{ $localizedHref := .href | relLangURL }}
+            {{ $isActive := eq $current $localizedHref }}
             <a
-              href="{{ .href }}"
+              href="{{ $localizedHref }}"
               class="block px-4 py-2 text-sm transition-colors hover:bg-muted {{ if $isActive }}text-foreground font-medium bg-muted/50{{ else }}text-muted-foreground{{ end }}"
               {{ if $isActive }}aria-current="page"{{ end }}
             >
