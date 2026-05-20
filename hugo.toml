@@ -61,3 +61,72 @@ defaultContentLanguage = "en"
 [mediaTypes]
   [mediaTypes."application/atom+xml"]
     suffixes = ["xml"]
+
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "en"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "vi"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "ru"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "et"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "da"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "zh"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "tr"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "pl"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "sv"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "fi"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "tok"
+  [[module.mounts]]
+    source = "content/blog"
+    target = "content/blog"
+    lang = "vi-Hani"

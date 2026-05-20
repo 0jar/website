@@ -80,16 +80,7 @@
       </div>
     {{ end }}
 
-    {{ if .IsTranslated }}
-      <div class="mt-4 p-3 rounded-lg bg-muted/50 border">
-        <span class="text-sm text-muted-foreground">{{ i18n "blog.availableIn" | default "Also available in" }}: </span>
-        {{ range $i, $translated := .Translations }}
-          <a href="{{ .Permalink }}" class="text-sm text-primary hover:underline">
-            {{ .Language.LanguageName | default .Language.Lang }}
-          </a>{{ if ne (add $i 1) (len $.Translations) }}<span class="text-muted-foreground">, </span>{{ end }}
-        {{ end }}
-      </div>
-    {{ end }}
+    <!-- Translation block removed because posts are universally mounted into all languages -->
 
     <div class="mt-6 flex flex-wrap gap-2">
       {{ $encodedTitle := urlquery $title }}
