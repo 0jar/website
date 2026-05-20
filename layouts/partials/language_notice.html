@@ -1,0 +1,50 @@
+{{ $lang := .Language.Lang }}
+{{ $exemptLangs := slice "en" "vi" "ru" "et" }}
+{{ if not (in $exemptLangs $lang) }}
+<div
+  id="lang-notice"
+  role="alert"
+  aria-live="polite"
+  class="relative z-40 w-full border-b border-yellow-500/30 bg-yellow-500/10 px-4 py-4 text-sm text-yellow-800 dark:text-yellow-200"
+>
+  <div class="container mx-auto flex items-center justify-between gap-4">
+    <div class="flex items-center gap-2 min-w-0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 text-yellow-600 dark:text-yellow-400" aria-hidden="true">
+        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+        <path d="M12 9v4"/><path d="M12 17h.01"/>
+      </svg>
+      <p>{{ i18n "languageNotice.message" | default "Translations for this language are still under construction. Some content may be incomplete or missing." }}</p>
+    </div>
+    <button
+      id="lang-notice-dismiss"
+      type="button"
+      aria-label="{{ i18n `languageNotice.dismiss` | default `Dismiss` }}"
+      class="flex-shrink-0 rounded-md p-1 hover:bg-yellow-500/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-600"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+      </svg>
+      <span class="sr-only">{{ i18n "languageNotice.dismiss" | default "Dismiss" }}</span>
+    </button>
+  </div>
+</div>
+<script>
+  (function () {
+    var key = "lang-notice-dismissed-{{ $lang }}";
+    var el = document.getElementById("lang-notice");
+    var btn = document.getElementById("lang-notice-dismiss");
+    if (!el) return;
+    try { if (localStorage.getItem(key)) { el.remove(); return; } } catch (e) {}
+    if (btn) btn.addEventListener("click", function () {
+      el.style.transition = "opacity 0.2s, max-height 0.3s";
+      el.style.opacity = "0";
+      el.style.maxHeight = "0";
+      el.style.overflow = "hidden";
+      el.style.paddingTop = "0";
+      el.style.paddingBottom = "0";
+      setTimeout(function () { el.remove(); }, 300);
+      try { localStorage.setItem(key, "1"); } catch (e) {}
+    });
+  })();
+</script>
+{{ end }}
