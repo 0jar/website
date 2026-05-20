@@ -42,17 +42,20 @@
         {{ range $contactLinks }}
           {{ $isMail := hasPrefix .url "mailto:" }}
           <a href="{{ .url }}" {{ if not $isMail }}target="_blank" rel="noopener noreferrer"{{ end }} class="flex items-center justify-center gap-3 p-4 rounded-lg border transition-colors {{ .color }}">
+            <span aria-hidden="true">{{ partial "icon.html" .icon }}</span>
             <span class="font-medium">{{ .name }}</span>
-            {{ if not $isMail }}<span class="opacity-70">↗</span>{{ end }}
+            {{ if not $isMail }}<span class="opacity-70" aria-hidden="true">{{ partial "icon.html" "external" }}</span>{{ end }}
           </a>
         {{ end }}
       </div>
 
       {{ if eq $lang "vi" }}
         <div class="mt-4">
-          <details class="w-full rounded-lg border bg-card">
-            <summary class="flex items-center justify-center gap-2 p-3 rounded-lg hover:bg-muted/50 cursor-pointer font-medium">
-              Zalo
+          <details class="w-full rounded-lg border bg-card group">
+            <summary class="flex items-center justify-center gap-2 p-3 rounded-lg hover:bg-muted/50 cursor-pointer font-medium list-none [&::-webkit-details-marker]:hidden">
+              <span aria-hidden="true">{{ partial "icon.html" "message-square" }}</span>
+              <span>Zalo</span>
+              <span class="transition-transform duration-200 group-open:rotate-180" aria-hidden="true">{{ partial "icon.html" "chevron-down" }}</span>
             </summary>
             <div class="p-6 flex flex-col items-center">
               <img src="/zalo-qr.jpeg" alt="Zalo QR Code" width="192" height="192" class="w-48 h-48 object-contain mb-4" />
@@ -65,9 +68,11 @@
 
       {{ if eq $lang "zh" }}
         <div class="mt-4">
-          <details class="w-full rounded-lg border bg-card">
-            <summary class="flex items-center justify-center gap-2 p-3 rounded-lg hover:bg-muted/50 cursor-pointer font-medium">
-              微信
+          <details class="w-full rounded-lg border bg-card group">
+            <summary class="flex items-center justify-center gap-2 p-3 rounded-lg hover:bg-muted/50 cursor-pointer font-medium list-none [&::-webkit-details-marker]:hidden">
+              <span aria-hidden="true">{{ partial "icon.html" "message-square" }}</span>
+              <span>微信</span>
+              <span class="transition-transform duration-200 group-open:rotate-180" aria-hidden="true">{{ partial "icon.html" "chevron-down" }}</span>
             </summary>
             <div class="p-6 flex flex-col items-center">
               <img src="/wechat-qr.png" alt="WeChat QR Code" width="192" height="192" class="w-48 h-48 object-contain mb-4" />
@@ -83,12 +88,14 @@
       <h2 class="text-2xl font-bold mb-6">{{ i18n "contact.sectionTitles.keys" | default "Keys" }}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <a href="/keys/pgp" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 p-4 rounded-lg border transition-colors hover:bg-green-600 hover:text-white">
+          <span aria-hidden="true">{{ partial "icon.html" "shield" }}</span>
           <span class="font-medium">{{ i18n "contact.links.pgpKey" | default "PGP Key" }}</span>
-          <span class="opacity-70">↗</span>
+          <span class="opacity-70" aria-hidden="true">{{ partial "icon.html" "external" }}</span>
         </a>
         <a href="/keys/ssh" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 p-4 rounded-lg border transition-colors hover:bg-blue-600 hover:text-white">
+          <span aria-hidden="true">{{ partial "icon.html" "key" }}</span>
           <span class="font-medium">{{ i18n "contact.links.sshKey" | default "SSH Key" }}</span>
-          <span class="opacity-70">↗</span>
+          <span class="opacity-70" aria-hidden="true">{{ partial "icon.html" "external" }}</span>
         </a>
       </div>
     </section>
@@ -100,8 +107,9 @@
         {{ range $socialLinks }}
           <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 p-4 rounded-lg border transition-colors {{ .color }} w-full">
             <div class="flex items-center gap-3">
+              <span aria-hidden="true">{{ partial "icon.html" .icon }}</span>
               <span class="font-medium">{{ .name }}</span>
-              <span class="opacity-70">↗</span>
+              <span class="opacity-70" aria-hidden="true">{{ partial "icon.html" "external" }}</span>
             </div>
           </a>
         {{ end }}
@@ -117,8 +125,10 @@
             {{ $pronounUrl := index .urls $lang | default .urls.default }}
             <a href="{{ $pronounUrl }}" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-colors {{ .color }}">
               <div class="flex items-center gap-3">
+                <span aria-hidden="true">{{ partial "icon.html" .icon }}</span>
                 <span class="font-medium">{{ if and (eq .id "pronouns") (eq $lang "ru") }}Pronouns.page (18+){{ else }}{{ .name }}{{ end }}</span>
-                <span class="opacity-70">↗</span>
+                <span class="opacity-70" aria-hidden="true">{{ partial "icon.html" "external" }}</span>
+                {{ if and (eq .id "pronouns") (eq $lang "ru") }}<span class="opacity-70" aria-hidden="true" title="Этот сайт имеет возрастное ограничение 18+. Оставаясь на сайте, вы подтверждаете, что достигли совершеннолетия, и самостоятельно несёте ответственность за свои действия.">{{ partial "icon.html" "info" }}</span>{{ end }}
               </div>
               {{ if and (eq .id "pronouns") (eq $lang "ru") }}
                 <p class="text-xs mt-1 md:hidden text-center opacity-80">Этот сайт имеет возрастное ограничение 18+. Оставаясь на сайте, вы подтверждаете, что достигли совершеннолетия, и самостоятельно несёте ответственность за свои действия.</p>
@@ -126,8 +136,9 @@
             </a>
           {{ else }}
             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 p-4 rounded-lg border transition-colors {{ .color }}">
+              <span aria-hidden="true">{{ partial "icon.html" .icon }}</span>
               <span class="font-medium">{{ .name }}</span>
-              <span class="opacity-70">↗</span>
+              <span class="opacity-70" aria-hidden="true">{{ partial "icon.html" "external" }}</span>
             </a>
           {{ end }}
         {{ end }}
