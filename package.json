@@ -1,0 +1,19 @@
+{
+  "name": "jaremas-website",
+  "version": "6.0.0",
+  "description": "A personal website built with Hugo.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i src/styles/globals.css -o static/css/globals.css --minify",
+    "watch:css": "tailwindcss -i src/styles/globals.css -o static/css/globals.css --watch"
+  },
+  "author": "jartf",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.19"
+  }
+}
