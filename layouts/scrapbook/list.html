@@ -2,7 +2,7 @@
 {{ $lang := .Language.Lang }}
 {{ $commits := slice }}
 
-{{ range $key, $val := site.Data.scrapbook }}
+{{ range $key, $val := hugo.Data.scrapbook }}
   {{/* We can use a generated hash from the filename or key */}}
   {{ $hash := md5 $key | truncate 10 "" }}
   {{ $msg := "" }}

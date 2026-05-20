@@ -9,7 +9,7 @@
 {{ $authorTimezoneLabel := "Davis, 🇦🇶" }}
 
 {{ $interests := slice }}
-{{ range site.Data.about.interests }}
+{{ range hugo.Data.about.interests }}
   {{ $interests = $interests | append . }}
 {{ end }}
 {{ $interests = sort $interests "order" "asc" }}
@@ -22,7 +22,7 @@
 }}
 
 {{ $commits := slice }}
-{{ range site.Data.about.logs }}
+{{ range hugo.Data.about.logs }}
   {{ $commits = $commits | append . }}
 {{ end }}
 {{ $commits = sort $commits "date" "desc" }}

@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $activeWebrings := slice }}
 {{ $pendingWebrings := slice }}
-{{ range site.Data.webrings }}
+{{ range hugo.Data.webrings }}
   {{ if eq .status "active" }}
     {{ $activeWebrings = $activeWebrings | append . }}
   {{ else if eq .status "pending" }}

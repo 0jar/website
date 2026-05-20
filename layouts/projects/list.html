@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $lang := .Language.Lang }}
 {{ $projects := slice }}
-{{ range site.Data.projects }}
+{{ range hugo.Data.projects }}
   {{ if not .hidden }}
     {{ $projects = $projects | append . }}
   {{ end }}

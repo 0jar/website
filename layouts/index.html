@@ -68,7 +68,7 @@
           </a>
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {{ range $id, $ring := site.Data.webrings }}
+          {{ range $id, $ring := hugo.Data.webrings }}
             {{ if eq $ring.status "active" }}
               <div class="border rounded-lg p-3 bg-card card-hover-effect">
                 <nav class="flex items-center justify-between gap-1 text-sm" aria-label="Navigate {{ $ring.name }}">

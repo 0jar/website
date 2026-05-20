@@ -2,7 +2,7 @@
 {{ $lang := .Language.Lang }}
 {{ $nowItems := slice }}
 
-{{ range site.Data.now }}
+{{ range hugo.Data.now }}
   {{ $nowItems = $nowItems | append . }}
 {{ end }}
 

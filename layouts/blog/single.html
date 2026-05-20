@@ -85,9 +85,9 @@
         <span class="text-sm text-muted-foreground">{{ i18n "blog.availableIn" | default "Also available in" }}: </span>
         {{ range $i, $alt := .Params.alternates }}
           {{ $langLabel := $alt.language }}
-          {{ range site.Languages }}
-            {{ if eq .Lang $alt.language }}
-              {{ $langLabel = .Label | default .Lang }}
+          {{ range hugo.Sites }}
+            {{ if eq .Language.Lang $alt.language }}
+              {{ $langLabel = .Language.Label | default .Language.Lang }}
             {{ end }}
           {{ end }}
           {{ $link := printf "/blog/%s/" $alt.slug }}
