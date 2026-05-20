@@ -55,7 +55,7 @@
             <div class="space-y-3">
               <div class="flex items-center justify-between">
                 <span class="text-sm font-medium">{{ i18n "blog.allPosts" | default "All posts" }}</span>
-                <a href="/blog/index.xml" target="_blank" rel="noopener noreferrer" class="text-xs bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-100 px-2 py-1 rounded-md hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors flex items-center gap-1">
+                <a href="/rss.xml" target="_blank" rel="noopener noreferrer" class="text-xs bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-100 px-2 py-1 rounded-md hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors flex items-center gap-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
                   <span>RSS</span>
                 </a>
@@ -64,7 +64,7 @@
                 <h4 class="text-sm font-medium mb-2">{{ i18n "blog.languageFeeds" | default "Language Feeds" }}</h4>
                 <div class="grid grid-cols-2 gap-2">
                   {{ range site.Languages }}
-                  <a href="/{{ .Lang }}/blog/index.xml" target="_blank" rel="noopener noreferrer" class="text-xs px-2 py-1 rounded-md flex items-center justify-between hover:bg-muted transition-colors">
+                  <a href="/rss/{{ .Lang }}.xml" target="_blank" rel="noopener noreferrer" class="text-xs px-2 py-1 rounded-md flex items-center justify-between hover:bg-muted transition-colors">
                     <span>{{ .Label }}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-orange-600 dark:text-orange-400"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
                   </a>
@@ -86,7 +86,7 @@
             <div class="space-y-3">
               <div class="flex items-center justify-between">
                 <span class="text-sm font-medium">{{ i18n "blog.allPosts" | default "All posts" }}</span>
-                <a href="/blog/index.xml" target="_blank" rel="noopener noreferrer" class="text-xs bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-100 px-2 py-1 rounded-md hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors flex items-center gap-1">
+                <a href="/atom.xml" target="_blank" rel="noopener noreferrer" class="text-xs bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-100 px-2 py-1 rounded-md hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors flex items-center gap-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.9423 3.05768C23.4117 5.52701 21.4099 11.5324 16.4712 16.4711C11.5326 21.4097 5.5272 23.4115 3.05787 20.9422C0.588547 18.4728 2.59033 12.4675 7.52899 7.5288C12.4676 2.59014 18.473 0.588345 20.9423 3.05768ZM3.05768 3.05782C0.588349 5.52715 2.59013 11.5325 7.52879 16.4712C12.4674 21.4099 18.4728 23.4117 20.9421 20.9423C23.4115 18.473 21.4097 12.4676 16.471 7.52894C11.5324 2.59028 5.527 0.588485 3.05768 3.05782Z" stroke="currentColor" stroke-width="1.5"/><path d="M14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5C13.3807 9.5 14.5 10.6193 14.5 12Z" fill="currentColor"/></svg>
                   <span>ATOM</span>
                 </a>
@@ -95,7 +95,7 @@
                 <h4 class="text-sm font-medium mb-2">{{ i18n "blog.languageFeeds" | default "Language Feeds" }}</h4>
                 <div class="grid grid-cols-2 gap-2">
                   {{ range site.Languages }}
-                  <a href="/{{ .Lang }}/blog/index.xml" target="_blank" rel="noopener noreferrer" class="text-xs px-2 py-1 rounded-md flex items-center justify-between hover:bg-muted transition-colors">
+                  <a href="/atom/{{ .Lang }}.xml" target="_blank" rel="noopener noreferrer" class="text-xs px-2 py-1 rounded-md flex items-center justify-between hover:bg-muted transition-colors">
                     <span>{{ .Label }}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-orange-600 dark:text-orange-400"><path d="M20.9423 3.05768C23.4117 5.52701 21.4099 11.5324 16.4712 16.4711C11.5326 21.4097 5.5272 23.4115 3.05787 20.9422C0.588547 18.4728 2.59033 12.4675 7.52899 7.5288C12.4676 2.59014 18.473 0.588345 20.9423 3.05768ZM3.05768 3.05782C0.588349 5.52715 2.59013 11.5325 7.52879 16.4712C12.4674 21.4099 18.4728 23.4117 20.9421 20.9423C23.4115 18.473 21.4097 12.4676 16.471 7.52894C11.5324 2.59028 5.527 0.588485 3.05768 3.05782Z" stroke="currentColor" stroke-width="1.5"/><path d="M14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5C13.3807 9.5 14.5 10.6193 14.5 12Z" fill="currentColor"/></svg>
                   </a>
