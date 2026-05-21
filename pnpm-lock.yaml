@@ -18,22 +18,22 @@ importers:
         version: 0.9.7(prettier@3.8.3)(typescript@5.9.3)
       '@astrojs/netlify':
         specifier: ^7.0.10
-        version: 7.0.10(@types/node@25.9.1)(@vercel/functions@3.6.0)(astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
+        version: 7.0.10(@types/node@25.9.1)(@vercel/functions@3.6.0)(astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
       '@astrojs/preact':
         specifier: ^4.1.3
         version: 4.1.3(@babel/core@7.29.0)(@types/node@25.9.1)(jiti@1.21.7)(preact@10.29.2)(rollup@4.60.4)(yaml@2.9.0)
       '@astrojs/tailwind':
         specifier: ^6.0.2
-        version: 6.0.2(astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(tailwindcss@3.4.19(yaml@2.9.0))
+        version: 6.0.2(astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(tailwindcss@3.4.19(yaml@2.9.0))
       '@astrojs/vercel':
         specifier: ^10.0.7
-        version: 10.0.7(astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(react@19.2.4)(rollup@4.60.4)
+        version: 10.0.7(astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(react@19.2.4)(rollup@4.60.4)
       astro:
-        specifier: ^6.3.5
-        version: 6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
+        specifier: ^6.3.7
+        version: 6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
       framer-motion:
-        specifier: ^12.39.0
-        version: 12.39.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: ^12.40.0
+        version: 12.40.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       lucide-preact:
         specifier: ^0.577.0
         version: 0.577.0(preact@10.29.2)
@@ -49,7 +49,7 @@ importers:
     devDependencies:
       '@astrojs/node':
         specifier: ^10.1.1
-        version: 10.1.1(astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))
+        version: 10.1.1(astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))
       '@tailwindcss/typography':
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@3.4.19(yaml@2.9.0))
@@ -1451,8 +1451,8 @@ packages:
   '@so-ric/colorspace@1.1.6':
     resolution: {integrity: sha512-/KiKkpHNOBgkFJwu9sh48LkHSMYGyuTcSFK/qMBdnOAlrRJzRSXAOFB5qwzaVQuDl8wAvHVMkaASQDReTahxuw==}
 
-  '@sveltejs/acorn-typescript@1.0.9':
-    resolution: {integrity: sha512-lVJX6qEgs/4DOcRTpo56tmKzVPtoWAaVbL4hfO7t7NVwl9AAXzQR6cihesW1BmNMPl+bK6dreu2sOKBP2Q9CIA==}
+  '@sveltejs/acorn-typescript@1.0.10':
+    resolution: {integrity: sha512-4WfKk68eTih+MiJD4fSbxN7E8kVBmTMPWHUPYjvl2N0rMs53YLTT8/YjKU5Dtnz5LqDjl7LEw4U7lXR2W3J5WA==}
     peerDependencies:
       acorn: ^8.9.0
 
@@ -1747,8 +1747,8 @@ packages:
     resolution: {integrity: sha512-6KuK/7nZ/2Qh7sGuVEiwxjCxzTY2Pdb5mTo5z1e6/J8BA0tvjR7G8vQJKrQMTqwmnA3UPEyKIFX4YUS1DO1Hvw==}
     engines: {node: '>=18'}
 
-  astro@6.3.5:
-    resolution: {integrity: sha512-gU+4KedkbTuVgz7YoVAN+9Ftnq0GaYwejxK2NbqDzB0M9dWd0f3kXZBuaM9hzbchRFoRAJfJjFtdX9LK6Ir7ZA==}
+  astro@6.3.7:
+    resolution: {integrity: sha512-zIeDRrI0qNgN1lcCjNqt6/IVCVej7VwSa326cO8uP9BOk1cg4QuffhLnOn2gCgWQr32/wxpSRFfXiLKHglu1Tw==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2283,8 +2283,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.5.359:
-    resolution: {integrity: sha512-8lPELWuYZIWk7NDvCNthtmMw/7Q5Wu25NpM4djFMHBmk8DubPAtL4YTOp7ou0e7HyJtwkVlWv8XMLURnrtgJQw==}
+  electron-to-chromium@1.5.360:
+    resolution: {integrity: sha512-GkcBt6YYAw9SxFWn+xVar4cLVGlXVuswwtRLBozi2zp0GjXs4ZnOrqV4zbXzg35n7w81hCkyJNYicgXlVHAmBA==}
 
   emmet@2.4.11:
     resolution: {integrity: sha512-23QPJB3moh/U9sT4rQzGgeyyGIrcM+GH5uVYg2C6wZIxAIJq7Ng3QLT79tl8FUwDXhyq9SusfknOrofAKqvgyQ==}
@@ -2542,8 +2542,8 @@ packages:
   fraction.js@5.3.4:
     resolution: {integrity: sha512-1X1NTtiJphryn/uLQz3whtY6jK3fTqoE3ohKs0tT+Ujr1W59oopxmoEh7Lu5p6vBaPbgoM0bzveAW4Qi5RyWDQ==}
 
-  framer-motion@12.39.0:
-    resolution: {integrity: sha512-+vnLfzrv0MzjLzNl+nvNvR7jdg3q4cxxjz/YvzfifHl0TREtL00cs1RoMTxs+1PzLiEqZGV6gYsBY0oEAYZ24w==}
+  framer-motion@12.40.0:
+    resolution: {integrity: sha512-uaBd3qC1v3KQqBEjwTUd183K6PbS+j0yR9w9VmEOLWA/tnUcSn8Xa3uck7t4dgpDoUss8xQTcj8W2L07lrnLFg==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -3100,8 +3100,8 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
-  lru-cache@11.4.0:
-    resolution: {integrity: sha512-W+R+kFL4HgVxONq2bhXPi3bGpzGe/yEhVOp233qw9wCRtgncJ15P3bC+e4zZMu4Cq7d+WAJjXGW0uUkifhcatA==}
+  lru-cache@11.5.0:
+    resolution: {integrity: sha512-5YgH9UJd7wVb9hIouI2adWpgqrrICkt070Dnj8EUY1+B4B2P9eRLPAkAAo6NICA7CEhOIeBHl46u9zSNpNu7zA==}
     engines: {node: 20 || >=22}
 
   lru-cache@5.1.1:
@@ -3323,8 +3323,8 @@ packages:
   module-details-from-path@1.0.4:
     resolution: {integrity: sha512-EGWKgxALGMgzvxYF1UyGTy0HXX/2vHLkw6+NvDKW2jypWbHpjQuj4UMcqQWXHERJhVGKikolT06G3bcKe4fi7w==}
 
-  motion-dom@12.39.0:
-    resolution: {integrity: sha512-Xn7aAcGDhco/JZTXOub64UmaYn73C6J1Po7Fk+8EvkJsNGTqfhon6UJY53vJKXW5v5Zl8HrYsVxv6oPXeGoGLQ==}
+  motion-dom@12.40.0:
+    resolution: {integrity: sha512-HxU3ZaBwNPVQUBQf1xxgq+7JrPNZvjLVxgbpEZL7RrWJnsxOf0/OM+yrHG9ogLQ31Do/r57Oz2gQWPK+6q62mg==}
 
   motion-utils@12.39.0:
     resolution: {integrity: sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==}
@@ -3403,8 +3403,9 @@ packages:
   node-mock-http@1.0.4:
     resolution: {integrity: sha512-8DY+kFsDkNXy1sJglUfuODx1/opAGJGyrTuFqEoN90oRc2Vk0ZbD4K2qmKXBBEhZQzdKHIVfEJpDU8Ak2NJEvQ==}
 
-  node-releases@2.0.44:
-    resolution: {integrity: sha512-5WUyunoPMsvvEhS8AxHtRzP+oA8UCkJ7YRxatWKjngndhDGLiqEVAQKWjFAiAiuL8zMRGzGSJxFnLetoa43qGQ==}
+  node-releases@2.0.45:
+    resolution: {integrity: sha512-iIbHXV9eBB2nB0wa7oTsrrXq+qQt+9SIlx9AX3T96YgobtEQfis5n6TJ6vV+3QP8DwdriEAcGhARaFCu37peBg==}
+    engines: {node: '>=18'}
 
   node-source-walk@7.0.2:
     resolution: {integrity: sha512-71kFFjYaSshDTA8/a2HiTYPLdASWjLJxUyJxGE+ffxU+KhxSBtM9kiLUX+R2yooFdSFKMFpi4n3PFtDy6qXv8A==}
@@ -3953,8 +3954,8 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.8.0:
-    resolution: {integrity: sha512-AcM7dV/5ul4EekoQ29Agm5vri8JNqRyj39o0qpX6vDF2GZrtutZl5RwgD1XnZjiTAfncsJhMI48QQH3sN87YNA==}
+  semver@7.8.1:
+    resolution: {integrity: sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -4811,7 +4812,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/netlify@7.0.10(@types/node@25.9.1)(@vercel/functions@3.6.0)(astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)':
+  '@astrojs/netlify@7.0.10(@types/node@25.9.1)(@vercel/functions@3.6.0)(astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.9.1
       '@astrojs/underscore-redirects': 1.0.3
@@ -4819,7 +4820,7 @@ snapshots:
       '@netlify/functions': 5.2.2
       '@netlify/vite-plugin': 2.12.6(@vercel/functions@3.6.0)(rollup@4.60.4)(vite@7.3.3(@types/node@25.9.1)(jiti@1.21.7)(yaml@2.9.0))
       '@vercel/nft': 1.5.0(rollup@4.60.4)
-      astro: 6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
+      astro: 6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
       esbuild: 0.27.7
       tinyglobby: 0.2.16
       vite: 7.3.3(@types/node@25.9.1)(jiti@1.21.7)(yaml@2.9.0)
@@ -4862,10 +4863,10 @@ snapshots:
       - uploadthing
       - yaml
 
-  '@astrojs/node@10.1.1(astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))':
+  '@astrojs/node@10.1.1(astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))':
     dependencies:
       '@astrojs/internal-helpers': 0.9.1
-      astro: 6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
+      astro: 6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
       send: 1.2.1
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4898,9 +4899,9 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/tailwind@6.0.2(astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(tailwindcss@3.4.19(yaml@2.9.0))':
+  '@astrojs/tailwind@6.0.2(astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(tailwindcss@3.4.19(yaml@2.9.0))':
     dependencies:
-      astro: 6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
+      astro: 6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
       autoprefixer: 10.5.0(postcss@8.5.15)
       postcss: 8.5.15
       postcss-load-config: 4.0.2(postcss@8.5.15)
@@ -4918,14 +4919,14 @@ snapshots:
 
   '@astrojs/underscore-redirects@1.0.3': {}
 
-  '@astrojs/vercel@10.0.7(astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(react@19.2.4)(rollup@4.60.4)':
+  '@astrojs/vercel@10.0.7(astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0))(react@19.2.4)(rollup@4.60.4)':
     dependencies:
       '@astrojs/internal-helpers': 0.9.1
       '@vercel/analytics': 1.6.1(react@19.2.4)
       '@vercel/functions': 3.6.0
       '@vercel/nft': 1.5.0(rollup@4.60.4)
       '@vercel/routing-utils': 5.3.3
-      astro: 6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
+      astro: 6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0)
       esbuild: 0.27.7
       tinyglobby: 0.2.16
     transitivePeerDependencies:
@@ -5517,7 +5518,7 @@ snapshots:
       https-proxy-agent: 7.0.6
       node-fetch: 2.7.0
       nopt: 8.1.0
-      semver: 7.8.0
+      semver: 7.8.1
       tar: 7.5.15
     transitivePeerDependencies:
       - encoding
@@ -5595,7 +5596,7 @@ snapshots:
       image-size: 2.0.2
       js-image-generator: 1.0.4
       parse-gitignore: 2.0.0
-      semver: 7.8.0
+      semver: 7.8.1
       tmp-promise: 3.0.3
 
   '@netlify/dev@4.18.6(@vercel/functions@3.6.0)(rollup@4.60.4)':
@@ -5643,7 +5644,7 @@ snapshots:
   '@netlify/edge-bundler@14.10.2':
     dependencies:
       '@import-maps/resolve': 2.0.0
-      '@sveltejs/acorn-typescript': 1.0.9(acorn@8.16.0)
+      '@sveltejs/acorn-typescript': 1.0.10(acorn@8.16.0)
       acorn: 8.16.0
       ajv: 8.20.0
       ajv-errors: 3.0.0(ajv@8.20.0)
@@ -5659,7 +5660,7 @@ snapshots:
       p-wait-for: 5.0.2
       parse-imports: 2.2.1
       path-key: 4.0.0
-      semver: 7.8.0
+      semver: 7.8.1
       tar: 7.5.15
       tmp-promise: 3.0.3
       urlpattern-polyfill: 8.0.2
@@ -5692,7 +5693,7 @@ snapshots:
       jwt-decode: 4.0.0
       lambda-local: 2.2.0
       read-package-up: 11.0.0
-      semver: 7.8.0
+      semver: 7.8.1
       source-map-support: 0.5.21
     transitivePeerDependencies:
       - bare-abort-controller
@@ -5853,7 +5854,7 @@ snapshots:
       precinct: 12.3.2
       require-package-name: 2.0.1
       resolve: 2.0.0-next.7
-      semver: 7.8.0
+      semver: 7.8.1
       tmp-promise: 3.0.3
       toml: 3.0.0
       unixify: 1.0.0
@@ -6175,7 +6176,7 @@ snapshots:
       color: 5.0.3
       text-hex: 1.0.0
 
-  '@sveltejs/acorn-typescript@1.0.9(acorn@8.16.0)':
+  '@sveltejs/acorn-typescript@1.0.10(acorn@8.16.0)':
     dependencies:
       acorn: 8.16.0
 
@@ -6247,7 +6248,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.59.4
       debug: 4.4.3
       minimatch: 10.2.5
-      semver: 7.8.0
+      semver: 7.8.1
       tinyglobby: 0.2.16
       ts-api-utils: 2.5.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -6539,7 +6540,7 @@ snapshots:
 
   ast-module-types@6.0.2: {}
 
-  astro@6.3.5(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0):
+  astro@6.3.7(@netlify/blobs@10.7.8)(@types/node@25.9.1)(@vercel/functions@3.6.0)(jiti@1.21.7)(rollup@4.60.4)(yaml@2.9.0):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.9.1
@@ -6579,7 +6580,7 @@ snapshots:
       piccolore: 0.1.3
       picomatch: 4.0.4
       rehype: 13.0.2
-      semver: 7.8.0
+      semver: 7.8.1
       shiki: 4.1.0
       smol-toml: 1.6.1
       svgo: 4.0.1
@@ -6739,8 +6740,8 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.10.31
       caniuse-lite: 1.0.30001793
-      electron-to-chromium: 1.5.359
-      node-releases: 2.0.44
+      electron-to-chromium: 1.5.360
+      node-releases: 2.0.45
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
   buffer-crc32@0.2.13: {}
@@ -7115,7 +7116,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.359: {}
+  electron-to-chromium@1.5.360: {}
 
   emmet@2.4.11:
     dependencies:
@@ -7474,9 +7475,9 @@ snapshots:
 
   fraction.js@5.3.4: {}
 
-  framer-motion@12.39.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  framer-motion@12.40.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
-      motion-dom: 12.39.0
+      motion-dom: 12.40.0
       motion-utils: 12.39.0
       tslib: 2.8.1
     optionalDependencies:
@@ -8005,7 +8006,7 @@ snapshots:
       lodash.isstring: 4.0.1
       lodash.once: 4.1.1
       ms: 2.1.3
-      semver: 7.8.0
+      semver: 7.8.1
 
   junk@4.0.1: {}
 
@@ -8100,7 +8101,7 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  lru-cache@11.4.0: {}
+  lru-cache@11.5.0: {}
 
   lru-cache@5.1.1:
     dependencies:
@@ -8498,7 +8499,7 @@ snapshots:
 
   module-details-from-path@1.0.4: {}
 
-  motion-dom@12.39.0:
+  motion-dom@12.40.0:
     dependencies:
       motion-utils: 12.39.0
 
@@ -8562,7 +8563,7 @@ snapshots:
 
   node-mock-http@1.0.4: {}
 
-  node-releases@2.0.44: {}
+  node-releases@2.0.45: {}
 
   node-source-walk@7.0.2:
     dependencies:
@@ -8577,7 +8578,7 @@ snapshots:
   normalize-package-data@6.0.2:
     dependencies:
       hosted-git-info: 7.0.2
-      semver: 7.8.0
+      semver: 7.8.1
       validate-npm-package-license: 3.0.4
 
   normalize-path@2.1.1:
@@ -8744,7 +8745,7 @@ snapshots:
 
   path-scurry@2.0.2:
     dependencies:
-      lru-cache: 11.4.0
+      lru-cache: 11.5.0
       minipass: 7.1.3
 
   path-to-regexp@6.3.0: {}
@@ -9184,7 +9185,7 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.8.0: {}
+  semver@7.8.1: {}
 
   send@1.2.1:
     dependencies:
@@ -9232,7 +9233,7 @@ snapshots:
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
-      semver: 7.8.0
+      semver: 7.8.1
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.5
       '@img/sharp-darwin-x64': 0.34.5
@@ -9607,7 +9608,7 @@ snapshots:
 
   typescript-auto-import-cache@0.3.6:
     dependencies:
-      semver: 7.8.0
+      semver: 7.8.1
 
   typescript@5.9.3: {}
 
@@ -9699,7 +9700,7 @@ snapshots:
       chokidar: 5.0.0
       destr: 2.0.5
       h3: 1.15.11
-      lru-cache: 11.4.0
+      lru-cache: 11.5.0
       node-fetch-native: 1.6.7
       ofetch: 1.5.1
       ufo: 1.6.4
@@ -9837,7 +9838,7 @@ snapshots:
   volar-service-typescript@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       path-browserify: 1.0.1
-      semver: 7.8.0
+      semver: 7.8.1
       typescript-auto-import-cache: 0.3.6
       vscode-languageserver-textdocument: 1.0.12
       vscode-nls: 5.2.0
