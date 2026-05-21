@@ -5,8 +5,8 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "tailwindcss -i src/styles/globals.css -o static/css/globals.css --minify",
-    "watch:css": "tailwindcss -i src/styles/globals.css -o static/css/globals.css --watch"
+    "build:css": "tailwindcss -i themes/personal/assets/css/globals.css -o static/css/globals.css --minify",
+    "watch:css": "tailwindcss -i themes/personal/assets/css/globals.css -o static/css/globals.css --watch"
   },
   "author": "jartf",
   "type": "commonjs",
