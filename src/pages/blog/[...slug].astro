@@ -29,6 +29,7 @@ interface Webmention {
   "wm-received"?: string;
   "wm-id"?: number;
   "wm-property"?: string;
+  "wm-source"?: string;
   content?: { text?: string; html?: string };
 }
 
@@ -39,7 +40,14 @@ async function fetchWebmentions(target: string): Promise<Webmention[]> {
   if (!cached) {
     cached = fetch(`https://webmention.io/api/mentions.jf2?target=${encodeURIComponent(target)}`)
       .then(r => r.ok ? r.json() : { children: [] })
-      .then(j => j.children ?? [])
+      .then(j => {
+        const children = j.children ?? [];
+        return children.sort((a: Webmention, b: Webmention) => {
+          const dateA = new Date(a.published || a["wm-received"] || 0).getTime();
+          const dateB = new Date(b.published || b["wm-received"] || 0).getTime();
+          return dateA - dateB;
+        });
+      })
       .catch(() => []);
     webmentionsCache.set(target, cached);
   }
@@ -154,6 +162,28 @@ const wmReposts = webmentions.filter((wm) => wm["wm-property"] === "repost-of");
 const wmReplies = webmentions.filter((wm) => wm["wm-property"] === "in-reply-to");
 const wmMentions = webmentions.filter((wm) => wm["wm-property"] === "mention-of");
 const hasWebmentions = webmentions.length > 0;
+
+interface ReplyThread {
+  parent: Webmention;
+  replies: Webmention[];
+}
+
+const replyThreads: ReplyThread[] = [];
+const threadMap = new Map<string, ReplyThread>();
+
+wmReplies.forEach((wm) => {
+  const source = wm["wm-source"] || "";
+  const lastSlashIndex = source.lastIndexOf('/');
+  const prefix = lastSlashIndex !== -1 ? source.substring(0, lastSlashIndex) : source;
+  
+  if (!threadMap.has(prefix)) {
+    const thread = { parent: wm, replies: [] };
+    threadMap.set(prefix, thread);
+    replyThreads.push(thread);
+  } else {
+    threadMap.get(prefix)!.replies.push(wm);
+  }
+});
 
 // Helper: format date for display
 const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
@@ -334,39 +364,79 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
           )}
 
           {/* Replies */}
-          {wmReplies.length > 0 && (
+          {replyThreads.length > 0 && (
             <div>
               <h3 class="text-sm font-semibold text-muted-foreground mb-3">💬 {wmReplies.length} <T key="blog.webmentionReply" /></h3>
-              <ol class="space-y-4" aria-label={t(lang, "blog.webmentionReply")}>
-                {wmReplies.map((wm) => (
-                  <li class="flex gap-3 p-3 rounded-lg bg-muted/30">
-                    <a href={wm.author?.url} target="_blank" rel="noopener noreferrer" class="shrink-0">
-                      {wm.author?.photo ? (
-                        <img src={wm.author.photo} alt="" width="40" height="40" class="rounded-full" loading="lazy" />
-                      ) : (
-                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted text-sm font-medium">
-                          {(wm.author?.name || "?")[0]}
-                        </span>
-                      )}
-                    </a>
-                    <div class="min-w-0">
-                      <div class="flex items-baseline gap-2 text-sm">
-                        <a href={wm.author?.url} target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline truncate">
-                          {wm.author?.name || "Anonymous"}
-                        </a>
-                        {wm.published && (
-                          <time class="text-xs text-muted-foreground shrink-0" datetime={wm.published}>
-                            {formatDate(new Date(wm.published))}
-                          </time>
+              <ol class="space-y-6" aria-label={t(lang, "blog.webmentionReply")}>
+                {replyThreads.map((thread) => (
+                  <li>
+                    {/* Parent comment */}
+                    <div class="flex gap-3 p-3 rounded-lg bg-muted/30">
+                      <a href={thread.parent.author?.url} target="_blank" rel="noopener noreferrer" class="shrink-0">
+                        {thread.parent.author?.photo ? (
+                          <img src={thread.parent.author.photo} alt="" width="40" height="40" class="rounded-full" loading="lazy" />
+                        ) : (
+                          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted text-sm font-medium">
+                            {(thread.parent.author?.name || "?")[0]}
+                          </span>
+                        )}
+                      </a>
+                      <div class="min-w-0">
+                        <div class="flex items-baseline gap-2 text-sm">
+                          <a href={thread.parent.author?.url} target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline truncate">
+                            {thread.parent.author?.name || "Anonymous"}
+                          </a>
+                          {thread.parent.published && (
+                            <time class="text-xs text-muted-foreground shrink-0" datetime={thread.parent.published}>
+                              {formatDate(new Date(thread.parent.published))}
+                            </time>
+                          )}
+                        </div>
+                        {thread.parent.content?.text && (
+                          <p class="mt-1 text-sm text-muted-foreground line-clamp-3">{thread.parent.content.text}</p>
+                        )}
+                        {thread.parent.url && (
+                          <a href={thread.parent.url} target="_blank" rel="noopener noreferrer" class="text-xs text-primary hover:underline mt-1 inline-block">↗</a>
                         )}
                       </div>
-                      {wm.content?.text && (
-                        <p class="mt-1 text-sm text-muted-foreground line-clamp-3">{wm.content.text}</p>
-                      )}
-                      {wm.url && (
-                        <a href={wm.url} target="_blank" rel="noopener noreferrer" class="text-xs text-primary hover:underline mt-1 inline-block">↗</a>
-                      )}
                     </div>
+
+                    {/* Replies */}
+                    {thread.replies.length > 0 && (
+                      <ol class="mt-3 space-y-3 pl-4 md:pl-6 border-l-2 border-muted/50 ml-4 md:ml-6">
+                        {thread.replies.map((reply) => (
+                          <li class="flex gap-3 p-3 rounded-lg bg-muted/20">
+                            <a href={reply.author?.url} target="_blank" rel="noopener noreferrer" class="shrink-0">
+                              {reply.author?.photo ? (
+                                <img src={reply.author.photo} alt="" width="32" height="32" class="rounded-full" loading="lazy" />
+                              ) : (
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-sm font-medium">
+                                  {(reply.author?.name || "?")[0]}
+                                </span>
+                              )}
+                            </a>
+                            <div class="min-w-0">
+                              <div class="flex items-baseline gap-2 text-sm">
+                                <a href={reply.author?.url} target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline truncate">
+                                  {reply.author?.name || "Anonymous"}
+                                </a>
+                                {reply.published && (
+                                  <time class="text-xs text-muted-foreground shrink-0" datetime={reply.published}>
+                                    {formatDate(new Date(reply.published))}
+                                  </time>
+                                )}
+                              </div>
+                              {reply.content?.text && (
+                                <p class="mt-1 text-sm text-muted-foreground line-clamp-3">{reply.content.text}</p>
+                              )}
+                              {reply.url && (
+                                <a href={reply.url} target="_blank" rel="noopener noreferrer" class="text-xs text-primary hover:underline mt-1 inline-block">↗</a>
+                              )}
+                            </div>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                   </li>
                 ))}
               </ol>
