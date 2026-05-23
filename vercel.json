@@ -27,7 +27,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/:path((?!(?:retro|about|blog|records|now|guestbook)(?:/|$)).+)/",
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/:path((?!(?:retro|about|blog|records|now|guestbook|chat)(?:/|$)).+)/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "source": "/:path((?!(?:retro|about|blog|records|now|guestbook)(?:/|$)).+)/",
+      "source": "/:path((?!(?:retro|about|blog|records|now|guestbook|chat)(?:/|$)).+)/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -131,6 +131,24 @@
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'none'; connect-src 'self' jarema.me api-gateway.umami.dev cloud.umami.is; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' https:; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/chat/:path*/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me api-gateway.umami.dev cloud.umami.is iframe.chat; font-src 'self'; frame-src iframe.chat; img-src 'self' https:; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live iframe.chat; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/chat/:path*/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; connect-src 'self' jarema.me api-gateway.umami.dev cloud.umami.is iframe.chat; font-src 'self'; frame-src iframe.chat; img-src 'self' https:; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live iframe.chat; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
         }
       ]
     },

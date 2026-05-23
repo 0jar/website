@@ -1,0 +1,58 @@
+---
+// Chat page
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import T from "@/components/T.astro";
+---
+
+<BaseLayout title="Chat" description="Chat with me!">
+  <Fragment slot="head">
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+  </Fragment>
+
+  <div class="container mx-auto px-4 py-8 lg:py-12">
+    <div class="max-w-3xl mx-auto">
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl font-bold mb-4">Chat</h1>
+        <p class="text-lg text-muted-foreground">Feel free to drop a message.</p>
+      </header>
+
+      <div class="border rounded-lg overflow-hidden bg-card">
+        <iframe src="https://iframe.chat/embed?chat=jaremame" id="chattable" class="w-full min-h-[600px] border-0" title="Chat" loading="lazy"></iframe>
+        <noscript>
+          <div class="p-6 text-center">
+            <p class="text-muted-foreground">
+              The chat requires JavaScript to be enabled.
+            </p>
+          </div>
+        </noscript>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline>
+  // Use inline script to avoid Astro bundling issues with external variables
+  let retries = 0;
+  const initChat = () => {
+    try {
+      // Access the global variable 'chattable', which may be the iframe DOM element
+      if (typeof chattable !== 'undefined' && typeof chattable.initialize === 'function') {
+        chattable.initialize({ theme: "Bytechat" });
+        return;
+      }
+    } catch (e) {
+      console.error(e);
+    }
+    
+    if (retries < 50) {
+      retries++;
+      setTimeout(initChat, 100);
+    } else {
+      console.warn("Failed to initialize chattable: timeout");
+    }
+  };
+
+  // Start polling
+  initChat();
+</script>
