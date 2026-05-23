@@ -2,9 +2,12 @@
 // Chat page
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
+import { t } from "@/i18n/index";
+
+const lang = Astro.locals?.lang || "en";
 ---
 
-<BaseLayout title="Chat" description="Chat with me!">
+<BaseLayout title={t(lang, "chat.title")} description={t(lang, "chat.description")}>
   <Fragment slot="head">
     <script is:inline src="https://iframe.chat/scripts/main.min.js" defer></script>
   </Fragment>
@@ -12,17 +15,15 @@ import T from "@/components/T.astro";
   <div class="container mx-auto px-4 py-8 lg:py-12">
     <div class="max-w-3xl mx-auto">
       <header class="mb-8 text-center">
-        <h1 class="text-4xl font-bold mb-4">Chat</h1>
-        <p class="text-lg text-muted-foreground">Feel free to drop a message.</p>
+        <T key="chat.title" tag="h1" class="text-4xl font-bold mb-4" />
+        <T key="chat.description" tag="p" class="text-lg text-muted-foreground" />
       </header>
 
       <div class="border rounded-lg overflow-hidden bg-card">
         <iframe src="https://iframe.chat/embed?chat=jaremame" id="chattable" class="w-full min-h-[600px] border-0" title="iframe.chat widget" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
         <noscript>
           <div class="p-6 text-center">
-            <p class="text-muted-foreground">
-              The chat requires JavaScript to be enabled.
-            </p>
+            <T key="chat.noscript" tag="p" class="text-muted-foreground" />
           </div>
         </noscript>
       </div>

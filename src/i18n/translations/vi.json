@@ -389,6 +389,11 @@
     "description": "Một vài nhật ký phát triển khi tôi tạo ra trang web này.",
     "noEntries": "Chưa có mục nào."
   },
+  "chat": {
+    "title": "Trò chuyện công khai",
+    "description": "Cứ thoải mái để lại lời nhắn cho tôi nhé!",
+    "noscript": "Tính năng trò chuyện yêu cầu JavaScript nha."
+  },
   "settings": {
     "title": "Cài đặt",
     "theme": "Giao diện",

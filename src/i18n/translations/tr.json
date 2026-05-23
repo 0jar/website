@@ -349,6 +349,11 @@
     "description": "Bu siteyi yaparkenki bazı geliştirme günlüklerim.",
     "noEntries": "Henüz giriş yok."
   },
+  "chat": {
+    "title": "Herkese açık sohbet",
+    "description": "Bir mesaj bırakmaktan çekinmeyin.",
+    "noscript": "Sohbetin çalışması için JavaScript\"in etkinleştirilmesi gerekir."
+  },
   "settings": {
     "title": "Ayarlar",
     "theme": "Tema",

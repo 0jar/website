@@ -349,6 +349,11 @@
     "description": "Muutamia kehityslokeja ajalta, jolloin tein tämän sivuston.",
     "noEntries": "Ei merkintöjä vielä."
   },
+  "chat": {
+    "title": "Julkinen keskustelu",
+    "description": "Jätä rohkeasti viesti.",
+    "noscript": "Keskustelu vaatii JavaScriptin sallimista."
+  },
   "settings": {
     "title": "Asetukset",
     "theme": "Teema",

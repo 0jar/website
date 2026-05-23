@@ -391,6 +391,11 @@
     "description": "Some development logs when I was building this site.",
     "noEntries": "No entries yet."
   },
+  "chat": {
+    "title": "Public chat",
+    "description": "Feel free to drop a message!",
+    "noscript": "The chat requires JavaScript to be enabled."
+  },
   "settings": {
     "title": "Settings",
     "theme": "Theme",
