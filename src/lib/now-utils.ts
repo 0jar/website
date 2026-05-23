@@ -2,6 +2,7 @@
 import { t } from "@/i18n/client";
 import { formatDate, dateFull } from "@/lib/utils/timezone-utils";
 import { escapeHtml } from "@/lib/utils/escape";
+import { services, author } from "@/lib/constants";
 
 export interface PremidActivity {
   name: string;
@@ -34,7 +35,11 @@ function safeImg(src: string, alt: string, cls: string, extra = ''): string {
 // --- Fetching ---
 
 export async function fetchLiveData(): Promise<LiveItem[]> {
-  const [lfm, pre] = await Promise.all([fetch("/api/lastfm").catch(() => null), fetch("/api/premid").catch(() => null)]);
+  const lastFmApiUrl = `${services.lastFm.apiUrl}?method=user.getrecenttracks&user=${author.lastFmUsername}&api_key=${services.lastFm.apiKey}`;
+  const [lfm, pre] = await Promise.all([
+    fetch(lastFmApiUrl, { headers: { Accept: "application/xml, text/xml;q=0.9, */*;q=0.8" } }).catch(() => null),
+    fetch("/api/premid").catch(() => null)
+  ]);
   const items: LiveItem[] = [];
   if (lfm?.ok) { const track = parseLastfm(await lfm.text()); if (track) items.push(track); }
   if (pre?.ok) {
