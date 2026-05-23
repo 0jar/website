@@ -1,4 +1,3 @@
-import type { APIRoute } from "astro";
 import { services, author } from "@/lib/constants";
 
 export const prerender = false;
@@ -8,7 +7,7 @@ const lastFmApiUrl = `${services.lastFm.apiUrl}?method=user.getrecenttracks&user
 const upstreamTimeoutMs = 5000;
 const maxXmlBytes = 256 * 1024;
 
-async function fetchWithTimeout(url: string, timeoutMs: number): Promise<Response> {
+async function fetchWithTimeout(url, timeoutMs) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
@@ -22,7 +21,7 @@ async function fetchWithTimeout(url: string, timeoutMs: number): Promise<Respons
   }
 }
 
-export const GET: APIRoute = async () => {
+export const GET = async () => {
   try {
     const response = await fetchWithTimeout(lastFmApiUrl, upstreamTimeoutMs);
     if (!response.ok) {

@@ -10,19 +10,19 @@ export function localeStaticPaths() {
 }
 
 /** Extract the i18n locale code from a URL pathname. */
-export function getLocaleFromUrl(url: URL): string {
+export function getLocaleFromUrl(url) {
   const [, segment] = url.pathname.split("/");
-  return (locales as string[]).includes(segment) ? segment : "en";
+  return locales.includes(segment) ? segment : "en";
 }
 
 /** Build a locale-prefixed path. English paths stay at root. */
-export function localePath(locale: string, path: string): string {
+export function localePath(locale, path) {
   const clean = path.startsWith("/") ? path : `/${path}`;
   return locale === "en" ? clean : `/${locale}${clean}`;
 }
 
 /** Strip the locale prefix from a pathname, returning the base path. */
-export function stripLocale(pathname: string): string {
+export function stripLocale(pathname) {
   for (const loc of locales) {
     if (pathname.startsWith(`/${loc}/`)) return pathname.slice(loc.length + 1);
     if (pathname === `/${loc}`) return "/";

@@ -1,5 +1,5 @@
 /** Escape special characters for safe HTML/XML embedding. */
-export function escapeXml(value: string): string {
+export function escapeXml(value) {
   return value
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")

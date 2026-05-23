@@ -1,23 +1,8 @@
-import type { APIRoute } from "astro";
 import { preMidConfig } from "@/lib/constants";
 
 export const prerender = false;
 
-interface Activity {
-  name: string;
-  details?: string;
-  state?: string;
-  timestamps?: { start?: number; end?: number };
-  buttons?: { label: string; url: string }[];
-  assets?: { large_image?: string; small_image?: string };
-}
-
-interface ActivityEntry {
-  activity: Activity;
-  lastUpdate: number;
-}
-
-const activities = new Map<string, ActivityEntry>();
+const activities = new Map();
 const maxRequestBytes = 8 * 1024;
 
 const corsHeaders = {
@@ -25,12 +10,12 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
   "X-Content-Type-Options": "nosniff",
-} as const;
+};
 
-const json = (data: unknown, status = 200): Response =>
+const json = (data, status = 200) =>
   Response.json(data, { status, headers: { ...corsHeaders } });
 
-const isValidUrl = (url: string): boolean => {
+const isValidUrl = (url) => {
   try {
     const u = new URL(url);
     return u.protocol === "http:" || u.protocol === "https:";
@@ -39,27 +24,25 @@ const isValidUrl = (url: string): boolean => {
   }
 };
 
-const getActivityKey = (activity: Activity): string =>
+const getActivityKey = (activity) =>
   JSON.stringify({ name: activity.name, details: activity.details ?? "", state: activity.state ?? "" });
 
-const getActivityScore = (activity: Activity): number =>
+const getActivityScore = (activity) =>
   (activity.timestamps?.start ? 2 : 0) +
   (activity.timestamps?.end ? 2 : 0) +
   (activity.buttons?.length ?? 0) * 3 +
   (activity.assets?.large_image ? 1 : 0) +
   (activity.assets?.small_image ? 1 : 0);
 
-const validateActivity = (activity: any): activity is Activity => {
+const validateActivity = (activity) => {
   if (!activity || typeof activity !== "object" || typeof activity.name !== "string" || !activity.name.trim() || activity.name.length > 128)
     return false;
   if (activity.details !== undefined && (typeof activity.details !== "string" || activity.details.length > 128)) return false;
   if (activity.state !== undefined && (typeof activity.state !== "string" || activity.state.length > 128)) return false;
-  if (
-    activity.timestamps &&
+  if (activity.timestamps &&
     (typeof activity.timestamps !== "object" ||
       (activity.timestamps.start !== undefined && typeof activity.timestamps.start !== "number") ||
-      (activity.timestamps.end !== undefined && typeof activity.timestamps.end !== "number"))
-  )
+      (activity.timestamps.end !== undefined && typeof activity.timestamps.end !== "number")))
     return false;
   if (activity.buttons !== undefined) {
     if (!Array.isArray(activity.buttons) || activity.buttons.length > 2) return false;
@@ -77,20 +60,18 @@ const validateActivity = (activity: any): activity is Activity => {
         return false;
     }
   }
-  if (
-    activity.assets &&
+  if (activity.assets &&
     (typeof activity.assets !== "object" ||
       (activity.assets.large_image !== undefined && (typeof activity.assets.large_image !== "string" || activity.assets.large_image.length > 256)) ||
-      (activity.assets.small_image !== undefined && (typeof activity.assets.small_image !== "string" || activity.assets.small_image.length > 256)))
-  )
+      (activity.assets.small_image !== undefined && (typeof activity.assets.small_image !== "string" || activity.assets.small_image.length > 256))))
     return false;
   return true;
 };
 
-const validateExtension = (extension: any): boolean =>
+const validateExtension = (extension) =>
   extension && typeof extension === "object" && typeof extension.user_id === "string" && extension.user_id.length > 0;
 
-const cleanupExpiredActivities = (): void => {
+const cleanupExpiredActivities = () => {
   const now = Date.now();
   for (const [key, entry] of activities.entries()) {
     if (now - entry.lastUpdate >= preMidConfig.activityTimeoutMs) {
@@ -99,8 +80,8 @@ const cleanupExpiredActivities = (): void => {
   }
 };
 
-const removeOldestActivity = (): void => {
-  let oldestKey: string | undefined;
+const removeOldestActivity = () => {
+  let oldestKey;
   let oldestTime = Number.POSITIVE_INFINITY;
 
   for (const [key, entry] of activities.entries()) {
@@ -113,7 +94,7 @@ const removeOldestActivity = (): void => {
   if (oldestKey) activities.delete(oldestKey);
 };
 
-async function fetchJsonWithTimeout(url: string, timeoutMs: number) {
+async function fetchJsonWithTimeout(url, timeoutMs) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
@@ -128,7 +109,7 @@ async function fetchJsonWithTimeout(url: string, timeoutMs: number) {
   }
 }
 
-async function parseRequestBody(request: Request): Promise<{ body?: any; error?: Response }> {
+async function parseRequestBody(request) {
   const contentLength = Number(request.headers.get("content-length") ?? "0");
   if (Number.isFinite(contentLength) && contentLength > maxRequestBytes) {
     return { error: json({ error: "Payload too large" }, 413) };
@@ -150,11 +131,11 @@ async function parseRequestBody(request: Request): Promise<{ body?: any; error?:
   }
 }
 
-export const OPTIONS: APIRoute = async () => {
+export const OPTIONS = async () => {
   return new Response(null, { status: 200, headers: { ...corsHeaders } });
 };
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST = async ({ request }) => {
   const parsed = await parseRequestBody(request);
   if (parsed.error) return parsed.error;
 
@@ -194,15 +175,13 @@ export const POST: APIRoute = async ({ request }) => {
   } else {
     const now = Date.now();
     const hasRecentActivity = Array.from(activities.values()).some((entry) => now - entry.lastUpdate < preMidConfig.clearThresholdMs);
-    if (!hasRecentActivity) {
-      activities.clear();
-    }
+    if (!hasRecentActivity) activities.clear();
   }
 
   return json({ success: true });
 };
 
-export const GET: APIRoute = async ({ request }) => {
+export const GET = async ({ request }) => {
   const hostHeader = request.headers.get("x-forwarded-host") ?? request.headers.get("host") ?? "";
   const host = hostHeader.split(",")[0].trim().toLowerCase().split(":")[0];
   const isProduction = preMidConfig.productionHosts.has(host);
@@ -224,12 +203,11 @@ export const GET: APIRoute = async ({ request }) => {
 
   cleanupExpiredActivities();
   const now = Date.now();
-  const activeActivities = Array.from(activities.values())
-    .filter(({ activity }) => !activity.timestamps?.end || activity.timestamps.end > now)
+  const activeActivities = Array.from(activities.values()).filter(({ activity }) => !activity.timestamps?.end || activity.timestamps.end > now)
     .map(({ activity, lastUpdate }) => ({ activity, lastUpdate }));
 
   return Response.json(
     { activities: activeActivities, count: activeActivities.length },
-    { status: 200, headers: { ...corsHeaders } }
+    { status: 200, headers: { ...corsHeaders } },
   );
 };

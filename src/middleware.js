@@ -1,9 +1,8 @@
 import { defineMiddleware, sequence } from "astro:middleware";
 import { getLocaleFromUrl } from "@/i18n/routing";
-import type { SupportedLanguage } from "@/lib/constants";
 
 const locale = defineMiddleware(({ url, locals }, next) => {
-  locals.lang = getLocaleFromUrl(url) as SupportedLanguage;
+  locals.lang = getLocaleFromUrl(url);
   return next();
 });
 
