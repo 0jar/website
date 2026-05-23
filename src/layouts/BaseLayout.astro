@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer.astro";
 import Galaxy from "@/components/layout/Galaxy.astro";
 import BarListener from "@/components/layout/BarListener.astro";
 import Banners from "@/components/layout/Banners.astro";
-import { hrefLangLanguages, siteUrl, siteName, siteDescription, siteKeywords, author, socialLinks, alternativeDomains, services, themeColors, ogLocaleMap } from "@/lib/constants";
+import { hrefLangLanguages, siteUrl, getSiteName, siteDescription, siteKeywords, author, socialLinks, alternativeDomains, services, themeColors, ogLocaleMap } from "@/lib/constants";
 import { localePath, stripLocale } from "@/i18n/routing";
 import { translations } from "@/i18n";
 
@@ -40,7 +40,13 @@ interface Props {
 }
 
 const {
-  title = siteName,
+  lang: initialLang = Astro.locals?.lang || "en",
+} = Astro.props;
+
+const initialSiteName = getSiteName(initialLang);
+
+const {
+  title = initialSiteName,
   description = siteDescription,
   isHomePage = false,
   lang: langProp,
@@ -54,6 +60,7 @@ const {
 } = Astro.props;
 
 const lang = langProp || Astro.locals?.lang || "en";
+const siteName = getSiteName(lang);
 const basePath = stripLocale(Astro.url.pathname);
 
 const extraStructuredData = Array.isArray(structuredDataProp)

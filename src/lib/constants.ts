@@ -2,6 +2,16 @@
 
 export const siteUrl = "https://jarema.me";
 export const siteName = "Jarema's digital garden";
+export const getSiteName = (lang?: string) => {
+  if (lang === "vi") return "Vườn số nhà Jarema";
+  if (lang === "ru") return "Цифровой сад Яремы";
+  if (lang === "et") return "Jarema digiaed";
+  if (lang === "da") return "Jaremas digitalhave";
+  if (lang === "zh") return "承靖的数字花园";
+  if (lang === "pl") return "Cyfrowy ogród Jaremy";
+  if (lang === "tok") return "ma kasi pi jan Jalema";
+  return siteName;
+};
 export const siteDescription = "This site is the personal playground and digital garden for Jarema. I write some blog posts, sometimes content about economics, coding, and occasionally I post some cats too.";
 export const siteKeywords = "Jarema, jartf, digital garden, personal website, blog, economics, coding, tech, multilingual, student, cat, personal blog, digital playground, independent blog, independent writer, indie web, technology, now page, about page, personal reflections, ideas, thoughts, observation journal, how to build a personal site, economics and coding personal site";
 

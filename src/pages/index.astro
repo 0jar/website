@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
-import { routes, siteName, author, services, friendSites, authorTimezone, authorTimezoneLabel } from "@/lib/constants";
+import { routes, getSiteName, author, services, friendSites, authorTimezone, authorTimezoneLabel } from "@/lib/constants";
 import { getData } from "@/content.config";
 import MoodCat from "@/components/home/MoodCat.astro";
 import NowSection from "@/components/home/NowSection.astro";
@@ -16,9 +16,11 @@ const card = "border rounded-lg p-4 bg-card card-hover-effect";
 const androidDeadline = new Date(Date.UTC(2026, 8, 1, 0, 0, 0));
 const daysLeft = Math.ceil((androidDeadline.getTime() - Date.now()) / 864e5); // 864e5 = 1000*60*60*24
 const showAndroidCountdown = daysLeft > 0;
+const lang = Astro.locals?.lang || "en";
+const resolvedSiteName = getSiteName(lang);
 ---
 
-<BaseLayout title={siteName} isHomePage={true}>
+<BaseLayout title={resolvedSiteName} isHomePage={true}>
   <div class="relative min-h-screen w-full overflow-hidden">
     <div class="container mx-auto px-2 sm:px-4 lg:px-6 py-8 lg:py-12 relative z-10">
       <div class="max-w-5xl mx-auto">

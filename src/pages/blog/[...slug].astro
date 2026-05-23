@@ -5,7 +5,7 @@ import { getCollection, render, type CollectionEntry } from "astro:content";
 import ShareButtons from "@/components/blog/ShareButtons.astro";
 import T from "@/components/T.astro";
 import { t } from "@/i18n";
-import { supportedLanguages, siteUrl, siteName, author, routes } from "@/lib/constants";
+import { supportedLanguages, siteUrl, getSiteName, author, routes } from "@/lib/constants";
 import { localePath, stripLocale } from "@/i18n/routing";
 import { dateFull } from "@/lib/utils/timezone-utils";
 
@@ -104,7 +104,8 @@ const taxonomyKeywords = Array.from(new Set([
 
 const postUrl = Astro.url.href;
 const postLang = language ?? "en";
-const description = excerpt || `Read "${title}" on ${siteName}.`;
+const resolvedSiteName = getSiteName(post.data.language || Astro.locals?.lang || "en");
+const description = excerpt || `Read "${title}" on ${resolvedSiteName}.`;
 const hasUpdatedDate = Boolean(updated && updated.getTime() > date.getTime());
 
 // Structured data

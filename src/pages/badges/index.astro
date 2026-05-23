@@ -3,7 +3,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { Image } from 'astro:assets';
-import { siteUrl, siteName } from '@/lib/constants';
+import { siteUrl, getSiteName } from '@/lib/constants';
 
 // Badge data
 const BADGES = [
@@ -65,9 +65,12 @@ const BADGES = [
 ];
 
 const CATEGORIES = ["all", "personal", "friends", "other-sites", "software", "web", "fun"];
+
+const lang = Astro.locals?.lang || "en";
+const resolvedSiteName = getSiteName(lang);
 ---
 
-<BaseLayout title="Badges" description="A collection of 88x31 badges.">
+<BaseLayout title={`Badges - ${resolvedSiteName}`} description="A collection of 88x31 badges.">
   <div class="container mx-auto px-4 py-8 lg:py-12">
     <div class="max-w-4xl mx-auto">
       <header class="mb-8 text-center">
@@ -93,7 +96,7 @@ const CATEGORIES = ["all", "personal", "friends", "other-sites", "software", "we
             <div class="mb-4">
               <T key="badges.htmlCodeTitle" tag="p" class="text-xs text-muted-foreground mb-1" />
               <pre class="bg-muted p-2 rounded text-xs overflow-x-auto select-all"><code>{`<a href="${siteUrl}/">
-  <img src="${siteUrl}/badge.png" alt="${siteName}" width="88" height="31" style="image-rendering: pixelated;">
+  <img src="${siteUrl}/badge.png" alt="${resolvedSiteName}" width="88" height="31" style="image-rendering: pixelated;">
 </a>`}</code></pre>
             </div>
             <div class="text-xs text-muted-foreground space-y-1 mt-4 p-3 bg-muted/50 rounded">
