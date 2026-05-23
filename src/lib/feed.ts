@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from "astro:content";
-import { hrefLangLanguages, supportedLanguages, siteDescription, siteName, siteUrl, author, type SupportedLanguage } from "@/lib/constants";
+import { hrefLangLanguages, supportedLanguages, siteDescription, getSiteName, siteUrl, author, type SupportedLanguage } from "@/lib/constants";
 import { escapeXml } from "@/lib/utils/escape";
 
 export function feedStaticPaths() {
@@ -56,7 +56,8 @@ function postsForLanguage(allPosts: FeedPost[], language: string | undefined, mo
 
 function feedMeta(language: string | undefined) {
   const suffix = language && language !== "en" ? ` - ${getLanguageName(language)}` : "";
-  return { title: `${siteName}${suffix}`, description: `${siteDescription}${suffix}` };
+  const resolvedSiteName = getSiteName(language);
+  return { title: `${resolvedSiteName}${suffix}`, description: `${siteDescription}${suffix}` };
 }
 
 interface FeedOptions {

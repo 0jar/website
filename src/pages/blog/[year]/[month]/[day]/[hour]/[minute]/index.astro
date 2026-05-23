@@ -1,6 +1,6 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
-import { siteUrl, siteName } from "@/lib/constants";
+import { siteUrl, getSiteName } from "@/lib/constants";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }: { data: CollectionEntry<"blog">["data"] }) => !data.draft);
@@ -18,16 +18,18 @@ export async function getStaticPaths() {
         id: post.id,
         title: post.data.title,
         description:
-          post.data.excerpt || `Read "${post.data.title}" on ${siteName}.`,
+          post.data.excerpt || `Read "${post.data.title}" on ${getSiteName(post.data.language || "en")}.`,
+        language: post.data.language || "en",
       },
     };
   });
 }
 
-const { id, title, description } = Astro.props;
+const { id, title, description, language } = Astro.props;
 const canonicalUrl = `${siteUrl}/blog/${id}/`;
 const ogImage = `${siteUrl}/android-chrome-512x512.png`;
-const fullTitle = `${title} - ${siteName}`;
+const resolvedSiteName = getSiteName(language);
+const fullTitle = `${title} - ${resolvedSiteName}`;
 ---
 
 <!doctype html>
@@ -42,7 +44,7 @@ const fullTitle = `${title} - ${siteName}`;
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:site_name" content={siteName} />
+    <meta property="og:site_name" content={resolvedSiteName} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
