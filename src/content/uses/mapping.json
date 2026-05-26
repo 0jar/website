@@ -93,6 +93,42 @@
       }
     },
     {
+      "name": "Organic Maps",
+      "link": "https://organicmaps.app/",
+      "description": {
+        "da": "Offline navigation",
+        "en": "Offline navigation",
+        "et": "Võrguühenduseta navigeerimine",
+        "fi": "Offline-navigointi",
+        "pl": "Nawigacja offline",
+        "ru": "Офлайн-навигация",
+        "sv": "Offline-navigering",
+        "tok": "linja ma pi ala kon",
+        "tr": "Çevrimdışı navigasyon",
+        "vi-Hani": "Bản đồ ngoại tuyến",
+        "vi": "Bản đồ ngoại tuyến",
+        "zh": "离线导航"
+      }
+    },
+    {
+      "name": "Waze",
+      "link": "https://www.waze.com/",
+      "description": {
+        "da": "Kørenavigation",
+        "en": "Driving navigation",
+        "et": "Sõidunavigatsioon",
+        "fi": "Ajonvigaatio",
+        "pl": "Nawigacja samochodowa",
+        "ru": "Автомобильная навигация",
+        "sv": "Körnavigering",
+        "tok": "linja ma pi tawa tomo",
+        "tr": "Sürüş navigasyonu",
+        "vi-Hani": "Bản đồ lái xe",
+        "vi": "Bản đồ lái xe",
+        "zh": "驾驶导航"
+      }
+    },
+    {
       "name": "Waze Map Editor",
       "link": "https://www.waze.com/en/user/editor/vanhv",
       "description": {

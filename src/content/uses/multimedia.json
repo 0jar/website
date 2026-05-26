@@ -8,8 +8,8 @@
       "icon": "palette",
       "items": [
         {
-          "name": "Adobe Illustrator",
-          "link": "https://www.adobe.com/products/illustrator.html",
+          "name": "Inkscape",
+          "link": "https://inkscape.org/",
           "description": {
             "da": "Vektorgrafikeditor",
             "en": "Vector graphics editor",
@@ -104,24 +104,6 @@
       "icon": "camera",
       "items": [
         {
-          "name": "Adobe Photoshop",
-          "link": "https://www.adobe.com/products/photoshop.html",
-          "description": {
-            "da": "Fotoredigering og -manipulation",
-            "en": "Photo editing and manipulation",
-            "et": "Fototöötlus",
-            "fi": "Kuvankäsittely ja muokkaus",
-            "pl": "Edycja i obróbka zdjęć",
-            "ru": "Редактирование и обработка фото",
-            "sv": "Bildredigering och manipulation",
-            "tok": "ante & pali sitelen",
-            "tr": "Fotoğraf düzenleme ve manipülasyon",
-            "vi-Hani": "Chỉnh sửa và xử lý ảnh",
-            "vi": "Chỉnh sửa và xử lý ảnh",
-            "zh": "照片编辑和处理"
-          }
-        },
-        {
           "name": "GIMP",
           "link": "https://www.gimp.org/",
           "description": {
@@ -145,24 +127,6 @@
       "title": "video",
       "icon": "video",
       "items": [
-        {
-          "name": "Adobe Premiere Pro",
-          "link": "https://www.adobe.com/products/premiere.html",
-          "description": {
-            "da": "Professionel videoredigeringsprogram",
-            "en": "Professional video editor",
-            "et": "Professionaalne videoredaktor",
-            "fi": "Ammattimainen videoeditori",
-            "pl": "Profesjonalny edytor wideo",
-            "ru": "Профессиональный видеоредактор",
-            "sv": "Professionell videoredigerare",
-            "tok": "ilo ante sitelen tawa pi jan suli",
-            "tr": "Profesyonel video düzenleyici",
-            "vi-Hani": "Trình sửa video chuyên nghiệp",
-            "vi": "Trình sửa video chuyên nghiệp",
-            "zh": "专业视频编辑器"
-          }
-        },
         {
           "name": "DaVinci Resolve",
           "link": "https://www.blackmagicdesign.com/products/davinciresolve/",
@@ -236,8 +200,8 @@
           }
         },
         {
-          "name": "VLC",
-          "link": "https://www.videolan.org/vlc/",
+          "name": "Cine",
+          "link": "https://github.com/diegopvlk/Cine",
           "description": {
             "da": "Videoafspiller",
             "en": "Video player",
@@ -296,24 +260,6 @@
           }
         },
         {
-          "name": "Spotify",
-          "link": "https://www.spotify.com/",
-          "description": {
-            "da": "Musikstreamingtjeneste",
-            "en": "Music streaming service",
-            "et": "Muusika voogedastusteenus",
-            "fi": "Musiikin suoratoistopalvelu",
-            "pl": "Serwis streamingowy muzyki",
-            "ru": "Сервис потоковой передачи музыки",
-            "sv": "Musikstreamingtjänst",
-            "tok": "ilo kalama musi",
-            "tr": "Müzik akış hizmeti",
-            "vi-Hani": "Dịch vụ phát nhạc trực tuyến",
-            "vi": "Dịch vụ phát nhạc trực tuyến",
-            "zh": "在线音乐流媒体服务"
-          }
-        },
-        {
           "name": "YouTube",
           "link": "https://www.youtube.com/",
           "description": {
@@ -329,6 +275,42 @@
             "vi-Hani": "Nền tảng phát video trực tuyến",
             "vi": "Nền tảng phát video trực tuyến",
             "zh": "在线视频流媒体平台"
+          }
+        },
+        {
+          "name": "GNOME Podcasts",
+          "link": "https://apps.gnome.org/Podcasts/",
+          "description": {
+            "da": "Desktop podcastklient",
+            "en": "Desktop podcast client",
+            "et": "Töölaua taskuhäälinguklient",
+            "fi": "Podcast-sovellus (tietokone)",
+            "pl": "Klient podcastów na komputer",
+            "ru": "Десктопный подкаст-клиент",
+            "sv": "Podcastklient på datorn",
+            "tok": "ilo kute podcast lon ilo suli",
+            "tr": "Masaüstü podcast istemcisi",
+            "vi-Hani": "Ứng dụng podcast trên máy tính",
+            "vi": "Ứng dụng podcast trên máy tính",
+            "zh": "桌面播客客户端"
+          }
+        },
+        {
+          "name": "AntennaPod",
+          "link": "https://antennapod.org/",
+          "description": {
+            "da": "Mobil podcastklient",
+            "en": "Mobile podcast client",
+            "et": "Mobiilne taskuhäälinguklient",
+            "fi": "Podcast-sovellus (mobiili)",
+            "pl": "Mobilny klient podcastów",
+            "ru": "Мобильный подкаст-клиент",
+            "sv": "Mobil podcastklient",
+            "tok": "ilo kute podcast lon ilo tawa",
+            "tr": "Mobil podcast istemcisi",
+            "vi-Hani": "Ứng dụng podcast trên điện thoại",
+            "vi": "Ứng dụng podcast trên điện thoại",
+            "zh": "移动播客客户端"
           }
         },
         {

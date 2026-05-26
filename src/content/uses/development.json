@@ -21,8 +21,26 @@
       }
     },
     {
-      "name": "Warp / Black Box",
-      "link": "https://www.warp.dev/",
+      "name": "Zed",
+      "link": "https://zed.dev/",
+      "description": {
+        "da": "Primær kodeeditor",
+        "en": "Primary code editor",
+        "et": "Peamine koodiredaktor",
+        "fi": "Pääkoodieditori",
+        "pl": "Główny edytor kodu",
+        "ru": "Основной редактор кода",
+        "sv": "Primär kodredigerare",
+        "tok": "ilo sitelen nanpa wan",
+        "tr": "Birincil kod düzenleyici",
+        "vi-Hani": "程撰討 code 正",
+        "vi": "Trình soạn thảo code chính",
+        "zh": "主用代码编辑器"
+      }
+    },
+    {
+      "name": "Ptyxis",
+      "link": "https://gitlab.gnome.org/chergert/ptyxis",
       "description": {
         "da": "Terminalemulatorer",
         "en": "Terminal emulators",
@@ -91,8 +109,8 @@
       }
     },
     {
-      "name": "GitHub",
-      "link": "https://github.com/",
+      "name": "Codeberg",
+      "link": "https://codeberg.org/",
       "description": {
         "da": "Kodehosting og samarbejde",
         "en": "Code hosting and collaboration",

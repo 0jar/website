@@ -3,20 +3,39 @@
   "icon": "globe",
   "items": [
     {
-      "name": "Fedora Linux / Windows 11",
+      "name": "Fedora Linux",
+      "link": "https://fedoraproject.org/",
       "description": {
-        "da": "Dual boot-opsætning med hærdet Windows",
-        "en": "Dual boot setup with hardened Windows",
-        "et": "Kaksiklaadimine turvatud Windowsiga",
-        "fi": "Kaksoiskäynnistys kovennetulla Windowsilla",
-        "pl": "Dual boot z utwardzonym Windowsem",
-        "ru": "Dual boot с усиленной Windows",
-        "sv": "Dual boot med härdad Windows",
-        "tok": "Dual boot kepeken Windows wawa",
-        "tr": "Sertleştirilmiş Windows ile çift önyükleme kurulumu",
-        "vi-Hani": "𨉟掑雙雙𠄩系調行",
-        "vi": "Mình cài song song hai hệ điều hành",
-        "zh": "我安装了双系统"
+        "da": "Primært desktop OS",
+        "en": "Primary desktop OS",
+        "et": "Peamine töölaua OS",
+        "fi": "Pääkäyttöjärjestelmä",
+        "pl": "Główny system operacyjny",
+        "ru": "Основная десктопная ОС",
+        "sv": "Primärt desktop-OS",
+        "tok": "ilo lawa suli nanpa wan",
+        "tr": "Birincil masaüstü işletim sistemi",
+        "vi-Hani": "Hệ điều hành máy tính chính",
+        "vi": "Hệ điều hành máy tính chính",
+        "zh": "主用桌面操作系统"
+      }
+    },
+    {
+      "name": "LineageOS",
+      "link": "https://www.lineageos.org/",
+      "description": {
+        "da": "Mobil OS",
+        "en": "Mobile OS",
+        "et": "Mobiilne OS",
+        "fi": "Mobiilikäyttöjärjestelmä",
+        "pl": "Mobilny system operacyjny",
+        "ru": "Мобильная ОС",
+        "sv": "Mobilt OS",
+        "tok": "ilo lawa tawa",
+        "tr": "Mobil işletim sistemi",
+        "vi-Hani": "Hệ điều hành điện thoại",
+        "vi": "Hệ điều hành điện thoại",
+        "zh": "移动操作系统"
       }
     },
     {
@@ -53,6 +72,24 @@
         "vi-Hani": "程閱䇼恪",
         "vi": "Trình duyệt web phụ",
         "zh": "备用网页浏览器"
+      }
+    },
+    {
+      "name": "Vivaldi",
+      "link": "https://vivaldi.com/",
+      "description": {
+        "da": "Arbejdswebbrowser",
+        "en": "Work web browser",
+        "et": "Töö veebibrauser",
+        "fi": "Työselain",
+        "pl": "Przeglądarka do pracy",
+        "ru": "Рабочий веб-браузер",
+        "sv": "Arbetswebbläsare",
+        "tok": "ilo lukin pi pali",
+        "tr": "İş web tarayıcısı",
+        "vi-Hani": "Trình duyệt web cho công việc",
+        "vi": "Trình duyệt web cho công việc",
+        "zh": "工作网页浏览器"
       }
     }
   ]

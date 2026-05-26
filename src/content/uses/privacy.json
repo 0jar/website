@@ -3,8 +3,8 @@
   "icon": "shield",
   "items": [
     {
-      "name": "Windscribe",
-      "link": "https://windscribe.com/",
+      "name": "Mullvad",
+      "link": "https://mullvad.net/",
       "description": {
         "da": "VPN med WireGuard-konfiguration",
         "en": "VPN with WireGuard config",
@@ -21,8 +21,8 @@
       }
     },
     {
-      "name": "Bitwarden",
-      "link": "https://bitwarden.com/",
+      "name": "Vaultwarden",
+      "link": "https://github.com/dani-garcia/vaultwarden",
       "description": {
         "da": "Selv-hostet adgangskodemanager",
         "en": "Self-hosted password manager",
@@ -39,26 +39,26 @@
       }
     },
     {
-      "name": "Ente Auth",
-      "link": "https://ente.io/",
+      "name": "YubiKey",
+      "link": "https://www.yubico.com/",
       "description": {
-        "da": "To-faktor-godkendelsesapp",
-        "en": "Two-factor authentication app",
-        "et": "Kaheastmelise autentimise rakendus",
-        "fi": "Kaksivaiheinen tunnistautuminen",
-        "pl": "Aplikacja do 2FA",
-        "ru": "Приложение для двухфакторной аутентификации",
-        "sv": "Tvåfaktorsautentiseringsapp",
-        "tok": "ilo awen nanpa tu",
-        "tr": "İki faktörlü kimlik doğrulama uygulaması",
-        "vi-Hani": "Ứng dụng xác thực hai yếu tố (2FA)",
-        "vi": "Ứng dụng xác thực hai yếu tố (2FA)",
-        "zh": "双因素认证应用"
+        "da": "Hardware-sikkerhedsnøgle",
+        "en": "Hardware security key",
+        "et": "Riistvaraline turvavõti",
+        "fi": "Laitteistotason turva-avain",
+        "pl": "Sprzętowy klucz zabezpieczeń",
+        "ru": "Аппаратный ключ безопасности",
+        "sv": "Hårdvarusäkerhetsnyckel",
+        "tok": "ilo awen nanpa",
+        "tr": "Donanım güvenlik anahtarı",
+        "vi-Hani": "鉸保密部分硬",
+        "vi": "Khóa bảo mật phần cứng",
+        "zh": "硬件安全密钥"
       }
     },
     {
-      "name": "RethinkDNS",
-      "link": "https://rethinkdns.com/",
+      "name": "Mullvad DNS",
+      "link": "https://mullvad.net/en/help/dns-over-https-and-dns-over-tls",
       "description": {
         "da": "DNS-udbyder",
         "en": "DNS provider",
@@ -72,6 +72,24 @@
         "vi-Hani": "Nhà cung cấp DNS",
         "vi": "Nhà cung cấp DNS",
         "zh": "DNS 提供商"
+      }
+    },
+    {
+      "name": "Kagi",
+      "link": "https://kagi.com/",
+      "description": {
+        "da": "Primær søgemaskine",
+        "en": "Primary search engine",
+        "et": "Peamine otsingumootor",
+        "fi": "Päähakukone",
+        "pl": "Główna wyszukiwarka",
+        "ru": "Основная поисковая система",
+        "sv": "Primär sökmotor",
+        "tok": "ilo alasa nanpa wan",
+        "tr": "Birincil arama motoru",
+        "vi-Hani": "Công cụ tìm kiếm chính",
+        "vi": "Công cụ tìm kiếm chính",
+        "zh": "主用搜索引擎"
       }
     },
     {
@@ -90,6 +108,42 @@
         "vi-Hani": "Công cụ tìm kiếm",
         "vi": "Công cụ tìm kiếm",
         "zh": "搜索引擎"
+      }
+    },
+    {
+      "name": "DuckDuckGo",
+      "link": "https://duckduckgo.com/",
+      "description": {
+        "da": "Søgemaskine",
+        "en": "Search engine",
+        "et": "Otsingumootor",
+        "fi": "Hakukone",
+        "pl": "Wyszukiwarka",
+        "ru": "Поисковая система",
+        "sv": "Sökmotor",
+        "tok": "ilo alasa",
+        "tr": "Arama motoru",
+        "vi-Hani": "Công cụ tìm kiếm",
+        "vi": "Công cụ tìm kiếm",
+        "zh": "搜索引擎"
+      }
+    },
+    {
+      "name": "uBlock Origin",
+      "link": "https://ublockorigin.com/",
+      "description": {
+        "da": "Bowsertilføjelse til annonceblokering",
+        "en": "Browser extension for ad blocking",
+        "et": "Brauserilaiend reklaamide blokeerimiseks",
+        "fi": "Selainlaajennus mainosten estoon",
+        "pl": "Rozszerzenie do blokowania reklam",
+        "ru": "Браузерное расширение для блокировки рекламы",
+        "sv": "Webbläsartillägg för annonsblockering",
+        "tok": "ilo pini pi sitelen esun",
+        "tr": "Reklam engelleme için tarayıcı uzantısı",
+        "vi-Hani": "Tiện ích chặn quảng cáo",
+        "vi": "Tiện ích chặn quảng cáo",
+        "zh": "广告拦截浏览器扩展"
       }
     },
     {

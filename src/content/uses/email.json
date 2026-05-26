@@ -57,21 +57,39 @@
       }
     },
     {
-      "name": "Workflowy",
-      "link": "https://workflowy.com/",
+      "name": "Proton Mail",
+      "link": "https://proton.me/mail",
       "description": {
-        "da": "Opgavestyring",
-        "en": "Task management",
-        "et": "Ülesannete haldus",
-        "fi": "Tehtävienhallinta",
-        "pl": "Zarządzanie zadaniami",
-        "ru": "Управление задачами",
-        "sv": "Uppgiftshantering",
-        "tok": "ilo lawa pali",
-        "tr": "Görev yönetimi",
-        "vi-Hani": "管理工役",
-        "vi": "Quản lý công việc",
-        "zh": "任务管理"
+        "da": "Sikker e-mailudbyder",
+        "en": "Secure email provider",
+        "et": "Turvaline e-posti teenusepakkuja",
+        "fi": "Turvallinen sähköpostipalvelu",
+        "pl": "Bezpieczny dostawca poczty",
+        "ru": "Безопасный провайдер электронной почты",
+        "sv": "Säker e-postleverantör",
+        "tok": "pana e e-mail awen",
+        "tr": "Güvenli e-posta sağlayıcısı",
+        "vi-Hani": "供給伊𩄲保密",
+        "vi": "Nhà cung cấp email bảo mật",
+        "zh": "安全电子邮件提供商"
+      }
+    },
+    {
+      "name": "Tuta",
+      "link": "https://tuta.com/",
+      "description": {
+        "da": "Sikker e-mailudbyder",
+        "en": "Secure email provider",
+        "et": "Turvaline e-posti teenusepakkuja",
+        "fi": "Turvallinen sähköpostipalvelu",
+        "pl": "Bezpieczny dostawca poczty",
+        "ru": "Безопасный провайдер электронной почты",
+        "sv": "Säker e-postleverantör",
+        "tok": "pana e e-mail awen",
+        "tr": "Güvenli e-posta sağlayıcısı",
+        "vi-Hani": "供給伊𩄲保密",
+        "vi": "Nhà cung cấp email bảo mật",
+        "zh": "安全电子邮件提供商"
       }
     },
     {
@@ -89,42 +107,6 @@
         "vi-Hani": "Lịch và lập kế hoạch",
         "vi": "Lịch và lập kế hoạch",
         "zh": "日历和计划"
-      }
-    },
-    {
-      "name": "Toggl",
-      "link": "https://toggl.com/",
-      "description": {
-        "da": "Tidsregistrering",
-        "en": "Time tracking",
-        "et": "Aja jälgimine",
-        "fi": "Ajanseuranta",
-        "pl": "Śledzenie czasu",
-        "ru": "Отслеживание времени",
-        "sv": "Tidrapportering",
-        "tok": "ilo alasa tenpo",
-        "tr": "Zaman takibi",
-        "vi-Hani": "蹺𠼲時間",
-        "vi": "Theo dõi thời gian",
-        "zh": "时间追踪"
-      }
-    },
-    {
-      "name": "Zapier",
-      "link": "https://zapier.com/",
-      "description": {
-        "da": "Automatiseringsværktøj",
-        "en": "Automation tool",
-        "et": "Automatiseerimisvahend",
-        "fi": "Automaatio-ohjelma",
-        "pl": "Narzędzie automatyzacji",
-        "ru": "Инструмент автоматизации",
-        "sv": "Automatiseringsverktyg",
-        "tok": "ilo pali wawa",
-        "tr": "Otomasyon aracı",
-        "vi-Hani": "Công cụ tự động hóa",
-        "vi": "Công cụ tự động hóa",
-        "zh": "自动化工具"
       }
     },
     {
@@ -164,7 +146,8 @@
       }
     },
     {
-      "name": "Microsoft Office Online",
+      "name": "LibreOffice",
+      "link": "https://www.libreoffice.org/",
       "description": {
         "da": "Office-pakke",
         "en": "Office suite",
@@ -178,24 +161,6 @@
         "vi-Hani": "Bộ ứng dụng văn phòng",
         "vi": "Bộ ứng dụng văn phòng",
         "zh": "办公套件"
-      }
-    },
-    {
-      "name": "Self-hosted Nextcloud",
-      "link": "https://nextcloud.com/",
-      "description": {
-        "da": "Cloud-lagringsløsning",
-        "en": "Cloud storage solution",
-        "et": "Pilvesalvestuslahendus",
-        "fi": "Pilvitallennus",
-        "pl": "Chmura do przechowywania",
-        "ru": "Облачное хранилище",
-        "sv": "Molnlagring",
-        "tok": "poki sewi",
-        "tr": "Bulut depolama çözümü",
-        "vi-Hani": "Giải pháp lưu trữ đám mây",
-        "vi": "Giải pháp lưu trữ đám mây",
-        "zh": "云存储解决方案"
       }
     }
   ]
