@@ -1,0 +1,96 @@
+{
+  "title": "design",
+  "icon": "palette",
+  "items": [
+    {
+      "name": "Inkscape",
+      "link": "https://inkscape.org/",
+      "description": {
+        "da": "Vektorgrafikeditor",
+        "en": "Vector graphics editor",
+        "et": "Vektorgraafika redaktor",
+        "fi": "Vektoripiirrosohjelma",
+        "pl": "Edytor grafiki wektorowej",
+        "ru": "Редактор векторной графики",
+        "sv": "Vektorgrafikredigerare",
+        "tok": "ilo sitelen linja",
+        "tr": "Vektör grafik düzenleyici",
+        "vi-Hani": "Trình vẽ đồ họa vector",
+        "vi": "Trình vẽ đồ họa vector",
+        "zh": "矢量图形编辑器"
+      }
+    },
+    {
+      "name": "Figma",
+      "link": "https://www.figma.com/",
+      "description": {
+        "da": "UI/UX-designværktøj",
+        "en": "UI/UX design tool",
+        "et": "UI/UX disaini tööriist",
+        "fi": "UI/UX-suunnittelutyökalu",
+        "pl": "Narzędzie do projektowania UI/UX",
+        "ru": "Инструмент для UI/UX дизайна",
+        "sv": "UI/UX-designverktyg",
+        "tok": "ilo sitelen UI/UX",
+        "tr": "UI/UX tasarım aracı",
+        "vi-Hani": "Công cụ thiết kế UI/UX",
+        "vi": "Công cụ thiết kế UI/UX",
+        "zh": "UI/UX 设计工具"
+      }
+    },
+    {
+      "name": "Canva",
+      "link": "https://www.canva.com/",
+      "description": {
+        "da": "Grafisk designplatform",
+        "en": "Graphic design platform",
+        "et": "Graafilise disaini platvorm",
+        "fi": "Graafisen suunnittelun alusta",
+        "pl": "Platforma do projektowania graficznego",
+        "ru": "Платформа для графического дизайна",
+        "sv": "Grafisk designplattform",
+        "tok": "lipu sitelen pi kulupu",
+        "tr": "Grafik tasarım platformu",
+        "vi-Hani": "Thiết kế đồ họa cho nhóm",
+        "vi": "Thiết kế đồ họa cho nhóm",
+        "zh": "团队图形设计"
+      }
+    },
+    {
+      "name": "Krita",
+      "link": "https://krita.org/",
+      "description": {
+        "da": "Digital maling (desktop)",
+        "en": "Digital painting (desktop)",
+        "et": "Digitaalne maalimine (töölaud)",
+        "fi": "Digitaalinen maalaus (tietokone)",
+        "pl": "Cyfrowe malowanie (PC)",
+        "ru": "Цифровое рисование (десктоп)",
+        "sv": "Digital målning (dator)",
+        "tok": "sitelen lon ilo suli",
+        "tr": "Dijital boyama (masaüstü)",
+        "vi-Hani": "Vẽ vời trên máy tính",
+        "vi": "Vẽ vời trên máy tính",
+        "zh": "数字绘画（电脑）"
+      }
+    },
+    {
+      "name": "ibisPaint X",
+      "link": "https://ibispaint.com/",
+      "description": {
+        "da": "Digital maling (mobil)",
+        "en": "Digital painting (mobile)",
+        "et": "Digitaalne maalimine (mobiil)",
+        "fi": "Digitaalinen maalaus (mobiili)",
+        "pl": "Cyfrowe malowanie (mobilne)",
+        "ru": "Цифровое рисование (мобильное)",
+        "sv": "Digital målning (mobil)",
+        "tok": "sitelen lon ilo tawa",
+        "tr": "Dijital boyama (mobil)",
+        "vi-Hani": "Vẽ vời trên điện thoại",
+        "vi": "Vẽ vời trên điện thoại",
+        "zh": "数字绘画（手机）"
+      }
+    }
+  ]
+}

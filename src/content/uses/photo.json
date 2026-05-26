@@ -1,0 +1,24 @@
+{
+  "title": "photo",
+  "icon": "camera",
+  "items": [
+    {
+      "name": "GIMP",
+      "link": "https://www.gimp.org/",
+      "description": {
+        "da": "Open source-fotoredigeringsprogram",
+        "en": "Open-source photo editor",
+        "et": "Avatud lähtekoodiga fototöötleja",
+        "fi": "Avoimen lähdekoodin kuvankäsittely",
+        "pl": "Edytor zdjęć open source",
+        "ru": "Фоторедактор с открытым исходным кодом",
+        "sv": "Öppen källkod-bildredigerare",
+        "tok": "ilo ante sitelen open source",
+        "tr": "Açık kaynaklı fotoğraf düzenleyici",
+        "vi-Hani": "Trình sửa ảnh mã nguồn mở",
+        "vi": "Trình sửa ảnh mã nguồn mở",
+        "zh": "开源照片编辑器"
+      }
+    }
+  ]
+}

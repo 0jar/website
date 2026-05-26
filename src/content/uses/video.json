@@ -1,0 +1,114 @@
+{
+  "title": "video",
+  "icon": "video",
+  "items": [
+    {
+      "name": "DaVinci Resolve",
+      "link": "https://www.blackmagicdesign.com/products/davinciresolve/",
+      "description": {
+        "da": "Professionel videoredigeringsprogram",
+        "en": "Professional video editor",
+        "et": "Professionaalne videoredaktor",
+        "fi": "Ammattimainen videoeditori",
+        "pl": "Profesjonalny edytor wideo",
+        "ru": "Профессиональный видеоредактор",
+        "sv": "Professionell videoredigerare",
+        "tok": "ilo ante sitelen tawa pi jan suli",
+        "tr": "Profesyonel video düzenleyici",
+        "vi-Hani": "Trình sửa video chuyên nghiệp",
+        "vi": "Trình sửa video chuyên nghiệp",
+        "zh": "专业视频编辑器"
+      }
+    },
+    {
+      "name": "Kdenlive",
+      "link": "https://kdenlive.org/",
+      "description": {
+        "da": "Open source-videoredigeringsprogram",
+        "en": "Open-source video editor",
+        "et": "Avatud lähtekoodiga videoredaktor",
+        "fi": "Avoimen lähdekoodin videoeditori",
+        "pl": "Edytor wideo open source",
+        "ru": "Видеоредактор с открытым исходным кодом",
+        "sv": "Öppen källkod-videoredigerare",
+        "tok": "ilo ante sitelen tawa open source",
+        "tr": "Açık kaynaklı video düzenleyici",
+        "vi-Hani": "Trình sửa video mã nguồn mở",
+        "vi": "Trình sửa video mã nguồn mở",
+        "zh": "开源视频编辑器"
+      }
+    },
+    {
+      "name": "CapCut",
+      "link": "https://www.capcut.com/",
+      "description": {
+        "da": "Videoredigeringsprogram (desktop & mobil)",
+        "en": "Video editor (desktop & mobile)",
+        "et": "Videoredaktor (töölaud ja mobiil)",
+        "fi": "Videoeditori (tietokone & mobiili)",
+        "pl": "Edytor wideo (PC i mobilny)",
+        "ru": "Видеоредактор (десктоп и мобильный)",
+        "sv": "Videoredigerare (dator & mobil)",
+        "tok": "ilo ante sitelen tawa (ilo & ilo tawa)",
+        "tr": "Video düzenleyici (masaüstü & mobil)",
+        "vi-Hani": "Trình sửa video",
+        "vi": "Trình sửa video",
+        "zh": "视频编辑器"
+      }
+    },
+    {
+      "name": "Aegisub",
+      "link": "http://www.aegisub.org/",
+      "description": {
+        "da": "Underteksteditor",
+        "en": "Subtitle editor",
+        "et": "Subtiitrite redaktor",
+        "fi": "Tekstityseditori",
+        "pl": "Edytor napisów",
+        "ru": "Редактор субтитров",
+        "sv": "Textningsredigerare",
+        "tok": "ilo sitelen anpa kalama",
+        "tr": "Altyazı düzenleyici",
+        "vi-Hani": "Trình tạo phụ đề",
+        "vi": "Trình tạo phụ đề",
+        "zh": "字幕编辑器"
+      }
+    },
+    {
+      "name": "Cine",
+      "link": "https://github.com/diegopvlk/Cine",
+      "description": {
+        "da": "Videoafspiller",
+        "en": "Video player",
+        "et": "Videopleier",
+        "fi": "Videotoistin",
+        "pl": "Odtwarzacz wideo",
+        "ru": "Видеоплеер",
+        "sv": "Videospelare",
+        "tok": "ilo lukin sitelen tawa",
+        "tr": "Video oynatıcı",
+        "vi-Hani": "Trình phát video",
+        "vi": "Trình phát video",
+        "zh": "视频播放器"
+      }
+    },
+    {
+      "name": "Audacity",
+      "link": "https://www.audacityteam.org/",
+      "description": {
+        "da": "Lydredigeringsprogram",
+        "en": "Audio editor",
+        "et": "Heliredaktor",
+        "fi": "Äänieditori",
+        "pl": "Edytor audio",
+        "ru": "Аудиоредактор",
+        "sv": "Ljudredigerare",
+        "tok": "ilo ante kalama",
+        "tr": "Ses düzenleyici",
+        "vi-Hani": "Trình sửa âm thanh",
+        "vi": "Trình sửa âm thanh",
+        "zh": "音频编辑器"
+      }
+    }
+  ]
+}

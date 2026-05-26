@@ -1,0 +1,86 @@
+{
+  "title": "media",
+  "icon": "music",
+  "items": [
+    {
+      "name": "YouTube Music",
+      "link": "https://music.youtube.com/",
+      "description": {
+        "da": "Musikstreamingtjeneste",
+        "en": "Music streaming service",
+        "et": "Muusika voogedastusteenus",
+        "fi": "Musiikin suoratoistopalvelu",
+        "pl": "Serwis streamingowy muzyki",
+        "ru": "Сервис потоковой передачи музыки",
+        "sv": "Musikstreamingtjänst",
+        "tok": "ilo kalama musi",
+        "tr": "Müzik akış hizmeti",
+        "vi-Hani": "Dịch vụ phát nhạc trực tuyến",
+        "vi": "Dịch vụ phát nhạc trực tuyến",
+        "zh": "在线音乐流媒体服务"
+      }
+    },
+    {
+      "name": "YouTube",
+      "link": "https://www.youtube.com/",
+      "description": {
+        "da": "Videostreamingplatform",
+        "en": "Video streaming platform",
+        "et": "Video voogedastusplatvorm",
+        "fi": "Videon suoratoistoalusta",
+        "pl": "Platforma streamingowa wideo",
+        "ru": "Платформа потокового видео",
+        "sv": "Videostreamingplattform",
+        "tok": "ilo tawa sitelen tawa",
+        "tr": "Video akış platformu",
+        "vi-Hani": "Nền tảng phát video trực tuyến",
+        "vi": "Nền tảng phát video trực tuyến",
+        "zh": "在线视频流媒体平台"
+      }
+    },
+    {
+      "name": "GNOME Podcasts",
+      "link": "https://apps.gnome.org/Podcasts/",
+      "description": {
+        "da": "Desktop podcastklient",
+        "en": "Desktop podcast client",
+        "et": "Töölaua taskuhäälinguklient",
+        "fi": "Podcast-sovellus (tietokone)",
+        "pl": "Klient podcastów na komputer",
+        "ru": "Десктопный подкаст-клиент",
+        "sv": "Podcastklient på datorn",
+        "tok": "ilo kute podcast lon ilo suli",
+        "tr": "Masaüstü podcast istemcisi",
+        "vi-Hani": "Ứng dụng podcast trên máy tính",
+        "vi": "Ứng dụng podcast trên máy tính",
+        "zh": "桌面播客客户端"
+      }
+    },
+    {
+      "name": "AntennaPod",
+      "link": "https://antennapod.org/",
+      "description": {
+        "da": "Mobil podcastklient",
+        "en": "Mobile podcast client",
+        "et": "Mobiilne taskuhäälinguklient",
+        "fi": "Podcast-sovellus (mobiili)",
+        "pl": "Mobilny klient podcastów",
+        "ru": "Мобильный подкаст-клиент",
+        "sv": "Mobil podcastklient",
+        "tok": "ilo kute podcast lon ilo tawa",
+        "tr": "Mobil podcast istemcisi",
+        "vi-Hani": "Ứng dụng podcast trên điện thoại",
+        "vi": "Ứng dụng podcast trên điện thoại",
+        "zh": "移动播客客户端"
+      }
+    },
+    {
+      "name": "Unspeakable Platform 1",
+      "description": "Click 5 times to reveal"
+    },
+    {
+      "name": "Unspeakable Platform 2",
+      "description": "Click 5 times to reveal"
+    }
+  ]
+}
