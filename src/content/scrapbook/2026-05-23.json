@@ -1,0 +1,9 @@
+{
+  "date": "2026-05-23",
+  "content": {
+    "en": "moved some unnecessary typescript back to javascript",
+    "vi": "đưa mấy cái TypeScript dư thừa về lại JavaScript thôi :))",
+    "ru": "убрал лишний typescript, вернул в нормальный javascript как у людей лол",
+    "et": "viisin üleliigse TypeScripti tagasi JavaScripti"
+  }
+}
