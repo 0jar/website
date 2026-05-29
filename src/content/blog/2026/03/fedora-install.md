@@ -2,7 +2,7 @@
 title: "My Fedora setup and hardening process"
 excerpt: "I had to reinstall Fedora, so I documented the thing. This is the setup, the hardening, and everything I do to get it to a state I'm comfortable with."
 date: "2026-03-17T17:10:00Z"
-updated: "2026-03-17T20:15:00Z"
+updated: "2026-05-29T08:50:00Z"
 mood: "neutral"
 catApproved: true
 readingTime: 18
@@ -457,6 +457,26 @@ At this point the system is reasonably hardened, and you can start installing ap
 
 With that said, here's what I did next:
 
+### Replace `power-profiles-daemon` with `tlp` (if on laptop)
+
+Don't get me wrong, `power-profiles-daemon` is simple and good, but it just doesn't cut it for me. I've noticed higher battery consumption with it compared to `tlp`, so I just had to switch back. Idling on PPD takes about 2W more than on TLP, and it takes away about 1 hour of my battery time on my laptop. Oh well.
+
+```bash
+sudo dnf remove -y tuned tuned-ppd
+sudo dnf install -y tlp tlp-rdw
+flatpak install flathub com.github.d4nj1.tlpui
+```
+
+`tlp`'s default settings are already pretty good, so I didn't need to change much. But I got the TLP UI flatpak anyway so I could have a graphical interface to configure it if needed. If you don't need a graphical interface, you can just edit `/etc/tlp.conf` directly. After configuring it, now we just need to enable the service.
+
+```bash
+sudo systemctl enable --now tlp
+sudo systemctl enable --now NetworkManager-dispatcher.service
+sudo systemctl enable --now tlp-pd.service
+```
+
+`tlp-pd` is the power management daemon for `tlp` and you'll get a message to enable it anyway if you only enable `tlp`. The NetworkManager-dispatcher service is also enabled for network connections to not be borked.
+
 ### Install `gnome-tweaks`
 
 Because we all want more customization.
@@ -547,15 +567,13 @@ Here's the list of extensions I use:
 - [Colorblind Filters Advanced](https://extensions.gnome.org/extension/8382/colorblind-filters-advanced/): adds filters to simulate or correct colorblindness. Useful because I'm colorblind and also useful for a11y design.
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/): turns the GNOME dash into a dock.
 - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/): KDE Connect implementation for GNOME, lets you integrate your phone with the desktop.
-- [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/): lets you tweak and hide various GNOME shell UI elements.
-- [Kiwi is not Apple](https://extensions.gnome.org/extension/8276/kiwi-is-not-apple/): brings some macOS features to GNOME.
 - [Kiwi Menu](https://extensions.gnome.org/extension/8697/kiwi-menu/): brings the macOS-style quick menu to GNOME.
 - [Lock Guard](https://extensions.gnome.org/extension/8971/lock-guard/): removes the date, quick settings and keybinds from the lockscreen.
 - [PiP on top](https://extensions.gnome.org/extension/4691/pip-on-top/): keeps picture-in-picture windows always on top. Yeah I also have no idea why this isn't the default either.
 - [Space Bar](https://extensions.gnome.org/extension/5090/space-bar/): replaces the workspace indicator with a more useful one, and you can assign names to each workspace!
-- [Touchpad Switcher](https://extensions.gnome.org/extension/8424/touchpad-switcher/): adds a toggle for the touchpad in the quick settings menu.
+- [Touchpad Switcher](https://extensions.gnome.org/extension/7373/touchpad-switcher/): adds a toggle for the touchpad in the quick settings menu.
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/): allows loading custom GNOME themes.
-- [Wellbeing Toggle](https://extensions.gnome.org/extension/8098/wellbeing-toggle/): adds a toggle for wellbeing features in quick settings.
+- [Vitals](https://extensions.gnome.org/extension/1460/vitals/): shows system information in the top bar.
 
 ### And of course, the apps
 
@@ -564,3 +582,7 @@ Now it's time to install the apps you use. Oh, you want my recommendations? Well
 That's it for me!
 
 Also, this is my second post of the [#100DaysToOffload](https://100daystooffload.com/) challenge.
+
+## Updates
+
+- 29 May 2026: I no longer use the Just Perfection, Kiwi is not Apple, and Wellbeing Toggle extensions, added Vitals instead. Also added the [TLP section](#replace-power-profiles-daemon-with-tlp-if-on-laptop) since I returned to it.
