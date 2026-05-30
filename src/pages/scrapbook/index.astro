@@ -14,7 +14,7 @@ const commits = entries
       b.data.date.getTime() - a.data.date.getTime(),
   )
   .map((entry: CollectionEntry<"scrapbook">) => ({
-    hash: entry.id.substring(0, 10),
+    hash: entry.data.hash,
     msg:
       entry.data.content[lang as keyof typeof entry.data.content] ||
       entry.data.content.en,

@@ -50,6 +50,7 @@ const blog = defineCollection({
 const scrapbook = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "src/content/scrapbook" }),
   schema: z.object({
+    hash: z.string(),
     date: z.coerce.date(),
     content: i18nContentOptional,
   }),
