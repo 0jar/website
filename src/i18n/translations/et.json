@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "Devlogi",
     "description": "Mõned arenduslogid sellest ajast, kui ma seda lehte ehitasin.",
-    "noEntries": "Sissekandeid veel pole."
+    "noEntries": "Sissekandeid veel pole.",
+    "code": "Kood",
+    "issues": "Probleemid",
+    "pullRequests": "Tõmbepäringud",
+    "activity": "Tegevus",
+    "commits": "sissekanded",
+    "branch": "haru",
+    "tags": "sildid",
+    "main": "main",
+    "commitGraph": "Sissekannete graafik",
+    "searchCommits": "Otsi sissekandeid...",
+    "thisBranch": "See haru",
+    "author": "Autor",
+    "sha1": "SHA1",
+    "message": "Sõnum",
+    "date": "Kuupäev",
+    "verifiedCommit": "Kinnitatud sissekanne",
+    "viewCommit": "Vaata sissekannet"
   },
   "chat": {
     "title": "Avalik vestlus",

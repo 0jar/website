@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "Devlogi",
     "description": "Muutamia kehityslokeja ajalta, jolloin tein tämän sivuston.",
-    "noEntries": "Ei merkintöjä vielä."
+    "noEntries": "Ei merkintöjä vielä.",
+    "code": "Koodi",
+    "issues": "Ongelmat",
+    "pullRequests": "Vetopyynnöt",
+    "activity": "Toiminta",
+    "commits": "kommittia",
+    "branch": "haara",
+    "tags": "tagia",
+    "main": "main",
+    "commitGraph": "Kommittikaavio",
+    "searchCommits": "Etsi kommitteja...",
+    "thisBranch": "Tämä haara",
+    "author": "Tekijä",
+    "sha1": "SHA1",
+    "message": "Viesti",
+    "date": "Päivämäärä",
+    "verifiedCommit": "Vahvistettu kommitto",
+    "viewCommit": "Näytä kommitto"
   },
   "chat": {
     "title": "Julkinen keskustelu",

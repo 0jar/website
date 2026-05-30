@@ -277,7 +277,24 @@
     "nowPlaying": "當發"
   },
   "scrapbook": {
-    "title": "Devlog"
+    "title": "Devlog",
+    "code": "碼源",
+    "issues": "問題",
+    "pullRequests": "Pull requests",
+    "activity": "活動",
+    "commits": "commit",
+    "branch": "枝",
+    "tags": "卡",
+    "main": "正",
+    "commitGraph": "表圖 commit",
+    "searchCommits": "尋 kiếm commit...",
+    "thisBranch": "枝呢",
+    "author": "作者",
+    "sha1": "SHA1",
+    "message": "通牒",
+    "date": "日",
+    "verifiedCommit": "Commit 㐌證明",
+    "viewCommit": "𥄎 commit"
   },
   "settings": {
     "title": "掑撻",

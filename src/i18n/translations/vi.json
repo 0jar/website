@@ -387,7 +387,24 @@
   "scrapbook": {
     "title": "Devlog",
     "description": "Một vài nhật ký phát triển khi tôi tạo ra trang web này.",
-    "noEntries": "Chưa có mục nào."
+    "noEntries": "Chưa có mục nào.",
+    "code": "Mã nguồn",
+    "issues": "Vấn đề",
+    "pullRequests": "Yêu cầu hợp nhất",
+    "activity": "Hoạt động",
+    "commits": "commit",
+    "branch": "nhánh",
+    "tags": "thẻ",
+    "main": "main",
+    "commitGraph": "Biểu đồ commit",
+    "searchCommits": "Tìm kiếm commit...",
+    "thisBranch": "Nhánh này",
+    "author": "Tác giả",
+    "sha1": "SHA1",
+    "message": "Thông điệp",
+    "date": "Ngày",
+    "verifiedCommit": "Commit đã xác minh",
+    "viewCommit": "Xem commit"
   },
   "chat": {
     "title": "Trò chuyện công khai",

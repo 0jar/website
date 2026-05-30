@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "toki pali",
     "description": "toki pali tenpo pi mi pali e lipu ni.",
-    "noEntries": "toki ala li lon."
+    "noEntries": "toki ala li lon.",
+    "code": "nasin",
+    "issues": "ike",
+    "pullRequests": "alasa kama",
+    "activity": "pali",
+    "commits": "pali awen",
+    "branch": "palisa",
+    "tags": "nimi",
+    "main": "main",
+    "commitGraph": "sitelen pali",
+    "searchCommits": "alasa pali...",
+    "thisBranch": "palisa ni",
+    "author": "jan pali",
+    "sha1": "nanpa",
+    "message": "toki",
+    "date": "tenpo",
+    "verifiedCommit": "pali lon",
+    "viewCommit": "lukin e pali"
   },
   "chat": {
     "title": "toki pi jan ali",

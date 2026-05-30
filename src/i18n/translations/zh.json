@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "开发日志",
     "description": "我搭建这个网站时的一些开发日志。",
-    "noEntries": "暂无记录。"
+    "noEntries": "暂无记录。",
+    "code": "代码",
+    "issues": "议题",
+    "pullRequests": "合并请求",
+    "activity": "动态",
+    "commits": "提交",
+    "branch": "分支",
+    "tags": "标签",
+    "main": "main",
+    "commitGraph": "提交图",
+    "searchCommits": "搜索提交...",
+    "thisBranch": "此分支",
+    "author": "作者",
+    "sha1": "SHA1",
+    "message": "备注",
+    "date": "提交日期",
+    "verifiedCommit": "已验证提交",
+    "viewCommit": "查看提交"
   },
   "chat": {
     "title": "公共聊天",

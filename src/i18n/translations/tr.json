@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "Geliştirme Günlüğü",
     "description": "Bu siteyi yaparkenki bazı geliştirme günlüklerim.",
-    "noEntries": "Henüz giriş yok."
+    "noEntries": "Henüz giriş yok.",
+    "code": "Kod",
+    "issues": "Konular",
+    "pullRequests": "Değişiklik istekleri",
+    "activity": "Aktivite",
+    "commits": "gönderi",
+    "branch": "dal",
+    "tags": "etiket",
+    "main": "main",
+    "commitGraph": "İşleme Grafiği",
+    "searchCommits": "Katkıları ara...",
+    "thisBranch": "Bu Dal",
+    "author": "Yazar",
+    "sha1": "SHA1",
+    "message": "Mesaj",
+    "date": "Tarih",
+    "verifiedCommit": "Doğrulanmış Gönderi",
+    "viewCommit": "Gönderiyi görüntüle"
   },
   "chat": {
     "title": "Herkese açık sohbet",

@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "Devlog",
     "description": "Nogle udviklingslogge fra da jeg byggede dette websted.",
-    "noEntries": "Ingen indlæg endnu."
+    "noEntries": "Ingen indlæg endnu.",
+    "code": "Kode",
+    "issues": "Problemer",
+    "pullRequests": "Pull-anmodninger",
+    "activity": "Aktivitet",
+    "commits": "commits",
+    "branch": "branch",
+    "tags": "tags",
+    "main": "main",
+    "commitGraph": "Commit graf",
+    "searchCommits": "Søg commits...",
+    "thisBranch": "Denne gren",
+    "author": "Forfatter",
+    "sha1": "SHA1",
+    "message": "Besked",
+    "date": "Dato",
+    "verifiedCommit": "Bekræftet commit",
+    "viewCommit": "Se commit"
   },
   "chat": {
     "title": "Offentlig chat",

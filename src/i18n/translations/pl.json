@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "Devlog",
     "description": "Niektóre logi deweloperskie z czasu tworzenia tej strony.",
-    "noEntries": "Brak wpisów."
+    "noEntries": "Brak wpisów.",
+    "code": "Kod",
+    "issues": "Zgłoszenia",
+    "pullRequests": "Pull requesty",
+    "activity": "Aktywność",
+    "commits": "commity",
+    "branch": "gałąź",
+    "tags": "tagi",
+    "main": "main",
+    "commitGraph": "Wykres commitów",
+    "searchCommits": "Wyszukaj commity...",
+    "thisBranch": "Ta gałąź",
+    "author": "Autor",
+    "sha1": "SHA1",
+    "message": "Wiadomość",
+    "date": "Data",
+    "verifiedCommit": "Zweryfikowany committ",
+    "viewCommit": "Zobacz committa"
   },
   "chat": {
     "title": "Czat publiczny",

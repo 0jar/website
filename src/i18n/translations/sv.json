@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "Devlogg",
     "description": "Några utvecklingsloggar från när jag byggde den här sidan.",
-    "noEntries": "Inga inlägg ännu."
+    "noEntries": "Inga inlägg ännu.",
+    "code": "Kod",
+    "issues": "Ärenden",
+    "pullRequests": "Ändringsförfrågningar",
+    "activity": "Aktiviteter",
+    "commits": "incheckningar",
+    "branch": "grenar",
+    "tags": "taggar",
+    "main": "main",
+    "commitGraph": "Incheckningsgraf",
+    "searchCommits": "Sök incheckningar...",
+    "thisBranch": "Denna gren",
+    "author": "Upphovsman",
+    "sha1": "SHA1",
+    "message": "Meddelande",
+    "date": "Datum",
+    "verifiedCommit": "Verifierad incheckning",
+    "viewCommit": "Visa incheckning"
   },
   "chat": {
     "title": "Offentlig chatt",

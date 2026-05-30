@@ -347,7 +347,24 @@
   "scrapbook": {
     "title": "Девлог",
     "description": "Некоторые логи разработки во время создания этого сайта.",
-    "noEntries": "Пока нет записей."
+    "noEntries": "Пока нет записей.",
+    "code": "Код",
+    "issues": "Задачи",
+    "pullRequests": "Слияния",
+    "activity": "Активность",
+    "commits": "коммиты",
+    "branch": "ветка",
+    "tags": "теги",
+    "main": "main",
+    "commitGraph": "Граф коммитов",
+    "searchCommits": "Найти коммиты...",
+    "thisBranch": "В этой ветви",
+    "author": "Автор",
+    "sha1": "SHA1",
+    "message": "Сообщение",
+    "date": "Дата",
+    "verifiedCommit": "Проверенный коммит",
+    "viewCommit": "Посмотреть коммит"
   },
   "chat": {
     "title": "Публичный чат",
