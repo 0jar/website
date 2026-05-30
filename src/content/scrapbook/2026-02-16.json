@@ -1,4 +1,5 @@
 {
+  "hash": "16627b8ec75baeb407c020c62737bab7e410ce52",
   "date": "2026-02-16T09:15:32Z",
   "content": {
     "en": "removed the command palette toast hint on first visit on desktop. felt it was more intrusive than helpful, and users can figure it out as an easter egg :3",

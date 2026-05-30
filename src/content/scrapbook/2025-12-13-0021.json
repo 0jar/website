@@ -1,4 +1,5 @@
 {
+  "hash": "2f258275daf51a03a86a8f17ba26b25cf1a96c7e",
   "date": "2025-12-13T00:21:19Z",
   "content": {
     "en": "ripped out MotionProvider, big refactor. had enough of it.",

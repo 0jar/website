@@ -1,4 +1,5 @@
 {
+  "hash": "0ed618f7f4b7355a91de7bbaef95036d11cb2699",
   "date": "2025-11-27T07:41:09Z",
   "content": {
     "en": "removed eslint because apparently it is no longer supported in nextjs? wild.",

@@ -1,4 +1,5 @@
 {
+  "hash": "21d344dddb7a0e1f0ee7b014ab154953cf5d33ba",
   "date": "2026-05-23",
   "content": {
     "en": "moved some unnecessary typescript back to javascript",

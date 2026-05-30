@@ -1,4 +1,5 @@
 {
+  "hash": "10ee64135c5ef5df3be2f6720d1d0b00f19ca00c",
   "date": "2024-07-31T12:13:54+07:00",
   "content": {
     "en": "implemented security HTTP headers for the site",
