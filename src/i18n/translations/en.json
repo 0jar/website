@@ -389,7 +389,24 @@
   "scrapbook": {
     "title": "Devlog",
     "description": "Some development logs when I was building this site.",
-    "noEntries": "No entries yet."
+    "noEntries": "No entries yet.",
+    "code": "Code",
+    "issues": "Issues",
+    "pullRequests": "Pull requests",
+    "activity": "Activity",
+    "commits": "commits",
+    "branch": "branch",
+    "tags": "tags",
+    "main": "main",
+    "commitGraph": "Commit graph",
+    "searchCommits": "Search commits...",
+    "thisBranch": "This branch",
+    "author": "Author",
+    "sha1": "SHA1",
+    "message": "Message",
+    "date": "Date",
+    "verifiedCommit": "Verified commit",
+    "viewCommit": "View commit"
   },
   "chat": {
     "title": "Public chat",

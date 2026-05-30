@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { t } from "@/i18n";
+import T from "@/components/T.astro";
 
 export interface Commit {
   hash: string;
@@ -15,41 +15,97 @@ export interface Props {
 }
 
 const { commits } = Astro.props;
-const lang = Astro.locals?.lang || "en";
+
 ---
 
-<article class="mt-4 bg-card text-card-foreground border rounded-lg p-4 shadow-sm overflow-hidden text-sm">
-  <div class="divide-y divide-border">
-    {commits.map((commit) => (
-      <div class="flex items-center gap-3 p-3 hover:bg-muted/50 transition-colors group">
-        <Image src="/favicon.png" alt={commit.author} width={24} height={24} class="rounded-sm flex-shrink-0" />
-        <span class="font-medium text-muted-foreground w-15">{commit.author}</span>
-        <span class="px-2 py-0.5 bg-muted/80 text-muted-foreground rounded border border-border/50 hidden sm:block text-xs font-monaspice">{commit.hash.substring(0, 10)}</span>
-        <span class="flex-1 font-medium">{commit.msg}</span>
-        {commit.badges?.length > 0 && (
-          <div class="hidden md:flex gap-1">
-            {commit.badges.map((badge: string) => (
-              <span class="px-1.5 text-[12px] font-bold tracking-wider rounded-sm border border-primary/20 text-primary/70">{badge}</span>
-            ))}
-          </div>
-        )}
-        <span class="text-xs text-muted-foreground whitespace-nowrap ml-auto">
-          <span class="sm:hidden">{commit.date.slice(-4)}</span>
-          <span class="hidden sm:inline">{commit.date}</span>
-        </span>
-        <div class="flex gap-1 opacity-100">
-          <button class="p-1 hover:bg-accent rounded text-muted-foreground copy-hash-btn" data-hash={commit.hash} aria-label={t(lang, "about.timeline.copyHash")} title={t(lang, "about.timeline.copyHashTitle")}><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button>
-        </div>
-      </div>
-    ))}
+<article class="mt-4 bg-card text-card-foreground border border-border/60 rounded-lg shadow-sm overflow-hidden text-sm">
+  <div class="p-2.5 bg-muted/20 border-b border-border/60 flex items-center gap-2">
+    <div class="relative w-full sm:max-w-[280px]">
+      <label for="commit-search" class="sr-only"><T key="scrapbook.searchCommits" tag="Fragment" /></label>
+      <input type="text" id="commit-search" placeholder="Search commits" class="w-full bg-background border border-border/60 rounded-md px-3 py-1.5 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary/50 placeholder:text-muted-foreground shadow-sm transition-shadow" />
+    </div>
+    <button class="px-3 py-1.5 bg-background border border-border/60 rounded-md text-sm flex flex-shrink-0 items-center gap-1 sm:gap-2 hover:bg-muted/50 shadow-sm transition-colors disabled:opacity-50" disabled>
+      <T key="scrapbook.thisBranch" tag="Fragment" /> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:block" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="w-full text-left border-collapse">
+      <caption class="sr-only">Commit history</caption>
+      <thead class="bg-muted/40 text-muted-foreground text-sm border-b border-border/60">
+        <tr>
+          <th class="py-2.5 px-3 sm:px-4 font-semibold text-left w-[110px] sm:w-32"><T key="scrapbook.author" tag="Fragment" /></th>
+          <th class="py-2.5 px-4 font-semibold text-left w-40 hidden sm:table-cell"><T key="scrapbook.sha1" tag="Fragment" /></th>
+          <th class="py-2.5 px-3 sm:px-4 font-semibold text-left"><T key="scrapbook.message" tag="Fragment" /></th>
+          <th class="py-2.5 px-3 sm:px-4 font-semibold text-right sm:pr-[4.5rem]"><T key="scrapbook.date" tag="Fragment" /></th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-border/60 bg-background/50" id="commit-list">
+        {commits.map((commit) => (
+          <tr class="hover:bg-muted/40 transition-colors group commit-row" data-search={`${commit.author.toLowerCase()} ${commit.hash.toLowerCase()} ${commit.msg.toLowerCase()}`}>
+            <td class="py-2.5 px-3 sm:px-4 align-top sm:align-middle">
+              <div class="flex items-center gap-1.5 sm:gap-2">
+                <Image src="/favicon.png" alt={commit.author} width={20} height={20} class="rounded-sm flex-shrink-0" />
+                <span class="font-medium text-sm">{commit.author}</span>
+              </div>
+            </td>
+            <td class="py-2.5 px-4 hidden sm:table-cell align-middle">
+              <div class="flex items-center gap-1.5">
+                <span class="px-1.5 py-0.5 bg-green-900/20 text-green-600 dark:text-green-500 rounded border border-green-700/30 text-xs font-monaspice">{commit.hash.substring(0, 10)}</span>
+                <span class="text-green-600 dark:text-green-500" title="Verified commit">
+                  <span class="sr-only"><T key="scrapbook.verifiedCommit" tag="Fragment" /></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                </span>
+              </div>
+            </td>
+            <td class="py-2.5 px-3 sm:px-4 align-top sm:align-middle">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                <span class="text-sm font-medium text-foreground break-words">{commit.msg}</span>
+                {commit.badges?.length > 0 && (
+                  <div class="hidden md:flex gap-1 flex-shrink-0">
+                    {commit.badges.map((badge: string) => (
+                      <span class="px-1.5 py-[1px] text-sm font-bold tracking-wider rounded-sm border border-primary/20 text-primary/70 bg-primary/5">{badge}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </td>
+            <td class="py-2.5 px-3 sm:px-4 text-right align-top sm:align-middle">
+              <div class="flex items-center justify-end gap-1.5 sm:gap-3">
+                <span class="text-xs text-muted-foreground whitespace-nowrap">{commit.date}</span>
+                <div class="flex gap-0.5 sm:gap-1">
+                  <button class="p-1 sm:p-1.5 hover:bg-muted rounded text-muted-foreground hover:text-foreground copy-hash-btn transition-colors" data-hash={commit.hash} title="Copy hash">
+                    <span class="sr-only"><T key="about.timeline.copyHash" tag="Fragment" /></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+                  </button>
+                  <button class="p-1 sm:p-1.5 hover:bg-muted rounded text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30" disabled title="View commit">
+                    <span class="sr-only"><T key="scrapbook.viewCommit" tag="Fragment" /></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
+                  </button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </div>
 </article>
 
 <script>
-  document.querySelectorAll('.copy-hash-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const hash = btn.getAttribute('data-hash');
+  document.querySelectorAll(".copy-hash-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const hash = btn.getAttribute("data-hash");
       if (hash) navigator.clipboard.writeText(hash);
+    });
+  });
+
+  const searchInput = document.getElementById("commit-search") as HTMLInputElement;
+  const commitRows = document.querySelectorAll<HTMLElement>(".commit-row");
+
+  searchInput?.addEventListener("input", (e) => {
+    const query = (e.target as HTMLInputElement).value.toLowerCase();
+    commitRows.forEach((row) => {
+      row.style.display = (row.dataset.search || "").includes(query) ? "" : "none";
     });
   });
 </script>

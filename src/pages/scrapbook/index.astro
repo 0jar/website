@@ -4,41 +4,113 @@ import T from "@/components/T.astro";
 import CommitTimeline from "@/components/CommitTimeline.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { dateLong } from "@/lib/utils/timezone-utils";
+import { Image } from "astro:assets";
 
 const lang = Astro.locals?.lang || "en";
 const entries = await getCollection("scrapbook");
 const commits = entries
-  .sort((a: CollectionEntry<"scrapbook">, b: CollectionEntry<"scrapbook">) => b.data.date.getTime() - a.data.date.getTime())
+  .sort(
+    (a: CollectionEntry<"scrapbook">, b: CollectionEntry<"scrapbook">) =>
+      b.data.date.getTime() - a.data.date.getTime(),
+  )
   .map((entry: CollectionEntry<"scrapbook">) => ({
     hash: entry.id.substring(0, 10),
-    msg: entry.data.content[lang as keyof typeof entry.data.content] || entry.data.content.en,
+    msg:
+      entry.data.content[lang as keyof typeof entry.data.content] ||
+      entry.data.content.en,
     date: entry.data.date.toLocaleDateString("en", dateLong),
     author: "Jarema",
-    badges: []
+    badges: [],
   }));
+
+const tabs = [
+  { id: "code", href: "https://codeberg.org/0jar/website", label: "scrapbook.code", icon: '<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>', active: true },
+  { id: "issues", href: "https://codeberg.org/0jar/website/issues", label: "scrapbook.issues", icon: '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>' },
+  { id: "pulls", href: "https://codeberg.org/0jar/website/pulls", label: "scrapbook.pullRequests", icon: '<circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line>' },
+  { id: "activity", href: "https://codeberg.org/0jar/website/activity", label: "scrapbook.activity", icon: '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>' }
+];
+
+const stats = [
+  { value: commits.length, label: "scrapbook.commits", icon: '<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>', strong: true },
+  { value: 1, label: "scrapbook.branch", icon: '<line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path>' },
+  { value: 0, label: "scrapbook.tags", icon: '<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>' }
+];
 ---
 
-<BaseLayout title="Devlog" description="Some development logs when I was building this site.">
+<BaseLayout
+  title="Devlog"
+  description="Some development logs when I was building this site."
+>
   <div class="container mx-auto px-4 py-8 lg:py-12">
-    <div class="max-w-3xl mx-auto">
-      <header class="mb-8 text-center">
-        <T key="scrapbook.title" tag="h1" class="text-4xl font-bold" />
-        <T key="scrapbook.description" tag="p" class="mt-3 text-lg text-muted-foreground" />
+    <div class="max-w-6xl mx-auto">
+      <header class="mb-6 flex flex-col gap-4">
+        <div class="flex items-center gap-3 text-2xl">
+          <Image src="/favicon.png" alt="0jar" width={32} height={32} class="rounded-sm" />
+          <h1 class="font-medium">
+            <a href="https://codeberg.org/0jar" rel="noopener noreferrer" class="text-primary hover:underline">0jar</a> /
+            <a href="https://codeberg.org/0jar/website" rel="noopener noreferrer" class="font-bold hover:underline">website</a>
+          </h1>
+        </div>
+
+        <nav aria-label="Repository navigation" class="border-b border-border/50 text-sm overflow-x-auto">
+          <ul class="flex items-center gap-6">
+            {tabs.map(tab => (
+              <li>
+                <a href={tab.href} rel="noopener noreferrer" aria-current={tab.active ? "page" : undefined} class={`px-2 py-2.5 flex items-center gap-2 whitespace-nowrap ${tab.active ? 'border-b-2 border-primary text-foreground font-semibold' : 'text-muted-foreground hover:text-foreground'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={tab.icon} />
+                  <T key={tab.label} tag="Fragment" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div class="flex items-center justify-between text-sm text-muted-foreground bg-muted/20 border border-border/60 rounded-md px-4 py-2.5 mt-2 overflow-x-auto shadow-sm">
+          <ul class="flex items-center divide-x divide-border/60">
+            {stats.map((stat, i) => (
+              <li class={`flex items-center gap-2 whitespace-nowrap ${i === 0 ? 'pr-4' : 'px-4'}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={stat.icon} />
+                {stat.strong ? <span class="font-medium text-foreground">{stat.value}</span> : stat.value} <T key={stat.label} tag="Fragment" />
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-2 whitespace-nowrap pl-4 border-l border-border/60">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg> 6969 MiB
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-2 mb-2">
+          <div class="flex items-center gap-2 text-xs font-medium">
+            <button class="bg-muted/30 border border-border/60 text-foreground hover:bg-muted/50 rounded-md px-3 py-1.5 flex items-center gap-2 shadow-sm transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg> <T key="scrapbook.main" tag="Fragment" /> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <a href="https://codeberg.org/0jar/website/graph" rel="noopener noreferrer" class="bg-muted/30 border border-border/60 text-foreground hover:bg-muted/50 rounded-md px-3 py-1.5 flex items-center gap-2 shadow-sm transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg> <T key="scrapbook.commitGraph" tag="Fragment" />
+            </a>
+          </div>
+          <T key="scrapbook.description" tag="p" class="text-sm text-muted-foreground" />
+        </div>
       </header>
 
-      {!commits.length ? (
-        <p class="text-muted-foreground"><T key="scrapbook.noEntries" /></p>
-      ) : (
-        <CommitTimeline commits={commits} />
-      )}
+      {
+        !commits.length ? (
+          <p class="text-muted-foreground">
+            <T key="scrapbook.noEntries" />
+          </p>
+        ) : (
+          <CommitTimeline commits={commits} />
+        )
+      }
     </div>
   </div>
 </BaseLayout>
 
 <script>
-  import { getPageLocale } from '@/i18n/client';
-  import { updateDateElements } from '@/lib/utils/timezone-utils';
+  import { getPageLocale } from "@/i18n/client";
+  import { updateDateElements } from "@/lib/utils/timezone-utils";
 
   updateDateElements(document, getPageLocale());
-  document.addEventListener("timezone-change", () => updateDateElements(document, getPageLocale()));
+  document.addEventListener("timezone-change", () =>
+    updateDateElements(document, getPageLocale()),
+  );
 </script>
