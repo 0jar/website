@@ -2,7 +2,7 @@
 title: "My Fedora setup and hardening process"
 excerpt: "I had to reinstall Fedora, so I documented the thing. This is the setup, the hardening, and everything I do to get it to a state I'm comfortable with."
 date: "2026-03-17T17:10:00Z"
-updated: "2026-05-29T08:50:00Z"
+updated: "2026-06-04T19:12:00Z"
 mood: "neutral"
 catApproved: true
 readingTime: 18
@@ -392,7 +392,40 @@ If it shows "SELinux status: enabled" and "Current mode: enforcing", you're good
 sudo setenforce 1
 ```
 
-### Oh, and we want an intrusion detection system
+### Let's get an antivirus
+
+I use ClamAV. It's pretty great! Let's install it:
+
+```bash
+sudo dnf -y install clamav clamd
+sudo sed -i -e "/^#*LocalSocket\s/s/^#//" /etc/clamd.d/scan.conf
+sudo sed -i -e "/^#*TCPSocket\s/s/^#//" /etc/clamd.d/scan.conf
+```
+
+The default config doesn't configure the scanning mode and you won't be able to scan for anything if you don't change it, so we have to uncomment the LocalSocket and TCPSocket entries in the file. Now let's initialise the database:
+
+```bash
+sudo freshclam
+sudo chmod a+r /var/lib/clamav/*
+sudo systemctl --now enable clamav-freshclam.service clamd@scan.service
+sudo semanage boolean -m -1 antivirus_can_scan_system
+```
+
+There we go. Now let's test the antivirus with an EICAR file:
+
+```bash
+wget -O /tmp/eicar.txt \
+"https://www.eicar.org/download/eicar-com-2/?wpdmdl=8842"
+sudo -u clamscan /tmp/eicar.txt
+```
+
+If all goes well, you should see this:
+
+```bash
+/tmp/eicar.txt: Eicar-Test-Signature FOUND
+```
+
+### Oh, and we want an intrusion detection system too
 
 I use AIDE, which is a file integrity checker that can alert you if system files are modified. It works by building a database of file checksums and metadata, then lets you compare the current state of your system against that baseline to detect unexpected changes.
 
@@ -586,3 +619,4 @@ Also, this is my second post of the [#100DaysToOffload](https://100daystooffload
 ## Updates
 
 - 29 May 2026: I no longer use the Just Perfection, Kiwi is not Apple, and Wellbeing Toggle extensions, added Vitals instead. Also added the [TLP section](#replace-power-profiles-daemon-with-tlp-if-on-laptop) since I returned to it.
+- 04 June 2026: Added the [ClamAV](#lets-get-an-antivirus) section. Somehow I didn't include that in this post?
