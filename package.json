@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "build:fast": "SKIP_WEBMENTIONS=1 astro build",
+    "build:prod": "astro build && git push && neocities push --prune dist/client",
     "preview": "LOCAL_PREVIEW=1 SKIP_WEBMENTIONS=1 astro build && LOCAL_PREVIEW=1 astro preview",
     "astro": "astro",
     "check": "astro check",
