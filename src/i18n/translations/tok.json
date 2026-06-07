@@ -233,7 +233,9 @@
       "life": "lon",
       "security": "awen",
       "guides": "pana sona"
-    }
+    },
+    "writtenOn": "sitelen lon",
+    "postedOn": "sitelen sin lon"
   },
   "now": {
     "title": "tenpo ni",

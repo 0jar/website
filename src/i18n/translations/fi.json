@@ -233,7 +233,9 @@
       "life": "Elämä",
       "security": "Tietoturva",
       "guides": "Oppaat"
-    }
+    },
+    "writtenOn": "Kirjoitettu",
+    "postedOn": "Julkaistu"
   },
   "now": {
     "title": "Nyt",

@@ -273,7 +273,9 @@
       "life": "Cuộc sống",
       "security": "Bảo mật",
       "guides": "Hướng dẫn"
-    }
+    },
+    "writtenOn": "Viết",
+    "postedOn": "Đăng"
   },
   "now": {
     "title": "Hiện tại",

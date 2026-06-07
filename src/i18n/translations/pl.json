@@ -233,7 +233,9 @@
       "life": "Życie",
       "security": "Bezpieczeństwo",
       "guides": "Poradniki"
-    }
+    },
+    "writtenOn": "Napisano",
+    "postedOn": "Opublikowano"
   },
   "now": {
     "title": "Teraz",

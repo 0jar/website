@@ -233,7 +233,9 @@
       "life": "Liv",
       "security": "Sikkerhed",
       "guides": "Vejledninger"
-    }
+    },
+    "writtenOn": "Skrevet den",
+    "postedOn": "Udgivet den"
   },
   "now": {
     "title": "Nu",

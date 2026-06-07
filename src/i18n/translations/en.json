@@ -275,7 +275,9 @@
       "life": "Life",
       "security": "Security",
       "guides": "Guides"
-    }
+    },
+    "writtenOn": "Written on",
+    "postedOn": "Posted on"
   },
   "now": {
     "title": "Now",
@@ -783,4 +785,3 @@
     }
   }
 }
-

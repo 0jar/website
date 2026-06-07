@@ -233,7 +233,9 @@
       "life": "Elu",
       "security": "Turvalisus",
       "guides": "Juhendid"
-    }
+    },
+    "writtenOn": "Kirjutatud",
+    "postedOn": "Postitatud"
   },
   "now": {
     "title": "Nüüd",

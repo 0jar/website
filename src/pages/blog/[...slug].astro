@@ -213,9 +213,23 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
       <a href={postUrl} class="u-url u-uid hidden" aria-hidden="true">{postUrl}</a>
 
       <div class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-        <time class="dt-published" datetime={date.toISOString()} data-date={date.toISOString()}>
-          {formatDate(date)}
-        </time>
+        <span>
+          <T key="blog.postedOn" />{" "}
+          <time class="dt-published" datetime={date.toISOString()} data-date={date.toISOString()}>
+            {formatDate(date)}
+          </time>
+        </span>
+        {post.data.written && (
+          <>
+            <span aria-hidden="true">•</span>
+            <span>
+              <T key="blog.writtenOn" />{" "}
+              <time datetime={post.data.written.toISOString()} data-date={post.data.written.toISOString()}>
+                {formatDate(post.data.written)}
+              </time>
+            </span>
+          </>
+        )}
         {hasUpdatedDate && updated && (
           <>
             <span aria-hidden="true">•</span>

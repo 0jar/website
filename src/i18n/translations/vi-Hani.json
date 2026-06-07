@@ -173,7 +173,9 @@
     "webmentionLike": "㐌適排尼",
     "webmentionRepost": "㐌𢯢𠚢𡀰排尼",
     "webmentionReply": "㐌𢀈𡀰",
-    "webmentionMention": "㐌提及排尼"
+    "webmentionMention": "㐌提及排尼",
+    "writtenOn": "筆日",
+    "postedOn": "登日"
   },
   "now": {
     "title": "現在",

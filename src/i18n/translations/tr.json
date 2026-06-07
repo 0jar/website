@@ -233,7 +233,9 @@
       "life": "Yaşam",
       "security": "Güvenlik",
       "guides": "Rehberler"
-    }
+    },
+    "writtenOn": "Yazıldı",
+    "postedOn": "Yayınlandı"
   },
   "now": {
     "title": "Şimdi",

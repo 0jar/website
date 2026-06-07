@@ -233,7 +233,9 @@
       "life": "生活",
       "security": "安全",
       "guides": "指南"
-    }
+    },
+    "writtenOn": "写于",
+    "postedOn": "发布于"
   },
   "now": {
     "title": "现在",
