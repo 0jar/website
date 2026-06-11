@@ -15,14 +15,14 @@ See the site in action:
 
 ## Architecture
 
-This is an Astro website using islands architecture, static HTML by default and React for some specific interactive components.
+This is an Astro website using islands architecture, static HTML by default and Preact for interactive components.
 
 ### Key points
 
 - Static-first, most components are `.astro`
-- Interactive islands are implemented with React (`.tsx`) through Preact
-  - `client:only="preact"` is used for client-only UI (for example, command bar)
-  - `client:load` is used where hydration after SSR is wanted (for example, games)
+- Interactive islands are implemented with Preact (`.tsx`)
+  - `client:only="preact"` is used for client-only UI (for example, games)
+  - Some components (like the command bar) are manually lazy-loaded via vanilla scripts for performance
 - Locale is inferred in middleware (see lines 5-8 of [src/middleware.ts](./src/middleware.ts)) and injected into `Astro.locals.lang`
 - Blog HTML is post-processed in middleware to wrap standalone images into `<figure><figcaption>` using image alt text
 
@@ -33,7 +33,7 @@ The project supports both Vercel and Netlify adapters. The adapter is selected b
 - Default adapter: `@astrojs/vercel`
 - If `NETLIFY` environment variable is set: `@astrojs/netlify`
 
-Both Vercel and Netlify deploy from the [GitHub mirror](https://github.com/jartf/website).
+Both Vercel and Netlify deploy from the [GitHub mirror](https://github.com/jartf/website). Additionally, a build script supports pushing static output to Neocities if you have the CLI installed.
 
 Build output is static (`output: "static"`) with dynamic runtime endpoints only where explicitly configured.
 
@@ -79,12 +79,14 @@ pnpm preview
 
 ### Commands
 
-| Command        | Action                                |
-|----------------|---------------------------------------|
-| `pnpm dev`     | Start dev server at `localhost:4321`  |
-| `pnpm build`   | Build production output to `./dist/`  |
-| `pnpm preview` | Preview production build              |
-| `pnpm check`   | Run Astro + TypeScript checks         |
+| Command            | Action                                         |
+|--------------------|------------------------------------------------|
+| `pnpm dev`         | Start dev server at `localhost:4321`           |
+| `pnpm build`       | Build production output to `./dist/`           |
+| `pnpm build:fast`  | Build without fetching external webmentions    |
+| `pnpm build:prod`  | Build and push to Git and Neocities            |
+| `pnpm preview`     | Preview production build                       |
+| `pnpm check`       | Run Astro + TypeScript checks                  |
 
 ## Project structure
 
@@ -100,7 +102,7 @@ src/
 ├── content.config.ts # Content collections config
 ├── middleware.ts     # Injects lang into Astro.locals from URL
 ├── env.d.ts          # TypeScript types
-├── components/       # .astro (static) and .tsx (React islands)
+├── components/       # .astro (static) and .tsx (Preact islands)
 │   ├── blog/         # Blog components
 │   ├── home/         # Homepage components
 │   ├── game/         # Game components
@@ -119,9 +121,9 @@ src/
 │   └── index.ts      # Other hooks
 ├── i18n/             # Translations and language utilities
 │   ├── translations/ # JSON translation files (one per locale)
-│   ├── client.ts     # Client-side language utilities
+│   ├── client.js     # Client-side language utilities
 │   ├── index.ts      # Server-side i18n utilities
-│   └── routing.ts    # Locale routing helpers
+│   └── routing.js    # Locale routing helpers
 ├── layouts/
 │   ├── BaseLayout.astro    # Main site layout
 │   └── RetroLayout.astro   # Layout for /retro/* (old style) pages
@@ -187,7 +189,7 @@ The site supports dark and light modes:
 
 - Translations in [`src/i18n/translations/*.json`](./src/i18n/translations)
 - Use the [`T.astro`](./src/components/T.astro) component for static translations
-- Language state managed via `languageStore` nanostore
+- Language state inferred from URL/routing and managed via vanilla JavaScript helpers
 - Language detection from browser or localStorage
 
 ### Runtime endpoints
@@ -208,8 +210,8 @@ The site supports dark and light modes:
 
 **When to use `.astro` vs `.tsx`:**
 
-- Use `.astro` for static content, layouts, pages
-- Use `.tsx` with `client:only="react"` for interactive features (command bar, language toggle, games)
+- Use `.astro` (preferred) for static content, layouts, pages
+- Use `.tsx` with `client:only="preact"` for interactive features (games) or manually lazy load them via `<script>` tags
 
 **Island hydration examples:**
 
@@ -218,10 +220,14 @@ The site supports dark and light modes:
 <StaticComponent />
 
 <!-- Client-only interactive island -->
-<CommandBar client:only="react" />
+<TetrisGame client:only="preact" />
 
-<!-- Hydrated interactive island -->
-<Game2048 client:load />
+<!-- Manually initialized Preact component in a script tag -->
+<script>
+  import { CommandBar } from "@/components/layout/CommandBar";
+  import { render, h } from "preact";
+  render(h(CommandBar, { initialOpen: true }), document.getElementById("bar-root"));
+</script>
 ```
 
 ## External integrations
@@ -240,7 +246,7 @@ The site supports dark and light modes:
 
 This repository is dual-licensed.
 
-All source code is licensed under the [GNU General Public License v3](LICENSE).
+All source code is licensed under the [GNU Affero General Public License v3](LICENSE).
 
 All non-code content, such as text, posts, essays, documentation, photos, videos, and other materials, is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
 
