@@ -128,19 +128,25 @@ const toggles = [
               <T key="settings.fontFamily" class="text-sm font-medium" id="font-family-label" />
             </div>
             <select id="settings-font-select" aria-labelledby="font-family-label" class={`font-preview-select px-3 py-1.5 text-sm font-medium bg-muted text-foreground border border-border rounded-md transition-all hover:bg-muted/80 hover:border-primary/50 ${focusBase}`}>
-              <option value="personal" style="font-family: 'Lexend', ui-sans-serif, system-ui, sans-serif;"><T key="settings.fontPersonal" /></option>
-              <option value="system" style="font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Nimbus Sans L', Roboto, Noto, 'Segoe UI', Arial, Helvetica, 'Helvetica Neue', sans-serif;"><T key="settings.fontSystem" /></option>
-              <option value="atkinson" style="font-family: 'Atkinson Hyperlegible', sans-serif;">Atkinson Hyperlegible</option>
-              <option value="basier" style="font-family: 'Basier Square', sans-serif;">Basier Square</option>
-              <option value="be-vietnam-pro" style="font-family: 'Be Vietnam Pro', sans-serif;">Be Vietnam Pro</option>
-              <option value="dyslexia" style="font-family: 'OpenDyslexic', sans-serif;">OpenDyslexic</option>
-              <option value="geist" style="font-family: 'Geist', sans-serif;">Geist</option>
-              <option value="grandstander" style="font-family: 'Grandstander', sans-serif;">Grandstander</option>
-              <option value="lexend" style="font-family: 'Lexend', ui-sans-serif, system-ui, sans-serif;">Lexend</option>
-              <option value="outfit" style="font-family: 'Outfit', sans-serif;">Outfit</option>
-              <option value="recursive" style="font-family: 'Recursive', sans-serif;">Recursive</option>
-              <option value="space-grotesk" style="font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;">Space Grotesk</option>
-              <option value="tiresias" style="font-family: 'Tiresias Infofont', sans-serif;">Tiresias Infofont</option>
+              {[
+                { val: "personal", style: "'Lexend', ui-sans-serif, system-ui, sans-serif;", key: "settings.fontPersonal" },
+                { val: "system", style: "-apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Nimbus Sans L', Roboto, Noto, 'Segoe UI', Arial, Helvetica, 'Helvetica Neue', sans-serif;", key: "settings.fontSystem" },
+                { val: "atkinson", style: "'Atkinson Hyperlegible', sans-serif;", label: "Atkinson Hyperlegible" },
+                { val: "basier", style: "'Basier Square', sans-serif;", label: "Basier Square" },
+                { val: "be-vietnam-pro", style: "'Be Vietnam Pro', sans-serif;", label: "Be Vietnam Pro" },
+                { val: "dyslexia", style: "'OpenDyslexic', sans-serif;", label: "OpenDyslexic" },
+                { val: "geist", style: "'Geist', sans-serif;", label: "Geist" },
+                { val: "grandstander", style: "'Grandstander', sans-serif;", label: "Grandstander" },
+                { val: "lexend", style: "'Lexend', ui-sans-serif, system-ui, sans-serif;", label: "Lexend" },
+                { val: "outfit", style: "'Outfit', sans-serif;", label: "Outfit" },
+                { val: "recursive", style: "'Recursive', sans-serif;", label: "Recursive" },
+                { val: "space-grotesk", style: "'Space Grotesk', ui-sans-serif, system-ui, sans-serif;", label: "Space Grotesk" },
+                { val: "tiresias", style: "'Tiresias Infofont', sans-serif;", label: "Tiresias Infofont" },
+              ].map(f => (
+                <option value={f.val} style={`font-family: ${f.style}`}>
+                  {f.key ? <T key={f.key} /> : f.label}
+                </option>
+              ))}
             </select>
           </div>
 

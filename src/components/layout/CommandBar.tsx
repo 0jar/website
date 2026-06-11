@@ -53,6 +53,27 @@ interface Action {
   showOn?: string[];
 }
 
+const navIconsDef: Record<string, keyof typeof icons> = {
+  home: "home",
+  about: "user",
+  projects: "code",
+  blog: "book-open",
+  now: "clock",
+  uses: "wrench",
+  contact: "mail",
+  guestbook: "message-square",
+  colophon: "file-text",
+  webring: "flip-horizontal-2",
+  scrapbook: "calendar",
+  slashes: "slash",
+  brand: "tag",
+  tools: "wrench",
+};
+
+const nowCategories = ["reading", "coding", "drinking", "listening", "thinking", "studying", "planning"];
+const usesCategories = ["hardware", "mobile", "audio", "os", "development", "email", "privacy", "mobile_tools", "mapping", "gaming", "multimedia"];
+const colophonSections = ["siteHistory", "technologyStack", "hosting", "inspiration"];
+
 export interface CommandBarProps {
   initialOpen?: boolean;
 }
@@ -105,27 +126,11 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
     });
 
     // Navigation actions (data-driven)
-    const navIcons: Record<string, JSX.Element> = {
-      home: <PreactIcon name="home"  />,
-      about: <PreactIcon name="user"  />,
-      projects: <PreactIcon name="code"  />,
-      blog: <PreactIcon name="book-open"  />,
-      now: <PreactIcon name="clock"  />,
-      uses: <PreactIcon name="wrench"  />,
-      contact: <PreactIcon name="mail"  />,
-      guestbook: <PreactIcon name="message-square"  />,
-      colophon: <PreactIcon name="file-text"  />,
-      webring: <PreactIcon name="flip-horizontal-2"  />,
-      scrapbook: <PreactIcon name="calendar"  />,
-      slashes: <PreactIcon name="slash"  />,
-      brand: <PreactIcon name="tag"  />,
-      tools: <PreactIcon name="wrench"  />,
-    };
     const navCategory = t("keyboardShortcuts.navigation", "Navigation");
-    const navItems: Action[] = Object.entries(navIcons).map(([id, icon]) => ({
+    const navItems: Action[] = Object.entries(navIconsDef).map(([id, iconName]) => ({
       id,
       label: t(`nav.${id}`, id.charAt(0).toUpperCase() + id.slice(1)),
-      icon,
+      icon: <PreactIcon name={iconName} />,
       shortcut: keyboardShortcuts[id],
       category: navCategory,
       action: nav(routes[id as keyof typeof routes] || `/${id}/`),
@@ -269,27 +274,18 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
     });
 
     const nowActions = scrollActions(
-      "/now",
-      ["reading", "coding", "drinking", "listening", "thinking", "studying", "planning"],
-      "now.categories", "Now",
-      <PreactIcon name="clock"  />,
-      (cat) => `category-${cat}`,
+      "/now", nowCategories, "now.categories", "Now",
+      <PreactIcon name="clock"  />, (cat) => `category-${cat}`,
     );
 
     const usesActions = scrollActions(
-      "/uses",
-      ["hardware", "mobile", "audio", "os", "development", "email", "privacy", "mobile_tools", "mapping", "gaming", "multimedia"],
-      "uses.categories", "Uses",
-      <PreactIcon name="wrench"  />,
-      (_cat, idx) => `[id^="category-"]:nth-of-type(${idx + 1})`,
+      "/uses", usesCategories, "uses.categories", "Uses",
+      <PreactIcon name="wrench"  />, (_cat, idx) => `[id^="category-"]:nth-of-type(${idx + 1})`,
     );
 
     const colophonActions = scrollActions(
-      "/colophon",
-      ["siteHistory", "technologyStack", "hosting", "inspiration"],
-      "colophon", "Colophon",
-      <PreactIcon name="file-text"  />,
-      (_sec, idx) => `[id^="section-"]:nth-of-type(${idx + 1})`,
+      "/colophon", colophonSections, "colophon", "Colophon",
+      <PreactIcon name="file-text"  />, (_sec, idx) => `[id^="section-"]:nth-of-type(${idx + 1})`,
     );
 
     return [

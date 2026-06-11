@@ -35,6 +35,7 @@ export const socialLinks = {
   codeberg: "https://codeberg.org/jartf",
   github: "https://github.com/jartf",
   pronounsPage: "https://pronouns.page/@jerryv",
+  fediverse: ["@jar@blob.cat", "@jar@toot.io", "@jarema@mas.to"],
 } as const;
 
 // Alternative domains/mirrors
