@@ -2,12 +2,24 @@
 // Ported from Next.js v4
 
 import { icons } from "./icons";
+import { useState, useEffect, useCallback, useMemo, useRef } from "preact/hooks";
+import type { JSX } from "preact";
+import { useMounted, useDebounce, isTypingInInput } from "@/hooks";
+import { getPageLocale, cycleLanguage, t as i18nT } from "@/i18n/client";
+import { localePath } from "@/i18n/routing";
+import { applyTheme } from "@/lib/utils/theme-utils";
+import { keyboardShortcuts, routes } from "@/lib/constants";
 
-const PreactIcon = ({ name, className }: { name: keyof typeof icons, className?: string }) => (
+const PreactIcon = ({ name, className = "w-4 h-4" }: { name: keyof typeof icons, className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     className={className}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     dangerouslySetInnerHTML={{ __html: icons[name] }}
   />
 );
@@ -173,7 +185,6 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
 
     // Project page actions
     const projCat = t("actionSearch.projects.category", "Projects");
-    const blueArrow = "h-4 w-4 text-blue-500";
     const projectActions: Action[] = !isPage("/projects") ? [] : [
       {
         id: "close-card",
@@ -382,7 +393,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
             {/* Search input */}
             <div className="p-4 pb-2">
               <div className="relative flex items-center">
-                <PreactIcon name="search"  />
+                <PreactIcon name="search" className="absolute left-3 w-4 h-4 text-muted-foreground" />
                 <input
                   ref={inputRef}
                   type="text"
