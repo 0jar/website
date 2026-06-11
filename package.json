@@ -1,7 +1,9 @@
 {
   "name": "jarema-v5-astro",
   "version": "5.0.0",
-  "private": true,
+  "description": "My personal website built with Astro and Preact.",
+  "author": "0jar",
+  "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -9,8 +11,7 @@
     "build:fast": "SKIP_WEBMENTIONS=1 astro build",
     "build:prod": "astro build && git push && neocities push --prune dist/client",
     "astro": "astro",
-    "check": "astro check",
-    "killall": "lsof -i :4321 -t | xargs -r kill -9"
+    "check": "astro check"
   },
   "dependencies": {
     "@astrojs/check": "0.9.7",
@@ -28,9 +29,7 @@
     "yaml": ">=2.8.3"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.111",
     "@tailwindcss/typography": "^0.5.20",
-    "astro-icon": "^1.1.5",
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.15",
     "tailwindcss": "^3.4.19",

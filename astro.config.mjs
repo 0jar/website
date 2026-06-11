@@ -3,7 +3,6 @@ import tailwind from '@astrojs/tailwind';
 import preact from '@astrojs/preact';
 import vercel from '@astrojs/vercel';
 import netlify from '@astrojs/netlify';
-import icon from 'astro-icon';
 
 const adapter = process.env.NETLIFY ? netlify() : vercel();
 
@@ -23,7 +22,6 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     preact({ compat: true }),
-    icon(),
   ],
 
   // Image optimization
@@ -40,10 +38,7 @@ export default defineConfig({
           rewrite: (path) => path.replace(/^\/api\/status\.json/, '/users/jarema/status.json')
         }
       }
-    },
-    ssr: {
-      noExternal: ['lucide-preact'],
-    },
+    }
   },
 
   // Build output optimization
