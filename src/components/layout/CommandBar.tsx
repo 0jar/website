@@ -1,18 +1,16 @@
 // Command palette
 // Ported from Next.js v4
 
-import { useState, useEffect, useRef, useMemo, useCallback } from "preact/hooks";
-import type { JSX } from "preact";
-import { cycleLanguage, t as i18nT, getPageLocale } from "@/i18n/client";
-import { localePath } from "@/i18n/routing";
-import { routes, keyboardShortcuts } from "@/lib/constants";
-import { applyTheme } from "@/lib/utils/theme-utils";
-import { useMounted, isTypingInInput, useDebounce } from "@/hooks";
-import {
-  ArrowDown, ArrowLeft, ArrowRight, ArrowUp, BookOpen, Calendar, Clock, Code, FileText,
-  FlipHorizontal, Gamepad2, Home, Languages, Mail, MessagesSquare, Moon, RefreshCw,
-  Search, Slash, Sun, Tag, User, Wrench, X
-} from "lucide-preact";
+import { icons } from "./icons";
+
+const PreactIcon = ({ name, className }: { name: keyof typeof icons, className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className={className}
+    dangerouslySetInnerHTML={{ __html: icons[name] }}
+  />
+);
 
 // Inline KeyboardShortcut component
 const KeyboardShortcut = ({ children }: { children: JSX.Element | string | number }) => (
@@ -96,20 +94,20 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
 
     // Navigation actions (data-driven)
     const navIcons: Record<string, JSX.Element> = {
-      home: <Home className="h-4 w-4 text-primary" />,
-      about: <User className="h-4 w-4 text-primary" />,
-      projects: <Code className="h-4 w-4 text-primary" />,
-      blog: <BookOpen className="h-4 w-4 text-primary" />,
-      now: <Clock className="h-4 w-4 text-primary" />,
-      uses: <Wrench className="h-4 w-4 text-primary" />,
-      contact: <Mail className="h-4 w-4 text-primary" />,
-      guestbook: <MessagesSquare className="h-4 w-4 text-primary" />,
-      colophon: <FileText className="h-4 w-4 text-primary" />,
-      webring: <FlipHorizontal className="h-4 w-4 text-primary" />,
-      scrapbook: <Calendar className="h-4 w-4 text-primary" />,
-      slashes: <Slash className="h-4 w-4 text-primary" />,
-      brand: <Tag className="h-4 w-4 text-primary" />,
-      tools: <Wrench className="h-4 w-4 text-primary" />,
+      home: <PreactIcon name="home"  />,
+      about: <PreactIcon name="user"  />,
+      projects: <PreactIcon name="code"  />,
+      blog: <PreactIcon name="book-open"  />,
+      now: <PreactIcon name="clock"  />,
+      uses: <PreactIcon name="wrench"  />,
+      contact: <PreactIcon name="mail"  />,
+      guestbook: <PreactIcon name="message-square"  />,
+      colophon: <PreactIcon name="file-text"  />,
+      webring: <PreactIcon name="flip-horizontal-2"  />,
+      scrapbook: <PreactIcon name="calendar"  />,
+      slashes: <PreactIcon name="slash"  />,
+      brand: <PreactIcon name="tag"  />,
+      tools: <PreactIcon name="wrench"  />,
     };
     const navCategory = t("keyboardShortcuts.navigation", "Navigation");
     const navItems: Action[] = Object.entries(navIcons).map(([id, icon]) => ({
@@ -126,7 +124,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       {
         id: "theme-toggle",
         label: theme === "dark" ? t("actionSearch.switchLightMode", "Light mode") : t("actionSearch.switchDarkMode", "Dark mode"),
-        icon: theme === "dark" ? (<Sun className="h-4 w-4 text-yellow-500" />) : (<Moon className="h-4 w-4 text-blue-500" />),
+        icon: theme === "dark" ? (<PreactIcon name="sun"  />) : (<PreactIcon name="moon"  />),
         shortcut: "m",
         category: t("actionSearch.appearance", "Appearance"),
         action: () => { setTheme(theme === "dark" ? "light" : "dark"); close(); },
@@ -134,7 +132,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       {
         id: "language-toggle",
         label: t("actionSearch.cycleLanguage", "Change language"),
-        icon: <Languages className="h-4 w-4 text-green-500" />,
+        icon: <PreactIcon name="languages"  />,
         shortcut: "y",
         category: t("blog.language", "Language"),
         action: () => { cycleLanguage(); close(); },
@@ -146,7 +144,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       {
         id: "refresh-cat",
         label: t("keyboardShortcuts.refreshCat", "Refresh mood cat"),
-        icon: <RefreshCw className="h-4 w-4 text-purple-500" />,
+        icon: <PreactIcon name="refresh-cw"  />,
         shortcut: "r",
         category: t("actionSearch.fun", "Fun"),
         action: () => {
@@ -158,7 +156,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       {
         id: "tetris",
         label: t("actionSearch.tetris", "Play Tetris"),
-        icon: <Gamepad2 className="h-4 w-4 text-red-500" />,
+        icon: <PreactIcon name="gamepad-2"  />,
         shortcut: "t",
         category: t("actionSearch.games", "Games"),
         action: nav("/tetris/"),
@@ -166,7 +164,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       {
         id: "2048",
         label: t("actionSearch.2048", "Play 2048"),
-        icon: <Gamepad2 className="h-4 w-4 text-orange-500" />,
+        icon: <PreactIcon name="gamepad-2"  />,
         shortcut: "z",
         category: t("actionSearch.games", "Games"),
         action: nav("/2048/"),
@@ -180,7 +178,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       {
         id: "close-card",
         label: t("actionSearch.projects.closeCard", "Close card"),
-        icon: <X className="h-4 w-4 text-red-500" />,
+        icon: <PreactIcon name="x"  />,
         shortcut: "Esc",
         category: projCat,
         action: () => {
@@ -190,10 +188,10 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
         },
         showOn: ["/projects"],
       },
-      keyAction("nav-left", t("actionSearch.projects.left", "Navigate left"), <ArrowLeft className={blueArrow} />, "←", projCat, "ArrowLeft", ["/projects"]),
-      keyAction("nav-right", t("actionSearch.projects.right", "Navigate right"), <ArrowRight className={blueArrow} />, "→", projCat, "ArrowRight", ["/projects"]),
-      keyAction("nav-up", t("actionSearch.projects.up", "Navigate up"), <ArrowUp className={blueArrow} />, "↑", projCat, "ArrowUp", ["/projects"]),
-      keyAction("nav-down", t("actionSearch.projects.down", "Navigate down"), <ArrowDown className={blueArrow} />, "↓", projCat, "ArrowDown", ["/projects"]),
+      keyAction("nav-left", t("actionSearch.projects.left", "Navigate left"), <PreactIcon name="arrow-left"  />, "←", projCat, "ArrowLeft", ["/projects"]),
+      keyAction("nav-right", t("actionSearch.projects.right", "Navigate right"), <PreactIcon name="arrow-right"  />, "→", projCat, "ArrowRight", ["/projects"]),
+      keyAction("nav-up", t("actionSearch.projects.up", "Navigate up"), <PreactIcon name="arrow-up"  />, "↑", projCat, "ArrowUp", ["/projects"]),
+      keyAction("nav-down", t("actionSearch.projects.down", "Navigate down"), <PreactIcon name="arrow-down"  />, "↓", projCat, "ArrowDown", ["/projects"]),
     ];
 
     // Blog actions
@@ -202,17 +200,17 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       ? []
       : pathname !== "/blog" && pathname !== "/blog/"
         ? [
-            keyAction("blog-prev", t("actionSearch.blog.prev", "Previous"), <ArrowLeft className={blueArrow} />, "h", blogCat, "h", ["/blog/"]),
-            keyAction("blog-next", t("actionSearch.blog.next", "Next"), <ArrowRight className={blueArrow} />, "l", blogCat, "l", ["/blog/"]),
-            { id: "blog-back", label: t("actionSearch.blog.back", "Back to list"), icon: <ArrowLeft className={blueArrow} />, shortcut: "b", category: blogCat, action: nav("/blog/"), showOn: ["/blog/"] },
+            keyAction("blog-prev", t("actionSearch.blog.prev", "Previous"), <PreactIcon name="arrow-left"  />, "h", blogCat, "h", ["/blog/"]),
+            keyAction("blog-next", t("actionSearch.blog.next", "Next"), <PreactIcon name="arrow-right"  />, "l", blogCat, "l", ["/blog/"]),
+            { id: "blog-back", label: t("actionSearch.blog.back", "Back to list"), icon: <PreactIcon name="arrow-left"  />, shortcut: "b", category: blogCat, action: nav("/blog/"), showOn: ["/blog/"] },
           ]
         : [
-            keyAction("blog-down", t("actionSearch.blog.next", "Next post"), <ArrowDown className={blueArrow} />, "j", blogCat, "j", ["/blog"]),
-            keyAction("blog-up", t("actionSearch.blog.prev", "Previous post"), <ArrowUp className={blueArrow} />, "k", blogCat, "k", ["/blog"]),
+            keyAction("blog-down", t("actionSearch.blog.next", "Next post"), <PreactIcon name="arrow-down"  />, "j", blogCat, "j", ["/blog"]),
+            keyAction("blog-up", t("actionSearch.blog.prev", "Previous post"), <PreactIcon name="arrow-up"  />, "k", blogCat, "k", ["/blog"]),
             {
               id: "blog-search",
               label: t("actionSearch.blog.search", "Search"),
-              icon: <Search className="h-4 w-4 text-blue-500" />,
+              icon: <PreactIcon name="search"  />,
               shortcut: "s",
               category: blogCat,
               action: () => { (document.querySelector('input[placeholder*="Search"]') as HTMLInputElement)?.focus(); close(); },
@@ -221,7 +219,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
             {
               id: "blog-filter",
               label: t("actionSearch.blog.filterTag", "Filter"),
-              icon: <Tag className="h-4 w-4 text-green-500" />,
+              icon: <PreactIcon name="tag"  />,
               category: blogCat,
               action: () => { document.querySelector("button:has(.lucide-filter)")?.dispatchEvent(new MouseEvent("click", { bubbles: true })); close(); },
               showOn: ["/blog"],
@@ -234,7 +232,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       : [1, 2, 3, 4, 5].map((i) => ({
           id: `chapter-${i}`,
           label: t("actionSearch.about.jumpToChapter", { i }),
-          icon: <BookOpen className="h-4 w-4 text-green-500" />,
+          icon: <PreactIcon name="book-open"  />,
           shortcut: `${i}`,
           category: t("actionSearch.about.category", "About"),
           action: () => { scrollTo(`chapter-${i}`, "center"); close(); },
@@ -263,7 +261,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       "/now",
       ["reading", "coding", "drinking", "listening", "thinking", "studying", "planning"],
       "now.categories", "Now",
-      <Clock className="h-4 w-4 text-green-500" />,
+      <PreactIcon name="clock"  />,
       (cat) => `category-${cat}`,
     );
 
@@ -271,7 +269,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       "/uses",
       ["hardware", "mobile", "audio", "os", "development", "email", "privacy", "mobile_tools", "mapping", "gaming", "multimedia"],
       "uses.categories", "Uses",
-      <Wrench className="h-4 w-4 text-blue-500" />,
+      <PreactIcon name="wrench"  />,
       (_cat, idx) => `[id^="category-"]:nth-of-type(${idx + 1})`,
     );
 
@@ -279,7 +277,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
       "/colophon",
       ["siteHistory", "technologyStack", "hosting", "inspiration"],
       "colophon", "Colophon",
-      <FileText className="h-4 w-4 text-purple-500" />,
+      <PreactIcon name="file-text"  />,
       (_sec, idx) => `[id^="section-"]:nth-of-type(${idx + 1})`,
     );
 
@@ -384,7 +382,7 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
             {/* Search input */}
             <div className="p-4 pb-2">
               <div className="relative flex items-center">
-                <Search className="absolute left-3 h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                <PreactIcon name="search"  />
                 <input
                   ref={inputRef}
                   type="text"

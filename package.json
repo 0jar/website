@@ -8,7 +8,6 @@
     "build": "astro build",
     "build:fast": "SKIP_WEBMENTIONS=1 astro build",
     "build:prod": "astro build && git push && neocities push --prune dist/client",
-    "preview": "LOCAL_PREVIEW=1 SKIP_WEBMENTIONS=1 astro build && LOCAL_PREVIEW=1 astro preview",
     "astro": "astro",
     "check": "astro check",
     "killall": "lsof -i :4321 -t | xargs -r kill -9"
@@ -21,7 +20,6 @@
     "@astrojs/vercel": "^10.0.8",
     "astro": "^6.4.6",
     "framer-motion": "^12.40.0",
-    "lucide-preact": "^0.577.0",
     "preact": "^10.29.2",
     "sharp": "^0.34.5"
   },
@@ -31,8 +29,9 @@
     "yaml": ">=2.8.3"
   },
   "devDependencies": {
-    "@astrojs/node": "^10.1.4",
+    "@iconify-json/lucide": "^1.2.111",
     "@tailwindcss/typography": "^0.5.20",
+    "astro-icon": "^1.1.5",
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.15",
     "tailwindcss": "^3.4.19",
