@@ -1,6 +1,5 @@
 // Tetris - React component
 
-import { motion, AnimatePresence } from 'framer-motion'
 import { t as i18nT } from '@/i18n/client'
 import { useTetris, TETROMINOS, musicPlaylist, BOARD_WIDTH, BOARD_HEIGHT } from '@/hooks/game/use-tetris'
 
@@ -33,7 +32,7 @@ const Icon = ({ d }: { d: string }) => (
 )
 
 const Overlay = (props: any) => (
-  <motion.div className={overlayBase} {...props} />
+  <div className={`${overlayBase} animate-fade-in`} {...props} />
 )
 
 export default function TetrisGame() {
@@ -72,27 +71,25 @@ export default function TetrisGame() {
                 )}
               </div>
 
-              <AnimatePresence>
-                {!isStarted && (
-                  <Overlay initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              {!isStarted && (
+                  <Overlay>
                     <button onClick={startGame} className={`${btnPrimary} text-lg`}>{t('start')}</button>
                   </Overlay>
                 )}
                 {isPaused && (
-                  <Overlay initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                  <Overlay>
                     <p className="text-2xl font-bold mb-4">{t('pause')}</p>
                     <button onClick={togglePause} className={btnPrimary}>{t('resume')}</button>
                   </Overlay>
                 )}
                 {gameOver && (
-                  <Overlay initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}>
+                  <Overlay>
                     <p className="text-3xl font-bold mb-2 text-red-500">{t('gameOver')}</p>
                     <p className="text-xl mb-4">{t('score')}: {score}</p>
                     <button onClick={startGame} className={btnPrimary}>{t('playAgain')}</button>
                   </Overlay>
                 )}
-              </AnimatePresence>
-            </div>
+              </div>
           </div>
 
           {/* Info panels */}

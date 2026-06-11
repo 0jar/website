@@ -80,6 +80,10 @@ export default {
           '0%, 100%': { opacity: 1 },
           '50%': { opacity: 0 },
         },
+        pop: {
+          '0%': { transform: 'scale(0.8)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -87,6 +91,7 @@ export default {
         'fade-in': 'fade-in 0.5s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out',
         'blink': 'blink 3s infinite',
+        'pop': 'pop 0.15s ease-out',
       },
     },
   },

@@ -2,7 +2,6 @@
 // Ported from Next.js v4
 
 import { useEffect, useCallback, useState } from 'preact/hooks'
-import { motion, AnimatePresence } from 'framer-motion'
 import { t as i18nT } from '@/i18n/client'
 import { useGame2048, getTileColor, getFontSize } from '@/hooks/game/use-game-2048'
 
@@ -114,31 +113,24 @@ export default function Game2048() {
               >
                 {board.map((row, rowIndex) =>
                   row.map((cell, colIndex) => (
-                    <motion.div
+                    <div
                       key={`${rowIndex}-${colIndex}-${cell}`}
                       className={`
-                        w-16 h-16 sm:w-20 sm:h-20 rounded-lg flex items-center justify-center
+                        w-16 h-16 sm:w-20 sm:h-20 rounded-lg flex items-center justify-center transition-all duration-150 animate-pop
                         ${getTileColor(cell, isDark)}
                         ${getFontSize(cell)}
                       `}
-                      initial={cell ? { scale: 0 } : { scale: 1 }}
-                      animate={{ x: 0, y: 0, scale: 1 }}
-                      transition={{ duration: 0.15, ease: 'easeInOut' }}
                     >
                       {cell > 0 && <span className="font-bold">{cell}</span>}
-                    </motion.div>
+                    </div>
                   ))
                 )}
               </div>
 
               {/* Game over overlay */}
-              <AnimatePresence>
-                {gameOver && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute inset-0 flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm rounded-lg"
+              {gameOver && (
+                  <div
+                    className="absolute inset-0 flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm rounded-lg animate-fade-in"
                   >
                     <h2 className="text-2xl md:text-3xl font-bold text-red-500 mb-3">{t('gameOver', 'Game Over!')}</h2>
                     <p className="text-base md:text-lg mb-4">{t('finalScore', 'Final score')}: <span className="font-bold">{score}</span></p>
@@ -148,15 +140,12 @@ export default function Game2048() {
                     >
                       {t('tryAgain', 'Try again')}
                     </button>
-                  </motion.div>
+                  </div>
                 )}
 
                 {gameWon && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute inset-0 flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm rounded-lg"
+                  <div
+                    className="absolute inset-0 flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm rounded-lg animate-fade-in"
                   >
                     <span className="text-4xl mb-2">🏆</span>
                     <h2 className="text-2xl md:text-3xl font-bold text-green-500 mb-3">{t('youWin', 'You win!')}</h2>
@@ -175,10 +164,9 @@ export default function Game2048() {
                         {t('newGame', 'New game')}
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+              </div>
 
             {/* Mobile on-screen controls */}
             <div className="md:hidden flex justify-center">
