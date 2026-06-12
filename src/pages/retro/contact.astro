@@ -1,9 +1,9 @@
 ---
 import RetroLayout from "@/layouts/RetroLayout.astro";
-import { author } from '@/lib/constants';
+import { author, socialLinks, services } from "@/lib/constants";
 ---
 
-<RetroLayout title="Contact - Jarema's Retro Site">
+<RetroLayout title={`Contact - ${author.name}'s Retro Site`}>
   <!-- Page title -->
   <center>
     <font size="5">
@@ -53,8 +53,8 @@ import { author } from '@/lib/constants';
         <font size="3">
           Find me on social media!
           <br><br>
-          <a href="https://blob.cat/jar">
-            <b>@jar@blob.cat</b>
+          <a href={`https://${socialLinks.fediverse[0].split('@')[2]}/@${socialLinks.fediverse[0].split('@')[1]}`}>
+            <b>{socialLinks.fediverse[0]}</b>
           </a>
         </font>
       </td>
@@ -88,7 +88,7 @@ import { author } from '@/lib/constants';
           <font size="2">
             Leave a public message for everyone to see!
             <br><br>
-            <a href="https://jarema.atabook.org" target="_blank" rel="noopener noreferrer">
+            <a href={services.atabook.host} target="_blank" rel="noopener noreferrer">
               <b>Go to Guestbook</b>
             </a>
           </font>

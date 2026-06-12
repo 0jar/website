@@ -1,8 +1,9 @@
 ---
 import RetroLayout from "@/layouts/RetroLayout.astro";
+import { author } from "@/lib/constants";
 ---
 
-<RetroLayout title="About me - Jarema's retro site">
+<RetroLayout title={`About me - ${author.name}'s retro site`}>
   <!-- Page title -->
   <center>
     <font size="5">
@@ -29,7 +30,7 @@ import RetroLayout from "@/layouts/RetroLayout.astro";
       <td style="width: 80%; vertical-align: top;">
         <font size="3">
           <p>
-            <b>Hello!</b> I'm <font color="#54D4FF"><b>Jarema</b></font>,
+            <b>Hello!</b> I'm <font color="#54D4FF"><b>{author.name}</b></font>,
             a student from somewhere on Earth.
           </p>
           <p>

@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "provider1": {
+      "name": "Vercel",
+      "url": "https://vercel.com"
+    },
+    "provider2": {
+      "name": "Cloudflare",
+      "url": "https://cloudflare.com"
+    }
+  },
+  "stack": [
+    {
+      "name": "Astro",
+      "description": "Static site generator with island architecture"
+    },
+    {
+      "name": "Tailwind CSS",
+      "descriptionKey": "colophon.technologyStack.tailwind"
+    },
+    {
+      "name": "TypeScript",
+      "descriptionKey": "colophon.technologyStack.typescript"
+    },
+    {
+      "name": "Typography",
+      "description": "Lexend (headings), Lexend (body)"
+    }
+  ]
+}

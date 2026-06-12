@@ -4,6 +4,7 @@ import T from "@/components/T.astro";
 import CommitTimeline from "@/components/CommitTimeline.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { dateLong } from "@/lib/utils/timezone-utils";
+import { author } from "@/lib/constants";
 import { Image } from "astro:assets";
 
 const lang = Astro.locals?.lang || "en";
@@ -19,15 +20,15 @@ const commits = entries
       entry.data.content[lang as keyof typeof entry.data.content] ||
       entry.data.content.en,
     date: entry.data.date.toLocaleDateString("en", dateLong),
-    author: "Jarema",
+    author: author.name,
     badges: [],
   }));
 
 const tabs = [
-  { id: "code", href: "https://codeberg.org/0jar/website", label: "scrapbook.code", icon: '<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>', active: true },
-  { id: "issues", href: "https://codeberg.org/0jar/website/issues", label: "scrapbook.issues", icon: '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>' },
-  { id: "pulls", href: "https://codeberg.org/0jar/website/pulls", label: "scrapbook.pullRequests", icon: '<circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line>' },
-  { id: "activity", href: "https://codeberg.org/0jar/website/activity", label: "scrapbook.activity", icon: '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>' }
+  { id: "code", href: author.repoUrl, label: "scrapbook.code", icon: '<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>', active: true },
+  { id: "issues", href: `${author.repoUrl}/issues`, label: "scrapbook.issues", icon: '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>' },
+  { id: "pulls", href: `${author.repoUrl}/pulls`, label: "scrapbook.pullRequests", icon: '<circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line>' },
+  { id: "activity", href: `${author.repoUrl}/activity`, label: "scrapbook.activity", icon: '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>' }
 ];
 
 const stats = [
@@ -45,10 +46,10 @@ const stats = [
     <div class="max-w-6xl mx-auto">
       <header class="mb-6 flex flex-col gap-4">
         <div class="flex items-center gap-3 text-2xl">
-          <Image src="/favicon.png" alt="0jar" width={32} height={32} class="rounded-sm" />
+          <Image src={author.image} alt={author.repoOwner} width={32} height={32} class="rounded-sm" />
           <h1 class="font-medium">
-            <a href="https://codeberg.org/0jar" rel="noopener noreferrer" class="text-primary hover:underline">0jar</a> /
-            <a href="https://codeberg.org/0jar/website" rel="noopener noreferrer" class="font-bold hover:underline">website</a>
+            <a href={`https://codeberg.org/${author.repoOwner}`} rel="noopener noreferrer" class="text-primary hover:underline">{author.repoOwner}</a> /
+            <a href={author.repoUrl} rel="noopener noreferrer" class="font-bold hover:underline">{author.repoName}</a>
           </h1>
         </div>
 
@@ -84,7 +85,7 @@ const stats = [
             <button class="bg-muted/30 border border-border/60 text-foreground hover:bg-muted/50 rounded-md px-3 py-1.5 flex items-center gap-2 shadow-sm transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg> <T key="scrapbook.main" tag="Fragment" /> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <a href="https://codeberg.org/0jar/website/graph" rel="noopener noreferrer" class="bg-muted/30 border border-border/60 text-foreground hover:bg-muted/50 rounded-md px-3 py-1.5 flex items-center gap-2 shadow-sm transition-colors">
+            <a href={`${author.repoUrl}/graph`} rel="noopener noreferrer" class="bg-muted/30 border border-border/60 text-foreground hover:bg-muted/50 rounded-md px-3 py-1.5 flex items-center gap-2 shadow-sm transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg> <T key="scrapbook.commitGraph" tag="Fragment" />
             </a>
           </div>

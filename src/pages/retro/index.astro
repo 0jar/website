@@ -7,9 +7,10 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
   month: 'long',
   day: 'numeric',
 });
+import { author } from "@/lib/constants";
 ---
 
-<RetroLayout title="Jarema - Retro version">
+<RetroLayout title={`${author.name} - Retro version`}>
   <!-- Welcome banner -->
   <center>
     <font size="6">
@@ -22,7 +23,7 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
   <!-- Introduction -->
   <p>
     <font size="3">
-      <b>Hello wanderer!</b> My name is <font color="#54D4FF"><b>Jarema</b></font> and
+      <b>Hello wanderer!</b> My name is <font color="#54D4FF"><b>{author.name}</b></font> and
       this is my corner on the internet!
     </font>
   </p>

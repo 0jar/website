@@ -3,9 +3,10 @@ import RetroLayout from "@/layouts/RetroLayout.astro";
 import { getData } from "@/content.config";
 
 const projects = await getData("projects");
+import { author } from "@/lib/constants";
 ---
 
-<RetroLayout title="Projects - Jarema's retro site">
+<RetroLayout title={`Projects - ${author.name}'s retro site`}>
   <!-- Page title -->
   <center>
     <font size="5">

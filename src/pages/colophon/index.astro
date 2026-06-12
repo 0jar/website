@@ -2,6 +2,7 @@
 // Colophon page
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
+import colophonData from "@/content/data/colophon.json";
 ---
 
 <BaseLayout title="Colophon" description="Technical details and credits for this website.">
@@ -24,10 +25,9 @@ import T from "@/components/T.astro";
         <section id="technology-stack" class="scroll-mt-20">
           <T key="colophon.technologyStack.title" tag="h2" />
           <ul>
-            <li><strong>Astro:</strong> Static site generator with island architecture</li>
-            <li><strong>Tailwind CSS:</strong> <T key="colophon.technologyStack.tailwind" /></li>
-            <li><strong>TypeScript:</strong> <T key="colophon.technologyStack.typescript" /></li>
-            <li><strong>Typography:</strong> Lexend (headings), Lexend (body)</li>
+            {colophonData.stack.map(item => (
+              <li><strong>{item.name}:</strong> {item.descriptionKey ? <T key={item.descriptionKey} /> : item.description}</li>
+            ))}
           </ul>
         </section>
 
@@ -36,12 +36,12 @@ import T from "@/components/T.astro";
           <T key="colophon.hosting.title" tag="h2" />
           <p>
             <T key="colophon.hosting.content1" />{" "}
-            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a>,{" "}
+            <a href={colophonData.hosting.provider1.url} target="_blank" rel="noopener noreferrer">{colophonData.hosting.provider1.name}</a>,{" "}
             <T key="colophon.hosting.content2" />
           </p>
           <p>
             <T key="colophon.hosting.content3" />{" "}
-            <a href="https://cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare</a>,{" "}
+            <a href={colophonData.hosting.provider2.url} target="_blank" rel="noopener noreferrer">{colophonData.hosting.provider2.name}</a>,{" "}
             <T key="colophon.hosting.content4" />
           </p>
         </section>

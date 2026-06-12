@@ -3,7 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import CommitTimeline from "@/components/CommitTimeline.astro";
 import T from "@/components/T.astro";
 import { Image } from "astro:assets";
-import { author, authorTimezone, authorTimezoneLabel } from '@/lib/constants';
+import { author, authorTimezone, authorTimezoneLabel, siteUrl } from '@/lib/constants';
 import { t } from "@/i18n";
 import { getCollection, type CollectionEntry } from "astro:content";
 
@@ -32,7 +32,7 @@ const commits = aboutCommitsData
       date: isYearOnly
         ? d.getFullYear().toString()
         : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }).replace(/,/g, ''),
-      author: "Jarema",
+      author: author.name,
       badges: c.data.badges
     };
   });
@@ -48,12 +48,12 @@ const commits = aboutCommitsData
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-4">
       <!-- Profile card -->
       <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm md:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center justify-center gap-6">
-        <Image src="/favicons.png" alt={author.name} width={120} height={120} class="u-photo rounded-full" />
+        <Image src={author.image} alt={author.name} width={120} height={120} class="u-photo rounded-full" />
         <div class="text-center sm:text-left">
           <h2 class="p-name text-2xl font-bold">{author.name}</h2>
           <p class="p-note mt-2 text-muted-foreground">{author.note}</p>
           <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-4">
-            <a href="/" class="u-url u-uid text-sm text-primary hover:underline">jarema.me</a>
+            <a href="/" class="u-url u-uid text-sm text-primary hover:underline">{new URL(siteUrl).hostname}</a>
             <a class="u-email text-sm text-primary hover:underline" href={`mailto:${author.email}`}>{author.email}</a>
           </div>
           <span class="p-category hidden">{author.category}</span>
@@ -100,7 +100,7 @@ const commits = aboutCommitsData
           <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div class="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <p class="mb-2"><span class="text-primary">jar@jarema:~/gits/website</span>$ fastfetch</p>
+        <p class="mb-2"><span class="text-primary">{author.repoOwner}@{new URL(siteUrl).hostname.split('.')[0]}:~/gits/{author.repoName}</span>$ fastfetch</p>
         <div class="flex gap-4">
           <div class="hidden sm:block mt-2 text-primary font-bold whitespace-pre">
 ​  o  ​
@@ -117,11 +117,11 @@ o   o
             <p><span class="text-primary font-bold">└─ GPU: </span>{t(lang, "about.terminal.fastfetch.gpu")}</p>
           </div>
         </div>
-        <p class="mt-2 mb-2"><span class="text-primary">jar@jarema:~/gits/website</span>$ whoami</p>
+        <p class="mt-2 mb-2"><span class="text-primary">{author.repoOwner}@{new URL(siteUrl).hostname.split('.')[0]}:~/gits/{author.repoName}</span>$ whoami</p>
         <div class="flex gap-4">
           <div class="hidden sm:block"></div>
           <div>
-            <p><span class="text-primary font-bold">jar</span>@jarema</p>
+            <p><span class="text-primary font-bold">{author.repoOwner}</span>@{new URL(siteUrl).hostname.split('.')[0]}</p>
             <p><span class="text-primary font-bold">├─ </span>{t(lang, "about.terminal.whoami.line1")}</p>
             <p><span class="text-primary font-bold">├─ </span>{t(lang, "about.terminal.whoami.line2")}</p>
             <p><span class="text-primary font-bold">├─ </span>{t(lang, "about.terminal.whoami.line3")}</p>
@@ -130,7 +130,7 @@ o   o
             <p><span class="text-primary font-bold">└─ </span>{t(lang, "about.terminal.whoami.line6")}</p>
           </div>
         </div>
-        <p class="mt-2"><span class="text-primary">jar@jarema:~/gits/website</span>$
+        <p class="mt-2"><span class="text-primary">{author.repoOwner}@{new URL(siteUrl).hostname.split('.')[0]}:~/gits/{author.repoName}</span>$
         <span class="animate-blink">_</span></p>
       </article>
 
@@ -140,7 +140,7 @@ o   o
           width="100%"
           height="100%"
           src="https://api.maptiler.com/tiles/satellite-night/?key=ZtNe0LkdF7pMF24Pxqme#4/21/105.8"
-          title="Map showing Jarema's location"
+          title={`Map showing ${author.name}'s location`}
           class="absolute inset-0 border-0"
         ></iframe>
       </article>

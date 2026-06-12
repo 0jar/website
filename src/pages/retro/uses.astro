@@ -4,9 +4,10 @@ import { getData } from "@/content.config";
 
 const usesCategories = await getData("uses");
 const lang = Astro.locals?.lang || "en";
+import { author } from "@/lib/constants";
 ---
 
-<RetroLayout title="Uses - Jarema's Retro Site">
+<RetroLayout title={`Uses - ${author.name}'s Retro Site`}>
   <!-- Page title -->
   <center>
     <font size="5">

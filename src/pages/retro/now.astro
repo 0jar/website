@@ -7,9 +7,10 @@ const lastUpdated = nowItems.reduce((latest, item) => {
   const d = new Date(item.date);
   return d > latest ? d : latest;
 }, new Date(0));
+import { author } from "@/lib/constants";
 ---
 
-<RetroLayout title="Now - Jarema's retro site">
+<RetroLayout title={`Now - ${author.name}'s retro site`}>
   <!-- Page title -->
   <center>
     <font size="5">

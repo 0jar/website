@@ -5,9 +5,10 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 // Get all blog posts and sort by date
 const allPosts = await getCollection('blog', ({ data }: CollectionEntry<'blog'>) => !data.draft);
 const posts = allPosts.sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+import { author } from "@/lib/constants";
 ---
 
-<RetroLayout title="Blog - Jarema's Retro Site">
+<RetroLayout title={`Blog - ${author.name}'s Retro Site`}>
   <!-- Page title -->
   <center>
     <font size="5">

@@ -5,9 +5,10 @@ import { getData } from "@/content.config";
 const allWebrings = await getData("webrings");
 const activeWebringItems = allWebrings.filter(w => w.status === "active");
 const pendingWebringItems = allWebrings.filter(w => w.status === "pending");
+import { author } from "@/lib/constants";
 ---
 
-<RetroLayout title="Webrings - Jarema's Retro Site">
+<RetroLayout title={`Webrings - ${author.name}'s Retro Site`}>
   <!-- Page title -->
   <center>
     <font size="5">

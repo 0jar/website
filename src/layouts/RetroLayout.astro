@@ -35,7 +35,7 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
 <!-- Invisible h-card/vCard for parsers -->
 <div class="h-card vcard" style="position: absolute; left: -9999px; top: -9999px;">
   <a class="p-name u-url u-uid fn url uid" href={siteUrl}>{author.name}</a>
-  <img class="u-photo photo" src="/favicon.png" alt="">
+  <img class="u-photo photo" src={author.image} alt="">
   <a class="u-email email" href={`mailto:${author.email}`}>{author.email}</a>
   <a class="u-key key" href={author.keyUrl}>{author.keyUrl}</a>
   <span class="p-category category">{author.category}</span>

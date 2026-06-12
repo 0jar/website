@@ -2,7 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { Image } from 'astro:assets';
-import { siteUrl, getSiteName } from '@/lib/constants';
+import { siteUrl, getSiteName, author } from '@/lib/constants';
 
 const lang = Astro.locals?.lang || "en";
 const resolvedSiteName = getSiteName(lang);
@@ -29,7 +29,7 @@ const cardClasses = "bg-card border rounded-lg p-6";
     <section class="mb-12">
       <T key="brand.name.title" tag="h2" class="text-2xl font-bold mb-6" />
       <div class={cardClasses} class:list={["space-y-4"]}>
-        {[["nameLabel", "Jarema"], ["displayNameLabel", "∴ Jarema"]].map(([key, text], i) => (
+        {[["nameLabel", author.name], ["displayNameLabel", author.displayName]].map(([key, text], i) => (
           <div>
             <p class="text-sm text-muted-foreground mb-2"><T key={`brand.name.${key}`} /></p>
             <p class="text-2xl font-bold">{text}</p>
@@ -67,7 +67,7 @@ const cardClasses = "bg-card border rounded-lg p-6";
       <T key="brand.badge.title" tag="h2" class="text-2xl font-bold mb-6" />
       <div class={cardClasses}>
         <div class="text-center mb-6">
-          <img src="/badge.png" alt="Jarema's badge" width="176" height="62" class="pixelated mx-auto" />
+          <img src="/badge.png" alt={`${author.name}'s badge`} width="176" height="62" class="pixelated mx-auto" />
         </div>
         <div class="space-y-4">
           <div>

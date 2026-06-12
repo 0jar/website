@@ -3,12 +3,12 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { Image } from "astro:assets";
-import { siteUrl, getSiteName } from "@/lib/constants";
+import { siteUrl, getSiteName, author } from "@/lib/constants";
 
 import BADGES from "@/content/data/badges.json";
 const badgesData = BADGES.map((b) => ({
   ...b,
-  url: b.url === "https://jarema.me" ? siteUrl : b.url,
+  url: b.url === siteUrl ? siteUrl : b.url,
 }));
 
 const CATEGORIES = [
@@ -57,7 +57,7 @@ const resolvedSiteName = getSiteName(lang);
             <div class="text-center mb-6">
               <img
                 src="/badge.png"
-                alt="Jarema's badge"
+                alt={`${author.name}'s badge`}
                 width="176"
                 height="62"
                 class="pixelated mx-auto"
