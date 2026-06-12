@@ -148,6 +148,14 @@ src/
 
 ## Development
 
+### Configuration
+
+The site is forkable without having to dig through much of the source code. Most of the personal identity details, site metadata, and configuration flags are separated from the UI components.
+
+- **Identity and metadata**: Managed in `src/lib/constants.ts`.
+- **Content**: The site takes data from `src/content/data/` for static data and `src/content/[path]` for other site content.
+- **Static assets**: All images used by the site are organized in `public/`.
+
 ### Blog post frontmatter
 
 ```yaml
@@ -191,6 +199,15 @@ The site supports dark and light modes:
 - Use the [`T.astro`](./src/components/T.astro) component for static translations
 - Language state inferred from URL/routing and managed via vanilla JavaScript helpers
 - Language detection from browser or localStorage
+
+#### Localization control
+
+For single-language deployments when other languages are in the site, a localization flag is available at build time. Setting the `NEOCITIES=1` environment variable on build restricts the static site to English and turns off other locales' sub-paths.
+
+```bash
+# Build only English version
+NEOCITIES=1 pnpm build
+```
 
 ### Runtime endpoints
 
@@ -242,7 +259,7 @@ The site supports dark and light modes:
 
 ## License
 
-**TL;DR: You are free to use, modify, redistribute, and sell the source code and the content on this website, provided proper attribution is given back to me. Attribution should include a link to my website ([https://jarema.me](https://jarema.me)).**
+**TL;DR: You are free to use, modify and redistribute the source code and the content on this website, provided proper attribution is given back to me. Attribution should include a link to my website ([https://jarema.me](https://jarema.me)).**
 
 This repository is dual-licensed.
 
