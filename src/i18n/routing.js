@@ -2,7 +2,7 @@
 import { supportedLanguages } from "@/lib/constants";
 
 /** All non-English locale codes */
-export const locales = supportedLanguages.map((l) => l.code).filter((c) => c !== "en");
+export const locales = (typeof process !== 'undefined' && process.env.NEOCITIES) || (import.meta.env && import.meta.env.NEOCITIES) ? [] : supportedLanguages.map((l) => l.code).filter((c) => c !== "en");
 
 /** Reusable getStaticPaths that emits one entry per non-English locale. */
 export function localeStaticPaths() {

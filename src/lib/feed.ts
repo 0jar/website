@@ -2,8 +2,10 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { hrefLangLanguages, supportedLanguages, siteDescription, getSiteName, siteUrl, author, type SupportedLanguage } from "@/lib/constants";
 import { escapeXml } from "@/lib/utils/escape";
 
+import { locales } from "@/i18n/routing";
+
 export function feedStaticPaths() {
-  return supportedLanguages.map((lang) => ({ params: { lang: lang.code } }));
+  return ["en", ...locales].map((code) => ({ params: { lang: code } }));
 }
 
 const validLangCodes = new Set(supportedLanguages.map((l) => l.code));

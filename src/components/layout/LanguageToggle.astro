@@ -1,7 +1,7 @@
 ---
 // Language toggle
 import { supportedLanguages } from "@/lib/constants";
-import { localePath, stripLocale } from "@/i18n/routing";
+import { localePath, stripLocale, locales } from "@/i18n/routing";
 import { t } from "@/i18n";
 
 const lang = Astro.locals?.lang || "en";
@@ -9,13 +9,14 @@ const basePath = stripLocale(Astro.url.pathname);
 const currentInfo = supportedLanguages.find(l => l.code === lang) || supportedLanguages[0];
 
 const sections = [
-  { key: "main",  label: t(lang, "language.main"),    langs: supportedLanguages.filter(l => "main" in l && l.main) },
-  { key: "beta",  label: t(lang, "language.beta"),     langs: supportedLanguages.filter(l => "beta" in l && l.beta) },
-  { key: "other", label: t(lang, "language.other"),    langs: supportedLanguages.filter(l => "other" in l && l.other) },
+  { key: "main",  label: t(lang, "language.main"),    langs: supportedLanguages.filter(l => "main" in l && l.main && ((l.code as string) === "en" || locales.includes(l.code as any))) },
+  { key: "beta",  label: t(lang, "language.beta"),     langs: supportedLanguages.filter(l => "beta" in l && l.beta && ((l.code as string) === "en" || locales.includes(l.code as any))) },
+  { key: "other", label: t(lang, "language.other"),    langs: supportedLanguages.filter(l => "other" in l && l.other && ((l.code as string) === "en" || locales.includes(l.code as any))) },
 ];
 const itemCls = "lang-item relative flex items-center rounded-sm px-2 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground";
 ---
 
+{locales.length > 0 && (
 <details id="lang-toggle" class="group relative">
   <summary
     class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden"
@@ -60,6 +61,7 @@ const itemCls = "lang-item relative flex items-center rounded-sm px-2 py-1.5 tex
     ))}
   </div>
 </details>
+)}
 
 <script is:inline>
   // Progressive enhancement: search filtering + click-outside-to-close.

@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "build:fast": "SKIP_WEBMENTIONS=1 astro build",
-    "build:prod": "astro build && git push && neocities push --prune dist/client",
+    "build:neo": "NEOCITIES=1 astro build && git push && neocities push --prune dist/client",
     "astro": "astro",
     "check": "astro check"
   },
