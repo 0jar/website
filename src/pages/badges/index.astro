@@ -154,7 +154,7 @@ const resolvedSiteName = getSiteName(lang);
           >
             {
               CATEGORIES.map((cat) => (
-                <option value={cat}>
+                <option value={cat === "friends" ? "friend" : cat}>
                   <T key={`badges.categories.${cat}`} />
                 </option>
               ))
