@@ -72,6 +72,72 @@
     "description": "Come hang out at the Web Weavers Discord server!"
   },
   {
+    "id": "archive",
+    "name": "Internet Archive",
+    "src": "/badges/archive.png",
+    "alt": "Internet Archive",
+    "category": "worldview",
+    "url": "https://archive.org/",
+    "description": "Preserve the internet now!"
+  },
+  {
+    "id": "cc-by-nc-sa",
+    "name": "CC BY-NC-SA",
+    "src": "/badges/cc-by-nc-sa.png",
+    "alt": "Creative Commons BY-NC-SA",
+    "category": "worldview",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "description": "My content is CC BY-NC-SA 4.0"
+  },
+  {
+    "id": "email-common",
+    "name": "Make email common again!",
+    "src": "/badges/emailcommon.png",
+    "alt": "A banner showing an envelope icon and the words Make Email Common Again next to it.",
+    "category": "worldview",
+    "url": "mailto:hello@jarema.me",
+    "description": "My email inbox is always open, feel free to email me!"
+  },
+  {
+    "id": "internet-privacy",
+    "name": "Internet privacy Now!",
+    "src": "/badges/internetprivacy.gif",
+    "alt": "An animated pixel art banner with a spinning globe, next to the words Internet privacy in black, and Now! in red.",
+    "category": "worldview",
+    "url": null,
+    "description": "Let's make internet privacy common again",
+    "footer": true
+  },
+  {
+    "id": "no-paywalls",
+    "name": "No paywalls",
+    "src": "/badges/nopaywalls.gif",
+    "alt": "A banner showing the text \"Don't you hate it when you're reading a page and then some... This content is for subscribers only :) \".",
+    "category": "worldview",
+    "url": null,
+    "description": "Paywalls gatekeep knowledge, information should be free."
+  },
+  {
+    "id": "no-web3",
+    "name": "Keep the web free, say no to Web3",
+    "src": "/badges/saynotoweb3_88x31.gif",
+    "alt": "An animated black banner showing the text Keep the web free, say no to Web3 in green.",
+    "category": "worldview",
+    "url": "https://yesterweb.org/no-to-web3/",
+    "description": "We can make a better, free, decentralized internet without crypto, NFT or Web3 crap.",
+    "footer": true
+  },
+  {
+    "id": "people-pledge",
+    "name": "People Pledge",
+    "src": "/badges/people_pledge_badge_party_cream_pink_88x31.png",
+    "alt": "A banner with a thin light pink border, showing the text People Pledge next to a party popper icon, both are in pink. The background is light yellow.",
+    "category": "worldview",
+    "url": "https://people.pledge.party/",
+    "description": "I pledge to the People Pledge. See https://people.pledge.party",
+    "footer": true
+  },
+  {
     "id": "amogus",
     "name": "Among Us",
     "src": "/badges/amogus.gif",
@@ -312,15 +378,6 @@
     "description": "Neocities is my love, web design is my passion"
   },
   {
-    "id": "cc-by-nc-sa",
-    "name": "CC BY-NC-SA",
-    "src": "/badges/cc-by-nc-sa.png",
-    "alt": "Creative Commons BY-NC-SA",
-    "category": "web",
-    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "description": "My content is CC BY-NC-SA 4.0"
-  },
-  {
     "id": "construction",
     "name": "Under construction",
     "src": "/badges/underconstruction.png",
@@ -346,15 +403,6 @@
     "category": "web",
     "url": null,
     "description": "I use cute fonts, hehe"
-  },
-  {
-    "id": "email-common",
-    "name": "Make email common again!",
-    "src": "/badges/emailcommon.png",
-    "alt": "A banner showing an envelope icon and the words Make Email Common Again next to it.",
-    "category": "web",
-    "url": "mailto:hello@jarema.me",
-    "description": "My email inbox is always open, feel free to email me!"
   },
   {
     "id": "got-html",
@@ -383,16 +431,6 @@
     "category": "web",
     "url": "/humans.txt",
     "description": "Information about me! Hi, I'm the human behind this website."
-  },
-  {
-    "id": "internet-privacy",
-    "name": "Internet privacy Now!",
-    "src": "/badges/internetprivacy.gif",
-    "alt": "An animated pixel art banner with a spinning globe, next to the words Internet privacy in black, and Now! in red.",
-    "category": "web",
-    "url": null,
-    "description": "Let's make internet privacy common again",
-    "footer": true
   },
   {
     "id": "is-it-slow",
@@ -475,15 +513,6 @@
     "category": "software",
     "url": "/blog/2025/08/anything-but-chrome",
     "description": "I'm willing to use anything EXCEPT Chrome. Never Chrome."
-  },
-  {
-    "id": "archive",
-    "name": "Internet Archive",
-    "src": "/badges/archive.png",
-    "alt": "Internet Archive",
-    "category": "other-sites",
-    "url": "https://archive.org/",
-    "description": "Preserve the internet now!"
   },
   {
     "id": "astro",
@@ -650,25 +679,6 @@
     "description": "The NCSA made Mosaic, the first popular web browser!"
   },
   {
-    "id": "no-paywalls",
-    "name": "No paywalls",
-    "src": "/badges/nopaywalls.gif",
-    "alt": "A banner showing the text \"Don't you hate it when you're reading a page and then some... This content is for subscribers only :) \".",
-    "category": "other-sites",
-    "url": null,
-    "description": "Paywalls gatekeep knowledge, information should be free."
-  },
-  {
-    "id": "no-web3",
-    "name": "Keep the web free, say no to Web3",
-    "src": "/badges/saynotoweb3_88x31.gif",
-    "alt": "An animated black banner showing the text Keep the web free, say no to Web3 in green.",
-    "category": "other-sites",
-    "url": "https://yesterweb.org/no-to-web3/",
-    "description": "We can make a better, free, decentralized internet without crypto, NFT or Web3 crap.",
-    "footer": true
-  },
-  {
     "id": "notesnook",
     "name": "Notesnook",
     "src": "/badges/notesnook.png",
@@ -685,16 +695,6 @@
     "category": "other-sites",
     "url": "https://www.openstreetmap.org/",
     "description": "I contribute to OpenStreetMap, and so should you!"
-  },
-  {
-    "id": "people-pledge",
-    "name": "People Pledge",
-    "src": "/badges/people_pledge_badge_party_cream_pink_88x31.png",
-    "alt": "A banner with a thin light pink border, showing the text People Pledge next to a party popper icon, both are in pink. The background is light yellow.",
-    "category": "other-sites",
-    "url": "https://people.pledge.party/",
-    "description": "I pledge to the People Pledge. See https://people.pledge.party",
-    "footer": true
   },
   {
     "id": "responsiveewebdirectory",
