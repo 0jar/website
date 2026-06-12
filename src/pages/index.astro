@@ -1,13 +1,15 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
-import { routes, getSiteName, author, services, friendSites, authorTimezone, authorTimezoneLabel } from "@/lib/constants";
+import { routes, getSiteName, author, services, authorTimezone, authorTimezoneLabel } from "@/lib/constants";
 import { getData } from "@/content.config";
+import badges from "@/content/data/badges.json";
 import MoodCat from "@/components/home/MoodCat.astro";
 import NowSection from "@/components/home/NowSection.astro";
 import RecentPosts from "@/components/home/RecentPosts.astro";
 
 const activeWebringItems = (await getData("webrings")).filter(w => w.status === "active");
+const friendSites = badges.filter(badge => badge.category === "friend");
 
 const btn = "w-full sm:w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors h-11 px-8";
 const card = "border rounded-lg p-4 bg-card card-hover-effect";
@@ -51,7 +53,7 @@ const resolvedSiteName = getSiteName(lang);
         <div class="relative pt-6 lg:pt-0 pb-6 mb-6 text-center">
           <p class="text-lg text-muted-foreground mb-2" id="greeting"><span id="greeting-emoji">👋</span> <T key="greetings.morning" /></p>
           <T key="home.heading" tag="h1" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" />
-          <T key="home.subheading" tag="p" class="text-lg md:text-xl text-muted-foreground mb-8" />
+          <T key="home.subheading" tag="p" class="text-lg md:xl text-muted-foreground mb-8" />
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={routes.contact} class:list={[btn, "bg-primary text-primary-foreground hover:bg-primary/90"]}><T key="home.contactButton" /></a>
             <a href={routes.about} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.aboutButton" /></a>
@@ -129,9 +131,9 @@ const resolvedSiteName = getSiteName(lang);
           <T key="home.checkOutSites" tag="h2" id="check-out-heading" class="text-2xl font-bold mb-4 text-center" />
           {friendSites.length > 0 ? (
             <div class="border rounded-lg p-4 bg-card flex flex-wrap justify-center gap-2">
-              {friendSites.map(({ src, alt, href }) => {
+              {friendSites.map(({ src, alt, url }) => {
                 const img = <img src={src} alt={alt} width={100} height={38} loading="lazy" decoding="async" class="transition-all duration-200 hover:brightness-110 hover:-translate-y-1" />;
-                return href ? <a href={href} target="_blank" rel="noopener noreferrer" class="transition-transform duration-200">{img}</a> : img;
+                return url ? <a href={url} target="_blank" rel="noopener noreferrer" class="transition-transform duration-200">{img}</a> : img;
               })}
             </div>
           ) : (

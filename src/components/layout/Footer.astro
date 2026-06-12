@@ -1,9 +1,12 @@
 ---
 // Footer component with badges, webring links, i18n support, and secret chapter 6 easter egg
 
-import { footerBadges, flagColors } from "@/lib/constants";
+import { flagColors } from "@/lib/constants";
+import badges from "@/content/data/badges.json";
 import { Image } from 'astro:assets';
 import T from "@/components/T.astro";
+
+const footerBadges = badges.filter(badge => badge.footer);
 ---
 
 <footer class="w-full border-t pt-1 xl:py-0" role="contentinfo">
@@ -45,10 +48,10 @@ import T from "@/components/T.astro";
     class="pt-1 flex justify-center flex-wrap gap-2 mx-auto max-w-[670px]"
     aria-label="Web badges and external links"
   >
-        {footerBadges.map(({ src, alt, href }) =>
-      href ? (
+        {footerBadges.map(({ src, alt, url }) =>
+      url ? (
         <a
-          href={href}
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={alt}

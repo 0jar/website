@@ -3,13 +3,14 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { t } from "@/i18n/index";
+import { services } from "@/lib/constants";
 
 const lang = Astro.locals?.lang || "en";
 ---
 
 <BaseLayout title={t(lang, "chat.title")} description={t(lang, "chat.description")}>
   <Fragment slot="head">
-    <script is:inline src="https://iframe.chat/scripts/main.min.js" defer></script>
+    <script is:inline src={services.iframeChat.scriptUrl} defer></script>
   </Fragment>
 
   <div class="container mx-auto px-4 py-8 lg:py-12">
@@ -20,7 +21,7 @@ const lang = Astro.locals?.lang || "en";
       </header>
 
       <div class="border rounded-lg overflow-hidden bg-card">
-        <iframe src="https://iframe.chat/embed?chat=jaremame" id="chattable" class="w-full min-h-[600px] border-0" title="iframe.chat widget" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+        <iframe src={services.iframeChat.host} id="chattable" class="w-full min-h-[600px] border-0" title="iframe.chat widget" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
         <noscript>
           <div class="p-6 text-center">
             <T key="chat.noscript" tag="p" class="text-muted-foreground" />

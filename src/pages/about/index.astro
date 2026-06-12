@@ -14,12 +14,9 @@ const description = t(lang, "about.description");
 const aboutInterestsData = await getCollection("aboutInterests");
 const interests = aboutInterestsData.sort((a: CollectionEntry<"aboutInterests">, b: CollectionEntry<"aboutInterests">) => a.data.order - b.data.order).map((i: CollectionEntry<"aboutInterests">) => i.data);
 
-const languageList = [
-  { langKey: "vi", level: "native" },
-  { langKey: "en", level: "c2" },
-  { langKey: "et", level: "b2" },
-  { langKey: "ru", level: "b2" },
-];
+import aboutData from "@/content/data/about.json";
+
+const languageList = aboutData.languages;
 
 const aboutCommitsData = await getCollection("aboutCommit");
 
@@ -66,22 +63,12 @@ const commits = aboutCommitsData
       <!-- Stats box -->
       <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center text-center md:col-span-1 lg:col-span-1">
         <div class="grid grid-cols-2 gap-4 w-full">
-          <div>
-            <div class="text-3xl font-bold text-primary">1</div>
-            <div class="text-xs text-muted-foreground mt-1">{t(lang, "about.stats.self")}</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-primary">6</div>
-            <div class="text-xs text-muted-foreground mt-1">{t(lang, "about.stats.languages")}</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-primary">5</div>
-            <div class="text-xs text-muted-foreground mt-1">{t(lang, "about.stats.siteVersions")}</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-primary">15+</div>
-            <div class="text-xs text-muted-foreground mt-1">{t(lang, "about.stats.yearsOnline")}</div>
-          </div>
+          {aboutData.stats.map(stat => (
+            <div>
+              <div class="text-3xl font-bold text-primary">{stat.value}</div>
+              <div class="text-xs text-muted-foreground mt-1">{t(lang, stat.labelKey)}</div>
+            </div>
+          ))}
         </div>
       </article>
 

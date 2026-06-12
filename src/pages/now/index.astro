@@ -2,15 +2,12 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { getData, type I18nContent, type I18nContentOptional } from "@/content.config";
+import { nowIcons } from "@/lib/constants";
 
 const nowItems = await getData("now");
 
 const lang = Astro.locals?.lang || "en";
 const k = lang as keyof I18nContent;
-const iconMap: Record<string, string> = {
-  Headphones: "🎧", BookOpen: "📚", Code: "💻", Coffee: "☕",
-  Brain: "🧠", GraduationCap: "🎓", Activity: "📡", Lightbulb: "💡",
-};
 
 const sortedItems = [...nowItems].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
@@ -50,7 +47,7 @@ const sortedItems = [...nowItems].sort((a, b) => new Date(b.date).getTime() - ne
             data-now-content-secondary={item.contentSecondary && JSON.stringify(item.contentSecondary)}
           >
             <div class="flex items-start gap-4">
-              <span class="text-3xl flex-shrink-0" aria-hidden="true">{iconMap[item.icon] || "📌"}</span>
+              <span class="text-3xl flex-shrink-0" aria-hidden="true">{nowIcons[item.icon] || "📌"}</span>
               <div class="flex-1 min-w-0">
                 <T key={`now.categories.${item.category}`} tag="h2" class="font-semibold text-lg mb-2" />
                 <div class="flex items-center gap-3 overflow-hidden">

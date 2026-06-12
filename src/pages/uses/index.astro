@@ -2,16 +2,12 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { getData } from "@/content.config";
+import { usesIcons } from "@/lib/constants";
 
 const usesCategories = await getData("uses");
+import platformData from "@/content/uses/hidden.json";
 
-const categoryIcons: Record<string, string> = {
-  hardware: "💻", mobile: "📱", audio: "🎧", os: "🖥️", development: "⌨️",
-  email: "📧", privacy: "🔒", mobile_tools: "🔧", mapping: "🗺️", gaming: "🎮",
-  multimedia: "🎨", design: "🎨", photo: "📷", video: "🎬", media: "🎵",
-};
-
-const getIcon = (title: string) => categoryIcons[title] || "📌";
+const getIcon = (title: string) => usesIcons[title] || "📌";
 const isHiddenPlatform = (name: string) => name.startsWith('Unspeakable');
 const getHiddenPlatform = (name: string) => name === 'Unspeakable Platform 1' ? 'revanced' : 'stremio';
 
@@ -79,15 +75,14 @@ const locale = Astro.locals?.lang || Astro.currentLocale || "en";
           </section>
         ))}
       </div>
+      <div id="hidden-platform-data" data-platforms={JSON.stringify(platformData)} class="hidden"></div>
     </div>
   </div>
 </BaseLayout>
 
 <script>
-  const platformData: Record<string, { name: string; description: string; link: string }> = {
-    revanced: { name: 'ReVanced', description: 'A patcher for YouTube that removes ads and adds features', link: 'https://revanced.app/' },
-    stremio: { name: 'Stremio', description: 'A media center for streaming movies and TV shows', link: 'https://www.stremio.com/' }
-  };
+  const platformDataEl = document.getElementById('hidden-platform-data');
+  const platformData: Record<string, { name: string; description: string; link: string }> = platformDataEl ? JSON.parse(platformDataEl.getAttribute('data-platforms') || '{}') : {};
 
   function setupHiddenPlatforms() {
     document.querySelectorAll('.hidden-platform').forEach((el) => {

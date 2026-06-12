@@ -3,17 +3,20 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { getData } from "@/content.config";
 
+import { projectIcons, projectStatusConfig } from "@/lib/constants";
+
 const lang = Astro.locals?.lang || "en";
 const projects = (await getData("projects")).filter((p) => !p.hidden);
 
-const statusGroups = [
-  { key: "completed", bg: "bg-green-500", items: projects.filter((p) => p.status === "completed") },
-  { key: "inProgress", bg: "bg-yellow-500 animate-pulse", items: projects.filter((p) => p.status === "in-progress") },
-  { key: "planned", bg: "bg-blue-500", items: projects.filter((p) => p.status === "planned") },
-].filter((g) => g.items.length > 0);
+const statusGroups = projectStatusConfig
+  .map(config => ({
+    key: config.key,
+    bg: config.bg,
+    items: projects.filter((p) => p.status === config.status)
+  }))
+  .filter((g) => g.items.length > 0);
 
-const icons: Record<string, string> = { personal: "🧑‍💻", academic: "📚", activism: "✊" };
-const categories = Object.keys(icons);
+const categories = Object.keys(projectIcons);
 
 const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[field];
 ---
@@ -60,7 +63,7 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
                   {/* Front */}
                   <div class="card-front absolute inset-0 backface-hidden rounded-2xl border-2 bg-card/90 backdrop-blur-md p-7 flex flex-col shadow-md transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-2xl group-hover:-translate-y-1">
                     <div class="flex items-start justify-between mb-5">
-                      <span class="text-4xl filter drop-shadow-md" aria-hidden="true">{icons[p.category]}</span>
+                      <span class="text-4xl filter drop-shadow-md" aria-hidden="true">{projectIcons[p.category]}</span>
                       <div class="flex gap-1.5 flex-wrap justify-end max-w-[65%]">
                         {p.tags.slice(0, 4).map((tag) => (
                           <span class="text-[11px] px-2 py-1 rounded-full bg-secondary text-secondary-foreground font-bold shadow-sm">{tag}</span>

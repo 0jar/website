@@ -2,13 +2,15 @@
 // Guestbook page
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
-import { author } from "@/lib/constants";
+import { author, services } from "@/lib/constants";
 import { t } from "@/i18n/index";
 
 const lang = Astro.locals?.lang || "en";
 ---
 
 <BaseLayout title={t(lang, "guestbook.title")} description={t(lang, "guestbook.description")}>
+
+
   <div class="container mx-auto px-4 py-8 lg:py-12">
     <div class="max-w-3xl mx-auto">
       <header class="mb-8 text-center">
@@ -19,7 +21,8 @@ const lang = Astro.locals?.lang || "en";
       <!-- Atabook iframe -->
       <div class="border rounded-lg overflow-hidden bg-card">
         <iframe
-          src="https://jarema.atabook.org"
+          src={services.atabook.host}
+          id="atabook"
           class="w-full min-h-[800px] border-0"
           title="Atabook Guestbook widget"
           loading="lazy"

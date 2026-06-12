@@ -1,0 +1,14 @@
+{
+  "stats": [
+    { "value": "1", "labelKey": "about.stats.self" },
+    { "value": "6", "labelKey": "about.stats.languages" },
+    { "value": "5", "labelKey": "about.stats.siteVersions" },
+    { "value": "15+", "labelKey": "about.stats.yearsOnline" }
+  ],
+  "languages": [
+    { "langKey": "vi", "level": "native" },
+    { "langKey": "en", "level": "c2" },
+    { "langKey": "et", "level": "b2" },
+    { "langKey": "ru", "level": "b2" }
+  ]
+}

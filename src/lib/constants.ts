@@ -43,12 +43,6 @@ export const alternativeDomains = ["https://jar.tf", "https://z.is-a.dev"] as co
 
 // External services configuration
 export const services = {
-  // Comments
-  cusdis: {
-    host: "https://cusdis.com",
-    scriptUrl: "https://cusdis.com/js/cusdis.es.js",
-    appId: "8b37c4ca-e35d-429e-8f80-6c47e93ab5cd",
-  },
   // IndieAuth
   indieAuth: {
     authEndpoint: "https://indieauth.com/auth",
@@ -82,6 +76,15 @@ export const services = {
       "z.is-a.dev": "bea729d4-bbf9-494e-a4d9-bcbf2a2ab2f3",
     },
   },
+  // Guestbook
+  atabook: {
+    host: "https://jarema.atabook.org",
+  },
+  // Chat
+  iframeChat: {
+    host: "https://iframe.chat/embed?chat=jaremame",
+    scriptUrl: "https://iframe.chat/scripts/main.min.js",
+  },
 } as const;
 
 // Theme colors
@@ -101,8 +104,8 @@ export const flagColors = {
 export const supportedLanguages = [
   { code: "en", name: "English", flag: "🇬🇧", main: true, aliases: ["English"] },
   { code: "vi", name: "Tiếng Việt", flag: "🇻🇳", main: true, aliases: ["Vietnamese", "Tieng Viet"] },
-  { code: "ru", name: "Русский", flag: "🇷🇺", main: true, aliases: ["Russian", "Russkii", "Russkiy"] },
   { code: "et", name: "Eesti", flag: "🇪🇪", main: true, aliases: ["Estonian"] },
+  { code: "ru", name: "Русский", flag: "🇷🇺", main: true, aliases: ["Russian", "Russkii", "Russkiy"] },
   { code: "da", name: "Dansk", flag: "🇩🇰", main: true, aliases: ["Danish"] },
   { code: "zh", name: "中文", flag: "🇨🇳", main: true, aliases: ["Chinese", "Zhongwen", "Hanyu"] },
   { code: "tr", name: "Türkçe", flag: "🇹🇷", beta: true, aliases: ["Turkish", "Turkce"] },
@@ -131,6 +134,14 @@ export const ogLocaleMap: Record<string, string> = {
 // Theme constants
 export const themes = ["light", "dark", "system"] as const;
 export type Theme = (typeof themes)[number];
+
+// Project configurations
+export const projectIcons: Record<string, string> = { personal: "🧑‍💻", academic: "📚", activism: "✊" };
+export const projectStatusConfig = [
+  { key: "completed", bg: "bg-green-500", status: "completed" },
+  { key: "inProgress", bg: "bg-yellow-500 animate-pulse", status: "in-progress" },
+  { key: "planned", bg: "bg-blue-500", status: "planned" },
+];
 
 // Navigation routes
 export const routes = {
@@ -166,6 +177,17 @@ export const localePages = Object.values(routes)
   .map((p) => p.replace(/^\//,  "").replace(/\/$/, ""));
 
 // Keyboard shortcuts
+export const nowIcons: Record<string, string> = {
+  Headphones: "🎧", BookOpen: "📚", Code: "💻", Coffee: "☕",
+  Brain: "🧠", GraduationCap: "🎓", Activity: "📡", Lightbulb: "💡",
+};
+
+export const usesIcons: Record<string, string> = {
+  hardware: "💻", mobile: "📱", audio: "🎧", os: "🖥️", development: "⌨️",
+  email: "📧", privacy: "🔒", mobile_tools: "🔧", mapping: "🗺️", gaming: "🎮",
+  multimedia: "🎨", design: "🎨", photo: "📷", video: "🎬", media: "🎵",
+};
+
 export const keyboardShortcuts: Record<string, string> = {
   home: "h",
   about: "a",
@@ -211,76 +233,6 @@ export interface FooterBadge {
   alt: string;
   href?: string;
 }
-
-export const footerBadges: FooterBadge[] = [
-  {
-    src: "/sweet.png",
-    alt: "Sweet homepage",
-  },
-  {
-    src: "/best_viewed_with_eyes.gif",
-    alt: "Best viewed with Eyes",
-  },
-  {
-    src: "/dumbass.gif",
-    alt: "Dumbass webmaster ahead",
-  },
-  {
-    src: "/join_logo.gif",
-    alt: "White cat sleeping on a red pillow, miaow",
-  },
-  {
-    src: "/bannars.gif",
-    alt: "The Realm of Dream",
-  },
-  {
-    src: "/clouds.gif",
-    alt: "Clouds are nice",
-  },
-  {
-    src: "/people_pledge_badge_party_cream_pink_88x31.png",
-    alt: "People Pledge",
-    href: "https://people.pledge.party/",
-  },
-  {
-    src: "/kagi-smallweb-yellow.gif",
-    alt: "Kagi Small Web",
-    href: "https://kagi.com/smallweb",
-  },
-  {
-    src: "/internetprivacy.gif",
-    alt: "Internet privacy Now!",
-  },
-  {
-    src: "/saynotoweb3_88x31.gif",
-    alt: "Keep the web free, say no to Web3",
-    href: "https://yesterweb.org/no-to-web3/",
-  },
-  {
-    src: "/humanstxt.png",
-    alt: "Humans.txt",
-    href: "/humans.txt",
-  },
-  { src: "/got_html.gif", alt: "Got HTML?" },
-  {
-    src: "/js-warning.gif",
-    alt: "Page contains JavaScript!",
-  },
-  {
-    src: "/fedora.gif",
-    alt: "Fedora Linux",
-    href: "https://fedoraproject.org/",
-  },
-];
-
-// Friend/recommended site badges
-export const friendSites: FooterBadge[] = [
-  { src: "/lukedavis.gif", alt: "Luke Davis's site", href: "https://lukealexdavis.co.uk/" },
-  { src: "/nogginzmart.gif", alt: "Nogginzmart's site", href: "https://nogginzmart.neocities.org" },
-  { src: "/ww-88x31-right-black.png", alt: "Web Weavers invite link", href: "https://discord.gg/qePupaKk" },
-  { src: "/espy-world-button.gif", alt: "Espy's site", href: "https://espy.world/" },
-  { src: "/melonland-badge-2.gif", alt: "MelonLand Forum", href: "https://forum.melonland.net/" },
-];
 
 // API configuration
 export const domainHashes: Record<string, string> = {

@@ -7,40 +7,14 @@ import { siteUrl, getSiteName } from '@/lib/constants';
 const lang = Astro.locals?.lang || "en";
 const resolvedSiteName = getSiteName(lang);
 
-const colors = [
-  { key: "primary", dark: { value: "195 100% 65%", hex: "#54D4FF" }, light: { value: "195 100% 40%", hex: "#0099CC" } },
-  { key: "background", dark: { value: "270 30% 10%", hex: "#1A0F2E" }, light: { value: "0 0% 100%", hex: "#FFFFFF" } },
-  { key: "card", dark: { value: "270 25% 15%", hex: "#2A1F45" }, light: { value: "0 0% 100%", hex: "#FFFFFF" } },
-  { key: "foreground", dark: { value: "0 0% 95%", hex: "#F2F2F2" }, light: { value: "240 10% 3.9%", hex: "#0A0A0F" } },
-  { key: "muted", dark: { value: "270 25% 20%", hex: "#3A2F5A" }, light: { value: "240 4.8% 95.9%", hex: "#F4F4F5" } },
-  { key: "border", dark: { value: "270 25% 25%", hex: "#4A3F6F" }, light: { value: "240 5.9% 90%", hex: "#E4E4E7" } },
-];
+import brandData from "@/content/data/brand.json";
 
-const logos = [
-  { key: "faceOnly", src: "/favicon", alt: "Jarema logo - face only", dimKey: "dimensions1" },
-  { key: "faceAndBody", src: "/favicons", alt: "Jarema logo - face and body", dimKey: "dimensions2" }
-];
+const { colors, logos, fontSamples, fonts: rawFonts, usagePoints } = brandData;
 
-const fontSamples = [
-  { key: "english", text: "Sphinx of black quartz, judge my vow" },
-  { key: "vietnamese", text: "Bốn phương phẳng lặng, hai kinh vững vàng" },
-  { key: "polish", text: "Pchnąć w tę łódź jeża lub ośm skrzyń fig" },
-  { key: "russian", text: "Друг мой эльф! Яшке б свёз птиц южных чащ!" },
-  { key: "japanese", text: "色は匂えど散りぬるを" },
-  { key: "hebrew", text: "דג סקרן שט בים, מאוכזב ולפתע מצא חברה" },
-  { key: "thai", text: "เป็นมนุษย์สุดประเสริฐเลิศคุณค่า" },
-  { key: "symbols", text: "0123456789-= !@#$%^&*()_+" }
-];
-
-const fonts = [
-  { key: "heading", weight: "700", class: "font-heading", link: "https://fonts.google.com/specimen/Be+Vietnam+Pro", samples: fontSamples },
-  { key: "body", weight: "400, 700", class: "font-body", link: "https://fonts.google.com/specimen/Lexend", samples: fontSamples },
-  { key: "monaspice", weight: "400", class: "font-monaspice", link: "https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Monaspace", samples: fontSamples },
-  { key: "notoSansSC", weight: "400-700", class: "font-zh-hans", link: "https://fonts.google.com/specimen/Noto+Sans+SC", samples: [{ key: "chineseSimplified", text: "人有悲欢离合，月有阴晴圆缺，此事古难全。" }, { key: "chineseTraditional", text: "人有悲歡離合，月有陰晴圓缺，此事古難全。" }] },
-  { key: "hanNomGothic", weight: "400", class: "font-vi-hani", link: "https://hannom-rcv.org/font.html", samples: [{ key: "vietnameseHanNom", text: "身㛪辰𤽸分㛪𧷺，𠤩浽𠀧沉買渃𡽫，硍湼默油𢬣几揑，𦓡㛪刎𡨹𬌓𢚸𣘈。" }] }
-];
-
-const usagePoints = ["point1", "point2", "point3", "point4"];
+const fonts = rawFonts.map(f => ({
+  ...f,
+  samples: ((f as any).customSamples as typeof fontSamples) || fontSamples
+}));
 const cardClasses = "bg-card border rounded-lg p-6";
 ---
 

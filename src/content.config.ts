@@ -111,7 +111,7 @@ const usesSchema = z.object({
   });
 
 const uses = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "src/content/uses" }),
+  loader: glob({ pattern: ["**/*.json", "!hidden.json"], base: "src/content/uses" }),
   schema: usesSchema,
 });
 
