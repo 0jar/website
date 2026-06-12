@@ -67,17 +67,17 @@ const cardClasses = "bg-card border rounded-lg p-6";
       <T key="brand.badge.title" tag="h2" class="text-2xl font-bold mb-6" />
       <div class={cardClasses}>
         <div class="text-center mb-6">
-          <img src="/badge.png" alt={`${author.name}'s badge`} width="176" height="62" class="pixelated mx-auto" />
+          <img src="/badges/badge.png" alt={`${author.name}'s badge`} width="176" height="62" class="pixelated mx-auto" />
         </div>
         <div class="space-y-4">
           <div>
             <p class="text-sm text-muted-foreground mb-1"><T key="brand.badge.urlLabel" /></p>
-            <code class="block bg-muted p-2 rounded text-sm overflow-x-auto select-all">{siteUrl}/badge.png</code>
+            <code class="block bg-muted p-2 rounded text-sm overflow-x-auto select-all">{siteUrl}/badges/badge.png</code>
           </div>
           <div>
             <p class="text-sm text-muted-foreground mb-1"><T key="brand.badge.htmlLabel" /></p>
             <pre class="bg-muted p-2 rounded text-sm overflow-x-auto select-all"><code>{`<a href="${siteUrl}/">
-  <img src="${siteUrl}/badge.png" alt="${resolvedSiteName}" width="88" height="31" style="image-rendering: pixelated;">
+  <img src="${siteUrl}/badges/badge.png" alt="${resolvedSiteName}" width="88" height="31" style="image-rendering: pixelated;">
 </a>`}</code></pre>
           </div>
         </div>

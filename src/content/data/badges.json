@@ -2,7 +2,7 @@
   {
     "id": "personal",
     "name": "Jarema's badge",
-    "src": "/badge.png",
+    "src": "/badges/badge.png",
     "alt": "A pixel art banner with a thin blue border of a smiling boy with brown hair and blue headphones",
     "category": "personal",
     "url": "https://jarema.me",
@@ -11,7 +11,7 @@
   {
     "id": "badge-eesti",
     "name": "Eesti",
-    "src": "/badge-eesti.png",
+    "src": "/badges/badge-eesti.png",
     "alt": "My personal badge, with a frame of Estonia's flag.",
     "category": "personal",
     "url": "https://jarema.me",
@@ -20,7 +20,7 @@
   {
     "id": "retrokid",
     "name": "retrokid",
-    "src": "/retrokid.gif",
+    "src": "/badges/retrokid.gif",
     "alt": "An animated retro banner showing the pixelated text retrokid.",
     "category": "personal",
     "url": "/retro",
@@ -29,7 +29,7 @@
   {
     "id": "people-pledge",
     "name": "People Pledge",
-    "src": "/people_pledge_badge_party_cream_pink_88x31.png",
+    "src": "/badges/people_pledge_badge_party_cream_pink_88x31.png",
     "alt": "A banner with a thin light pink border, showing the text People Pledge next to a party popper icon, both are in pink. The background is light yellow.",
     "category": "other-sites",
     "url": "https://people.pledge.party/",
@@ -39,7 +39,7 @@
   {
     "id": "no-web3",
     "name": "Keep the web free, say no to Web3",
-    "src": "/saynotoweb3_88x31.gif",
+    "src": "/badges/saynotoweb3_88x31.gif",
     "alt": "An animated black banner showing the text Keep the web free, say no to Web3 in green.",
     "category": "other-sites",
     "url": "https://yesterweb.org/no-to-web3/",
@@ -49,7 +49,7 @@
   {
     "id": "kagi-smallweb-yellow",
     "name": "Kagi Small Web",
-    "src": "/kagi-smallweb-yellow.gif",
+    "src": "/badges/kagi-smallweb-yellow.gif",
     "alt": "An animated banner with the dog mascot Doggo of the Kagi search engine hopping up and down, next to the text Small web. The background is light yellow.",
     "category": "other-sites",
     "url": "https://kagi.com/smallweb",
@@ -59,7 +59,7 @@
   {
     "id": "kagi-smallweb-white",
     "name": "Kagi Small Web",
-    "src": "/kagi-smallweb.gif",
+    "src": "/badges/kagi-smallweb.gif",
     "alt": "An animated banner with the dog mascot Doggo of the Kagi search engine hopping up and down, next to the text Small web. The background is white.",
     "category": "other-sites",
     "url": "https://kagi.com/smallweb",
@@ -68,7 +68,7 @@
   {
     "id": "osm-button",
     "name": "OpenStreetMap",
-    "src": "/osm-button.png",
+    "src": "/badges/osm-button.png",
     "alt": "A banner with the OpenStreetMap logo and the text OpenStreetMap next to it.",
     "category": "other-sites",
     "url": "https://www.openstreetmap.org/",
@@ -77,7 +77,7 @@
   {
     "id": "developed-by-human",
     "name": "Developed by a human",
-    "src": "/Developed-By-a-Human-Not-By-AI-Badge-black.png",
+    "src": "/badges/Developed-By-a-Human-Not-By-AI-Badge-black.png",
     "alt": "A black banner that reads Developed by a human, Not by AI.",
     "category": "other-sites",
     "url": "https://notbyai.fyi/",
@@ -86,7 +86,7 @@
   {
     "id": "fedora",
     "name": "Fedora",
-    "src": "/fedora.gif",
+    "src": "/badges/fedora.gif",
     "alt": "A banner showing the text Powered by in black with white background, above the Fedora Linux wordmark with dark blue background.",
     "category": "software",
     "url": "https://fedoraproject.org/",
@@ -96,7 +96,7 @@
   {
     "id": "firefox",
     "name": "Firefox",
-    "src": "/firefox4.gif",
+    "src": "/badges/firefox4.gif",
     "alt": "An animated banner with a dark blue background and orange border, showing the Firefox logo next to the text alternating between Tested on and Firefox, both texts in orange.",
     "category": "software",
     "url": "https://www.mozilla.org/en-US/firefox/new/",
@@ -105,7 +105,7 @@
   {
     "id": "anything-but",
     "name": "Anything But Chrome",
-    "src": "/anythingbut.gif",
+    "src": "/badges/anythingbut.gif",
     "alt": "A banner showing the Chrome logo crossed out with a No sign, next to the words Anything But Chrome in black.",
     "category": "software",
     "url": "/blog/2025/08/anything-but-chrome",
@@ -114,7 +114,7 @@
   {
     "id": "browser-monopolies",
     "name": "Hate browser monopolies",
-    "src": "/browsermonopolies.png",
+    "src": "/badges/browsermonopolies.png",
     "alt": "A small banner reading All my friends hate browser monopolies.",
     "category": "software",
     "url": "/blog/2025/08/anything-but-chrome",
@@ -123,7 +123,7 @@
   {
     "id": "bitwarden",
     "name": "Bitwarden",
-    "src": "/bitwarden.gif",
+    "src": "/badges/bitwarden.gif",
     "alt": "A banner showing the Bitwarden logo, next to the word Bitwarden",
     "category": "software",
     "url": "https://bitwarden.com/",
@@ -132,7 +132,7 @@
   {
     "id": "linux-powered",
     "name": "Linux powered",
-    "src": "/linux_powered.gif",
+    "src": "/badges/linux_powered.gif",
     "alt": "An animated banner showing the text Linux powered next to the Tux logo",
     "category": "software",
     "url": "https://distrochooser.de/",
@@ -141,7 +141,7 @@
   {
     "id": "stop-microsoft",
     "name": "Stop Microsoft",
-    "src": "/stop_microsoft.gif",
+    "src": "/badges/stop_microsoft.gif",
     "alt": "A banner with the Microsoft Windows logo, next to the text Stop Microsoft.",
     "category": "software",
     "url": "https://endof10.org",
@@ -150,7 +150,7 @@
   {
     "id": "lynx",
     "name": "Lynx browser",
-    "src": "/lynxnow.gif",
+    "src": "/badges/lynxnow.gif",
     "alt": "A banner with the Lynx browser logo, next to the text Lynx Now!",
     "category": "software",
     "url": "https://lynx.invisible-island.net/",
@@ -159,7 +159,7 @@
   {
     "id": "ncsa",
     "name": "NCSA",
-    "src": "/ncsa.gif",
+    "src": "/badges/ncsa.gif",
     "alt": "A banner with the NCSA logo.",
     "category": "software",
     "url": "https://www.ncsa.illinois.edu/research/project-highlights/ncsa-mosaic/",
@@ -168,7 +168,7 @@
   {
     "id": "humanstxt",
     "name": "humans.txt",
-    "src": "/humanstxt.png",
+    "src": "/badges/humanstxt.png",
     "alt": "A banner showing the humans.txt wordmark",
     "category": "web",
     "url": "/humans.txt",
@@ -178,7 +178,7 @@
   {
     "id": "valid-rss",
     "name": "Valid RSS",
-    "src": "/valid-rss-rogers.png",
+    "src": "/badges/valid-rss-rogers.png",
     "alt": "A banner showing the RSS logo next to the text Valid RSS and a green checkmark",
     "category": "web",
     "url": "/rss.xml",
@@ -187,7 +187,7 @@
   {
     "id": "valid-atom",
     "name": "Valid Atom",
-    "src": "/valid-atom.png",
+    "src": "/badges/valid-atom.png",
     "alt": "A banner showing the Atom logo next to the text Valid and a white checkmark",
     "category": "web",
     "url": "/atom.xml",
@@ -196,7 +196,7 @@
   {
     "id": "got-html",
     "name": "Got HTML?",
-    "src": "/got_html.gif",
+    "src": "/badges/got_html.gif",
     "alt": "A banner showing the text Got HTML? in black",
     "category": "web",
     "url": null,
@@ -206,7 +206,7 @@
   {
     "id": "js-warning",
     "name": "JavaScript warning",
-    "src": "/js-warning.gif",
+    "src": "/badges/js-warning.gif",
     "alt": "A banner showing a caution sign next to the text Warning: Page contains JavaScript!",
     "category": "web",
     "url": null,
@@ -216,7 +216,7 @@
   {
     "id": "best-viewed",
     "name": "Best viewed with Eyes",
-    "src": "/best_viewed_with_eyes.gif",
+    "src": "/badges/best_viewed_with_eyes.gif",
     "alt": "An animated pixel art banner with the word Best in vertical and red background, next to the text viewed with Eyes in horizontal and gray background. At the right is a blinking pair of eyes emoji in black background.",
     "category": "web",
     "url": null,
@@ -226,7 +226,7 @@
   {
     "id": "any-browser",
     "name": "Any browser",
-    "src": "/any_browser.gif",
+    "src": "/badges/any_browser.gif",
     "alt": "A banner with the A logo, next to the text Best viewed with Any browser.",
     "category": "web",
     "url": "/retro",
@@ -235,7 +235,7 @@
   {
     "id": "internet-privacy",
     "name": "Internet privacy Now!",
-    "src": "/internetprivacy.gif",
+    "src": "/badges/internetprivacy.gif",
     "alt": "An animated pixel art banner with a spinning globe, next to the words Internet privacy in black, and Now! in red.",
     "category": "web",
     "url": null,
@@ -245,7 +245,7 @@
   {
     "id": "button-2019",
     "name": "Still using buttons in 2019!",
-    "src": "/button2019.gif",
+    "src": "/badges/button2019.gif",
     "alt": "A banner showing the text Still using buttons in 2019!",
     "category": "web",
     "url": null,
@@ -254,7 +254,7 @@
   {
     "id": "button-webdesign",
     "name": "Web design is my passion",
-    "src": "/buttonwebdesign.gif",
+    "src": "/badges/buttonwebdesign.gif",
     "alt": "An animated banner showing the flashing text web design is my passion, with an orange cat holding art brushes in the background.",
     "category": "web",
     "url": "https://jarema.neocities.org/",
@@ -263,7 +263,7 @@
   {
     "id": "graphic-design",
     "name": "Graphic design is my passion",
-    "src": "/graphicdesign.png",
+    "src": "/badges/graphicdesign.png",
     "alt": "A cyan banner showing a frog in white background signifying an image without transparency, with the text graphic design is my passion in blood red.",
     "category": "web",
     "url": null,
@@ -272,7 +272,7 @@
   {
     "id": "css-is-awesome",
     "name": "CSS is awesome",
-    "src": "/css.png",
+    "src": "/badges/css.png",
     "alt": "A banner with a square and the text CSS is awesome in caps in it, but the word awesome is overflowing from the square.",
     "category": "web",
     "url": null,
@@ -281,7 +281,7 @@
   {
     "id": "email-common",
     "name": "Make email common again!",
-    "src": "/emailcommon.png",
+    "src": "/badges/emailcommon.png",
     "alt": "A banner showing an envelope icon and the words Make Email Common Again next to it.",
     "category": "web",
     "url": "mailto:hello@jarema.me",
@@ -290,7 +290,7 @@
   {
     "id": "sign-guestbook",
     "name": "Sign my guestbook",
-    "src": "/sign_guestbook1.gif",
+    "src": "/badges/sign_guestbook1.gif",
     "alt": "A banner with the text Sign my guestbook, next to an icon of a guestbook.",
     "category": "web",
     "url": "/guestbook",
@@ -299,7 +299,7 @@
   {
     "id": "cute-font",
     "name": "Cute font user",
-    "src": "/cutefontuser.gif",
+    "src": "/badges/cutefontuser.gif",
     "alt": "A banner with two cats above, and the text Cute font user below.",
     "category": "web",
     "url": null,
@@ -308,7 +308,7 @@
   {
     "id": "construction",
     "name": "Under construction",
-    "src": "/underconstruction.png",
+    "src": "/badges/underconstruction.png",
     "alt": "A yellow banner with the text Under construction in black.",
     "category": "web",
     "url": null,
@@ -317,7 +317,7 @@
   {
     "id": "www2",
     "name": "World Wide Web",
-    "src": "/www2.gif",
+    "src": "/badges/www2.gif",
     "alt": "An animated banner with the WWW text and the Earth moving from right to left.",
     "category": "web",
     "url": null,
@@ -326,7 +326,7 @@
   {
     "id": "miaow",
     "name": "Miaow",
-    "src": "/join_logo.gif",
+    "src": "/badges/join_logo.gif",
     "alt": "An animated pixel art banner with a thin black border of a white cat sleeping on a red pillow, next to the word miaow in a blocky pixel font alternating between pink and orange. The background is white and has two small pink stars.",
     "category": "fun",
     "url": null,
@@ -336,7 +336,7 @@
   {
     "id": "realm",
     "name": "The Realm of Dream",
-    "src": "/bannars.gif",
+    "src": "/badges/bannars.gif",
     "alt": "An animated pixel art banner with a thin pink border. The background is a rainbow and has ten small white stars. On the background is the text The Realm of Dream in a blocky pixel font alternating between black and orange, with a white outline. Above the text is five hearts with different colors.",
     "category": "fun",
     "url": null,
@@ -346,7 +346,7 @@
   {
     "id": "dumbass",
     "name": "Dumbass webmaster ahead",
-    "src": "/dumbass.gif",
+    "src": "/badges/dumbass.gif",
     "alt": "An animated banner showing the text Danger in red background and vertical, next to the words Dumbass webmaster ahead in horizontal. The word ahead is flashing. Next to the words, there is a girl in braided hairs.",
     "category": "fun",
     "url": null,
@@ -356,7 +356,7 @@
   {
     "id": "imagine",
     "name": "Powered by imagination",
-    "src": "/imagine.gif",
+    "src": "/badges/imagine.gif",
     "alt": "An animated banner showing the text This site is powered by in one frame and imagination in the other frame.",
     "category": "fun",
     "url": null,
@@ -365,7 +365,7 @@
   {
     "id": "perfect-clear",
     "name": "Perfect clear!",
-    "src": "/perfectclear.gif",
+    "src": "/badges/perfectclear.gif",
     "alt": "An animated banner showing a Tetris gameplay, next to the words Perfect clear in white.",
     "category": "fun",
     "url": "/tetris",
@@ -374,7 +374,7 @@
   {
     "id": "porygon2",
     "name": "Porygon2",
-    "src": "/porygon2.gif",
+    "src": "/badges/porygon2.gif",
     "alt": "A banner showing the text Porygon2! and a squeaking Porygon2",
     "category": "fun",
     "url": null,
@@ -383,7 +383,7 @@
   {
     "id": "teto",
     "name": "Kasane Teto",
-    "src": "/teto.gif",
+    "src": "/badges/teto.gif",
     "alt": "An animated banner showing Kasane Teto dancing left and right",
     "category": "fun",
     "url": "https://www.youtube.com/watch?v=R8fuPgbOhTM",
@@ -392,7 +392,7 @@
   {
     "id": "tom-and-jerry",
     "name": "Tom and Jerry",
-    "src": "/tomandjerry.gif",
+    "src": "/badges/tomandjerry.gif",
     "alt": "An animated banner showing Tom and Jerry",
     "category": "fun",
     "url": "https://www.youtube.com/watch?v=5oH9Nr3bKfw",
@@ -401,7 +401,7 @@
   {
     "id": "milktea",
     "name": "Milk tea Now!",
-    "src": "/milktea.gif",
+    "src": "/badges/milktea.gif",
     "alt": "A banner showing a cup of bubble tea, next to the words Milk tea Now!",
     "category": "fun",
     "url": null,
@@ -410,7 +410,7 @@
   {
     "id": "sweet",
     "name": "Sweet homepage",
-    "src": "/sweet.png",
+    "src": "/badges/sweet.png",
     "alt": "A blue banner showing the text Sweet homepage in all caps, next to the word weet is a moon and two stars.",
     "category": "fun",
     "url": null,
@@ -420,7 +420,7 @@
   {
     "id": "win-xp",
     "name": "I miss Windows XP",
-    "src": "/i-miss-xp.gif",
+    "src": "/badges/i-miss-xp.gif",
     "alt": "An animated banner with the Windows XP background and the text I miss Windows XP flashing.",
     "category": "fun",
     "url": null,
@@ -429,7 +429,7 @@
   {
     "id": "like-computer",
     "name": "I like computers",
-    "src": "/i-like-computer.jpg",
+    "src": "/badges/i-like-computer.jpg",
     "alt": "A banner with the computer icon and the text I like computer in caps.",
     "category": "fun",
     "url": null,
@@ -438,7 +438,7 @@
   {
     "id": "clouds",
     "name": "Clouds are nice",
-    "src": "/clouds.gif",
+    "src": "/badges/clouds.gif",
     "alt": "A banner with the sky and clouds.",
     "category": "fun",
     "url": null,
@@ -448,7 +448,7 @@
   {
     "id": "ltt",
     "name": "Free tech tips",
-    "src": "/ltt.gif",
+    "src": "/badges/ltt.gif",
     "alt": "An animated banner with the text Free tech tips click here flashing next to Linus from Linus Tech Tips.",
     "category": "fun",
     "url": "https://www.youtube.com/channel/UCXuqSBlHAE6Xw-yeJA0Tunw",
@@ -457,7 +457,7 @@
   {
     "id": "tumblr-apocolypse",
     "name": "Tumblr apocolypse survivor",
-    "src": "/tumblrapocolypse.png",
+    "src": "/badges/tumblrapocolypse.png",
     "alt": "A dark purple banner with the text I survived the Tumblr apocolypse in white, next to the Tumblr logo.",
     "category": "fun",
     "url": null,
@@ -466,7 +466,7 @@
   {
     "id": "lukedavis",
     "name": "Luke Davis",
-    "src": "/lukedavis.gif",
+    "src": "/badges/lukedavis.gif",
     "alt": "Luke Davis's site",
     "category": "friend",
     "url": "https://lukealexdavis.co.uk/",
@@ -475,7 +475,7 @@
   {
     "id": "nogginzmart",
     "name": "Nogginzmart",
-    "src": "/nogginzmart.gif",
+    "src": "/badges/nogginzmart.gif",
     "alt": "Nogginzmart's site",
     "category": "friend",
     "url": "https://nogginzmart.neocities.org",
@@ -484,7 +484,7 @@
   {
     "id": "webweavers",
     "name": "Web Weavers",
-    "src": "/ww-88x31-right-black.png",
+    "src": "/badges/ww-88x31-right-black.png",
     "alt": "Web Weavers",
     "category": "friend",
     "url": "https://discord.gg/qePupaKk",
@@ -493,7 +493,7 @@
   {
     "id": "espy",
     "name": "Espy",
-    "src": "/espy-world-button.gif",
+    "src": "/badges/espy-world-button.gif",
     "alt": "Espy's site",
     "category": "friend",
     "url": "https://espy.world/",
@@ -502,7 +502,7 @@
   {
     "id": "melonland",
     "name": "MelonLand",
-    "src": "/melonland-badge-2.gif",
+    "src": "/badges/melonland-badge-2.gif",
     "alt": "MelonLand Forum",
     "category": "friend",
     "url": "https://forum.melonland.net/",
