@@ -5,14 +5,27 @@ import { getCollection, render, type CollectionEntry } from "astro:content";
 import ShareButtons from "@/components/blog/ShareButtons.astro";
 import T from "@/components/T.astro";
 import { t } from "@/i18n";
-import { supportedLanguages, siteUrl, getSiteName, author, routes } from "@/lib/constants";
+import {
+  supportedLanguages,
+  siteUrl,
+  getSiteName,
+  author,
+  routes,
+} from "@/lib/constants";
 import { localePath, stripLocale } from "@/i18n/routing";
 import { dateFull } from "@/lib/utils/timezone-utils";
 
 type BlogEntry = CollectionEntry<"blog">;
 
-const publishedBlogPostsSortedPromise = getCollection("blog", ({ data }: BlogEntry) => !data.draft)
-  .then((posts: BlogEntry[]) => posts.sort((a: BlogEntry, b: BlogEntry) => b.data.date.getTime() - a.data.date.getTime()));
+const publishedBlogPostsSortedPromise = getCollection(
+  "blog",
+  ({ data }: BlogEntry) => !data.draft,
+).then((posts: BlogEntry[]) =>
+  posts.sort(
+    (a: BlogEntry, b: BlogEntry) =>
+      b.data.date.getTime() - a.data.date.getTime(),
+  ),
+);
 
 interface WebmentionAuthor {
   type?: string;
@@ -38,13 +51,19 @@ const webmentionsCache = new Map<string, Promise<Webmention[]>>();
 async function fetchWebmentions(target: string): Promise<Webmention[]> {
   let cached = webmentionsCache.get(target);
   if (!cached) {
-    cached = fetch(`https://webmention.io/api/mentions.jf2?target=${encodeURIComponent(target)}`)
-      .then(r => r.ok ? r.json() : { children: [] })
-      .then(j => {
+    cached = fetch(
+      `https://webmention.io/api/mentions.jf2?target=${encodeURIComponent(target)}`,
+    )
+      .then((r) => (r.ok ? r.json() : { children: [] }))
+      .then((j) => {
         const children = j.children ?? [];
         return children.sort((a: Webmention, b: Webmention) => {
-          const dateA = new Date(a.published || a["wm-received"] || 0).getTime();
-          const dateB = new Date(b.published || b["wm-received"] || 0).getTime();
+          const dateA = new Date(
+            a.published || a["wm-received"] || 0,
+          ).getTime();
+          const dateB = new Date(
+            b.published || b["wm-received"] || 0,
+          ).getTime();
           return dateA - dateB;
         });
       })
@@ -70,14 +89,34 @@ interface Props {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const { title, excerpt, date, updated, language, tags, categories: rawCategories, readingTime, mood, catApproved, alternates } = post.data;
-const categories = rawCategories?.length ? rawCategories : post.data.category ? [post.data.category] : [];
+const {
+  title,
+  excerpt,
+  date,
+  updated,
+  language,
+  tags,
+  categories: rawCategories,
+  readingTime,
+  mood,
+  catApproved,
+  alternates,
+} = post.data;
+const categories = rawCategories?.length
+  ? rawCategories
+  : post.data.category
+    ? [post.data.category]
+    : [];
 
 type TaxonomyMeta = { key: string; label: string };
 
 const toTaxonomyKey = (value: string): string => {
-  const base = value.trim().toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
-  const slug = base.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  const base = value
+    .trim()
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "");
+  const slug = base.replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   return slug || value;
 };
 
@@ -97,14 +136,18 @@ const getTagMeta = (raw: string): TaxonomyMeta => {
 
 const categoryMeta = categories.map(getCategoryMeta);
 const tagMeta = (tags ?? []).map(getTagMeta);
-const taxonomyKeywords = Array.from(new Set([
-  ...categoryMeta.map((entry: TaxonomyMeta) => entry.label),
-  ...tagMeta.map((entry: TaxonomyMeta) => entry.label),
-]));
+const taxonomyKeywords = Array.from(
+  new Set([
+    ...categoryMeta.map((entry: TaxonomyMeta) => entry.label),
+    ...tagMeta.map((entry: TaxonomyMeta) => entry.label),
+  ]),
+);
 
 const postUrl = Astro.url.href;
 const postLang = language ?? "en";
-const resolvedSiteName = getSiteName(post.data.language || Astro.locals?.lang || "en");
+const resolvedSiteName = getSiteName(
+  post.data.language || Astro.locals?.lang || "en",
+);
 const description = excerpt || `Read "${title}" on ${resolvedSiteName}.`;
 const hasUpdatedDate = Boolean(updated && updated.getTime() > date.getTime());
 
@@ -125,27 +168,44 @@ const blogPostingStructuredData: Record<string, unknown> = {
   isAccessibleForFree: true,
   ...(updated && { dateModified: updated.toISOString() }),
   ...(taxonomyKeywords.length && { keywords: taxonomyKeywords.join(", ") }),
-  ...(categoryMeta.length && { articleSection: categoryMeta.map((entry: TaxonomyMeta) => entry.label).join(", ") }),
+  ...(categoryMeta.length && {
+    articleSection: categoryMeta
+      .map((entry: TaxonomyMeta) => entry.label)
+      .join(", "),
+  }),
   ...(taxonomyKeywords.length && {
     about: taxonomyKeywords.map((label) => ({
       "@type": "Thing",
       name: label,
     })),
   }),
-  ...(readingTime && { timeRequired: `PT${Math.max(1, Math.round(readingTime))}M` }),
+  ...(readingTime && {
+    timeRequired: `PT${Math.max(1, Math.round(readingTime))}M`,
+  }),
 };
 
 const postMetaTags = [
   { property: "article:published_time", content: date.toISOString() },
-  ...(updated ? [{ property: "article:modified_time", content: updated.toISOString() }] : []),
-  ...categoryMeta.map((entry: TaxonomyMeta) => ({ property: "article:section", content: entry.label })),
-  ...tagMeta.map((entry: TaxonomyMeta) => ({ property: "article:tag", content: entry.label })),
+  ...(updated
+    ? [{ property: "article:modified_time", content: updated.toISOString() }]
+    : []),
+  ...categoryMeta.map((entry: TaxonomyMeta) => ({
+    property: "article:section",
+    content: entry.label,
+  })),
+  ...tagMeta.map((entry: TaxonomyMeta) => ({
+    property: "article:tag",
+    content: entry.label,
+  })),
 ];
 
 // Post navigation
 const sortedPosts = await publishedBlogPostsSortedPromise;
-const currentIndex = sortedPosts.findIndex((p: CollectionEntry<"blog">) => p.id === post.id);
-const prevPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
+const currentIndex = sortedPosts.findIndex(
+  (p: CollectionEntry<"blog">) => p.id === post.id,
+);
+const prevPost =
+  currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
 const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
 
 // Webmentions
@@ -154,14 +214,22 @@ const webmentionUrl = import.meta.env.DEV ? new URL(siteUrl) : new URL(postUrl);
 webmentionUrl.pathname = webmentionPath;
 webmentionUrl.search = "";
 webmentionUrl.hash = "";
-const webmentionTarget = webmentionUrl.href.endsWith("/") ? webmentionUrl.href : `${webmentionUrl.href}/`;
+const webmentionTarget = webmentionUrl.href.endsWith("/")
+  ? webmentionUrl.href
+  : `${webmentionUrl.href}/`;
 const skipWebmentions = process.env.SKIP_WEBMENTIONS === "1";
-const webmentions = skipWebmentions ? [] : await fetchWebmentions(webmentionTarget);
+const webmentions = skipWebmentions
+  ? []
+  : await fetchWebmentions(webmentionTarget);
 
 const wmLikes = webmentions.filter((wm) => wm["wm-property"] === "like-of");
 const wmReposts = webmentions.filter((wm) => wm["wm-property"] === "repost-of");
-const wmReplies = webmentions.filter((wm) => wm["wm-property"] === "in-reply-to");
-const wmMentions = webmentions.filter((wm) => wm["wm-property"] === "mention-of");
+const wmReplies = webmentions.filter(
+  (wm) => wm["wm-property"] === "in-reply-to",
+);
+const wmMentions = webmentions.filter(
+  (wm) => wm["wm-property"] === "mention-of",
+);
 const hasWebmentions = webmentions.length > 0;
 
 interface ReplyThread {
@@ -174,9 +242,10 @@ const threadMap = new Map<string, ReplyThread>();
 
 wmReplies.forEach((wm) => {
   const source = wm["wm-source"] || "";
-  const lastSlashIndex = source.lastIndexOf('/');
-  const prefix = lastSlashIndex !== -1 ? source.substring(0, lastSlashIndex) : source;
-  
+  const lastSlashIndex = source.lastIndexOf("/");
+  const prefix =
+    lastSlashIndex !== -1 ? source.substring(0, lastSlashIndex) : source;
+
   if (!threadMap.has(prefix)) {
     const thread = { parent: wm, replies: [] };
     threadMap.set(prefix, thread);
@@ -203,97 +272,161 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
   <article class="h-entry container mx-auto px-4 py-8 lg:py-12 max-w-3xl">
     <header class="mb-8">
       <div class="text-sm text-muted-foreground mb-4">
-        <a href={localePath(lang, routes.blog)} class="hover:text-primary transition-colors">
+        <a
+          href={localePath(lang, routes.blog)}
+          class="hover:text-primary transition-colors"
+        >
           ← <T key="blog.back" />
         </a>
       </div>
 
       <h1 class="p-name text-3xl md:text-4xl font-bold mb-4">{title}</h1>
       {excerpt && <p class="p-summary hidden">{excerpt}</p>}
-      <a href={postUrl} class="u-url u-uid hidden" aria-hidden="true">{postUrl}</a>
+      <a href={postUrl} class="u-url u-uid hidden" aria-hidden="true"
+        >{postUrl}</a
+      >
 
-      <div class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+      <div
+        class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground"
+      >
         <span>
           <T key="blog.postedOn" />{" "}
-          <time class="dt-published" datetime={date.toISOString()} data-date={date.toISOString()}>
+          <time
+            class="dt-published"
+            datetime={date.toISOString()}
+            data-date={date.toISOString()}
+          >
             {formatDate(date)}
           </time>
         </span>
-        {post.data.written && (
-          <>
-            <span aria-hidden="true">•</span>
-            <span>
-              <T key="blog.writtenOn" />{" "}
-              <time datetime={post.data.written.toISOString()} data-date={post.data.written.toISOString()}>
-                {formatDate(post.data.written)}
-              </time>
-            </span>
-          </>
-        )}
-        {hasUpdatedDate && updated && (
-          <>
-            <span aria-hidden="true">•</span>
-            <span>
-              <T key="now.lastUpdated" />{" "}
-              <time class="dt-updated" datetime={updated.toISOString()} data-date={updated.toISOString()}>
-                {formatDate(updated)}
-              </time>
-            </span>
-          </>
-        )}
+        {
+          post.data.written && (
+            <>
+              <span aria-hidden="true">•</span>
+              <span>
+                <T key="blog.writtenOn" />{" "}
+                <time
+                  datetime={post.data.written.toISOString()}
+                  data-date={post.data.written.toISOString()}
+                >
+                  {formatDate(post.data.written)}
+                </time>
+              </span>
+            </>
+          )
+        }
+        {
+          hasUpdatedDate && updated && (
+            <>
+              <span aria-hidden="true">•</span>
+              <span>
+                <T key="now.lastUpdated" />{" "}
+                <time
+                  class="dt-updated"
+                  datetime={updated.toISOString()}
+                  data-date={updated.toISOString()}
+                >
+                  {formatDate(updated)}
+                </time>
+              </span>
+            </>
+          )
+        }
         <span aria-hidden="true">•</span>
-        <span><span id="reading-time-value">{readingTime || 5}</span> <T key="blog.minRead" /></span>
-        {mood && (
-          <>
-            <span aria-hidden="true">•</span>
-            <span><T key="blog.mood" />: {mood}</span>
-          </>
-        )}
-        {catApproved && (
-          <>
-            <span aria-hidden="true">•</span>
-            <span title="Cat approved!" aria-label="Cat approved">🐱 ✓</span>
-          </>
-        )}
+        <span
+          ><span id="reading-time-value">{readingTime || 5}</span>
+          <T key="blog.minRead" /></span
+        >
+        {
+          mood && (
+            <>
+              <span aria-hidden="true">•</span>
+              <span>
+                <T key="blog.mood" />: {mood}
+              </span>
+            </>
+          )
+        }
+        {
+          catApproved && (
+            <>
+              <span aria-hidden="true">•</span>
+              <span title="Cat approved!" aria-label="Cat approved">
+                🐱 ✓
+              </span>
+            </>
+          )
+        }
       </div>
 
-      {tags?.length && (
-        <div class="flex gap-2 flex-wrap" role="list" aria-label={t(lang, "blog.tag")}>
-          {tags.map((tag: string) => (
-            <span role="listitem" class="p-category text-xs px-2 py-1 rounded bg-muted text-muted-foreground hidden" aria-hidden="true">
-              {getTagMeta(tag).label}
-            </span>
-          ))}
-        </div>
-      )}
+      {
+        tags?.length && (
+          <div
+            class="flex gap-2 flex-wrap"
+            role="list"
+            aria-label={t(lang, "blog.tag")}
+          >
+            {tags.map((tag: string) => (
+              <span
+                role="listitem"
+                class="p-category text-xs px-2 py-1 rounded bg-muted text-muted-foreground hidden"
+                aria-hidden="true"
+              >
+                {getTagMeta(tag).label}
+              </span>
+            ))}
+          </div>
+        )
+      }
 
-      {categories.length > 0 && (
-        <div class="flex gap-2 flex-wrap" role="list" aria-label={t(lang, "blog.category")}>
-          {categories.map((entry: string) => (
-            <span role="listitem" class="p-category text-xs px-2 py-1 rounded border text-muted-foreground hidden" aria-hidden="true">
-              {getCategoryMeta(entry).label}
-            </span>
-          ))}
-        </div>
-      )}
+      {
+        categories.length > 0 && (
+          <div
+            class="flex gap-2 flex-wrap"
+            role="list"
+            aria-label={t(lang, "blog.category")}
+          >
+            {categories.map((entry: string) => (
+              <span
+                role="listitem"
+                class="p-category text-xs px-2 py-1 rounded border text-muted-foreground hidden"
+                aria-hidden="true"
+              >
+                {getCategoryMeta(entry).label}
+              </span>
+            ))}
+          </div>
+        )
+      }
 
       <div class="mt-6">
         <ShareButtons title={title} url={postUrl} />
       </div>
 
-      {alternates?.length && (
-        <div class="mt-4 p-3 rounded-lg bg-muted/50 border">
-          <T key="blog.availableIn" class="text-sm text-muted-foreground" />
-          <span class="text-sm text-muted-foreground"> </span>
-          {alternates.map((alt: { slug: string; language: string }, i: number) => (
-            <>
-              <a href={`/blog/${alt.slug}/`} class="text-sm text-primary hover:underline">
-                {supportedLanguages.find((l) => l.code === alt.language)?.name || alt.language.toUpperCase()}
-              </a>{i < alternates.length - 1 && <span class="text-muted-foreground">, </span>}
-            </>
-          ))}
-        </div>
-      )}
+      {
+        alternates?.length && (
+          <div class="mt-4 p-3 rounded-lg bg-muted/50 border">
+            <T key="blog.availableIn" class="text-sm text-muted-foreground" />
+            <span class="text-sm text-muted-foreground"> </span>
+            {alternates.map(
+              (alt: { slug: string; language: string }, i: number) => (
+                <>
+                  <a
+                    href={`/blog/${alt.slug}/`}
+                    class="text-sm text-primary hover:underline"
+                  >
+                    {supportedLanguages.find((l) => l.code === alt.language)
+                      ?.name || alt.language.toUpperCase()}
+                  </a>
+                  {i < alternates.length - 1 && (
+                    <span class="text-muted-foreground">, </span>
+                  )}
+                </>
+              ),
+            )}
+          </div>
+        )
+      }
     </header>
 
     <div class="p-author h-card hidden" aria-hidden="true">
@@ -306,203 +439,315 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
 
     <!-- Webmentions -->
     <section class="mt-12 pt-8 border-t" aria-labelledby="webmentions-heading">
-      <h2 id="webmentions-heading" class="text-2xl font-bold mb-6"><T key="blog.webmentions" /></h2>
+      <h2 id="webmentions-heading" class="text-2xl font-bold mb-6">
+        <T key="blog.webmentions" />
+      </h2>
 
-      {hasWebmentions ? (
-        <div class="space-y-8">
-          {/* Likes */}
-          {wmLikes.length > 0 && (
-            <div>
-              <h3 class="text-sm font-semibold text-muted-foreground mb-3">❤️ {wmLikes.length} <T key="blog.webmentionLike" /></h3>
-              <div class="flex flex-wrap gap-1" role="list" aria-label={t(lang, "blog.webmentionLike")}>
-                {wmLikes.map((wm) => (
-                  <a
-                    role="listitem"
-                    href={wm.author?.url || wm.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={wm.author?.name || "Anonymous"}
-                    class="block"
-                  >
-                    {wm.author?.photo ? (
-                      <img
-                        src={wm.author.photo}
-                        alt={wm.author?.name || "Anonymous"}
-                        width="32"
-                        height="32"
-                        class="rounded-full"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-xs font-medium">
-                        {(wm.author?.name || "?")[0]}
-                      </span>
-                    )}
-                  </a>
-                ))}
+      {
+        hasWebmentions ? (
+          <div class="space-y-8">
+            {/* Likes */}
+            {wmLikes.length > 0 && (
+              <div>
+                <h3 class="text-sm font-semibold text-muted-foreground mb-3">
+                  ❤️ {wmLikes.length} <T key="blog.webmentionLike" />
+                </h3>
+                <div
+                  class="flex flex-wrap gap-1"
+                  role="list"
+                  aria-label={t(lang, "blog.webmentionLike")}
+                >
+                  {wmLikes.map((wm) => (
+                    <a
+                      role="listitem"
+                      href={wm.author?.url || wm.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={wm.author?.name || "Anonymous"}
+                      class="block"
+                    >
+                      {wm.author?.photo ? (
+                        <img
+                          src={wm.author.photo}
+                          alt={wm.author?.name || "Anonymous"}
+                          width="32"
+                          height="32"
+                          class="rounded-full"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-xs font-medium">
+                          {(wm.author?.name || "?")[0]}
+                        </span>
+                      )}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Reposts */}
-          {wmReposts.length > 0 && (
-            <div>
-              <h3 class="text-sm font-semibold text-muted-foreground mb-3">🔁 {wmReposts.length} <T key="blog.webmentionRepost" /></h3>
-              <div class="flex flex-wrap gap-1" role="list" aria-label={t(lang, "blog.webmentionRepost")}>
-                {wmReposts.map((wm) => (
-                  <a
-                    role="listitem"
-                    href={wm.author?.url || wm.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={wm.author?.name || "Anonymous"}
-                    class="block"
-                  >
-                    {wm.author?.photo ? (
-                      <img
-                        src={wm.author.photo}
-                        alt={wm.author?.name || "Anonymous"}
-                        width="32"
-                        height="32"
-                        class="rounded-full"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-xs font-medium">
-                        {(wm.author?.name || "?")[0]}
-                      </span>
-                    )}
-                  </a>
-                ))}
+            {/* Reposts */}
+            {wmReposts.length > 0 && (
+              <div>
+                <h3 class="text-sm font-semibold text-muted-foreground mb-3">
+                  🔁 {wmReposts.length} <T key="blog.webmentionRepost" />
+                </h3>
+                <div
+                  class="flex flex-wrap gap-1"
+                  role="list"
+                  aria-label={t(lang, "blog.webmentionRepost")}
+                >
+                  {wmReposts.map((wm) => (
+                    <a
+                      role="listitem"
+                      href={wm.author?.url || wm.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={wm.author?.name || "Anonymous"}
+                      class="block"
+                    >
+                      {wm.author?.photo ? (
+                        <img
+                          src={wm.author.photo}
+                          alt={wm.author?.name || "Anonymous"}
+                          width="32"
+                          height="32"
+                          class="rounded-full"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-xs font-medium">
+                          {(wm.author?.name || "?")[0]}
+                        </span>
+                      )}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Replies */}
-          {replyThreads.length > 0 && (
-            <div>
-              <h3 class="text-sm font-semibold text-muted-foreground mb-3">💬 {wmReplies.length} <T key="blog.webmentionReply" /></h3>
-              <ol class="space-y-6" aria-label={t(lang, "blog.webmentionReply")}>
-                {replyThreads.map((thread) => (
-                  <li>
-                    {/* Parent comment */}
-                    <div class="flex gap-3 p-3 rounded-lg bg-muted/30">
-                      <a href={thread.parent.author?.url} target="_blank" rel="noopener noreferrer" class="shrink-0">
-                        {thread.parent.author?.photo ? (
-                          <img src={thread.parent.author.photo} alt="" width="40" height="40" class="rounded-full" loading="lazy" />
-                        ) : (
-                          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted text-sm font-medium">
-                            {(thread.parent.author?.name || "?")[0]}
-                          </span>
-                        )}
-                      </a>
-                      <div class="min-w-0">
-                        <div class="flex items-baseline gap-2 text-sm">
-                          <a href={thread.parent.author?.url} target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline truncate">
-                            {thread.parent.author?.name || "Anonymous"}
-                          </a>
-                          {thread.parent.published && (
-                            <time class="text-xs text-muted-foreground shrink-0" datetime={thread.parent.published}>
-                              {formatDate(new Date(thread.parent.published))}
-                            </time>
+            {/* Replies */}
+            {replyThreads.length > 0 && (
+              <div>
+                <h3 class="text-sm font-semibold text-muted-foreground mb-3">
+                  💬 {wmReplies.length} <T key="blog.webmentionReply" />
+                </h3>
+                <ol
+                  class="space-y-6"
+                  aria-label={t(lang, "blog.webmentionReply")}
+                >
+                  {replyThreads.map((thread) => (
+                    <li>
+                      {/* Parent comment */}
+                      <div class="flex gap-3 p-3 rounded-lg bg-muted/30">
+                        <a
+                          href={thread.parent.author?.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="shrink-0"
+                        >
+                          {thread.parent.author?.photo ? (
+                            <img
+                              src={thread.parent.author.photo}
+                              alt=""
+                              width="40"
+                              height="40"
+                              class="rounded-full"
+                              loading="lazy"
+                            />
+                          ) : (
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted text-sm font-medium">
+                              {(thread.parent.author?.name || "?")[0]}
+                            </span>
+                          )}
+                        </a>
+                        <div class="min-w-0">
+                          <div class="flex items-baseline gap-2 text-sm">
+                            <a
+                              href={thread.parent.author?.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="font-semibold hover:underline truncate"
+                            >
+                              {thread.parent.author?.name || "Anonymous"}
+                            </a>
+                            {thread.parent.published && (
+                              <time
+                                class="text-xs text-muted-foreground shrink-0"
+                                datetime={thread.parent.published}
+                              >
+                                {formatDate(new Date(thread.parent.published))}
+                              </time>
+                            )}
+                          </div>
+                          {thread.parent.content?.text && (
+                            <p class="mt-1 text-sm text-muted-foreground line-clamp-3">
+                              {thread.parent.content.text}
+                            </p>
+                          )}
+                          {thread.parent.url && (
+                            <a
+                              href={thread.parent.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="text-xs text-primary hover:underline mt-1 inline-block"
+                            >
+                              ↗
+                            </a>
                           )}
                         </div>
-                        {thread.parent.content?.text && (
-                          <p class="mt-1 text-sm text-muted-foreground line-clamp-3">{thread.parent.content.text}</p>
-                        )}
-                        {thread.parent.url && (
-                          <a href={thread.parent.url} target="_blank" rel="noopener noreferrer" class="text-xs text-primary hover:underline mt-1 inline-block">↗</a>
-                        )}
                       </div>
-                    </div>
 
-                    {/* Replies */}
-                    {thread.replies.length > 0 && (
-                      <ol class="mt-3 space-y-3 pl-4 md:pl-6 border-l-2 border-muted/50 ml-4 md:ml-6">
-                        {thread.replies.map((reply) => (
-                          <li class="flex gap-3 p-3 rounded-lg bg-muted/20">
-                            <a href={reply.author?.url} target="_blank" rel="noopener noreferrer" class="shrink-0">
-                              {reply.author?.photo ? (
-                                <img src={reply.author.photo} alt="" width="32" height="32" class="rounded-full" loading="lazy" />
-                              ) : (
-                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-sm font-medium">
-                                  {(reply.author?.name || "?")[0]}
-                                </span>
-                              )}
-                            </a>
-                            <div class="min-w-0">
-                              <div class="flex items-baseline gap-2 text-sm">
-                                <a href={reply.author?.url} target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline truncate">
-                                  {reply.author?.name || "Anonymous"}
-                                </a>
-                                {reply.published && (
-                                  <time class="text-xs text-muted-foreground shrink-0" datetime={reply.published}>
-                                    {formatDate(new Date(reply.published))}
-                                  </time>
+                      {/* Replies */}
+                      {thread.replies.length > 0 && (
+                        <ol class="mt-3 space-y-3 pl-4 md:pl-6 border-l-2 border-muted/50 ml-4 md:ml-6">
+                          {thread.replies.map((reply) => (
+                            <li class="flex gap-3 p-3 rounded-lg bg-muted/20">
+                              <a
+                                href={reply.author?.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="shrink-0"
+                              >
+                                {reply.author?.photo ? (
+                                  <img
+                                    src={reply.author.photo}
+                                    alt=""
+                                    width="32"
+                                    height="32"
+                                    class="rounded-full"
+                                    loading="lazy"
+                                  />
+                                ) : (
+                                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted text-sm font-medium">
+                                    {(reply.author?.name || "?")[0]}
+                                  </span>
+                                )}
+                              </a>
+                              <div class="min-w-0">
+                                <div class="flex items-baseline gap-2 text-sm">
+                                  <a
+                                    href={reply.author?.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="font-semibold hover:underline truncate"
+                                  >
+                                    {reply.author?.name || "Anonymous"}
+                                  </a>
+                                  {reply.published && (
+                                    <time
+                                      class="text-xs text-muted-foreground shrink-0"
+                                      datetime={reply.published}
+                                    >
+                                      {formatDate(new Date(reply.published))}
+                                    </time>
+                                  )}
+                                </div>
+                                {reply.content?.text && (
+                                  <p class="mt-1 text-sm text-muted-foreground line-clamp-3">
+                                    {reply.content.text}
+                                  </p>
+                                )}
+                                {reply.url && (
+                                  <a
+                                    href={reply.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:underline mt-1 inline-block"
+                                  >
+                                    ↗
+                                  </a>
                                 )}
                               </div>
-                              {reply.content?.text && (
-                                <p class="mt-1 text-sm text-muted-foreground line-clamp-3">{reply.content.text}</p>
-                              )}
-                              {reply.url && (
-                                <a href={reply.url} target="_blank" rel="noopener noreferrer" class="text-xs text-primary hover:underline mt-1 inline-block">↗</a>
-                              )}
-                            </div>
-                          </li>
-                        ))}
-                      </ol>
-                    )}
-                  </li>
-                ))}
-              </ol>
-            </div>
-          )}
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
 
-          {/* Generic mentions */}
-          {wmMentions.length > 0 && (
-            <div>
-              <h3 class="text-sm font-semibold text-muted-foreground mb-3">🔗 {wmMentions.length} <T key="blog.webmentionMention" /></h3>
-              <ul class="space-y-2" aria-label={t(lang, "blog.webmentionMention")}>
-                {wmMentions.map((wm) => (
-                  <li class="flex items-center gap-2 text-sm">
-                    {wm.author?.photo ? (
-                      <img src={wm.author.photo} alt="" width="24" height="24" class="rounded-full" loading="lazy" />
-                    ) : (
-                      <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-muted text-[10px] font-medium">
-                        {(wm.author?.name || "?")[0]}
-                      </span>
-                    )}
-                    <a href={wm.url} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline truncate">
-                      {wm.author?.name || wm.url}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      ) : (
-        <p class="text-muted-foreground"><T key="blog.webmentionsNone" /></p>
-      )}
+            {/* Generic mentions */}
+            {wmMentions.length > 0 && (
+              <div>
+                <h3 class="text-sm font-semibold text-muted-foreground mb-3">
+                  🔗 {wmMentions.length} <T key="blog.webmentionMention" />
+                </h3>
+                <ul
+                  class="space-y-2"
+                  aria-label={t(lang, "blog.webmentionMention")}
+                >
+                  {wmMentions.map((wm) => (
+                    <li class="flex items-center gap-2 text-sm">
+                      {wm.author?.photo ? (
+                        <img
+                          src={wm.author.photo}
+                          alt=""
+                          width="24"
+                          height="24"
+                          class="rounded-full"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-muted text-[10px] font-medium">
+                          {(wm.author?.name || "?")[0]}
+                        </span>
+                      )}
+                      <a
+                        href={wm.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-primary hover:underline truncate"
+                      >
+                        {wm.author?.name || wm.url}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        ) : (
+          <p class="text-muted-foreground">
+            <T key="blog.webmentionsNone" />
+          </p>
+        )
+      }
     </section>
 
     <!-- Post navigation -->
     <nav class="mt-12 pt-8 border-t" aria-label="Post navigation">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {prevPost && (
-          <a href={localePath(lang, `/blog/${prevPost.id}/`)} class="group p-4 border rounded-lg hover:border-primary/50 transition-colors">
-            <span class="text-xs text-muted-foreground">← </span>
-            <T key="blog.prev" class="text-xs text-muted-foreground" />
-            <p class="font-medium group-hover:text-primary transition-colors line-clamp-1">{prevPost.data.title}</p>
-          </a>
-        )}
-        {nextPost && (
-          <a href={localePath(lang, `/blog/${nextPost.id}/`)} class="group p-4 border rounded-lg hover:border-primary/50 transition-colors md:text-right md:ml-auto">
-            <T key="blog.next" class="text-xs text-muted-foreground" />
-            <span class="text-xs text-muted-foreground"> →</span>
-            <p class="font-medium group-hover:text-primary transition-colors line-clamp-1">{nextPost.data.title}</p>
-          </a>
-        )}
+        {
+          prevPost && (
+            <a
+              href={localePath(lang, `/blog/${prevPost.id}/`)}
+              class="group p-4 border rounded-lg hover:border-primary/50 transition-colors"
+            >
+              <span class="text-xs text-muted-foreground">← </span>
+              <T key="blog.prev" class="text-xs text-muted-foreground" />
+              <p class="font-medium group-hover:text-primary transition-colors line-clamp-1">
+                {prevPost.data.title}
+              </p>
+            </a>
+          )
+        }
+        {
+          nextPost && (
+            <a
+              href={localePath(lang, `/blog/${nextPost.id}/`)}
+              class="group p-4 border rounded-lg hover:border-primary/50 transition-colors md:text-right md:ml-auto"
+            >
+              <T key="blog.next" class="text-xs text-muted-foreground" />
+              <span class="text-xs text-muted-foreground"> →</span>
+              <p class="font-medium group-hover:text-primary transition-colors line-clamp-1">
+                {nextPost.data.title}
+              </p>
+            </a>
+          )
+        }
       </div>
     </nav>
   </article>
@@ -514,52 +759,41 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
 
   updateDateElements(document, getPageLocale(), dateFull);
 
-  const copyIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>';
-  const checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+  const copyIcon =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>';
+  const checkIcon =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
 
-  async function copyHandler(button: HTMLButtonElement, text: string): Promise<void> {
+  async function copyHandler(
+    button: HTMLButtonElement,
+    text: string,
+  ): Promise<void> {
     if (!text?.trim()) return;
     try {
       await navigator.clipboard.writeText(text);
-      button.classList.add('copied');
+      button.classList.add("copied");
       button.innerHTML = checkIcon;
       setTimeout(() => {
-        button.classList.remove('copied');
+        button.classList.remove("copied");
         button.innerHTML = copyIcon;
       }, 2000);
     } catch (err) {
-      console.error('Copy failed:', err);
+      console.error("Copy failed:", err);
     }
   }
 
-  function createButton(label: string): HTMLButtonElement {
-    const btn = document.createElement('button');
-    btn.className = 'copy-button';
-    btn.type = 'button';
-    btn.setAttribute('aria-label', label);
-    btn.setAttribute('title', 'Copy to clipboard');
-    btn.innerHTML = copyIcon;
-    return btn;
-  }
-
-  function addCopyButtons(): void {
-    const blogContent = document.querySelector<HTMLElement>('.blog-content');
-    if (!blogContent) return;
-
-    [
-      { selector: 'pre', label: 'Copy code', textSel: 'code' },
-      { selector: 'blockquote', label: 'Copy quote', textSel: null }
-    ].forEach(({ selector, label, textSel }) => {
-      blogContent.querySelectorAll(selector).forEach((el) => {
-        if (el.querySelector('.copy-button')) return;
-        const btn = createButton(label);
-        btn.addEventListener('click', () => copyHandler(btn, (textSel ? el.querySelector(textSel) : el)?.textContent || ''));
-        el.appendChild(btn);
-      });
-    });
-  }
-
-  document.readyState === 'loading'
-    ? document.addEventListener('DOMContentLoaded', addCopyButtons)
-    : addCopyButtons();
+  document.addEventListener("click", (e) => {
+    const btn = (e.target as Element).closest(
+      ".copy-button",
+    ) as HTMLButtonElement | null;
+    if (btn) {
+      const container = btn.parentElement;
+      if (!container) return;
+      const textSel = container.tagName === "PRE" ? "code" : null;
+      const text =
+        (textSel ? container.querySelector(textSel) : container)?.textContent ||
+        "";
+      copyHandler(btn, text);
+    }
+  });
 </script>

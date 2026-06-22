@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import preact from '@astrojs/preact';
 import vercel from '@astrojs/vercel';
 import netlify from '@astrojs/netlify';
+import copy from './src/lib/copy.js';
 
 const adapter = process.env.NETLIFY ? netlify() : vercel();
 
@@ -24,6 +25,10 @@ export default defineConfig({
     }),
     preact({ compat: true }),
   ],
+
+  markdown: {
+    rehypePlugins: [copy],
+  },
 
   // Image optimization
   image: {
