@@ -181,7 +181,7 @@ const resolvedSiteName = getSiteName(lang);
     if (!u || !c) return;
     const ac = new AbortController();
     setTimeout(() => ac.abort(), 5000);
-    fetch('/api/status.json', { signal: ac.signal })
+    fetch('https://status.cafe/users/jarema/status.json', { signal: ac.signal })
       .then(r => r.ok ? r.json() : Promise.reject())
       .then(r => {
         if (!r?.content?.length) throw new Error();
