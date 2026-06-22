@@ -24,10 +24,10 @@
     "sharp": "^0.34.5"
   },
   "overrides": {
-    "lodash": ">=4.18.0",
     "path-to-regexp": "^6.3.0",
     "yaml": ">=2.8.3",
-    "ws": ">=8.20.1"
+    "esbuild": ">=0.28.1",
+    "@opentelemetry/core": ">=2.8.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",
@@ -38,10 +38,10 @@
   },
   "pnpm": {
     "overrides": {
-      "lodash": ">=4.18.0",
       "path-to-regexp": "^6.3.0",
       "yaml": ">=2.8.3",
-      "ws": ">=8.20.1"
+      "esbuild": ">=0.28.1",
+      "@opentelemetry/core": ">=2.8.0"
     }
   }
 }
