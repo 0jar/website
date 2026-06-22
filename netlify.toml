@@ -1,15 +1,3 @@
-[[redirects]]
-  from = "/api/status.json"
-  to = "https://status.cafe/users/jarema/status.json"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/stats/*"
-  to = "https://cloud.umami.is/:splat"
-  status = 200
-  force = true
-
 [[headers]]
   for = "/*"
   [headers.values]

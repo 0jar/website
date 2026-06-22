@@ -1,14 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/api/status.json",
-      "destination": "https://status.cafe/users/jarema/status.json"
-    },
-    {
-      "source": "/stats/:match*",
-      "destination": "https://cloud.umami.is/:match*"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
