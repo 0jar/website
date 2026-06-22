@@ -23,7 +23,7 @@ This is an Astro website using islands architecture, static HTML by default and 
 - Interactive islands are implemented with Preact (`.tsx`)
   - `client:only="preact"` is used for client-only UI (for example, games)
   - Some components (like the command bar) are manually lazy-loaded via vanilla scripts for performance
-- Locale is inferred in middleware (see lines 5-8 of [src/middleware.ts](./src/middleware.ts)) and injected into `Astro.locals.lang`
+- Locale is inferred in middleware (see [src/middleware.js](./src/middleware.js)) and injected into `Astro.locals.lang`
 - Blog HTML is post-processed in middleware to wrap standalone images into `<figure><figcaption>` using image alt text
 
 ### Deployment
@@ -33,8 +33,6 @@ The project uses the `@astrojs/netlify` adapter to prevent flashes of unstyled c
 Both Vercel and Netlify deploy from the [GitHub mirror](https://github.com/jartf/website). Additionally, a build script supports pushing static output to Neocities if you have the CLI installed.
 
 Build output is static (`output: "static"`).
-
-See line 7 of the [astro.config.mjs](./astro.config.mjs) for implementation :)
 
 ## Features
 
@@ -55,7 +53,7 @@ See line 7 of the [astro.config.mjs](./astro.config.mjs) for implementation :)
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20+
 - pnpm (preferred) or npm
 
 ### Installation
@@ -69,9 +67,6 @@ pnpm dev
 
 # Build for production
 pnpm build
-
-# Preview production build
-pnpm preview
 ```
 
 ### Commands
@@ -81,8 +76,7 @@ pnpm preview
 | `pnpm dev`         | Start dev server at `localhost:4321`           |
 | `pnpm build`       | Build production output to `./dist/`           |
 | `pnpm build:fast`  | Build without fetching external webmentions    |
-| `pnpm build:prod`  | Build and push to Git and Neocities            |
-| `pnpm preview`     | Preview production build                       |
+| `pnpm build:neo`   | Build and push to Neocities if CLI installed   |
 | `pnpm check`       | Run Astro + TypeScript checks                  |
 
 ## Project structure
@@ -97,8 +91,9 @@ public/
 └── ...               # Other static assets
 src/
 ├── content.config.ts # Content collections config
-├── middleware.ts     # Injects lang into Astro.locals from URL
+├── middleware.js     # Injects lang into Astro.locals from URL
 ├── env.d.ts          # TypeScript types
+├── fetch.ts          # Global fetch wrapper for Astro 7
 ├── components/       # .astro (static) and .tsx (Preact islands)
 │   ├── blog/         # Blog components
 │   ├── home/         # Homepage components
@@ -107,7 +102,9 @@ src/
 │   ├── KeyboardShortcut.astro  # Keyboard shortcut helper component
 │   └── T.astro       # Translation component
 ├── content/          # Astro content collections data
+│   ├── about/        # About page sections
 │   ├── blog/         # Blog posts, in Markdown
+│   ├── data/         # Site configuration data, in JSON
 │   ├── now/          # Now entries, in JSON
 │   ├── projects/     # Project entries, in JSON
 │   ├── scrapbook/    # Scrapbook entries, in JSON
@@ -132,13 +129,12 @@ src/
 ├── pages/            # File-based routing
 │   ├── [locale]/     # Locale catch-all
 │   ├── blog/         # Blog pages
-│   ├── api/          # API endpoints
 │   ├── ...           # Other pages
-│   ├── atom.xml.ts   # Atom feed
-│   ├── feed.json.ts  # JSON feed
-│   ├── rss.xml.ts    # RSS feed
-│   ├── sitemap.xml.ts      # Sitemap
-│   ├── sitemap-index.xml.ts
+│   ├── atom.xml.js   # Atom feed
+│   ├── feed.json.js  # JSON feed
+│   ├── rss.xml.js    # RSS feed
+│   ├── sitemap.xml.js      # Sitemap
+│   ├── sitemap-index.xml.js
 │   └── index.astro   # Homepage
 └── styles/           # Global styling
 ```
@@ -208,10 +204,10 @@ NEOCITIES=1 pnpm build
 
 ### Feeds and SEO
 
-- RSS endpoint: [`src/pages/rss.xml.ts`](./src/pages/rss.xml.ts)
-- Atom endpoint: [`src/pages/atom.xml.ts`](./src/pages/atom.xml.ts)
-- JSON feed endpoint: [`src/pages/feed.json.ts`](./src/pages/feed.json.ts)
-- Sitemap: [`src/pages/sitemap.xml.ts`](./src/pages/sitemap.xml.ts)
+- RSS endpoint: [`src/pages/rss.xml.js`](./src/pages/rss.xml.js)
+- Atom endpoint: [`src/pages/atom.xml.js`](./src/pages/atom.xml.js)
+- JSON feed endpoint: [`src/pages/feed.json.js`](./src/pages/feed.json.js)
+- Sitemap: [`src/pages/sitemap.xml.js`](./src/pages/sitemap.xml.js)
 - XML stylesheets are provided in [`public/*.xsl`](./public)
 
 ### Component conventions
