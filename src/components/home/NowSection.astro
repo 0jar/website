@@ -1,6 +1,6 @@
 ---
 // Now Section - displays recent activity items with i18n support
-// Server-side rendered with client-side progressive enhancement for Last.fm/PreMid
+// Server-side rendered with client-side progressive enhancement for Last.fm
 import T from "@/components/T.astro";
 import { t } from "@/i18n";
 import { getData, type I18nContent, type I18nContentOptional } from "@/content.config";
@@ -11,7 +11,7 @@ const lang = Astro.locals?.lang || "en";
 const k = lang as keyof I18nContent;
 
 const categoryIcons: Record<string, string> = {
-  listening: "🎧", premid: "🎮", planning: "📝", reading: "📖",
+  listening: "🎧", planning: "📝", reading: "📖",
   coding: "💻", drinking: "☕", thinking: "💭", studying: "📚",
 };
 

@@ -248,12 +248,3 @@ export const domainHashes: Record<string, string> = {
 export const authorTimezone = "Antarctica/Davis";
 export const authorTimezoneLabel = "Davis, 🇦🇶";
 
-export const preMidConfig = {
-  authorizedUserId: "490457129090547733",
-  activityTimeoutMs: 20 * 60 * 1000,
-  clearThresholdMs: 2 * 60 * 1000,
-  productionHosts: new Set(["jarema.me", "www.jarema.me"]),
-  maxActivities: 20,
-  productionApiUrl: "https://jarema.me/api/premid",
-  apiTimeoutMs: 5000,
-};
