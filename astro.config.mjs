@@ -1,13 +1,18 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import preact from '@astrojs/preact';
+import vercel from '@astrojs/vercel';
+import netlify from '@astrojs/netlify';
 import copy from './src/lib/copy.js';
+
+const adapter = process.env.NETLIFY ? netlify() : vercel();
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jarema.me',
   trailingSlash: 'always',
   output: 'static',
+  adapter,
   fetchFile: 'src/fetch.ts',
 
   redirects: {
