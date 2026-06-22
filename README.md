@@ -28,14 +28,11 @@ This is an Astro website using islands architecture, static HTML by default and 
 
 ### Deployment
 
-The project supports both Vercel and Netlify adapters. The adapter is selected based on environment variables:
-
-- Default adapter: `@astrojs/vercel`
-- If `NETLIFY` environment variable is set: `@astrojs/netlify`
+The project uses the `@astrojs/netlify` adapter to prevent flashes of unstyled content during transitions.
 
 Both Vercel and Netlify deploy from the [GitHub mirror](https://github.com/jartf/website). Additionally, a build script supports pushing static output to Neocities if you have the CLI installed.
 
-Build output is static (`output: "static"`) with dynamic runtime endpoints only where explicitly configured.
+Build output is static (`output: "static"`).
 
 See line 7 of the [astro.config.mjs](./astro.config.mjs) for implementation :)
 
@@ -209,12 +206,6 @@ For single-language deployments when other languages are in the site, a localiza
 NEOCITIES=1 pnpm build
 ```
 
-### Runtime endpoints
-
-- `GET /api/lastfm`: fetches recent Last.fm tracks
-- `GET /api/premid` and `POST /api/premid`: PreMID activity bridge
-- `GET /.well-known/discord`: host-based Discord verification token (because I have multiple domains)
-
 ### Feeds and SEO
 
 - RSS endpoint: [`src/pages/rss.xml.ts`](./src/pages/rss.xml.ts)
@@ -249,11 +240,10 @@ NEOCITIES=1 pnpm build
 
 ## External integrations
 
-- Deployment: Vercel (default) and Netlify
+- Deployment: Netlify (default) and Vercel
 - IndieAuth: indieauth.com
 - Webmentions: webmention.io
 - Last.fm: music listening data via API
-- PreMID: Discord activity for the Now section
 - imood and status.cafe: mood and status widgets
 - Analytics: Umami script proxied under `/stats/*`
 

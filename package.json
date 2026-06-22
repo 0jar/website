@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
+    "@astrojs/netlify": "^8.0.0",
     "@astrojs/preact": "^6.0.0",
     "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/typography": "^0.5.20",
@@ -27,11 +28,15 @@
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "yaml": ">=2.8.3"
+    "yaml": ">=2.8.3",
+    "esbuild": ">=0.28.1",
+    "@opentelemetry/core": ">=2.8.0"
   },
   "pnpm": {
     "overrides": {
-      "yaml": ">=2.8.3"
+      "yaml": ">=2.8.3",
+      "esbuild": ">=0.28.1",
+      "@opentelemetry/core": ">=2.8.0"
     }
   }
 }

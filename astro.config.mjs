@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import preact from '@astrojs/preact';
+import netlify from '@astrojs/netlify';
 import copy from './src/lib/copy.js';
 
 // https://astro.build/config
@@ -8,6 +9,7 @@ export default defineConfig({
   site: 'https://jarema.me',
   trailingSlash: 'always',
   output: 'static',
+  adapter: netlify(),
   fetchFile: 'src/fetch.ts',
 
   redirects: {
