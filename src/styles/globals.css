@@ -204,13 +204,12 @@
     --ring: 195 100% 65%;
     --radius: 0.75rem;
 
-    --font-system: Adwaita Sans, Noto Sans, -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
-    --font-roboto: 'Roboto', ui-sans-serif, system-ui, sans-serif;
-    --font-personal-heading: 'Lexend', ui-sans-serif, system-ui, sans-serif;
-    --font-personal-body: 'Lexend', ui-sans-serif, system-ui, sans-serif;
-    --font-monaspice: 'MonaspiceNe Nerd Font', monospace, ui-sans-serif, system-ui, sans-serif;
-    --font-zh-hans: 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
-    --font-zh-hant: 'Noto Sans TC', ui-sans-serif, system-ui, sans-serif;
+    --font-system: "Adwaita Sans", "Noto Sans", -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+    --font-personal-heading: 'Lexend', var(--font-system);
+    --font-personal-body: 'Lexend', var(--font-system);
+    --font-monaspice: 'MonaspiceNe Nerd Font', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-zh-hans: 'Noto Sans SC', var(--font-system);
+    --font-zh-hant: 'Noto Sans TC', var(--font-system);
     --font-vi-hani: 'Han Nom Gothic', 'Noto Sans TC', 'Noto Sans SC', serif;
   }
 
@@ -261,43 +260,25 @@
   }
 }
 
-/*
-  i18n: prevent flash of English content (FOEC)
-  Only hide elements that will be replaced by i18n.
-*/
-html.i18n-pending [data-i18n],
-html.i18n-pending [data-t-key],
-html.i18n-updating [data-i18n],
-html.i18n-updating [data-t-key] {
-  visibility: hidden;
-}
 
 /* Custom cursor overrides (designed by NOiiRE) */
 *, *::before, *::after {
   cursor: url('/cursor/normal.gif'), auto;
 }
 
-a, button, [role="button"], [role="link"], label[for],
-summary, select, [type="submit"], [type="reset"], [type="button"],
-.card-hover-effect, [onclick], [tabindex="0"] {
+:is(a, button, [role="button"], [role="link"], label[for], summary, select, [type="submit"], [type="reset"], [type="button"], .card-hover-effect, [onclick], [tabindex="0"]) {
   cursor: url('/cursor/link.gif'), pointer !important;
 }
 
-p, h1, h2, h3, h4, h5, h6, li, blockquote, figcaption,
-dt, dd, td, th, caption, legend,
-input[type="text"], input[type="email"], input[type="password"],
-input[type="search"], input[type="url"], input[type="tel"],
-input[type="number"], input[type="date"], input[type="time"],
-textarea, [contenteditable="true"], [role="textbox"] {
+:is(p, h1, h2, h3, h4, h5, h6, li, blockquote, figcaption, dt, dd, td, th, caption, legend, input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="url"], input[type="tel"], input[type="number"], input[type="date"], input[type="time"], textarea, [contenteditable="true"], [role="textbox"]) {
   cursor: url('/cursor/text.gif'), text !important;
 }
 
-[title], abbr[title], [role="tooltip"], [data-tooltip], [aria-describedby] {
+:is([title], abbr[title], [role="tooltip"], [data-tooltip], [aria-describedby]) {
   cursor: url('/cursor/help.gif'), help !important;
 }
 
-[disabled], [aria-disabled="true"],
-button:disabled, input:disabled, select:disabled, textarea:disabled {
+:is([disabled], [aria-disabled="true"], button:disabled, input:disabled, select:disabled, textarea:disabled) {
   cursor: url('/cursor/unavailable.gif'), not-allowed !important;
 }
 
@@ -325,6 +306,12 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
 
   p, span, li, a {
     @apply font-body;
+  }
+
+  /* Force all code elements and their descendants to inherit monospace */
+  :is(pre, code, kbd, samp),
+  :is(pre, code, kbd, samp) * {
+    font-family: var(--font-monaspice) !important;
   }
 
   /* WCAG 2.4.7: Enhanced focus visibility */
@@ -382,27 +369,12 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
     @apply relative z-10;
   }
 
-  /* Dark/light mode utilities */
-  .dark-only {
-    display: none;
-  }
-  .dark .dark-only {
-    display: block;
-  }
 
-  .light-only {
-    display: block;
-  }
-  .dark .light-only {
-    display: none;
-  }
 }
 
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
+  *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -410,104 +382,39 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
   }
 }
 
-.reduce-motion *,
-.reduce-motion ::before,
-.reduce-motion ::after {
+:is(.reduce-motion *, .reduce-motion ::before, .reduce-motion ::after) {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
 }
 
-.dyslexia-font,
-.dyslexia-font * {
-  font-family: 'OpenDyslexic', sans-serif !important;
-}
+:is(.dyslexia-font, .dyslexia-font *) { font-family: 'OpenDyslexic', sans-serif !important; }
+.personal-fonts :is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-personal-heading) !important; }
+:is(.personal-fonts, .personal-fonts :is(p, span, li, a, button)) { font-family: var(--font-personal-body); }
 
-.personal-fonts :is(h1, h2, h3, h4, h5, h6) {
-  font-family: var(--font-personal-heading) !important;
-}
-
-.personal-fonts,
-.personal-fonts :is(p, span, li, a, button) {
-  font-family: var(--font-personal-body);
-}
-
-.lexend-font,
-.atkinson-font,
-.basier-font,
-.be-vietnam-pro-font,
-.geist-font,
-.grandstander-font,
-.outfit-font,
-.recursive-font,
-.space-grotesk-font,
-.tiresias-font {
+:is(.lexend-font, .atkinson-font, .basier-font, .be-vietnam-pro-font, .geist-font, .grandstander-font, .outfit-font, .recursive-font, .space-grotesk-font, .tiresias-font) {
   --preferred-font-family: inherit;
 }
 
-.lexend-font {
-  --preferred-font-family: 'Lexend', ui-sans-serif, system-ui, sans-serif;
-}
+.lexend-font { --preferred-font-family: 'Lexend', var(--font-system); }
+.atkinson-font { --preferred-font-family: 'Atkinson Hyperlegible', sans-serif; }
+.basier-font { --preferred-font-family: 'Basier Square', sans-serif; }
+.be-vietnam-pro-font { --preferred-font-family: 'Be Vietnam Pro', var(--font-system); }
+.geist-font { --preferred-font-family: 'Geist', sans-serif; }
+.grandstander-font { --preferred-font-family: 'Grandstander', sans-serif; }
+.outfit-font { --preferred-font-family: 'Outfit', sans-serif; }
+.recursive-font { --preferred-font-family: 'Recursive', sans-serif; }
+.space-grotesk-font { --preferred-font-family: 'Space Grotesk', var(--font-system); }
+.tiresias-font { --preferred-font-family: 'Tiresias Infofont', sans-serif; }
 
-.atkinson-font {
-  --preferred-font-family: 'Atkinson Hyperlegible', sans-serif;
-}
-
-.basier-font {
-  --preferred-font-family: 'Basier Square', sans-serif;
-}
-
-.be-vietnam-pro-font {
-  --preferred-font-family: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
-}
-
-.geist-font {
-  --preferred-font-family: 'Geist', sans-serif;
-}
-
-.grandstander-font {
-  --preferred-font-family: 'Grandstander', sans-serif;
-}
-
-.outfit-font {
-  --preferred-font-family: 'Outfit', sans-serif;
-}
-
-.recursive-font {
-  --preferred-font-family: 'Recursive', sans-serif;
-}
-
-.space-grotesk-font {
-  --preferred-font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
-}
-
-.tiresias-font {
-  --preferred-font-family: 'Tiresias Infofont', sans-serif;
-}
-
-:is(
-  .lexend-font,
-  .atkinson-font,
-  .basier-font,
-  .be-vietnam-pro-font,
-  .geist-font,
-  .grandstander-font,
-  .outfit-font,
-  .recursive-font,
-  .space-grotesk-font,
-  .tiresias-font
-) * {
+/* Apply the preferred font dynamically, but skip code elements */
+:is(.lexend-font, .atkinson-font, .basier-font, .be-vietnam-pro-font, .geist-font, .grandstander-font, .outfit-font, .recursive-font, .space-grotesk-font, .tiresias-font) :not(pre, code, kbd, samp, pre *, code *, kbd *, samp *) {
   font-family: var(--preferred-font-family);
 }
 
-.font-monaspice, .font-monaspice * {
-  font-family: var(--font-monaspice), monospace !important;
-}
-
-.font-vi-hani, .font-vi-hani * {
-  font-family: var(--font-vi-hani), serif !important;
-}
+:is(.font-monaspice, .font-monaspice *) { font-family: var(--font-monaspice) !important; }
+:is(.font-vi-hani, .font-vi-hani *) { font-family: var(--font-vi-hani) !important; }
 
 /* Font preview dropdown styling */
 .font-preview-select {
@@ -525,43 +432,31 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
   font-size: 0.875rem;
 }
 
-[data-locale="zh"],
-[data-locale="zh"] * {
+:is([data-locale="zh"], [data-locale="zh"] *) {
   font-family: 'Noto Sans SC', var(--font-system) !important;
 }
 
 /* Stars background for dark mode */
-.stars-1a,
-.stars-2a,
-.stars-3a,
-.particles-1 {
+:is(.stars-1a, .stars-2a, .stars-3a, .particles-1) {
   background: transparent;
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
-.stars-1a,
-.stars-2a,
-.stars-3a {
+:is(.stars-1a, .stars-2a, .stars-3a) {
   opacity: 0;
   visibility: hidden;
 }
 
-.dark .stars-1a,
-.dark .stars-2a,
-.dark .stars-3a {
+.dark :is(.stars-1a, .stars-2a, .stars-3a) {
   visibility: visible;
 }
 
 /* Disable star effects when user preference is set */
-[data-no-stars] .stars-1a,
-[data-no-stars] .stars-2a,
-[data-no-stars] .stars-3a,
-[data-no-stars] .particles-1 {
+[data-no-stars] :is(.stars-1a, .stars-2a, .stars-3a, .particles-1) {
   visibility: hidden !important;
   animation: none !important;
 }
@@ -690,23 +585,6 @@ button:disabled, input:disabled, select:disabled, textarea:disabled {
   image-rendering: pixelated; /* Standard */
 }
 
-/* i18n optimization - prevent layout shift during translation */
-[data-i18n], [data-t-key] {
-  /* Ensure smooth text transitions */
-  transition: opacity 0.1s ease-in-out;
-}
-
-/* Prevent flash of untranslated content for non-English users */
-html:not([lang="en"]) [data-i18n]:empty,
-html:not([lang="en"]) [data-t-key]:empty {
-  visibility: hidden;
-}
-
-/* Suppress transition during translation updates */
-.i18n-updating [data-i18n],
-.i18n-updating [data-t-key] {
-  transition: none !important;
-}
 
 /* View transitions */
 
@@ -734,31 +612,13 @@ html:not([lang="en"]) [data-t-key]:empty {
 .reduce-motion ::view-transition-new(root) { animation: none; }
 
 /* Keep brand-page font previews stable regardless of global font preference classes */
-.brand-font-preview .font-heading {
-  font-family: var(--font-personal-heading) !important;
-}
-
-.brand-font-preview .font-body {
-  font-family: var(--font-personal-body) !important;
-}
-
-.brand-font-preview .font-monaspice {
-  font-family: 'MonaspiceNe Nerd Font', monospace, ui-sans-serif, system-ui, sans-serif !important;
-}
-
-.brand-font-preview .font-zh-hans {
-  font-family: 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif !important;
-}
-
-.brand-font-preview .font-vi-hani {
-  font-family: 'Han Nom Gothic', 'Noto Sans TC', 'Noto Sans SC', serif !important;
-}
+.brand-font-preview .font-heading { font-family: var(--font-personal-heading) !important; }
+.brand-font-preview .font-body { font-family: var(--font-personal-body) !important; }
+.brand-font-preview .font-monaspice { font-family: var(--font-monaspice) !important; }
+.brand-font-preview .font-zh-hans { font-family: var(--font-zh-hans) !important; }
+.brand-font-preview .font-vi-hani { font-family: var(--font-vi-hani) !important; }
 
 /* Force Han-Nôm rendering for vi-Hani content */
-html[data-locale="vi-Hani"],
-[data-locale="vi-Hani"],
-[data-locale="vi-Hani"] *,
-:lang(vi-Hani),
-:lang(vi-Hani) * {
-  font-family: 'Han Nom Gothic', 'Noto Sans TC', 'Noto Sans SC', serif !important;
+:is(html[data-locale="vi-Hani"], [data-locale="vi-Hani"], [data-locale="vi-Hani"] *, :lang(vi-Hani), :lang(vi-Hani) *) {
+  font-family: var(--font-vi-hani) !important;
 }
