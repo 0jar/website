@@ -238,13 +238,8 @@ export interface FooterBadge {
 }
 
 // API configuration
-export const domainHashes: Record<string, string> = {
-  "jarema.me": "dh=1d651c707c7a9a0d03b235429393417f9506161c",
-  "z.is-a.dev": "dh=151caf0b951e4ef19ec7ca771079fbed44c28970",
-  localhost: "dh=2147463847test",
-};
+export const discordHash = "dh=1d651c707c7a9a0d03b235429393417f9506161c";
 
 // Timezone
 export const authorTimezone = "Antarctica/Davis";
 export const authorTimezoneLabel = "Davis, 🇦🇶";
-
