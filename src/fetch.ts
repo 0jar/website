@@ -4,15 +4,11 @@ export default {
   fetch(req: Request) {
     const { pathname, search } = new URL(req.url);
 
-    if (pathname.startsWith('/api/status.json')) {
-      return fetch('https://status.cafe/users/jarema/status.json');
-    }
-
     if (pathname.startsWith('/stats')) {
       const headers = new Headers(req.headers);
       headers.delete('host');
       headers.delete('referer');
-      
+
       return fetch(`https://cloud.umami.is${pathname.replace(/^\/stats/, '')}${search}`, {
         method: req.method,
         headers,
