@@ -10,7 +10,7 @@ export default defineConfig({
   site: 'https://jarema.me',
   trailingSlash: 'always',
   output: 'static',
-  adapter: netlify(),
+  ...(process.env.NETLIFY ? { adapter: netlify() } : {}),
   fetchFile: 'src/fetch.ts',
 
   redirects: {
