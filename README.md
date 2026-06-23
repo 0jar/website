@@ -6,10 +6,9 @@ This repository is hosted on [Codeberg](https://codeberg.org/jartf/website) and 
 
 See the site in action:
 
-- [https://jarema.me](https://jarema.me)
-- [https://z.is-a.dev](https://z.is-a.dev)
-- [https://jarema.vercel.app](https://jarema.vercel.app) (backup)
-- [https://jarema.netlify.app](https://jarema.netlify.app) (backup)
+- [https://jarema.me](https://jarema.me) (main)
+- [https://z.is-a.dev](https://z.is-a.dev) (backup, Vercel build)
+- [https://jarema.neocities.org](https://jarema.neocities.org) (Neocities build)
 
 ![Screenshot of the first fold of website's homepage in dark mode. The hero section centers a main heading, a short bio and a flex row of four action buttons. The lower section uses a two column layout. The left column displays three blog post cards with titles, excerpts, dates and read times. The right column displays a dynamic now section.](<salvestamata.png>)
 
