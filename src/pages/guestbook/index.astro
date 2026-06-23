@@ -16,9 +16,9 @@ const messages = rawMessages
 
 const inputCls = "w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50";
 const extraFields = [
-  { id: "social", label: "Social media handle", type: "text" as any, placeholder: "@username" },
-  { id: "location", label: "Where are you from?", type: "text" as any },
-  { id: "referrer", label: "How did you get here?", type: "text" as any }
+  { id: "social", label: t(lang, "guestbook.socialMedia"), type: "text" as any, placeholder: "@username" },
+  { id: "location", label: t(lang, "guestbook.whereAreYouFrom"), type: "text" as any },
+  { id: "referrer", label: t(lang, "guestbook.howDidYouGetHere"), type: "text" as any }
 ];
 ---
 
@@ -32,34 +32,34 @@ const extraFields = [
     <Card padding="none" hover={false} class="p-6 md:p-8 mb-16">
       <form name="guestbook" action="/guestbook/success" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
         <p class="hidden" aria-hidden="true">
-          <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1" /></label>
+          <label>{t(lang, "guestbook.botField")} <input name="bot-field" tabindex="-1" /></label>
         </p>
 
         <div>
-          <label for="name" class="block text-sm font-medium mb-1.5">Name <span class="text-red-500" aria-hidden="true">*</span></label>
+          <label for="name" class="block text-sm font-medium mb-1.5">{t(lang, "guestbook.name")} <span class="text-red-500" aria-hidden="true">*</span></label>
           <input type="text" id="name" name="name" required class={inputCls} />
         </div>
 
         <div>
-          <label for="email" class="block text-sm font-medium mb-1.5">Email <span class="text-muted-foreground font-normal">(optional, won't be published)</span></label>
+          <label for="email" class="block text-sm font-medium mb-1.5">{t(lang, "guestbook.email")} <span class="text-muted-foreground font-normal">{t(lang, "guestbook.optionalEmail")}</span></label>
           <input type="email" id="email" name="email" class={inputCls} />
         </div>
 
         <div>
-          <label for="website" class="block text-sm font-medium mb-1.5">Website <span class="text-muted-foreground font-normal">(optional)</span></label>
+          <label for="website" class="block text-sm font-medium mb-1.5">{t(lang, "guestbook.website")} <span class="text-muted-foreground font-normal">{t(lang, "guestbook.optional")}</span></label>
           <input type="url" id="website" name="website" placeholder="https://" class={inputCls} />
         </div>
 
         <details class="group border border-input rounded-md p-4 bg-muted/20">
           <summary class="cursor-pointer text-sm font-medium hover:text-primary transition-colors select-none flex items-center">
-            <span>Additional optional info (socials, location, etc.)</span>
-            <span class="ml-auto text-muted-foreground text-xs opacity-70 group-open:hidden">Show</span>
-            <span class="ml-auto text-muted-foreground text-xs opacity-70 hidden group-open:inline">Hide</span>
+            <span>{t(lang, "guestbook.additionalInfo")}</span>
+            <span class="ml-auto text-muted-foreground text-xs opacity-70 group-open:hidden">{t(lang, "guestbook.show")}</span>
+            <span class="ml-auto text-muted-foreground text-xs opacity-70 hidden group-open:inline">{t(lang, "guestbook.hide")}</span>
           </summary>
           <div class="space-y-4 pt-4 mt-2 border-t border-border">
             {extraFields.map(f => (
               <div>
-                <label for={f.id} class="block text-sm font-medium mb-1.5">{f.label} <span class="text-muted-foreground font-normal">(optional)</span></label>
+                <label for={f.id} class="block text-sm font-medium mb-1.5">{f.label} <span class="text-muted-foreground font-normal">{t(lang, "guestbook.optional")}</span></label>
                 <input type={f.type} id={f.id} name={f.id} placeholder={f.placeholder} class={inputCls} />
               </div>
             ))}
@@ -67,30 +67,30 @@ const extraFields = [
         </details>
 
         <div class="space-y-1.5">
-          <label for="message" class="block text-sm font-medium">Message <span class="text-red-500" aria-hidden="true">*</span></label>
+          <label for="message" class="block text-sm font-medium">{t(lang, "guestbook.message")} <span class="text-red-500" aria-hidden="true">*</span></label>
           <div class="border border-input rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-primary/50 focus-within:border-primary bg-background">
             <div role="tablist" class="bg-muted/30 border-b border-input flex px-2 pt-2 gap-2">
-              <button type="button" role="tab" aria-selected="true" aria-controls="message" id="tab-write" class="px-3 py-1.5 text-sm font-medium border-b-2 border-primary text-foreground">Write</button>
-              <button type="button" role="tab" aria-selected="false" aria-controls="preview-container" id="tab-preview" class="px-3 py-1.5 text-sm font-medium border-b-2 border-transparent text-muted-foreground hover:text-foreground">Preview</button>
+              <button type="button" role="tab" aria-selected="true" aria-controls="message" id="tab-write" class="px-3 py-1.5 text-sm font-medium border-b-2 border-primary text-foreground">{t(lang, "guestbook.write")}</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="preview-container" id="tab-preview" class="px-3 py-1.5 text-sm font-medium border-b-2 border-transparent text-muted-foreground hover:text-foreground">{t(lang, "guestbook.preview")}</button>
             </div>
             <div class="p-0">
-              <textarea id="message" role="tabpanel" name="message" required rows="4" class="w-full px-3 py-2 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none resize-y min-h-[120px] block" placeholder="Leave a message... Markdown is supported!"></textarea>
-              <div id="preview-container" role="tabpanel" class="hidden w-full px-3 py-2 min-h-[120px] prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap text-foreground"></div>
+              <textarea id="message" role="tabpanel" name="message" required rows="4" class="w-full px-3 py-2 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none resize-y min-h-[120px] block" placeholder={t(lang, "guestbook.leaveMessage")}></textarea>
+              <div id="preview-container" data-empty-text={t(lang, "guestbook.nothingToPreview")} role="tabpanel" class="hidden w-full px-3 py-2 min-h-[120px] prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap text-foreground"></div>
             </div>
           </div>
-          <p class="text-xs text-muted-foreground mt-1">Markdown supported: **bold**, *italic*, [link](url), `code`, &gt; quote</p>
+          <p class="text-xs text-muted-foreground mt-1">{t(lang, "guestbook.markdownSupported")}</p>
         </div>
 
         <div class="pt-2">
-          <button type="submit" class="w-full sm:w-auto px-6 py-2.5 bg-primary text-primary-foreground rounded-md hover:opacity-90 transition-opacity font-medium">Submit</button>
+          <button type="submit" class="w-full sm:w-auto px-6 py-2.5 bg-primary text-primary-foreground rounded-md hover:opacity-90 transition-opacity font-medium">{t(lang, "guestbook.submit")}</button>
         </div>
       </form>
     </Card>
 
     <section aria-labelledby="messages-heading" class="space-y-8">
-      <h2 id="messages-heading" class="text-2xl font-bold border-b border-border pb-4">Messages</h2>
+      <h2 id="messages-heading" class="text-2xl font-bold border-b border-border pb-4">{t(lang, "guestbook.messages")}</h2>
       {messages.length === 0 ? (
-        <p class="text-muted-foreground italic">No messages yet. Be the first to sign!</p>
+        <p class="text-muted-foreground italic">{t(lang, "guestbook.noMessages")}</p>
       ) : (
         <div class="space-y-6">
           {messages.map(msg => (
@@ -150,7 +150,7 @@ const extraFields = [
     w.addEventListener('click', () => { toggle(true); t.focus(); });
     p.addEventListener('click', () => {
       toggle(false);
-      c.innerHTML = parseMarkdown(t.value.trim()) || '<p class="text-muted-foreground italic">Nothing to preview</p>';
+      c.innerHTML = parseMarkdown(t.value.trim()) || `<p class="text-muted-foreground italic">${c.dataset.emptyText}</p>`;
     });
   }
 
