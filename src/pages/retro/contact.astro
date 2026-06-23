@@ -11,7 +11,7 @@ import { author, socialLinks, services } from "@/lib/constants";
     </font>
   </center>
 
-  <hr>
+  <hr />
 
   <center>
     <font size="3">
@@ -21,8 +21,7 @@ import { author, socialLinks, services } from "@/lib/constants";
 
   <p>
     <font size="3">
-      Whether you have a question, want to collaborate, or just want to say hello,
-      feel free to reach out using any of the methods below:
+      Whether you have a question, want to collaborate, or just want to say hello, feel free to reach out using any of the methods below:
     </font>
   </p>
 
@@ -34,10 +33,10 @@ import { author, socialLinks, services } from "@/lib/constants";
         <font size="4">
           <b>📧 Email</b>
         </font>
-        <br>
+        <br />
         <font size="3">
           The best way to reach me!
-          <br><br>
+          <br /><br />
           <a href={`mailto:${author.email}`}>
             <b>{author.email}</b>
           </a>
@@ -49,11 +48,13 @@ import { author, socialLinks, services } from "@/lib/constants";
         <font size="4">
           <b>🐘 Fediverse</b>
         </font>
-        <br>
+        <br />
         <font size="3">
           Find me on social media!
-          <br><br>
-          <a href={`https://${socialLinks.fediverse[0].split('@')[2]}/@${socialLinks.fediverse[0].split('@')[1]}`}>
+          <br /><br />
+          <a
+            href={`https://${socialLinks.fediverse[0].split("@")[2]}/@${socialLinks.fediverse[0].split("@")[1]}`}
+          >
             <b>{socialLinks.fediverse[0]}</b>
           </a>
         </font>
@@ -61,10 +62,16 @@ import { author, socialLinks, services } from "@/lib/constants";
     </tr>
   </table>
 
-  <br>
+  <br />
 
   <!-- Response time notice -->
-  <table width="100%" border="0" cellpadding="10" cellspacing="0" style="border: 2px solid #4A3F6F;">
+  <table
+    width="100%"
+    border="0"
+    cellpadding="10"
+    cellspacing="0"
+    style="border: 2px solid #4A3F6F;"
+  >
     <tr>
       <td align="center">
         <font size="2">
@@ -74,21 +81,26 @@ import { author, socialLinks, services } from "@/lib/constants";
     </tr>
   </table>
 
-  <br>
+  <br />
 
   <!-- Guestbook -->
   <center>
-    <table border="0" cellpadding="15" cellspacing="0" style="border: 3px ridge #54D4FF;">
+    <table
+      border="0"
+      cellpadding="15"
+      cellspacing="0"
+      style="border: 3px ridge #54D4FF;"
+    >
       <tr>
         <td align="center">
           <font size="3">
             <b>Or sign my guestbook!</b>
           </font>
-          <br>
+          <br />
           <font size="2">
-            Leave a public message for everyone to see!
-            <br><br>
-            <a href={services.atabook.host} target="_blank" rel="noopener noreferrer">
+            Leave a message!
+            <br /><br />
+            <a href="/guestbook">
               <b>Go to Guestbook</b>
             </a>
           </font>
@@ -97,7 +109,7 @@ import { author, socialLinks, services } from "@/lib/constants";
     </table>
   </center>
 
-  <br>
+  <br />
 
   <!-- Back link -->
   <center>

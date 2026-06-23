@@ -79,10 +79,6 @@ export const services = {
       "z.is-a.dev": "bea729d4-bbf9-494e-a4d9-bcbf2a2ab2f3",
     },
   },
-  // Guestbook
-  atabook: {
-    host: "https://jarema.atabook.org",
-  },
   // Chat
   iframeChat: {
     host: "https://iframe.chat/embed?chat=jaremame",

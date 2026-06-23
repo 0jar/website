@@ -1,49 +1,104 @@
 ---
-// Guestbook page
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
-import { author, services } from "@/lib/constants";
 import { t } from "@/i18n/index";
 
 const lang = Astro.locals?.lang || "en";
+const messages = [
+  { name: "Arvo", website: "https://arvo.arpa", location: "A cozy den", referrer: "A little bird told me", date: "2026-06-20", message: "meow meow meow I love the site design!" },
+  { name: "Jasper", social: "@jasperlol on Discord", date: "2026-06-15", message: "Just passing by to say hi! ^w^" }
+];
+const inputCls = "w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50";
+const extraFields = [
+  { id: "social", label: "Social media handle", type: "text", placeholder: "@username" },
+  { id: "location", label: "Where are you from?", type: "text" },
+  { id: "referrer", label: "How did you get here?", type: "text" }
+];
 ---
 
 <BaseLayout title={t(lang, "guestbook.title")} description={t(lang, "guestbook.description")}>
+  <div class="container mx-auto px-4 py-8 lg:py-12 max-w-3xl">
+    <header class="mb-8 text-center">
+      <T key="guestbook.title" tag="h1" class="text-4xl font-bold mb-4" />
+      <T key="guestbook.description" tag="p" class="text-lg text-muted-foreground" />
+    </header>
 
-
-  <div class="container mx-auto px-4 py-8 lg:py-12">
-    <div class="max-w-3xl mx-auto">
-      <header class="mb-8 text-center">
-        <T key="guestbook.title" tag="h1" class="text-4xl font-bold mb-4" />
-        <T key="guestbook.description" tag="p" class="text-lg text-muted-foreground" />
-      </header>
-
-      <!-- Atabook iframe -->
-      <div class="border rounded-lg overflow-hidden bg-card">
-        <iframe
-          src={services.atabook.host}
-          id="atabook"
-          class="w-full min-h-[800px] border-0"
-          title="Atabook Guestbook widget"
-          loading="lazy"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-          referrerpolicy="no-referrer"
-        ></iframe>
-        <noscript>
-          <div class="p-6 text-center">
-            <p class="text-muted-foreground">
-              The guestbook requires JavaScript to be enabled.
-              Alternatively, you can <a href={`mailto:${author.email}`} class="text-primary hover:underline">email me</a> directly.
-            </p>
-          </div>
-        </noscript>
-      </div>
-
-      <div class="mt-8 text-center text-sm text-muted-foreground">
-        <p>
-          <T key="guestbook.poweredBy" /> <a href="https://atabook.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline"><T key="guestbook.atabook" /></a> 💜
+    <div class="border rounded-lg p-6 md:p-8 bg-card shadow-sm mb-16">
+      <form name="guestbook" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+        <p class="hidden" aria-hidden="true">
+          <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1" /></label>
         </p>
-      </div>
+
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1.5">Name <span class="text-red-500" aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" required class={inputCls} />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1.5">Email <span class="text-muted-foreground font-normal">(optional - will not be published)</span></label>
+          <input type="email" id="email" name="email" class={inputCls} />
+        </div>
+
+        <div>
+          <label for="website" class="block text-sm font-medium mb-1.5">Website <span class="text-muted-foreground font-normal">(optional)</span></label>
+          <input type="url" id="website" name="website" placeholder="https://" class={inputCls} />
+        </div>
+
+        <details class="group border border-input rounded-md p-4 bg-muted/20">
+          <summary class="cursor-pointer text-sm font-medium hover:text-primary transition-colors select-none flex items-center">
+            <span>Additional info (socials, location, etc.)</span>
+            <span class="ml-auto text-muted-foreground text-xs opacity-70 group-open:hidden">Show</span>
+            <span class="ml-auto text-muted-foreground text-xs opacity-70 hidden group-open:inline">Hide</span>
+          </summary>
+          <div class="space-y-4 pt-4 mt-2 border-t border-border">
+            {extraFields.map(f => (
+              <div>
+                <label for={f.id} class="block text-sm font-medium mb-1.5">{f.label} <span class="text-muted-foreground font-normal">(optional)</span></label>
+                <input type={f.type} id={f.id} name={f.id} placeholder={f.placeholder} class={inputCls} />
+              </div>
+            ))}
+          </div>
+        </details>
+
+        <div>
+          <label for="message" class="block text-sm font-medium mb-1.5">Message <span class="text-red-500" aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" required rows="4" class={`${inputCls} resize-y`}></textarea>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full sm:w-auto px-6 py-2.5 bg-primary text-primary-foreground rounded-md hover:opacity-90 transition-opacity font-medium">Submit</button>
+        </div>
+      </form>
     </div>
+
+    <section aria-labelledby="messages-heading" class="space-y-8">
+      <h2 id="messages-heading" class="text-2xl font-bold border-b border-border pb-4">Messages</h2>
+      {messages.length === 0 ? (
+        <p class="text-muted-foreground italic">No messages yet. Be the first to sign!</p>
+      ) : (
+        <div class="space-y-6">
+          {messages.map(msg => (
+            <article class="border border-border rounded-lg p-5 bg-card text-card-foreground shadow-sm">
+              <header class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-3 border-b border-border pb-3">
+                <div class="font-medium text-lg flex items-center gap-2 flex-wrap">
+                  {msg.website ? <a href={msg.website} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">{msg.name}</a> : <span>{msg.name}</span>}
+                  {msg.social && <span class="text-sm font-normal text-muted-foreground bg-muted px-1.5 py-0.5 rounded">{msg.social}</span>}
+                </div>
+                <time class="text-sm text-muted-foreground mt-1 sm:mt-0" datetime={msg.date}>{new Date(msg.date).toLocaleDateString(lang, { year: "numeric", month: "long", day: "numeric" })}</time>
+              </header>
+
+              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap">{msg.message}</div>
+
+              {(msg.location || msg.referrer) && (
+                <footer class="mt-4 pt-3 border-t border-dashed border-border flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground">
+                  {msg.location && <div class="flex items-center gap-1.5" title="Location"><span aria-hidden="true">📍</span> <span class="sr-only">From:</span> {msg.location}</div>}
+                  {msg.referrer && <div class="flex items-center gap-1.5" title="Referrer"><span aria-hidden="true">👋</span> <span class="sr-only">Via:</span> {msg.referrer}</div>}
+                </footer>
+              )}
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
   </div>
 </BaseLayout>
