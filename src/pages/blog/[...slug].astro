@@ -13,7 +13,7 @@ import {
   routes,
 } from "@/lib/constants";
 import { localePath, stripLocale } from "@/i18n/routing";
-import { dateFull } from "@/lib/utils/timezone-utils";
+import { dateFull } from "@/lib/utils/timezone";
 
 type BlogEntry = CollectionEntry<"blog">;
 
@@ -755,7 +755,7 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
 
 <script>
   import { getPageLocale } from "@/i18n/client";
-  import { updateDateElements, dateFull } from "@/lib/utils/timezone-utils";
+  import { updateDateElements, dateFull } from "@/lib/utils/timezone";
 
   updateDateElements(document, getPageLocale(), dateFull);
 

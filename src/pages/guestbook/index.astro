@@ -3,7 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
 import { t } from "@/i18n/index";
 import { siteUrl, socialLinks } from "@/lib/constants";
-import { parseMarkdown } from "@/lib/markdown";
+import { parseMarkdown } from "@/lib/utils/markdown";
 import { messages as rawMessages } from "@/content/guestbook/guestbook";
 import Card from "@/components/ui/Card.astro";
 
@@ -140,7 +140,7 @@ const extraFields = [
 </BaseLayout>
 
 <script>
-  import { parseMarkdown } from "@/lib/markdown";
+  import { parseMarkdown } from "@/lib/utils/markdown";
 
   function setupTabs() {
     const w = document.getElementById('tab-write');

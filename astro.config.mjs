@@ -2,8 +2,8 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import preact from '@astrojs/preact';
 import netlify from '@astrojs/netlify';
-import copy from './src/lib/copy.js';
-import captions from './src/lib/captions.js';
+import copy from './src/lib/plugins/copy.js';
+import captions from './src/lib/plugins/captions.js';
 
 // https://astro.build/config
 export default defineConfig({

@@ -123,10 +123,10 @@ src/
 │   ├── BaseLayout.astro    # Main site layout
 │   └── RetroLayout.astro   # Layout for /retro/* (old style) pages
 ├── lib/              # Shared utilities and constants
-│   ├── utils/        # General utility functions
-│   ├── constants.ts  # Site metadata, author info, service config
-│   ├── feed.ts       # RSS/Atom/JSON feed helpers
-│   └── now-utils.ts  # Helpers for the /now page
+│   ├── constants/    # Site metadata, author info, service config
+│   ├── feed/         # RSS/Atom/JSON feed helpers
+│   ├── plugins/      # Rehype plugins
+│   └── utils/        # General utility functions
 ├── pages/            # File-based routing
 │   ├── [locale]/     # Locale catch-all
 │   ├── blog/         # Blog pages

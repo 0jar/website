@@ -3,7 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
 import CommitTimeline from "@/components/widgets/CommitTimeline.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
-import { dateLong } from "@/lib/utils/timezone-utils";
+import { dateLong } from "@/lib/utils/timezone";
 import { author } from "@/lib/constants";
 import { Image } from "astro:assets";
 
@@ -108,7 +108,7 @@ const stats = [
 
 <script>
   import { getPageLocale } from "@/i18n/client";
-  import { updateDateElements } from "@/lib/utils/timezone-utils";
+  import { updateDateElements } from "@/lib/utils/timezone";
 
   updateDateElements(document, getPageLocale());
   document.addEventListener("timezone-change", () =>

@@ -1,6 +1,6 @@
 // Shared utilities for Now section and Now page
 import { t } from "@/i18n/client";
-import { formatDate, dateFull } from "@/lib/utils/timezone-utils";
+import { formatDate, dateFull } from "@/lib/utils/timezone";
 import { escapeHtml } from "@/lib/utils/escape";
 import { services, author } from "@/lib/constants";
 

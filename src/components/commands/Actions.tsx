@@ -2,7 +2,7 @@ import { useMemo, useCallback, useState, useEffect } from "preact/hooks";
 import type { JSX } from "preact";
 import { getPageLocale, cycleLanguage, t as i18nT } from "@/i18n/client";
 import { localePath } from "@/i18n/routing";
-import { applyTheme } from "@/lib/utils/theme-utils";
+import { applyTheme } from "@/lib/utils/theme";
 import { keyboardShortcuts, routes } from "@/lib/constants";
 import { icons } from "./icons";
 

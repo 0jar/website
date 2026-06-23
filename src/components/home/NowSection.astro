@@ -68,8 +68,8 @@ const getCategoryTranslation = (category: string) => {
 </section>
 
 <script>
-  import { fetchLiveData, renderCompact, updateI18nElements, conflictMap } from "@/lib/now-utils";
-  import { updateDateElements, dateFull } from "@/lib/utils/timezone-utils";
+  import { fetchLiveData, renderCompact, updateI18nElements, conflictMap } from "@/lib/utils/now";
+  import { updateDateElements, dateFull } from "@/lib/utils/timezone";
 
   async function enhance() {
     const container = document.getElementById("now-items-container");

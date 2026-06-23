@@ -412,7 +412,7 @@ const catApprovedOptions = [
 
 <script>
   import { t, getPageLocale } from '@/i18n/client';
-  import { updateDateElements } from '@/lib/utils/timezone-utils';
+  import { updateDateElements } from '@/lib/utils/timezone';
   import { supportedLanguages } from '@/lib/constants';
 
   const languageNames: Record<string, string> = Object.fromEntries(supportedLanguages.map(l => [l.code, l.name]));

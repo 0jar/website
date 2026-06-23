@@ -80,8 +80,8 @@ const sortedItems = [...nowItems].sort((a, b) => new Date(b.date).getTime() - ne
 
 <script>
   import { getPageLocale } from "@/i18n/client";
-  import { fetchLiveData, renderCard, updateI18nElements, conflictMap } from "@/lib/now-utils";
-  import { updateDateElements, dateFull } from "@/lib/utils/timezone-utils";
+  import { fetchLiveData, renderCard, updateI18nElements, conflictMap } from "@/lib/utils/now";
+  import { updateDateElements, dateFull } from "@/lib/utils/timezone";
 
   const enhance = async () => {
     const container = document.getElementById("now-items-container");
