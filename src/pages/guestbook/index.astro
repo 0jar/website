@@ -5,6 +5,7 @@ import { t } from "@/i18n/index";
 import { siteUrl } from "@/lib/constants";
 import { parseMarkdown } from "@/lib/markdown";
 import { messages as rawMessages } from "@/content/guestbook/guestbook";
+import Card from "@/components/Card.astro";
 
 const lang = Astro.locals?.lang || "en";
 
@@ -28,7 +29,7 @@ const extraFields = [
       <T key="guestbook.description" tag="p" class="text-lg text-muted-foreground" />
     </header>
 
-    <div class="border rounded-lg p-6 md:p-8 bg-card shadow-sm mb-16">
+    <Card padding="none" hover={false} class="p-6 md:p-8 mb-16">
       <form name="guestbook" action="/guestbook/success" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
         <p class="hidden" aria-hidden="true">
           <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1" /></label>
@@ -84,7 +85,7 @@ const extraFields = [
           <button type="submit" class="w-full sm:w-auto px-6 py-2.5 bg-primary text-primary-foreground rounded-md hover:opacity-90 transition-opacity font-medium">Submit</button>
         </div>
       </form>
-    </div>
+    </Card>
 
     <section aria-labelledby="messages-heading" class="space-y-8">
       <h2 id="messages-heading" class="text-2xl font-bold border-b border-border pb-4">Messages</h2>
@@ -93,7 +94,7 @@ const extraFields = [
       ) : (
         <div class="space-y-6">
           {messages.map(msg => (
-            <article class="border border-border rounded-lg p-5 bg-card text-card-foreground shadow-sm">
+            <Card padding="base">
               <header class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-3 border-b border-border pb-3">
                 <div class="font-medium text-lg flex items-center gap-2 flex-wrap">
                   {msg.website ? <a href={msg.website} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">{msg.name}</a> : <span>{msg.name}</span>}
@@ -110,7 +111,7 @@ const extraFields = [
                   {msg.referrer && <div class="flex items-center gap-1.5" title="Referrer"><span aria-hidden="true">👋</span> <span class="sr-only">Via:</span> {msg.referrer}</div>}
                 </footer>
               )}
-            </article>
+            </Card>
           ))}
         </div>
       )}
