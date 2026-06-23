@@ -2,7 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { t } from "@/i18n/index";
-import { siteUrl } from "@/lib/constants";
+import { siteUrl, socialLinks } from "@/lib/constants";
 import { parseMarkdown } from "@/lib/markdown";
 import { messages as rawMessages } from "@/content/guestbook/guestbook";
 import Card from "@/components/Card.astro";
@@ -21,6 +21,12 @@ const extraFields = [
   { id: "referrer", label: t(lang, "guestbook.howDidYouGetHere"), type: "text" as any }
 ];
 ---
+
+<script is:inline define:vars={{ neocitiesUrl: socialLinks.neocities }}>
+  if (window.location.hostname.includes('neocities.org')) {
+    window.location.replace(neocitiesUrl);
+  }
+</script>
 
 <BaseLayout title={t(lang, "guestbook.title")} description={t(lang, "guestbook.description")}>
   <div class="container mx-auto px-4 py-8 lg:py-12 max-w-3xl">

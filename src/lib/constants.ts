@@ -39,6 +39,7 @@ export const socialLinks = {
   github: "https://github.com/jartf",
   pronounsPage: "https://pronouns.page/@jerryv",
   fediverse: ["@jar@blob.cat", "@jar@toot.io", "@jarema@mas.to"],
+  neocities: "https://neocities.org/site/jarema",
 } as const;
 
 // Alternative domains/mirrors
