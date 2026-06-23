@@ -234,5 +234,5 @@ export interface FooterBadge {
 export const discordHash = "dh=1d651c707c7a9a0d03b235429393417f9506161c";
 
 // Timezone
-export const authorTimezone = "Antarctica/Davis";
-export const authorTimezoneLabel = "Davis, 🇦🇶";
+export const authorTimezone = "Europe/Tallinn";
+export const authorTimezoneLabel = "Tartu, EE";
