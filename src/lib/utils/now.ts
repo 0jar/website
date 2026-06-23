@@ -27,7 +27,7 @@ function safeImg(src: string, alt: string, cls: string, extra = ''): string {
 // --- Fetching ---
 
 export async function fetchLiveData(): Promise<LiveItem[]> {
-  if (typeof window !== "undefined" && window.location.hostname.includes("neocities.org")) return [];
+  if (typeof window !== "undefined" && (window.location.hostname === "neocities.org" || window.location.hostname.endsWith(".neocities.org"))) return [];
   const lastFmApiUrl = `${services.lastFm.apiUrl}?method=user.getrecenttracks&user=${author.lastFmUsername}&api_key=${services.lastFm.apiKey}`;
   const lfm = await fetch(lastFmApiUrl, { headers: { Accept: "application/xml, text/xml;q=0.9, */*;q=0.8" } }).catch(() => null);
   const items: LiveItem[] = [];
