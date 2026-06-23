@@ -1,0 +1,206 @@
+---
+import T from "@/components/T.astro";
+
+const focusBase = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
+
+// Reused SVG path data
+const gearPath = "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z";
+const iconBase = { xmlns: "http://www.w3.org/2000/svg", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round" as const, "stroke-linejoin": "round" as const, viewBox: "0 0 24 24" };
+
+// Toggle switch class constants
+const toggleBase = "settings-toggle relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-border transition-colors";
+const knobBase = "pointer-events-none block size-4 rounded-full shadow-sm transition-transform";
+const toggleCls = (on: boolean) => `${toggleBase} ${on ? "bg-primary" : "bg-muted"}`;
+const knobCls = (on: boolean) => `${knobBase} ${on ? "bg-white translate-x-4" : "bg-muted-foreground translate-x-0.5"}`;
+
+// Settings toggles: id, i18n key, default on, SVG icon fragment
+const toggles = [
+  { id: "settings-stars-toggle",    i18n: "settings.stars",        defaultOn: true,  icon: `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />` },
+  { id: "settings-motion-toggle",   i18n: "settings.reduceMotion", defaultOn: false, icon: `<circle cx="12" cy="12" r="10" stroke-dasharray="3 3" />` },
+  { id: "settings-contrast-toggle", i18n: "settings.highContrast", defaultOn: false, icon: `<circle cx="12" cy="12" r="10" /><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor" />` },
+] as const;
+---
+
+<details id="settings-menu" class="group relative">
+  <summary class={`p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden ${focusBase}`} aria-label="Settings">
+    <svg {...iconBase} width="20" height="20" aria-hidden="true">
+      <path d={gearPath} /><circle cx="12" cy="12" r="3" />
+    </svg>
+  </summary>
+  <div class="absolute right-0 top-full mt-2 w-72 rounded-md border bg-background/95 backdrop-blur-sm shadow-lg py-3 px-4 z-50 space-y-4" role="group" aria-label="Settings">
+    <T key="settings.title" tag="h3" class="text-lg font-semibold text-foreground" />
+    <hr class="border-border" />
+
+    <!-- Theme -->
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
+          <path d={gearPath} /><circle cx="12" cy="12" r="3" />
+        </svg>
+        <T key="settings.theme" class="text-sm font-medium" />
+      </div>
+      <div class="flex rounded-md border border-border overflow-hidden" role="radiogroup" aria-label="Theme selection">
+        <button data-set-theme="system" class="settings-theme-btn px-2.5 py-1 text-xs font-medium transition-colors" role="radio" aria-checked="false" aria-label="Auto (system theme)"><T key="settings.themeAuto" /></button>
+        <button data-set-theme="light" class="settings-theme-btn px-2 py-1 transition-colors border-x border-border" role="radio" aria-checked="false" aria-label="Light theme">
+          <svg {...iconBase} width="14" height="14" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" /><path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" /><path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        </button>
+        <button data-set-theme="dark" class="settings-theme-btn px-2 py-1 transition-colors" role="radio" aria-checked="false" aria-label="Dark theme">
+          <svg {...iconBase} width="14" height="14" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Toggle switches -->
+    {toggles.map(({ id, i18n, defaultOn, icon }) => (
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
+            <Fragment set:html={icon} />
+          </svg>
+          <T key={i18n} class="text-sm font-medium" id={`${id}-label`} />
+        </div>
+        <button id={id} type="button" role="switch" aria-checked={defaultOn ? "true" : "false"} aria-labelledby={`${id}-label`}
+          class={toggleCls(defaultOn)}>
+          <span class={knobCls(defaultOn)} aria-hidden="true"></span>
+        </button>
+      </div>
+    ))}
+
+    <div class="flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
+          <path d="M4 7V4h16v3M9 20h6M12 4v16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <T key="settings.fontFamily" class="text-sm font-medium" id="font-family-label" />
+      </div>
+      <select id="settings-font-select" aria-labelledby="font-family-label" class={`font-preview-select px-3 py-1.5 text-sm font-medium bg-muted text-foreground border border-border rounded-md transition-all hover:bg-muted/80 hover:border-primary/50 ${focusBase}`}>
+        {[
+          { val: "personal", style: "'Lexend', ui-sans-serif, system-ui, sans-serif;", key: "settings.fontPersonal" },
+          { val: "system", style: "-apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Nimbus Sans L', Roboto, Noto, 'Segoe UI', Arial, Helvetica, 'Helvetica Neue', sans-serif;", key: "settings.fontSystem" },
+          { val: "atkinson", style: "'Atkinson Hyperlegible', sans-serif;", label: "Atkinson Hyperlegible" },
+          { val: "basier", style: "'Basier Square', sans-serif;", label: "Basier Square" },
+          { val: "be-vietnam-pro", style: "'Be Vietnam Pro', sans-serif;", label: "Be Vietnam Pro" },
+          { val: "dyslexia", style: "'OpenDyslexic', sans-serif;", label: "OpenDyslexic" },
+          { val: "geist", style: "'Geist', sans-serif;", label: "Geist" },
+          { val: "grandstander", style: "'Grandstander', sans-serif;", label: "Grandstander" },
+          { val: "lexend", style: "'Lexend', ui-sans-serif, system-ui, sans-serif;", label: "Lexend" },
+          { val: "outfit", style: "'Outfit', sans-serif;", label: "Outfit" },
+          { val: "recursive", style: "'Recursive', sans-serif;", label: "Recursive" },
+          { val: "space-grotesk", style: "'Space Grotesk', ui-sans-serif, system-ui, sans-serif;", label: "Space Grotesk" },
+          { val: "tiresias", style: "'Tiresias Infofont', sans-serif;", label: "Tiresias Infofont" },
+        ].map(f => (
+          <option value={f.val} style={`font-family: ${f.style}`}>
+            {f.key ? <T key={f.key} /> : f.label}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    <hr class="border-border" />
+
+    <!-- Timezone anchor -->
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+        <T key="settings.timezone" class="text-sm font-medium" />
+      </div>
+      <div class="flex rounded-md border border-border overflow-hidden" role="radiogroup" aria-label="Timezone selection">
+        <button data-set-tz="local" class="settings-tz-btn px-2.5 py-1 text-xs font-medium transition-colors" role="radio" aria-checked="true"><T key="settings.tzYours" /></button>
+        <button data-set-tz="author" class="settings-tz-btn px-2.5 py-1 text-xs font-medium transition-colors border-l border-border" role="radio" aria-checked="false"><T key="settings.tzAuthor" /></button>
+      </div>
+    </div>
+
+    <!-- Music (disabled) -->
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
+          <path d="M11 5 6 9H2v6h4l5 4V5Z" />
+          <line x1="23" x2="17" y1="9" y2="15" /><line x1="17" x2="23" y1="9" y2="15" />
+        </svg>
+        <div>
+          <T key="settings.music" class="text-sm font-medium" />
+          <T key="settings.musicUnavailable" tag="p" class="text-xs text-muted-foreground" />
+        </div>
+      </div>
+      <button type="button" disabled aria-pressed="false" aria-label="Music currently unavailable"
+        class={`${toggleCls(false)} cursor-not-allowed opacity-50`}>
+        <span class={knobCls(false)} aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</details>
+
+<script>
+  import { applyTheme } from '@/lib/utils/theme-utils';
+  import { bindToggle, bindRadioGroup, applyFont, setToggle } from '@/lib/utils/settings';
+
+  let ac: AbortController;
+
+  const init = () => {
+    ac?.abort();
+    ac = new AbortController();
+    const { signal } = ac;
+
+    bindRadioGroup('.settings-theme-btn', 'theme', 'system', signal, applyTheme);
+    bindRadioGroup('.settings-tz-btn', 'timezone-anchor', 'local', signal, () =>
+      document.dispatchEvent(new CustomEvent('timezone-change'))
+    );
+
+    const fontSelect = document.getElementById('settings-font-select') as HTMLSelectElement | null;
+    if (fontSelect) {
+      const savedFont = localStorage.getItem('font-family') || 'personal';
+      fontSelect.value = savedFont;
+      applyFont(savedFont);
+      fontSelect.addEventListener('change', () => {
+        const font = fontSelect.value;
+        localStorage.setItem('font-family', font);
+        applyFont(font);
+      }, { signal });
+    }
+
+    bindToggle('settings-stars-toggle', 'stars-enabled', (on) =>
+      document.documentElement.toggleAttribute('data-no-stars', !on));
+
+    bindToggle('settings-contrast-toggle', 'high-contrast', (on) =>
+      document.documentElement.classList.toggle('high-contrast', on));
+
+    bindToggle('settings-motion-toggle', 'reduce-motion', (on) => {
+      document.documentElement.classList.toggle('reduce-motion', on);
+      const starsBtn = document.getElementById('settings-stars-toggle') as HTMLButtonElement | null;
+      if (!starsBtn) return;
+      starsBtn.disabled = on;
+      starsBtn.classList.toggle('opacity-50', on);
+      starsBtn.classList.toggle('cursor-not-allowed', on);
+      starsBtn.classList.toggle('cursor-pointer', !on);
+      if (on) {
+        setToggle(starsBtn, false);
+        document.documentElement.toggleAttribute('data-no-stars', true);
+      } else {
+        const saved = (localStorage.getItem('stars-enabled') ?? 'true') === 'true';
+        setToggle(starsBtn, saved);
+        document.documentElement.toggleAttribute('data-no-stars', !saved);
+      }
+    });
+
+    const menu = document.getElementById('settings-menu') as HTMLDetailsElement | null;
+    if (menu) {
+      document.addEventListener('click', (e) => {
+        if (menu.open && !menu.contains(e.target as Node)) menu.open = false;
+      }, { signal });
+    }
+  };
+
+  init();
+  document.addEventListener('astro:after-swap', init);
+</script>

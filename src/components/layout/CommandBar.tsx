@@ -1,28 +1,10 @@
 // Command palette
 // Ported from Next.js v4
 
-import { icons } from "./icons";
-import { useState, useEffect, useCallback, useMemo, useRef } from "preact/hooks";
+import { useState, useEffect, useMemo, useRef } from "preact/hooks";
 import type { JSX } from "preact";
 import { useMounted, useDebounce, isTypingInInput } from "@/hooks";
-import { getPageLocale, cycleLanguage, t as i18nT } from "@/i18n/client";
-import { localePath } from "@/i18n/routing";
-import { applyTheme } from "@/lib/utils/theme-utils";
-import { keyboardShortcuts, routes } from "@/lib/constants";
-
-const PreactIcon = ({ name, className = "w-4 h-4" }: { name: keyof typeof icons, className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    dangerouslySetInnerHTML={{ __html: icons[name] }}
-  />
-);
+import { useCommandActions, type Action, PreactIcon } from "./CommandActions";
 
 // Inline KeyboardShortcut component
 const KeyboardShortcut = ({ children }: { children: JSX.Element | string | number }) => (
@@ -31,275 +13,25 @@ const KeyboardShortcut = ({ children }: { children: JSX.Element | string | numbe
   </kbd>
 );
 
-// Helpers
-const dispatchKey = (key: string) => document.dispatchEvent(new KeyboardEvent("keydown", { key, bubbles: true }));
-const scrollTo = (id: string, block: ScrollLogicalPosition = "start") => {
-  const el = document.getElementById(id) || document.querySelector(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth", block });
-    el.classList.add("ring-2", "ring-primary", "ring-offset-2");
-    setTimeout(() => el.classList.remove("ring-2", "ring-primary", "ring-offset-2"), 1000);
-  }
-};
-
-interface Action {
-  id: string;
-  label: string;
-  icon: JSX.Element;
-  shortcut?: string;
-  category: string;
-  action: () => void;
-  description?: string;
-  showOn?: string[];
-}
-
-const navIconsDef: Record<string, keyof typeof icons> = {
-  home: "home",
-  about: "user",
-  projects: "code",
-  blog: "book-open",
-  now: "clock",
-  uses: "wrench",
-  contact: "mail",
-  guestbook: "message-square",
-  colophon: "file-text",
-  webring: "flip-horizontal-2",
-  scrapbook: "calendar",
-  slashes: "slash",
-  brand: "tag",
-  tools: "wrench",
-};
-
-const nowCategories = ["reading", "coding", "drinking", "listening", "thinking", "studying", "planning"];
-const usesCategories = ["hardware", "mobile", "audio", "os", "development", "email", "privacy", "mobile_tools", "mapping", "gaming", "multimedia"];
-const colophonSections = ["siteHistory", "technologyStack", "hosting", "inspiration"];
-
 export interface CommandBarProps {
   initialOpen?: boolean;
 }
 
 export function CommandBar({ initialOpen = false }: CommandBarProps) {
-  const [theme, setThemeState] = useState<string>("dark");
   const [open, setOpen] = useState(initialOpen);
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const mounted = useMounted();
   const [pathname, setPathname] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const listboxRef = useRef<HTMLDivElement>(null);
   const debouncedQuery = useDebounce(query, 200);
-  const lang = getPageLocale();
 
   useEffect(() => {
     setPathname(window.location.pathname);
-    setThemeState(localStorage.getItem("theme") || "dark");
   }, []);
 
-  const setTheme = useCallback((newTheme: string) => {
-    setThemeState(newTheme);
-    applyTheme(newTheme);
-  }, []);
-
-  const t = useCallback(
-    (key: string, fallbackOrParams?: string | Record<string, any>): string => {
-      const isParams = fallbackOrParams && typeof fallbackOrParams === "object";
-      const translated = isParams
-        ? i18nT(key, fallbackOrParams as Record<string, any>)
-        : i18nT(key);
-
-      if (translated === key && typeof fallbackOrParams === "string") return fallbackOrParams;
-      return translated;
-    },
-    // Re-render translations on language changes.
-    [lang],
-  );
-
-  // Build all actions
-  const allActions = useMemo(() => {
-    const isPage = (p: string) => pathname?.includes(p);
-    const close = () => setOpen(false);
-    const locale = getPageLocale();
-    const nav = (path: string) => () => { window.location.href = localePath(locale, path); close() };
-
-    // Helper for keyboard-dispatch actions
-    const keyAction = (id: string, label: string, icon: JSX.Element, shortcut: string, category: string, key: string, showOn: string[]): Action => ({
-      id, label, icon, shortcut, category, action: () => { dispatchKey(key); close(); }, showOn,
-    });
-
-    // Navigation actions (data-driven)
-    const navCategory = t("keyboardShortcuts.navigation", "Navigation");
-    const navItems: Action[] = Object.entries(navIconsDef).map(([id, iconName]) => ({
-      id,
-      label: t(`nav.${id}`, id.charAt(0).toUpperCase() + id.slice(1)),
-      icon: <PreactIcon name={iconName} />,
-      shortcut: keyboardShortcuts[id],
-      category: navCategory,
-      action: nav(routes[id as keyof typeof routes] || `/${id}/`),
-    }));
-
-    // Theme + language
-    const themeActions: Action[] = [
-      {
-        id: "theme-toggle",
-        label: theme === "dark" ? t("actionSearch.switchLightMode", "Light mode") : t("actionSearch.switchDarkMode", "Dark mode"),
-        icon: theme === "dark" ? (<PreactIcon name="sun"  />) : (<PreactIcon name="moon"  />),
-        shortcut: "m",
-        category: t("actionSearch.appearance", "Appearance"),
-        action: () => { setTheme(theme === "dark" ? "light" : "dark"); close(); },
-      },
-      {
-        id: "language-toggle",
-        label: t("actionSearch.cycleLanguage", "Change language"),
-        icon: <PreactIcon name="languages"  />,
-        shortcut: "y",
-        category: t("blog.language", "Language"),
-        action: () => { cycleLanguage(); close(); },
-      },
-    ];
-
-    // General actions
-    const generalActions: Action[] = [
-      {
-        id: "refresh-cat",
-        label: t("keyboardShortcuts.refreshCat", "Refresh mood cat"),
-        icon: <PreactIcon name="refresh-cw"  />,
-        shortcut: "r",
-        category: t("actionSearch.fun", "Fun"),
-        action: () => {
-          document.querySelector('button[aria-label="Refresh mood cat"]')
-            ?.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-          close();
-        },
-      },
-      {
-        id: "tetris",
-        label: t("actionSearch.tetris", "Play Tetris"),
-        icon: <PreactIcon name="gamepad-2"  />,
-        shortcut: "t",
-        category: t("actionSearch.games", "Games"),
-        action: nav("/tetris/"),
-      },
-      {
-        id: "2048",
-        label: t("actionSearch.2048", "Play 2048"),
-        icon: <PreactIcon name="gamepad-2"  />,
-        shortcut: "z",
-        category: t("actionSearch.games", "Games"),
-        action: nav("/2048/"),
-      },
-    ];
-
-    // Project page actions
-    const projCat = t("actionSearch.projects.category", "Projects");
-    const projectActions: Action[] = !isPage("/projects") ? [] : [
-      {
-        id: "close-card",
-        label: t("actionSearch.projects.closeCard", "Close card"),
-        icon: <PreactIcon name="x"  />,
-        shortcut: "Esc",
-        category: projCat,
-        action: () => {
-          document.querySelector('.rotate-y-180 [id^="project-card-back-"]')
-            ?.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-          close();
-        },
-        showOn: ["/projects"],
-      },
-      keyAction("nav-left", t("actionSearch.projects.left", "Navigate left"), <PreactIcon name="arrow-left"  />, "←", projCat, "ArrowLeft", ["/projects"]),
-      keyAction("nav-right", t("actionSearch.projects.right", "Navigate right"), <PreactIcon name="arrow-right"  />, "→", projCat, "ArrowRight", ["/projects"]),
-      keyAction("nav-up", t("actionSearch.projects.up", "Navigate up"), <PreactIcon name="arrow-up"  />, "↑", projCat, "ArrowUp", ["/projects"]),
-      keyAction("nav-down", t("actionSearch.projects.down", "Navigate down"), <PreactIcon name="arrow-down"  />, "↓", projCat, "ArrowDown", ["/projects"]),
-    ];
-
-    // Blog actions
-    const blogCat = t("actionSearch.blog.category", "Blog");
-    const blogActions: Action[] = !isPage("/blog")
-      ? []
-      : pathname !== "/blog" && pathname !== "/blog/"
-        ? [
-            keyAction("blog-prev", t("actionSearch.blog.prev", "Previous"), <PreactIcon name="arrow-left"  />, "h", blogCat, "h", ["/blog/"]),
-            keyAction("blog-next", t("actionSearch.blog.next", "Next"), <PreactIcon name="arrow-right"  />, "l", blogCat, "l", ["/blog/"]),
-            { id: "blog-back", label: t("actionSearch.blog.back", "Back to list"), icon: <PreactIcon name="arrow-left"  />, shortcut: "b", category: blogCat, action: nav("/blog/"), showOn: ["/blog/"] },
-          ]
-        : [
-            keyAction("blog-down", t("actionSearch.blog.next", "Next post"), <PreactIcon name="arrow-down"  />, "j", blogCat, "j", ["/blog"]),
-            keyAction("blog-up", t("actionSearch.blog.prev", "Previous post"), <PreactIcon name="arrow-up"  />, "k", blogCat, "k", ["/blog"]),
-            {
-              id: "blog-search",
-              label: t("actionSearch.blog.search", "Search"),
-              icon: <PreactIcon name="search"  />,
-              shortcut: "s",
-              category: blogCat,
-              action: () => { (document.querySelector('input[placeholder*="Search"]') as HTMLInputElement)?.focus(); close(); },
-              showOn: ["/blog"],
-            },
-            {
-              id: "blog-filter",
-              label: t("actionSearch.blog.filterTag", "Filter"),
-              icon: <PreactIcon name="tag"  />,
-              category: blogCat,
-              action: () => { document.querySelector("button:has(.lucide-filter)")?.dispatchEvent(new MouseEvent("click", { bubbles: true })); close(); },
-              showOn: ["/blog"],
-            },
-          ];
-
-    // About page - chapters 1-5
-    const aboutActions: Action[] = !isPage("/about")
-      ? []
-      : [1, 2, 3, 4, 5].map((i) => ({
-          id: `chapter-${i}`,
-          label: t("actionSearch.about.jumpToChapter", { i }),
-          icon: <PreactIcon name="book-open"  />,
-          shortcut: `${i}`,
-          category: t("actionSearch.about.category", "About"),
-          action: () => { scrollTo(`chapter-${i}`, "center"); close(); },
-          showOn: ["/about"],
-        }));
-
-    // Scroll-to-category helper for multiple pages
-    const scrollActions = (
-      page: string, items: string[], i18nPrefix: string, catKey: string,
-      icon: JSX.Element, selectorFn: (item: string, idx: number) => string,
-    ): Action[] => !isPage(page) ? [] : items.map((item, idx) => {
-      const label = t(`${i18nPrefix}.${item}`, item);
-      const shortcut = idx < 9 ? `${idx + 1}` : idx === 9 ? "0" : "-";
-      return {
-        id: `${page.slice(1)}-${idx}`,
-        label: t(`actionSearch.${page.slice(1)}.jumpToCategory`, { category: label })
-          || t(`actionSearch.${page.slice(1)}.jumpToSection`, { section: label }),
-        icon, shortcut,
-        category: t(`actionSearch.${page.slice(1)}.category`, catKey),
-        action: () => { scrollTo(selectorFn(item, idx)); close(); },
-        showOn: [page],
-      };
-    });
-
-    const nowActions = scrollActions(
-      "/now", nowCategories, "now.categories", "Now",
-      <PreactIcon name="clock"  />, (cat) => `category-${cat}`,
-    );
-
-    const usesActions = scrollActions(
-      "/uses", usesCategories, "uses.categories", "Uses",
-      <PreactIcon name="wrench"  />, (_cat, idx) => `[id^="category-"]:nth-of-type(${idx + 1})`,
-    );
-
-    const colophonActions = scrollActions(
-      "/colophon", colophonSections, "colophon", "Colophon",
-      <PreactIcon name="file-text"  />, (_sec, idx) => `[id^="section-"]:nth-of-type(${idx + 1})`,
-    );
-
-    return [
-      ...navItems,
-      ...themeActions,
-      ...generalActions,
-      ...projectActions,
-      ...blogActions,
-      ...aboutActions,
-      ...nowActions,
-      ...usesActions,
-      ...colophonActions,
-    ].filter((a) => !a.showOn || a.showOn.some((p) => pathname?.includes(p)));
-  }, [t, theme, setTheme, lang, pathname]);
+  const { allActions, t } = useCommandActions(pathname, setOpen);
 
   // Filter by query
   const filteredActions = useMemo(() => {
@@ -326,7 +58,6 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
   // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      // Skip if typing in input (except for our search input)
       const el = document.activeElement;
       if (el !== inputRef.current && isTypingInInput()) return;
 
@@ -349,14 +80,14 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
         );
       } else if (e.key === "Enter" && filteredActions.length) {
         e.preventDefault();
-        filteredActions[selectedIndex].action();
+        filteredActions[selectedIndex]?.action();
       }
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [open, filteredActions, selectedIndex]);
 
-  // Focus input on open
+  // Focus input on open & keep selected item in view
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 100);
     else {
@@ -365,39 +96,49 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
     }
   }, [open]);
 
+  useEffect(() => {
+    if (open && listboxRef.current && filteredActions.length > 0) {
+      const activeEl = document.getElementById(`command-item-${selectedIndex}`);
+      if (activeEl) {
+        activeEl.scrollIntoView({ block: "nearest" });
+      }
+    }
+  }, [selectedIndex, open, filteredActions]);
+
   if (!mounted) return null;
 
   return (
     <>
-      {/* Dialog backdrop and content */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]">
-          {/* Backdrop */}
           <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setOpen(false)}
             aria-hidden="true"
           />
 
-          {/* Dialog content */}
           <div
             className="relative bg-background border rounded-lg shadow-lg w-full max-w-md mx-4 overflow-hidden animate-in fade-in zoom-in-95 duration-200"
             role="dialog"
             aria-modal="true"
-            aria-label={t("actionSearch.placeholder", "Search actions...")}
+            aria-labelledby="command-palette-title"
           >
-            {/* Search input */}
+            <h2 id="command-palette-title" className="sr-only">
+              {t("actionSearch.title", "Command Palette")}
+            </h2>
+
             <div className="p-4 pb-2">
               <div className="relative flex items-center">
                 <PreactIcon name="search" className="absolute left-3 w-4 h-4 text-muted-foreground" />
                 <input
                   ref={inputRef}
                   type="text"
-                  placeholder={t(
-                    "actionSearch.placeholder",
-                    "Search actions...",
-                  )}
-                  aria-label={t("actionSearch.placeholder", "Search actions...")}
+                  role="combobox"
+                  aria-expanded="true"
+                  aria-controls="command-palette-listbox"
+                  aria-autocomplete="list"
+                  aria-activedescendant={filteredActions.length > 0 ? `command-item-${selectedIndex}` : undefined}
+                  placeholder={t("actionSearch.placeholder", "Search actions...")}
                   value={query}
                   onChange={(e) => {
                     setQuery((e.target as HTMLInputElement).value);
@@ -408,40 +149,32 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
               </div>
             </div>
 
-            {/* Results */}
-            <div className="max-h-[60vh] overflow-y-auto">
+            <div ref={listboxRef} id="command-palette-listbox" role="listbox" className="max-h-[60vh] overflow-y-auto" aria-label={t("actionSearch.results", "Action results")}>
               {filteredActions.length > 0 ? (
                 <div className="pb-2 animate-in fade-in duration-200">
                   {Object.entries(groupedActions).map(([category, actions]) => (
-                    <div key={category} className="px-2">
-                      <div className="text-xs font-medium text-muted-foreground px-2 py-1.5">
+                    <div key={category} className="px-2" role="group" aria-label={category}>
+                      <div className="text-xs font-medium text-muted-foreground px-2 py-1.5" aria-hidden="true">
                         {category}
                       </div>
                       {actions.map((a) => {
-                        const idx = filteredActions.findIndex(
-                          (x) => x.id === a.id,
-                        );
+                        const idx = filteredActions.findIndex((x) => x.id === a.id);
                         return (
                           <div
                             key={a.id}
+                            id={`command-item-${idx}`}
+                            role="option"
+                            aria-selected={idx === selectedIndex}
                             className={`px-2 py-1.5 flex items-center justify-between rounded-md cursor-pointer transition-colors ${idx === selectedIndex ? "bg-muted" : "hover:bg-muted/50"}`}
                             onClick={() => a.action()}
                             onMouseEnter={() => setSelectedIndex(idx)}
                           >
                             <div className="flex items-center gap-2">
-                              <span className="flex-shrink-0">{a.icon}</span>
-                              <span className="text-sm font-medium">
-                                {a.label}
-                              </span>
-                              {a.description && (
-                                <span className="text-xs text-muted-foreground">
-                                  {a.description}
-                                </span>
-                              )}
+                              <span className="flex-shrink-0" aria-hidden="true">{a.icon}</span>
+                              <span className="text-sm font-medium">{a.label}</span>
+                              {a.description && <span className="text-xs text-muted-foreground">{a.description}</span>}
                             </div>
-                            {a.shortcut && (
-                              <KeyboardShortcut>{a.shortcut}</KeyboardShortcut>
-                            )}
+                            {a.shortcut && <KeyboardShortcut>{a.shortcut}</KeyboardShortcut>}
                           </div>
                         );
                       })}
@@ -449,23 +182,15 @@ export function CommandBar({ initialOpen = false }: CommandBarProps) {
                   ))}
                 </div>
               ) : (
-                <div className="px-4 py-8 text-center animate-in fade-in duration-200">
-                  <p className="text-muted-foreground">
-                    {t("actionSearch.noResults", "No actions found")}
-                  </p>
+                <div className="px-4 py-8 text-center animate-in fade-in duration-200" role="status">
+                  <p className="text-muted-foreground">{t("actionSearch.noResults", "No actions found")}</p>
                 </div>
               )}
             </div>
 
-            {/* Footer */}
             <div className="p-2 border-t">
               <div className="flex items-center justify-between text-xs text-muted-foreground px-2">
-                <span>
-                  {t(
-                    "actionSearch.pressToOpen",
-                    "Press . to open command palette",
-                  )}
-                </span>
+                <span>{t("actionSearch.pressToOpen", "Press . to open command palette")}</span>
                 <span>{t("actionSearch.escToClose", "ESC to close")}</span>
               </div>
             </div>

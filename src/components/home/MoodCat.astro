@@ -1,6 +1,4 @@
 ---
-// MoodCat component - displays a random cat image with i18n
-// Uses on-demand loading with pre-optimized images
 import T from "@/components/T.astro";
 import { getImage } from "astro:assets";
 
@@ -9,280 +7,132 @@ interface Props {
 }
 const { isHomepage = false } = Astro.props;
 
-type MoodCat = {
-  id: number;
-  image: string;
-  caption: string;
-  attribution?: string;
-  attributionNote?: string;
-};
-
-// Import all cat images for optimization
-import catOnLaptop from "@/../public/moodcat/cat-on-laptop.png";
-import catInBox from "@/../public/moodcat/cat-in-box.png";
-import keyboardNap from "@/../public/moodcat/keyboard-nap.jpg";
-import contemplativeCat from "@/../public/moodcat/contemplative-cat-coffee.jpg";
-import catStudying from "@/../public/moodcat/cat-studying.jpg";
-import academicCat from "@/../public/moodcat/academic-cat.jpg";
-import dateNightCat from "@/../public/moodcat/date-night-cat.jpg";
-import baristaCat from "@/../public/moodcat/barista-cat.jpg";
-import securityCat from "@/../public/moodcat/security-cat.jpg";
-import retailCat from "@/../public/moodcat/retail-cat.jpg";
-import singingCat from "@/../public/moodcat/singing-cat.webp";
-import postalCat from "@/../public/moodcat/postal-cat.png";
-import pestControlCat from "@/../public/moodcat/pest-control-cat.jpg";
-import mechanicCat from "@/../public/moodcat/mechanic-cat.webp";
-import ceoCat from "@/../public/moodcat/ceo-cat.jpg";
-
-// Pre-optimize all images at build time
-const optimizedImages = await Promise.all([
-  getImage({ src: catOnLaptop, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: catInBox, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: keyboardNap, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: contemplativeCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: catStudying, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: academicCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: dateNightCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: baristaCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: securityCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: retailCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: singingCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: postalCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: pestControlCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: mechanicCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-  getImage({ src: ceoCat, format: "jpg", quality: 85, width: 550, height: 360 }),
-]);
-
-const moodCats: MoodCat[] = [
-  {
-    id: 1,
-    image: optimizedImages[0].src,
-    caption: "meowtivated",
-    attribution: "https://www.reddit.com/r/aww/comments/s3t3mo/coding_cat_is_raising_your_productivity_3/",
-  },
-  {
-    id: 2,
-    image: optimizedImages[1].src,
-    caption: "overthinking like my hooman",
-    attribution: "https://www.reddit.com/r/aww/comments/1c841o3/my_friend_says_my_cat_has_resting_bewildered_face/",
-  },
-  {
-    id: 3,
-    image: optimizedImages[2].src,
-    caption: "404 nap not found",
-    attribution: "https://www.reddit.com/r/aww/comments/jdbrgp/how_am_i_supposed_to_game_with_this_tiny_kitten/",
-  },
-  {
-    id: 4,
-    image: optimizedImages[3].src,
-    caption: "catffeinated",
-    attribution: "https://x.com/poorlycatdraw/status/1563137689326858240",
-  },
-  {
-    id: 5,
-    image: optimizedImages[4].src,
-    caption: "studying the meowconomy",
-    attribution: "https://www.reddit.com/r/CPA/comments/xwi18u/compilation_of_my_cat_studying_with_me",
-  },
-  {
-    id: 6,
-    image: optimizedImages[5].src,
-    caption: "purrfessor with tenure",
-    attribution: "https://x.com/fatfatpankocat/status/1545269035738320896",
-  },
-  {
-    id: 7,
-    image: optimizedImages[6].src,
-    caption: "waiting for my date to return from the bathroom",
-    attribution: "https://www.reddit.com/r/notinteresting/comments/1jxeskh/my_friend_went_on_a_date/",
-  },
-  {
-    id: 8,
-    image: optimizedImages[7].src,
-    caption: "your latte will be ready in a meowment",
-    attribution: "https://www.reddit.com/r/Catswithjobs/comments/1jw0fvn/the_barista_will_prepare_your_latte_now/",
-  },
-  {
-    id: 9,
-    image: optimizedImages[8].src,
-    caption: "pawsport and ID please",
-    attribution: "https://www.reddit.com/r/Catswithjobs/comments/dncwls/the_security_guy_in_istanbul_turkey/",
-  },
-  {
-    id: 10,
-    image: optimizedImages[9].src,
-    caption: "i don't get paid enough for this",
-    attribution: "https://www.reddit.com/r/Catswithjobs/comments/uopwrf/employee_of_the_month/",
-  },
-  {
-    id: 11,
-    image: optimizedImages[10].src,
-    caption: "hitting those high meowtes",
-    attribution: "https://www.reddit.com/r/Catswithjobs/comments/1fqw9f3/tenor/",
-  },
-  {
-    id: 12,
-    image: optimizedImages[11].src,
-    caption: "US purrstal service, i have a purrcel for you",
-    attribution: "https://www.reddit.com/r/Catswithjobs/comments/10va12b/maam_us_purrstal_service_i_have_a_purrcel_for_you/",
-  },
-  {
-    id: 13,
-    image: optimizedImages[12].src,
-    caption: "rodents don't have a chance",
-    attribution: "https://www.reddit.com/r/Catswithjobs/comments/tsxus1/the_rodents_dont_have_a_chance/",
-  },
-  {
-    id: 14,
-    image: optimizedImages[13].src,
-    caption: "your purroblem is the catalytic converter",
-    attribution: "https://www.reddit.com/r/Catswithjobs/comments/11kkwce/shambo_tryna_diagnose_my_car_not_sure_hes/",
-  },
-  {
-    id: 15,
-    image: optimizedImages[14].src,
-    caption: "excavation supurrvisor, no breaks until the purrmit is approved",
-    attribution: "https://www.reddit.com/r/Catswithjobs/comments/1iao56u/the_ceo_himself/",
-  },
+const rawCats = [
+  { file: "cat-on-laptop.png", caption: "meowtivated", url: "https://www.reddit.com/r/aww/comments/s3t3mo/coding_cat_is_raising_your_productivity_3/" },
+  { file: "cat-in-box.png", caption: "overthinking like my hooman", url: "https://www.reddit.com/r/aww/comments/1c841o3/my_friend_says_my_cat_has_resting_bewildered_face/" },
+  { file: "keyboard-nap.jpg", caption: "404 nap not found", url: "https://www.reddit.com/r/aww/comments/jdbrgp/how_am_i_supposed_to_game_with_this_tiny_kitten/" },
+  { file: "contemplative-cat-coffee.jpg", caption: "catffeinated", url: "https://x.com/poorlycatdraw/status/1563137689326858240" },
+  { file: "cat-studying.jpg", caption: "studying the meowconomy", url: "https://www.reddit.com/r/CPA/comments/xwi18u/compilation_of_my_cat_studying_with_me" },
+  { file: "academic-cat.jpg", caption: "purrfessor with tenure", url: "https://x.com/fatfatpankocat/status/1545269035738320896" },
+  { file: "date-night-cat.jpg", caption: "waiting for my date to return from the bathroom", url: "https://www.reddit.com/r/notinteresting/comments/1jxeskh/my_friend_went_on_a_date/" },
+  { file: "barista-cat.jpg", caption: "your latte will be ready in a meowment", url: "https://www.reddit.com/r/Catswithjobs/comments/1jw0fvn/the_barista_will_prepare_your_latte_now/" },
+  { file: "security-cat.jpg", caption: "pawsport and ID please", url: "https://www.reddit.com/r/Catswithjobs/comments/dncwls/the_security_guy_in_istanbul_turkey/" },
+  { file: "retail-cat.jpg", caption: "i don't get paid enough for this", url: "https://www.reddit.com/r/Catswithjobs/comments/uopwrf/employee_of_the_month/" },
+  { file: "singing-cat.webp", caption: "hitting those high meowtes", url: "https://www.reddit.com/r/Catswithjobs/comments/1fqw9f3/tenor/" },
+  { file: "postal-cat.png", caption: "US purrstal service, i have a purrcel for you", url: "https://www.reddit.com/r/Catswithjobs/comments/10va12b/maam_us_purrstal_service_i_have_a_purrcel_for_you/" },
+  { file: "pest-control-cat.jpg", caption: "rodents don't have a chance", url: "https://www.reddit.com/r/Catswithjobs/comments/tsxus1/the_rodents_dont_have_a_chance/" },
+  { file: "mechanic-cat.webp", caption: "your purroblem is the catalytic converter", url: "https://www.reddit.com/r/Catswithjobs/comments/11kkwce/shambo_tryna_diagnose_my_car_not_sure_hes/" },
+  { file: "ceo-cat.jpg", caption: "excavation supurrvisor, no breaks until the purrmit is approved", url: "https://www.reddit.com/r/Catswithjobs/comments/1iao56u/the_ceo_himself/" },
 ];
 
-// Pick a random cat for the initial render
-const initialCat = moodCats[Math.floor(Math.random() * moodCats.length)];
+const images = import.meta.glob<{ default: ImageMetadata }>('../../../public/moodcat/*.{png,jpg,webp}', { eager: true });
+
+const processedCats = await Promise.all(
+  rawCats.map(async ({ file, caption, url }, id) => {
+    const src = images[`../../../public/moodcat/${file}`]?.default;
+    const img = src ? await getImage({ src, format: "webp", quality: 80, width: 550, height: 360 }) : { src: `/moodcat/${file}` };
+    return { id, image: img.src, caption, url };
+  })
+);
+
+const initial = processedCats[Math.floor(Math.random() * processedCats.length)];
 ---
 
-<section aria-labelledby="mood-cat-heading" class="flex flex-col h-full">
-  <h2 id="mood-cat-heading" class="text-2xl font-bold mb-4 text-center relative group flex-shrink-0">
-    <a href="/now/" class="no-underline hover:underline focus:underline text-inherit">
-      <T key="moodCat.title" />
-    </a>
-    <span class="absolute left-0 -bottom-1 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-    <span id="mood-cat-hover-text" class="absolute left-0 -top-6 w-full text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-      <T key="moodCat.hover" />
-    </span>
-  </h2>
-  <div class="border rounded-lg p-4 bg-card flex flex-col flex-1">
-    <div class:list={["relative rounded-xl overflow-hidden bg-muted flex-1", { "min-h-0": isHomepage }]}>
-      <div class:list={[{ "absolute inset-0 w-full h-full": isHomepage, "relative w-full h-[350px]": !isHomepage }]}>
-        <img
-          id="mood-cat-image"
-          src={initialCat.image}
-          alt={`Mood cat: ${initialCat.caption}`}
-          class="w-full h-full object-cover"
-          loading="eager"
-          width="800"
-          height="425"
-          data-hover-i18n="moodCat.hover"
-        />
-        <!-- Caption overlay -->
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-          <p id="mood-cat-caption" class="text-white text-base lg:text-lg font-medium text-center">
-            {initialCat.caption}
-          </p>
-          {initialCat.attribution && (
-            <p class="text-white/80 text-xs text-center mt-1">
-              <a
-                id="mood-cat-attribution"
-                href={initialCat.attribution}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:text-white transition-colors"
-              >
+<mood-cat data-cats={JSON.stringify(processedCats)} data-current={initial.id} class="flex flex-col h-full group/widget">
+  <section aria-labelledby="mood-cat-heading" class="flex flex-col h-full">
+    <h2 id="mood-cat-heading" class="text-2xl font-bold mb-4 text-center relative group flex-shrink-0">
+      <a href="/now/" class="no-underline hover:underline focus:underline text-inherit">
+        <T key="moodCat.title" />
+      </a>
+      <span class="absolute left-0 -bottom-1 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+      <span class="absolute left-0 -top-6 w-full text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        <T key="moodCat.hover" />
+      </span>
+    </h2>
+
+    <div class="border rounded-lg p-4 bg-card flex flex-col flex-1">
+      <figure class={`relative rounded-xl overflow-hidden bg-muted flex-1 m-0 ${isHomepage ? 'min-h-0' : ''}`}>
+        <div class={`w-full ${isHomepage ? 'absolute inset-0 h-full' : 'relative h-[350px]'}`}>
+          <img
+            src={initial.image}
+            alt={`Mood cat: ${initial.caption}`}
+            class="w-full h-full object-cover transition-opacity duration-150 ease-in-out"
+            loading="eager"
+            width="550"
+            height="360"
+            data-image
+          />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-8 text-center" aria-live="polite">
+            <p class="text-white text-base lg:text-lg font-medium" data-caption>{initial.caption}</p>
+            <p class={`text-white/80 text-xs mt-1 transition-opacity ${!initial.url ? 'hidden' : ''}`} data-attr>
+              <a href={initial.url || "#"} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors focus-visible:outline-white">
                 Image source
               </a>
             </p>
-          )}
+          </figcaption>
         </div>
+      </figure>
+
+      <div class="mt-4 flex justify-center gap-3">
+        <button
+          type="button"
+          class="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium border rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors group focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+          aria-label="Get a new cat image"
+          data-refresh
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-500" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+          <T key="moodCat.refresh" />
+        </button>
+        <a
+          href="https://www.reddit.com/r/Catswithjobs/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium border rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors group focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="motion-safe:group-hover:animate-pulse" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+          <T key="moodCat.seeMore" />
+        </a>
       </div>
     </div>
+  </section>
+</mood-cat>
 
-    <!-- Buttons row -->
-    <div class="mt-3 flex justify-center gap-2">
-      <button
-        id="refresh-cat"
-        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-sm border rounded-lg hover:bg-accent transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-        aria-label="Get a new cat image"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-500" aria-hidden="true">
-          <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" />
-          <path d="M21 3v5h-5" />
-        </svg>
-        <T key="moodCat.refresh" />
-      </button>
-      <a
-        href="https://www.reddit.com/r/Catswithjobs/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-sm border rounded-lg hover:bg-accent transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="motion-safe:group-hover:animate-pulse" aria-hidden="true">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/>
-          <line x1="10" x2="21" y1="14" y2="3"/>
-        </svg>
-        <T key="moodCat.seeMore" />
-      </a>
-    </div>
-  </div>
-</section>
+<script>
+  class MoodCat extends HTMLElement {
+    connectedCallback() {
+      const cats = JSON.parse(this.dataset.cats || "[]");
+      if (cats.length < 2) return;
 
-<script is:inline define:vars={{ moodCats, serverInitialCat: initialCat }}>
-  const cats = moodCats;
-  let currentCatId = serverInitialCat.id;
+      let currentId = parseInt(this.dataset.current || "0", 10);
+      const btn = this.querySelector("[data-refresh]");
+      const img = this.querySelector("[data-image]") as HTMLImageElement | null;
+      const caption = this.querySelector("[data-caption]");
+      const attr = this.querySelector("[data-attr]");
+      const link = attr?.querySelector("a");
 
-  const refreshBtn = document.getElementById('refresh-cat');
-  const catImage = document.getElementById('mood-cat-image');
-  const captionEl = document.getElementById('mood-cat-caption');
-  const attributionEl = document.getElementById('mood-cat-attribution');
+      btn?.addEventListener("click", () => {
+        let newCat;
+        do { newCat = cats[Math.floor(Math.random() * cats.length)]; } while (newCat.id === currentId);
+        currentId = newCat.id;
 
-  // Get a random cat different from current
-  function getRandomCat() {
-    let newCat;
-    do {
-      newCat = cats[Math.floor(Math.random() * cats.length)];
-    } while (newCat.id === currentCatId && cats.length > 1);
-    return newCat;
+        if (img) img.style.opacity = "0";
+        setTimeout(() => {
+          if (img) {
+            img.src = newCat.image;
+            img.alt = `Mood cat: ${newCat.caption}`;
+          }
+          if (caption) caption.textContent = newCat.caption;
+          if (attr && link) {
+            attr.classList.toggle("hidden", !newCat.url);
+            if (newCat.url) link.href = newCat.url;
+          }
+          if (img) img.style.opacity = "1";
+        }, 150);
+      });
+    }
   }
 
-  if (attributionEl && serverInitialCat.attribution) {
-    attributionEl.href = serverInitialCat.attribution;
-    attributionEl.parentElement.classList.remove('hidden');
-  } else if (attributionEl) {
-    attributionEl.parentElement.classList.add('hidden');
-  }
-
-  // Refresh button handler
-  if (refreshBtn && catImage) {
-    refreshBtn.addEventListener('click', () => {
-      const newCat = getRandomCat();
-      currentCatId = newCat.id;
-
-      // Fade out effect
-      catImage.style.opacity = '0';
-
-      setTimeout(() => {
-        catImage.src = newCat.image;
-        catImage.alt = `Mood cat: ${newCat.caption}`;
-
-        if (captionEl) {
-          captionEl.textContent = newCat.caption;
-        }
-
-        if (attributionEl && newCat.attribution) {
-          attributionEl.href = newCat.attribution;
-          attributionEl.parentElement.classList.remove('hidden');
-        } else if (attributionEl) {
-          attributionEl.parentElement.classList.add('hidden');
-        }
-
-        // Fade in
-        catImage.style.opacity = '1';
-      }, 150);
-    });
+  if (!customElements.get("mood-cat")) {
+    customElements.define("mood-cat", MoodCat);
   }
 </script>
-
-<style>
-  #mood-cat-image {
-    transition: opacity 0.15s ease-in-out;
-  }
-</style>
