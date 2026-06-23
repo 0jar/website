@@ -107,16 +107,7 @@
   },
   "about": {
     "title": "O mnie",
-    "description": "Historia o tym, kim jestem, skąd pochodzę, jaka jest moja pasja i do czego dążę.",
-    "chapters": {
-      "6": {
-        "title": "jeszcze nie skończyłem",
-        "content1": "więc tu jest ta część, której nie mieli przeczytać.",
-        "content2": "wciąż jestem zły. wciąż opłakuję wersję siebie, której nigdy nie pozwolono istnieć. wciąż budzę się czasem i zastanawiam, czemu wszystko wydaje się nieco nie tak. czasem myślę o ucieczce, zniknięciu, nowym imieniu, nowym mieście, nowym języku. czasem prawie to robię.",
-        "content3": "są dni, kiedy nie czuję się nawet człowiekiem. bardziej jak wspomnienie próbujące się utrwalić. bardziej jak echo czegoś miękkiego, do czego już nie mogę sięgnąć. innym razem jestem pełen energii. czuję każdy szczegół: słońce na skórze, ciche playlisty, to jak zmieniają się twarze ludzi, gdy wreszcie mogą być sobą. to jakoś trzyma mnie przy życiu.",
-        "content4": "jeszcze nie skończyłem stawać się tym, kim mam być. ale skończyłem udawać, że wystarcza mi milczenie."
-      }
-    }
+    "description": "Historia o tym, kim jestem, skąd pochodzę, jaka jest moja pasja i do czego dążę."
   },
   "projects": {
     "title": "Moje projekty",
@@ -659,8 +650,7 @@
       "back": "Powrót do listy bloga"
     },
     "about": {
-      "category": "Nawigacja po sekcjach 'O mnie'",
-      "jumpToChapter": "Przejdź do rozdziału {{i}}"
+      "category": "Nawigacja po sekcjach 'O mnie'"
     },
     "uses": {
       "category": "Nawigacja po sekcjach 'Używam'",

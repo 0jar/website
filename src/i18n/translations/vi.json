@@ -147,15 +147,6 @@
     "timeline": {
       "copyHash": "Sao chép hash",
       "copyHashTitle": "Sao chép toàn bộ mã SHA"
-    },
-    "chapters": {
-      "6": {
-        "title": "mình vẫn chưa nói hết đâu",
-        "content1": "và nên đây là phần lẽ ra \"người ta\" không nên thấy.",
-        "content2": "xin phép được xưng là \"tôi\". tôi vẫn còn bực. bực lắm. tôi vẫn đang tiếc nuối vì một phần của chính mình chưa bao giờ có cơ hội được sống thật. vẫn có những buổi sáng tỉnh dậy mà cứ có cảm giác mọi thứ bị lệch đi vài chút, mà không biết tại sao. có những lúc tôi đã nghĩ đến việc chạy trốn và biến mất luôn, lập một cái tên mới, sống ở thành phố mới, nói một ngôn ngữ mới. hoặc đôi lúc cũng là buông bỏ mọi thứ theo cái nghĩa ngược lại. và có lần tôi đã suýt làm thế thật.",
-        "content3": "có những ngày tôi chẳng cảm thấy mình là con người nữa. có những lúc tôi thấy bản thân giống như kiểu một ký ức đang cố kết lại thành hình hơn. giống như một tiếng vọng vang của một điều gì đó mềm mại mà chính tôi cũng không còn có thể chạm tới được nữa. nhưng cũng có những ngày tôi bùng cháy như có điện chạy trong người. tôi cảm được từng chi tiết quanh tôi, từ ánh nắng trên da, những nốt nhạc nhẹ nhàng của playlist đang bật, những khoảnh khắc ánh mắt và gương mặt người ta thay đổi khi họ thấy đủ an toàn để thể hiện chính mình. mấy điều nhỏ nhoi đó, bằng một cách nào đó, vẫn đang níu giữ tôi sống.",
-        "content4": "tôi vẫn chưa xong cái việc trở thành một phiên bản quái gì mà tôi cũng chẳng biết rõ là ai hay như thế nào. nhưng có một điều tôi chắc chắn, là tôi đã xong với cái việc lúc nào cũng phải giả vờ là mình ổn, và tôi không chịu im lặng nữa."
-      }
     }
   },
   "projects": {
@@ -699,8 +690,7 @@
       "back": "Quay lại danh sách bài viết"
     },
     "about": {
-      "category": "Điều hướng qua các phần giới thiệu",
-      "jumpToChapter": "Đi đến chương {{i}}"
+      "category": "Điều hướng qua các phần giới thiệu"
     },
     "uses": {
       "category": "Điều hướng qua các phần công cụ",

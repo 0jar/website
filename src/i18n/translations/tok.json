@@ -107,16 +107,7 @@
   },
   "about": {
     "title": "sona mi",
-    "description": "toki pi seme mi, tan seme mi kama, seme pilin mi, en seme mi pali tawa.",
-    "chapters": {
-      "6": {
-        "title": "mi pini ala",
-        "content1": "ni li ijo jan ante wile ala kute.",
-        "content2": "mi pilin utala kin. mi pilin weka tawa mi pi lon ala. tenpo suno ante la mi pilin ni: ijo li lon lili ante. tenpo ante la mi wile tawa weka: nimi sin, ma sin, toki sin. tenpo ante la mi wile awen.",
-        "content3": "tenpo ante la mi pilin ala sama jan. mi sama sitelen wile kama wawa. mi sama kalama pi len. tenpo ante la mi kama seli: mi pilin e suno lon selo, kalama musi lili, sinpin jan li ante lon tenpo ni. ni li awen e mi.",
-        "content4": "mi pini ala lon kama mi. taso mi pini lon awen moli. mi wile toki."
-      }
-    }
+    "description": "toki pi seme mi, tan seme mi kama, seme pilin mi, en seme mi pali tawa."
   },
   "projects": {
     "title": "pali mi",
@@ -659,8 +650,7 @@
       "back": "tawa listi pi lipu toki"
     },
     "about": {
-      "category": "tawa lon 'sona mi'",
-      "jumpToChapter": "tawa len {{i}}"
+      "category": "tawa lon 'sona mi'"
     },
     "uses": {
       "category": "tawa lon 'kepeken'",

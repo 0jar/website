@@ -84,30 +84,6 @@ const footerBadges = badges.filter(badge => badge.footer);
 
 <script is:inline>
   (function () {
-    // Secret chapter 6 easter egg - tap footer 6 times to reveal
-    var tapCount = 0;
-    var tapTimeout = null;
-    var footerTapArea = document.getElementById("footer-tap-area");
-    if (footerTapArea) {
-      footerTapArea.addEventListener("click", function (e) {
-        if (e.target && e.target.tagName === "A") return;
-        tapCount++;
-        if (tapTimeout) clearTimeout(tapTimeout);
-        tapTimeout = setTimeout(function () { tapCount = 0; }, 2000);
-        if (tapCount === 6) {
-          sessionStorage.setItem("showHiddenChapter", "true");
-          if (window.location.pathname.includes("/about")) {
-            document.querySelectorAll(".hidden-chapter").forEach(function (el) { el.classList.remove("hidden"); });
-            var chapter6 = document.getElementById("chapter-6");
-            if (chapter6) chapter6.scrollIntoView({ behavior: "smooth" });
-          } else {
-            window.location.href = "/about/#chapter-6";
-          }
-          tapCount = 0;
-        }
-      });
-    }
-
     // Command bar trigger button
     var trigger = document.getElementById("footer-command-bar-trigger");
     if (trigger) {

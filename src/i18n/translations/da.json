@@ -107,16 +107,7 @@
   },
   "about": {
     "title": "Om mig",
-    "description": "Historien om hvem jeg er, hvor jeg kommer fra, hvad min passion er, og hvad jeg arbejder hen imod.",
-    "chapters": {
-      "6": {
-        "title": "jeg er ikke færdig endnu",
-        "content1": "og her er den del, som \"folk\" ikke skulle se.",
-        "content2": "jeg er stadig vred. jeg er meget vred. jeg sørger stadig over en version af mig selv, der aldrig fik lov til at eksistere. jeg vågner stadig nogle dage og undrer mig over, hvorfor alt føles et par grader forkert. nogle gange tænker jeg på at løbe væk og forsvinde, få et nyt navn, bo i en ny by, tale et nyt sprog. eller nogle gange handler det om at give slip på alt i den modsatte betydning. og jeg var tæt på at gøre det en gang.",
-        "content3": "der er dage, hvor jeg ikke føler, at jeg er et menneske længere. nogle gange føler jeg, at jeg er et minde, der forsøger at tage form. som et ekko af noget blødt, som jeg ikke længere kan røre ved. andre dage er jeg elektrisk. jeg kan føle alle detaljer omkring mig, fra sollyset på min hud, de bløde toner fra den playliste, der spiller, de øjeblikke hvor folks øjne og ansigter ændrer sig, når de føler sig trygge nok til at være sig selv. det holder mig i live på en eller anden måde.",
-        "content4": "jeg er ikke færdig med at blive den, jeg skal være. men jeg er færdig med at lade som om, at jeg er okay og jeg er okay med at være stille mere."
-      }
-    }
+    "description": "Historien om hvem jeg er, hvor jeg kommer fra, hvad min passion er, og hvad jeg arbejder hen imod."
   },
   "projects": {
     "title": "Mine projekter",
@@ -659,8 +650,7 @@
       "back": "Tilbage til bloglisten"
     },
     "about": {
-      "category": "Navigér i 'Om mig'-sektionerne",
-      "jumpToChapter": "Hop til kapitel {{i}}"
+      "category": "Navigér i 'Om mig'-sektionerne"
     },
     "uses": {
       "category": "Navigér i 'Jeg bruger'-sektionerne",

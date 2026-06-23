@@ -107,16 +107,7 @@
   },
   "about": {
     "title": "Hakkımda",
-    "description": "Ben kimim, nereden geliyorum, tutkum ne ve ne için çalışıyorum hikayesi.",
-    "chapters": {
-      "6": {
-        "title": "henüz bitirmedim",
-        "content1": "işte okumamaları gereken kısım.",
-        "content2": "hala kızgınım. var olmasına asla izin verilmeyen bir versiyonumun yasını hala tutuyorum. hala bazı günler neden her şeyin birkaç derece yanlış hissettirdiğini merak ederek uyanıyorum. bazen kaçıp gitmeyi, sadece ortadan kaybolmayı düşünüyorum, yeni isim, yeni şehir, yeni dil. bazen neredeyse yapıyorum.",
-        "content3": "insan bile hissetmediğim günler var. daha çok katılaşmaya çalışan bir anı gibi. daha çok artık ulaşamadığım daha yumuşak bir şeyin yankısı gibi. diğer günler, elektriğim. her ayrıntıyı hissediyorum, tenimde güneş ışığı, sessiz çalma listeleri, insanların nihayet kendileri olabilecek kadar güvende olduklarında yüzlerinin değişme şekli. bir şekilde beni hayatta tutuyor.",
-        "content4": "olmam gereken kişi her kimse, o kişi olmayı henüz bitirmedim. ama sessiz kalmaktan memnunmuş gibi davranmayı bıraktım."
-      }
-    }
+    "description": "Ben kimim, nereden geliyorum, tutkum ne ve ne için çalışıyorum hikayesi."
   },
   "projects": {
     "title": "Projelerim",
@@ -659,8 +650,7 @@
       "back": "Blog listesine geri dön"
     },
     "about": {
-      "category": "Hakkımda bölümlerinde gezin",
-      "jumpToChapter": "{{i}}. bölüme git"
+      "category": "Hakkımda bölümlerinde gezin"
     },
     "uses": {
       "category": "Kullanım bölümlerinde gezin",

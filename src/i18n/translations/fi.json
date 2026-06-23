@@ -107,16 +107,7 @@
   },
   "about": {
     "title": "Minusta",
-    "description": "Tarina siitä, kuka olen, mistä tulen, mikä on intohimoni ja mitä kohti työskentelen.",
-    "chapters": {
-      "6": {
-        "title": "en ole vielä valmis",
-        "content1": "tässä on osa, jota ei pitänyt lukea.",
-        "content2": "olen yhä vihainen. suren yhä versiota itsestäni, jota ei koskaan saanut olla. herään yhä joskus ja ihmettelen miksi kaikki tuntuu vähän pielessä. joskus mietin karkaamista, katoamista, uusi nimi, uusi kaupunki, uusi kieli. joskus olen lähellä tehdä sen.",
-        "content3": "on päiviä jolloin en tunne itseäni ihmiseksi. enemmänkin muistoksi, joka yrittää muuttua todeksi. enemmänkin kaiuksi jostain pehmeästä, johon en enää yllä. toisina päivinä olen täynnä sähköä. tunnen jokaisen yksityiskohdan, auringon iholla, hiljaiset soittolistat, miten ihmisten kasvot muuttuvat kun he viimein uskaltavat olla omia itsejään. se pitää minut elossa, jotenkin.",
-        "content4": "en ole valmis tulemaan siksi, miksi minun kuuluu tulla. mutta olen valmis lopettamaan teeskentelyn että on ok olla hiljaa."
-      }
-    }
+    "description": "Tarina siitä, kuka olen, mistä tulen, mikä on intohimoni ja mitä kohti työskentelen."
   },
   "projects": {
     "title": "Projektini",
@@ -659,8 +650,7 @@
       "back": "Takaisin blogilistaan"
     },
     "about": {
-      "category": "Selaa minusta-osioita",
-      "jumpToChapter": "Hyppää lukuun {{i}}"
+      "category": "Selaa minusta-osioita"
     },
     "uses": {
       "category": "Selaa käytän-osioita",

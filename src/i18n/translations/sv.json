@@ -107,16 +107,7 @@
   },
   "about": {
     "title": "Om mig",
-    "description": "Berättelsen om vem jag är, var jag kommer ifrån, vad min passion är och vad jag strävar efter.",
-    "chapters": {
-      "6": {
-        "title": "jag är inte klar än",
-        "content1": "så här är delen de inte skulle läsa.",
-        "content2": "jag är fortfarande arg. sörjer fortfarande en version av mig själv som aldrig fick finnas. vaknar fortfarande vissa dagar och undrar varför allt känns lite fel. ibland tänker jag på att bara sticka, försvinna, nytt namn, ny stad, nytt språk. ibland är det nära att jag gör det.",
-        "content3": "det finns dagar då jag inte ens känner mig mänsklig. mer som ett minne som försöker bli verkligt. mer som ett eko av något mjukare jag inte längre når. andra dagar är jag elektrisk. jag känner varje detalj, solsken på huden, tysta spellistor, hur folks ansikten förändras när de äntligen känner sig trygga nog att vara sig själva. det håller mig vid liv, på något sätt.",
-        "content4": "jag är inte klar med att bli den jag ska bli. men jag är klar med att låtsas att det är okej att vara tyst."
-      }
-    }
+    "description": "Berättelsen om vem jag är, var jag kommer ifrån, vad min passion är och vad jag strävar efter."
   },
   "projects": {
     "title": "Mina projekt",
@@ -659,8 +650,7 @@
       "back": "Tillbaka till blogglistan"
     },
     "about": {
-      "category": "Navigera bland om-sektioner",
-      "jumpToChapter": "Hoppa till kapitel {{i}}"
+      "category": "Navigera bland om-sektioner"
     },
     "uses": {
       "category": "Navigera bland verktygssektioner",

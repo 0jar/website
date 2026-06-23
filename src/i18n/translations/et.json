@@ -107,16 +107,7 @@
   },
   "about": {
     "title": "Minust",
-    "description": "Lugu sellest, kes ma olen, kust ma tulen, mis on mu kirg ja mille poole ma püüdlen.",
-    "chapters": {
-      "6": {
-        "title": "ma tahtsin veel midagi öelda",
-        "content1": "so here's the part they weren't supposed to read.",
-        "content2": "i'm still angry. still grieving a version of myself that was never allowed to exist. still waking up some days wondering why everything feels a few degrees off. sometimes i think about running away, just disappearing, new name, new city, new language. sometimes i almost do it.",
-        "content3": "there are days i don't even feel human. more like a memory trying to solidify. more like an echo of something softer i can't reach anymore. other days, i'm electric. i feel every detail, sunlight on skin, quiet playlists, the way people's faces shift when they're finally safe enough to be themselves. it keeps me alive, somehow.",
-        "content4": "i'm not done becoming whoever the hell i'm supposed to be. but i am done pretending that i'm okay with staying silent."
-      }
-    }
+    "description": "Lugu sellest, kes ma olen, kust ma tulen, mis on mu kirg ja mille poole ma püüdlen."
   },
   "projects": {
     "title": "Minu projektid",
@@ -659,8 +650,7 @@
       "back": "Tagasi bloginimekirja"
     },
     "about": {
-      "category": "Navigeeri sektsioonides",
-      "jumpToChapter": "Hüppa peatükki {{i}}"
+      "category": "Navigeeri sektsioonides"
     },
     "uses": {
       "category": "Navigeeri tööriistade seas",
