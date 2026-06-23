@@ -39,7 +39,7 @@ const toggles = [
       <div class="flex-shrink-0">
         <a href={localePath(lang, "/")} class={`flex items-center gap-2 transition-opacity hover:opacity-80 ${focusBase} rounded-md`} aria-label={`${author.name} - Homepage`}>
           <div class="relative size-8 overflow-hidden">
-            <Image src="/favicon-128.png" alt={`${author.name}'s logo`} width={32} height={32} class="size-8" aria-hidden="true" loading="eager" fetchpriority="high" />
+            <Image src="/favicon-128.png" alt={`${author.name}'s logo`} width={32} height={32} densities={[1.5, 2]} class="size-8" aria-hidden="true" loading="eager" fetchpriority="high" />
           </div>
           <span class="font-heading font-bold text-xl sm:inline-block">{author.displayName}</span>
         </a>
