@@ -4,6 +4,11 @@
 import T from "@/components/T.astro";
 import { getImage } from "astro:assets";
 
+interface Props {
+  isHomepage?: boolean;
+}
+const { isHomepage = false } = Astro.props;
+
 type MoodCat = {
   id: number;
   image: string;
@@ -156,8 +161,8 @@ const initialCat = moodCats[Math.floor(Math.random() * moodCats.length)];
     </span>
   </h2>
   <div class="border rounded-lg p-4 bg-card flex flex-col flex-1">
-    <div class="relative rounded-xl overflow-hidden bg-muted flex-1">
-      <div class="relative w-full h-[100%]">
+    <div class:list={["relative rounded-xl overflow-hidden bg-muted flex-1", { "min-h-0": isHomepage }]}>
+      <div class:list={[{ "absolute inset-0 w-full h-full": isHomepage, "relative w-full h-[350px]": !isHomepage }]}>
         <img
           id="mood-cat-image"
           src={initialCat.image}
