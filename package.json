@@ -43,8 +43,5 @@
       "@opentelemetry/core": ">=2.8.0"
     }
   },
-  "dependencies": {
-    "csv-parse": "^7.0.0",
-    "csv-stringify": "^6.8.0"
-  }
+  "dependencies": {}
 }

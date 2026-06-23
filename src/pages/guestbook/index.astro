@@ -2,21 +2,20 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { t } from "@/i18n/index";
-import fs from "fs";
-import { parse } from "csv-parse/sync";
 import { siteUrl } from "@/lib/constants";
 import { parseMarkdown } from "@/lib/markdown";
+import { messages as rawMessages } from "@/content/guestbook/guestbook";
 
 const lang = Astro.locals?.lang || "en";
 
 let messages: any[] = [];
 try {
   const currentDomain = new URL(siteUrl).hostname;
-  messages = parse(fs.readFileSync("src/content/guestbook/guestbook.csv", "utf-8"), { columns: true, skip_empty_lines: true })
+  messages = rawMessages
     .map((r: any) => ({ ...r, date: r.created_at, referrer: r.referrer?.includes(currentDomain) ? "" : r.referrer }))
     .sort((a: any, b: any) => Date.parse(b.date) - Date.parse(a.date));
 } catch (e) {
-  console.error("Error loading guestbook");
+  console.error("Error loading guestbook", e);
 }
 const inputCls = "w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50";
 const extraFields = [
