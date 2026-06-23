@@ -76,6 +76,21 @@
         "vi": "Trình duyệt web cho công việc",
         "zh": "工作网页浏览器"
       }
+    },
+    {
+      "name": "Bottles",
+      "link": "https://github.com/bottlesdevs/Bottles",
+      "description": {
+        "da": "Kører Windows-software på Linux",
+        "en": "Running Windows software on Linux",
+        "et": "Windowsi tarkvara käivitamine Linuxis",
+        "pl": "Uruchamianie oprogramowania Windows na Linuksie",
+        "ru": "Запуск ПО Windows на Linux",
+        "tok": "ilo Windows lon Linux",
+        "vi-Hani": "Chạy phần mềm Windows trên Linux",
+        "vi": "Chạy phần mềm Windows trên Linux",
+        "zh": "在 Linux 上运行 Windows 软件"
+      }
     }
   ]
 }

@@ -91,6 +91,21 @@
         "vi": "Trình sửa âm thanh",
         "zh": "音频编辑器"
       }
+    },
+    {
+      "name": "GIMP",
+      "link": "https://www.gimp.org/",
+      "description": {
+        "da": "Open source-fotoredigeringsprogram",
+        "en": "Open-source photo editor",
+        "et": "Avatud lähtekoodiga fototöötleja",
+        "pl": "Edytor zdjęć open source",
+        "ru": "Фоторедактор с открытым исходным кодом",
+        "tok": "ilo ante sitelen open source",
+        "vi-Hani": "Trình sửa ảnh mã nguồn mở",
+        "vi": "Trình sửa ảnh mã nguồn mở",
+        "zh": "开源照片编辑器"
+      }
     }
   ]
 }

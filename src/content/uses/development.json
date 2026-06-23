@@ -3,21 +3,6 @@
   "icon": "code",
   "items": [
     {
-      "name": "VS Code",
-      "link": "https://code.visualstudio.com/",
-      "description": {
-        "da": "Primær kodeeditor",
-        "en": "Primary code editor",
-        "et": "Peamine koodiredaktor",
-        "pl": "Główny edytor kodu",
-        "ru": "Основной редактор кода",
-        "tok": "ilo sitelen nanpa nanpa wan",
-        "vi-Hani": "程撰討 code 正",
-        "vi": "Trình soạn thảo code chính",
-        "zh": "主用代码编辑器"
-      }
-    },
-    {
       "name": "Zed",
       "link": "https://zed.dev/",
       "description": {
@@ -30,6 +15,21 @@
         "vi-Hani": "程撰討 code 正",
         "vi": "Trình soạn thảo code chính",
         "zh": "主用代码编辑器"
+      }
+    },
+    {
+      "name": "VS Code",
+      "link": "https://code.visualstudio.com/",
+      "description": {
+        "da": "Sekundær kodeeditor",
+        "en": "Secondary code editor",
+        "et": "Teisene koodiredaktor",
+        "pl": "Dodatkowy edytor kodu",
+        "ru": "Дополнительный редактор кода",
+        "tok": "ilo sitelen nanpa tu",
+        "vi-Hani": "程撰討 code 副",
+        "vi": "Trình soạn thảo code phụ",
+        "zh": "次要代码编辑器"
       }
     },
     {
@@ -49,6 +49,7 @@
     },
     {
       "name": "Git",
+      "link": "https://git-scm.com/",
       "description": {
         "da": "Versionskontrolsystem",
         "en": "Version control system",
@@ -78,6 +79,7 @@
     },
     {
       "name": "MySQL",
+      "link": "https://www.mysql.com/",
       "description": {
         "da": "Databaseadministration",
         "en": "Database management",
@@ -106,8 +108,8 @@
       }
     },
     {
-      "name": "Vercel",
-      "link": "https://vercel.com/",
+      "name": "Netlify",
+      "link": "https://www.netlify.com/",
       "description": {
         "da": "Webhostingplatform",
         "en": "Web hosting platform",

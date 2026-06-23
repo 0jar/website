@@ -3,8 +3,8 @@
   "icon": "mail",
   "items": [
     {
-      "name": "Betterbird",
-      "link": "https://www.betterbird.eu/",
+      "name": "Aerion",
+      "link": "https://github.com/hkdb/aerion/",
       "description": {
         "da": "Desktop e-mailklient",
         "en": "Desktop email client",
@@ -79,6 +79,7 @@
     },
     {
       "name": "Google Calendar",
+      "link": "https://calendar.google.com/",
       "description": {
         "da": "Kalender og planlægning",
         "en": "Calendar and scheduling",

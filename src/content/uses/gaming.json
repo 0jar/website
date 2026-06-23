@@ -3,8 +3,8 @@
   "icon": "gamepad-2",
   "items": [
     {
-      "name": "Lunar Client",
-      "link": "https://www.lunarclient.com/",
+      "name": "Prism Launcher",
+      "link": "https://prismlauncher.org/",
       "description": {
         "da": "Minecraft-klient",
         "en": "Minecraft client and launcher",
@@ -60,6 +60,36 @@
         "vi-Hani": "Cửa hàng trò chơi indie",
         "vi": "Cửa hàng trò chơi indie",
         "zh": "独立游戏商店"
+      }
+    },
+    {
+      "name": "Sunshine",
+      "link": "https://github.com/LizardByte/Sunshine",
+      "description": {
+        "da": "Spil-streaming vært",
+        "en": "Game streaming host",
+        "et": "Mängude voogesituse host",
+        "pl": "Host strumieniowania gier",
+        "ru": "Хост стриминга игр",
+        "tok": "ilo pana musi",
+        "vi-Hani": "Máy chủ stream trò chơi",
+        "vi": "Máy chủ stream trò chơi",
+        "zh": "游戏串流主机"
+      }
+    },
+    {
+      "name": "Moonlight",
+      "link": "https://github.com/moonlight-stream/moonlight-qt",
+      "description": {
+        "da": "Spil-streaming klient",
+        "en": "Game streaming client",
+        "et": "Mängude voogesituse klient",
+        "pl": "Klient strumieniowania gier",
+        "ru": "Клиент стриминга игр",
+        "tok": "ilo alasa musi",
+        "vi-Hani": "Máy khách stream trò chơi",
+        "vi": "Máy khách stream trò chơi",
+        "zh": "游戏串流客户端"
       }
     }
   ]
