@@ -8,15 +8,11 @@ import { messages as rawMessages } from "@/content/guestbook/guestbook";
 
 const lang = Astro.locals?.lang || "en";
 
-let messages: any[] = [];
-try {
-  const currentDomain = new URL(siteUrl).hostname;
-  messages = rawMessages
-    .map((r: any) => ({ ...r, date: r.created_at, referrer: r.referrer?.includes(currentDomain) ? "" : r.referrer }))
-    .sort((a: any, b: any) => Date.parse(b.date) - Date.parse(a.date));
-} catch (e) {
-  console.error("Error loading guestbook", e);
-}
+const currentDomain = new URL(siteUrl).hostname;
+const messages = rawMessages
+  .map(r => ({ ...r, date: r.created_at, referrer: r.referrer?.includes(currentDomain) ? "" : r.referrer }))
+  .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+
 const inputCls = "w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50";
 const extraFields = [
   { id: "social", label: "Social media handle", type: "text" as any, placeholder: "@username" },
@@ -72,13 +68,13 @@ const extraFields = [
         <div class="space-y-1.5">
           <label for="message" class="block text-sm font-medium">Message <span class="text-red-500" aria-hidden="true">*</span></label>
           <div class="border border-input rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-primary/50 focus-within:border-primary bg-background">
-            <div class="bg-muted/30 border-b border-input flex px-2 pt-2 gap-2">
-              <button type="button" id="tab-write" class="px-3 py-1.5 text-sm font-medium border-b-2 border-primary text-foreground" aria-selected="true">Write</button>
-              <button type="button" id="tab-preview" class="px-3 py-1.5 text-sm font-medium border-b-2 border-transparent text-muted-foreground hover:text-foreground" aria-selected="false">Preview</button>
+            <div role="tablist" class="bg-muted/30 border-b border-input flex px-2 pt-2 gap-2">
+              <button type="button" role="tab" aria-selected="true" aria-controls="message" id="tab-write" class="px-3 py-1.5 text-sm font-medium border-b-2 border-primary text-foreground">Write</button>
+              <button type="button" role="tab" aria-selected="false" aria-controls="preview-container" id="tab-preview" class="px-3 py-1.5 text-sm font-medium border-b-2 border-transparent text-muted-foreground hover:text-foreground">Preview</button>
             </div>
             <div class="p-0">
-              <textarea id="message" name="message" required rows="4" class="w-full px-3 py-2 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none resize-y min-h-[120px] block" placeholder="Leave a message... Markdown is supported!"></textarea>
-              <div id="preview-container" class="hidden w-full px-3 py-2 min-h-[120px] prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap text-foreground"></div>
+              <textarea id="message" role="tabpanel" name="message" required rows="4" class="w-full px-3 py-2 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none resize-y min-h-[120px] block" placeholder="Leave a message... Markdown is supported!"></textarea>
+              <div id="preview-container" role="tabpanel" class="hidden w-full px-3 py-2 min-h-[120px] prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap text-foreground"></div>
             </div>
           </div>
           <p class="text-xs text-muted-foreground mt-1">Markdown supported: **bold**, *italic*, [link](url), `code`, &gt; quote</p>
@@ -126,49 +122,37 @@ const extraFields = [
   import { parseMarkdown } from "@/lib/markdown";
 
   function setupTabs() {
-    const tabWrite = document.getElementById('tab-write');
-    const tabPreview = document.getElementById('tab-preview');
-    const textarea = document.getElementById('message') as HTMLTextAreaElement;
-    const previewContainer = document.getElementById('preview-container');
+    const w = document.getElementById('tab-write');
+    const p = document.getElementById('tab-preview');
+    const t = document.getElementById('message') as HTMLTextAreaElement;
+    const c = document.getElementById('preview-container');
 
-    if (!tabWrite || !tabPreview || !textarea || !previewContainer) return;
+    if (!w || !p || !t || !c) return;
 
-    tabWrite.addEventListener('click', () => {
-      tabWrite.classList.add('border-primary', 'text-foreground');
-      tabWrite.classList.remove('border-transparent', 'text-muted-foreground');
-      tabWrite.setAttribute('aria-selected', 'true');
+    const toggle = (isWrite: boolean) => {
+      w.classList.toggle('border-primary', isWrite);
+      w.classList.toggle('text-foreground', isWrite);
+      w.classList.toggle('border-transparent', !isWrite);
+      w.classList.toggle('text-muted-foreground', !isWrite);
+      w.setAttribute('aria-selected', String(isWrite));
 
-      tabPreview.classList.add('border-transparent', 'text-muted-foreground');
-      tabPreview.classList.remove('border-primary', 'text-foreground');
-      tabPreview.setAttribute('aria-selected', 'false');
+      p.classList.toggle('border-primary', !isWrite);
+      p.classList.toggle('text-foreground', !isWrite);
+      p.classList.toggle('border-transparent', isWrite);
+      p.classList.toggle('text-muted-foreground', isWrite);
+      p.setAttribute('aria-selected', String(!isWrite));
 
-      textarea.classList.remove('hidden');
-      previewContainer.classList.add('hidden');
-      textarea.focus();
-    });
+      t.classList.toggle('hidden', !isWrite);
+      c.classList.toggle('hidden', isWrite);
+    };
 
-    tabPreview.addEventListener('click', () => {
-      tabPreview.classList.add('border-primary', 'text-foreground');
-      tabPreview.classList.remove('border-transparent', 'text-muted-foreground');
-      tabPreview.setAttribute('aria-selected', 'true');
-
-      tabWrite.classList.add('border-transparent', 'text-muted-foreground');
-      tabWrite.classList.remove('border-primary', 'text-foreground');
-      tabWrite.setAttribute('aria-selected', 'false');
-
-      textarea.classList.add('hidden');
-      previewContainer.classList.remove('hidden');
-
-      const content = textarea.value.trim();
-      if (content) {
-        previewContainer.innerHTML = parseMarkdown(content);
-      } else {
-        previewContainer.innerHTML = '<p class="text-muted-foreground italic">Nothing to preview</p>';
-      }
+    w.addEventListener('click', () => { toggle(true); t.focus(); });
+    p.addEventListener('click', () => {
+      toggle(false);
+      c.innerHTML = parseMarkdown(t.value.trim()) || '<p class="text-muted-foreground italic">Nothing to preview</p>';
     });
   }
 
-  // Setup tabs on initial load and view transition
   setupTabs();
   document.addEventListener('astro:page-load', setupTabs);
 </script>
