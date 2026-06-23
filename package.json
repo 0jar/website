@@ -11,7 +11,9 @@
     "build:fast": "SKIP_WEBMENTIONS=1 astro build",
     "build:neo": "NEOCITIES=1 astro build && neocities push --prune dist",
     "astro": "astro",
-    "check": "astro check"
+    "check": "astro check",
+    "guestbook:prune": "node scripts/guestbook.js",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
@@ -40,5 +42,9 @@
       "esbuild": ">=0.28.1",
       "@opentelemetry/core": ">=2.8.0"
     }
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.0",
+    "csv-stringify": "^6.8.0"
   }
 }
