@@ -4,7 +4,7 @@
   "content": {
     "en": "moved cards to dedicated component and updated neocities build",
     "vi": "chuyển mấy cái card sang component riêng rồi fix lại cái build cho neocities",
-    "ru": "вынес карточки в отдельный компонент и подправил сборку для neocities",
+    "ru": "вынес карточки в отдельный компонент и подправил билд для neocities",
     "et": "viisin kaardid eraldi komponenti ja uuendasin neocities ehitust"
   }
 }
