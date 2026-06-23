@@ -5,6 +5,7 @@ import { t } from "@/i18n/index";
 import fs from "fs";
 import { parse } from "csv-parse/sync";
 import { siteUrl } from "@/lib/constants";
+import { parseMarkdown } from "@/lib/markdown";
 
 const lang = Astro.locals?.lang || "en";
 
@@ -44,7 +45,7 @@ const extraFields = [
         </div>
 
         <div>
-          <label for="email" class="block text-sm font-medium mb-1.5">Email <span class="text-muted-foreground font-normal">(optional - will not be published)</span></label>
+          <label for="email" class="block text-sm font-medium mb-1.5">Email <span class="text-muted-foreground font-normal">(optional, won't be published)</span></label>
           <input type="email" id="email" name="email" class={inputCls} />
         </div>
 
@@ -55,7 +56,7 @@ const extraFields = [
 
         <details class="group border border-input rounded-md p-4 bg-muted/20">
           <summary class="cursor-pointer text-sm font-medium hover:text-primary transition-colors select-none flex items-center">
-            <span>Additional info (socials, location, etc.)</span>
+            <span>Additional optional info (socials, location, etc.)</span>
             <span class="ml-auto text-muted-foreground text-xs opacity-70 group-open:hidden">Show</span>
             <span class="ml-auto text-muted-foreground text-xs opacity-70 hidden group-open:inline">Hide</span>
           </summary>
@@ -69,9 +70,19 @@ const extraFields = [
           </div>
         </details>
 
-        <div>
-          <label for="message" class="block text-sm font-medium mb-1.5">Message <span class="text-red-500" aria-hidden="true">*</span></label>
-          <textarea id="message" name="message" required rows="4" class={`${inputCls} resize-y`}></textarea>
+        <div class="space-y-1.5">
+          <label for="message" class="block text-sm font-medium">Message <span class="text-red-500" aria-hidden="true">*</span></label>
+          <div class="border border-input rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-primary/50 focus-within:border-primary bg-background">
+            <div class="bg-muted/30 border-b border-input flex px-2 pt-2 gap-2">
+              <button type="button" id="tab-write" class="px-3 py-1.5 text-sm font-medium border-b-2 border-primary text-foreground" aria-selected="true">Write</button>
+              <button type="button" id="tab-preview" class="px-3 py-1.5 text-sm font-medium border-b-2 border-transparent text-muted-foreground hover:text-foreground" aria-selected="false">Preview</button>
+            </div>
+            <div class="p-0">
+              <textarea id="message" name="message" required rows="4" class="w-full px-3 py-2 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none resize-y min-h-[120px] block" placeholder="Leave a message... Markdown is supported!"></textarea>
+              <div id="preview-container" class="hidden w-full px-3 py-2 min-h-[120px] prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap text-foreground"></div>
+            </div>
+          </div>
+          <p class="text-xs text-muted-foreground mt-1">Markdown supported: **bold**, *italic*, [link](url), `code`, &gt; quote</p>
         </div>
 
         <div class="pt-2">
@@ -96,7 +107,7 @@ const extraFields = [
                 <time class="text-sm text-muted-foreground mt-1 sm:mt-0" datetime={msg.date}>{new Date(msg.date).toLocaleDateString(lang, { year: "numeric", month: "long", day: "numeric" })}</time>
               </header>
 
-              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap">{msg.message}</div>
+              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap" set:html={parseMarkdown(msg.message)}></div>
 
               {(msg.location || msg.referrer) && (
                 <footer class="mt-4 pt-3 border-t border-dashed border-border flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground">
@@ -111,3 +122,54 @@ const extraFields = [
     </section>
   </div>
 </BaseLayout>
+
+<script>
+  import { parseMarkdown } from "@/lib/markdown";
+
+  function setupTabs() {
+    const tabWrite = document.getElementById('tab-write');
+    const tabPreview = document.getElementById('tab-preview');
+    const textarea = document.getElementById('message') as HTMLTextAreaElement;
+    const previewContainer = document.getElementById('preview-container');
+
+    if (!tabWrite || !tabPreview || !textarea || !previewContainer) return;
+
+    tabWrite.addEventListener('click', () => {
+      tabWrite.classList.add('border-primary', 'text-foreground');
+      tabWrite.classList.remove('border-transparent', 'text-muted-foreground');
+      tabWrite.setAttribute('aria-selected', 'true');
+
+      tabPreview.classList.add('border-transparent', 'text-muted-foreground');
+      tabPreview.classList.remove('border-primary', 'text-foreground');
+      tabPreview.setAttribute('aria-selected', 'false');
+
+      textarea.classList.remove('hidden');
+      previewContainer.classList.add('hidden');
+      textarea.focus();
+    });
+
+    tabPreview.addEventListener('click', () => {
+      tabPreview.classList.add('border-primary', 'text-foreground');
+      tabPreview.classList.remove('border-transparent', 'text-muted-foreground');
+      tabPreview.setAttribute('aria-selected', 'true');
+
+      tabWrite.classList.add('border-transparent', 'text-muted-foreground');
+      tabWrite.classList.remove('border-primary', 'text-foreground');
+      tabWrite.setAttribute('aria-selected', 'false');
+
+      textarea.classList.add('hidden');
+      previewContainer.classList.remove('hidden');
+
+      const content = textarea.value.trim();
+      if (content) {
+        previewContainer.innerHTML = parseMarkdown(content);
+      } else {
+        previewContainer.innerHTML = '<p class="text-muted-foreground italic">Nothing to preview</p>';
+      }
+    });
+  }
+
+  // Setup tabs on initial load and view transition
+  setupTabs();
+  document.addEventListener('astro:page-load', setupTabs);
+</script>
