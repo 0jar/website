@@ -268,7 +268,7 @@ const structuredData = {
       (function () {
         try {
           const host = location.hostname;
-          if (/^(localhost|::1|0\.0\.0\.0)$/.test(host) || host.startsWith("127.")) return;
+          if (/^(localhost|::1|0\.0\.0\.0)$/.test(host) || host.startsWith("127.") || host.includes("neocities.org")) return;
 
           const siteId = (host === "z.is-a.dev" || host.endsWith(".z.is-a.dev"))
             ? analyticsWebsiteIds["z.is-a.dev"]

@@ -11,7 +11,7 @@ export default defineConfig({
   trailingSlash: 'always',
   output: 'static',
   ...(process.env.NETLIFY ? { adapter: netlify() } : {}),
-  fetchFile: 'src/fetch.ts',
+
 
   redirects: {
     '/blog/default-apps-2024': '/blog/2024/07/app-defaults-2024/',

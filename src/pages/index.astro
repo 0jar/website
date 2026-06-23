@@ -179,6 +179,10 @@ const resolvedSiteName = getSiteName(lang);
   function loadStatus() {
     const u = document.getElementById("statuscafe-username"), c = document.getElementById("statuscafe-content");
     if (!u || !c) return;
+    if (window.location.hostname.includes("neocities.org")) {
+      c.innerHTML = 'Status unavailable on Neocities, see <a href="https://status.cafe/users/jarema/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://status.cafe/users/jarema/</a> :)';
+      return;
+    }
     const ac = new AbortController();
     setTimeout(() => ac.abort(), 5000);
     fetch('https://status.cafe/users/jarema/status.json', { signal: ac.signal })
