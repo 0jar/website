@@ -1,0 +1,10 @@
+{
+  "hash": "08863a4b8b222ff4adb94a0d6c01d96b82fc50ca",
+  "date": "2026-06-22",
+  "content": {
+    "en": "updated to astro 7 and removed server adapters",
+    "vi": "cập nhật lên astro 7 rồi gỡ mấy cái server adapter đi luôn cho nhẹ :))",
+    "ru": "обновился до astro 7 и выкинул серверные адаптеры наконец-то",
+    "et": "uuendasin astro 7-le ja viskasin serveri adapterid minema"
+  }
+}

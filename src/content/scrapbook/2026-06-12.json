@@ -1,0 +1,10 @@
+{
+  "hash": "7e49d6da0d05d9145cb10fc034e9a991815bceff",
+  "date": "2026-06-12",
+  "content": {
+    "en": "updated badges and moved hardcoded data to constants",
+    "vi": "cập nhật mấy cái badge với chuyển mấy cái dữ liệu hardcode vào constants",
+    "ru": "обновил значки и запихнул хардкоженные данные в константы",
+    "et": "uuendasin märke ja kolisin hardcode'itud andmed konstantidesse"
+  }
+}
