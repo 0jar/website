@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import preact from '@astrojs/preact';
 import netlify from '@astrojs/netlify';
 import copy from './src/lib/copy.js';
+import captions from './src/lib/captions.js';
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,7 +25,7 @@ export default defineConfig({
   ],
 
   markdown: {
-    rehypePlugins: [copy],
+    rehypePlugins: [copy, captions],
   },
 
   // Image optimization

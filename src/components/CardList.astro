@@ -14,7 +14,7 @@ const { as: Tag = 'div', class: className, cols = 1, ...props } = Astro.props;
     }[cols],
     className
   ]}
-  role={(Tag === 'ul' || Tag === 'ol') ? "list" : undefined}
+  role={((Tag as string) === 'ul' || (Tag as string) === 'ol') ? "list" : undefined}
   {...props}
 >
   <slot />
