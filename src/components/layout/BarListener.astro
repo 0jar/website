@@ -44,11 +44,11 @@
       e.preventDefault();
       loading = true;
       Promise.all([
-        import("@/components/layout/CommandBar"),
+        import("@/components/commands/Bar"),
         import("preact"),
-      ]).then(([{ CommandBar }, { render, h }]) => {
+      ]).then(([{ Bar }, { render, h }]) => {
         const el = document.getElementById("command-bar-root");
-        if (el) render(h(CommandBar, { initialOpen: true }), el);
+        if (el) render(h(Bar, { initialOpen: true }), el);
       }).catch(() => { loading = false; });
       return;
     }

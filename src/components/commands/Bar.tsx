@@ -4,7 +4,7 @@
 import { useState, useEffect, useMemo, useRef } from "preact/hooks";
 import type { JSX } from "preact";
 import { useMounted, useDebounce, isTypingInInput } from "@/hooks";
-import { useCommandActions, type Action, PreactIcon } from "./CommandActions";
+import { useCommandActions, type Action, PreactIcon } from "./Actions";
 
 // Inline KeyboardShortcut component
 const KeyboardShortcut = ({ children }: { children: JSX.Element | string | number }) => (
@@ -13,11 +13,11 @@ const KeyboardShortcut = ({ children }: { children: JSX.Element | string | numbe
   </kbd>
 );
 
-export interface CommandBarProps {
+export interface BarProps {
   initialOpen?: boolean;
 }
 
-export function CommandBar({ initialOpen = false }: CommandBarProps) {
+export function Bar({ initialOpen = false }: BarProps) {
   const [open, setOpen] = useState(initialOpen);
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);

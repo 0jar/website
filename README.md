@@ -96,11 +96,12 @@ src/
 ├── fetch.ts          # Global fetch wrapper for Astro 7
 ├── components/       # .astro (static) and .tsx (Preact islands)
 │   ├── blog/         # Blog components
-│   ├── home/         # Homepage components
+│   ├── commands/     # Command palette components
 │   ├── game/         # Game components
+│   ├── home/         # Homepage components
 │   ├── layout/       # Site layout components
-│   ├── KeyboardShortcut.astro  # Keyboard shortcut helper component
-│   └── T.astro       # Translation component
+│   ├── ui/           # Reusable UI elements
+│   └── widgets/      # Larger functional blocks
 ├── content/          # Astro content collections data
 │   ├── about/        # About page sections
 │   ├── blog/         # Blog posts, in Markdown
@@ -189,7 +190,7 @@ The site supports dark and light modes:
 **9 languages** supported: English, Tiếng Việt, Русский, Eesti, Dansk, 中文, Polski, toki pona, 漢喃
 
 - Translations in [`src/i18n/translations/*.json`](./src/i18n/translations)
-- Use the [`T.astro`](./src/components/T.astro) component for static translations
+- Use the [`T.astro`](./src/components/ui/T.astro) component for static translations
 - Language state inferred from URL/routing and managed via vanilla JavaScript helpers
 - Language detection from browser or localStorage
 
@@ -228,9 +229,9 @@ NEOCITIES=1 pnpm build
 
 <!-- Manually initialized Preact component in a script tag -->
 <script>
-  import { CommandBar } from "@/components/layout/CommandBar";
+  import { Bar } from "@/components/commands/Bar";
   import { render, h } from "preact";
-  render(h(CommandBar, { initialOpen: true }), document.getElementById("bar-root"));
+  render(h(Bar, { initialOpen: true }), document.getElementById("bar-root"));
 </script>
 ```
 

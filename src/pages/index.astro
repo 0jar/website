@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import T from "@/components/T.astro";
+import T from "@/components/ui/T.astro";
 import { routes, getSiteName, author, services, authorTimezone, authorTimezoneLabel } from "@/lib/constants";
 import { getData } from "@/content.config";
 import badges from "@/content/data/badges.json";
 import MoodCat from "@/components/home/MoodCat.astro";
 import NowSection from "@/components/home/NowSection.astro";
 import RecentPosts from "@/components/home/RecentPosts.astro";
-import Card from "@/components/Card.astro";
+import Card from "@/components/ui/Card.astro";
 
 const activeWebringItems = (await getData("webrings")).filter(w => w.status === "active");
 const friendSites = badges.filter(badge => badge.category === "friend");

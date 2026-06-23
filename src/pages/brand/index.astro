@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import T from "@/components/T.astro";
+import T from "@/components/ui/T.astro";
 import { Image } from 'astro:assets';
 import { siteUrl, getSiteName, author } from '@/lib/constants';
-import Card from "@/components/Card.astro";
-import CardList from "@/components/CardList.astro";
+import Card from "@/components/ui/Card.astro";
+import CardList from "@/components/ui/CardList.astro";
 
 const lang = Astro.locals?.lang || "en";
 const resolvedSiteName = getSiteName(lang);

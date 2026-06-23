@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import CommitTimeline from "@/components/CommitTimeline.astro";
-import T from "@/components/T.astro";
+import CommitTimeline from "@/components/widgets/CommitTimeline.astro";
+import T from "@/components/ui/T.astro";
 import { Image } from "astro:assets";
 import { author, authorTimezone, authorTimezoneLabel, siteUrl } from '@/lib/constants';
 import { t } from "@/i18n";
 import { getCollection, type CollectionEntry } from "astro:content";
-import Card from "@/components/Card.astro";
+import Card from "@/components/ui/Card.astro";
 
 const lang = Astro.locals?.lang || "en";
 const title = t(lang, "about.title");

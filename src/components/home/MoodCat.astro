@@ -1,5 +1,5 @@
 ---
-import T from "@/components/T.astro";
+import T from "@/components/ui/T.astro";
 import { getImage } from "astro:assets";
 
 interface Props {
@@ -100,7 +100,8 @@ const initial = processedCats[Math.floor(Math.random() * processedCats.length)];
 <script>
   class MoodCat extends HTMLElement {
     connectedCallback() {
-      const cats = JSON.parse(this.dataset.cats || "[]");
+      type CatData = { id: number; image: string; caption: string; url?: string };
+      const cats: CatData[] = JSON.parse(this.dataset.cats || "[]");
       if (cats.length < 2) return;
 
       let currentId = parseInt(this.dataset.current || "0", 10);
