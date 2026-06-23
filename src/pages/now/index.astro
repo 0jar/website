@@ -3,6 +3,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { getData, type I18nContent, type I18nContentOptional } from "@/content.config";
 import { nowIcons } from "@/lib/constants";
+import Card from "@/components/Card.astro";
+import CardList from "@/components/CardList.astro";
 
 const nowItems = await getData("now");
 
@@ -20,7 +22,7 @@ const sortedItems = [...nowItems].sort((a, b) => new Date(b.date).getTime() - ne
         <T key="now.description" tag="p" class="text-muted-foreground text-lg mx-auto" />
         {sortedItems.length > 0 && (
           <p class="text-sm text-muted-foreground/70 mt-4">
-            <T key="now.lastUpdated" />:
+            <T key="now.lastUpdated" />:{" "}
             <time id="last-updated-date" data-date={sortedItems[0].date} datetime={sortedItems[0].date}>
               {new Date(sortedItems[0].date).toLocaleDateString(lang, { year: "numeric", month: "long", day: "numeric" })}
             </time>
@@ -38,10 +40,10 @@ const sortedItems = [...nowItems].sort((a, b) => new Date(b.date).getTime() - ne
         </p>
       </div>
 
-      <div class="grid gap-6" id="now-items-container">
+      <CardList id="now-items-container">
         {sortedItems.map((item) => (
-          <article
-            class="border rounded-lg p-6 bg-card hover:shadow-md transition-shadow"
+          <Card
+            as="article"
             data-category={item.category}
             data-now-content={JSON.stringify(item.content)}
             data-now-content-secondary={item.contentSecondary && JSON.stringify(item.contentSecondary)}
@@ -69,9 +71,9 @@ const sortedItems = [...nowItems].sort((a, b) => new Date(b.date).getTime() - ne
                 </time>
               </div>
             </div>
-          </article>
+          </Card>
         ))}
-      </div>
+      </CardList>
     </div>
   </div>
 </BaseLayout>

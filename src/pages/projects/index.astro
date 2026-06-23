@@ -2,7 +2,8 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
 import { getData } from "@/content.config";
-
+import Card from "@/components/Card.astro";
+import CardList from "@/components/CardList.astro";
 import { projectIcons, projectStatusConfig } from "@/lib/constants";
 
 const lang = Astro.locals?.lang || "en";
@@ -26,7 +27,7 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
     <div class="max-w-4xl mx-auto">
       <header class="mb-10 text-center">
         <T key="projects.title" tag="h1" class="text-4xl md:text-5xl font-bold mb-4" />
-        <T key="projects.description" tag="p" class="text-muted-foreground text-lg max-w-xl mx-auto" />
+        <T key="projects.description" tag="p" class="text-muted-foreground text-lg mx-auto" />
       </header>
 
       <div class="flex flex-wrap justify-center gap-2 mb-8" aria-label="Project filters">
@@ -47,7 +48,7 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
           <T key={`projects.status.${key.replace("-", "")}`} />
         </h2>
 
-        <div class="grid gap-4 md:grid-cols-2">
+        <CardList cols={2}>
           {items.map((p) => {
             const title = t(p, 'title');
             return (
@@ -61,7 +62,7 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
               >
                 <div class="card-inner relative w-full h-[310px] transition-transform duration-700 transform-style-preserve-3d">
                   {/* Front */}
-                  <div class="card-front absolute inset-0 backface-hidden rounded-2xl border-2 bg-card/90 backdrop-blur-md p-7 flex flex-col shadow-md transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-2xl group-hover:-translate-y-1">
+                  <Card as="div" hover={false} padding="lg" class="card-front absolute inset-0 backface-hidden !bg-card/90 backdrop-blur-md flex flex-col shadow-md transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-2xl group-hover:-translate-y-1">
                     <div class="flex items-start justify-between mb-5">
                       <span class="text-4xl filter drop-shadow-md" aria-hidden="true">{projectIcons[p.category]}</span>
                       <div class="flex gap-1.5 flex-wrap justify-end max-w-[65%]">
@@ -88,10 +89,10 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
                       </div>
                       <span aria-hidden="true" class="transform group-hover:translate-x-1 transition-transform">→</span>
                     </div>
-                  </div>
+                  </Card>
 
                   {/* Back */}
-                  <div class="card-back absolute inset-0 backface-hidden rounded-2xl border-2 bg-card p-7 flex flex-col rotate-y-180 shadow-xl overflow-y-auto overflow-x-hidden custom-scrollbar">
+                  <Card as="div" hover={false} padding="lg" class="card-back absolute inset-0 backface-hidden flex flex-col rotate-y-180 shadow-xl overflow-y-auto overflow-x-hidden custom-scrollbar">
                     <div class="space-y-5 flex-1">
                       <div>
                         <T key="projects.what" tag="h4" class="text-xs font-bold text-primary/80 mb-2" />
@@ -123,12 +124,12 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
                         <kbd class="border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5">Esc</kbd>
                       </span>
                     </div>
-                  </div>
+                  </Card>
                 </div>
               </article>
             );
           })}
-        </div>
+        </CardList>
       </section>
     ))}
     </div>

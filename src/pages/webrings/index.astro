@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
+import Card from "@/components/Card.astro";
+import CardList from "@/components/CardList.astro";
 import { getData } from "@/content.config";
 
 const allWebrings = await getData("webrings");
@@ -15,7 +17,7 @@ const navBtnClass = "px-4 py-2 rounded border hover:bg-primary/10 hover:border-p
   <div class="container mx-auto px-4 py-8 lg:py-12 max-w-4xl">
     <header class="mb-10 text-center">
       <T key="webrings.title" tag="h1" class="text-4xl font-bold mb-4" />
-      <T key="webrings.description" tag="p" class="text-muted-foreground text-lg max-w-xl mx-auto" />
+      <T key="webrings.description" tag="p" class="text-muted-foreground text-lg mx-auto" />
     </header>
 
     <div class="mb-10 p-6 bg-muted/30 rounded-lg text-justify">
@@ -23,9 +25,9 @@ const navBtnClass = "px-4 py-2 rounded border hover:bg-primary/10 hover:border-p
       <T key="webrings.intro2" tag="p" class="text-sm text-muted-foreground" />
     </div>
 
-    <div class="space-y-4 mb-12">
+    <CardList class="mb-12">
       {activeWebringItems.map((ring) => (
-        <article class="border rounded-lg p-5 bg-card hover:shadow-md transition-shadow">
+        <Card padding="base">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div class="flex-1">
               <a href={ring.url} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold text-lg">{ring.name}</a>
@@ -37,9 +39,9 @@ const navBtnClass = "px-4 py-2 rounded border hover:bg-primary/10 hover:border-p
               <a href={ring.next} class={navBtnClass} title="Next site" aria-label={`Next site in ${ring.name}`}>→</a>
             </nav>
           </div>
-        </article>
+        </Card>
       ))}
-    </div>
+    </CardList>
 
     {pendingWebringItems.length > 0 && (
       <div class="mt-12">
@@ -47,9 +49,9 @@ const navBtnClass = "px-4 py-2 rounded border hover:bg-primary/10 hover:border-p
           <T key="webrings.pending.title" tag="h2" class="text-2xl font-bold mb-2" />
           <T key="webrings.pending.description" tag="p" class="text-muted-foreground text-sm" />
         </header>
-        <div class="space-y-4">
+        <CardList>
           {pendingWebringItems.map((ring) => (
-            <article class="border rounded-lg p-5 bg-card/75">
+            <Card padding="base" class="bg-card/75" hover={false}>
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="flex-1">
                   <a href={ring.url} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold text-lg">{ring.name}</a>
@@ -62,9 +64,9 @@ const navBtnClass = "px-4 py-2 rounded border hover:bg-primary/10 hover:border-p
                   <a href={ring.next} class={navBtnClass} title="Next site" aria-label={`Next site in ${ring.name}`}>→</a>
                 </nav>
               </div>
-            </article>
+            </Card>
           ))}
-        </div>
+        </CardList>
       </div>
     )}
   </div>

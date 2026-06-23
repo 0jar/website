@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
+import Card from "@/components/Card.astro";
+import CardList from "@/components/CardList.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { supportedLanguages } from "@/lib/constants";
 import { t as serverT } from "@/i18n";
@@ -293,10 +295,11 @@ const catApprovedOptions = [
       </div>
 
       <!-- Blog posts list -->
-      <div class="space-y-6" id="blog-posts">
+      <CardList id="blog-posts">
         {posts.map((post: CollectionEntry<"blog">) => (
-          <article
-            class="border rounded-lg overflow-hidden bg-card transition-all duration-300 hover:shadow-md hover:border-primary/50 group blog-post"
+          <Card
+            padding="none"
+            class="group blog-post"
             data-title={post.data.title.toLowerCase()}
             data-tags={getPostTags(post).map((tag: string) => resolveTag(tag).key).join(',')}
             data-categories={getPostCategories(post).map((category: string) => resolveCategory(category).key).join(',')}
@@ -388,9 +391,9 @@ const catApprovedOptions = [
                 </p>
               )}
             </a>
-          </article>
+          </Card>
         ))}
-      </div>
+      </CardList>
 
       {posts.length === 0 && (
         <div class="text-center py-12">

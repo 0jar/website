@@ -1,0 +1,22 @@
+---
+import type { HTMLTag, Polymorphic } from 'astro/types';
+
+type Props<Tag extends HTMLTag = 'article'> = Polymorphic<{ as: Tag }> & {
+  hover?: boolean;
+  padding?: 'none' | 'sm' | 'base' | 'md' | 'lg';
+};
+
+const { as: Tag = 'article', class: className, hover = true, padding = 'md', ...props } = Astro.props;
+---
+
+<Tag
+  class:list={[
+    "border rounded-lg bg-card text-card-foreground shadow-sm overflow-hidden",
+    hover && "hover:shadow-md hover:border-primary/50 transition-all duration-300",
+    { none: "", sm: "p-4", base: "p-5", md: "p-6", lg: "p-7" }[padding],
+    className
+  ]}
+  {...props}
+>
+  <slot />
+</Tag>

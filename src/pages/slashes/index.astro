@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
+import Card from "@/components/Card.astro";
+import CardList from "@/components/CardList.astro";
 import { routes } from "@/lib/constants";
 import { localePath } from "@/i18n/routing";
 
@@ -23,8 +25,7 @@ const slashPages = [
 ---
 
 <BaseLayout title="Slashes" description="Common slash pages on this site.">
-  <div class="container mx-auto px-4 py-8 lg:py-12">
-    <div class="max-w-4xl mx-auto">
+  <div class="container max-w-4xl mx-auto px-4 py-8 lg:py-12">
       <header class="mb-8 text-center">
         <T key="slashes.title" tag="h1" class="text-4xl font-bold mb-4" />
         <p class="text-muted-foreground">
@@ -32,17 +33,16 @@ const slashPages = [
         </p>
       </header>
 
-      <div class="space-y-3">
+      <CardList>
         {slashPages.map(({ path, name, desc }) => (
-          <a href={localePath(lang, path)} class="flex items-start justify-between p-4 border rounded-lg bg-card hover:border-primary/50 transition-colors group">
+          <Card as="a" padding="sm" href={localePath(lang, path)} class="flex items-start justify-between group">
             <div class="flex-1">
               <T key={name} tag="span" class="font-medium group-hover:text-primary transition-colors" />
               <T key={desc} tag="p" class="text-sm text-muted-foreground" />
             </div>
             <span class="text-muted-foreground font-monaspice text-sm self-start text-right ml-4">{path}</span>
-          </a>
+          </Card>
         ))}
-      </div>
-    </div>
+      </CardList>
   </div>
 </BaseLayout>

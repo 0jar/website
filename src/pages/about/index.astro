@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import { author, authorTimezone, authorTimezoneLabel, siteUrl } from '@/lib/constants';
 import { t } from "@/i18n";
 import { getCollection, type CollectionEntry } from "astro:content";
+import Card from "@/components/Card.astro";
 
 const lang = Astro.locals?.lang || "en";
 const title = t(lang, "about.title");
@@ -42,12 +43,12 @@ const commits = aboutCommitsData
   <div id="top" class="container mx-auto px-4 py-8 max-w-6xl">
     <header class="text-center mb-12">
       <T key="about.title" tag="h1" class="text-4xl font-bold mb-4" />
-      <T key="about.description" tag="p" class="text-muted-foreground text-lg max-w-2xl mx-auto" />
+      <T key="about.description" tag="p" class="text-muted-foreground text-lg mx-auto" />
     </header>
 
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-4">
       <!-- Profile card -->
-      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm md:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center justify-center gap-6">
+      <Card class="md:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center justify-center gap-6" hover={false}>
         <Image src={author.image} alt={author.name} width={120} height={120} class="u-photo rounded-full" />
         <div class="text-center sm:text-left">
           <h2 class="p-name text-2xl font-bold">{author.name}</h2>
@@ -58,10 +59,10 @@ const commits = aboutCommitsData
           </div>
           <span class="p-category hidden">{author.category}</span>
         </div>
-      </article>
+      </Card>
 
       <!-- Stats box -->
-      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center text-center md:col-span-1 lg:col-span-1">
+      <Card class="flex flex-col justify-center items-center text-center md:col-span-1 lg:col-span-1" hover={false}>
         <div class="grid grid-cols-2 gap-4 w-full">
           {aboutData.stats.map(stat => (
             <div>
@@ -70,10 +71,10 @@ const commits = aboutCommitsData
             </div>
           ))}
         </div>
-      </article>
+      </Card>
 
       <!-- Time widget -->
-      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center items-center md:col-span-1 lg:col-span-1" aria-labelledby="timezone-heading">
+      <Card class="flex flex-col justify-center items-center md:col-span-1 lg:col-span-1" aria-labelledby="timezone-heading" hover={false}>
         <T key="home.time" tag="h2" id="timezone-heading" class="text-lg font-bold mb-3 text-center" />
         <div class="flex flex-col gap-2 w-full">
           <div class="text-center">
@@ -81,20 +82,20 @@ const commits = aboutCommitsData
             <p class="text-xs text-muted-foreground mt-1"><T key="home.myTime" /> ({authorTimezoneLabel})</p>
           </div>
         </div>
-      </article>
+      </Card>
 
       <!-- Interests box -->
-      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center md:col-span-2 lg:col-span-1">
+      <Card class="flex flex-col justify-center md:col-span-2 lg:col-span-1" hover={false}>
         <h3 class="text-lg font-semibold mb-4">{t(lang, "about.interests.title")}</h3>
         <div class="flex flex-wrap gap-2">
           {interests.map((interest: any) => (
              <span class="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-md border border-border">{interest.content[lang as keyof typeof interest.content] || interest.content.en}</span>
           ))}
         </div>
-      </article>
+      </Card>
 
       <!-- Terminal card -->
-      <article class="bg-[#0c0c0c] border border-border rounded-lg p-6 shadow-sm font-monaspice md:col-span-2 lg:col-span-2 md:row-span-2 overflow-x-auto text-sm">
+      <Card class="!bg-[#0c0c0c] font-monaspice md:col-span-2 lg:col-span-2 md:row-span-2 overflow-x-auto text-sm" hover={false}>
         <div class="flex items-center gap-2 mb-4 text-muted-foreground opacity-50">
           <div class="w-3 h-3 rounded-full bg-red-500"></div>
           <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -132,10 +133,10 @@ o   o
         </div>
         <p class="mt-2"><span class="text-primary">{author.repoOwner}@{new URL(siteUrl).hostname.split('.')[0]}:~/gits/{author.repoName}</span>$
         <span class="animate-blink">_</span></p>
-      </article>
+      </Card>
 
       <!-- Map box -->
-      <article class="bg-card text-card-foreground border rounded-lg overflow-hidden shadow-sm md:col-span-1 lg:col-span-1 md:row-span-2 relative">
+      <Card class="md:col-span-1 lg:col-span-1 md:row-span-2 relative" hover={false}>
         <iframe
           width="100%"
           height="100%"
@@ -143,10 +144,10 @@ o   o
           title={`Map showing ${author.name}'s location`}
           class="absolute inset-0 border-0"
         ></iframe>
-      </article>
+      </Card>
 
       <!-- Languages box -->
-      <article class="bg-card text-card-foreground border rounded-lg p-6 shadow-sm flex flex-col justify-center md:col-span-3 lg:col-span-1">
+      <Card class="flex flex-col justify-center md:col-span-3 lg:col-span-1" hover={false}>
         <h3 class="text-lg font-semibold mb-4">{t(lang, "about.interests.languagesTitle")}</h3>
         <div class="flex flex-col gap-2 text-sm">
           {languageList.map(({ langKey, level }) => (
@@ -156,7 +157,7 @@ o   o
             </div>
           ))}
         </div>
-      </article>
+      </Card>
     </div>
 
     <!-- Git history -->

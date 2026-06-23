@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/T.astro";
+import Card from "@/components/Card.astro";
+import CardList from "@/components/CardList.astro";
 import { t } from "@/i18n";
 
 const lang = Astro.locals?.lang || "en";
@@ -18,21 +20,21 @@ const tools = Object.keys(toolPages)
     <div class="max-w-4xl mx-auto">
       <header class="mb-10 text-center">
         <T key="tools.title" tag="h1" class="text-4xl font-bold mb-4" />
-        <T key="tools.description" tag="p" class="text-muted-foreground text-lg max-w-xl mx-auto" />
+        <T key="tools.description" tag="p" class="text-muted-foreground text-lg mx-auto" />
       </header>
 
-      <div class="grid gap-6 md:grid-cols-2">
+      <CardList cols={2}>
         {tools.map((slug) => (
-          <a
+          <Card as="a"
             href={`/tools/${slug}/`}
-            class="group rounded-xl border bg-card p-6 flex flex-col transition-colors hover:border-foreground/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            class="group flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <T key={`tools.items.${slug}.icon`} tag="span" class="text-3xl mb-3" aria-hidden="true" />
             <T key={`tools.items.${slug}.title`} tag="h2" class="text-xl font-bold mb-2 group-hover:underline" />
             <T key={`tools.items.${slug}.description`} tag="p" class="text-muted-foreground text-sm flex-1" />
-          </a>
+          </Card>
         ))}
-      </div>
+      </CardList>
     </div>
   </div>
 </BaseLayout>
