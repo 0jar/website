@@ -186,7 +186,7 @@ The site supports dark and light modes:
 
 ### Internationalization (i18n)
 
-**12 languages** supported: English, Tiếng Việt, Русский, Eesti, Dansk, 中文, Türkçe, Polski, Svenska, Suomi, toki pona, 漢喃
+**9 languages** supported: English, Tiếng Việt, Русский, Eesti, Dansk, 中文, Polski, toki pona, 漢喃
 
 - Translations in [`src/i18n/translations/*.json`](./src/i18n/translations)
 - Use the [`T.astro`](./src/components/T.astro) component for static translations

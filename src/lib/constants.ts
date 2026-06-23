@@ -107,10 +107,7 @@ export const supportedLanguages = [
   { code: "ru", name: "Русский", flag: "🇷🇺", main: true, aliases: ["Russian", "Russkii", "Russkiy"] },
   { code: "da", name: "Dansk", flag: "🇩🇰", main: true, aliases: ["Danish"] },
   { code: "zh", name: "中文", flag: "🇨🇳", main: true, aliases: ["Chinese", "Zhongwen", "Hanyu"] },
-  { code: "tr", name: "Türkçe", flag: "🇹🇷", beta: true, aliases: ["Turkish", "Turkce"] },
-  { code: "pl", name: "Polski", flag: "🇵🇱", beta: true, aliases: ["Polish"] },
-  { code: "sv", name: "Svenska", flag: "🇸🇪", beta: true, aliases: ["Swedish"] },
-  { code: "fi", name: "Suomi", flag: "🇫🇮", beta: true, aliases: ["Finnish"] },
+  { code: "pl", name: "Polski", flag: "🇵🇱", other: true, aliases: ["Polish"] },
   { code: "tok", name: "toki pona", flag: "😇", other: true, aliases: ["language of the good"] },
   { code: "vi-Hani", name: "㗂越（漢喃）", flag: "🇻🇳", other: true, aliases: ["Vietnamese", "Han Nom", "Hannom"] },
 ] as const;
@@ -121,13 +118,12 @@ export type SupportedLanguage = (typeof supportedLanguages)[number]["code"];
 export const hrefLangLanguages = supportedLanguages.filter((l) => l.code !== "tok" && l.code !== "vi-Hani");
 
 // Completed translations
-export const completedLanguages = ["en", "vi", "et", "ru", "da"] as const;
+export const completedLanguages = ["en", "vi", "et", "ru", "da", "zh"] as const;
 
 // Map site language codes to Open Graph locale values
 export const ogLocaleMap: Record<string, string> = {
   en: "en_US", vi: "vi_VN", "vi-Hani": "vi_VN", zh: "zh_CN", ru: "ru_RU",
-  da: "da_DK", et: "et_EE", tr: "tr_TR", pl: "pl_PL", sv: "sv_SE",
-  fi: "fi_FI", tok: "en_US",
+  da: "da_DK", et: "et_EE", pl: "pl_PL", tok: "en_US",
 };
 
 // Theme constants

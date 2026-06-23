@@ -36,13 +36,6 @@
       "learned": "Skabelse af tilgængeligt uddannelsesindhold og interaktive datavisualiseringer",
       "why": "At gøre økonomiske begreber mere tilgængelige og støtte græsrodsbevægelser for økonomisk retfærdighed"
     },
-    "tr": {
-      "title": "Ekonomik adalet araç seti",
-      "description": "Ekonomik eşitliği anlamak ve savunmak için kaynaklar",
-      "what": "Ekonomik kavramları ve savunuculuk stratejilerini açıklayan interaktif araçlar içeren bir eğitim kaynağı merkezi",
-      "learned": "Erişilebilir eğitim içeriği ve interaktif veri görselleştirmeleri oluşturma",
-      "why": "Ekonomik kavramları daha erişilebilir hale getirmek ve tabandan ekonomik adalet hareketlerini desteklemek"
-    },
     "zh": {
       "title": "经济正义工具包",
       "description": "理解和倡导经济平等的资源",
@@ -56,20 +49,6 @@
       "what": "Centrum zasobów edukacyjnych z interaktywnymi narzędziami wyjaśniającymi koncepcje ekonomiczne i strategie rzecznictwa",
       "learned": "Tworzenie dostępnych treści edukacyjnych i interaktywnych wizualizacji danych",
       "why": "Aby uczynić koncepcje ekonomiczne bardziej dostępnymi i wspierać oddolne ruchy na rzecz sprawiedliwości ekonomicznej"
-    },
-    "fi": {
-      "title": "Taloudellisen oikeudenmukaisuuden työkalupakki",
-      "description": "Resursseja taloudellisen tasa-arvon ymmärtämiseen ja puolustamiseen",
-      "what": "Koulutusresurssikeskus, jossa on interaktiivisia työkaluja taloudellisten käsitteiden ja puolustusstrategioiden selittämiseen",
-      "learned": "Helposti lähestyttävän koulutussisällön ja interaktiivisten tietojen visualisointien luominen",
-      "why": "Tehdä taloudellisista käsitteistä helpommin lähestyttäviä ja tukea ruohonjuuritason taloudellisen oikeudenmukaisuuden liikkeitä"
-    },
-    "sv": {
-      "title": "Verktygslåda för ekonomisk rättvisa",
-      "description": "Resurser för att förstå och förespråka ekonomisk jämlikhet",
-      "what": "Ett utbildningsresursnav med interaktiva verktyg som förklarar ekonomiska begrepp och påverkansstrategier",
-      "learned": "Skapa tillgängligt utbildningsinnehåll och interaktiva datavisualiseringar",
-      "why": "För att göra ekonomiska begrepp mer tillgängliga och stödja gräsrotsrörelser för ekonomisk rättvisa"
     },
     "tok": {
       "title": "Economic justice toolkit",

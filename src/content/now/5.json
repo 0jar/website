@@ -8,11 +8,8 @@
     "ru": "Оптимизация сайта: снижаем зависимость от React и возвращаемся на Astro",
     "et": "Veebisaidi täiustamine, et vähendada sõltuvust Reactist ja kolida tagasi Astrosse",
     "da": "Forbedrer denne hjemmeside for at mindske afhængigheden af React og vender tilbage til Astro",
-    "tr": "React bağımlılığını azaltmak ve Astro'ya dönmek için site iyileştirmesi",
     "zh": "改进此网站以减少对 React 的依赖并回归 Astro",
     "pl": "Optymalizacja strony, zmniejszenie zależności od Reacta i powrót do Astro",
-    "sv": "Förbättrar webbplatsen för att minska beroendet av React och återgå till Astro",
-    "fi": "Sivuston parantaminen vähentämällä React-riippuvuutta ja palaamalla Astroon",
     "tok": "mi pona e lipu ni. mi wile kepeken lili e ilo React. mi wile kepeken sin e ilo Astro",
     "vi-Hani": "最優化張䇼尼抵𠃣附屬𠓨 React 欣吧𢮿吏使用 Astro"
   },

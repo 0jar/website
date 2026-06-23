@@ -36,13 +36,6 @@
       "learned": "WebSocket-implementering, oversættelses-API'er og tilstandsstyring i komplekse applikationer",
       "why": "At nedbryde sprogbarrierer i online kommunikation"
     },
-    "tr": {
-      "title": "Çok dilli sohbet uygulaması",
-      "description": "Kültürlerarası konuşmalar için gerçek zamanlı çeviri",
-      "what": "Farklı diller konuşan kullanıcılar arasında mesajları gerçek zamanlı olarak çeviren bir sohbet uygulaması",
-      "learned": "WebSocket uygulaması, çeviri API'leri ve karmaşık uygulamalarda durum yönetimi",
-      "why": "Çevrimiçi iletişimde dil engellerini ortadan kaldırmak"
-    },
     "zh": {
       "title": "多语言聊天应用",
       "description": "跨文化对话的实时翻译",
@@ -56,20 +49,6 @@
       "what": "Aplikacja czatu, która tłumaczy wiadomości w czasie rzeczywistym między użytkownikami mówiącymi różnymi językami",
       "learned": "Implementacja WebSocket, interfejsy API tłumaczeń i zarządzanie stanem w złożonych aplikacjach",
       "why": "Aby przełamać bariery językowe w komunikacji online"
-    },
-    "fi": {
-      "title": "Monikielinen chat-sovellus",
-      "description": "Reaaliaikainen käännös kulttuurienvälisiin keskusteluihin",
-      "what": "Chat-sovellus, joka kääntää viestejä reaaliajassa eri kieliä puhuvien käyttäjien välillä",
-      "learned": "WebSocketin toteutus, käännös-API:t ja tilanhallinta monimutkaisissa sovelluksissa",
-      "why": "Rikkoutua kielimuurit verkkoviestinnässä"
-    },
-    "sv": {
-      "title": "Flerspråkig chattapp",
-      "description": "Översättning i realtid för tvärkulturella konversationer",
-      "what": "En chattapplikation som översätter meddelanden i realtid mellan användare som talar olika språk",
-      "learned": "WebSocket-implementering, översättnings-API:er och tillståndshantering i komplexa applikationer",
-      "why": "Att bryta ner språkbarriärer i onlinekommunikation"
     },
     "tok": {
       "title": "Multilingual chat app",

@@ -5,18 +5,15 @@ import vi from "./translations/vi.json";
 import ru from "./translations/ru.json";
 import et from "./translations/et.json";
 import da from "./translations/da.json";
-import tr from "./translations/tr.json";
 import zh from "./translations/zh.json";
 import pl from "./translations/pl.json";
-import sv from "./translations/sv.json";
-import fi from "./translations/fi.json";
 import tok from "./translations/tok.json";
 import viHani from "./translations/vi-Hani.json";
 
 export { supportedLanguages, type SupportedLanguage } from "@/lib/constants";
 
 export const translations: Record<string, Record<string, unknown>> = {
-  en, vi, ru, et, da, tr, zh, pl, sv, fi, tok, "vi-Hani": viHani,
+  en, vi, ru, et, da, zh, pl, tok, "vi-Hani": viHani,
 };
 
 export function getNestedValue(obj: Record<string, unknown>, path: string): string | undefined {

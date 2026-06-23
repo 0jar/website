@@ -36,13 +36,6 @@
       "learned": "Avanceret canvas-manipulation, matematisk modellering og interaktive visualiseringsteknikker",
       "why": "At gøre komplekse matematiske begreber mere intuitive og tilgængelige"
     },
-    "tr": {
-      "title": "Kaos teorisi görselleştirmesi",
-      "description": "Kaos teorisi ilkelerinin interaktif keşfi",
-      "what": "Kelebek etkisi gibi kaos teorisi kavramlarını görselleştiren interaktif bir web uygulaması",
-      "learned": "Gelişmiş canvas manipülasyonu, matematiksel modelleme ve interaktif görselleştirme teknikleri",
-      "why": "Karmaşık matematiksel kavramları daha sezgisel ve erişilebilir hale getirmek"
-    },
     "zh": {
       "title": "混沌理论可视化",
       "description": "混沌理论原理的互动探索",
@@ -56,20 +49,6 @@
       "what": "Interaktywna aplikacja internetowa wizualizująca koncepcje teorii chaosu, takie jak efekt motyla",
       "learned": "Zaawansowana manipulacja płótnem, modelowanie matematyczne i techniki interaktywnej wizualizacji",
       "why": "Aby uczynić skomplikowane koncepcje matematyczne bardziej intuicyjnymi i dostępnymi"
-    },
-    "fi": {
-      "title": "Kaaosteorian visualisointi",
-      "description": "Kaaosteorian periaatteiden interaktiivinen tutkiminen",
-      "what": "Interaktiivinen verkkosovellus, joka visualisoi kaaosteorian käsitteitä, kuten perhosen vaikutusta",
-      "learned": "Edistynyt canvas-manipulointi, matemaattinen mallinnus ja interaktiivisen visualisoinnin tekniikat",
-      "why": "Tehdä monimutkaisista matemaattisista käsitteistä intuitiivisempia ja helpommin lähestyttäviä"
-    },
-    "sv": {
-      "title": "Visualisering av kaosteori",
-      "description": "Interaktiv utforskning av kaosteoriprinciper",
-      "what": "En interaktiv webbapplikation som visualiserar kaosteorikoncept som fjärilseffekten",
-      "learned": "Avancerad canvas-manipulation, matematisk modellering och interaktiva visualiseringstekniker",
-      "why": "För att göra komplexa matematiska koncept mer intuitiva och tillgängliga"
     },
     "tok": {
       "title": "Chaos theory visualization",

@@ -36,13 +36,6 @@
       "learned": "Geolokations-API'er, fællesskabsopbyggende funktioner og brugerengagementsstrategier",
       "why": "At give lokale samfund mulighed for at tage meningsfuld klimahandling"
     },
-    "tr": {
-      "title": "İklim eylemi platformu",
-      "description": "Aktivistleri yerel çevre girişimleriyle buluşturma",
-      "what": "Yerel çevre projelerini haritalayan ve gönüllüleri girişimlerle buluşturan bir platform",
-      "learned": "Coğrafi konum API'leri, topluluk oluşturma özellikleri ve kullanıcı katılım stratejileri",
-      "why": "Yerel toplulukları anlamlı iklim eylemi gerçekleştirmeleri için güçlendirmek"
-    },
     "zh": {
       "title": "气候行动平台",
       "description": "将活动家与当地的环境倡议联系起来",
@@ -56,20 +49,6 @@
       "what": "Platforma mapująca lokalne projekty środowiskowe i łącząca wolontariuszy z inicjatywami",
       "learned": "Interfejsy API geolokalizacji, funkcje budowania społeczności i strategie angażowania użytkowników",
       "why": "Aby umożliwić lokalnym społecznościom podejmowanie znaczących działań na rzecz klimatu"
-    },
-    "fi": {
-      "title": "Ilmastotoiminta-alusta",
-      "description": "Yhdistää aktivistit paikallisiin ympäristöaloitteisiin",
-      "what": "Alusta, joka kartoittaa paikallisia ympäristöprojekteja ja yhdistää vapaaehtoiset aloitteisiin",
-      "learned": "Geopaikannus-API:t, yhteisön rakentamisen ominaisuudet ja käyttäjien sitouttamisstrategiat",
-      "why": "Vahvistaa paikallisyhteisöjä ottamaan merkityksellisiä ilmastotoimia"
-    },
-    "sv": {
-      "title": "Klimataktionsplattform",
-      "description": "Kopplar samman aktivister med lokala miljöinitiativ",
-      "what": "En plattform som kartlägger lokala miljöprojekt och kopplar volontärer till initiativ",
-      "learned": "Geolokaliserings-API:er, funktioner för att bygga gemenskaper och strategier för användarengagemang",
-      "why": "För att stärka lokala samhällen att vidta meningsfulla klimatåtgärder"
     },
     "tok": {
       "title": "Climate action platform",

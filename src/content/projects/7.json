@@ -36,13 +36,6 @@
       "learned": "Banebrydende AI-teknikker og ukonventionelle problemløsningstilgange",
       "why": "Fordi katte er den ultimative inspiration for kaos og kreativitet"
     },
-    "tr": {
-      "title": "Gizli kedi projesi",
-      "description": "Kedilerle ilgili gizemli bir şey...",
-      "what": "Kedi ilhamlı algoritmaları keşfeden son derece deneysel bir proje",
-      "learned": "En son AI teknikleri ve alışılmadık problem çözme yaklaşımları",
-      "why": "Çünkü kediler kaos ve yaratıcılık için nihai ilham kaynağıdır"
-    },
     "zh": {
       "title": "秘密猫项目",
       "description": "涉及猫的神秘事物...",
@@ -56,20 +49,6 @@
       "what": "Wysoce eksperymentalny projekt eksplorujący algorytmy inspirowane kotami",
       "learned": "Nowatorskie techniki AI i niekonwencjonalne podejścia do rozwiązywania problemów",
       "why": "Ponieważ koty są ostateczną inspiracją dla chaosu i kreatywności"
-    },
-    "fi": {
-      "title": "Salainen kissaprojekti",
-      "description": "Jotain salaperäistä, joka liittyy kissoihin...",
-      "what": "Erittäin kokeellinen projekti, joka tutkii kissoista inspiroituja algoritmeja",
-      "learned": "Huipputason tekoälytekniikat ja epätavalliset ongelmanratkaisumenetelmät",
-      "why": "Koska kissat ovat kaaoksen ja luovuuden lopullinen inspiraatio"
-    },
-    "sv": {
-      "title": "Hemligt kattprojekt",
-      "description": "Något mystiskt som involverar katter...",
-      "what": "Ett mycket experimentellt projekt som utforskar kattinspirerade algoritmer",
-      "learned": "Banbrytande AI-tekniker och okonventionella problemlösningsmetoder",
-      "why": "För att katter är den ultimata inspirationen för kaos och kreativitet"
     },
     "tok": {
       "title": "Secret cat project",

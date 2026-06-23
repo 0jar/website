@@ -36,13 +36,6 @@
       "learned": "Avanceret statistisk modellering og komparativ økonomisk analyse",
       "why": "At forstå systemiske faktorer, der driver ulighed, og foreslå politiske løsninger"
     },
-    "tr": {
-      "title": "Ekonomi araştırma makalesi",
-      "description": "Post-endüstriyel ekonomilerde servet eşitsizliği eğilimlerinin analizi",
-      "what": "Gelişmiş ülkelerde servet dağılımı modellerini inceleyen kapsamlı bir araştırma makalesi",
-      "learned": "Gelişmiş istatistiksel modelleme ve karşılaştırmalı ekonomik analiz",
-      "why": "Eşitsizliği tetikleyen sistemik faktörleri anlamak ve politika çözümleri önermek"
-    },
     "zh": {
       "title": "经济学研究论文",
       "description": "后工业经济体财富不平等趋势分析",
@@ -56,20 +49,6 @@
       "what": "Kompleksowy artykuł badawczy analizujący wzorce dystrybucji majątku w krajach rozwiniętych",
       "learned": "Zaawansowane modelowanie statystyczne i porównawcza analiza ekonomiczna",
       "why": "Aby zrozumieć systemowe czynniki napędzające nierówności i zaproponować rozwiązania polityczne"
-    },
-    "fi": {
-      "title": "Taloustieteen tutkimuspaperi",
-      "description": "Varallisuuserojen trendien analyysi jälkiteollisissa talouksissa",
-      "what": "Kattava tutkimuspaperi, joka tarkastelee varallisuuden jakautumismalleja kehittyneissä maissa",
-      "learned": "Edistynyt tilastollinen mallinnus ja vertaileva taloudellinen analyysi",
-      "why": "Ymmärtää järjestelmällisiä tekijöitä, jotka ajavat eriarvoisuutta, ja ehdottaa poliittisia ratkaisuja"
-    },
-    "sv": {
-      "title": "Ekonomisk forskningsartikel",
-      "description": "Analys av trender i förmögenhetsolikhet i postindustriella ekonomier",
-      "what": "En omfattande forskningsartikel som undersöker mönster för förmögenhetsfördelning i utvecklade nationer",
-      "learned": "Avancerad statistisk modellering och jämförande ekonomisk analys",
-      "why": "För att förstå systemiska faktorer som driver ojämlikhet och föreslå politiska lösningar"
     },
     "tok": {
       "title": "Economics research paper",

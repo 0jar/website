@@ -36,13 +36,6 @@
       "learned": "Principper for spildesign, uddannelsespsykologi og sprogindlæringsteori",
       "why": "At gøre sprogindlæring mere engagerende og effektiv"
     },
-    "tr": {
-      "title": "Dil öğrenme oyunu",
-      "description": "Birden fazla dilde kelime öğrenmeye yönelik oyunlaştırılmış yaklaşım",
-      "what": "Aralıklı tekrar ve bağlamsal öğrenme yoluyla kelime öğreten bir oyun",
-      "learned": "Oyun tasarım ilkeleri, eğitim psikolojisi ve dil edinim teorisi",
-      "why": "Dil öğrenmeyi daha ilgi çekici ve etkili hale getirmek"
-    },
     "zh": {
       "title": "语言学习游戏",
       "description": "通过游戏化方法学习多种语言的词汇",
@@ -56,20 +49,6 @@
       "what": "Gra, która uczy słownictwa poprzez powtarzanie z odstępami i naukę kontekstową",
       "learned": "Zasady projektowania gier, psychologia edukacyjna i teoria nabywania języków",
       "why": "Aby uczynić naukę języków bardziej angażującą i skuteczną"
-    },
-    "fi": {
-      "title": "Kielenoppimispeli",
-      "description": "Pelaamiseen perustuva lähestymistapa sanaston oppimiseen useilla kielillä",
-      "what": "Peli, joka opettaa sanastoa hajautetun toiston ja kontekstuaalisen oppimisen kautta",
-      "learned": "Pelisuunnittelun periaatteet, kasvatustiede ja kielen omaksumisen teoria",
-      "why": "Tehdä kielenoppimisesta kiinnostavampaa ja tehokkaampaa"
-    },
-    "sv": {
-      "title": "Språkinlärningsspel",
-      "description": "Spelifierat tillvägagångssätt för att lära sig ordförråd på flera språk",
-      "what": "Ett spel som lär ut ordförråd genom spridd repetition och kontextuellt lärande",
-      "learned": "Speldesignprinciper, utbildningspsykologi och språkförvärvsteori",
-      "why": "För att göra språkinlärning mer engagerande och effektiv"
     },
     "tok": {
       "title": "Language learning game",
