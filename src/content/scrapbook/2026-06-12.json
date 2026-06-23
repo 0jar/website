@@ -1,5 +1,5 @@
 {
-  "hash": "7e49d6da0d05d9145cb10fc034e9a991815bceff",
+  "hash": "7eb9a85e111eed604f79bf03b34701c0a54f703d",
   "date": "2026-06-12",
   "content": {
     "en": "updated badges and moved hardcoded data to constants",

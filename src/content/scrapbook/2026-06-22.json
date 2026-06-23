@@ -1,5 +1,5 @@
 {
-  "hash": "08863a4b8b222ff4adb94a0d6c01d96b82fc50ca",
+  "hash": "3d547a2886237a3882254b86e6f7fedf59cb9547",
   "date": "2026-06-22",
   "content": {
     "en": "updated to astro 7 and removed server adapters",
