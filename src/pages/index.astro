@@ -28,7 +28,7 @@ const resolvedSiteName = getSiteName(lang);
       <div class="max-w-5xl mx-auto">
         <!-- Android Lockdown Countdown Banner -->
         {showAndroidCountdown && (
-          <aside id="android-countdown" class="mb-6 border-2 border-red-600 bg-red-50 dark:bg-red-950 rounded-lg p-4 relative" role="banner" aria-label="Android lockdown warning" data-days={daysLeft}>
+          <aside id="android-countdown" class="mb-6 border-2 border-red-600 bg-red-50 dark:bg-red-950 rounded-lg p-4 relative" role="region" aria-label="Android lockdown warning" data-days={daysLeft}>
             <button
               id="close-countdown"
               class="absolute top-2 right-2 text-red-900 dark:text-red-100 hover:text-red-700 dark:hover:text-red-300 transition-colors p-1 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
