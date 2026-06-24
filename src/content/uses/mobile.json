@@ -3,8 +3,7 @@
   "icon": "smartphone",
   "items": [
     {
-      "name": "Samsung Galaxy S20 Ultra",
-      "link": "https://www.samsung.com/us/mobile/galaxy-s20-5g/instore/",
+      "name": "Samsung Galaxy S Ultra",
       "description": {
         "da": "Primær telefon",
         "en": "Main phone",
@@ -18,8 +17,7 @@
       }
     },
     {
-      "name": "LG V50 ThinQ 5G",
-      "link": "https://www.lg.com/us/mobile-phones/v50-thinq",
+      "name": "LG ThinQ 5G",
       "description": {
         "da": "Sekundær telefon",
         "en": "Secondary phone",
@@ -33,18 +31,17 @@
       }
     },
     {
-      "name": "Samsung Galaxy Watch4 LTE",
-      "link": "https://www.samsung.com/global/galaxy/galaxy-watch4/",
+      "name": "Samsung Galaxy Watch",
       "description": {
-        "da": "Smartwatch",
-        "en": "Smartwatch",
-        "et": "Nutikell",
-        "pl": "Smartwatch",
-        "ru": "Умные часы",
-        "tok": "ilo tenpo lon palisa",
-        "vi-Hani": "銅壺聰明",
-        "vi": "Đồng hồ thông minh",
-        "zh": "智能手表"
+        "da": "Smartwatch der kører Wear OS",
+        "en": "Smartwatch running Wear OS",
+        "et": "Wear OS-il töötav nutikell",
+        "pl": "Smartwatch z Wear OS",
+        "ru": "Умные часы на Wear OS",
+        "tok": "ilo tenpo lon palisa kepeken Wear OS",
+        "vi-Hani": "銅壺聰明𧺄 Wear OS",
+        "vi": "Đồng hồ thông minh chạy Wear OS",
+        "zh": "运行 Wear OS 的智能手表"
       }
     }
   ]

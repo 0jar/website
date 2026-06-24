@@ -3,23 +3,21 @@
   "icon": "laptop",
   "items": [
     {
-      "name": "MSI Modern 15 (15.6\")",
-      "link": "https://wiki.archlinux.org/title/MSI_Modern_15_A5M",
+      "name": "15.6\" laptop",
       "description": {
-        "da": "Ryzen 5 5500U, 512GB SSD",
-        "en": "Ryzen 5 5500U, 512GB SSD",
-        "et": "Ryzen 5 5500U, 512GB SSD",
-        "pl": "Ryzen 5 5500U, dysk 512GB SSD",
-        "ru": "Ryzen 5 5500U, 512GB SSD",
-        "tok": "Ryzen 5 5500U, 512GB SSD",
-        "vi-Hani": "Ryzen 5 5500U, 512GB SSD",
-        "vi": "Ryzen 5 5500U, 512GB SSD",
-        "zh": "Ryzen 5 5500U, 512GB 固态硬盘"
+        "da": "Ryzen 5 5500U, 16GB RAM, 1TB SSD",
+        "en": "Ryzen 5 5500U, 16GB RAM, 1TB SSD",
+        "et": "Ryzen 5 5500U, 16GB RAM, 1TB SSD",
+        "pl": "Ryzen 5 5500U, RAM 16GB, dysk 1TB SSD",
+        "ru": "Ryzen 5 5500U, 16GB RAM, 1TB SSD",
+        "tok": "Ryzen 5 5500U, 16GB RAM, 1TB SSD",
+        "vi-Hani": "Ryzen 5 5500U, 16GB RAM, 1TB SSD",
+        "vi": "Ryzen 5 5500U, 16GB RAM, 1TB SSD",
+        "zh": "Ryzen 5 5500U, 16GB RAM, 1TB 固态硬盘"
       }
     },
     {
-      "name": "WD My Passport 1TB",
-      "link": "https://www.westerndigital.com/products/portable-drives/wd-my-passport-usb-3-0-hdd",
+      "name": "1TB passport",
       "description": {
         "da": "Ekstern HDD til sikkerhedskopier",
         "en": "External HDD for backups",
@@ -47,18 +45,18 @@
       }
     },
     {
-      "name": "Logitech G304",
-      "link": "https://www.logitechg.com/en-us/products/gaming-mice/g304-lightspeed-wireless-gaming-mouse.html",
+      "name": "Logi M650",
+      "link": "https://www.logitech.com/en-us/products/mice/m650-signature-for-business.html",
       "description": {
-        "da": "Trådløs gaming-mus",
-        "en": "Wireless gaming mouse",
-        "et": "Juhtmevaba mänguhiir",
-        "pl": "Bezprzewodowa mysz gamingowa",
-        "ru": "Беспроводная игровая мышь",
-        "tok": "ilo noka ala linja tawa musi",
-        "vi-Hani": "Chuột chơi game không dây",
-        "vi": "Chuột chơi game không dây",
-        "zh": "无线游戏鼠标"
+        "da": "Trådløs produktivitetsmus",
+        "en": "Wireless productivity mouse",
+        "et": "Juhtmevaba tööhiir",
+        "pl": "Bezprzewodowa mysz do pracy",
+        "ru": "Беспроводная мышь для работы",
+        "tok": "ilo noka ala linja tawa pali",
+        "vi-Hani": "Chuột làm việc không dây",
+        "vi": "Chuột làm việc không dây",
+        "zh": "无线办公鼠标"
       }
     },
     {
