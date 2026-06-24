@@ -41,7 +41,7 @@ const initial = cats[Math.floor(Math.random() * cats.length)];
 
     <div class="border rounded-lg p-4 bg-card flex flex-col flex-1">
       <figure class={`relative rounded-xl overflow-hidden bg-muted flex-1 m-0 ${isHomepage ? 'min-h-0' : ''}`}>
-        <div class={`w-full ${isHomepage ? 'absolute inset-0 h-full' : 'relative h-[350px]'}`}>
+        <div class={`w-full relative h-[350px] ${isHomepage ? 'lg:absolute lg:inset-0 lg:h-full' : ''}`}>
           <img
             src={initial.image}
             alt={`Mood cat: ${initial.caption}`}
