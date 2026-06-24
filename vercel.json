@@ -17,7 +17,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/:path((?!(?:retro|about|blog|records|now|guestbook|chat)(?:/|$)).+)/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/:path((?!(?:retro|about|blog|records|now|guestbook|chat)(?:/|$)).+)/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/about/:path*/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/about/:path*/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/blog/:path*/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/blog/:path*/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/now/:path*/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/now/:path*/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/guestbook/:path*/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/guestbook/:path*/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/chat/:path*/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/chat/:path*/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/records/:path*/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/records/:path*/",
       "headers": [
         { "key": "Request-OTR", "value": "1" },
         { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
@@ -188,7 +188,7 @@
       ]
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/retro/:path*/",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/retro/:path*/",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -204,7 +204,7 @@
       "permanent": true
     },
     {
-      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/tools/counter/:match*",
+      "source": "/:locale(vi|ru|et|da|zh|pl|tok|vi-Hani)/tools/counter/:match*",
       "destination": "/:locale/tools/text-counter/:match*",
       "permanent": true
     }
