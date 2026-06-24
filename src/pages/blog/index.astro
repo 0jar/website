@@ -9,70 +9,46 @@ import { t as serverT } from "@/i18n";
 import { localePath } from "@/i18n/routing";
 
 const lang = Astro.locals?.lang || "en";
+const languageNames = Object.fromEntries(supportedLanguages.map(l => [l.code, l.name]));
 
-const languageNames = Object.fromEntries(supportedLanguages.map(lang => [lang.code, lang.name]));
 const allPosts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) => !data.draft);
 const posts = allPosts.sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime());
-const getPostTags = (post: CollectionEntry<"blog">) => post.data.tags || [];
-const getPostCategories = (post: CollectionEntry<"blog">) => post.data.categories?.length ? post.data.categories : post.data.category ? [post.data.category] : [];
-const getUniqueScalar = (field: string) => [...new Set(posts.map((p: any) => p.data[field]).filter(Boolean))] as string[];
-const uniqueMoods = getUniqueScalar('mood');
-const uniqueLanguages = [...new Set(posts.map((p: any) => p.data.language || 'en'))];
 
-type TaxonomyMeta = { key: string; label: string };
+const toTaxonomyKey = (value: string) => value.trim().toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || value;
 
-const toTaxonomyKey = (value: string): string => {
-  const base = value.trim().toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
-  const slug = base.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-  return slug || value;
-};
-
-const resolveCategory = (raw: string): TaxonomyMeta => {
+const resolveTaxonomy = (raw: string, type: 'category' | 'tag') => {
   const key = toTaxonomyKey(raw);
-  const translationKey = `blog.categoryLabels.${key}`;
-  const translated = serverT(lang, translationKey);
-  return { key, label: translated === translationKey ? raw : translated };
+  const transKey = `blog.${type}Labels.${key}`;
+  const translated = serverT(lang, transKey);
+  return { key, label: translated === transKey ? raw : translated };
 };
 
-const resolveTag = (raw: string): TaxonomyMeta => {
-  const key = toTaxonomyKey(raw);
-  const translationKey = `blog.tagLabels.${key}`;
-  const translated = serverT(lang, translationKey);
-  return { key, label: translated === translationKey ? raw : translated };
-};
+const uniqueLanguages = new Set<string>();
+const uniqueMoods = new Set<string>();
+const categoryMetaMap = new Map<string, { key: string; label: string }>();
+const tagMetaMap = new Map<string, { key: string; label: string }>();
 
-const categoryMetaMap = new Map<string, TaxonomyMeta>();
-const tagMetaMap = new Map<string, TaxonomyMeta>();
-
-for (const post of posts) {
-  for (const category of getPostCategories(post)) {
-    const meta = resolveCategory(category);
-    if (!categoryMetaMap.has(meta.key)) categoryMetaMap.set(meta.key, meta);
-  }
-  for (const tag of getPostTags(post)) {
-    const meta = resolveTag(tag);
-    if (!tagMetaMap.has(meta.key)) tagMetaMap.set(meta.key, meta);
-  }
-}
+posts.forEach((post: any) => {
+  uniqueLanguages.add(post.data.language || 'en');
+  if (post.data.mood) uniqueMoods.add(post.data.mood);
+  
+  const cats = post.data.categories?.length ? post.data.categories : post.data.category ? [post.data.category] : [];
+  cats.forEach((c: string) => categoryMetaMap.set(toTaxonomyKey(c), resolveTaxonomy(c, 'category')));
+  
+  (post.data.tags || []).forEach((t: string) => tagMetaMap.set(toTaxonomyKey(t), resolveTaxonomy(t, 'tag')));
+});
 
 const categoryOptions = Array.from(categoryMetaMap.values()).sort((a, b) => a.label.localeCompare(b.label));
 const tagOptions = Array.from(tagMetaMap.values()).sort((a, b) => a.label.localeCompare(b.label));
-const blogTitleKey = "blog.title";
-const blogDescriptionKey = "blog.description";
-const fallbackBlogTitle = "Blog";
-const fallbackBlogDescription = "Read my thoughts on economics, coding, and life.";
-const localizedBlogTitle = (() => {
-  const translated = serverT(lang, blogTitleKey);
-  return translated === blogTitleKey ? fallbackBlogTitle : translated;
-})();
-const localizedBlogDescription = (() => {
-  const translated = serverT(lang, blogDescriptionKey);
-  return translated === blogDescriptionKey ? fallbackBlogDescription : translated;
-})();
-const taxonomyKeywords = Array.from(new Set([
-  ...categoryOptions.map((entry: TaxonomyMeta) => entry.label),
-  ...tagOptions.map((entry: TaxonomyMeta) => entry.label),
-]));
+
+const getTrans = (key: string, fallback: string) => {
+  const translated = serverT(lang, key);
+  return translated === key ? fallback : translated;
+};
+
+const localizedBlogTitle = getTrans("blog.title", "Blog");
+const localizedBlogDescription = getTrans("blog.description", "Read my thoughts on economics, coding, and life.");
+const taxonomyKeywords = [...categoryOptions, ...tagOptions].map(e => e.label);
 
 const blogIndexStructuredData = {
   "@context": "https://schema.org",
@@ -82,31 +58,20 @@ const blogIndexStructuredData = {
   name: localizedBlogTitle,
   description: localizedBlogDescription,
   inLanguage: lang,
-  ...(taxonomyKeywords.length && {
-    about: taxonomyKeywords.map((label) => ({
-      "@type": "Thing",
-      name: label,
-    })),
-  }),
+  ...(taxonomyKeywords.length && { about: taxonomyKeywords.map(name => ({ "@type": "Thing", name })) }),
   mainEntity: {
     "@type": "ItemList",
-    itemListElement: posts.map((post: CollectionEntry<"blog">, index: number) => {
-      const postTags = getPostTags(post).map((entry: string) => resolveTag(entry).label);
-      const postCategories = getPostCategories(post).map((entry: string) => resolveCategory(entry).label);
-      return {
-        "@type": "ListItem",
-        position: index + 1,
-        url: new URL(localePath(lang, `/blog/${post.id}/`), Astro.url.origin).href,
-        item: {
-          "@type": "BlogPosting",
-          headline: post.data.title,
-          datePublished: post.data.date.toISOString(),
-          inLanguage: post.data.language || "en",
-          ...(postTags.length && { keywords: postTags.join(", ") }),
-          ...(postCategories.length && { articleSection: postCategories.join(", ") }),
-        },
-      };
-    }),
+    itemListElement: posts.map((post: any, index: number) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: new URL(localePath(lang, `/blog/${post.id}/`), Astro.url.origin).href,
+      item: {
+        "@type": "BlogPosting",
+        headline: post.data.title,
+        datePublished: post.data.date.toISOString(),
+        inLanguage: post.data.language || "en",
+      },
+    })),
   },
 };
 
@@ -120,24 +85,9 @@ const filterChipInputClass = 'peer absolute h-0 w-0 opacity-0 appearance-none';
 const filterChipLabelClass = 'inline-flex items-center rounded-full border border-border/70 px-3 py-1.5 text-sm transition-colors hover:bg-accent/60 peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-primary/60 peer-checked:border-primary/50 peer-checked:bg-primary/15 peer-checked:text-foreground';
 
 const checkboxFilterGroups = [
-  {
-    key: 'blog.language',
-    filterClass: 'language-filter',
-    fieldsetClass: filterFieldsetClass,
-    items: (uniqueLanguages as string[]).map(value => ({ value, label: languageNames[value] || value })),
-  },
-  {
-    key: 'blog.mood',
-    filterClass: 'mood-filter',
-    fieldsetClass: filterFieldsetClass,
-    items: (uniqueMoods as string[]).map(value => ({ value, label: value })),
-  },
-  {
-    key: 'blog.category',
-    filterClass: 'category-filter',
-    fieldsetClass: filterFieldsetClass,
-    items: categoryOptions.map(({ key, label }) => ({ value: key, label })),
-  },
+  { key: 'blog.language', filterType: 'langs', fieldsetClass: filterFieldsetClass, items: Array.from(uniqueLanguages).map(value => ({ value, label: languageNames[value] || value })) },
+  { key: 'blog.mood', filterType: 'moods', fieldsetClass: filterFieldsetClass, items: Array.from(uniqueMoods).map(value => ({ value, label: value })) },
+  { key: 'blog.category', filterType: 'cats', fieldsetClass: filterFieldsetClass, items: categoryOptions.map(({ key, label }) => ({ value: key, label })) },
 ].filter(group => group.items.length > 0);
 
 const catApprovedOptions = [
@@ -199,16 +149,9 @@ const catApprovedOptions = [
           <!-- Search input -->
           <div class="relative flex-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.3-4.3"/>
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
             </svg>
-            <input
-              type="search"
-              id="blog-search"
-              aria-label={serverT(lang, "blog.search")}
-              placeholder={serverT(lang, "blog.search")}
-              class="w-full pl-10 pr-4 py-2 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-            />
+            <input type="search" id="blog-search" aria-label={serverT(lang, "blog.search")} placeholder={serverT(lang, "blog.search")} class="w-full pl-10 pr-4 py-2 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50" />
           </div>
 
           <!-- Sort dropdown -->
@@ -221,45 +164,28 @@ const catApprovedOptions = [
           </select>
 
           <!-- Filter button -->
-          <button
-            id="filter-button"
-            type="button"
-            aria-controls="filter-panel"
-            aria-expanded="false"
-            class="flex items-center gap-2 px-3 py-2 border rounded-lg hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
-            </svg>
+          <button id="filter-button" type="button" aria-controls="filter-panel" aria-expanded="false" class="flex items-center gap-2 px-3 py-2 border rounded-lg hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
             <T key="blog.filter" />
             <span id="filter-count" class="hidden ml-1 px-1.5 py-0.5 text-xs bg-primary text-primary-foreground rounded-full">0</span>
           </button>
         </div>
 
         <!-- Filter panel -->
-        <section
-          id="filter-panel"
-          class="hidden rounded-2xl border bg-card/80 p-4 md:p-5 backdrop-blur-sm"
-          role="region"
-          aria-label={serverT(lang, "blog.filter")}
-        >
+        <section id="filter-panel" class="hidden rounded-2xl border bg-card/80 p-4 md:p-5 backdrop-blur-sm" role="region" aria-label={serverT(lang, "blog.filter")}>
           <div class="mb-4 flex items-center justify-between gap-3 border-b pb-3">
             <T key="blog.activeFilter" tag="p" class="text-sm text-muted-foreground" />
-            <button id="reset-filters" type="button" class="text-sm text-muted-foreground hover:text-foreground">
-              <T key="blog.clearFilter" />
-            </button>
+            <button id="reset-filters" type="button" class="text-sm text-muted-foreground hover:text-foreground"><T key="blog.clearFilter" /></button>
           </div>
 
           <div class="space-y-4">
             {checkboxFilterGroups.map(group => (
               <fieldset class={group.fieldsetClass}>
-                <legend class="px-1 text-sm font-medium">
-                  <T key={group.key} />
-                </legend>
+                <legend class="px-1 text-sm font-medium"><T key={group.key} /></legend>
                 <div class="flex flex-wrap gap-2">
                   {group.items.map(item => (
                     <label class="relative cursor-pointer">
-                      <input type="checkbox" value={item.value} class={`${group.filterClass} ${filterChipInputClass}`} />
+                      <input type="checkbox" value={item.value} data-type={group.filterType} class={`filter-checkbox ${filterChipInputClass}`} />
                       <span class={filterChipLabelClass}>{item.label}</span>
                     </label>
                   ))}
@@ -268,9 +194,7 @@ const catApprovedOptions = [
             ))}
 
             <fieldset class={filterFieldsetClass}>
-              <legend class="px-1 text-sm font-medium">
-                <T key="blog.cat" />
-              </legend>
+              <legend class="px-1 text-sm font-medium"><T key="blog.cat" /></legend>
               <div class="flex flex-wrap gap-2">
                 {catApprovedOptions.map(option => (
                   <label class="relative cursor-pointer">
@@ -284,9 +208,7 @@ const catApprovedOptions = [
         </section>
 
         <!-- Active filters display -->
-        <div id="active-filters" class="hidden flex-wrap gap-2 items-center">
-          <T key="blog.activeFilter" class="text-sm text-muted-foreground" />
-        </div>
+        <div id="active-filters" class="hidden flex-wrap gap-2 items-center"></div>
       </div>
 
       <!-- Results count -->
@@ -296,13 +218,18 @@ const catApprovedOptions = [
 
       <!-- Blog posts list -->
       <CardList id="blog-posts">
-        {posts.map((post: CollectionEntry<"blog">) => (
+        {posts.map((post: any) => {
+          const postTags = (post.data.tags || []).map((t: string) => resolveTaxonomy(t, 'tag'));
+          const cats = post.data.categories?.length ? post.data.categories : post.data.category ? [post.data.category] : [];
+          const postCats = cats.map((c: string) => resolveTaxonomy(c, 'category'));
+          
+          return (
           <Card
             padding="none"
             class="group blog-post"
             data-title={post.data.title.toLowerCase()}
-            data-tags={getPostTags(post).map((tag: string) => resolveTag(tag).key).join(',')}
-            data-categories={getPostCategories(post).map((category: string) => resolveCategory(category).key).join(',')}
+            data-tags={postTags.map((t: any) => t.key).join(',')}
+            data-categories={postCats.map((c: any) => c.key).join(',')}
             data-excerpt={(post.data.excerpt || '').toLowerCase()}
             data-mood={(post.data.mood || '').toLowerCase()}
             data-language={post.data.language || 'en'}
@@ -311,13 +238,9 @@ const catApprovedOptions = [
             data-reading-time={post.data.readingTime || 5}
           >
             <a href={localePath(lang, `/blog/${post.id}/`)} class="block p-6">
-              <h2 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                {post.data.title}
-              </h2>
+              <h2 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{post.data.title}</h2>
 
-              <!-- Metadata row -->
               <div class="flex flex-wrap gap-3 text-sm text-muted-foreground mb-3">
-                <!-- Date -->
                 <div class="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
                     <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
@@ -327,7 +250,6 @@ const catApprovedOptions = [
                   </time>
                 </div>
 
-                <!-- Reading time -->
                 <div class="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
                     <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
@@ -335,19 +257,14 @@ const catApprovedOptions = [
                   <span>{post.data.readingTime || 5} <T key="blog.minRead" /></span>
                 </div>
 
-                <!-- Mood badge -->
                 {post.data.mood && (
                   <span class="inline-flex items-center px-2 py-0.5 rounded border text-xs">
                     <T key="blog.mood" />: {post.data.mood}
                   </span>
                 )}
 
-                <!-- Language badge -->
                 {post.data.language && (
-                  <span
-                    class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-100"
-                    data-language-badge={post.data.language}
-                  >
+                  <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-100" data-language-badge={post.data.language}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
                     </svg>
@@ -355,7 +272,6 @@ const catApprovedOptions = [
                   </span>
                 )}
 
-                <!-- Cat approved badge -->
                 {post.data.catApproved && (
                   <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -367,41 +283,14 @@ const catApprovedOptions = [
                 )}
               </div>
 
-              <!-- Category and tags: keep in DOM for filtering but hide badges on cards -->
-              <div class="flex flex-wrap gap-2 mb-3 hidden" aria-hidden="true">
-                {getPostCategories(post).map((category: string) => (
-                  <span class="px-2 py-0.5 rounded text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-                    {resolveCategory(category).label}
-                  </span>
-                ))}
-                {getPostTags(post).map((tag: string) => (
-                  <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/>
-                    </svg>
-                    {resolveTag(tag).label}
-                  </span>
-                ))}
-              </div>
-
-              <!-- Excerpt -->
-              {post.data.excerpt && (
-                <p class="text-muted-foreground line-clamp-2">
-                  {post.data.excerpt}
-                </p>
-              )}
+              {post.data.excerpt && <p class="text-muted-foreground line-clamp-2">{post.data.excerpt}</p>}
             </a>
           </Card>
-        ))}
+        )})}
       </CardList>
 
-      {posts.length === 0 && (
-        <div class="text-center py-12">
-          <T key="blog.noPosts" tag="p" class="text-muted-foreground" />
-        </div>
-      )}
+      {posts.length === 0 && <div class="text-center py-12"><T key="blog.noPosts" tag="p" class="text-muted-foreground" /></div>}
 
-      <!-- No results message -->
       <div id="no-results" class="hidden text-center py-12 bg-muted/20 rounded-lg">
         <T key="blog.filterNoMatch" tag="p" class="text-muted-foreground" />
         <button id="reset-filters-empty" class="mt-2 text-primary hover:underline"><T key="blog.clearFilter" /></button>
@@ -416,254 +305,184 @@ const catApprovedOptions = [
   import { supportedLanguages } from '@/lib/constants';
 
   const languageNames: Record<string, string> = Object.fromEntries(supportedLanguages.map(l => [l.code, l.name]));
-  const state = {
-    search: '',
-    sort: 'newest',
-    langs: [] as string[],
-    moods: [] as string[],
-    cats: [] as string[],
-    tags: [] as string[],
-    catApproved: null as boolean | null,
-  };
-  const posts = Array.from(document.querySelectorAll('.blog-post')) as HTMLElement[];
+  const state: Record<string, any> = { search: '', sort: 'newest', langs: [], moods: [], cats: [], catApproved: null };
   const postsContainer = document.getElementById('blog-posts');
+  const posts = Array.from(document.querySelectorAll('.blog-post')) as HTMLElement[];
   const noResults = document.getElementById('no-results');
 
   const updateBlogTranslations = () => {
-    const lang = getPageLocale();
     updateResultsCount();
-    updateDateElements(document, lang);
+    updateDateElements(document, getPageLocale());
     updateActiveFiltersDisplay();
   };
 
   const renderResultsCount = (current: string, total: string) => {
-    const resultsEl = document.getElementById('results-count');
-    if (!resultsEl) return;
-
+    const el = document.getElementById('results-count');
+    if (!el) return;
     const template = t('blog.showingPosts');
-    const fallback = 'Showing {{current}} of {{total}} posts';
-    const message = template !== 'blog.showingPosts' ? template : fallback;
-
-    const [beforeCurrent = '', rest = ''] = message.split('{{current}}');
-    const [between = '', afterTotal = ''] = rest.split('{{total}}');
-
-    const fragment = document.createDocumentFragment();
-    fragment.append(document.createTextNode(beforeCurrent));
-
-    const currentSpan = document.createElement('span');
-    currentSpan.id = 'filtered-count';
-    currentSpan.textContent = current;
-    fragment.append(currentSpan);
-
-    fragment.append(document.createTextNode(between));
-
-    const totalSpan = document.createElement('span');
-    totalSpan.id = 'total-count';
-    totalSpan.textContent = total;
-    fragment.append(totalSpan);
-
-    if (afterTotal) fragment.append(document.createTextNode(afterTotal));
-    resultsEl.replaceChildren(fragment);
+    const msg = template !== 'blog.showingPosts' ? template : 'Showing {{current}} of {{total}} posts';
+    el.innerHTML = msg.replace('{{current}}', `<span id="filtered-count">${parseInt(current)}</span>`).replace('{{total}}', `<span id="total-count">${parseInt(total)}</span>`);
   };
 
-  const updateResultsCount = () => {
-    const filtered = document.getElementById('filtered-count')?.textContent ?? '0';
-    const total = document.getElementById('total-count')?.textContent ?? String(document.querySelectorAll('.blog-post').length);
-    renderResultsCount(filtered, total);
-  };
+  const updateResultsCount = () => renderResultsCount(
+    document.getElementById('filtered-count')?.textContent || '0', 
+    document.getElementById('total-count')?.textContent || String(posts.length)
+  );
 
-  const resolveCategoryLabel = (key: string): string => {
-    const translationKey = `blog.categoryLabels.${key}`;
-    const translated = t(translationKey);
-    return translated === translationKey ? key : translated;
-  };
-
-  const resolveTagLabel = (key: string): string => {
-    const translationKey = `blog.tagLabels.${key}`;
-    const translated = t(translationKey);
-    return translated === translationKey ? key : translated;
-  };
-
-  const initDefaultLanguageFilter = () => {
+  const initDefaultFilters = () => {
     const currentLang = getPageLocale(), baseLang = currentLang.split('-')[0];
-    const hasPostsInLang = posts.some(p => [currentLang, baseLang].includes(p.dataset.language || ''));
-    state.langs = baseLang === 'vi-Hani' || currentLang === 'vi-Hani' ? ['vi', 'vi-Hani'] : hasPostsInLang ? [baseLang] : ['en'];
-    document.querySelectorAll('.language-filter').forEach(cb => (cb as HTMLInputElement).checked = state.langs.includes((cb as HTMLInputElement).value));
+    const hasPosts = posts.some(p => [currentLang, baseLang].includes(p.dataset.language || ''));
+    state.langs = baseLang === 'vi-Hani' || currentLang === 'vi-Hani' ? ['vi', 'vi-Hani'] : hasPosts ? [baseLang] : ['en'];
+    document.querySelectorAll('.filter-checkbox').forEach(cb => {
+      const el = cb as HTMLInputElement;
+      if (el.dataset.type === 'langs') el.checked = state.langs.includes(el.value);
+    });
   };
 
   const filterAndSortPosts = () => {
-    const filteredCountEl = document.getElementById('filtered-count');
-    const searchQuery = state.search.trim().toLowerCase();
+    const search = state.search.trim().toLowerCase();
+    let visible = 0;
 
-    let visibleCount = 0;
     posts.forEach(post => {
-      const title = post.dataset.title || '';
-      const tags = post.dataset.tags || '';
-      const tagsArray = tags.split(',').filter(Boolean);
-      const categories = (post.dataset.categories || '').split(',').filter(Boolean);
-      const excerpt = post.dataset.excerpt || '';
-      const mood = post.dataset.mood || '';
-      const language = post.dataset.language || 'en';
-      const catApproved = post.dataset.catApproved || 'false';
-      const categoriesText = categories.join(' ');
-
-      const matches =
-        (!searchQuery || [title, tags, excerpt, categoriesText].some(value => value.includes(searchQuery))) &&
-        (!state.langs.length || state.langs.includes(language)) &&
-        (!state.moods.length || state.moods.includes(mood)) &&
-        (!state.cats.length || state.cats.some(category => categories.includes(category))) &&
-        (!state.tags.length || state.tags.some(tag => tagsArray.includes(tag))) &&
+      const { title, tags, categories, excerpt, mood, language, catApproved } = post.dataset;
+      const match = 
+        (!search || [title, tags, excerpt, categories].some(v => v?.includes(search))) &&
+        (!state.langs.length || state.langs.includes(language || '')) &&
+        (!state.moods.length || state.moods.includes(mood || '')) &&
+        (!state.cats.length || state.cats.some(c => categories?.split(',').includes(c))) &&
         (state.catApproved === null || catApproved === String(state.catApproved));
-
-      post.hidden = !matches;
-      if (matches) visibleCount++;
+      
+      post.hidden = !match;
+      if (match) visible++;
     });
 
-    const visiblePosts = posts.filter(p => !p.hidden);
-    visiblePosts.sort((a, b) => {
-      const [aDate, bDate] = [a, b].map(p => new Date(p.dataset.sortDate || '').getTime());
-      const [aTime, bTime] = [a, b].map(p => parseInt(p.dataset.readingTime || '0', 10));
-      const [aTitle, bTitle] = [a, b].map(p => p.dataset.title || '');
-      return { newest: bDate - aDate, oldest: aDate - bDate, readingTime: aTime - bTime, alphabetical: aTitle.localeCompare(bTitle) }[state.sort] || 0;
-    });
-    visiblePosts.forEach(post => postsContainer?.appendChild(post));
+    posts.filter(p => !p.hidden).sort((a, b) => {
+      const d1 = new Date(a.dataset.sortDate || '').getTime(), d2 = new Date(b.dataset.sortDate || '').getTime();
+      const t1 = parseInt(a.dataset.readingTime || '0'), t2 = parseInt(b.dataset.readingTime || '0');
+      const sortMap: Record<string, number> = { newest: d2 - d1, oldest: d1 - d2, readingTime: t1 - t2, alphabetical: (a.dataset.title || '').localeCompare(b.dataset.title || '') };
+      return sortMap[state.sort] || 0;
+    }).forEach(p => postsContainer?.appendChild(p));
 
-    noResults?.classList.toggle('hidden', visibleCount > 0);
-    postsContainer?.classList.toggle('hidden', visibleCount === 0);
-    if (filteredCountEl) filteredCountEl.textContent = String(visibleCount);
-    const total = String(posts.length);
-    const current = String(visibleCount);
-    renderResultsCount(current, total);
-
-    const filterCount = state.langs.length + state.moods.length + state.cats.length + state.tags.length + (state.catApproved !== null ? 1 : 0);
+    noResults?.classList.toggle('hidden', visible > 0);
+    postsContainer?.classList.toggle('hidden', visible === 0);
+    renderResultsCount(String(visible), String(posts.length));
+    
+    const filterCount = state.langs.length + state.moods.length + state.cats.length + (state.catApproved !== null ? 1 : 0);
     const filterCountEl = document.getElementById('filter-count');
-    if (filterCountEl) { filterCountEl.textContent = String(filterCount); filterCountEl.classList.toggle('hidden', filterCount === 0); }
+    if (filterCountEl) {
+      filterCountEl.classList.toggle('hidden', filterCount === 0);
+      filterCountEl.textContent = String(filterCount);
+    }
     updateActiveFiltersDisplay();
-  };
-
-  const createFilterBadge = (type: string, value: string, onRemove: () => void) => {
-    const typeMap: Record<string, string> = { Language: t('blog.language'), Mood: t('blog.mood'), Category: t('blog.category'), Tag: t('blog.tag'), 'Cat Approved': t('blog.cat') };
-    const badge = document.createElement('span');
-    badge.className = 'inline-flex items-center gap-1 px-2.5 py-1 rounded-full border text-xs bg-card';
-
-    const label = document.createElement('span');
-    label.className = 'font-medium';
-    label.textContent = `${typeMap[type] || type}:`;
-    badge.append(label, document.createTextNode(` ${value}`));
-
-    const removeBtn = document.createElement('button');
-    removeBtn.type = 'button';
-    removeBtn.className = 'ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full hover:bg-muted hover:text-foreground';
-    removeBtn.setAttribute('aria-label', `Remove ${type} filter: ${value}`);
-    removeBtn.onclick = e => { e.stopPropagation(); onRemove(); };
-    removeBtn.textContent = '×';
-
-    badge.appendChild(removeBtn);
-    return badge;
   };
 
   const updateActiveFiltersDisplay = () => {
     const container = document.getElementById('active-filters');
     if (!container) return;
-    container.replaceChildren();
-    const hasFilters = state.langs.length > 0 || state.moods.length > 0 || state.cats.length > 0 || state.tags.length > 0 || state.catApproved !== null;
-    container.classList.toggle('hidden', !hasFilters); container.classList.toggle('flex', hasFilters);
+    container.innerHTML = '';
+    const hasFilters = Object.values(state).some(v => Array.isArray(v) ? v.length > 0 : v !== null);
+    container.classList.toggle('hidden', !hasFilters);
+    container.classList.toggle('flex', hasFilters);
     if (!hasFilters) return;
 
-    [...state.langs.map(l => ['Language', languageNames[l] || l, () => { state.langs = state.langs.filter(x => x !== l); (document.querySelector(`.language-filter[value="${l}"]`) as HTMLInputElement).checked = false; filterAndSortPosts(); }]),
-     ...state.moods.map(m => ['Mood', m, () => { state.moods = state.moods.filter(x => x !== m); (document.querySelector(`.mood-filter[value="${m}"]`) as HTMLInputElement).checked = false; filterAndSortPosts(); }]),
-      ...state.cats.map(c => ['Category', resolveCategoryLabel(c), () => { state.cats = state.cats.filter(x => x !== c); (document.querySelector(`.category-filter[value="${c}"]`) as HTMLInputElement).checked = false; filterAndSortPosts(); }]),
-      ...state.tags.map(tag => ['Tag', resolveTagLabel(tag), () => { state.tags = state.tags.filter(x => x !== tag); (document.querySelector(`.tag-filter[value="${tag}"]`) as HTMLInputElement).checked = false; filterAndSortPosts(); }]),
-     ...(state.catApproved !== null ? [['Cat Approved', state.catApproved ? 'Yes' : 'No', () => { state.catApproved = null; (document.querySelector('input[name="cat-approved"][value="any"]') as HTMLInputElement).checked = true; filterAndSortPosts(); }]] : [])
-    ].forEach(([type, value, onRemove]) => container.appendChild(createFilterBadge(type as string, value as string, onRemove as () => void)));
+    const createBadge = (label: string, value: string, onRemove: () => void) => {
+      const badge = document.createElement('span');
+      badge.className = 'inline-flex items-center gap-1 px-2.5 py-1 rounded-full border text-xs bg-card';
+      badge.innerHTML = `<span class="font-medium">${label}:</span> ${value}`;
+      const btn = document.createElement('button');
+      btn.className = 'ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full hover:bg-muted';
+      btn.innerHTML = '×';
+      btn.onclick = (e) => { e.stopPropagation(); onRemove(); };
+      badge.appendChild(btn);
+      return badge;
+    };
+
+    const filters = [
+      ...state.langs.map((l: string) => [t('blog.language') || 'Language', languageNames[l] || l, 'langs', l]),
+      ...state.moods.map((m: string) => [t('blog.mood') || 'Mood', m, 'moods', m]),
+      ...state.cats.map((c: string) => [t('blog.category') || 'Category', t(`blog.categoryLabels.${c}`) || c, 'cats', c])
+    ];
+
+    if (state.catApproved !== null) filters.push([t('blog.cat') || 'Cat Approved', state.catApproved ? 'Yes' : 'No', 'catApproved', String(state.catApproved)]);
+
+    filters.forEach(([label, value, key, raw]) => {
+      container.appendChild(createBadge(label, value, () => {
+        if (key === 'catApproved') {
+          state.catApproved = null;
+          const anyCat = document.querySelector('input[name="cat-approved"][value="any"]') as HTMLInputElement;
+          if (anyCat) anyCat.checked = true;
+        } else {
+          state[key] = state[key].filter((v: string) => v !== raw);
+          const cb = document.querySelector(`.filter-checkbox[data-type="${key}"][value="${raw}"]`) as HTMLInputElement;
+          if (cb) cb.checked = false;
+        }
+        filterAndSortPosts();
+      }));
+    });
 
     const clearBtn = document.createElement('button');
-    clearBtn.type = 'button';
     clearBtn.className = 'text-xs text-muted-foreground hover:text-foreground ml-2';
-    clearBtn.textContent = t('blog.clearFilter'); clearBtn.onclick = resetFilters;
+    clearBtn.textContent = t('blog.clearFilter') || 'Clear filters';
+    clearBtn.onclick = resetFilters;
     container.appendChild(clearBtn);
   };
 
   const resetFilters = () => {
-    Object.assign(state, { search: '', sort: 'newest', langs: [], moods: [], cats: [], tags: [], catApproved: null });
-    const searchInput = document.getElementById('blog-search') as HTMLInputElement; if (searchInput) searchInput.value = '';
-    const sortSelect = document.getElementById('sort-select') as HTMLSelectElement; if (sortSelect) sortSelect.value = 'newest';
-    document.querySelectorAll('.language-filter, .mood-filter, .category-filter, .tag-filter').forEach(el => (el as HTMLInputElement).checked = false);
-    const anyCatApproved = document.querySelector('input[name="cat-approved"][value="any"]') as HTMLInputElement | null;
-    if (anyCatApproved) anyCatApproved.checked = true;
+    Object.assign(state, { search: '', sort: 'newest', langs: [], moods: [], cats: [], catApproved: null });
+    const searchInput = document.getElementById('blog-search') as HTMLInputElement;
+    if (searchInput) searchInput.value = '';
+    const sortSelect = document.getElementById('sort-select') as HTMLSelectElement;
+    if (sortSelect) sortSelect.value = 'newest';
+    document.querySelectorAll('.filter-checkbox').forEach(cb => (cb as HTMLInputElement).checked = false);
+    const anyCat = document.querySelector('input[name="cat-approved"][value="any"]') as HTMLInputElement;
+    if (anyCat) anyCat.checked = true;
     filterAndSortPosts();
   };
 
   updateBlogTranslations();
-  initDefaultLanguageFilter();
+  initDefaultFilters();
+  filterAndSortPosts();
 
   document.getElementById('blog-search')?.addEventListener('input', e => { state.search = (e.target as HTMLInputElement).value; filterAndSortPosts(); });
   document.getElementById('sort-select')?.addEventListener('change', e => { state.sort = (e.target as HTMLSelectElement).value; filterAndSortPosts(); });
-  const filterButton = document.getElementById('filter-button');
+  
+  const filterBtn = document.getElementById('filter-button');
   const filterPanel = document.getElementById('filter-panel');
-  const setFilterPanelOpen = (open: boolean) => {
+  const togglePanel = (open: boolean) => {
     filterPanel?.classList.toggle('hidden', !open);
-    filterButton?.setAttribute('aria-expanded', String(open));
+    filterBtn?.setAttribute('aria-expanded', String(open));
   };
-  filterButton?.addEventListener('click', () => {
-    const isOpen = filterButton.getAttribute('aria-expanded') === 'true';
-    setFilterPanelOpen(!isOpen);
-  });
-
-  ['rss', 'atom'].forEach(type => {
-    const button = document.getElementById(`${type}-button`);
-    const popover = document.getElementById(`${type}-popover`);
-    const other = document.getElementById(type === 'rss' ? 'atom-popover' : 'rss-popover');
-    button?.addEventListener('click', e => { e.stopPropagation(); popover?.classList.toggle('hidden'); other?.classList.add('hidden'); });
-  });
-
+  filterBtn?.addEventListener('click', () => togglePanel(filterBtn.getAttribute('aria-expanded') !== 'true'));
+  
   document.addEventListener('click', e => {
-    ['rss-popover', 'atom-popover'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el && !el.contains(e.target as Node)) el.classList.add('hidden');
+    const target = e.target as Node;
+    if (filterPanel && filterBtn && !filterPanel.contains(target) && !filterBtn.contains(target)) togglePanel(false);
+    ['rss', 'atom'].forEach(id => {
+      const popover = document.getElementById(`${id}-popover`), btn = document.getElementById(`${id}-button`);
+      if (popover && !popover.contains(target) && !btn?.contains(target)) popover.classList.add('hidden');
     });
+  });
 
-    if (filterPanel && filterButton) {
-      const clickedInsidePanel = filterPanel.contains(e.target as Node);
-      const clickedToggle = filterButton.contains(e.target as Node);
-      if (!clickedInsidePanel && !clickedToggle) setFilterPanelOpen(false);
-    }
+  ['rss', 'atom'].forEach(id => {
+    document.getElementById(`${id}-button`)?.addEventListener('click', e => {
+      e.stopPropagation();
+      document.getElementById(`${id}-popover`)?.classList.toggle('hidden');
+      document.getElementById(`${id === 'rss' ? 'atom' : 'rss'}-popover`)?.classList.add('hidden');
+    });
   });
 
   filterPanel?.addEventListener('change', e => {
     const target = e.target as HTMLInputElement;
     if (!target) return;
-
-    if (target.classList.contains('language-filter')) {
-      state.langs = target.checked ? [...state.langs, target.value] : state.langs.filter(v => v !== target.value);
-      filterAndSortPosts();
-      return;
+    if (target.name === 'cat-approved') state.catApproved = target.value === 'yes' ? true : target.value === 'no' ? false : null;
+    else if (target.classList.contains('filter-checkbox')) {
+      const type = target.dataset.type as string;
+      if (target.checked) state[type].push(target.value);
+      else state[type] = state[type].filter((v: string) => v !== target.value);
     }
-    if (target.classList.contains('mood-filter')) {
-      state.moods = target.checked ? [...state.moods, target.value] : state.moods.filter(v => v !== target.value);
-      filterAndSortPosts();
-      return;
-    }
-    if (target.classList.contains('category-filter')) {
-      state.cats = target.checked ? [...state.cats, target.value] : state.cats.filter(v => v !== target.value);
-      filterAndSortPosts();
-      return;
-    }
-    if (target.classList.contains('tag-filter')) {
-      state.tags = target.checked ? [...state.tags, target.value] : state.tags.filter(v => v !== target.value);
-      filterAndSortPosts();
-      return;
-    }
-    if (target.name === 'cat-approved') {
-      state.catApproved = target.value === 'yes' ? true : target.value === 'no' ? false : null;
-      filterAndSortPosts();
-    }
+    filterAndSortPosts();
   });
 
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') setFilterPanelOpen(false);
-  });
-
-  ['reset-filters', 'reset-filters-empty'].forEach(id => document.getElementById(id)?.addEventListener('click', resetFilters));
-  filterAndSortPosts();
+  document.addEventListener('keydown', e => e.key === 'Escape' && togglePanel(false));
+  document.querySelectorAll('#reset-filters, #reset-filters-empty').forEach(el => el.addEventListener('click', resetFilters));
 </script>
