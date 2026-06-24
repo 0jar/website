@@ -41,5 +41,8 @@
       "@opentelemetry/core": ">=2.8.0"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "isomorphic-dompurify": "^3.18.0",
+    "marked": "^18.0.5"
+  }
 }

@@ -81,7 +81,7 @@ const extraFields = [
             </div>
             <div class="p-0">
               <textarea id="message" role="tabpanel" name="message" required rows="4" class="w-full px-3 py-2 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none resize-y min-h-[120px] block" placeholder={t(lang, "guestbook.leaveMessage")}></textarea>
-              <div id="preview-container" data-empty-text={t(lang, "guestbook.nothingToPreview")} role="tabpanel" class="hidden w-full px-3 py-2 min-h-[120px] prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap text-foreground"></div>
+              <div id="preview-container" data-empty-text={t(lang, "guestbook.nothingToPreview")} role="tabpanel" class="hidden w-full px-3 py-2 min-h-[120px] prose prose-sm dark:prose-invert max-w-none text-foreground"></div>
             </div>
           </div>
           <p class="text-xs text-muted-foreground mt-1">{t(lang, "guestbook.markdownSupported")}</p>
@@ -109,7 +109,7 @@ const extraFields = [
                 <time class="text-sm text-muted-foreground mt-1 sm:mt-0" datetime={msg.date}>{new Date(msg.date).toLocaleString(lang, { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" })}</time>
               </header>
 
-              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap" set:html={parseMarkdown(msg.message)}></div>
+              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground" set:html={parseMarkdown(msg.message)}></div>
 
               {msg.reply && (
                 <div class="mt-4 pl-4 border-l-2 border-primary bg-muted/20 p-3 rounded-r-md">
@@ -121,7 +121,7 @@ const extraFields = [
                       </time>
                     )}
                   </div>
-                  <div class="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap" set:html={parseMarkdown(msg.reply)}></div>
+                  <div class="prose prose-sm dark:prose-invert max-w-none text-foreground" set:html={parseMarkdown(msg.reply)}></div>
                 </div>
               )}
 
