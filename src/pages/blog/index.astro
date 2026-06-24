@@ -349,7 +349,7 @@ const catApprovedOptions = [
         (!search || [title, tags, excerpt, categories].some(v => v?.includes(search))) &&
         (!state.langs.length || state.langs.includes(language || '')) &&
         (!state.moods.length || state.moods.includes(mood || '')) &&
-        (!state.cats.length || state.cats.some(c => categories?.split(',').includes(c))) &&
+        (!state.cats.length || state.cats.some((c: string) => categories?.split(',').includes(c))) &&
         (state.catApproved === null || catApproved === String(state.catApproved));
       
       post.hidden = !match;
