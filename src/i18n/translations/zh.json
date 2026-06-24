@@ -739,7 +739,7 @@
     "title": "工具",
     "description": "一些有用的小工具。因为我找不到真正符合我需求的，所以自己做了。",
     "items": {
-      "counter": {
+      "text-counter": {
         "title": "文本计数器",
         "icon": "🔤",
         "description": "统计字符、字词、句子、段落，并估算阅读/演讲时间。"

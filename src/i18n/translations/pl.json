@@ -739,7 +739,7 @@
     "title": "Narzędzia",
     "description": "Kilka przydatnych narzędzi. Cóż, bo nie mogłem znaleźć żadnych które naprawdę by mi odpowiadały.",
     "items": {
-      "counter": {
+      "text-counter": {
         "title": "Licznik tekstu",
         "icon": "🔤",
         "description": "Licz znaki, słowa, zdania, akapity i szacuj czas czytania/mówienia."

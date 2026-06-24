@@ -739,7 +739,7 @@
     "title": "Tööriistad",
     "description": "Mõned käepärased utiliidid. Sest ma ei leidnud ühtegi mis oleks minu vajadustele vastanud.",
     "items": {
-      "counter": {
+      "text-counter": {
         "title": "Tekstiloendur",
         "icon": "🔤",
         "description": "Loenda tähemärke, sõnu, lauseid, lõike ja hinda lugemis-/kõneaega."

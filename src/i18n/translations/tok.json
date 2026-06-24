@@ -739,7 +739,7 @@
     "title": "ilo",
     "description": "ilo pona tu. mi ken ala alasa e ilo pona tawa mi la mi pali e ni.",
     "items": {
-      "counter": {
+      "text-counter": {
         "title": "ilo pi nanpa nimi",
         "icon": "🔤",
         "description": "o nanpa e sitelen, e nimi, o sona e tenpo tawa lukin e lipu."

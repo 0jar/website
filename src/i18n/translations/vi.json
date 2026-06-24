@@ -779,7 +779,7 @@
     "title": "Công cụ",
     "description": "Một số tiện ích hữu ích.",
     "items": {
-      "counter": {
+      "text-counter": {
         "title": "Trình đếm văn bản",
         "icon": "🔤",
         "description": "Đếm ký tự, từ, câu, đoạn văn, ước tính thời gian đọc và nói."

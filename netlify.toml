@@ -108,6 +108,16 @@
     Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me gateway.umami.is cloud.umami.is iframe.chat; font-src 'self'; frame-src iframe.chat; img-src 'self' https:; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live iframe.chat; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
 
 [[redirects]]
+  from = "/tools/counter/*"
+  to = "/tools/text-counter/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/:locale/tools/counter/*"
+  to = "/:locale/tools/text-counter/:splat"
+  status = 301
+
+[[redirects]]
   from = "/stats/*"
   to = "https://cloud.umami.is/:splat"
   status = 200

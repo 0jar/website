@@ -197,6 +197,18 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/tools/counter/:match*",
+      "destination": "/tools/text-counter/:match*",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(vi|ru|et|da|zh|tr|pl|sv|fi|tok|vi-Hani)/tools/counter/:match*",
+      "destination": "/:locale/tools/text-counter/:match*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/stats/:match*",

@@ -739,7 +739,7 @@
     "title": "Værktøjer",
     "description": "Nogle praktiske værktøjer. Jeg kunne ikke finde nogen der virkelig passede til mine behov.",
     "items": {
-      "counter": {
+      "text-counter": {
         "title": "Teksttæller",
         "icon": "🔤",
         "description": "Tæl tegn, ord, sætninger, afsnit og anslå læse-/taletid."

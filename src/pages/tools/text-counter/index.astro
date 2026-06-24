@@ -10,13 +10,6 @@ const textLangs = ["en", "vi", "et", "zh", "ru", "custom", "advanced"] as const;
 const stats = ["characters", "charactersNoSpaces", "words", "sentences", "paragraphs", "lines", "readingTime", "speakingTime"] as const;
 const speedPresets = ["slow", "average", "fast", "custom"] as const;
 
-const speeds: Record<string, { speaking: number[]; reading: number[] }> = {
-  en: { speaking: [115, 145, 175], reading: [175, 225, 275] },
-  vi: { speaking: [120, 160, 190], reading: [185, 245, 290] },
-  et: { speaking: [115, 145, 175], reading: [160, 200, 240] },
-  ru: { speaking: [95, 125, 155], reading: [150, 210, 270] },
-  zh: { speaking: [120, 160, 200], reading: [200, 265, 330] },
-};
 const controlCls = "mt-1 w-full px-3 py-1.5 text-sm rounded-lg border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring";
 ---
 
@@ -84,8 +77,8 @@ const controlCls = "mt-1 w-full px-3 py-1.5 text-sm rounded-lg border bg-card te
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6" role="status" aria-live="polite" aria-atomic="true">
         {stats.map((key) => (
-          <div class="bg-card border rounded-lg p-4 text-center" data-card={key}>
-            <div class="text-2xl font-bold tabular-nums" data-stat={key}>{key.includes("Time") ? "0s" : "0"}</div>
+          <div class="bg-card border rounded-lg p-4 text-center" id={`card-${key}`}>
+            <div class="text-2xl font-bold tabular-nums" id={`stat-${key}`}>{key.includes("Time") ? "0s" : "0"}</div>
             <T key={`textCounter.stats.${key}`} tag="div" class="text-xs text-muted-foreground mt-1" />
           </div>
         ))}
@@ -93,13 +86,11 @@ const controlCls = "mt-1 w-full px-3 py-1.5 text-sm rounded-lg border bg-card te
 
       <div class="relative">
         <textarea id="text-input" placeholder={tl("placeholder")} autofocus aria-label={tl("description")}
-          class="w-full min-h-[300px] md:min-h-[400px] p-4 rounded-lg border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y font-monaspice text-sm leading-relaxed" />
+          class="w-full min-h-[300px] md:min-h-[400px] p-4 rounded-lg border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y font-monaspice text-sm leading-relaxed"></textarea>
         <button id="clear-btn" type="button" aria-label={tl("clear")} class="absolute top-3 right-3 text-xs px-2 py-1 rounded bg-muted text-muted-foreground hover:bg-muted/80 transition-colors hidden">
           <T key="textCounter.clear" />
         </button>
       </div>
-
-      <div id="speed-data" hidden data-v={JSON.stringify(speeds)} />
 
       <details class="mt-8 text-sm border rounded-lg px-4 py-2 text-muted-foreground">
         <T key="textCounter.privacy.summary" tag="summary" class="cursor-pointer select-none font-medium text-foreground py-1" />
@@ -113,124 +104,101 @@ const controlCls = "mt-1 w-full px-3 py-1.5 text-sm rounded-lg border bg-card te
 </BaseLayout>
 
 <script>
-  type Speeds = Record<string, { speaking: number[]; reading: number[] }>;
-  const speeds: Speeds = JSON.parse(document.getElementById("speed-data")!.dataset.v!);
-  const presetIdx: Record<string, number> = { slow: 0, average: 1, fast: 2 };
+  const speeds: Record<string, { speaking: number[]; reading: number[] }> = {
+    en: { speaking: [115, 145, 175], reading: [175, 225, 275] },
+    vi: { speaking: [120, 160, 190], reading: [185, 245, 290] },
+    et: { speaking: [115, 145, 175], reading: [160, 200, 240] },
+    ru: { speaking: [95, 125, 155], reading: [150, 210, 270] },
+    zh: { speaking: [120, 160, 200], reading: [200, 265, 330] },
+  };
+  const presets = ["slow", "average", "fast"];
   const sentRe = /[.!?…。！？⋯]+(?:\s|$)/g;
 
-  // State
-  let textLang = "en";
-  let speedPreset = "average";
-  let noWords = false;
-  let linePara = false;
-
-  // DOM refs
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
-  const textarea = $<HTMLTextAreaElement>("text-input");
-  const clearBtn = $<HTMLButtonElement>("clear-btn");
-  const langSelect = $<HTMLSelectElement>("text-lang");
-  const advancedEl = $("advanced-section");
-  const wpmRead = $<HTMLInputElement>("wpm-read");
-  const wpmSpeak = $<HTMLInputElement>("wpm-speak");
-  const warnEl = $("speed-warn");
-  const toggleNoWords = $<HTMLInputElement>("toggle-no-words");
-  const toggleLinePara = $<HTMLInputElement>("toggle-line-para");
+  const t = $<HTMLTextAreaElement>("text-input");
+  const langSel = $<HTMLSelectElement>("text-lang");
+  const wpmR = $<HTMLInputElement>("wpm-read");
+  const wpmS = $<HTMLInputElement>("wpm-speak");
+  const noWords = $<HTMLInputElement>("toggle-no-words");
+  const linePara = $<HTMLInputElement>("toggle-line-para");
   const speedBtns = document.querySelectorAll<HTMLButtonElement>(".speed-btn");
-  const statEls = new Map(Array.from(document.querySelectorAll<HTMLElement>("[data-stat]"), (el) => [el.dataset.stat!, el]));
-  const cardEls = new Map(Array.from(document.querySelectorAll<HTMLElement>("[data-card]"), (el) => [el.dataset.card!, el]));
 
-  function getWpm(): [number, number] {
-    const s = speeds[textLang] ?? speeds.en;
-    const i = presetIdx[speedPreset];
-    return i != null ? [s.reading[i], s.speaking[i]] : [+wpmRead.value || 225, +wpmSpeak.value || 140];
-  }
-
-  function syncWpm() {
-    const [r, s] = getWpm();
-    const isCustom = speedPreset === "custom";
-    wpmRead.readOnly = wpmSpeak.readOnly = !isCustom;
-    if (!isCustom) { wpmRead.value = String(r); wpmSpeak.value = String(s); }
-    const hasNoData = textLang === "custom" || textLang === "advanced";
-    warnEl.classList.toggle("hidden", !(hasNoData && !isCustom));
-  }
-
-  function fmtTime(units: number, wpm: number): string {
-    if (!units || !wpm) return "0s";
-    const sec = Math.ceil((units / wpm) * 60);
-    const min = (sec / 60) | 0;
-    return min ? `${min}m ${sec % 60}s` : `${sec % 60}s`;
-  }
+  let activeSpeed = "average";
+  let prevLang = langSel.value;
 
   function update() {
-    syncWpm();
-    const v = textarea.value;
-    const trimmed = v.trim();
-    const hideWords = noWords || textLang === "zh";
-    const charsNoSpace = v.replace(/[\s\u3000]/g, "").length;
-    const words = hideWords ? 0 : trimmed ? trimmed.split(/\s+/).length : 0;
-    const sentences = trimmed ? (v.match(sentRe)?.length ?? 1) : 0;
-    const paragraphs = trimmed
-      ? linePara
-        ? v.split("\n").filter(Boolean).length
-        : v.split(/\n\s*\n/).filter((p) => p.trim()).length || 1
-      : 0;
-    const lines = v ? v.split("\n").length : 0;
-    const [r, s] = getWpm();
-    const timeUnits = textLang === "zh" ? charsNoSpace : words;
-
-    const data: Record<string, string> = {
-      characters: String(v.length),
-      charactersNoSpaces: String(charsNoSpace),
-      words: String(words),
-      sentences: String(sentences),
-      paragraphs: String(paragraphs),
-      lines: String(lines),
-      readingTime: fmtTime(timeUnits, r),
-      speakingTime: fmtTime(timeUnits, s),
-    };
-    for (const [k, el] of statEls) el.textContent = data[k] ?? "";
-    cardEls.get("words")?.classList.toggle("hidden", hideWords);
-    cardEls.get("lines")?.classList.toggle("hidden", linePara);
-    clearBtn.classList.toggle("hidden", !v.length);
-  }
-
-  function setActiveSpeed(preset: string) {
-    speedPreset = preset;
-    for (const b of speedBtns) {
-      const on = b.dataset.speed === preset;
-      b.classList.toggle("bg-primary", on);
-      b.classList.toggle("text-primary-foreground", on);
-      b.classList.toggle("border-primary", on);
-      b.setAttribute("aria-pressed", String(on));
+    const lang = langSel.value;
+    const isCustom = activeSpeed === "custom";
+    const s = speeds[lang] || speeds.en;
+    const i = presets.indexOf(activeSpeed);
+    
+    wpmR.readOnly = wpmS.readOnly = !isCustom;
+    if (!isCustom) {
+      wpmR.value = String(s.reading[i]);
+      wpmS.value = String(s.speaking[i]);
     }
-    update();
+    
+    $("speed-warn").classList.toggle("hidden", isCustom || !["custom", "advanced"].includes(lang));
+
+    const val = t.value;
+    const trim = val.trim();
+    const hideWords = noWords.checked || lang === "zh";
+    const noSpace = val.replace(/\s/g, "").length;
+    const words = hideWords ? 0 : trim ? trim.split(/\s+/).length : 0;
+    const units = lang === "zh" ? noSpace : words;
+    
+    const fmt = (u: number, rate: number) => {
+      const sec = Math.ceil((u / rate) * 60) || 0;
+      return sec >= 60 ? `${(sec / 60) | 0}m ${sec % 60}s` : `${sec}s`;
+    };
+
+    const stats = {
+      characters: val.length,
+      charactersNoSpaces: noSpace,
+      words,
+      sentences: trim ? (val.match(sentRe)?.length || 1) : 0,
+      paragraphs: trim ? (linePara.checked ? val.split("\n").filter(Boolean).length : val.split(/\n\s*\n/).filter(p => p.trim()).length || 1) : 0,
+      lines: val ? val.split("\n").length : 0,
+      readingTime: fmt(units, +wpmR.value || 225),
+      speakingTime: fmt(units, +wpmS.value || 140),
+    };
+
+    for (const [k, v] of Object.entries(stats)) {
+      const el = $(`stat-${k}`);
+      if (el) el.textContent = String(v);
+    }
+
+    $("card-words")?.classList.toggle("hidden", hideWords);
+    $("card-lines")?.classList.toggle("hidden", linePara.checked);
+    $("clear-btn").classList.toggle("hidden", !val.length);
   }
 
   for (const btn of speedBtns) {
-    btn.addEventListener("click", () => setActiveSpeed(btn.dataset.speed!));
+    btn.addEventListener("click", () => {
+      activeSpeed = btn.dataset.speed!;
+      for (const b of speedBtns) {
+        const on = b === btn;
+        b.classList.toggle("bg-primary", on);
+        b.classList.toggle("text-primary-foreground", on);
+        b.classList.toggle("border-primary", on);
+        b.setAttribute("aria-pressed", String(on));
+      }
+      update();
+    });
   }
 
-  langSelect.addEventListener("change", () => {
-    const prev = textLang;
-    textLang = langSelect.value;
-    advancedEl.classList.toggle("hidden", textLang !== "advanced");
-    if (prev === "zh" && textLang !== "zh" && textLang !== "advanced") {
-      noWords = false;
-      toggleNoWords.checked = false;
-    }
-    if (textLang === "zh") {
-      noWords = true;
-      toggleNoWords.checked = true;
-    }
+  langSel.addEventListener("change", () => {
+    const lang = langSel.value;
+    $("advanced-section").classList.toggle("hidden", lang !== "advanced");
+    if (prevLang === "zh" && lang !== "zh" && lang !== "advanced") noWords.checked = false;
+    if (lang === "zh") noWords.checked = true;
+    prevLang = lang;
     update();
   });
 
-  toggleNoWords.addEventListener("change", () => { noWords = toggleNoWords.checked; update(); });
-  toggleLinePara.addEventListener("change", () => { linePara = toggleLinePara.checked; update(); });
-  wpmRead.addEventListener("input", update);
-  wpmSpeak.addEventListener("input", update);
-  textarea.addEventListener("input", update);
-  clearBtn.addEventListener("click", () => { textarea.value = ""; update(); textarea.focus(); });
+  $("clear-btn").addEventListener("click", () => { t.value = ""; update(); t.focus(); });
+  [noWords, linePara].forEach(el => el.addEventListener("change", update));
+  [wpmR, wpmS, t].forEach(el => el.addEventListener("input", update));
 
-  syncWpm();
+  update();
 </script>

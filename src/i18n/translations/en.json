@@ -787,7 +787,7 @@
     "title": "Tools",
     "description": "Some handy utilities. Well, because I couldn't find any that really fit my needs.",
     "items": {
-      "counter": {
+      "text-counter": {
         "title": "Text counter",
         "icon": "🔤",
         "description": "Count characters, words, sentences, paragraphs, and estimate reading/speaking time."
