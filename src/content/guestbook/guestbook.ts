@@ -1,5 +1,16 @@
 export const messages = [
   {
+    name: "Taivo",
+    website: "",
+    social: "",
+    location: "Kuressaarest, Saaremaalt",
+    referrer: "Fediring",
+    created_at: "2026-06-24T15:55:04.304Z",
+    message: `Came across this site via the Fediring, wasn't expecting to see Estonia on the front page. Oot, päriselt Tartust? Anyhow, good blog, added to RSS. Väga hea lehekülg.`,
+    reply: `Tere Taivo! Jah, pärit Tartust, aga olen juba tükk aega Hanois elanud. Tore näha üht eestlast siin. Hea meel et blogi meeldis :)`,
+    reply_date: "2026-06-30T13:37:45.367Z"
+  },
+  {
     name: "Kisei",
     website: "https://tuansondesigns.com",
     social: "Discord for now",
