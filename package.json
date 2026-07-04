@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
+    "@astrojs/markdown-remark": "^7.2.1",
     "@astrojs/netlify": "^8.1.1",
     "@astrojs/preact": "^6.0.1",
     "@astrojs/rss": "^4.0.19",
