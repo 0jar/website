@@ -8,7 +8,6 @@ import captions from './src/lib/plugins/captions.js';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jarema.me',
-  trailingSlash: 'always',
   output: 'static',
   ...(process.env.NETLIFY ? { adapter: netlify() } : {}),
 
