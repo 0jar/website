@@ -11,14 +11,14 @@ const lang = Astro.locals?.lang || "en";
 
 const currentDomain = new URL(siteUrl).hostname;
 const messages = rawMessages
-  .map(r => ({ ...r, date: r.created_at, referrer: r.referrer?.includes(currentDomain) ? "" : r.referrer }))
+  .map(r => ({ ...r, date: r.created_at, camefrom: r.camefrom?.includes(currentDomain) ? "" : r.camefrom }))
   .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 
 const inputCls = "w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50";
 const extraFields = [
   { id: "social", label: t(lang, "guestbook.socialMedia"), type: "text" as any, placeholder: "@username" },
   { id: "location", label: t(lang, "guestbook.whereAreYouFrom"), type: "text" as any },
-  { id: "referrer", label: t(lang, "guestbook.howDidYouGetHere"), type: "text" as any }
+  { id: "camefrom", label: t(lang, "guestbook.howDidYouGetHere"), type: "text" as any }
 ];
 ---
 
@@ -125,10 +125,10 @@ const extraFields = [
                 </div>
               )}
 
-              {(msg.location || msg.referrer) && (
+              {(msg.location || msg.camefrom) && (
                 <footer class="mt-4 pt-3 border-t border-dashed border-border flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground">
                   {msg.location && <div class="flex items-center gap-1.5" title="Location"><span aria-hidden="true">📍</span> <span class="sr-only">From:</span> {msg.location}</div>}
-                  {msg.referrer && <div class="flex items-center gap-1.5" title="Referrer"><span aria-hidden="true">👋</span> <span class="sr-only">Via:</span> {msg.referrer}</div>}
+                  {msg.camefrom && <div class="flex items-center gap-1.5" title="Came from"><span aria-hidden="true">👋</span> <span class="sr-only">Via:</span> {msg.camefrom}</div>}
                 </footer>
               )}
             </Card>
