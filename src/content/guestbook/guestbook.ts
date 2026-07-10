@@ -1,5 +1,19 @@
 export const messages = [
   {
+    name: "Charles_X",
+    website: "",
+    social: "",
+    location: "",
+    camefrom: "",
+    created_at: "2026-07-06T17:45:03.078Z",
+    message: `Hi Jarema,
+
+This website design looks so magnificent that it might be the best ever!
+Words can't express by how amazed I am by this website.`,
+    reply: ``,
+    reply_date: ""
+  },
+  {
     name: "Taivo",
     website: "",
     social: "",
