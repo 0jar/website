@@ -174,7 +174,7 @@ const extraFields = [
     const section = document.querySelector('[aria-labelledby="messages-heading"]');
     if (section) {
       const lang = document.documentElement.lang || "en";
-      const format = { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+      const format = { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" } as Intl.DateTimeFormatOptions;
       updateDateElements(section, lang, format);
     }
   }
