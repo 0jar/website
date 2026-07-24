@@ -748,6 +748,11 @@
         "title": "MRZ 生成器",
         "icon": "🛂",
         "description": "为护照和身份证生成机读区 (MRZ)。"
+      },
+      "recase": {
+        "title": "文本转换器",
+        "icon": "🔠",
+        "description": "在不同编码、哈希和大小写类型之间转换文本。"
       }
     }
   },
@@ -787,6 +792,45 @@
     },
     "errors": {
       "exceeds": "值超过最大长度"
+    }
+  },
+  "recase": {
+    "title": "文本转换器",
+    "description": "在各种大小写样式、编码和哈希之间转换文本。完全在您的浏览器中运行。",
+    "input": "输入文本",
+    "output": "输出文本",
+    "copy": "复制",
+    "copied": "已复制！",
+    "mode": "模式",
+    "modes": {
+      "casing": "大小写",
+      "encode": "编码",
+      "decode": "解码",
+      "hash": "哈希"
+    },
+    "casing": {
+      "reverse": "反转",
+      "upper": "大写",
+      "lower": "小写",
+      "title": "标题大小写",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "screamingSnake": "SCREAMING_SNAKE_CASE",
+      "kebab": "kebab-case"
+    },
+    "encoding": {
+      "b64": "Base64",
+      "url": "URL",
+      "html": "HTML 实体",
+      "hex": "十六进制",
+      "bin": "二进制"
+    },
+    "hashing": {
+      "md5": "MD5",
+      "sha1": "SHA-1",
+      "sha256": "SHA-256",
+      "sha512": "SHA-512"
     }
   }
 }

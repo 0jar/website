@@ -793,6 +793,11 @@
         "title": "Tạo mã MRZ",
         "icon": "🛂",
         "description": "Tạo mã máy đọc (MRZ) cho hộ chiếu và thẻ căn cước."
+      },
+      "recase": {
+        "title": "Chuyển đổi văn bản",
+        "icon": "🔠",
+        "description": "Chuyển đổi văn bản giữa các loại mã hóa, mã băm và kiểu chữ khác nhau."
       }
     }
   },
@@ -856,5 +861,44 @@
   "slashes": {
     "title": "Slashes",
     "description": "Danh sách tất cả các trang chính trên trang web này."
+  },
+  "recase": {
+    "title": "Chuyển đổi văn bản",
+    "description": "Chuyển đổi văn bản giữa các kiểu chữ, mã hóa và mã băm. Hoạt động hoàn toàn trên trình duyệt.",
+    "input": "Văn bản đầu vào",
+    "output": "Văn bản đầu ra",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "mode": "Chế độ",
+    "modes": {
+      "casing": "Kiểu chữ",
+      "encode": "Mã hóa",
+      "decode": "Giải mã",
+      "hash": "Mã băm"
+    },
+    "casing": {
+      "reverse": "Đảo ngược",
+      "upper": "IN HOA",
+      "lower": "in thường",
+      "title": "Viết Hoa Chữ Cái Đầu",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "screamingSnake": "SCREAMING_SNAKE_CASE",
+      "kebab": "kebab-case"
+    },
+    "encoding": {
+      "b64": "Base64",
+      "url": "URL",
+      "html": "HTML Entity",
+      "hex": "Hex (Thập lục phân)",
+      "bin": "Binary (Nhị phân)"
+    },
+    "hashing": {
+      "md5": "MD5",
+      "sha1": "SHA-1",
+      "sha256": "SHA-256",
+      "sha512": "SHA-512"
+    }
   }
 }

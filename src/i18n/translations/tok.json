@@ -748,6 +748,11 @@
         "title": "ilo pi pali sitelen MRZ",
         "icon": "🛂",
         "description": "o pali e sitelen MRZ tawa lipu jan."
+      },
+      "recase": {
+        "title": "ilo pi ante nimi",
+        "icon": "🔠",
+        "description": "o ante e nasin sitelen pi nimi sina."
       }
     }
   },
@@ -787,6 +792,45 @@
     },
     "errors": {
       "exceeds": "nimi li suli mute"
+    }
+  },
+  "recase": {
+    "title": "ilo pi ante nimi",
+    "description": "o ante e nasin sitelen pi nimi sina. ilo ni li pali lon ilo lukin sina taso.",
+    "input": "nimi open",
+    "output": "nimi pini",
+    "copy": "o lukin sama",
+    "copied": "pini!",
+    "mode": "nasin",
+    "modes": {
+      "casing": "suli",
+      "encode": "len",
+      "decode": "lukin",
+      "hash": "nanpa"
+    },
+    "casing": {
+      "reverse": "monsi",
+      "upper": "SULI",
+      "lower": "lili",
+      "title": "Suli Open",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "screamingSnake": "SCREAMING_SNAKE_CASE",
+      "kebab": "kebab-case"
+    },
+    "encoding": {
+      "b64": "Base64",
+      "url": "URL",
+      "html": "HTML",
+      "hex": "Hex",
+      "bin": "Bin"
+    },
+    "hashing": {
+      "md5": "MD5",
+      "sha1": "SHA-1",
+      "sha256": "SHA-256",
+      "sha512": "SHA-512"
     }
   }
 }

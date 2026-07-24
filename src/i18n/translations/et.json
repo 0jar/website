@@ -748,6 +748,11 @@
         "title": "MRZ generaator",
         "icon": "🛂",
         "description": "Genereeri masinloetavaid tsoone passidele ja ID-kaartidele."
+      },
+      "recase": {
+        "title": "Teksti teisendaja",
+        "icon": "🔠",
+        "description": "Teisenda teksti erinevate kodeeringute, räsifunktsioonide ja tähesuuruste vahel."
       }
     }
   },
@@ -787,6 +792,45 @@
     },
     "errors": {
       "exceeds": "Väärtus ületab maksimaalse pikkuse"
+    }
+  },
+  "recase": {
+    "title": "Teksti teisendaja",
+    "description": "Teisenda teksti erinevate tähesuuruste, kodeeringute ja räsifunktsioonide vahel. Töötab täielikult sinu brauseris.",
+    "input": "Sisendtekst",
+    "output": "Väljundtekst",
+    "copy": "Kopeeri",
+    "copied": "Kopeeritud!",
+    "mode": "Režiim",
+    "modes": {
+      "casing": "Tähesuurused",
+      "encode": "Kodeeri",
+      "decode": "Dekodeeri",
+      "hash": "Räsi"
+    },
+    "casing": {
+      "reverse": "Tagurpidi",
+      "upper": "SUURTÄHED",
+      "lower": "väiketähed",
+      "title": "Pealkirja Stiil",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "screamingSnake": "SCREAMING_SNAKE_CASE",
+      "kebab": "kebab-case"
+    },
+    "encoding": {
+      "b64": "Base64",
+      "url": "URL",
+      "html": "HTML Entity",
+      "hex": "Heksadetsimaal",
+      "bin": "Binaar"
+    },
+    "hashing": {
+      "md5": "MD5",
+      "sha1": "SHA-1",
+      "sha256": "SHA-256",
+      "sha512": "SHA-512"
     }
   }
 }

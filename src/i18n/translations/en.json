@@ -801,6 +801,11 @@
         "title": "MRZ generator",
         "icon": "🛂",
         "description": "Generate Machine Readable Zones for passports and ID cards."
+      },
+      "recase": {
+        "title": "Text converter",
+        "icon": "🔠",
+        "description": "Convert text between different encodings, hashes, and case types."
       }
     }
   },
@@ -859,6 +864,45 @@
     },
     "errors": {
       "exceeds": "Value exceeds maximum length"
+    }
+  },
+  "recase": {
+    "title": "Text converter",
+    "description": "Convert text between various case styles, encodings, and hashes. Runs entirely in your browser.",
+    "input": "Input text",
+    "output": "Output text",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "mode": "Mode",
+    "modes": {
+      "casing": "Casing",
+      "encode": "Encode",
+      "decode": "Decode",
+      "hash": "Hash"
+    },
+    "casing": {
+      "reverse": "Reverse",
+      "upper": "UPPERCASE",
+      "lower": "lowercase",
+      "title": "Title Case",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "screamingSnake": "SCREAMING_SNAKE_CASE",
+      "kebab": "kebab-case"
+    },
+    "encoding": {
+      "b64": "Base64",
+      "url": "URL",
+      "html": "HTML Entity",
+      "hex": "Hexadecimal",
+      "bin": "Binary"
+    },
+    "hashing": {
+      "md5": "MD5",
+      "sha1": "SHA-1",
+      "sha256": "SHA-256",
+      "sha512": "SHA-512"
     }
   }
 }
