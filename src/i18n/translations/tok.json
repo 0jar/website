@@ -743,11 +743,50 @@
         "title": "ilo pi nanpa nimi",
         "icon": "🔤",
         "description": "o nanpa e sitelen, e nimi, o sona e tenpo tawa lukin e lipu."
+      },
+      "mrz": {
+        "title": "ilo pi pali sitelen MRZ",
+        "icon": "🛂",
+        "description": "o pali e sitelen MRZ tawa lipu jan."
       }
     }
   },
   "slashes": {
     "title": "lipu lili",
     "description": "kulupu pi lipu suli ali pi lipu ni."
+  },
+  "mrz": {
+    "title": "ilo pi pali sitelen MRZ",
+    "description": "o pali e sitelen MRZ tawa lipu jan.",
+    "docType": "nasin lipu",
+    "td1": "lipu lili (TD1)",
+    "td2": "lipu lili (TD2)",
+    "td3": "lipu suli (TD3)",
+    "code": "nimi lipu",
+    "state": "ma",
+    "primary": "nimi suli",
+    "secondary": "nimi lili",
+    "docNum": "nanpa lipu",
+    "nat": "ma jan",
+    "dob": "tenpo sike pi kama jan (YYMMDD)",
+    "sex": "meli anu mije (M/F/X/<)",
+    "exp": "tenpo sike pini (YYMMDD)",
+    "pNum": "nanpa jan",
+    "opt1": "ijo ante 1",
+    "opt2": "ijo ante 2",
+    "opt": "ijo ante",
+    "generate": "o pali",
+    "outputString": "sitelen MRZ",
+    "copy": "o lukin sama",
+    "copied": "pini!",
+    "privacy": {
+      "summary": "ken pi len ijo",
+      "body": "ilo ni li pali lon ilo lukin sina taso. ijo sina li tawa ala.",
+      "technicalLabel": "sona ilo:",
+      "technical": "sina wile sona la, o lukin e poki Network lon ilo lukin sina."
+    },
+    "errors": {
+      "exceeds": "nimi li suli mute"
+    }
   }
 }

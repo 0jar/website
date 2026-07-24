@@ -743,11 +743,50 @@
         "title": "Licznik tekstu",
         "icon": "🔤",
         "description": "Licz znaki, słowa, zdania, akapity i szacuj czas czytania/mówienia."
+      },
+      "mrz": {
+        "title": "Generator MRZ",
+        "icon": "🛂",
+        "description": "Generuj strefy MRZ dla paszportów i dowodów osobistych."
       }
     }
   },
   "slashes": {
     "title": "Slashes",
     "description": "Lista wszystkich głównych stron w tej witrynie."
+  },
+  "mrz": {
+    "title": "Generator MRZ",
+    "description": "Generuj strefy MRZ (Machine Readable Zone) zgodne ze standardem ICAO Doc 9303 dla dokumentów tożsamości.",
+    "docType": "Typ dokumentu",
+    "td1": "Dowód osobisty (TD1)",
+    "td2": "Dowód osobisty (TD2)",
+    "td3": "Paszport (TD3)",
+    "code": "Kod dokumentu (np. P, I, ID)",
+    "state": "Państwo wydające (3 litery ICAO)",
+    "primary": "Identyfikator główny (Nazwisko)",
+    "secondary": "Identyfikator dodatkowy (Imiona)",
+    "docNum": "Numer dokumentu",
+    "nat": "Obywatelstwo (3 litery ICAO)",
+    "dob": "Data urodzenia (YYMMDD)",
+    "sex": "Płeć (M/F/X/<)",
+    "exp": "Data ważności (YYMMDD)",
+    "pNum": "Numer osobisty",
+    "opt1": "Dane opcjonalne 1",
+    "opt2": "Dane opcjonalne 2",
+    "opt": "Dane opcjonalne",
+    "generate": "Generuj MRZ",
+    "outputString": "Ciąg MRZ",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano!",
+    "privacy": {
+      "summary": "Prywatność",
+      "body": "To narzędzie działa całkowicie w Twojej przeglądarce. Wprowadzone dane nie są nigdzie wysyłane.",
+      "technicalLabel": "Informacje techniczne:",
+      "technical": "Aby to zweryfikować, otwórz narzędzia dla programistów (F12) → zakładkę Sieć (Network), wygeneruj MRZ i potwierdź, że nie są wysyłane żadne żądania."
+    },
+    "errors": {
+      "exceeds": "Wartość przekracza maksymalną długość"
+    }
   }
 }

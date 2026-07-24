@@ -743,11 +743,50 @@
         "title": "文本计数器",
         "icon": "🔤",
         "description": "统计字符、字词、句子、段落，并估算阅读/演讲时间。"
+      },
+      "mrz": {
+        "title": "MRZ 生成器",
+        "icon": "🛂",
+        "description": "为护照和身份证生成机读区 (MRZ)。"
       }
     }
   },
   "slashes": {
     "title": "斜杠",
     "description": "本网站所有主要页面的列表。"
+  },
+  "mrz": {
+    "title": "MRZ 生成器",
+    "description": "生成符合 ICAO Doc 9303 标准的身份证件机读区 (MRZ)。",
+    "docType": "证件类型",
+    "td1": "身份证 (TD1)",
+    "td2": "身份证 (TD2)",
+    "td3": "护照 (TD3)",
+    "code": "证件代码 (例如 P, I, ID)",
+    "state": "发证国家 (3 个字母 ICAO)",
+    "primary": "主要标识符 (姓氏)",
+    "secondary": "次要标识符 (名字)",
+    "docNum": "证件号码",
+    "nat": "国籍 (3 个字母 ICAO)",
+    "dob": "出生日期 (YYMMDD)",
+    "sex": "性别 (M/F/X/<)",
+    "exp": "有效期 (YYMMDD)",
+    "pNum": "个人号码",
+    "opt1": "可选数据 1",
+    "opt2": "可选数据 2",
+    "opt": "可选数据",
+    "generate": "生成 MRZ",
+    "outputString": "MRZ 字符串",
+    "copy": "复制",
+    "copied": "已复制！",
+    "privacy": {
+      "summary": "隐私",
+      "body": "此工具完全在您的浏览器中运行。您输入的数据不会发送到任何地方。",
+      "technicalLabel": "技术信息：",
+      "technical": "要验证，请打开浏览器开发者工具 (F12) → 网络 (Network) 选项卡，生成 MRZ，然后确认没有发送任何请求。"
+    },
+    "errors": {
+      "exceeds": "值超过最大长度"
+    }
   }
 }

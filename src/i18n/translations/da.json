@@ -743,11 +743,50 @@
         "title": "Teksttæller",
         "icon": "🔤",
         "description": "Tæl tegn, ord, sætninger, afsnit og anslå læse-/taletid."
+      },
+      "mrz": {
+        "title": "MRZ-generator",
+        "icon": "🛂",
+        "description": "Generer maskinlæsbare zoner (MRZ) til pas og id-kort."
       }
     }
   },
   "slashes": {
     "title": "Slashes",
     "description": "En liste over alle hovedsider på dette websted."
+  },
+  "mrz": {
+    "title": "MRZ-generator",
+    "description": "Generer ICAO Doc 9303-kompatible maskinlæsbare zoner (MRZ) til identitetsdokumenter.",
+    "docType": "Dokumenttype",
+    "td1": "Id-kort (TD1)",
+    "td2": "Id-kort (TD2)",
+    "td3": "Pas (TD3)",
+    "code": "Dokumentkode (f.eks. P, I, ID)",
+    "state": "Udstedelsesland (3 bogstaver ICAO)",
+    "primary": "Primær identifikator (Efternavn)",
+    "secondary": "Sekundær identifikator (Fornavne)",
+    "docNum": "Dokumentnummer",
+    "nat": "Nationalitet (3 bogstaver ICAO)",
+    "dob": "Fødselsdato (YYMMDD)",
+    "sex": "Køn (M/F/X/<)",
+    "exp": "Udløbsdato (YYMMDD)",
+    "pNum": "Personnummer",
+    "opt1": "Valgfri data 1",
+    "opt2": "Valgfri data 2",
+    "opt": "Valgfri data",
+    "generate": "Generer MRZ",
+    "outputString": "MRZ-streng",
+    "copy": "Kopiér",
+    "copied": "Kopieret!",
+    "privacy": {
+      "summary": "Privatliv",
+      "body": "Dette værktøj kører udelukkende i din browser. Dine indtastede data sendes ikke nogen steder hen.",
+      "technicalLabel": "Teknisk info:",
+      "technical": "For at bekræfte kan du åbne browserens DevTools (F12) → Netværk-fanen, generere en MRZ og bekræfte, at der ikke foretages nogen anmodninger."
+    },
+    "errors": {
+      "exceeds": "Værdien overskrider den maksimale længde"
+    }
   }
 }

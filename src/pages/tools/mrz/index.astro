@@ -1,0 +1,321 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import T from "@/components/ui/T.astro";
+import { t } from "@/i18n";
+
+const lang = Astro.locals?.lang || "en";
+const tl = (key: string) => t(lang, `mrz.${key}`);
+
+const controlCls =
+  "mt-1 w-full px-3 py-2 text-sm rounded-lg border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring";
+const btnCls =
+  "w-full py-2 px-4 rounded-lg font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring";
+
+const docTypes = [
+  { val: "td1", label: "td1" },
+  { val: "td2", label: "td2" },
+  { val: "td3", label: "td3" },
+];
+
+const sexOptions = ["M", "F", "X", "<"];
+---
+
+<BaseLayout title={tl("title")}>
+  <div class="container mx-auto px-4 py-8">
+    <div class="max-w-2xl mx-auto">
+      <header class="text-center mb-8">
+        <T key="mrz.title" tag="h1" class="text-4xl font-bold mb-4" />
+        <T
+          key="mrz.description"
+          tag="p"
+          class="text-lg text-muted-foreground mx-auto"
+        />
+      </header>
+
+      <div class="bg-card border rounded-xl p-6 shadow-sm mb-6">
+        <form id="mrz-form" class="space-y-4">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="docType" class="block text-sm font-medium"><T key="mrz.docType" /></label>
+              <select id="docType" name="docType" class={controlCls}>
+                {docTypes.map((d) => (
+                  <option value={d.val}>{tl(d.val)}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label for="code" class="block text-sm font-medium"><T key="mrz.code" /></label>
+              <input type="text" id="code" name="code" class={controlCls} maxlength="2" placeholder="P" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="state" class="block text-sm font-medium"><T key="mrz.state" /></label>
+              <input type="text" id="state" name="state" required class={controlCls} maxlength="3" placeholder="UTO" />
+            </div>
+            <div>
+              <label for="nat" class="block text-sm font-medium"><T key="mrz.nat" /></label>
+              <input type="text" id="nat" name="nat" required class={controlCls} maxlength="3" placeholder="UTO" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="primary" class="block text-sm font-medium"><T key="mrz.primary" /></label>
+              <input type="text" id="primary" name="primary" required class={controlCls} placeholder="ERIKSSON" />
+            </div>
+            <div>
+              <label for="secondary" class="block text-sm font-medium"><T key="mrz.secondary" /></label>
+              <input type="text" id="secondary" name="secondary" class={controlCls} placeholder="ANNA MARIA" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="docNum" class="block text-sm font-medium"><T key="mrz.docNum" /></label>
+              <input type="text" id="docNum" name="docNum" required class={controlCls} maxlength="9" placeholder="L898902C3" />
+            </div>
+            <div>
+              <label for="sex" class="block text-sm font-medium"><T key="mrz.sex" /></label>
+              <select id="sex" name="sex" class={controlCls}>
+                {sexOptions.map(s => <option value={s}>{s}</option>)}
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="dob" class="block text-sm font-medium"><T key="mrz.dob" /></label>
+              <input type="text" id="dob" name="dob" required class={controlCls} maxlength="6" placeholder="740812" pattern="\d{6}" title="YYMMDD" />
+            </div>
+            <div>
+              <label for="exp" class="block text-sm font-medium"><T key="mrz.exp" /></label>
+              <input type="text" id="exp" name="exp" required class={controlCls} maxlength="6" placeholder="120415" pattern="\d{6}" title="YYMMDD" />
+            </div>
+          </div>
+
+          <!-- Dynamic fields container -->
+          <div id="dynamic-fields" class="space-y-4 border-t pt-4 mt-4">
+            <!-- Populated by JS -->
+          </div>
+
+          <p id="mrz-error" aria-live="polite" class="text-xs text-destructive mt-1 hidden"></p>
+
+          <button type="submit" class={btnCls + " mt-4"}>
+            <T key="mrz.generate" />
+          </button>
+        </form>
+      </div>
+
+      <div
+        id="result-container"
+        class="bg-card border rounded-xl p-6 shadow-sm hidden opacity-0 transition-opacity duration-300"
+      >
+        <div>
+          <label class="block text-sm font-medium mb-1"><T key="mrz.outputString" /></label>
+          <div class="relative">
+            <textarea
+              id="output-string"
+              readonly
+              rows="3"
+              class={controlCls + " font-monaspice text-sm break-all resize-none bg-muted tracking-widest"}
+            ></textarea>
+            <button
+              id="copy-btn"
+              type="button"
+              class="absolute top-2 right-2 text-xs px-2 py-1 rounded bg-background border text-foreground hover:bg-muted transition-colors"
+            >
+              <T key="mrz.copy" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <details
+        class="mt-8 text-sm border rounded-lg px-4 py-3 text-muted-foreground bg-card/50"
+      >
+        <T
+          key="mrz.privacy.summary"
+          tag="summary"
+          class="cursor-pointer select-none font-medium text-foreground py-1"
+        />
+        <div class="mt-2 mb-1 space-y-2 text-xs leading-relaxed">
+          <T key="mrz.privacy.body" tag="p" />
+          <p>
+            <T
+              key="mrz.privacy.technicalLabel"
+              class="font-medium text-foreground"
+            />
+            <T key="mrz.privacy.technical" />
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  import { t } from "@/i18n";
+  const lang = document.documentElement.lang || "en";
+  const tl = (key: string) => t(lang, `mrz.${key}`);
+
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+
+  const form = $<HTMLFormElement>("mrz-form");
+  const docType = $<HTMLSelectElement>("docType");
+  const dynFields = $("dynamic-fields");
+  const resultContainer = $("result-container");
+  const outputString = $<HTMLTextAreaElement>("output-string");
+  const copyBtn = $<HTMLButtonElement>("copy-btn");
+  const mrzError = $("mrz-error");
+
+  const btnCopyOrig = copyBtn.textContent;
+  const controlCls = "mt-1 w-full px-3 py-2 text-sm rounded-lg border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring";
+
+  function updateDynFields() {
+    const val = docType.value;
+    let html = "";
+    if (val === "td1") {
+      html = `
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="opt1" class="block text-sm font-medium">${tl("opt1")}</label>
+            <input type="text" id="opt1" name="opt1" class="${controlCls}" maxlength="15" />
+          </div>
+          <div>
+            <label for="opt2" class="block text-sm font-medium">${tl("opt2")}</label>
+            <input type="text" id="opt2" name="opt2" class="${controlCls}" maxlength="11" />
+          </div>
+        </div>
+      `;
+    } else if (val === "td2") {
+      html = `
+        <div>
+          <label for="opt" class="block text-sm font-medium">${tl("opt")}</label>
+          <input type="text" id="opt" name="opt" class="${controlCls}" maxlength="7" />
+        </div>
+      `;
+    } else if (val === "td3") {
+      html = `
+        <div>
+          <label for="pNum" class="block text-sm font-medium">${tl("pNum")}</label>
+          <input type="text" id="pNum" name="pNum" class="${controlCls}" maxlength="14" />
+        </div>
+      `;
+    }
+    dynFields.innerHTML = html;
+  }
+
+  docType.addEventListener("change", updateDynFields);
+  updateDynFields();
+
+  function chk(str: string): string {
+    const w = [7, 3, 1];
+    let total = 0;
+    for (let i = 0; i < str.length; i++) {
+      const c = str[i];
+      let val = 0;
+      if (/[0-9]/.test(c)) val = parseInt(c, 10);
+      else if (/[A-Z]/.test(c)) val = c.charCodeAt(0) - 55;
+      total += val * w[i % 3];
+    }
+    return String(total % 10);
+  }
+
+  function fmt(v: string | null, l: number): string {
+    const s = String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '<');
+    if (s.length > l) throw new Error(tl("errors.exceeds"));
+    return s.padEnd(l, '<');
+  }
+
+  function nameFmt(p: string | null, s: string | null, l: number): string {
+    const cl = (x: string | null) => String(x || '').toUpperCase().replace(/\s+/g, '<').replace(/[^A-Z<]/g, '');
+    const n = s ? `${cl(p)}<<${cl(s)}` : cl(p);
+    return n.substring(0, l).padEnd(l, '<');
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    mrzError.classList.add("hidden");
+
+    try {
+      const fd = new FormData(form);
+      const typ = fd.get("docType") as string;
+      
+      const kw = {
+        code: fd.get("code") as string,
+        state: fd.get("state") as string,
+        primary: fd.get("primary") as string,
+        secondary: fd.get("secondary") as string,
+        docNum: fd.get("docNum") as string,
+        nat: fd.get("nat") as string,
+        dob: fd.get("dob") as string,
+        sex: fd.get("sex") as string,
+        exp: fd.get("exp") as string,
+        pNum: fd.get("pNum") as string,
+        opt1: fd.get("opt1") as string,
+        opt2: fd.get("opt2") as string,
+        opt: fd.get("opt") as string,
+      };
+
+      const c = fmt(kw.code || (typ === 'td3' ? 'P' : 'I'), 2);
+      const s = fmt(kw.state, 3);
+      const dn = fmt(kw.docNum, 9);
+      const dnc = chk(dn);
+      const db = fmt(kw.dob, 6);
+      const dbc = chk(db);
+      const sx = fmt(kw.sex, 1);
+      const ex = fmt(kw.exp, 6);
+      const exc = chk(ex);
+      const na = fmt(kw.nat, 3);
+
+      let lines: string[] = [];
+
+      if (typ === 'td1') {
+        const o1 = fmt(kw.opt1, 15);
+        const o2 = fmt(kw.opt2, 11);
+        lines = [
+          `${c}${s}${dn}${dnc}${o1}`,
+          `${db}${dbc}${sx}${ex}${exc}${na}${o2}${chk(`${dn}${dnc}${o1}${db}${dbc}${ex}${exc}${o2}`)}`,
+          nameFmt(kw.primary, kw.secondary, 30)
+        ];
+      } else {
+        const nm = nameFmt(kw.primary, kw.secondary, typ === 'td2' ? 31 : 39);
+        if (typ === 'td2') {
+          const o = fmt(kw.opt, 7);
+          lines = [
+            `${c}${s}${nm}`,
+            `${dn}${dnc}${na}${db}${dbc}${sx}${ex}${exc}${o}${chk(`${dn}${dnc}${db}${dbc}${ex}${exc}${o}`)}`
+          ];
+        } else {
+          const pn = fmt(kw.pNum, 14);
+          const pnc = chk(pn);
+          lines = [
+            `${c}${s}${nm}`,
+            `${dn}${dnc}${na}${db}${dbc}${sx}${ex}${exc}${pn}${pnc}${chk(`${dn}${dnc}${db}${dbc}${ex}${exc}${pn}${pnc}`)}`
+          ];
+        }
+      }
+
+      outputString.value = lines.join('\n');
+      outputString.rows = lines.length;
+
+      resultContainer.classList.remove("hidden");
+      void resultContainer.offsetWidth;
+      resultContainer.classList.add("opacity-100");
+    } catch (err) {
+      mrzError.textContent = err instanceof Error ? err.message : String(err);
+      mrzError.classList.remove("hidden");
+    }
+  });
+
+  copyBtn.addEventListener("click", () => {
+    if (!outputString.value) return;
+    navigator.clipboard.writeText(outputString.value).then(() => {
+      copyBtn.textContent = document.documentElement.lang === "vi" ? "Đã chép!" : "Copied!";
+      setTimeout(() => { copyBtn.textContent = btnCopyOrig; }, 2000);
+    });
+  });
+</script>

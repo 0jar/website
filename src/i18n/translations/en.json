@@ -796,6 +796,11 @@
         "title": "VietQR generator",
         "icon": "🏦",
         "description": "Generate bank transfer QR codes that conforms to VietQR standard."
+      },
+      "mrz": {
+        "title": "MRZ generator",
+        "icon": "🛂",
+        "description": "Generate Machine Readable Zones for passports and ID cards."
       }
     }
   },
@@ -820,6 +825,40 @@
     },
     "errors": {
       "invalidBin": "Invalid bank short code or BIN"
+    }
+  },
+  "mrz": {
+    "title": "MRZ generator",
+    "description": "Generate ICAO Doc 9303 compliant Machine Readable Zones for identity documents.",
+    "docType": "Document type",
+    "td1": "ID card (TD1)",
+    "td2": "ID card (TD2)",
+    "td3": "Passport (TD3)",
+    "code": "Document code (e.g. P, I, ID)",
+    "state": "Issuing state (3-letter ICAO)",
+    "primary": "Primary identifier (Last name)",
+    "secondary": "Secondary identifier (First names)",
+    "docNum": "Document number",
+    "nat": "Nationality (3-letter ICAO)",
+    "dob": "Date of birth (YYMMDD)",
+    "sex": "Sex (M/F/X/<)",
+    "exp": "Date of expiry (YYMMDD)",
+    "pNum": "Personal number",
+    "opt1": "Optional data 1",
+    "opt2": "Optional data 2",
+    "opt": "Optional data",
+    "generate": "Generate MRZ",
+    "outputString": "MRZ string",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "privacy": {
+      "summary": "Privacy",
+      "body": "This tool runs entirely in your browser. The data you enter is not sent anywhere.",
+      "technicalLabel": "Technical info:",
+      "technical": "To verify, open browser DevTools (F12) → Network tab, generate an MRZ, and confirm no requests are made."
+    },
+    "errors": {
+      "exceeds": "Value exceeds maximum length"
     }
   }
 }

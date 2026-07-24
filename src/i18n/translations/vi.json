@@ -788,6 +788,11 @@
         "title": "Tạo mã VietQR",
         "icon": "🏦",
         "description": "Tạo mã QR chuyển khoản nhanh theo chuẩn VietQR."
+      },
+      "mrz": {
+        "title": "Tạo mã MRZ",
+        "icon": "🛂",
+        "description": "Tạo mã máy đọc (MRZ) cho hộ chiếu và thẻ căn cước."
       }
     }
   },
@@ -812,6 +817,40 @@
     },
     "errors": {
       "invalidBin": "Mã ngân hàng hoặc số BIN không hợp lệ"
+    }
+  },
+  "mrz": {
+    "title": "Tạo mã MRZ",
+    "description": "Tạo mã máy đọc (MRZ) theo chuẩn ICAO Doc 9303 cho các loại giấy tờ tùy thân.",
+    "docType": "Loại giấy tờ",
+    "td1": "Thẻ căn cước (TD1)",
+    "td2": "Thẻ căn cước (TD2)",
+    "td3": "Hộ chiếu (TD3)",
+    "code": "Mã giấy tờ (VD: P, I, ID)",
+    "state": "Quốc gia phát hành (3 chữ cái ICAO)",
+    "primary": "Định danh chính (Họ)",
+    "secondary": "Định danh phụ (Tên)",
+    "docNum": "Số giấy tờ",
+    "nat": "Quốc tịch (3 chữ cái ICAO)",
+    "dob": "Ngày sinh (YYMMDD)",
+    "sex": "Giới tính (M/F/X/<)",
+    "exp": "Ngày hết hạn (YYMMDD)",
+    "pNum": "Số định danh cá nhân",
+    "opt1": "Dữ liệu tùy chọn 1",
+    "opt2": "Dữ liệu tùy chọn 2",
+    "opt": "Dữ liệu tùy chọn",
+    "generate": "Tạo MRZ",
+    "outputString": "Chuỗi MRZ",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "privacy": {
+      "summary": "Thông tin về quyền riêng tư",
+      "body": "Công cụ này chạy hoàn toàn trong trình duyệt. Thông tin bạn nhập không được gửi đi bất cứ đâu.",
+      "technicalLabel": "Phương pháp xác minh kỹ thuật:",
+      "technical": "Để xác minh, hãy mở DevTools của trình duyệt (F12) → tab Mạng (Network), tạo MRZ và xác nhận rằng không có yêu cầu nào được gửi đi."
+    },
+    "errors": {
+      "exceeds": "Giá trị vượt quá độ dài tối đa"
     }
   },
   "slashes": {

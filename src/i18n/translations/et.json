@@ -743,11 +743,50 @@
         "title": "Tekstiloendur",
         "icon": "🔤",
         "description": "Loenda tähemärke, sõnu, lauseid, lõike ja hinda lugemis-/kõneaega."
+      },
+      "mrz": {
+        "title": "MRZ generaator",
+        "icon": "🛂",
+        "description": "Genereeri masinloetavaid tsoone passidele ja ID-kaartidele."
       }
     }
   },
   "slashes": {
     "title": "Kaldkriipsud",
     "description": "Nimekiri kõikidest selle saidi pealehtedest."
+  },
+  "mrz": {
+    "title": "MRZ generaator",
+    "description": "Genereeri ICAO Doc 9303 nõuetele vastavaid masinloetavaid tsoone (MRZ) isikut tõendavatele dokumentidele.",
+    "docType": "Dokumendi tüüp",
+    "td1": "ID-kaart (TD1)",
+    "td2": "ID-kaart (TD2)",
+    "td3": "Pass (TD3)",
+    "code": "Dokumendi kood (nt P, I, ID)",
+    "state": "Väljaandjariik (3 tähte ICAO)",
+    "primary": "Esmane identifikaator (Perekonnanimi)",
+    "secondary": "Teisene identifikaator (Eesnimed)",
+    "docNum": "Dokumendi number",
+    "nat": "Kodakondsus (3 tähte ICAO)",
+    "dob": "Sünniaeg (YYMMDD)",
+    "sex": "Sugu (M/F/X/<)",
+    "exp": "Aegumiskuupäev (YYMMDD)",
+    "pNum": "Isikukood",
+    "opt1": "Valikulised andmed 1",
+    "opt2": "Valikulised andmed 2",
+    "opt": "Valikulised andmed",
+    "generate": "Genereeri MRZ",
+    "outputString": "MRZ string",
+    "copy": "Kopeeri",
+    "copied": "Kopeeritud!",
+    "privacy": {
+      "summary": "Privaatsus",
+      "body": "See tööriist töötab täielikult sinu brauseris. Sisestatud andmeid ei saadeta kuhugi.",
+      "technicalLabel": "Tehniline info:",
+      "technical": "Kinnitamiseks ava brauseri DevTools (F12) → Võrgu (Network) vahekaart, genereeri MRZ ja veendu, et päringuid ei tehta."
+    },
+    "errors": {
+      "exceeds": "Väärtus ületab maksimaalse pikkuse"
+    }
   }
 }
