@@ -791,7 +791,35 @@
         "title": "Text counter",
         "icon": "🔤",
         "description": "Count characters, words, sentences, paragraphs, and estimate reading/speaking time."
+      },
+      "vietqr": {
+        "title": "VietQR generator",
+        "icon": "🏦",
+        "description": "Generate bank transfer QR codes that conforms to VietQR standard."
       }
+    }
+  },
+  "vietqr": {
+    "title": "VietQR generator",
+    "description": "Generate bank transfer QR codes that conforms to VietQR standard.",
+    "bank": "Bank/BIN",
+    "account": "Account number or alias",
+    "amount": "Amount (VND)",
+    "note": "Transfer note",
+    "dynamic": "Dynamic QR code",
+    "optional": "(optional)",
+    "generate": "Generate QR",
+    "outputString": "QR string",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "privacy": {
+      "summary": "Privacy",
+      "body": "This tool runs entirely in your browser. Your banking details are not sent anywhere.",
+      "technicalLabel": "Technical info:",
+      "technical": "To verify, open browser DevTools (F12) → Network tab, generate a code, and confirm no requests are made."
+    },
+    "errors": {
+      "invalidBin": "Invalid bank short code or BIN"
     }
   }
 }

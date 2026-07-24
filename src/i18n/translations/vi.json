@@ -783,7 +783,35 @@
         "title": "Trình đếm văn bản",
         "icon": "🔤",
         "description": "Đếm ký tự, từ, câu, đoạn văn, ước tính thời gian đọc và nói."
+      },
+      "vietqr": {
+        "title": "Tạo mã VietQR",
+        "icon": "🏦",
+        "description": "Tạo mã QR chuyển khoản nhanh theo chuẩn VietQR."
       }
+    }
+  },
+  "vietqr": {
+    "title": "Tạo mã VietQR",
+    "description": "Tạo mã QR chuyển khoản nhanh theo chuẩn VietQR.",
+    "bank": "Ngân hàng",
+    "account": "Số tài khoản hoặc nickname/alias",
+    "amount": "Số tiền (VND)",
+    "note": "Nội dung chuyển khoản",
+    "dynamic": "Mã QR động",
+    "optional": "(không bắt buộc)",
+    "generate": "Tạo QR",
+    "outputString": "Chuỗi QR",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "privacy": {
+      "summary": "Thông tin về quyền riêng tư",
+      "body": "Công cụ này chạy hoàn toàn trong trình duyệt. Thông tin ngân hàng của bạn không được gửi đi bất cứ đâu.",
+      "technicalLabel": "Phương pháp xác minh kỹ thuật:",
+      "technical": "Để xác minh, hãy mở DevTools của trình duyệt (F12) → tab Mạng (Network), tạo mã và xác nhận rằng không có yêu cầu nào được gửi đi."
+    },
+    "errors": {
+      "invalidBin": "Mã ngân hàng hoặc số BIN không hợp lệ"
     }
   },
   "slashes": {

@@ -1,0 +1,382 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import T from "@/components/ui/T.astro";
+import { t } from "@/i18n";
+
+const lang = Astro.locals?.lang || "en";
+const tl = (key: string) => t(lang, `vietqr.${key}`);
+
+const controlCls =
+  "mt-1 w-full px-3 py-2 text-sm rounded-lg border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring";
+const btnCls =
+  "w-full py-2 px-4 rounded-lg font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring";
+
+const bankBins = [
+  "970436:Vietcombank",
+  "970415:VietinBank",
+  "970418:BIDV",
+  "970405:Agribank",
+  "970422:MBBank",
+  "970407:Techcombank",
+  "970423:TPBank",
+  "970432:VPBank",
+  "970403:Sacombank",
+  "970400:SaigonBank",
+  "970406:Vikki",
+  "970408:GPBank",
+  "970409:BacABank",
+  "970410:Standard Chartered",
+  "970412:PVcomBank",
+  "970414:MBV",
+  "970416:ACB",
+  "970419:NCB",
+  "970421:VRB",
+  "970424:Shinhan Bank",
+  "970425:ABBANK",
+  "970426:MSB",
+  "970427:VietABank",
+  "970428:NamABank",
+  "970429:SCB",
+  "970430:PGBank",
+  "970431:Eximbank",
+  "970433:VietBank",
+  "970434:IndovinaBank",
+  "970437:HDBank",
+  "970438:BaoVietBank",
+  "970439:Public Bank",
+  "970440:SeABank",
+  "970441:VIB",
+  "970442:Hong Leong",
+  "970443:SHB",
+  "970444:CBBank",
+  "970446:COOPBANK",
+  "970448:OCB",
+  "970449:LPBank",
+  "970452:KienLongBank",
+  "970454:Viet Capital Bank",
+  "970455:IBKHN",
+  "970456:IBKHCM",
+  "970457:Woori",
+  "970458:United Overseas Bank",
+  "970462:Kookmin HN",
+  "970463:Kookmin HCM",
+  "970466:KEB Hana HCM",
+  "970467:KEB Hana HN",
+  "422589:CIMB",
+  "458761:HSBC",
+  "533948:Citibank",
+  "546034:CAKE",
+  "546035:Ubank",
+  "668888:KBank",
+  "796500:DBS Bank",
+  "801011:Nonghyup",
+  "963388:Timo",
+  "971005:Viettel Money",
+  "971011:VNPT Money",
+  "971025:MoMo",
+  "971133:PVcomBank Pay",
+  "977777:MAFC",
+  "999888:VBSP",
+].map((s) => ({ bin: s.split(":")[0], name: s.split(":")[1] }));
+---
+
+<BaseLayout title={tl("title")}>
+  <div class="container mx-auto px-4 py-8">
+    <div class="max-w-2xl mx-auto">
+      <header class="text-center mb-8">
+        <T key="vietqr.title" tag="h1" class="text-4xl font-bold mb-4" />
+        <T
+          key="vietqr.description"
+          tag="p"
+          class="text-lg text-muted-foreground mx-auto"
+        />
+      </header>
+
+      <div class="bg-card border rounded-xl p-6 shadow-sm mb-6">
+        <form id="vqr-form" class="space-y-4">
+          <div>
+            <label for="bank" class="block text-sm font-medium"
+              ><T key="vietqr.bank" /></label
+            >
+            <div class="relative mt-1">
+              <input
+                list="bank-list"
+                id="bank"
+                name="bank"
+                required
+                class={controlCls}
+                pattern={`.*(${bankBins.map((b) => b.bin).join("|")}).*`}
+                data-bins={bankBins.map((b) => b.bin).join(",")}
+                autocomplete="off"
+              />
+              <datalist id="bank-list">
+                {
+                  bankBins.map((b) => (
+                    <option value={`${b.name} (${b.bin})`} />
+                  ))
+                }
+              </datalist>
+            </div>
+            <p
+              id="bank-error"
+              aria-live="polite"
+              class="text-xs text-destructive mt-1 hidden"
+            >
+              <T key="vietqr.errors.invalidBin" />
+            </p>
+          </div>
+
+          <div>
+            <label for="account" class="block text-sm font-medium"
+              ><T key="vietqr.account" /></label
+            >
+            <input
+              type="text"
+              id="account"
+              name="account"
+              required
+              class={controlCls}
+              placeholder="123456789"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="amount" class="block text-sm font-medium">
+                <T key="vietqr.amount" />{" "}
+                <span class="text-muted-foreground font-normal"
+                  ><T key="vietqr.optional" /></span
+                >
+              </label>
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                min="1"
+                step="1"
+                class={controlCls}
+                placeholder="50000"
+              />
+            </div>
+
+            <div>
+              <label for="note" class="block text-sm font-medium">
+                <T key="vietqr.note" />{" "}
+                <span class="text-muted-foreground font-normal"
+                  ><T key="vietqr.optional" /></span
+                >
+              </label>
+              <input
+                type="text"
+                id="note"
+                name="note"
+                class={controlCls}
+                placeholder="Transfer description"
+              />
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                id="dynamic"
+                name="dynamic"
+                class="accent-primary w-4 h-4"
+              />
+              <T key="vietqr.dynamic" class="text-sm font-medium" />
+            </label>
+          </div>
+
+          <button type="submit" class={btnCls + " mt-4"}>
+            <T key="vietqr.generate" />
+          </button>
+        </form>
+      </div>
+
+      <div
+        id="result-container"
+        class="bg-card border rounded-xl p-6 shadow-sm hidden opacity-0 transition-opacity duration-300"
+      >
+        <div class="flex flex-col items-center mb-6">
+          <div
+            id="qrcode"
+            class="p-4 bg-white rounded-xl shadow-sm mb-4 min-w-[250px] min-h-[250px] flex items-center justify-center"
+          >
+            <!-- QR canvas goes here -->
+          </div>
+          <a
+            id="download-qr"
+            download="vietqr.png"
+            class="text-sm text-primary hover:underline"
+            href="#">Download QR</a
+          >
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1"
+            ><T key="vietqr.outputString" /></label
+          >
+          <div class="relative">
+            <textarea
+              id="output-string"
+              readonly
+              rows="4"
+              class={controlCls +
+                " font-monaspice text-xs break-all resize-none bg-muted"}
+            ></textarea>
+            <button
+              id="copy-btn"
+              type="button"
+              class="absolute top-2 right-2 text-xs px-2 py-1 rounded bg-background border text-foreground hover:bg-muted transition-colors"
+            >
+              <T key="vietqr.copy" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <details
+        class="mt-8 text-sm border rounded-lg px-4 py-3 text-muted-foreground bg-card/50"
+      >
+        <T
+          key="vietqr.privacy.summary"
+          tag="summary"
+          class="cursor-pointer select-none font-medium text-foreground py-1"
+        />
+        <div class="mt-2 mb-1 space-y-2 text-xs leading-relaxed">
+          <T key="vietqr.privacy.body" tag="p" />
+          <p>
+            <T
+              key="vietqr.privacy.technicalLabel"
+              class="font-medium text-foreground"
+            />
+            <T key="vietqr.privacy.technical" />
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  import QRCode from "qrcode";
+
+  const $ = <T extends HTMLElement>(id: string) =>
+    document.getElementById(id) as T;
+
+  const form = $<HTMLFormElement>("vqr-form");
+  const bank = $<HTMLInputElement>("bank");
+  const resultContainer = $("result-container");
+  const qrContainer = $("qrcode");
+  const downloadQr = $<HTMLAnchorElement>("download-qr");
+  const outputString = $<HTMLTextAreaElement>("output-string");
+  const copyBtn = $<HTMLButtonElement>("copy-btn");
+  const bankError = $("bank-error");
+
+  const btnCopyOrig = copyBtn.textContent;
+
+  function tlv(tag: string, val: string): string {
+    const vStr = String(val);
+    const len = new TextEncoder().encode(vStr).length;
+    return `${tag}${len.toString().padStart(2, "0")}${vStr}`;
+  }
+
+  function crc16(data: string): string {
+    let crc = 0xffff;
+    for (const byte of new TextEncoder().encode(data)) {
+      crc ^= byte << 8;
+      for (let i = 0; i < 8; i++) {
+        crc = (crc & 0x8000 ? (crc << 1) ^ 0x1021 : crc << 1) & 0xffff;
+      }
+    }
+    return crc.toString(16).toUpperCase().padStart(4, "0");
+  }
+
+  function buildVietQR(
+    b: string,
+    a: string,
+    isDyn: boolean,
+    amt: string,
+    n: string,
+  ): string {
+    const binCode = b.trim();
+    if (!/^\d{6}$/.test(binCode)) throw new Error("Invalid BIN");
+
+    let payload =
+      tlv("00", "01") +
+      tlv("01", isDyn ? "12" : "11") +
+      tlv(
+        "38",
+        tlv("00", "A000000727") +
+          tlv("01", tlv("00", binCode) + tlv("01", a.trim())) +
+          tlv("02", "QRIBFTTA"),
+      ) +
+      tlv("53", "704") +
+      tlv("58", "VN");
+
+    if (amt && Number(amt) > 0) payload += tlv("54", String(Number(amt)));
+    if (n.trim()) payload += tlv("62", tlv("08", n.trim()));
+
+    payload += "6304";
+    return payload + crc16(payload);
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    try {
+      bankError.classList.add("hidden");
+      bank.classList.remove("border-destructive");
+      bank.removeAttribute("aria-invalid");
+
+      const fd = new FormData(form);
+      const rawBank = fd.get("bank") as string;
+      const validBins = (bank.getAttribute("data-bins") || "").split(",");
+      const extractedBins = rawBank.match(/\d{6}/g) || [];
+      const binCode = extractedBins.find((bin) => validBins.includes(bin)) || "";
+
+      if (!binCode) {
+        throw new Error("Invalid BIN");
+      }
+
+      const vqrString = buildVietQR(
+        binCode,
+        fd.get("account") as string,
+        fd.has("dynamic"),
+        fd.get("amount") as string,
+        fd.get("note") as string,
+      );
+
+      outputString.value = vqrString;
+
+      const canvas = document.createElement("canvas");
+      await QRCode.toCanvas(canvas, vqrString, {
+        width: 300,
+        margin: 2,
+        color: { dark: "#000000", light: "#ffffff" },
+      });
+
+      qrContainer.replaceChildren(canvas);
+      downloadQr.href = canvas.toDataURL("image/png");
+
+      resultContainer.classList.remove("hidden");
+      void resultContainer.offsetWidth;
+      resultContainer.classList.add("opacity-100");
+    } catch (err) {
+      bankError.classList.remove("hidden");
+      bank.classList.add("border-destructive");
+      bank.setAttribute("aria-invalid", "true");
+    }
+  });
+
+  copyBtn.addEventListener("click", () => {
+    if (!outputString.value) return;
+    navigator.clipboard.writeText(outputString.value).then(() => {
+      copyBtn.textContent =
+        document.documentElement.lang === "vi" ? "Đã chép!" : "Copied!";
+      setTimeout(() => {
+        copyBtn.textContent = btnCopyOrig;
+      }, 2000);
+    });
+  });
+</script>
