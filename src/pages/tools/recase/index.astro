@@ -28,9 +28,9 @@ const tl = (key: string) => t(lang, `recase.${key}`);
         </div>
         
         <!-- Operation Select -->
-        <div class="space-y-2">
-          <label for="operation" class="sr-only">Operation</label>
-          <select id="operation" class="w-full h-10 px-3 py-2 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+        <div>
+          <label for="operation" class="block text-sm font-medium text-transparent select-none pointer-events-none mb-2" aria-hidden="true">Operation</label>
+          <select id="operation" aria-label="Operation" class="w-full h-10 px-3 py-2 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
             <!-- Populated via JS -->
           </select>
         </div>
@@ -39,13 +39,15 @@ const tl = (key: string) => t(lang, `recase.${key}`);
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Input -->
         <div class="space-y-2 flex flex-col">
-          <label for="input-text" class="block text-sm font-medium mb-1"><T key="recase.input" /></label>
+          <div class="flex items-center h-8 mb-1">
+            <label for="input-text" class="block text-sm font-medium"><T key="recase.input" /></label>
+          </div>
           <textarea id="input-text" rows="12" class="w-full flex-grow p-3 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-y" placeholder="..."></textarea>
         </div>
         
         <!-- Output -->
         <div class="space-y-2 flex flex-col">
-          <div class="flex items-center justify-between mb-1">
+          <div class="flex items-center justify-between h-8 mb-1">
             <label for="output-text" class="block text-sm font-medium"><T key="recase.output" /></label>
             <button id="copy-btn" type="button" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:bg-accent hover:text-accent-foreground h-8 px-3 py-1 bg-secondary text-secondary-foreground">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
