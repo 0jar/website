@@ -3,7 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
 import Card from "@/components/ui/Card.astro";
 import CardList from "@/components/ui/CardList.astro";
-import { getData } from "@/content.config";
+import { getData } from "@/lib/data";
 
 const allWebrings = await getData("webrings");
 const activeWebringItems = allWebrings.filter(w => w.status === "active");

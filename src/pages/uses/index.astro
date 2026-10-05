@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
-import { getData } from "@/content.config";
+import { getData } from "@/lib/data";
 import { usesIcons } from "@/lib/constants";
 
 const usesCategories = await getData("uses");

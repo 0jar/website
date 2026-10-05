@@ -1,7 +1,7 @@
 // Content Collections
 // https://docs.astro.build/en/guides/content-collections/
 
-import { defineCollection, getCollection } from "astro:content";
+import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 import { supportedLanguages } from "@/lib/constants";
@@ -153,14 +153,3 @@ export type UsesItem = z.infer<typeof usesItem>;
 export type UsesCategory = z.infer<typeof usesSchema>;
 export type WebringItem = z.infer<typeof webringsSchema>;
 
-type DataMap = {
-  now: NowItem;
-  projects: Project;
-  uses: UsesCategory;
-  webrings: WebringItem;
-};
-
-export async function getData<C extends keyof DataMap>(name: C): Promise<DataMap[C][]> {
-  const entries = await getCollection(name);
-  return entries.map((e: { data: DataMap[C] }) => e.data);
-}

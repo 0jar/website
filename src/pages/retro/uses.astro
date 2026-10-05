@@ -1,6 +1,6 @@
 ---
 import RetroLayout from "@/layouts/RetroLayout.astro";
-import { getData } from "@/content.config";
+import { getData } from "@/lib/data";
 
 const usesCategories = await getData("uses");
 const lang = Astro.locals?.lang || "en";

@@ -1,6 +1,6 @@
 ---
 import RetroLayout from "@/layouts/RetroLayout.astro";
-import { getData } from "@/content.config";
+import { getData } from "@/lib/data";
 
 const nowItems = await getData("now");
 const lastUpdated = nowItems.reduce((latest, item) => {

@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
-import { getData, type I18nContent, type I18nContentOptional } from "@/content.config";
+import { getData } from "@/lib/data";
+import type { I18nContent, I18nContentOptional } from "@/content.config";
 import { nowIcons } from "@/lib/constants";
 import Card from "@/components/ui/Card.astro";
 import CardList from "@/components/ui/CardList.astro";

@@ -3,7 +3,8 @@
 // Server-side rendered with client-side progressive enhancement for Last.fm
 import T from "@/components/ui/T.astro";
 import { t } from "@/i18n";
-import { getData, type I18nContent, type I18nContentOptional } from "@/content.config";
+import { getData } from "@/lib/data";
+import type { I18nContent, I18nContentOptional } from "@/content.config";
 
 const nowItems = await getData("now");
 
