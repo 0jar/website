@@ -73,7 +73,7 @@ const safeUrl = (url?: string): string | undefined => {
 const lang = Astro.locals?.lang || "en";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) => !data.draft);
   return posts.map((post: CollectionEntry<"blog">) => ({
     params: { slug: post.id },
     props: { post },

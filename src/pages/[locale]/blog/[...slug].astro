@@ -4,7 +4,7 @@ import { locales } from "@/i18n/routing";
 import { getCollection, type CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) => !data.draft);
   return locales.flatMap((locale) =>
     posts.map((post: CollectionEntry<"blog">) => ({
       params: { locale, slug: post.id },
