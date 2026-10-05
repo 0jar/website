@@ -43,8 +43,6 @@
     }
   },
   "dependencies": {
-    "isomorphic-dompurify": "^3.19.0",
-    "marked": "^18.1.0",
     "qrcode": "^1.5.4"
   }
 }

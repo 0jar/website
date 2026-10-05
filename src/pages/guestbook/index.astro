@@ -143,8 +143,17 @@ const extraFields = [
 </BaseLayout>
 
 <script>
-  import { parseMarkdown } from "@/lib/utils/markdown";
   import { updateDateElements } from "@/lib/utils/timezone";
+  function simpleMarkdown(text: string) {
+    if (!text) return "";
+    return text
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/_(.*?)_/g, '<em>$1</em>')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">$1</a>')
+      .replace(/\n/g, '<br/>');
+  }
 
   function setupTabs() {
     const $ = (id: string) => document.getElementById(id);
@@ -166,7 +175,7 @@ const extraFields = [
     w.addEventListener('click', () => { toggle(true); t.focus(); });
     p.addEventListener('click', () => {
       toggle(false);
-      c.innerHTML = parseMarkdown((t as HTMLTextAreaElement).value.trim()) || `<p class="text-muted-foreground italic">${c.dataset.emptyText}</p>`;
+      c.innerHTML = simpleMarkdown((t as HTMLTextAreaElement).value.trim()) || `<p class="text-muted-foreground italic">${c.dataset.emptyText}</p>`;
     });
   }
 

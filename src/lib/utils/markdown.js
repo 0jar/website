@@ -1,31 +1,13 @@
-import { marked } from "marked";
-import DOMPurify from "isomorphic-dompurify";
-
-// Ensure links open in a new tab safely
-DOMPurify.addHook('afterSanitizeAttributes', function (node) {
-  if (node.tagName === 'A') {
-    node.setAttribute('target', '_blank');
-    node.setAttribute('rel', 'noopener noreferrer');
-  }
-});
-
 export function parseMarkdown(text) {
   if (!text) return "";
 
-  // Parse markdown to HTML
-  const rawHtml = marked.parse(text, { 
-    gfm: true, 
-    breaks: true 
-  });
-
-  // Sanitize the HTML to prevent XSS
-  const cleanHtml = DOMPurify.sanitize(rawHtml, {
-    ALLOWED_TAGS: [
-      'b', 'i', 'em', 'strong', 'a', 'p', 'br', 'code', 'pre', 'blockquote', 
-      'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'del', 'hr'
-    ],
-    ALLOWED_ATTR: ['href', 'title', 'class'],
-  });
-
-  return cleanHtml;
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/_(.*?)_/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">$1</a>')
+    .replace(/\n/g, '<br/>');
 }
