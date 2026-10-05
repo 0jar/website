@@ -1,15 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "target": "ES2022",
     "paths": {
       "@/*": ["./src/*"]
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "resolveJsonModule": true
+    "jsxImportSource": "preact"
   },
-  "include": ["src/**/*", "src/**/*.astro"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
