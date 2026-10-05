@@ -260,7 +260,6 @@
   }
 }
 
-
 /* Custom cursor overrides (designed by NOiiRE) */
 *, *::before, *::after {
   cursor: url('/cursor/normal.gif'), auto;
@@ -449,6 +448,7 @@
 :is(.stars-1a, .stars-2a, .stars-3a) {
   opacity: 0;
   visibility: hidden;
+  will-change: opacity;
 }
 
 .dark :is(.stars-1a, .stars-2a, .stars-3a) {
@@ -514,6 +514,7 @@
   /* Light mode particles */
   opacity: 1;
   visibility: visible;
+  will-change: transform;
   background-image: radial-gradient(4px 4px at 20px 30px, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 40px 70px, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   background-repeat: repeat;
