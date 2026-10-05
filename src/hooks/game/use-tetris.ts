@@ -71,11 +71,15 @@ const isColliding = (shape: number[][], x: number, y: number, board: Board): boo
 
 /** Builds display board: locked cells + ghost piece + active piece. */
 const buildDisplayBoard = (board: Board, piece: Piece | null): Board => {
-  const d = board.map((row) => [...row])
-  if (!piece) return d
+  if (!piece) return board
+  const d = [...board]
 
   const { type, shape, x, y } = piece
   const color = TETROMINOS[type].color
+
+  const touchRow = (rowIndex: number) => {
+    if (d[rowIndex] === board[rowIndex]) d[rowIndex] = [...board[rowIndex]]
+  }
 
   // Ghost piece
   let ghostY = y
@@ -83,13 +87,19 @@ const buildDisplayBoard = (board: Board, piece: Piece | null): Board => {
   if (ghostY !== y)
     eachCell(shape, (r, c) => {
       const by = ghostY + r, bx = x + c
-      if (inBounds(bx, by) && !d[by][bx]) d[by][bx] = 'ghost'
+      if (inBounds(bx, by) && !board[by][bx]) {
+        touchRow(by)
+        d[by][bx] = 'ghost'
+      }
     })
 
   // Active piece
   eachCell(shape, (r, c) => {
     const by = y + r, bx = x + c
-    if (inBounds(bx, by)) d[by][bx] = color
+    if (inBounds(bx, by)) {
+      touchRow(by)
+      d[by][bx] = color
+    }
   })
 
   return d
@@ -126,12 +136,15 @@ export function useTetris() {
 
   const placePieceAndSpawn = useCallback(
     (pieceType: TetrominoType, shape: number[][], px: number, py: number) => {
-      const nb = board.map((row) => [...row])
+      const nb = [...board]
       const color = TETROMINOS[pieceType].color
 
       eachCell(shape, (r, c) => {
         const ny = py + r, nx = px + c
-        if (inBounds(nx, ny)) nb[ny][nx] = color
+        if (inBounds(nx, ny)) {
+          if (nb[ny] === board[ny]) nb[ny] = [...board[ny]]
+          nb[ny][nx] = color
+        }
       })
 
       let cleared = 0

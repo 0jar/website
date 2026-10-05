@@ -204,7 +204,7 @@ export function useGame2048() {
 
   const saveToHistory = useCallback((currentBoard: GameBoard, currentScore: number) => {
     setHistory((prev) => {
-      const newHistory = [...prev, { board: currentBoard.map((row) => [...row]), score: currentScore }]
+      const newHistory = [...prev, { board: currentBoard, score: currentScore }]
       if (newHistory.length > 20) {
         return newHistory.slice(-20)
       }
@@ -216,7 +216,7 @@ export function useGame2048() {
     if (history.length === 0 || isAnimating) return
 
     const previousState = history[history.length - 1]
-    setBoard(previousState.board.map((row) => [...row]))
+    setBoard(previousState.board)
     setScore(previousState.score)
     setHistory((prev) => prev.slice(0, -1))
 
@@ -227,7 +227,6 @@ export function useGame2048() {
     if (gameOver || isAnimating) return
 
     let result: MoveResult | undefined
-    const oldBoard = board.map((row) => [...row])
 
     switch (direction) {
       case 'left':
@@ -244,8 +243,8 @@ export function useGame2048() {
         break
     }
 
-    if (result && !areEqual(oldBoard, result.newBoard)) {
-      saveToHistory(oldBoard, score)
+    if (result && !areEqual(board, result.newBoard)) {
+      saveToHistory(board, score)
 
       setIsAnimating(true)
 
