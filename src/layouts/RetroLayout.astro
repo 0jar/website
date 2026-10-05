@@ -112,6 +112,16 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
               <!-- Main content -->
               <td style="vertical-align: top; width: 75%; background-color: #2A1F45; color: #F2F2F2; padding: 15px; border: 2px inset #4A3F6F;">
                 <slot />
+                {Astro.url.pathname !== '/retro/' && Astro.url.pathname !== '/retro' && (
+                  <>
+                    <br />
+                    <center>
+                      <font size="2">
+                        <a href="/retro/">&lt;&lt; Back to homepage</a>
+                      </font>
+                    </center>
+                  </>
+                )}
               </td>
 
               <!-- Sidebar -->
