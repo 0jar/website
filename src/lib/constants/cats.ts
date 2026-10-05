@@ -1,0 +1,17 @@
+export const cats = [
+  { image: "/moodcat/cat-on-laptop.png", caption: "meowtivated", url: "https://www.reddit.com/r/aww/comments/s3t3mo/coding_cat_is_raising_your_productivity_3/" },
+  { image: "/moodcat/cat-in-box.png", caption: "overthinking like my hooman", url: "https://www.reddit.com/r/aww/comments/1c841o3/my_friend_says_my_cat_has_resting_bewildered_face/" },
+  { image: "/moodcat/keyboard-nap.jpg", caption: "404 nap not found", url: "https://www.reddit.com/r/aww/comments/jdbrgp/how_am_i_supposed_to_game_with_this_tiny_kitten/" },
+  { image: "/moodcat/contemplative-cat-coffee.jpg", caption: "catffeinated", url: "https://x.com/poorlycatdraw/status/1563137689326858240" },
+  { image: "/moodcat/cat-studying.jpg", caption: "studying the meowconomy", url: "https://www.reddit.com/r/CPA/comments/xwi18u/compilation_of_my_cat_studying_with_me" },
+  { image: "/moodcat/academic-cat.jpg", caption: "purrfessor with tenure", url: "https://x.com/fatfatpankocat/status/1545269035738320896" },
+  { image: "/moodcat/date-night-cat.jpg", caption: "waiting for my date to return from the bathroom", url: "https://www.reddit.com/r/notinteresting/comments/1jxeskh/my_friend_went_on_a_date/" },
+  { image: "/moodcat/barista-cat.jpg", caption: "your latte will be ready in a meowment", url: "https://www.reddit.com/r/Catswithjobs/comments/1jw0fvn/the_barista_will_prepare_your_latte_now/" },
+  { image: "/moodcat/security-cat.jpg", caption: "pawsport and ID please", url: "https://www.reddit.com/r/Catswithjobs/comments/dncwls/the_security_guy_in_istanbul_turkey/" },
+  { image: "/moodcat/retail-cat.jpg", caption: "i don't get paid enough for this", url: "https://www.reddit.com/r/Catswithjobs/comments/uopwrf/employee_of_the_month/" },
+  { image: "/moodcat/singing-cat.webp", caption: "hitting those high meowtes", url: "https://www.reddit.com/r/Catswithjobs/comments/1fqw9f3/tenor/" },
+  { image: "/moodcat/postal-cat.png", caption: "US purrstal service, i have a purrcel for you", url: "https://www.reddit.com/r/Catswithjobs/comments/10va12b/maam_us_purrstal_service_i_have_a_purrcel_for_you/" },
+  { image: "/moodcat/pest-control-cat.jpg", caption: "rodents don't have a chance", url: "https://www.reddit.com/r/Catswithjobs/comments/tsxus1/the_rodents_dont_have_a_chance/" },
+  { image: "/moodcat/mechanic-cat.webp", caption: "your purroblem is the catalytic converter", url: "https://www.reddit.com/r/Catswithjobs/comments/11kkwce/shambo_tryna_diagnose_my_car_not_sure_hes/" },
+  { image: "/moodcat/ceo-cat.jpg", caption: "excavation supurrvisor, no breaks until the purrmit is approved", url: "https://www.reddit.com/r/Catswithjobs/comments/1iao56u/the_ceo_himself/" },
+];
