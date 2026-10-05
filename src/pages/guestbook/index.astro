@@ -3,7 +3,6 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
 import { t } from "@/i18n/index";
 import { siteUrl, socialLinks } from "@/lib/constants";
-import { parseMarkdown } from "@/lib/utils/markdown";
 import { messages as rawMessages } from "@/content/guestbook/guestbook";
 import Card from "@/components/ui/Card.astro";
 
@@ -77,17 +76,7 @@ const extraFields = [
 
         <div class="space-y-1.5">
           <label for="message" class="block text-sm font-medium">{t(lang, "guestbook.message")} <span class="text-red-500" aria-hidden="true">*</span></label>
-          <div class="border border-input rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-primary/50 focus-within:border-primary bg-background">
-            <div role="tablist" class="bg-muted/30 border-b border-input flex px-2 pt-2 gap-2">
-              <button type="button" role="tab" aria-selected="true" aria-controls="message" id="tab-write" class="px-3 py-1.5 text-sm font-medium border-b-2 border-primary text-foreground">{t(lang, "guestbook.write")}</button>
-              <button type="button" role="tab" aria-selected="false" aria-controls="preview-container" id="tab-preview" class="px-3 py-1.5 text-sm font-medium border-b-2 border-transparent text-muted-foreground hover:text-foreground">{t(lang, "guestbook.preview")}</button>
-            </div>
-            <div class="p-0">
-              <textarea id="message" role="tabpanel" name="message" required maxlength="10000" rows="4" class="w-full px-3 py-2 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none resize-y min-h-[120px] block" placeholder={t(lang, "guestbook.leaveMessage")}></textarea>
-              <div id="preview-container" data-empty-text={t(lang, "guestbook.nothingToPreview")} role="tabpanel" aria-live="polite" class="hidden w-full px-3 py-2 min-h-[120px] prose prose-sm dark:prose-invert max-w-none text-foreground"></div>
-            </div>
-          </div>
-          <p class="text-xs text-muted-foreground mt-1">{t(lang, "guestbook.markdownSupported")}</p>
+          <textarea id="message" name="message" required maxlength="10000" rows="4" class={inputCls + " resize-y min-h-[120px]"} placeholder={t(lang, "guestbook.leaveMessage")}></textarea>
         </div>
 
         <div class="pt-2">
@@ -112,7 +101,7 @@ const extraFields = [
                 <time class="text-sm text-muted-foreground mt-1 sm:mt-0" datetime={msg.date.toISOString()} data-date={msg.date.toISOString()}>{dtf.format(msg.date)}</time>
               </header>
 
-              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground" set:html={parseMarkdown(msg.message)}></div>
+              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground" class="whitespace-pre-wrap">{msg.message}></div>
 
               {msg.reply && (
                 <div class="mt-4 pl-4 border-l-2 border-primary bg-muted/20 p-3 rounded-r-md">
@@ -124,7 +113,7 @@ const extraFields = [
                       </time>
                     )}
                   </div>
-                  <div class="prose prose-sm dark:prose-invert max-w-none text-foreground" set:html={parseMarkdown(msg.reply)}></div>
+                  <div class="prose prose-sm dark:prose-invert max-w-none text-foreground" class="whitespace-pre-wrap">{msg.reply}></div>
                 </div>
               )}
 
@@ -144,41 +133,6 @@ const extraFields = [
 
 <script>
   import { updateDateElements } from "@/lib/utils/timezone";
-  function simpleMarkdown(text: string) {
-    if (!text) return "";
-    return text
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*(.*?)\*/g, '<em>$1</em>')
-      .replace(/_(.*?)_/g, '<em>$1</em>')
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">$1</a>')
-      .replace(/\n/g, '<br/>');
-  }
-
-  function setupTabs() {
-    const $ = (id: string) => document.getElementById(id);
-    const [w, p, t, c] = ['tab-write', 'tab-preview', 'message', 'preview-container'].map($);
-
-    if (!w || !p || !t || !c) return;
-
-    const toggle = (isWrite: boolean) => {
-      w.className = `px-3 py-1.5 text-sm font-medium border-b-2 ${isWrite ? 'border-primary text-foreground' : 'border-transparent text-muted-foreground hover:text-foreground'}`;
-      w.setAttribute('aria-selected', String(isWrite));
-
-      p.className = `px-3 py-1.5 text-sm font-medium border-b-2 ${!isWrite ? 'border-primary text-foreground' : 'border-transparent text-muted-foreground hover:text-foreground'}`;
-      p.setAttribute('aria-selected', String(!isWrite));
-
-      t.classList.toggle('hidden', !isWrite);
-      c.classList.toggle('hidden', isWrite);
-    };
-
-    w.addEventListener('click', () => { toggle(true); t.focus(); });
-    p.addEventListener('click', () => {
-      toggle(false);
-      c.innerHTML = simpleMarkdown((t as HTMLTextAreaElement).value.trim()) || `<p class="text-muted-foreground italic">${c.dataset.emptyText}</p>`;
-    });
-  }
-
   function setupTimezones() {
     const section = document.querySelector('[aria-labelledby="messages-heading"]');
     if (section) {
@@ -188,10 +142,8 @@ const extraFields = [
     }
   }
 
-  setupTabs();
   setupTimezones();
   document.addEventListener('astro:page-load', () => {
-    setupTabs();
     setupTimezones();
   });
 </script>
