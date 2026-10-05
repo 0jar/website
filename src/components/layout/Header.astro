@@ -1,4 +1,5 @@
 ---
+import Icon from "@/components/ui/Icon.astro";
 import { navItems, author } from "@/lib/constants";
 import T from "@/components/ui/T.astro";
 import LanguageToggle from "@/components/layout/LanguageToggle.astro";
@@ -15,7 +16,6 @@ const navState = navItems.map((item) => ({ ...item, href: localePath(lang, item.
 const focusBase = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 const navBase = `text-sm transition-colors hover:text-primary whitespace-nowrap ${focusBase} rounded-sm`;
 
-const iconBase = { xmlns: "http://www.w3.org/2000/svg", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round" as const, "stroke-linejoin": "round" as const, viewBox: "0 0 24 24" };
 ---
 
 <header class="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
@@ -58,8 +58,8 @@ const iconBase = { xmlns: "http://www.w3.org/2000/svg", fill: "none", stroke: "c
       <!-- Mobile hamburger menu -->
       <details class="group lg:hidden relative">
         <summary class={`p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden ${focusBase}`} aria-label="Toggle navigation menu">
-          <svg class="group-open:hidden" {...iconBase} width="20" height="20" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg class="hidden group-open:block" {...iconBase} width="20" height="20" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          <Icon name="menu" class="group-open:hidden" width="20" height="20" />
+          <Icon name="close" class="hidden group-open:block" width="20" height="20" />
         </summary>
         <nav class="absolute right-0 top-full mt-2 w-48 rounded-md border bg-background/95 backdrop-blur-sm shadow-lg py-2 z-50" aria-label="Mobile navigation">
           {navState.map(({ href, key, active }) => (

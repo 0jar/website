@@ -1,4 +1,5 @@
 ---
+import Icon from "@/components/ui/Icon.astro";
 // Notification banners: incomplete-translation warning + polyglot easter egg
 import { supportedLanguages, completedLanguages } from "@/lib/constants";
 import T from "@/components/ui/T.astro";
@@ -13,12 +14,10 @@ const isComplete = (completedLanguages as readonly string[]).includes(lang);
 {!isComplete && lang !== "en" && (
   <div id="lang-notice" class="fixed top-16 inset-x-0 z-50 flex justify-center p-4">
     <div class="bg-amber-100 dark:bg-amber-900 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-100 px-4 py-3 rounded-lg shadow-md flex items-center max-w-xl">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 flex-shrink-0" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" />
-      </svg>
+      <Icon name="info" width="20" height="20" class="mr-3 flex-shrink-0" />
       <T key="languageNotice.message" tag="p" class="text-sm" />
       <button data-dismiss="lang-notice" class="ml-4 p-1 rounded-full hover:bg-amber-200 dark:hover:bg-amber-800 transition-colors" aria-label={t(lang, "languageNotice.dismiss")}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+        <Icon name="close" width="16" height="16" />
       </button>
     </div>
   </div>
@@ -27,17 +26,13 @@ const isComplete = (completedLanguages as readonly string[]).includes(lang);
 <!-- Polyglot easter egg -->
 <div id="easter-egg" class="fixed top-16 inset-x-0 z-50 flex justify-center p-4 hidden">
   <div class="bg-purple-100 dark:bg-purple-900 border border-purple-200 dark:border-purple-800 text-purple-800 dark:text-purple-100 px-4 py-3 rounded-lg shadow-md flex items-center max-w-xl">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 flex-shrink-0" aria-hidden="true">
-      <path d="M5.8 11.3 2 22l10.7-3.79" /><path d="M4 3h.01" /><path d="M22 8h.01" /><path d="M15 2h.01" /><path d="M22 20h.01" />
-      <path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10" />
-      <path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.63-.69 1.1-1.34 1.1H16c-1.1 0-2 .9-2 2v2a2 2 0 0 1-2 2H9.82a2 2 0 0 1-1.95-1.57L7 14" />
-    </svg>
+    <Icon name="wand" width="20" height="20" class="mr-3 flex-shrink-0" />
     <div class="flex flex-col">
       <p class="text-sm font-medium">Achievement Unlocked: Polyglot!</p>
       <p class="text-xs opacity-80">You&apos;ve visited all {langCount} language versions of this site. Impressive!</p>
     </div>
     <button data-dismiss="easter-egg" class="ml-4 p-1 rounded-full hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors" aria-label="Dismiss">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+      <Icon name="close" width="16" height="16" />
     </button>
   </div>
 </div>

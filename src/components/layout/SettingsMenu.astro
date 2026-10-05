@@ -1,11 +1,9 @@
 ---
+import Icon from "@/components/ui/Icon.astro";
 import T from "@/components/ui/T.astro";
 
 const focusBase = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
-// Reused SVG path data
-const gearPath = "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z";
-const iconBase = { xmlns: "http://www.w3.org/2000/svg", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round" as const, "stroke-linejoin": "round" as const, viewBox: "0 0 24 24" };
 
 // Toggle switch class constants
 const toggleBase = "settings-toggle relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-border transition-colors";
@@ -15,17 +13,15 @@ const knobCls = (on: boolean) => `${knobBase} ${on ? "bg-white translate-x-4" : 
 
 // Settings toggles: id, i18n key, default on, SVG icon fragment
 const toggles = [
-  { id: "settings-stars-toggle",    i18n: "settings.stars",        defaultOn: true,  icon: `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />` },
-  { id: "settings-motion-toggle",   i18n: "settings.reduceMotion", defaultOn: false, icon: `<circle cx="12" cy="12" r="10" stroke-dasharray="3 3" />` },
-  { id: "settings-contrast-toggle", i18n: "settings.highContrast", defaultOn: false, icon: `<circle cx="12" cy="12" r="10" /><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor" />` },
+  { id: "settings-stars-toggle",    i18n: "settings.stars",        defaultOn: true,  iconName: "stars" },
+  { id: "settings-motion-toggle",   i18n: "settings.reduceMotion", defaultOn: false, iconName: "motion" },
+  { id: "settings-contrast-toggle", i18n: "settings.highContrast", defaultOn: false, iconName: "contrast" },
 ] as const;
 ---
 
 <details id="settings-menu" class="group relative">
   <summary class={`p-2 rounded-md hover:bg-muted transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden ${focusBase}`} aria-label="Settings">
-    <svg {...iconBase} width="20" height="20" aria-hidden="true">
-      <path d={gearPath} /><circle cx="12" cy="12" r="3" />
-    </svg>
+    <Icon name="settings" width="20" height="20" />
   </summary>
   <div class="absolute right-0 top-full mt-2 w-72 rounded-md border bg-background/95 backdrop-blur-sm shadow-lg py-3 px-4 z-50 space-y-4" role="group" aria-label="Settings">
     <T key="settings.title" tag="h3" class="text-lg font-semibold text-foreground" />
@@ -34,37 +30,25 @@ const toggles = [
     <!-- Theme -->
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2.5">
-        <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
-          <path d={gearPath} /><circle cx="12" cy="12" r="3" />
-        </svg>
+        <Icon name="settings" width="18" height="18" class="text-muted-foreground" />
         <T key="settings.theme" class="text-sm font-medium" />
       </div>
       <div class="flex rounded-md border border-border overflow-hidden" role="radiogroup" aria-label="Theme selection">
         <button data-set-theme="system" class="settings-theme-btn px-2.5 py-1 text-xs font-medium transition-colors" role="radio" aria-checked="false" aria-label="Auto (system theme)"><T key="settings.themeAuto" /></button>
         <button data-set-theme="light" class="settings-theme-btn px-2 py-1 transition-colors border-x border-border" role="radio" aria-checked="false" aria-label="Light theme">
-          <svg {...iconBase} width="14" height="14" aria-hidden="true">
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2" /><path d="M12 20v2" />
-            <path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" />
-            <path d="M2 12h2" /><path d="M20 12h2" />
-            <path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
-          </svg>
+          <Icon name="sun" width="14" height="14" />
         </button>
         <button data-set-theme="dark" class="settings-theme-btn px-2 py-1 transition-colors" role="radio" aria-checked="false" aria-label="Dark theme">
-          <svg {...iconBase} width="14" height="14" aria-hidden="true">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-          </svg>
+          <Icon name="moon" width="14" height="14" />
         </button>
       </div>
     </div>
 
     <!-- Toggle switches -->
-    {toggles.map(({ id, i18n, defaultOn, icon }) => (
+    {toggles.map(({ id, i18n, defaultOn, iconName }) => (
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-2.5">
-          <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
-            <Fragment set:html={icon} />
-          </svg>
+          <Icon name={iconName} width="18" height="18" class="text-muted-foreground" />
           <T key={i18n} class="text-sm font-medium" id={`${id}-label`} />
         </div>
         <button id={id} type="button" role="switch" aria-checked={defaultOn ? "true" : "false"} aria-labelledby={`${id}-label`}
@@ -76,9 +60,7 @@ const toggles = [
 
     <div class="flex items-center justify-between gap-4">
       <div class="flex items-center gap-2.5">
-        <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
-          <path d="M4 7V4h16v3M9 20h6M12 4v16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <Icon name="font" width="18" height="18" class="text-muted-foreground" />
         <T key="settings.fontFamily" class="text-sm font-medium" id="font-family-label" />
       </div>
       <select id="settings-font-select" aria-labelledby="font-family-label" class={`font-preview-select px-3 py-1.5 text-sm font-medium bg-muted text-foreground border border-border rounded-md transition-all hover:bg-muted/80 hover:border-primary/50 ${focusBase}`}>
@@ -109,10 +91,7 @@ const toggles = [
     <!-- Timezone anchor -->
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2.5">
-        <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" />
-          <polyline points="12 6 12 12 16 14" />
-        </svg>
+        <Icon name="clock" width="18" height="18" class="text-muted-foreground" />
         <T key="settings.timezone" class="text-sm font-medium" />
       </div>
       <div class="flex rounded-md border border-border overflow-hidden" role="radiogroup" aria-label="Timezone selection">
@@ -124,10 +103,7 @@ const toggles = [
     <!-- Music (disabled) -->
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2.5">
-        <svg {...iconBase} width="18" height="18" class="text-muted-foreground" aria-hidden="true">
-          <path d="M11 5 6 9H2v6h4l5 4V5Z" />
-          <line x1="23" x2="17" y1="9" y2="15" /><line x1="17" x2="23" y1="9" y2="15" />
-        </svg>
+        <Icon name="musicOff" width="18" height="18" class="text-muted-foreground" />
         <div>
           <T key="settings.music" class="text-sm font-medium" />
           <T key="settings.musicUnavailable" tag="p" class="text-xs text-muted-foreground" />
