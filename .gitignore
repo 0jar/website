@@ -20,6 +20,7 @@ package-lock.json
 .eslintcache
 .pnpm-store
 .vscode-test/
+src/content/blog/.obsidian/
 
 # do not commit .env files or any files that end with `.env`
 *.env
