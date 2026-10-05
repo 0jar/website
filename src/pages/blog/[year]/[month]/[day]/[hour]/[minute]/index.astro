@@ -1,9 +1,10 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getPublishedPosts } from "@/lib/blog";
+import type { CollectionEntry } from "astro:content";
 import { siteUrl, getSiteName } from "@/lib/constants";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }: { data: CollectionEntry<"blog">["data"] }) => !data.draft);
+  const posts = await getPublishedPosts();
   return posts.map((post: CollectionEntry<"blog">) => {
     const d = post.data.date;
     return {

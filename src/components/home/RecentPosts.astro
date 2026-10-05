@@ -1,6 +1,7 @@
 ---
 // Recent posts component
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getPublishedPosts } from "@/lib/blog";
+import type { CollectionEntry } from "astro:content";
 import T from "@/components/ui/T.astro";
 import { routes } from "@/lib/constants";
 import { localePath } from "@/i18n/routing";
@@ -16,8 +17,7 @@ type RecentPost = {
   dateTextEn: string;
 };
 
-const posts: RecentPost[] = (await getCollection("blog", ({ data }: CollectionEntry<"blog">) => !data.draft))
-  .sort((a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) => b.data.date.getTime() - a.data.date.getTime())
+const posts: RecentPost[] = (await getPublishedPosts())
   .slice(0, 3)
   .map((post: CollectionEntry<"blog">) => ({
     slug: post.id,

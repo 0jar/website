@@ -1,7 +1,7 @@
 ---
 // Dynamic blog post page
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { getCollection, render, type CollectionEntry } from "astro:content";
+import { render, type CollectionEntry } from "astro:content";
 import ShareButtons from "@/components/blog/ShareButtons.astro";
 import T from "@/components/ui/T.astro";
 import { t } from "@/i18n";
@@ -15,17 +15,10 @@ import {
 import { localePath, stripLocale } from "@/i18n/routing";
 import { dateFull } from "@/lib/utils/timezone";
 
-type BlogEntry = CollectionEntry<"blog">;
+import { getPublishedPosts } from "@/lib/blog";
 
-const publishedBlogPostsSortedPromise = getCollection(
-  "blog",
-  ({ data }: BlogEntry) => !data.draft,
-).then((posts: BlogEntry[]) =>
-  posts.sort(
-    (a: BlogEntry, b: BlogEntry) =>
-      b.data.date.getTime() - a.data.date.getTime(),
-  ),
-);
+
+const publishedBlogPostsSortedPromise = getPublishedPosts();
 
 interface WebmentionAuthor {
   type?: string;
@@ -52,7 +45,7 @@ async function fetchWebmentions(target: string): Promise<Webmention[]> {
   if (webmentionsCache.has(target)) return webmentionsCache.get(target)!;
   const promise = fetch(`https://webmention.io/api/mentions.jf2?target=${encodeURIComponent(target)}`)
     .then(r => r.ok ? r.json() : { children: [] })
-    .then(j => (j.children ?? []).sort((a: Webmention, b: Webmention) => 
+    .then(j => (j.children ?? []).sort((a: Webmention, b: Webmention) =>
       new Date(a.published || a["wm-received"] || 0).getTime() - new Date(b.published || b["wm-received"] || 0).getTime()
     ))
     .catch(() => []);
@@ -73,7 +66,7 @@ const safeUrl = (url?: string): string | undefined => {
 const lang = Astro.locals?.lang || "en";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) => !data.draft);
+  const posts = await getPublishedPosts();
   return posts.map((post: CollectionEntry<"blog">) => ({
     params: { slug: post.id },
     props: { post },

@@ -3,7 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
 import Card from "@/components/ui/Card.astro";
 import CardList from "@/components/ui/CardList.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getPublishedPosts } from "@/lib/blog";
 import { supportedLanguages } from "@/lib/constants";
 import { t as serverT } from "@/i18n";
 import { localePath } from "@/i18n/routing";
@@ -11,8 +11,7 @@ import { localePath } from "@/i18n/routing";
 const lang = Astro.locals?.lang || "en";
 const languageNames = Object.fromEntries(supportedLanguages.map(l => [l.code, l.name]));
 
-const allPosts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) => !data.draft);
-const posts = allPosts.sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime());
+const posts = await getPublishedPosts();
 
 const toTaxonomyKey = (value: string) => value.trim().toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || value;
 
