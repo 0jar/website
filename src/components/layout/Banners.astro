@@ -25,7 +25,7 @@ const isComplete = (completedLanguages as readonly string[]).includes(lang);
 )}
 
 <!-- Polyglot easter egg -->
-<div id="easter-egg" class="fixed top-16 inset-x-0 z-50 flex justify-center p-4 hidden" data-lang-codes={JSON.stringify(supportedLanguages.map(l => l.code))}>
+<div id="easter-egg" class="fixed top-16 inset-x-0 z-50 flex justify-center p-4 hidden">
   <div class="bg-purple-100 dark:bg-purple-900 border border-purple-200 dark:border-purple-800 text-purple-800 dark:text-purple-100 px-4 py-3 rounded-lg shadow-md flex items-center max-w-xl">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 flex-shrink-0" aria-hidden="true">
       <path d="M5.8 11.3 2 22l10.7-3.79" /><path d="M4 3h.01" /><path d="M22 8h.01" /><path d="M15 2h.01" /><path d="M22 20h.01" />
@@ -63,14 +63,14 @@ const isComplete = (completedLanguages as readonly string[]).includes(lang);
 
     // Polyglot easter egg
     var locale = document.documentElement.dataset.locale || "en";
-    var egg = document.getElementById("easter-egg");
-    var allCodes = JSON.parse(egg?.dataset.langCodes || "[]");
+    var allCodes = JSON.parse(document.getElementById("easter-egg")?.closest("[data-lang-codes]")?.dataset.langCodes || "[]");
     try {
       var visited = JSON.parse(localStorage.getItem("language-tracker") || "[]");
       var s = new Set(visited);
       s.add(locale);
       localStorage.setItem("language-tracker", JSON.stringify(Array.from(s)));
       if (allCodes.length > 0 && allCodes.every(function (c) { return s.has(c); })) {
+        var egg = document.getElementById("easter-egg");
         if (egg) egg.classList.remove("hidden");
       }
     } catch (e) {}
