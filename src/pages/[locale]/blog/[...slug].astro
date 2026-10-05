@@ -1,16 +1,21 @@
 ---
 // Locale blog post, same rendering as root blog post.
 import { locales } from "@/i18n/routing";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
+
+import { getPublishedPosts } from "@/lib/blog";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) => !data.draft);
-  return locales.flatMap((locale) =>
-    posts.map((post: CollectionEntry<"blog">) => ({
-      params: { locale, slug: post.id },
+  const posts = await getPublishedPosts();
+  return posts
+    .filter((post: CollectionEntry<"blog">) => {
+      const lang = post.data.language || "en";
+      return locales.includes(lang);
+    })
+    .map((post: CollectionEntry<"blog">) => ({
+      params: { locale: post.data.language, slug: post.id },
       props: { post },
-    }))
-  );
+    }));
 }
 
 import BlogPost from "../../blog/[...slug].astro";

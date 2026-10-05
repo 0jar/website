@@ -9,7 +9,7 @@ export const GET = async ({ site }) => {
   const blogPosts = await getCollection("blog", ({ data }) => !data.draft);
 
   // Get all .astro pages
-  const pages = import.meta.glob("/src/pages/**/*.astro", { eager: true });
+  const pages = import.meta.glob("/src/pages/**/*.astro");
 
   const staticPages = [];
   for (const path of Object.keys(pages)) {
@@ -45,7 +45,7 @@ export const GET = async ({ site }) => {
     // Locale static pages
     ...locales.flatMap((l) => localePages.map((p) => `  <url>\n    <loc>${siteUrl}/${l}/${p}/</loc>\n  </url>`)),
     // Locale blog posts
-    ...locales.flatMap((l) => blogPosts.map((post) => `  <url>\n    <loc>${siteUrl}/${l}/blog/${post.id}/</loc>\n  </url>`)),
+    ...blogPosts.filter(post => locales.includes(post.data.language || 'en')).map((post) => `  <url>\n    <loc>${siteUrl}/${post.data.language}/blog/${post.id}/</loc>\n  </url>`),
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
