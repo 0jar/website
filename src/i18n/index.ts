@@ -16,19 +16,10 @@ export const translations: Record<string, Record<string, unknown>> = {
   en, vi, ru, et, da, zh, pl, tok, "vi-Hani": viHani,
 };
 
-export function getNestedValue(obj: Record<string, unknown>, path: string): string | undefined {
-  let cur: unknown = obj;
-  for (const k of path.split(".")) {
-    if (cur && typeof cur === "object" && k in cur) cur = (cur as Record<string, unknown>)[k];
-    else return undefined;
-  }
-  return typeof cur === "string" ? cur : undefined;
-}
+import { getNestedValue, interpolate } from "@/i18n/utils";
 
 export function t(lang: string, key: string, params?: Record<string, string | number>): string {
   const value = getNestedValue(translations[lang] || translations.en, key)
     ?? (lang !== "en" ? getNestedValue(translations.en, key) : undefined);
-  if (!value) return key;
-  if (!params) return value;
-  return Object.entries(params).reduce((s, [k, v]) => s.replaceAll(`{{${k}}}`, String(v)), value);
+  return value ? interpolate(value as string, params) : key;
 }

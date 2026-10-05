@@ -24,7 +24,7 @@ export const dateFull = {
 
 // --- Timezone ---
 export function getTimezoneOption() {
-  if (typeof localStorage === "undefined") return {};
+  if (typeof window === "undefined" || typeof localStorage === "undefined" || !localStorage.getItem) return {};
   return localStorage.getItem("timezone-anchor") === "author"
     ? { timeZone: authorTimezone }
     : {};

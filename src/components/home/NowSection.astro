@@ -5,6 +5,7 @@ import T from "@/components/ui/T.astro";
 import { t } from "@/i18n";
 import { getData } from "@/lib/data";
 import type { I18nContent, I18nContentOptional } from "@/content.config";
+import { formatDate, dateFull } from "@/lib/utils/timezone";
 
 const nowItems = await getData("now");
 
@@ -61,7 +62,7 @@ const getCategoryTranslation = (category: string) => {
           )}
         </div>
         <time class="text-xs text-muted-foreground mt-1 block" datetime={item.date} data-date={item.date}>
-          {new Date(item.date).toLocaleDateString(lang, { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", timeZoneName: "short" })}
+          {formatDate(item.date, lang, dateFull)}
         </time>
       </article>
     ))}
