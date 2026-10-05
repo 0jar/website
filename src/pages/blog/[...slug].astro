@@ -574,6 +574,37 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
     }
   }
 
+  function initMarkdownEnhancements() {
+    document.querySelectorAll('.blog-content pre, .blog-content blockquote').forEach(node => {
+      if (node.querySelector('.copy-button')) return;
+      const btn = document.createElement('button');
+      btn.className = 'copy-button';
+      btn.type = 'button';
+      btn.ariaLabel = node.tagName === 'PRE' ? 'Copy code' : 'Copy quote';
+      btn.title = 'Copy to clipboard';
+      btn.innerHTML = copyIcon;
+      node.appendChild(btn);
+    });
+
+    document.querySelectorAll('.blog-content p > img:only-child').forEach(img => {
+      const imgEl = img as HTMLImageElement;
+      if (!imgEl.alt) return;
+      const p = imgEl.parentElement;
+      if (!p || p.textContent?.trim()) return; 
+      
+      const figure = document.createElement('figure');
+      const figcaption = document.createElement('figcaption');
+      figcaption.textContent = imgEl.alt;
+      
+      figure.appendChild(imgEl.cloneNode(true));
+      figure.appendChild(figcaption);
+      p.replaceWith(figure);
+    });
+  }
+
+  initMarkdownEnhancements();
+  document.addEventListener('astro:page-load', initMarkdownEnhancements);
+
   document.addEventListener("click", (e) => {
     const btn = (e.target as Element).closest(".copy-button") as HTMLButtonElement | null;
     if (btn && btn.parentElement) {
