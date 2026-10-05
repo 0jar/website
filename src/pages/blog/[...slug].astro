@@ -353,7 +353,7 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
       </div>
 
       {
-        alternates?.length > 0 && (
+        (alternates && alternates.length > 0) && (
           <div class="mt-4 p-3 rounded-lg bg-muted/50 border" aria-label="Language alternates">
             <T key="blog.availableIn" class="text-sm text-muted-foreground" />
             <span class="text-sm text-muted-foreground"> </span>
@@ -362,7 +362,7 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
                 <a href={`/blog/${alt.slug}/`} hreflang={alt.language} class="text-sm text-primary hover:underline">
                   {supportedLanguages.find((l) => l.code === alt.language)?.name || alt.language.toUpperCase()}
                 </a>
-                {i < alternates.length - 1 && <span class="text-muted-foreground">, </span>}
+                {alternates && i < alternates.length - 1 && <span class="text-muted-foreground">, </span>}
               </>
             ))}
           </div>
