@@ -11,7 +11,7 @@ const lang = Astro.locals.lang;
 <BaseLayout title={t(lang, "colophon.title")} description={t(lang, "colophon.description")}>
   <div class="container mx-auto px-4 py-8 lg:py-12">
     <article class="prose dark:prose-invert mx-auto max-w-2xl break-words">
-      <T key="colophon.title" tag="h1" />
+      <T key="colophon.title" tag="h1" class="text-center" />
       <T key="colophon.intro" tag="p" />
       <p><a href={author.repoUrl}><T key="colophon.source" /></a></p>
 
