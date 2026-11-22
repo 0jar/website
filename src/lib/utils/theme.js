@@ -6,9 +6,10 @@ export function applyTheme(theme) {
   document.documentElement.classList.remove("light", "dark");
   const resolved = theme === "light" ? "light"
     : theme === "system" ? window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-    : "dark";
+      : "dark";
   document.documentElement.classList.add(resolved);
   document.documentElement.style.colorScheme = resolved;
+  document.dispatchEvent(new Event("theme-change"));
 }
 
 export function cycleTheme() {

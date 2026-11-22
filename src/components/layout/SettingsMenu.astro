@@ -13,6 +13,7 @@ const knobCls = (on: boolean) => `${knobBase} ${on ? "bg-white translate-x-4" : 
 
 // Settings toggles: id, i18n key, default on, SVG icon fragment
 const toggles = [
+  { id: "settings-shortcuts-toggle", i18n: "keyboardShortcuts.title", defaultOn: true, iconName: "keyboard" },
   { id: "settings-stars-toggle",    i18n: "settings.stars",        defaultOn: true,  iconName: "stars" },
   { id: "settings-motion-toggle",   i18n: "settings.reduceMotion", defaultOn: false, iconName: "motion" },
   { id: "settings-contrast-toggle", i18n: "settings.highContrast", defaultOn: false, iconName: "contrast" },
@@ -120,63 +121,54 @@ const toggles = [
   import { applyTheme } from '@/lib/utils/theme';
   import { bindToggle, bindRadioGroup, applyFont, setToggle } from '@/lib/utils/settings';
 
-  let ac: AbortController;
+  const syncTheme = bindRadioGroup('.settings-theme-btn', 'theme', 'dark', applyTheme);
+  document.addEventListener('theme-change', syncTheme);
+  bindRadioGroup('.settings-tz-btn', 'timezone-anchor', 'local', () =>
+    document.dispatchEvent(new CustomEvent('timezone-change'))
+  );
 
-  const init = () => {
-    ac?.abort();
-    ac = new AbortController();
-    const { signal } = ac;
-
-    bindRadioGroup('.settings-theme-btn', 'theme', 'system', signal, applyTheme);
-    bindRadioGroup('.settings-tz-btn', 'timezone-anchor', 'local', signal, () =>
-      document.dispatchEvent(new CustomEvent('timezone-change'))
-    );
-
-    const fontSelect = document.getElementById('settings-font-select') as HTMLSelectElement | null;
-    if (fontSelect) {
-      const savedFont = localStorage.getItem('font-family') || 'personal';
-      fontSelect.value = savedFont;
-      if (!fontSelect.value) fontSelect.value = 'personal';
-      applyFont(fontSelect.value);
-      fontSelect.addEventListener('change', () => {
-        const font = fontSelect.value;
-        localStorage.setItem('font-family', font);
-        applyFont(font);
-      }, { signal });
-    }
-
-    bindToggle('settings-stars-toggle', 'stars-enabled', (on) =>
-      document.documentElement.toggleAttribute('data-no-stars', !on));
-
-    bindToggle('settings-contrast-toggle', 'high-contrast', (on) =>
-      document.documentElement.classList.toggle('high-contrast', on));
-
-    bindToggle('settings-motion-toggle', 'reduce-motion', (on) => {
-      document.documentElement.classList.toggle('reduce-motion', on);
-      const starsBtn = document.getElementById('settings-stars-toggle') as HTMLButtonElement | null;
-      if (!starsBtn) return;
-      starsBtn.disabled = on;
-      starsBtn.classList.toggle('opacity-50', on);
-      starsBtn.classList.toggle('cursor-not-allowed', on);
-      starsBtn.classList.toggle('cursor-pointer', !on);
-      if (on) {
-        setToggle(starsBtn, false);
-        document.documentElement.toggleAttribute('data-no-stars', true);
-      } else {
-        const saved = (localStorage.getItem('stars-enabled') ?? 'true') === 'true';
-        setToggle(starsBtn, saved);
-        document.documentElement.toggleAttribute('data-no-stars', !saved);
-      }
+  const fontSelect = document.getElementById('settings-font-select') as HTMLSelectElement | null;
+  if (fontSelect) {
+    const savedFont = localStorage.getItem('font-family') || 'personal';
+    fontSelect.value = savedFont;
+    if (!fontSelect.value) fontSelect.value = 'personal';
+    applyFont(fontSelect.value);
+    fontSelect.addEventListener('change', () => {
+      const font = fontSelect.value;
+      localStorage.setItem('font-family', font);
+      applyFont(font);
     });
+  }
 
-    const menu = document.getElementById('settings-menu') as HTMLDetailsElement | null;
-    if (menu) {
-      document.addEventListener('click', (e) => {
-        if (menu.open && !menu.contains(e.target as Node)) menu.open = false;
-      }, { signal });
+  bindToggle("settings-shortcuts-toggle", "keyboard-shortcuts", () => {});
+  bindToggle('settings-stars-toggle', 'stars-enabled', (on) =>
+    document.documentElement.toggleAttribute('data-no-stars', !on));
+
+  bindToggle('settings-contrast-toggle', 'high-contrast', (on) =>
+    document.documentElement.classList.toggle('high-contrast', on));
+
+  bindToggle('settings-motion-toggle', 'reduce-motion', (on) => {
+    document.documentElement.classList.toggle('reduce-motion', on);
+    const starsBtn = document.getElementById('settings-stars-toggle') as HTMLButtonElement | null;
+    if (!starsBtn) return;
+    starsBtn.disabled = on;
+    starsBtn.classList.toggle('opacity-50', on);
+    starsBtn.classList.toggle('cursor-not-allowed', on);
+    starsBtn.classList.toggle('cursor-pointer', !on);
+    if (on) {
+      setToggle(starsBtn, false);
+      document.documentElement.toggleAttribute('data-no-stars', true);
+    } else {
+      const saved = (localStorage.getItem('stars-enabled') ?? 'true') === 'true';
+      setToggle(starsBtn, saved);
+      document.documentElement.toggleAttribute('data-no-stars', !saved);
     }
-  };
+  });
 
-  init();
-  document.addEventListener('astro:after-swap', init);
+  const menu = document.getElementById('settings-menu') as HTMLDetailsElement | null;
+  if (menu) {
+    document.addEventListener('click', (e) => {
+      if (menu.open && !menu.contains(e.target as Node)) menu.open = false;
+    });
+  }
 </script>

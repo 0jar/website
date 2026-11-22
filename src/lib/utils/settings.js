@@ -34,30 +34,37 @@ export const bindToggle = (id, key, onUpdate) => {
   };
 };
 
-export const updateRadioGroup = (selector, storageKey, fallback) => {
-  const current = localStorage.getItem(storageKey) || fallback;
-  document.querySelectorAll(selector).forEach((btn) => {
-    const active = Object.values(btn.dataset)[0] === current;
-    btn.setAttribute("aria-checked", String(active));
-    activeClass.forEach((c) => btn.classList.toggle(c, active));
-    inactiveClass.forEach((c) => btn.classList.toggle(c, !active));
+export function bindRadioGroup(selector, key, fallback, onUpdate) {
+  const buttons = Array.from(document.querySelectorAll(selector));
+  function sync() {
+    const current = localStorage.getItem(key) || fallback;
+    for (const button of buttons) {
+      const active = Object.values(button.dataset)[0] === current;
+      button.tabIndex = active ? 0 : -1;
+      button.setAttribute("aria-checked", String(active));
+      activeClass.forEach(c => button.classList.toggle(c, active));
+      inactiveClass.forEach(c => button.classList.toggle(c, !active));
+    }
+  }
+  buttons.forEach((button, i) => {
+    button.addEventListener("click", () => {
+      const value = Object.values(button.dataset)[0];
+      localStorage.setItem(key, value);
+      onUpdate(value);
+      sync();
+    });
+    button.addEventListener("keydown", event => {
+      const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[event.key];
+      if (!step) return;
+      event.preventDefault();
+      const next = buttons[(i + step + buttons.length) % buttons.length];
+      next.focus();
+      next.click();
+    });
   });
-};
-
-export const bindRadioGroup = (selector, storageKey, fallback, signal, onUpdate) => {
-  updateRadioGroup(selector, storageKey, fallback);
-  document.querySelectorAll(selector).forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const value = Object.values(btn.dataset)[0];
-        if (value) {
-          localStorage.setItem(storageKey, value);
-          updateRadioGroup(selector, storageKey, fallback);
-          onUpdate?.(value);
-        }
-      }, { signal },
-    );
-  });
-};
+  sync();
+  return sync;
+}
 
 export const applyFont = (font) => {
   document.documentElement.classList.remove(...fontClasses);

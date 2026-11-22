@@ -1,6 +1,4 @@
-// 2048 - React component for Astro
-// Ported from Next.js v4
-
+import { editingField } from "@/lib/utils/keyboard";
 import { useEffect, useCallback, useState } from 'preact/hooks'
 import { t as i18nT } from '@/i18n/client'
 import { useGame2048, getTileColor, getFontSize } from '@/hooks/game/use-game-2048'
@@ -36,7 +34,7 @@ export default function Game2048() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (gameWon || gameOver) return
+      if (e.defaultPrevented || editingField(e.target) || document.querySelector("dialog[open]") || gameWon || gameOver) return
 
       const dir = keyMap[e.code]
       if (dir) {
@@ -82,7 +80,7 @@ export default function Game2048() {
         </header>
 
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-8">
-          <main className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center mb-2" aria-live="polite">
               {scoreBlocks.map(({ label, value }) => (
                 <div key={label} className="bg-card border rounded-lg p-3 text-center min-w-[120px]">
@@ -173,7 +171,7 @@ export default function Game2048() {
                 {t('newGame', 'New game')}
               </button>
             </div>
-          </main>
+          </div>
 
           <aside className="bg-card border rounded-lg p-6 w-full max-w-md">
             <h2 className="text-2xl font-bold mb-4">{t('howToPlay', 'How to play')}</h2>

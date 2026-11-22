@@ -25,12 +25,11 @@ const footerBadges = badges.filter(badge => badge.footer);
       </p>
     </div>
 
-    <!-- Command bar button (desktop only) -->
-    <div class="hidden xl:block absolute right-4">
+    <div class="hidden xl:block xl:absolute xl:right-4">
       <button
         id="footer-command-bar-trigger"
         class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring h-8 w-8 text-muted-foreground hover:text-foreground hover:bg-accent"
-        aria-label="Open command bar"
+        aria-label="Open command bar" aria-haspopup="dialog" aria-controls="command-dialog"
       >
         <Icon name="keyboard" class="w-4 h-4" />
       </button>
@@ -82,15 +81,3 @@ const footerBadges = badges.filter(badge => badge.footer);
   <!-- Spacer -->
   <div aria-hidden="true" class="h-3"></div>
 </footer>
-
-<script is:inline>
-  (function () {
-    // Command bar trigger button
-    var trigger = document.getElementById("footer-command-bar-trigger");
-    if (trigger) {
-      trigger.addEventListener("click", function () {
-        window.dispatchEvent(new KeyboardEvent("keydown", { key: ".", bubbles: true, cancelable: true }));
-      });
-    }
-  })();
-</script>

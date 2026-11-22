@@ -18,9 +18,6 @@ const initial = cats[Math.floor(Math.random() * cats.length)];
         <T key="moodCat.title" />
       </a>
       <span class="absolute left-0 -bottom-1 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-      <span class="absolute left-0 -top-6 w-full text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-        <T key="moodCat.hover" />
-      </span>
     </h2>
 
     <div class="border rounded-lg p-4 bg-card flex flex-col flex-1">
@@ -50,7 +47,6 @@ const initial = cats[Math.floor(Math.random() * cats.length)];
         <button
           type="button"
           class="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium border rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors group focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-          aria-label="Get a new cat image"
           data-refresh
         >
           <Icon name="refresh" width="16" height="16" class="group-hover:rotate-180 transition-transform duration-500" />

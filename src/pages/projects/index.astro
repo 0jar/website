@@ -55,10 +55,7 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
               <article
                 class="project-card group perspective"
                 data-category={p.category}
-                tabindex="0"
-                role="button"
-                aria-label={`${title} - click to flip`}
-                aria-expanded="false"
+                tabindex="-1"
               >
                 <div class="card-inner relative w-full h-[310px] transition-transform duration-700 transform-style-preserve-3d">
                   {/* Front */}
@@ -82,17 +79,17 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
                         </a>
                       </div>
                     )}
-                    <div class="mt-4 flex items-center justify-between text-xs font-bold text-primary opacity-100 transition-opacity">
-                      <div class="flex items-center gap-2">
+                    <button type="button" aria-expanded="false" aria-controls={`project-details-${p.id}`} class="mt-4 flex items-center justify-between text-xs font-bold text-primary opacity-100 transition-opacity">
+                      <span class="flex items-center gap-2">
                         <T key="projects.clickToFlip" />
                         <kbd class="hidden md:inline-block border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5 font-sans">Space</kbd>
-                      </div>
+                      </span>
                       <span aria-hidden="true" class="transform group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
+                    </button>
                   </Card>
 
                   {/* Back */}
-                  <Card as="div" hover={false} padding="lg" class="card-back absolute inset-0 backface-hidden flex flex-col rotate-y-180 shadow-xl overflow-y-auto overflow-x-hidden custom-scrollbar">
+                  <Card as="div" hover={false} padding="lg" id={`project-details-${p.id}`} inert class="card-back absolute inset-0 backface-hidden flex flex-col rotate-y-180 shadow-xl overflow-y-auto overflow-x-hidden custom-scrollbar">
                     <div class="space-y-5 flex-1">
                       <div>
                         <T key="projects.what" tag="h4" class="text-xs font-bold text-primary/80 mb-2" />
@@ -116,14 +113,14 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
                         </div>
                       )}
                     </div>
-                    <div class="mt-6 pt-4 border-t flex items-center justify-between text-xs font-bold text-primary/70 opacity-100 transition-opacity">
+                    <button type="button" aria-expanded="true" aria-controls={`project-details-${p.id}`} class="mt-6 pt-4 border-t flex items-center justify-between text-xs font-bold text-primary/70 opacity-100 transition-opacity">
                       <T key="projects.cardActions.clickToClose" />
                       <span class="hidden md:inline-flex items-center gap-1 font-sans">
                         <kbd class="border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5">Space</kbd>
                         <span>/</span>
                         <kbd class="border border-primary/30 rounded px-1.5 py-0.5 text-[10px] bg-primary/5">Esc</kbd>
                       </span>
-                    </div>
+                    </button>
                   </Card>
                 </div>
               </article>
@@ -166,7 +163,12 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
       if (!inner) return;
       const isFlipped = typeof forceState === "boolean" ? forceState : !inner.classList.contains("flipped");
       inner.classList.toggle("flipped", isFlipped);
-      card.setAttribute("aria-expanded", String(isFlipped));
+      const front = card.querySelector<HTMLElement>(".card-front")!;
+      const back = card.querySelector<HTMLElement>(".card-back")!;
+      front.inert = isFlipped;
+      back.inert = !isFlipped;
+      front.querySelector("button")!.setAttribute("aria-expanded", String(isFlipped));
+      (isFlipped ? back : front).querySelector("button")!.focus({ preventScroll: true });
     };
 
     card.addEventListener("click", (e) => {
@@ -174,29 +176,10 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
       flip();
     });
     card.addEventListener("keydown", (e) => {
-      const isFlipped = card.getAttribute("aria-expanded") === "true";
-
-      if (e.key === "Enter") {
-        e.preventDefault();
-        const link = card.querySelector("a");
-        if (link) {
-          link.click();
-        } else {
-          flip();
-        }
-        return;
-      }
-
-      if (e.key === " ") {
-        e.preventDefault();
-        flip();
-        return;
-      }
-
+      const isFlipped = Boolean(card.querySelector(".flipped"));
       if (e.key === "Escape" && isFlipped) {
         e.preventDefault();
         flip(false);
-        card.focus();
         return;
       }
 
@@ -229,7 +212,7 @@ const t = (p: any, field: string) => p.content[lang]?.[field] || p.content.en[fi
         if (e.key === "ArrowDown") nextIdx = idx + cols;
 
         if (nextIdx >= 0 && nextIdx < visible.length) {
-          visible[nextIdx].focus();
+          visible[nextIdx].querySelector<HTMLButtonElement>("div:not([inert]) > button")?.focus();
         }
       }
     });

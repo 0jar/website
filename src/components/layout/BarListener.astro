@@ -1,79 +1,48 @@
 ---
-// Lazy CommandBar loader + keyboard navigation
+import { t } from "@/i18n";
 ---
 
-<div id="command-bar-root"></div>
+<dialog id="command-dialog" aria-label={t(Astro.locals.lang, "actionSearch.title")}
+  class="mx-auto mt-[15vh] w-[min(28rem,calc(100%-2rem))] max-h-[80vh] rounded-lg border bg-background text-foreground shadow-lg backdrop:bg-black/50">
+  <div id="command-bar-root"></div>
+</dialog>
 
 <script>
   import { routes, keyboardShortcuts } from "@/lib/constants";
   import { cycleTheme } from "@/lib/utils/theme";
   import { cycleLanguage, getPageLocale } from "@/i18n/client";
-  import { localePath } from "@/i18n/routing";
-  import { isTypingInInput } from "@/hooks";
+  import { localePath, stripLocale } from "@/i18n/routing";
+  import { editingField } from "@/lib/utils/keyboard";
 
-  // Build nav shortcut map: shortcut key → route path
+  const dialog = document.querySelector<HTMLDialogElement>("#command-dialog")!;
+  const root = document.getElementById("command-bar-root")!;
   const locale = getPageLocale();
-  const navShortcuts: Record<string, string> = {};
-  for (const [key, shortcut] of Object.entries(keyboardShortcuts)) {
-    if (key in routes) navShortcuts[shortcut] = localePath(locale, routes[key as keyof typeof routes]);
+  const path = stripLocale(location.pathname);
+  const nav = new Map(Object.entries(routes).map(([key, href]) => [keyboardShortcuts[key], href]));
+
+  async function openPalette() {
+    const { mountPalette } = await import("@/components/commands/Bar");
+    if (dialog.open) return;
+    mountPalette(root, dialog);
+    dialog.showModal();
   }
 
-  // Global actions shared between game and non-game pages
-  const globalActions: Record<string, () => void> = {
-    m: cycleTheme,
-    y: cycleLanguage,
-  };
+  document.getElementById("footer-command-bar-trigger")?.addEventListener("click", openPalette);
+  dialog.addEventListener("click", event => {
+    if (event.target === dialog) dialog.close();
+  });
 
-  // Lazy CommandBar state
-  let loading = false;
-
-  // Find cat button (may render after this script)
-  let catBtn: HTMLButtonElement | null = null;
-  const findCatBtn = () => { catBtn = document.querySelector('button[aria-label="Refresh mood cat"]'); };
-  findCatBtn();
-  setTimeout(findCatBtn, 1000);
-
-  window.addEventListener("keydown", (e: KeyboardEvent) => {
-    if (e.ctrlKey || e.metaKey || e.altKey) return;
-    if (isTypingInInput()) return;
-
-    const { key } = e;
-
-    // Lazy-load CommandBar on "."
-    if (key === "." && !loading) {
-      e.preventDefault();
-      loading = true;
-      Promise.all([
-        import("@/components/commands/Bar"),
-        import("preact"),
-      ]).then(([{ Bar }, { render, h }]) => {
-        const el = document.getElementById("command-bar-root");
-        if (el) render(h(Bar, { initialOpen: true }), el);
-      }).catch(() => { loading = false; });
-      return;
-    }
-
-    // Global shortcuts (theme, language)
-    if (key in globalActions) {
-      e.preventDefault();
-      globalActions[key]();
-      return;
-    }
-
-    const isGame = location.pathname.includes(routes.game2048) || location.pathname.includes(routes.tetris);
-
-    if (isGame) {
-      if (key === "h") { e.preventDefault(); location.href = "/"; }
-      return;
-    }
-
-    // Nav shortcuts (non-game pages only)
-    if (key in navShortcuts) {
-      e.preventDefault();
-      location.href = navShortcuts[key];
-    } else if (key === "r" && catBtn) {
-      e.preventDefault();
-      catBtn.click();
-    }
+  window.addEventListener("keydown", event => {
+    if (event.defaultPrevented || event.isComposing || event.repeat || event.altKey || event.ctrlKey || event.metaKey
+      || dialog.open || editingField(event.target) || localStorage.getItem("keyboard-shortcuts") === "false") return;
+    const key = event.key;
+    const game = path === routes.game2048 || path === routes.tetris;
+    if (key === ".") openPalette();
+    else if (key === "m") cycleTheme();
+    else if (key === "y") cycleLanguage();
+    else if (key === "r" && !game) document.querySelector<HTMLButtonElement>("mood-cat [data-refresh]")?.click();
+    else if (nav.has(key) && (!game || key === "h")) location.href = localePath(locale, nav.get(key)!);
+    else return;
+    event.preventDefault();
   });
 </script>

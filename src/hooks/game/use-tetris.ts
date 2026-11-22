@@ -1,7 +1,5 @@
-// Tetris game hook
+import { editingField } from "@/lib/utils/keyboard";
 import { useState, useEffect, useCallback, useRef, useMemo } from 'preact/hooks'
-
-// Constants
 
 export const TETROMINOS = {
   I: { shape: [[1, 1, 1, 1]], color: 'bg-cyan-500' },
@@ -31,8 +29,6 @@ export const musicPlaylist = Array.from({ length: 5 }, (_, i) => ({
   url: `https://www.soundhelix.com/examples/mp3/SoundHelix-Song-${i + 1}.mp3`,
   title: `SoundHelix Song ${i + 1}`,
 }))
-
-// Utilities
 
 const emptyBoard = (): Board =>
   Array.from({ length: BOARD_HEIGHT }, () => Array(BOARD_WIDTH).fill(null))
@@ -81,7 +77,6 @@ const buildDisplayBoard = (board: Board, piece: Piece | null): Board => {
     if (d[rowIndex] === board[rowIndex]) d[rowIndex] = [...board[rowIndex]]
   }
 
-  // Ghost piece
   let ghostY = y
   while (!isColliding(shape, x, ghostY + 1, board)) ghostY++
   if (ghostY !== y)
@@ -93,7 +88,6 @@ const buildDisplayBoard = (board: Board, piece: Piece | null): Board => {
       }
     })
 
-  // Active piece
   eachCell(shape, (r, c) => {
     const by = y + r, bx = x + c
     if (inBounds(bx, by)) {
@@ -104,8 +98,6 @@ const buildDisplayBoard = (board: Board, piece: Piece | null): Board => {
 
   return d
 }
-
-// Hook
 
 export function useTetris() {
   const [board, setBoard] = useState<Board>(emptyBoard)
@@ -131,8 +123,6 @@ export function useTetris() {
     () => buildDisplayBoard(board, currentPiece),
     [board, currentPiece]
   )
-
-  // Core: place piece, clear lines, spawn next
 
   const placePieceAndSpawn = useCallback(
     (pieceType: TetrominoType, shape: number[][], px: number, py: number) => {
@@ -180,8 +170,6 @@ export function useTetris() {
     [board, nextPiece, level]
   )
 
-  // Move actions
-
   const movePiece = useCallback(
     (dx: number, dy: number) => {
       if (!currentPiece || gameOver || isPaused) return
@@ -215,8 +203,6 @@ export function useTetris() {
     placePieceAndSpawn(currentPiece.type, currentPiece.shape, currentPiece.x, y)
   }, [currentPiece, board, gameOver, isPaused, placePieceAndSpawn])
 
-  // Lifecycle
-
   const startGame = useCallback(() => {
     setBoard(emptyBoard())
     setScore(0); setLines(0); setLevel(1)
@@ -231,15 +217,11 @@ export function useTetris() {
     if (isStarted && !gameOver) setIsPaused((p) => !p)
   }, [isStarted, gameOver])
 
-  // Game loop
-
   useEffect(() => {
     if (!isStarted || gameOver || isPaused) return
     const id = setInterval(() => movePiece(0, 1), speed)
     return () => clearInterval(id)
   }, [isStarted, gameOver, isPaused, movePiece, speed])
-
-  // Keyboard
 
   useEffect(() => {
     const actions: Record<string, () => void> = {
@@ -251,6 +233,8 @@ export function useTetris() {
       KeyP: () => togglePause(), Escape: () => togglePause(),
     }
     const onKey = (e: KeyboardEvent) => {
+      if (e.defaultPrevented || editingField(e.target) || document.querySelector("dialog[open]")) return
+      if (e.target instanceof HTMLElement && e.target.closest("button, a, summary") && ["Enter", "Space"].includes(e.code)) return
       if (!isStarted || gameOver) {
         if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); startGame() }
         return
@@ -260,8 +244,6 @@ export function useTetris() {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [isStarted, gameOver, movePiece, rotatePiece, hardDrop, togglePause, startGame])
-
-  // Touch
 
   const handleTouchStart = useCallback((e: TouchEvent) => {
     touchRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }
@@ -301,8 +283,6 @@ export function useTetris() {
     [rotatePiece, hardDrop]
   )
 
-  // Music
-
   const ensureAudio = () => {
     if (!audioRef.current) {
       const a = new Audio()
@@ -323,8 +303,6 @@ export function useTetris() {
       audioRef.current.load()
       audioRef.current.play().catch(() => {})
     }
-    // Only auto-play on track change, not on isMusicPlaying toggle
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTrackIndex])
 
   const toggleMusic = useCallback(() => {

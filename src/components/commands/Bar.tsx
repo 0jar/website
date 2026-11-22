@@ -1,202 +1,64 @@
-// Command palette
-// Ported from Next.js v4
+import { render } from "preact";
+import { useEffect, useState } from "preact/hooks";
+import { getActions, Icon, type Action } from "./Actions";
+import { t } from "@/i18n/client";
 
-import { useState, useEffect, useMemo, useRef } from "preact/hooks";
-import type { JSX } from "preact";
-import { useMounted, useDebounce, isTypingInInput } from "@/hooks";
-import { useCommandActions, type Action, PreactIcon } from "./Actions";
-
-// Inline KeyboardShortcut component
-const KeyboardShortcut = ({ children }: { children: JSX.Element | string | number }) => (
-  <kbd className="px-1.5 py-0.5 text-xs bg-muted rounded border border-border font-monaspice">
-    {children}
-  </kbd>
-);
-
-export interface BarProps {
-  initialOpen?: boolean;
+export function mountPalette(root: HTMLElement, dialog: HTMLDialogElement) {
+  render(<Bar actions={getActions()} close={() => dialog.close()} />, root);
+  dialog.addEventListener("close", () => render(null, root), { once: true });
 }
 
-export function Bar({ initialOpen = false }: BarProps) {
-  const [open, setOpen] = useState(initialOpen);
+function Bar({ actions, close }: { actions: Action[]; close: () => void }) {
   const [query, setQuery] = useState("");
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const mounted = useMounted();
-  const [pathname, setPathname] = useState("");
-  const inputRef = useRef<HTMLInputElement>(null);
-  const listboxRef = useRef<HTMLDivElement>(null);
-  const debouncedQuery = useDebounce(query, 200);
+  const [selected, setSelected] = useState(0);
+  const matches = actions.filter(action => action.label.toLowerCase().includes(query.toLowerCase()));
+  const activeId = matches[selected] && `command-item-${selected}`;
+  const run = (action: Action) => { close(); action.run(); };
 
   useEffect(() => {
-    setPathname(window.location.pathname);
-  }, []);
-
-  const { allActions, t } = useCommandActions(pathname, setOpen);
-
-  // Filter by query
-  const filteredActions = useMemo(() => {
-    if (!debouncedQuery) return allActions;
-    const q = debouncedQuery.toLowerCase();
-    return allActions.filter((a) =>
-      `${a.label} ${a.description || ""}`.toLowerCase().includes(q),
-    );
-  }, [allActions, debouncedQuery]);
-
-  // Group by category
-  const groupedActions = useMemo(
-    () =>
-      filteredActions.reduce(
-        (acc, a) => {
-          (acc[a.category] ||= []).push(a);
-          return acc;
-        },
-        {} as Record<string, Action[]>,
-      ),
-    [filteredActions],
-  );
-
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      const el = document.activeElement;
-      if (el !== inputRef.current && isTypingInInput()) return;
-
-      if (e.key === "." && !open && !e.metaKey && !e.ctrlKey) {
-        e.preventDefault();
-        setOpen(true);
-        return;
-      }
-      if (!open) return;
-      if (e.key === "Escape") {
-        e.preventDefault();
-        setOpen(false);
-      } else if (e.key === "ArrowDown") {
-        e.preventDefault();
-        setSelectedIndex((i) => (i + 1) % filteredActions.length);
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        setSelectedIndex(
-          (i) => (i - 1 + filteredActions.length) % filteredActions.length,
-        );
-      } else if (e.key === "Enter" && filteredActions.length) {
-        e.preventDefault();
-        filteredActions[selectedIndex]?.action();
-      }
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [open, filteredActions, selectedIndex]);
-
-  // Focus input on open & keep selected item in view
-  useEffect(() => {
-    if (open) setTimeout(() => inputRef.current?.focus(), 100);
-    else {
-      setQuery("");
-      setSelectedIndex(0);
-    }
-  }, [open]);
-
-  useEffect(() => {
-    if (open && listboxRef.current && filteredActions.length > 0) {
-      const activeEl = document.getElementById(`command-item-${selectedIndex}`);
-      if (activeEl) {
-        activeEl.scrollIntoView({ block: "nearest" });
-      }
-    }
-  }, [selectedIndex, open, filteredActions]);
-
-  if (!mounted) return null;
+    if (activeId) document.getElementById(activeId)?.scrollIntoView({ block: "nearest" });
+  }, [activeId, query]);
 
   return (
     <>
-      {open && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]">
-          <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setOpen(false)}
-            aria-hidden="true"
-          />
-
-          <div
-            className="relative bg-background border rounded-lg shadow-lg w-full max-w-md mx-4 overflow-hidden animate-in fade-in zoom-in-95 duration-200"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="command-palette-title"
-          >
-            <h2 id="command-palette-title" className="sr-only">
-              {t("actionSearch.title", "Command Palette")}
-            </h2>
-
-            <div className="p-4 pb-2">
-              <div className="relative flex items-center">
-                <PreactIcon name="search" className="absolute left-3 w-4 h-4 text-muted-foreground" />
-                <input
-                  ref={inputRef}
-                  type="text"
-                  role="combobox"
-                  aria-expanded="true"
-                  aria-controls="command-palette-listbox"
-                  aria-autocomplete="list"
-                  aria-activedescendant={filteredActions.length > 0 ? `command-item-${selectedIndex}` : undefined}
-                  placeholder={t("actionSearch.placeholder", "Search actions...")}
-                  value={query}
-                  onChange={(e) => {
-                    setQuery((e.target as HTMLInputElement).value);
-                    setSelectedIndex(0);
-                  }}
-                  className="w-full pl-10 pr-4 h-10 bg-background border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-ring"
-                />
-              </div>
-            </div>
-
-            <div ref={listboxRef} id="command-palette-listbox" role="listbox" className="max-h-[60vh] overflow-y-auto" aria-label={t("actionSearch.results", "Action results")}>
-              {filteredActions.length > 0 ? (
-                <div className="pb-2 animate-in fade-in duration-200">
-                  {Object.entries(groupedActions).map(([category, actions]) => (
-                    <div key={category} className="px-2" role="group" aria-label={category}>
-                      <div className="text-xs font-medium text-muted-foreground px-2 py-1.5" aria-hidden="true">
-                        {category}
-                      </div>
-                      {actions.map((a) => {
-                        const idx = filteredActions.findIndex((x) => x.id === a.id);
-                        return (
-                          <div
-                            key={a.id}
-                            id={`command-item-${idx}`}
-                            role="option"
-                            aria-selected={idx === selectedIndex}
-                            className={`px-2 py-1.5 flex items-center justify-between rounded-md cursor-pointer transition-colors ${idx === selectedIndex ? "bg-muted" : "hover:bg-muted/50"}`}
-                            onClick={() => a.action()}
-                            onMouseEnter={() => setSelectedIndex(idx)}
-                          >
-                            <div className="flex items-center gap-2">
-                              <span className="flex-shrink-0" aria-hidden="true">{a.icon}</span>
-                              <span className="text-sm font-medium">{a.label}</span>
-                              {a.description && <span className="text-xs text-muted-foreground">{a.description}</span>}
-                            </div>
-                            {a.shortcut && <KeyboardShortcut>{a.shortcut}</KeyboardShortcut>}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="px-4 py-8 text-center animate-in fade-in duration-200" role="status">
-                  <p className="text-muted-foreground">{t("actionSearch.noResults", "No actions found")}</p>
-                </div>
-              )}
-            </div>
-
-            <div className="p-2 border-t">
-              <div className="flex items-center justify-between text-xs text-muted-foreground px-2">
-                <span>{t("actionSearch.pressToOpen", "Press . to open command palette")}</span>
-                <span>{t("actionSearch.escToClose", "ESC to close")}</span>
-              </div>
+      <div class="relative flex items-center gap-2 p-4 pb-2">
+        <Icon name="search" className="absolute left-7 w-4 h-4 text-muted-foreground" />
+        <input autoFocus type="text" role="combobox" aria-expanded="true" aria-autocomplete="list"
+          aria-controls="command-results" aria-activedescendant={activeId}
+          aria-label={t("actionSearch.title")} placeholder={t("actionSearch.placeholder")}
+          class="w-full rounded-md border bg-background py-2 pl-10 pr-3 text-sm"
+          value={query} onInput={event => { setQuery(event.currentTarget.value); setSelected(0); }}
+          onKeyDown={event => {
+            if (event.isComposing || !matches.length) return;
+            if (event.key === "Enter") run(matches[selected]);
+            else if (event.key === "ArrowDown") setSelected((selected + 1) % matches.length);
+            else if (event.key === "ArrowUp") setSelected((selected + matches.length - 1) % matches.length);
+            else return;
+            event.preventDefault();
+          }}
+        />
+        <button type="button" onClick={close} aria-label={t("keyboardShortcuts.close")} class="rounded p-2 hover:bg-muted">
+          <Icon name="x" />
+        </button>
+      </div>
+      <div id="command-results" role="listbox" aria-label={t("actionSearch.title")} class="max-h-[52vh] overflow-y-auto px-2 pb-2">
+        {matches.map((action, i) => (
+          <div key={action.id}>
+            {action.category !== matches[i - 1]?.category && <div aria-hidden="true" class="px-2 py-1 text-xs text-muted-foreground">{action.category}</div>}
+            <div role="option" id={`command-item-${i}`} aria-selected={i === selected}
+              class={`flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-sm ${i === selected ? "bg-muted" : "hover:bg-muted/50"}`}
+              onClick={() => run(action)} onMouseEnter={() => setSelected(i)}>
+              <Icon name={action.icon} />
+              <span class="flex-1">{action.label}</span>
+              {action.shortcut && <kbd class="rounded border bg-muted px-1.5 py-0.5 text-xs">{action.shortcut}</kbd>}
             </div>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+      {!matches.length && <p role="status" class="p-4 text-center text-muted-foreground">{t("actionSearch.noResults")}</p>}
+      <div class="flex justify-between gap-2 border-t p-2 text-xs text-muted-foreground">
+        <span>{t("actionSearch.pressToOpen")}</span><span>{t("actionSearch.escToClose")}</span>
+      </div>
     </>
   );
 }
