@@ -543,61 +543,50 @@
   },
   "colophon": {
     "title": "Colophon",
-    "description": "The story behind this website and how it was built",
-    "siteHistory": {
-      "title": "Site history",
-      "content1": "This site was just registered in late 2023, yet the design has changed a lot over the span of its life. The first version was just a basic WordPress site hosted on a sketchy free hosting provider, the second was Carrd-based, and the third was built with Astro. This current iteration (the fourth version) is a complete redesign built from scratch with modern web technologies.",
-      "content2": "Each version has been an evolution, with this latest one focusing on performance, accessibility, full keyboard navigation, and a more personal touch that better represents who I am and what I care about."
+    "description": "How I built this site and what I write in.",
+    "intro": "I registered the domain in late 2023 and somehow turned a basic personal homepage into a place for economics posts and cats. I tinker with it whenever I find something that could be a little nicer, which happens a lot.",
+    "source": "Browse the source on Codeberg",
+    "technology": {
+      "title": "How it's built",
+      "build": "Astro builds the pages into static HTML. Tailwind does most of the styling, and bits of TypeScript and Preact handle the games. You can read the blog with JavaScript off, but not so much with Tetris.",
+      "history": "The first version was WordPress on some sketchy free hosting. Then came Carrd, Astro, then a stint with Next.js, during which I gave a personal website more architecture than it knew what to do with. I moved back to Astro for version 5 in April 2026. Turns out I mostly wanted to write some words and put them on the internet after all.",
+      "hosting": "Netlify serves the main site, Vercel serves the backup at z.is-a.dev, there's a simple copy on Neocities too. Cloudflare handles DNS and proxies the main domain. Being able to take the same site somewhere else is a big part of why I like building it this way.",
+      "migration": "How I moved back to Astro"
     },
-    "technologyStack": {
-      "title": "Technology stack",
-      "nextjs": "React framework that enables server-side rendering and static site generation",
-      "react": "JavaScript library for building user interfaces",
-      "tailwind": "Utility-first CSS framework",
-      "shadcn": "Reusable component library built with Radix UI and Tailwind",
-      "framer": "Animation library for React",
-      "i18next": "Internationalization framework",
-      "typescript": "Strongly typed programming language that builds on JavaScript"
+    "writing": {
+      "title": "Writing and editing",
+      "body": "Posts are Markdown files in the repo, with a bit of frontmatter for the metadata. There's a field for whether a cat approved the post (spoiler, it always does). Images can be right there with the text. The /now page and the devlog use JSON, the interface translations are in their files. Publishing a post is basically just committing a file and waiting for the build to deploy.",
+      "images": "There’s a little shortcut for screenshots. When I put a Markdown image in a paragraph of its own with alt text, a small script also shows that text as a caption. One less bit of markup to type every time I want to show a screenshot."
     },
-    "hosting": {
-      "title": "Hosting & deployment",
-      "content1": "The site is hosted on",
-      "content2": "which provides seamless deployment from GitHub, automatic HTTPS, and global CDN distribution.",
-      "content3": "The domain is managed through",
-      "content4": "which provides additional security and performance benefits."
+    "typography": {
+      "title": "Typography",
+      "body": "Lexend is my default for headings and body text. The fonts live on the site, Chinese and Hán Nôm have their dedicated fonts. If you'd rather read in Atkinson Hyperlegible, OpenDyslexic or just use your system font, they're in the settings. That menu lets you turn off the stars or turn up the contrast too by the way."
     },
-    "design": {
-      "title": "Design philosophy",
-      "p1": "This website is designed with accessibility and performance in mind. It works without JavaScript enabled, uses semantic HTML, and respects your privacy by not using any tracking cookies.",
-      "p2": "The design aims for a balance between modern aesthetics and classic web simplicity. Dark mode is the default because I like my retinas."
+    "components": {
+      "title": "The bits I keep tinkering with",
+      "body": "The homepage gets a random mood cat and you can press R on your keyboard for another one. I also made a keyboard command palette, a retro version for older browsers and a tools page for things I got tired of doing by hand. Somewhere in there I added 2048 and Tetris. It was supposed to be a personal website, well, technically it still is.",
+      "tools": "Try the tools"
     },
-    "webStandards": {
-      "title": "Web standards",
-      "intro": "This site implements:",
-      "microformats": "microformats",
-      "feeds": "RSS, Atom, and JSON feeds",
-      "robots": "robots.txt and sitemap.xml",
-      "humans": "humans.txt"
+    "follow": {
+      "title": "Keeping up",
+      "body": "The blog has RSS, Atom, and JSON feeds. If a page is awkward to use with a keyboard or something looks broken on your setup, I'd like to hear about it.",
+      "rss": "Subscribe via RSS",
+      "contact": "Tell me about a problem"
     },
-    "accessibility": {
-      "title": "Accessibility",
-      "intro": "I strive to make this site accessible to everyone. Features include:",
-      "item1": "Semantic HTML structure",
-      "item2": "Skip-to-content links",
-      "item3": "Proper heading hierarchy",
-      "item4": "WCAG 2.1 AA color contrast",
-      "item5": "Keyboard navigable",
-      "item6": "Respects reduced motion preferences",
-      "reportText": "If you encounter any accessibility issues, please",
-      "contactLink": "let me know"
+    "privacy": {
+      "title": "What happens when you visit",
+      "body": "I use Umami to count visits on the main site and the Vercel backup. Your browser stores preferences like the theme and font locally. If you sign the guestbook, the form goes through Netlify Forms."
+    },
+    "licenses": {
+      "title": "Reuse and credits",
+      "body": "The code is under the AGPL, version 3 or later. My writing and other original non-code content are under CC BY 4.0. If you reuse my work, please credit me and link back. Other people’s fonts, cursors, badges, and images keep their own terms.",
+      "fonts": "Font licenses",
+      "cursors": "Cursor credits",
+      "badges": "88×31 badges and their sources"
     },
     "inspiration": {
-      "title": "Inspiration",
-      "content1": "This page draws inspiration from",
-      "content2": "which in turn draws inspiration from",
-      "content3": "Original idea on",
-      "maggie": "Maggie Appleton's colophon",
-      "gwern": "Gwern Branwen's colophon"
+      "title": "Colophons I borrowed the idea from",
+      "body": "I liked the way Maggie Appleton explains her own site. Her colophon sent me to Gwern's, too."
     }
   },
   "footer": {

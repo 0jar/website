@@ -496,61 +496,50 @@
   },
   "colophon": {
     "title": "网站信息",
-    "description": "这个网站背后的故事",
-    "siteHistory": {
-      "title": "网站历史",
-      "content1": "我是在2023年底注册了这个网站域名，但它的设计在这段时间里改变了很多次。第一个版本只是某个免费主机上的WordPress页面，第二个版本是Carrd.co页面，第三个版本基于Astro构建。当前版本是我完全重新设计并从头开始构建的。",
-      "content2": "每个版本都是一次进化，最新的这个版本更注重速度、可访问性（accessibility）和一点点更\"像我\"、更能体现\"我\"的感觉。"
+    "description": "我怎么做这个网站，又用什么写文章。",
+    "intro": "我在 2023 年底注册了域名。不知怎么的，一个简单的个人主页就成了放经济学文章和猫的地方。一看到哪儿还能弄好一点，我就忍不住折腾一下。而且这种事天天有。",
+    "source": "在 Codeberg 查看源代码",
+    "technology": {
+      "title": "网站是怎么做的",
+      "build": "Astro 把页面构建成静态 HTML。样式大多交给 Tailwind，游戏则用到一点 TypeScript 和 Preact。关掉 JavaScript 照样能看博客，玩俄罗斯方块就不太行了。",
+      "history": "第一版是在一个免费的主机上跑的 WordPress，那个主机嘛……懂的都懂。然后是 Carrd、Astro，接着用了一阵 Next.js。那会儿我给个人网站塞了一堆架构，多到它自己都不知道该拿来干嘛。2026 年 4 月做第 5 版时，我又换回了 Astro。搞了半天，我其实就想图个乐，写几句发到网上。",
+      "hosting": "主站跑在 Netlify 上，z.is-a.dev 的备用站在 Vercel，Neocities 上还放了一份更简单的副本。Cloudflare 管 DNS，并给主域名做代理。我喜欢这么搭站，很大程度上就是因为能把整个站原样搬去别处。",
+      "migration": "我是怎么换回 Astro 的"
     },
-    "technologyStack": {
-      "title": "使用的技术栈",
-      "nextjs": "支持服务器端渲染和静态网站生成的 React 框架",
-      "react": "用于构建用户界面的 JavaScript 库",
-      "tailwind": "实用优先的 CSS 框架（写 CSS 而无需写太多 CSS）",
-      "shadcn": "基于 Radix UI 和 Tailwind 构建的可复用组件库",
-      "framer": "用于 React 的动画库",
-      "i18next": "国际化框架",
-      "typescript": "基于 JavaScript 的开源编程语言扩展"
+    "writing": {
+      "title": "写作和编辑",
+      "body": "文章是仓库里的 Markdown 文件，开头用一点 frontmatter 来放元数据。有一项记录猫有没有批准这篇文章（猫有哪篇不批准的？）。图片文件可以直接放在文章文件旁边。/now 和开发日志用 JSON，界面翻译有各自的文件。发文章基本上就是提交一个文件，然后等构建结果部署上线而已。",
+      "images": "放截图有个小窍门。只要带替代文本的 Markdown 图片独占一段，就有个小脚本把那段文字也显示成图注。每次想贴截图，就少写一点标记。"
     },
-    "hosting": {
-      "title": "网站托管 (Hosting)",
-      "content1": "网站托管在",
-      "content2": "，支持从 GitHub 无缝运行 Web 代码。",
-      "content3": "域名由",
-      "content4": "管理，他们还提供了额外的安全防火墙和网站性能优化支持。"
+    "typography": {
+      "title": "字体",
+      "body": "标题和正文默认都用 Lexend。字体文件放在本站，中文和汉喃文字各有专用字体。如果你更习惯 Atkinson Hyperlegible、OpenDyslexic 或系统字体，在设置里都能选。哦，那个菜单还能关掉闪烁的星星，或者把对比度调高。"
     },
-    "design": {
-      "title": "设计理念",
-      "p1": "本网站的设计注重无障碍性和性能。它无需启用 JavaScript 即可运行，使用语义化 HTML，并且不使用任何跟踪 Cookie，以此尊重您的隐私。",
-      "p2": "设计旨在现代美学与经典 Web 极简主义之间取得平衡。默认开启深色模式，因为我爱惜我的视网膜。"
+    "components": {
+      "title": "我还在折腾的东西",
+      "body": "首页会随机出现一只心情猫，按键盘上的 R 就能换一只。我还做了键盘命令面板、给老浏览器用的复古版，以及一个工具页，专门解决那些我做腻了的手动活。后来也不知道怎么就加进了 2048 和俄罗斯方块。原本只是想做个个人网站。嗯，理论上它还是个个人网站嘛 :3",
+      "tools": "试试这些工具"
     },
-    "webStandards": {
-      "title": "Web 标准",
-      "intro": "本站实现了：",
-      "microformats": "微格式 (Microformats)",
-      "feeds": "RSS、Atom 和 JSON 订阅源",
-      "robots": "robots.txt 和 sitemap.xml",
-      "humans": "humans.txt"
+    "follow": {
+      "title": "怎么订阅",
+      "body": "博客提供 RSS、Atom 和 JSON 订阅源。如果哪个页面用键盘不太方便，或在你的设备上显示有问题，可以告诉我。",
+      "rss": "通过 RSS 订阅",
+      "contact": "告诉我哪里出了问题"
     },
-    "accessibility": {
-      "title": "无障碍访问",
-      "intro": "我致力于让所有人都能访问本站。功能包括：",
-      "item1": "语义化 HTML 结构",
-      "item2": "跳至内容链接",
-      "item3": "正确的标题层级",
-      "item4": "WCAG 2.1 AA 颜色对比度",
-      "item5": "支持键盘导航",
-      "item6": "尊重减弱动态效果首选项",
-      "reportText": "如果您遇到任何无障碍访问问题，请",
-      "contactLink": "告诉我"
+    "privacy": {
+      "title": "你来访问时会发生什么？",
+      "body": "我用 Umami 统计主站和 Vercel 备用站的访问量。主题、字体之类的偏好由浏览器存在你的设备上。如果你在访客簿留言，表单会通过 Netlify Forms 提交。"
+    },
+    "licenses": {
+      "title": "许可与署名",
+      "body": "代码采用 AGPL 第 3 版或更新版本。我的文章和其他原创非代码内容采用 CC BY 4.0。要是用到了我的作品，记得署名并附上原文链接。别人的字体、光标、徽章和图片各自保留原有条款。",
+      "fonts": "字体许可",
+      "cursors": "光标作者",
+      "badges": "88×31 徽章及来源"
     },
     "inspiration": {
-      "title": "灵感来源",
-      "content1": "这个页面的灵感来自",
-      "content2": "，而它的灵感又来自",
-      "content3": "最初的想法来自",
-      "maggie": "Maggie Appleton 的 colophon",
-      "gwern": "Gwern Branwen 的 colophon"
+      "title": "灵感来自哪里",
+      "body": "我喜欢 Maggie Appleton 讲自己网站的方式。顺着她的 colophon，我也找到了 Gwern 的那篇。"
     }
   },
   "footer": {

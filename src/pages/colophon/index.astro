@@ -1,104 +1,83 @@
 ---
-// Colophon page
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
-import colophonData from "@/content/data/colophon.json";
+import { t } from "@/i18n";
+import { localePath } from "@/i18n/routing";
+import { author, routes } from "@/lib/constants";
+
+const lang = Astro.locals.lang;
 ---
 
-<BaseLayout title="Colophon" description="Technical details and credits for this website.">
+<BaseLayout title={t(lang, "colophon.title")} description={t(lang, "colophon.description")}>
   <div class="container mx-auto px-4 py-8 lg:py-12">
-    <div class="max-w-3xl mx-auto">
-      <header class="mb-8 text-center">
-        <T key="colophon.title" tag="h1" class="text-4xl font-bold mb-4" />
-        <T key="colophon.description" tag="p" class="text-lg text-muted-foreground" />
-      </header>
+    <article class="prose dark:prose-invert mx-auto max-w-2xl break-words">
+      <T key="colophon.title" tag="h1" />
+      <T key="colophon.intro" tag="p" />
+      <p><a href={author.repoUrl}><T key="colophon.source" /></a></p>
 
-      <div class="prose text-md dark:prose-invert max-w-none space-y-8 text-justify">
-        <!-- Site history -->
-        <section id="site-history" class="scroll-mt-20">
-          <T key="colophon.siteHistory.title" tag="h2" />
-          <T key="colophon.siteHistory.content1" tag="p" />
-          <T key="colophon.siteHistory.content2" tag="p" />
-        </section>
+      <section id="technology-stack" class="scroll-mt-20">
+        <T key="colophon.technology.title" tag="h2" />
+        <T key="colophon.technology.build" tag="p" />
+        <T key="colophon.technology.history" tag="p" id="site-history" class="scroll-mt-20" />
+        <p>
+          <a href="/blog/2026/04/welcome-home-astro/" hreflang="en"><T key="colophon.technology.migration" /></a>
+        </p>
+        <T key="colophon.technology.hosting" tag="p" id="hosting" class="scroll-mt-20" />
+      </section>
 
-        <!-- Technology stack -->
-        <section id="technology-stack" class="scroll-mt-20">
-          <T key="colophon.technologyStack.title" tag="h2" />
-          <ul>
-            {colophonData.stack.map(item => (
-              <li><strong>{item.name}:</strong> {item.descriptionKey ? <T key={item.descriptionKey} /> : item.description}</li>
-            ))}
-          </ul>
-        </section>
+      <section id="writing" class="scroll-mt-20">
+        <T key="colophon.writing.title" tag="h2" />
+        <T key="colophon.writing.body" tag="p" />
+        <T key="colophon.writing.images" tag="p" />
+      </section>
 
-        <!-- Hosting & deployment -->
-        <section id="hosting" class="scroll-mt-20">
-          <T key="colophon.hosting.title" tag="h2" />
-          <p>
-            <T key="colophon.hosting.content1" />{" "}
-            <a href={colophonData.hosting.provider1.url} target="_blank" rel="noopener noreferrer">{colophonData.hosting.provider1.name}</a>,{" "}
-            <T key="colophon.hosting.content2" />
-          </p>
-          <p>
-            <T key="colophon.hosting.content3" />{" "}
-            <a href={colophonData.hosting.provider2.url} target="_blank" rel="noopener noreferrer">{colophonData.hosting.provider2.name}</a>,{" "}
-            <T key="colophon.hosting.content4" />
-          </p>
-        </section>
+      <section id="typography" class="scroll-mt-20">
+        <T key="colophon.typography.title" tag="h2" />
+        <T key="colophon.typography.body" tag="p" id="design-philosophy" class="scroll-mt-20" />
+      </section>
 
-        <!-- Design philosophy -->
-        <section id="design-philosophy" class="scroll-mt-20">
-          <T key="colophon.design.title" tag="h2" />
-          <T key="colophon.design.p1" tag="p" />
-          <T key="colophon.design.p2" tag="p" />
-        </section>
+      <section id="custom-components" class="scroll-mt-20">
+        <T key="colophon.components.title" tag="h2" />
+        <T key="colophon.components.body" tag="p" />
+        <p><a href={localePath(lang, routes.tools)}><T key="colophon.components.tools" /></a></p>
+      </section>
 
-        <!-- Web standards -->
-        <section id="web-standards" class="scroll-mt-20">
-          <T key="colophon.webStandards.title" tag="h2" />
-          <T key="colophon.webStandards.intro" tag="p" />
-          <ul>
-            <li>
-              <a href="https://microformats.org/wiki/h-card" target="_blank" rel="noopener noreferrer">h-card</a>
-              and
-              <a href="https://microformats.org/wiki/h-entry" target="_blank" rel="noopener noreferrer">h-entry</a>
-              <T key="colophon.webStandards.microformats" />
-            </li>
-            <li><T key="colophon.webStandards.feeds" /></li>
-            <li><T key="colophon.webStandards.robots" /></li>
-            <li><T key="colophon.webStandards.humans" /></li>
-          </ul>
-        </section>
+      <section id="web-standards" class="scroll-mt-20">
+        <T key="colophon.follow.title" tag="h2" />
+        <T key="colophon.follow.body" tag="p" />
+        <ul>
+          <li><a href="/rss.xml"><T key="colophon.follow.rss" /></a></li>
+          <li id="accessibility" class="scroll-mt-20">
+            <a href={localePath(lang, routes.contact)}><T key="colophon.follow.contact" /></a>
+          </li>
+        </ul>
+      </section>
 
-        <!-- Accessibility -->
-        <section id="accessibility" class="scroll-mt-20">
-          <T key="colophon.accessibility.title" tag="h2" />
-          <T key="colophon.accessibility.intro" tag="p" />
-          <ul>
-            <li><T key="colophon.accessibility.item1" /></li>
-            <li><T key="colophon.accessibility.item2" /></li>
-            <li><T key="colophon.accessibility.item3" /></li>
-            <li><T key="colophon.accessibility.item4" /></li>
-            <li><T key="colophon.accessibility.item5" /></li>
-            <li><T key="colophon.accessibility.item6" /></li>
-          </ul>
-          <p>
-            <T key="colophon.accessibility.reportText" />
-            <a href="/contact/"><T key="colophon.accessibility.contactLink" /></a>.
-          </p>
-        </section>
+      <section id="privacy" class="scroll-mt-20">
+        <T key="colophon.privacy.title" tag="h2" />
+        <T key="colophon.privacy.body" tag="p" />
+      </section>
 
-        <!-- Inspiration -->
-        <section id="inspiration" class="scroll-mt-20">
-          <T key="colophon.inspiration.title" tag="h2" />
-          <p>
-            <T key="colophon.inspiration.content1" />{" "}
-            <a href="https://maggieappleton.com/colophon" target="_blank" rel="noopener noreferrer"><T key="colophon.inspiration.maggie" /></a>,{" "}
-            <T key="colophon.inspiration.content2" />{" "}
-            <a href="https://www.gwern.net/Colophon" target="_blank" rel="noopener noreferrer"><T key="colophon.inspiration.gwern" /></a>.
-          </p>
-        </section>
-      </div>
-    </div>
+      <section id="licenses" class="scroll-mt-20">
+        <T key="colophon.licenses.title" tag="h2" />
+        <T key="colophon.licenses.body" tag="p" />
+        <ul>
+          <li><a href={`${author.repoUrl}/src/branch/main/LICENSE`}>AGPL-3.0-or-later</a></li>
+          <li><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
+          <li><a href="/fonts/LICENSES.txt"><T key="colophon.licenses.fonts" /></a></li>
+          <li><a href="/cursor/info.txt"><T key="colophon.licenses.cursors" /></a></li>
+          <li><a href={localePath(lang, routes.badges)}><T key="colophon.licenses.badges" /></a></li>
+        </ul>
+      </section>
+
+      <section id="inspiration" class="scroll-mt-20">
+        <T key="colophon.inspiration.title" tag="h2" />
+        <T key="colophon.inspiration.body" tag="p" />
+        <ul>
+          <li><a href="https://maggieappleton.com/colophon">Maggie Appleton</a></li>
+          <li><a href="https://gwern.net/about#colophon">Gwern Branwen</a></li>
+        </ul>
+      </section>
+    </article>
   </div>
 </BaseLayout>

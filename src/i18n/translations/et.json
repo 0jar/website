@@ -496,61 +496,50 @@
   },
   "colophon": {
     "title": "Kolofon",
-    "description": "Selle veebisaidi taga peituv lugu ja selle loomine",
-    "siteHistory": {
-      "title": "Saidi ajalugu",
-      "content1": "This site was just registered in late 2023, yet the design has changed a lot over the span of its life. The first version was just a basic WordPress site hosted on a sketchy free hosting provider, the second was Carrd-based, and the third was built with Astro. This current iteration (the fourth version) is a complete redesign built from scratch with modern web technologies.",
-      "content2": "Each version has been an evolution, with this latest one focusing on performance, accessibility, full keyboard navigation, and a more personal touch that better represents who I am and what I care about."
+    "description": "Kuidas ma selle saidi tegin ja milles ma kirjutan.",
+    "intro": "Registreerisin domeeni 2023. aasta lõpus ja lihtsast isiklikust kodulehest sai kuidagi koht majanduspostitustele ja kassidele. Niipea kui näen midagi, mida saaks natuke paremaks teha, hakkan jälle nokitsema. Ja seda juhtub kogu aeg.",
+    "source": "Vaata lähtekoodi Codebergis",
+    "technology": {
+      "title": "Kuidas sait on tehtud",
+      "build": "Astro teeb lehtedest staatilise HTML-i. Enamiku kujundusest teeb Tailwind ning mängud töötavad TypeScripti ja Preacti abil. Blogi saad lugeda ka siis, kui JavaScript on välja lülitatud. Tetrisega nii hästi ei lähe.",
+      "history": "Esimene versioon jooksis WordPressil ühe tasuta majutaja juures, mis oli natuke … noh. Siis tulid Carrd, Astro ja mõneks ajaks Next.js. Toppisin isiklikule kodulehele nii palju arhitektuuri, et leht ise ka ei teadnud, mida sellega peale hakata. 2026. aasta aprillis läksin 5. versiooniga Astro juurde tagasi. Lõpuks tahtsin vist ikkagi lihtsalt lõbu pärast paar rida kirjutada ja veebi panna.",
+      "hosting": "Põhisait on Netlifys, varusait aadressil z.is-a.dev on Vercelis ja Neocitiesis on ka üks lihtsam koopia. Cloudflare haldab DNS-i ja vahendab põhidomeeni liiklust. See, et saan terve saidi mujale kolida, on üks peamisi põhjusi, miks mulle meeldib seda nii ehitada.",
+      "migration": "Kuidas ma Astro juurde tagasi kolisin"
     },
-    "technologyStack": {
-      "title": "Tehnoloogiapakk",
-      "nextjs": "React raamistik, mis võimaldab serveripoolset renderdamist ja staatiliste saitide loomist",
-      "react": "JavaScripti teek kasutajaliideste loomiseks",
-      "tailwind": "Sagedusele keskenduv CSS raamistik",
-      "shadcn": "Taaskasutatavate komponentide teek, ehitatud Radix UI ja Tailwindiga",
-      "framer": "Animatsiooniteek Reactile",
-      "i18next": "Rahvusvahelistumise raamistik",
-      "typescript": "Tugevalt tipitud programmeerimiskeel, mis põhineb JavaScriptil"
+    "writing": {
+      "title": "Kirjutamine ja toimetamine",
+      "body": "Postitused on koodihoidlas Markdowni failid, mille alguses on veidi metaandmeid (frontmatter). Seal on ka väli selle kohta, kas kass kiitis postituse heaks (millist postitust ta siis heaks ei kiida?). Pildifailid võivad olla otse postituse kõrval. /now ja arenduslogi kasutavad JSON-i ning kasutajaliidese tõlked on omaette failides. Avaldamiseks teen sisuliselt lihtsalt commiti ja ootan, kuni uus versioon üles läheb.",
+      "images": "Ekraanipiltide jaoks on mul väike nipp. Kui panen Markdownis alt-tekstiga pildi omaette lõiku, näitab väike skript sama teksti ka pildiallkirjana. Jälle üks jupp märgendust vähem, mida iga ekraanipildi jaoks kirjutada."
     },
-    "hosting": {
-      "title": "Majutus ja juurutamine",
-      "content1": "Sait on majutatud",
-      "content2": "mis pakub sujuvat juurutamist GitHubist, automaatset HTTPS-i ja globaalset CDN-jaotust.",
-      "content3": "Domeeni hallatakse läbi",
-      "content4": "mis pakub täiendavat turvalisust ja jõudlust."
+    "typography": {
+      "title": "Tüpograafia",
+      "body": "Minu vaikevalik pealkirjade ja põhiteksti jaoks on Lexend. Kirjatüübid on saidi enda serveris ning hiina keelel ja Hán Nômi kirjal on omad kirjatüübid. Kui eelistad Atkinson Hyperlegible’i, OpenDyslexicut või süsteemi kirjatüüpi, leiad need seadetest. Ah jaa, seal saad ka vilkuvad tähed välja lülitada või kontrasti tõsta."
     },
-    "design": {
-      "title": "Disainifilosoofia",
-      "p1": "See veebileht on loodud ligipääsetavust ja jõudlust silmas pidades. See töötab ilma JavaScriptita, kasutab semantilist HTML-i ja austab teie privaatsust, vältides jälgimisküpsiseid.",
-      "p2": "Disaini eesmärk on leida tasakaal kaasaegse esteetika ja klassikalise veebi lihtsuse vahel. Tume režiim on vaikimisi sisse lülitatud, sest mulle meeldivad mu võrkkestad."
+    "components": {
+      "title": "Mille kallal ma ikka nokitsen",
+      "body": "Avalehel on juhuslik tujukiisu. Vajuta klaviatuuril R, kui tahad teist. Tegin ka klaviatuuriga kasutatava käsupaleti, vanematele brauseritele retroversiooni ja tööriistalehe asjade jaoks, mida ma enam käsitsi teha ei viitsinud. Millalgi sattusid sinna ka 2048 ja Tetris. See pidi olema lihtsalt isiklik koduleht. Noh, teoorias ongi :3",
+      "tools": "Proovi tööriistu"
     },
-    "webStandards": {
-      "title": "Veebistandardid",
-      "intro": "See sait rakendab:",
-      "microformats": "mikrovormingud",
-      "feeds": "RSS, Atom ja JSON vood",
-      "robots": "robots.txt ja sitemap.xml",
-      "humans": "humans.txt"
+    "follow": {
+      "title": "Kuidas järge pidada",
+      "body": "Blogil on RSS-, Atom- ja JSON-vood. Kui mõni leht on klaviatuuriga ebamugav või sinu seadmes katki, anna mulle teada.",
+      "rss": "Telli RSS-i kaudu",
+      "contact": "Anna probleemist teada"
     },
-    "accessibility": {
-      "title": "Ligipääsetavus",
-      "intro": "Püüan teha selle saidi kõigile kättesaadavaks. Funktsioonide hulka kuuluvad:",
-      "item1": "Semantiline HTML struktuur",
-      "item2": "Sisu vahelejätmise lingid",
-      "item3": "Õige pealkirjade hierarhia",
-      "item4": "WCAG 2.1 AA värvikontrast",
-      "item5": "Klaviatuuriga navigeeritav",
-      "item6": "Arvestab vähendatud liikumise eelistusi",
-      "reportText": "Kui märkate ligipääsetavuse probleeme, siis",
-      "contactLink": "andke mulle teada"
+    "privacy": {
+      "title": "Mis juhtub, kui saiti külastad?",
+      "body": "Kasutan Umamit, et lugeda põhi- ja Verceli varusaidi külastusi. Brauser salvestab teema, kirjatüübi ja muud eelistused kohapeal. Kui kirjutad külalisteraamatusse, läheb sissekanne Netlify Formsi kaudu."
+    },
+    "licenses": {
+      "title": "Taaskasutus ja autorid",
+      "body": "Kood on AGPL-i versiooni 3 või hilisema versiooni all. Minu tekstid ja muu enda loodud sisu on CC BY 4.0 litsentsiga. Kui mu tööd kasutad, palun viita mulle ja lisa link algallikale. Teiste autorite kirjatüüpidele, kursoritele, märkidele ja piltidele kehtivad nende enda tingimused.",
+      "fonts": "Kirjatüüpide litsentsid",
+      "cursors": "Kursorite autorid",
+      "badges": "88×31 märgid ja nende allikad"
     },
     "inspiration": {
-      "title": "Inspiratsioon",
-      "content1": "See leht ammutab inspiratsiooni",
-      "content2": "mis omakorda on inspireeritud",
-      "content3": "Algne idee teemal",
-      "maggie": "Maggie Appletoni kolofoon",
-      "gwern": "Gwern Branweni kolofoon"
+      "title": "Kust ma idee sain",
+      "body": "Mulle meeldis, kuidas Maggie Appleton oma kodulehest räägib. Tema kolofoni kaudu jõudsin ka Gwerni omani."
     }
   },
   "footer": {

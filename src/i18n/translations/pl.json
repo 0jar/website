@@ -496,61 +496,50 @@
   },
   "colophon": {
     "title": "Kolofon",
-    "description": "Historia tej strony i jak powstała",
-    "siteHistory": {
-      "title": "Historia strony",
-      "content1": "Strona została zarejestrowana dopiero pod koniec 2023 roku, ale jej wygląd zmieniał się wielokrotnie. Pierwsza wersja to prosty WordPress na podejrzanym darmowym hostingu, druga była oparta na Carrd, trzecia powstała na Astro. Ta obecna (czwarta) to pełny redesign od zera, z użyciem nowoczesnych technologii webowych.",
-      "content2": "Każda wersja to ewolucja, a ta najnowsza skupia się na wydajności, dostępności i bardziej osobistym podejściu, które lepiej oddaje to, kim jestem i co mnie porusza."
+    "description": "Jak zbudowałem tę stronę i w czym piszę.",
+    "intro": "Zarejestrowałem domenę pod koniec 2023 roku i jakoś zrobiłem z prostej strony osobistej miejsce na teksty o ekonomii i koty. Jak tylko widzę coś, co da się choć trochę poprawić, znowu zaczynam przy tym dłubać. A to się zdarza bez przerwy.",
+    "source": "Zobacz kod na Codebergu",
+    "technology": {
+      "title": "Jak to jest zbudowane",
+      "build": "Astro buduje strony jako statyczny HTML. Za większość stylów odpowiada Tailwind, a trochę TypeScriptu i Preacta obsługuje gry. Blog można czytać bez JavaScriptu. Z Tetrisem już trochę gorzej.",
+      "history": "Pierwsza wersja to był WordPress na darmowym hostingu, takim trochę… no. Potem były Carrd, Astro i epizod z Next.js. Napchałem wtedy w osobistą stronę tyle architektury, że sama nie wiedziała, co z tym zrobić. W kwietniu 2026 roku, przy wersji 5, wróciłem do Astro. Wyszło na to, że chciałem po prostu dla zabawy coś napisać i wrzucić do internetu.",
+      "hosting": "Główna strona działa na Netlify, zapasowa pod z.is-a.dev na Vercelu, a na Neocities jest jeszcze prostsza kopia. Cloudflare obsługuje DNS i pośredniczy w ruchu głównej domeny. Jednym z głównych powodów, dla których buduję stronę w ten sposób, jest to, że mogę ją w całości przenieść gdzie indziej.",
+      "migration": "Jak wróciłem do Astro"
     },
-    "technologyStack": {
-      "title": "Stos technologiczny",
-      "nextjs": "Framework React umożliwiający SSR i generowanie stron statycznych",
-      "react": "Biblioteka JavaScript do budowania interfejsów",
-      "tailwind": "Narzędziowy framework CSS",
-      "shadcn": "Biblioteka komponentów zbudowana z Radix UI i Tailwind",
-      "framer": "Biblioteka animacji dla React",
-      "i18next": "Framework do internacjonalizacji",
-      "typescript": "Silnie typowany język programowania oparty na JavaScript"
+    "writing": {
+      "title": "Pisanie i redagowanie",
+      "body": "Wpisy to pliki Markdown w repozytorium, z odrobiną frontmatteru na metadane. Jest pole, które mówi, czy kot zatwierdził wpis (a którego wpisu niby nie zatwierdza?). Pliki z obrazkami mogą leżeć zaraz obok wpisu. /now i dziennik zmian używają JSON-a, a tłumaczenia interfejsu mają własne pliki. Publikowanie to w zasadzie commit pliku i czekanie, aż nowa wersja pojawi się na stronie.",
+      "images": "Mam mały patent na zrzuty ekranu. Kiedy obrazek z tekstem alternatywnym stoi w Markdownie w osobnym akapicie, krótki skrypt pokazuje ten sam tekst jako podpis. Za każdym razem jest trochę mniej znaczników do pisania."
     },
-    "hosting": {
-      "title": "Hosting i wdrożenie",
-      "content1": "Strona hostowana na",
-      "content2": "co zapewnia płynne wdrożenia z GitHub, automatyczny HTTPS i globalny CDN.",
-      "content3": "Domena zarządzana przez",
-      "content4": "co daje dodatkowe korzyści bezpieczeństwa i wydajności."
+    "typography": {
+      "title": "Typografia",
+      "body": "Domyślnie używam Lexenda do nagłówków i tekstu. Fonty trzymam na stronie, a chiński i pismo Hán Nôm mają własne. Jeśli wolisz Atkinson Hyperlegible, OpenDyslexic albo font systemowy, znajdziesz je w ustawieniach. A, no i w tym samym menu można wyłączyć migające gwiazdki albo podbić kontrast."
     },
-    "design": {
-      "title": "Filozofia projektowania",
-      "p1": "Ta strona została zaprojektowana z myślą o dostępności i wydajności. Działa bez włączonego JavaScriptu, używa semantycznego HTML i szanuje twoją prywatność, nie używając żadnych plików cookie do śledzenia.",
-      "p2": "Projekt dąży do równowagi między nowoczesną estetyką a klasyczną prostotą sieci. Tryb ciemny jest domyślny, bo lubię swoje siatkówki."
+    "components": {
+      "title": "Rzeczy, przy których ciągle dłubię",
+      "body": "Na stronie głównej pojawia się losowy kot nastroju. Naciśnij R na klawiaturze, żeby zobaczyć następnego. Zrobiłem też paletę poleceń obsługiwaną klawiaturą, wersję retro dla starszych przeglądarek i stronę z narzędziami do rzeczy, które znudziło mi się robić ręcznie. Gdzieś po drodze dorzuciłem 2048 i Tetrisa. To miała być zwykła strona osobista. No cóż, w teorii nadal nią jest :3",
+      "tools": "Wypróbuj narzędzia"
     },
-    "webStandards": {
-      "title": "Standardy sieciowe",
-      "intro": "Ta strona wdraża:",
-      "microformats": "mikroformaty",
-      "feeds": "kanały RSS, Atom i JSON",
-      "robots": "robots.txt i sitemap.xml",
-      "humans": "humans.txt"
+    "follow": {
+      "title": "Jak śledzić blog",
+      "body": "Blog ma kanały RSS, Atom i JSON. Daj znać, jeśli coś trudno obsłużyć klawiaturą albo u ciebie wygląda na zepsute.",
+      "rss": "Subskrybuj przez RSS",
+      "contact": "Zgłoś mi problem"
     },
-    "accessibility": {
-      "title": "Dostępność",
-      "intro": "Staram się, aby ta strona była dostępna dla każdego. Funkcje obejmują:",
-      "item1": "Semantyczna struktura HTML",
-      "item2": "Linki do pomijania treści",
-      "item3": "Prawidłowa hierarchia nagłówków",
-      "item4": "Kontrast kolorów WCAG 2.1 AA",
-      "item5": "Nawigacja klawiaturą",
-      "item6": "Respektowanie preferencji ograniczenia ruchu",
-      "reportText": "Jeśli napotkasz jakiekolwiek problemy z dostępnością, proszę",
-      "contactLink": "daj mi znać"
+    "privacy": {
+      "title": "Co się dzieje, kiedy tu zaglądasz?",
+      "body": "Używam Umami do liczenia odwiedzin na głównej stronie i kopii na Vercelu. Przeglądarka zapisuje lokalnie ustawienia, takie jak motyw i font. Jeśli wpiszesz się do księgi gości, formularz przejdzie przez Netlify Forms."
+    },
+    "licenses": {
+      "title": "Licencje i autorzy",
+      "body": "Kod jest na licencji AGPL w wersji 3 lub nowszej. Moje teksty i inne autorskie treści są na CC BY 4.0. Jeśli wykorzystasz moją pracę, podaj autora i link do źródła. Cudze fonty, kursory, odznaki i obrazki zachowują własne warunki.",
+      "fonts": "Licencje fontów",
+      "cursors": "Autorzy kursorów",
+      "badges": "Odznaki 88×31 i ich źródła"
     },
     "inspiration": {
-      "title": "Inspiracje",
-      "content1": "Ta strona czerpie inspirację z",
-      "content2": "która z kolei czerpie z",
-      "content3": "Oryginalny pomysł na",
-      "maggie": "Kolofon Maggie Appleton",
-      "gwern": "Kolofon Gwerna Branwena"
+      "title": "Skąd ten pomysł",
+      "body": "Spodobało mi się, jak Maggie Appleton opowiada o własnej stronie. Z jej kolofonu trafiłem też do kolofonu Gwerna."
     }
   },
   "footer": {

@@ -496,61 +496,50 @@
   },
   "colophon": {
     "title": "tan lipu",
-    "description": "toki pi lipu ni en nasin pali ona",
-    "siteHistory": {
-      "title": "tenpo lipu",
-      "content1": "mi open e lipu ni lon pini 2023. taso sitelen ona li ante mute. nanpa wan li WordPress lon poki ken pi mani ala; nanpa tu li Carrd; nanpa tu wan li Astro. lipu ni li nanpa 4: mi pali sin tan anpa kepeken ilo sin.",
-      "content2": "sitelen ale li ante lili lili; tenpo ni la mi lawa e wawa, e ken pi jan ale (accessibility), e noka sitelen lon ilo, en e pilin jan. ni li ken pona e mi."
+    "description": "nasin pali pi lipu ni en ilo mi pi sitelen toki.",
+    "intro": "mi open e nimi ma lon pini pi sike 2023. open la ni li lipu mi taso. taso ona li kama ma pi toki mani en soweli. mi lukin e ijo ken pona lili la mi musi li ante e ona. ni li kama lon tenpo mute a.",
+    "source": "o lukin e pali lipu lon Codeberg",
+    "technology": {
+      "title": "nasin pali",
+      "build": "ilo Astro li pali e lipu HTML pi ante ala. ilo Tailwind li pali e lukin mute. ilo TypeScript en ilo Preact li pali e musi. sina ken lukin e lipu toki kepeken ala ilo JavaScript. taso sina ken ala musi Tetris lon nasin ni.",
+      "history": "lipu nanpa wan li kepeken ilo WordPress lon poki pi mani ala. poki ni li nasa lili. mi tawa ilo Carrd, li tawa ilo Astro, li kepeken ilo Next.js lon tenpo lili. tenpo ni la mi pana e nasin mute a tawa lipu mi. lipu li sona ala e nasin kepeken ona. lon mun nanpa tu tu pi sike 2026 la mi kepeken sin ilo Astro tawa lipu nanpa 5. pini la mi wile taso sitelen e toki lili tan musi, li wile pana e ona lon linluwi.",
+      "hosting": "lipu lawa li lon Netlify. lipu awen z.is-a.dev li lon Vercel. lipu sama pi nasin lili li lon Neocities kin. ilo Cloudflare li lawa e nimi ma kepeken DNS li pana e lipu lawa. mi olin e nasin pali ni tan ni. mi ken tawa poki ante kepeken lipu sama.",
+      "migration": "nasin mi pi tawa sin tawa Astro"
     },
-    "technologyStack": {
-      "title": "ilo pi pali",
-      "nextjs": "ilo React tawa pali lon ilo lawa en lipu anpa",
-      "react": "ilo JavaScript tawa pali sinpin",
-      "tailwind": "ilo len pi nimi lili",
-      "shadcn": "poki ijo kepeken tan Radix UI en Tailwind",
-      "framer": "ilo tawa musi tawa React",
-      "i18next": "ilo pi toki mute",
-      "typescript": "toki JavaScript kepeken nimi pi wawa nanpa"
+    "writing": {
+      "title": "sitelen en ante",
+      "body": "toki mi li lon lipu Markdown lon poki pali. sona pi toki li lon open lipu. ijo wan li toki e ni. soweli li pilin pona tawa toki anu seme? (toki seme la soweli li pilin pona ala?) lipu sitelen li ken lon poka lipu toki. /now en lipu pi ante pali li kepeken JSON. ante toki pi sinpin li lon lipu ona. mi pana e toki sin la mi pana e lipu tawa poki pali, li awen taso e ni. ilo li pali e lipu li pana e ona lon linluwi.",
+      "images": "mi jo e nasin lili tawa sitelen pi sinpin ilo. mi pana e sitelen Markdown lon kulupu ona taso, li pana e nimi pi sitelen la ilo lili li pana kin e nimi lon anpa sitelen. mi wile ala sitelen e nimi sama lon tenpo tu."
     },
-    "hosting": {
-      "title": "poki & pana",
-      "content1": "lipu li lon",
-      "content2": "ona li ken pana lon tan GitHub kepeken pona, HTTPS, en CDN pi ma ale.",
-      "content3": "nimi ma li lon",
-      "content4": "ona li pana e awen en wawa sin."
+    "typography": {
+      "title": "nasin sitelen",
+      "body": "mi kepeken nasin Lexend tawa nimi lawa en toki lon lipu. nasin sitelen li lon lipu ni. toki Sonko en sitelen Hán Nôm li jo e nasin sitelen ona. sina wile e nasin Atkinson Hyperlegible anu OpenDyslexic anu nasin pi ilo sina la o lukin e pali ante. a, lon ma sama la sina ken weka e mun lili pi suno tawa anu suli e ante kule."
     },
-    "design": {
-      "title": "nasin pi pali lipu",
-      "p1": "lipu ni li pali tan ni: ona li wile pona tawa jan ali, li wile wawa. ona li ken pali kepeken ala ilo JavaScript. ona li kepeken nasin HTML pona. ona li lukin ala e ni: sina weka tawa seme (ona li kepeken ala e ilo 'cookies' pi alasa jan).",
-      "p2": "lukin pi lipu ni li wile e ni: lukin sin li wan pona tawa lukin pi tenpo pini. mi pini e suno lon lipu (Dark mode), tan ni: mi olin e oko mi."
+    "components": {
+      "title": "ijo mi ante lon tenpo mute",
+      "body": "lipu open li pana e soweli lon nasin pi sona ala. o nena e R lon ilo nena tawa soweli ante. mi pali kin e poki pi nimi lawa kepeken ilo nena, e lipu tawa ilo lukin majuna, e lipu pi ilo lili tawa pali mi pi pona ala tawa mi. mi pana kin e musi 2048 e musi Tetris. open la mi wile e lipu mi taso. a, ona li lipu mi lon :3",
+      "tools": "o kepeken ilo"
     },
-    "webStandards": {
-      "title": "nasin pi kulupu Wepu",
-      "intro": "lipu ni li kepeken e ni:",
-      "microformats": "nasin 'microformats'",
-      "feeds": "nasin RSS, nasin Atom, en nasin JSON",
-      "robots": "lipu robots.txt en lipu sitemap.xml",
-      "humans": "lipu humans.txt"
+    "follow": {
+      "title": "o kama lukin",
+      "body": "lipu toki li jo e nasin RSS, e nasin Atom, e nasin JSON. nena li pali ike anu lipu li pakala la o toki tawa mi.",
+      "rss": "o kama jo e toki lon RSS",
+      "contact": "o toki e pakala tawa mi"
     },
-    "accessibility": {
-      "title": "nasin tawa jan ali",
-      "intro": "mi wile e ni: jan ali li ken kepeken e lipu ni. ijo pona li:",
-      "item1": "pali HTML li kule pona",
-      "item2": "linja tawa weka e ijo lili",
-      "item3": "lawa toki li lon ma pona",
-      "item4": "kule li suli sama nasin WCAG 2.1 AA",
-      "item5": "ken kepeken e ilo nena taso",
-      "item6": "awen e wile tawa tawa lili",
-      "reportText": "pakala li lon la, o",
-      "contactLink": "toki tawa mi"
+    "privacy": {
+      "title": "sina kama lukin la seme li kama?",
+      "body": "mi kepeken ilo Umami tawa nanpa pi kama lukin lon lipu lawa en lipu awen pi Vercel. ilo sina li awen e wile sina pi kule en nasin sitelen lon ilo sina. sina sitelen lon lipu pi jan kama la ilo Netlify Forms li pana e toki."
+    },
+    "licenses": {
+      "title": "ken pi kepeken sin en jan pali",
+      "body": "nasin ken AGPL nanpa 3 anu nanpa sin li lawa e ilo mi. nasin CC BY 4.0 li lawa e toki mi en ijo ante mi. sina kepeken pali mi la o toki e nimi mi, o pana e linja tawa lipu mi. nasin sitelen en sitelen pi jan ante li jo e nasin ken ona.",
+      "fonts": "nasin ken pi nasin sitelen",
+      "cursors": "jan pali pi sitelen ilo luka",
+      "badges": "sitelen 88×31 en tan ona"
     },
     "inspiration": {
-      "title": "kon suli",
-      "content1": "lipu ni li kama tan",
-      "content2": "ona li kama tan",
-      "content3": "pilin open li lon",
-      "maggie": "lipu pini pi jan Maggie Appleton",
-      "gwern": "lipu pini pi jan Gwern Branwen"
+      "title": "tan pi pilin open",
+      "body": "mi olin e nasin pi jan Maggie Appleton lon toki pi lipu ona. tan lipu ni la mi lukin kin e lipu pi jan Gwern."
     }
   },
   "footer": {

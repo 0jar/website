@@ -496,61 +496,50 @@
   },
   "colophon": {
     "title": "Kolofon",
-    "description": "Historien bag dette websted, og hvordan det blev bygget",
-    "siteHistory": {
-      "title": "Webstedets Historie",
-      "content1": "Dette websted blev først registreret i slutningen af 2023, men designet har ændret sig meget i løbet af dets levetid. Den første version var bare et grundlæggende WordPress-websted hostet på en skizzy gratis hostingudbyder, den anden var Carrd-baseret, og den tredje var bygget med Astro.",
-      "content2": "Denne nuværende iteration (den fjerde version) er et komplet redesign bygget fra bunden med moderne webteknologier. Hver version har været en udvikling, hvor denne seneste fokuserer på ydeevne, tilgængelighed og et mere personligt præg, der bedre repræsenterer, hvem jeg er, og hvad jeg holder af."
+    "description": "Hvordan jeg byggede siden, og hvad jeg skriver i.",
+    "intro": "Jeg registrerede domænet i slutningen af 2023, og en simpel personlig hjemmeside blev på en eller anden måde til et sted med økonomiindlæg og katte. Så snart jeg får øje på noget, der kunne være lidt bedre, kan jeg ikke lade være med at pille ved det. Og det sker hele tiden.",
+    "source": "Se kildekoden på Codeberg",
+    "technology": {
+      "title": "Sådan er det bygget",
+      "build": "Astro bygger siderne som statisk HTML. Tailwind står for det meste af udseendet, og lidt TypeScript og Preact får spillene til at køre. Du kan læse bloggen uden JavaScript. Det går knap så godt med Tetris.",
+      "history": "Den første version var WordPress på en gratis vært, der var lidt … ja. Så kom Carrd, Astro og en omgang Next.js, hvor jeg proppede så meget arkitektur ind på en personlig hjemmeside, at den ikke anede, hvad den skulle stille op med det. Jeg gik tilbage til Astro med version 5 i april 2026. Det viste sig, at jeg egentlig bare ville skrive et par linjer og lægge dem på nettet for sjov.",
+      "hosting": "Hovedsiden ligger på Netlify, reservesiden på z.is-a.dev ligger på Vercel, og der er også en enklere kopi på Neocities. Cloudflare står for DNS og fungerer som proxy for hoveddomænet. At jeg kan flytte hele siden et andet sted hen, er en af de vigtigste grunde til, at jeg bygger den sådan.",
+      "migration": "Sådan flyttede jeg tilbage til Astro"
     },
-    "technologyStack": {
-      "title": "Teknologistak",
-      "nextjs": "React-framework, der muliggør serverside-rendering og statisk webstedsgenerering",
-      "react": "JavaScript-bibliotek til opbygning af brugergrænseflader",
-      "tailwind": "Utility-first CSS-framework",
-      "shadcn": "Genanvendeligt komponentbibliotek bygget med Radix UI og Tailwind",
-      "framer": "Animationsbibliotek til React",
-      "i18next": "Internationaliseringsframework",
-      "typescript": "Stærkt typet programmeringssprog, der bygger på JavaScript"
+    "writing": {
+      "title": "Skrivning og redigering",
+      "body": "Indlæggene er Markdown-filer i repoet med lidt frontmatter til metadata. Der er et felt til, om en kat har godkendt indlægget (hvilket indlæg godkender katten ikke?). Billedfilerne kan ligge lige ved siden af indlægget. /now og devloggen bruger JSON, og oversættelserne af brugerfladen har deres egne filer. At udgive er egentlig bare at committe en fil og vente på, at den nye version går i luften.",
+      "images": "Jeg har en lille genvej til skærmbilleder. Når et Markdown-billede med alt-tekst står i sit eget afsnit, viser et lille script også teksten som billedtekst. Så er der lidt mindre markup at skrive, næste gang jeg vil vise et skærmbillede."
     },
-    "hosting": {
-      "title": "Hosting & Implementering",
-      "content1": "Webstedet er hostet på",
-      "content2": "som giver problemfri implementering fra GitHub, automatisk HTTPS og global CDN-distribution.",
-      "content3": "Domænet administreres via",
-      "content4": "som giver yderligere sikkerheds- og ydelsesfordele."
+    "typography": {
+      "title": "Typografi",
+      "body": "Lexend er mit standardvalg til overskrifter og brødtekst. Skrifttyperne ligger på selve siden, og kinesisk og Hán Nôm-skrift har deres egne. I indstillingerne finder du Atkinson Hyperlegible, OpenDyslexic og din systemskrifttype, hvis du hellere vil bruge en af dem. Nå ja, der kan du også slå de blinkende stjerner fra eller skrue op for kontrasten."
     },
-    "design": {
-      "title": "Designfilosofi",
-      "p1": "Denne hjemmeside er designet med tilgængelighed og ydeevne for øje. Den fungerer uden JavaScript aktiveret, bruger semantisk HTML og respekterer dit privatliv ved ikke at bruge tracking cookies.",
-      "p2": "Designet sigter mod en balance mellem moderne æstetik og klassisk web-enkelhed. Mørk tilstand er standard, fordi jeg holder af mine nethinder."
+    "components": {
+      "title": "Det jeg bliver ved med at pille ved",
+      "body": "På forsiden dukker der en tilfældig humørkat op. Tryk på R på tastaturet for at få en ny. Jeg har også lavet en kommandopalet til tastaturet, en retroversion til ældre browsere og en side med værktøjer til ting, jeg var træt af at gøre i hånden. Et eller andet sted undervejs røg 2048 og Tetris også med. Det skulle bare være en personlig hjemmeside. Tja, på papiret er det vel stadig det :3",
+      "tools": "Prøv værktøjerne"
     },
-    "webStandards": {
-      "title": "Webstandarder",
-      "intro": "Denne side implementerer:",
-      "microformats": "mikroformater",
-      "feeds": "RSS, Atom og JSON feeds",
-      "robots": "robots.txt og sitemap.xml",
-      "humans": "humans.txt"
+    "follow": {
+      "title": "Følg med",
+      "body": "Bloggen har RSS-, Atom- og JSON-feeds. Sig gerne til, hvis noget driller med tastaturet eller ser forkert ud hos dig.",
+      "rss": "Abonnér via RSS",
+      "contact": "Fortæl mig om et problem"
     },
-    "accessibility": {
-      "title": "Tilgængelighed",
-      "intro": "Jeg bestræber mig på at gøre denne side tilgængelig for alle. Funktioner inkluderer:",
-      "item1": "Semantisk HTML-struktur",
-      "item2": "Spring til indhold links",
-      "item3": "Korrekt overskriftshierarki",
-      "item4": "WCAG 2.1 AA farvekontrast",
-      "item5": "Tastaturnavigation",
-      "item6": "Respekterer præferencer for reduceret bevægelse",
-      "reportText": "Hvis du støder på tilgængelighedsproblemer, så",
-      "contactLink": "giv mig besked"
+    "privacy": {
+      "title": "Hvad sker der, når du besøger siden?",
+      "body": "Jeg bruger Umami til at tælle besøg på hovedsiden og reservesiden på Vercel. Din browser gemmer indstillinger som tema og skrifttype lokalt. Hvis du skriver i gæstebogen, går formularen gennem Netlify Forms."
+    },
+    "licenses": {
+      "title": "Genbrug og kreditering",
+      "body": "Koden er udgivet under AGPL, version 3 eller nyere. Mine tekster og andet originalt indhold er udgivet under CC BY 4.0. Hvis du genbruger noget, så kreditér mig gerne og link tilbage. Andres skrifttyper, markører, badges og billeder har deres egne vilkår.",
+      "fonts": "Skrifttypelicenser",
+      "cursors": "Kreditering af markører",
+      "badges": "88×31-badges og deres kilder"
     },
     "inspiration": {
-      "title": "Inspiration",
-      "content1": "Denne side henter inspiration fra",
-      "content2": "som igen henter inspiration fra",
-      "content3": "Original idé på",
-      "maggie": "Maggie Appletons kolofon",
-      "gwern": "Gwern Branwens kolofon"
+      "title": "Hvor jeg fik idéen",
+      "body": "Jeg kunne godt lide den måde, Maggie Appleton fortæller om sin egen hjemmeside på. Hendes kolofon førte mig også til Gwerns."
     }
   },
   "footer": {

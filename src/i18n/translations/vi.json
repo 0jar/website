@@ -536,61 +536,50 @@
   },
   "colophon": {
     "title": "Thông tin trang web",
-    "description": "Câu chuyện đằng sau trang web này",
-    "siteHistory": {
-      "title": "Lịch sử trang này",
-      "content1": "Mình mới đăng ký trang web này vào cuối năm 2023, nhưng thiết kế nó đã thay đổi rất nhiều trong suốt thời gian này. Phiên bản đầu tiên chỉ là một trang WordPress ở trên một cái hosting miễn phí nào đó, bản thứ hai thì là trang Carrd.co, và bản thứ ba được xây trên nền Astro. Phiên bản hiện tại là một bản mình thiết kế lại hoàn toàn mới và đập đi xây lại từ đầu.",
-      "content2": "Mỗi phiên bản đều là một sự tiến hóa nhất định, với bản mới nhất này tập trung vào độ nhanh nhạy, khả năng tiếp cận (accessibility), khả năng điều hướng hoàn toàn bằng bàn phím, và cũng như một cảm giác \"mình\" hơn một chút, thể hiện \"mình\" tốt hơn chút."
+    "description": "Mình làm trang này thế nào và viết bài bằng gì.",
+    "intro": "Mình đăng ký tên miền vào cuối năm 2023, rồi chẳng hiểu sao từ một trang cá nhân đơn giản lại thành chỗ để viết về kinh tế và đăng mèo. Cứ thấy chỗ nào có thể làm cho ngon hơn một chút là mình lại nghịch ngihch sửa. Mà chuyện đó xảy ra suốt.",
+    "source": "Xem mã nguồn trên Codeberg",
+    "technology": {
+      "title": "Mình dựng trang thế nào",
+      "build": "Astro dựng các trang thành HTML tĩnh. Tailwind lo phần lớn giao diện, còn chút TypeScript với Preact lo phần trò chơi. Tắt JavaScript vẫn đọc blog được, chứ chơi Tetris thì không ổn lắm.",
+      "history": "Bản đầu tiên là WordPress trên một cái hosting miễn phí hơi ba chấm. Rồi tới Carrd, Astro, xong có một thời dùng Next.js, dạo đó mình nhét nhiều thứ vào trang đến mức nó chẳng biết dùng vào đâu. Mình quay lại Astro với bản thứ 5 hồi tháng 4 năm 2026. Hoá ra cuối cùng mình cũng chỉ chủ yếu muốn viết vài dòng rồi đăng lên mạng cho vui thôi.",
+      "hosting": "Trang chính chạy trên Netlify, bản dự phòng ở z.is-a.dev chạy trên Vercel, và còn có một bản sao đơn giản hơn trên Neocities. Cloudflare lo DNS và làm proxy cho tên miền chính. Bê nguyên cái trang đi chỗ khác được là một trong những lý do chính mình thích làm theo cách này.",
+      "migration": "Mình quay lại Astro như thế nào"
     },
-    "technologyStack": {
-      "title": "Các nền công nghệ sử dụng",
-      "nextjs": "Framework React cho phép render (tạo ảnh) từ phía server và tạo trang web tĩnh",
-      "react": "Thư viện JavaScript xây dựng giao diện",
-      "tailwind": "Framework CSS theo phương pháp utility-first (viết CSS mà không cần viết quá nhiều CSS)",
-      "shadcn": "Thư viện component (thành phần) tái sử dụng được dựng với Radix UI và Tailwind",
-      "framer": "Thư viện animation (hoạt ảnh) cho React",
-      "i18next": "Framework hỗ trợ ngôn ngữ",
-      "typescript": "Ngôn ngữ lập trình mở rộng dựa trên JavaScript"
+    "writing": {
+      "title": "Viết và sửa bài",
+      "body": "Bài viết là các tệp Markdown trong repo, có một ít frontmatter ở đầu tệp để ghi metadata. Có một ô ghi xem mèo đã duyệt bài chưa (mà mèo thì bài nào chả duyệt). File ảnh có thể nằm ngay file bài viết. Trang /now với nhật ký phát triển dùng JSON, còn bản dịch giao diện nằm trong các tệp riêng. Đăng bài về cơ bản chỉ là commit một tệp rồi đợi bản build được đưa lên thôi.",
+      "images": "Mình có một mẹo nhỏ cho ảnh chụp màn hình. Cứ để ảnh Markdown có alt text đứng riêng một đoạn là có đoạn script nhỏ lấy luôn phần chữ đó làm chú thích. Thế là mỗi lần muốn khoe ảnh chụp màn hình lại đỡ phải gõ thêm một chút markup."
     },
-    "hosting": {
-      "title": "Lưu trữ web (Hosting)",
-      "content1": "Trang web được lưu trên",
-      "content2": "hỗ trợ chạy code web thông suốt từ GitHub.",
-      "content3": "Tên miền này được quản lý bởi",
-      "content4": "và họ cũng giúp bảo mật trang web này cũng như hỗ trợ tăng hiệu năng."
+    "typography": {
+      "title": "Phông chữ",
+      "body": "Mình dùng Lexend mặc định cho cả tiêu đề lẫn nội dung. Phông được lưu ngay trên trang, còn tiếng Trung và chữ Hán Nôm có phông riêng. Nếu thích đọc bằng Atkinson Hyperlegible, OpenDyslexic hay cứ dùng phông hệ thống thì đều có trong cài đặt cả. À, trong đó còn tắt sao lấp lánh hoặc tăng độ tương phản được nữa đó."
     },
-    "design": {
-      "title": "Triết lý thiết kế",
-      "p1": "Trang web này được thiết kế chú trọng vào khả năng tiếp cận và hiệu suất. Nó hoạt động mà không cần bạn bật JavaScript, sử dụng HTML đúng ngữ nghĩa và tôn trọng quyền riêng tư của bạn bằng cách không sử dụng bất kỳ cookie theo dõi nào.",
-      "p2": "Thiết kế hướng tới cân bằng giữa thẩm mỹ hiện đại và sự đơn giản cổ điển của web indie. Chế độ tối được đặt mặc định vì mình cũng thương đôi mắt của mình lắm."
+    "components": {
+      "title": "Mấy thứ mình vẫn hay nghịch",
+      "body": "Trang chủ hiện một con mèo tâm trạng ngẫu nhiên, bấm phím R trên bàn phím là có con khác. Mình cũng làm bảng lệnh bàn phím, bản retro cho trình duyệt cũ và một trang công cụ cho mấy việc mình chán làm thủ công. Rồi đâu đó lại thêm cả 2048 với Tetris. Ban đầu tính làm trang cá nhân thôi. Ừ thì trên lý thuyết vẫn là trang cá nhân mà :3",
+      "tools": "Thử mấy công cụ"
     },
-    "webStandards": {
-      "title": "Tiêu chuẩn web",
-      "intro": "Trang web này triển khai:",
-      "microformats": "microformats",
-      "feeds": "RSS, Atom và JSON feeds",
-      "robots": "robots.txt và sitemap.xml",
-      "humans": "humans.txt"
+    "follow": {
+      "title": "Theo dõi bài mới",
+      "body": "Blog có feed RSS, Atom và JSON. Nếu dùng bàn phím thấy vướng hoặc trang bị lỗi trên máy bạn, cứ nhắn mình.",
+      "rss": "Đăng ký qua RSS",
+      "contact": "Báo lỗi cho mình"
     },
-    "accessibility": {
-      "title": "Khả năng tiếp cận",
-      "intro": "Mình cố gắng làm cho trang web này có thể truy cập được cho tất cả mọi người. Các tính năng bao gồm:",
-      "item1": "Cấu trúc HTML ngữ nghĩa",
-      "item2": "Liên kết 'Skip-to-content'",
-      "item3": "Phân cấp tiêu đề hợp lý",
-      "item4": "Độ tương phản màu WCAG 2.1 AA",
-      "item5": "Điều hướng bằng bàn phím",
-      "item6": "Tôn trọng tùy chọn giảm chuyển động",
-      "reportText": "Nếu bạn gặp bất kỳ vấn đề nào về khả năng tiếp cận, vui lòng",
-      "contactLink": "cho mình biết"
+    "privacy": {
+      "title": "Khi bạn ghé trang thì có gì xảy ra?",
+      "body": "Mình dùng Umami để đếm lượt ghé trang chính và bản dự phòng trên Vercel. Mấy tuỳ chọn như giao diện sáng tối hay phông chữ được trình duyệt lưu ngay trên máy bạn. Nếu bạn ký sổ lưu bút thì biểu mẫu được gửi qua Netlify Forms."
+    },
+    "licenses": {
+      "title": "Giấy phép và ghi công",
+      "body": "Mã nguồn dùng AGPL phiên bản 3 trở lên. Bài viết và nội dung khác do mình làm dùng CC BY 4.0. Nếu dùng lại thì ghi tên mình và dẫn link về bản gốc nhé. Phông chữ, con trỏ, badge và hình ảnh của người khác vẫn theo điều khoản riêng của họ.",
+      "fonts": "Giấy phép phông chữ",
+      "cursors": "Tác giả bộ con trỏ",
+      "badges": "Badge 88×31 và nguồn"
     },
     "inspiration": {
-      "title": "Nguồn cảm hứng",
-      "content1": "Trang này lấy cảm hứng từ",
-      "content2": "mà lại có cảm hứng từ",
-      "content3": "Ý tưởng ban đầu ở trên",
-      "maggie": "Colophon của Maggie Appleton",
-      "gwern": "Colophon của Gwern Branwen"
+      "title": "Mình mượn ý tưởng từ đâu",
+      "body": "Mình thích cách Maggie Appleton kể về trang của cô ấy. Nhờ đó mình cũng tìm đến trang colophon của Gwern."
     }
   },
   "footer": {
