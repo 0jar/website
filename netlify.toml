@@ -17,12 +17,12 @@
 [[headers]]
   for = "/"
   [headers.values]
-    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com gateway.umami.is cloud.umami.is status.cafe; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' *.ytimg.com *.rcd.gg *.googleusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com gateway.umami.is cloud.umami.is status.cafe; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' *.ytimg.com *.rcd.gg *.googleusercontent.com moods.imood.com lastfm-img.freetls.fastly.net lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
 
 [[headers]]
   for = "/??/"
   [headers.values]
-    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com gateway.umami.is cloud.umami.is status.cafe; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' *.ytimg.com *.rcd.gg *.googleusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com gateway.umami.is cloud.umami.is status.cafe; font-src 'self'; frame-src jarema.atabook.org; img-src 'self' *.ytimg.com *.rcd.gg *.googleusercontent.com moods.imood.com lastfm-img.freetls.fastly.net lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
 
 [[headers]]
   for = "/blog/*"
@@ -47,12 +47,12 @@
 [[headers]]
   for = "/now/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com gateway.umami.is cloud.umami.is status.cafe; font-src 'self'; img-src 'self' *.ytimg.com *.rcd.gg *.googleusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com gateway.umami.is cloud.umami.is status.cafe; font-src 'self'; img-src 'self' *.ytimg.com *.rcd.gg *.googleusercontent.com moods.imood.com lastfm-img.freetls.fastly.net lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
 
 [[headers]]
   for = "/??/now/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com gateway.umami.is cloud.umami.is status.cafe; font-src 'self'; img-src 'self' *.ytimg.com *.rcd.gg *.googleusercontent.com moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me ws.audioscrobbler.com gateway.umami.is cloud.umami.is status.cafe; font-src 'self'; img-src 'self' *.ytimg.com *.rcd.gg *.googleusercontent.com moods.imood.com lastfm-img.freetls.fastly.net lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' vercel.live; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
 
 [[headers]]
   for = "/guestbook/*"
@@ -95,7 +95,7 @@
 [[headers]]
   for = "/retro/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me gateway.umami.is cloud.umami.is; font-src 'self'; img-src 'self' moods.imood.com lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'none'; connect-src 'self' jarema.me gateway.umami.is cloud.umami.is; font-src 'self'; img-src 'self' moods.imood.com lastfm-img.freetls.fastly.net lastfm.freetls.fastly.net; manifest-src 'self'; media-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https: geekring.net kagi.com; upgrade-insecure-requests"
 
 [[headers]]
   for = "/chat/*"
