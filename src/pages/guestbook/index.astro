@@ -4,6 +4,7 @@ import T from "@/components/ui/T.astro";
 import { t } from "@/i18n/index";
 import { siteUrl, socialLinks } from "@/lib/constants";
 import { messages as rawMessages } from "@/content/guestbook/guestbook";
+import { httpUrl } from "@/lib/utils/url";
 import Card from "@/components/ui/Card.astro";
 
 const lang = Astro.locals?.lang || "en";
@@ -11,7 +12,7 @@ const lang = Astro.locals?.lang || "en";
 const currentDomain = new URL(siteUrl).hostname;
 const dtf = new Intl.DateTimeFormat(lang, { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });
 const messages = rawMessages
-  .map(r => ({ ...r, date: new Date(r.created_at), camefrom: r.camefrom?.includes(currentDomain) ? "" : r.camefrom }))
+  .map(r => ({ ...r, website: httpUrl(r.website || undefined), date: new Date(r.created_at), camefrom: r.camefrom?.includes(currentDomain) ? "" : r.camefrom }))
   .sort((a, b) => b.date.getTime() - a.date.getTime());
 
 const inputCls = "w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50";
@@ -51,7 +52,7 @@ const extraFields = [
           </div>
         ))}
 
-        <div aria-hidden="true">
+        <div hidden>
           <label for="bot-field" class="block text-sm font-medium mb-1.5">
             {t(lang, "guestbook.botField")}
           </label>
@@ -101,7 +102,7 @@ const extraFields = [
                 <time class="text-sm text-muted-foreground mt-1 sm:mt-0" datetime={msg.date.toISOString()} data-date={msg.date.toISOString()}>{dtf.format(msg.date)}</time>
               </header>
 
-              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground" class="whitespace-pre-wrap">{msg.message}></div>
+              <div class="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap">{msg.message}</div>
 
               {msg.reply && (
                 <div class="mt-4 pl-4 border-l-2 border-primary bg-muted/20 p-3 rounded-r-md">
@@ -113,7 +114,7 @@ const extraFields = [
                       </time>
                     )}
                   </div>
-                  <div class="prose prose-sm dark:prose-invert max-w-none text-foreground" class="whitespace-pre-wrap">{msg.reply}></div>
+                  <div class="prose prose-sm dark:prose-invert max-w-none text-foreground whitespace-pre-wrap">{msg.reply}</div>
                 </div>
               )}
 
