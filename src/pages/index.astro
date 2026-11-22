@@ -1,4 +1,5 @@
 ---
+import Clock from "@/components/ui/Clock.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
 import { routes, getSiteName, author, services, authorTimezone, authorTimezoneLabel } from "@/lib/constants";
@@ -6,8 +7,8 @@ import { getData } from "@/lib/data";
 import badges from "@/content/data/badges.json";
 import MoodCat from "@/components/home/MoodCat.astro";
 import NowSection from "@/components/home/NowSection.astro";
-import { localePath } from "@/i18n/routing";
 import RecentPosts from "@/components/home/RecentPosts.astro";
+import { localePath } from "@/i18n/routing";
 import Card from "@/components/ui/Card.astro";
 
 const activeWebringItems = (await getData("webrings")).filter(w => w.status === "active");
@@ -38,8 +39,11 @@ const resolvedSiteName = getSiteName(lang);
           <Card as="section" padding="sm" aria-labelledby="status-cafe-heading">
             <T key="home.currentStatus" tag="h2" id="status-cafe-heading" class="text-lg font-bold mb-3 text-center" />
             <div class="text-center">
-              <div id="statuscafe" class="w-full text-sm" data-statuscafe-user={author.statusCafeUsername}><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div>
-              <noscript><a href={services.statusCafe.profileUrl} class="text-sm text-primary hover:underline">See my status.cafe profile here!</a></noscript>
+              <div id="statuscafe" class="text-sm">
+                <a id="status-author" href={services.statusCafe.profileUrl} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">@{author.statusCafeUsername}</a>
+                <span id="status-meta"></span>
+                <p id="status-content"></p>
+              </div>
             </div>
           </Card>
 
@@ -56,11 +60,11 @@ const resolvedSiteName = getSiteName(lang);
             <T key="home.time" tag="h2" id="timezone-heading" class="text-lg font-bold mb-3 text-center" />
             <div class="flex items-center justify-center gap-6">
               <div class="text-center">
-                <p id="user-time" class="text-xl font-monaspice font-bold">--:--:--</p>
+                <Clock id="user-time" class="text-xl font-monaspice font-bold" />
                 <p class="text-xs text-muted-foreground mt-1"><T key="home.yourTime" /></p>
               </div>
               <div class="text-center">
-                <p id="author-time" class="text-xl font-monaspice font-bold" data-timezone={authorTimezone}>--:--:--</p>
+                <Clock id="author-time" class="text-xl font-monaspice font-bold" timezone={authorTimezone} />
                 <p class="text-xs text-muted-foreground mt-1"><T key="home.myTime" /> ({authorTimezoneLabel})</p>
               </div>
             </div>
@@ -121,37 +125,21 @@ const resolvedSiteName = getSiteName(lang);
 <script>
   import { services } from "@/lib/constants";
 
-  function updateTimes() {
-    const userEl = document.getElementById("user-time");
-    const authorEl = document.getElementById("author-time");
-    if (!userEl || !authorEl) return;
-    const now = new Date();
-    const fmt = (tz?: string) => now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", second: "2-digit", ...(tz && { timeZone: tz }) });
-    userEl.textContent = fmt();
-    const tz = authorEl.dataset.timezone;
-    if (tz) authorEl.textContent = fmt(tz);
-  }
-
-  function loadStatus() {
-    const u = document.getElementById("statuscafe-username"), c = document.getElementById("statuscafe-content");
-    if (!u || !c) return;
-    if (window.location.hostname.includes("neocities.org")) {
-      c.innerHTML = 'Status unavailable on Neocities, see <a href="https://status.cafe/users/jarema/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://status.cafe/users/jarema/</a> :)';
-      return;
+  async function loadStatus() {
+    if (/(^|\.)neocities\.org$/.test(location.hostname)) return;
+    const content = document.getElementById("status-content")!;
+    try {
+      const response = await fetch(`${services.statusCafe.profileUrl}/status.json`, { signal: AbortSignal.timeout(5000) });
+      if (!response.ok) throw new Error("Status unavailable");
+      const status = await response.json();
+      if (typeof status.content !== "string" || !status.content) return;
+      document.getElementById("status-author")!.textContent = `@${status.author}`;
+      document.getElementById("status-meta")!.textContent = [status.face, status.timeAgo].filter(Boolean).map(v => ` · ${v}`).join("");
+      content.textContent = status.content;
+    } catch {
+      content.textContent = "Couldn't load status.";
     }
-    const ac = new AbortController();
-    setTimeout(() => ac.abort(), 5000);
-    fetch('https://status.cafe/users/jarema/status.json', { signal: ac.signal })
-      .then(r => r.ok ? r.json() : Promise.reject())
-      .then(r => {
-        if (!r?.content?.length) throw new Error();
-        u.innerHTML = `<a href="${services.statusCafe.profileUrl}" target="_blank" rel="noopener noreferrer">@${r.author}</a> &middot; ${r.face || ''} &middot; ${r.timeAgo || ''}`;
-        c.textContent = r.content;
-      })
-      .catch(() => c.textContent = "Couldn't load status.");
   }
 
-  updateTimes();
   loadStatus();
-  setInterval(updateTimes, 1000);
 </script>

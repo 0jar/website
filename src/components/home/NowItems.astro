@@ -1,0 +1,93 @@
+---
+import type { NowItem } from "@/content.config";
+import { t } from "@/i18n";
+import { nowIcons } from "@/lib/constants";
+import { dateFull, formatDate } from "@/lib/utils/timezone";
+import Card from "@/components/ui/Card.astro";
+
+interface Props { items: NowItem[]; compact?: boolean }
+const { items, compact = false } = Astro.props;
+const lang = Astro.locals.lang;
+const Heading = compact ? "h3" : "h2";
+const padding = compact ? "sm" : "md";
+const coverClass = "w-12 h-12 rounded-lg flex-shrink-0";
+const timeClass = "block mt-2 text-xs text-muted-foreground";
+---
+
+<div id="now-items-container" class="grid gap-3" data-limit={compact ? 3 : undefined}>
+  {items.map(item => (
+    <Card padding={padding} data-category={item.category}>
+      <Heading class="font-semibold mb-2">
+        <span aria-hidden="true">{nowIcons[item.icon] ?? "📌"}</span>{" "}
+        {t(lang, `now.categories.${item.category}`)}
+      </Heading>
+      <div class="flex items-center gap-3">
+        {item.image && <img src={item.image} alt="" class={coverClass} loading="lazy" decoding="async" />}
+        <div class="min-w-0 break-words">
+          <p class:list={[compact && "text-sm", item.contentSecondary && "font-semibold"]}>{item.content[lang] || item.content.en}</p>
+          {item.contentSecondary && <p class="text-sm text-muted-foreground">{item.contentSecondary[lang] || item.contentSecondary.en}</p>}
+        </div>
+      </div>
+      <time datetime={item.date} data-date={item.date} class={timeClass}>{formatDate(item.date, lang, dateFull)}</time>
+    </Card>
+  ))}
+</div>
+<template id="lastfm-card">
+  <Card padding={padding} data-category="listening">
+    <Heading class="font-semibold mb-2">
+      <span aria-hidden="true">🎧</span>{" "}{t(lang, "now.categories.listening")}
+      <span data-live class="ml-2 rounded bg-red-700 px-2 py-0.5 text-sm text-white">Live</span>
+    </Heading>
+    <div class="flex items-center gap-3">
+      <img alt="" class={coverClass} loading="lazy" decoding="async" />
+      <div class="min-w-0 break-words">
+        <a target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline"></a>
+        <p class="text-sm text-muted-foreground"></p>
+      </div>
+    </div>
+    <time class={timeClass}></time>
+  </Card>
+</template>
+
+<script>
+  import { recentTrack } from "@/lib/utils/now";
+  import { dateFull, updateDateElements } from "@/lib/utils/timezone";
+
+  const list = document.getElementById("now-items-container")!;
+  const updateDates = () => updateDateElements(list, document.documentElement.lang, dateFull);
+  updateDates();
+  document.addEventListener("timezone-change", updateDates);
+
+  async function showRecentTrack() {
+    const track = await recentTrack();
+    if (!track) return;
+    const template = document.querySelector<HTMLTemplateElement>("#lastfm-card")!;
+    const card = template.content.firstElementChild!.cloneNode(true) as HTMLElement;
+    const link = card.querySelector("a")!;
+    link.textContent = track.title;
+    if (track.url) link.href = track.url;
+    else link.replaceWith(track.title);
+    card.querySelector("p")!.textContent = track.artist;
+    const image = card.querySelector("img")!;
+    if (track.image) image.src = track.image;
+    else image.remove();
+    const time = card.querySelector("time")!;
+    if (track.live) time.remove();
+    else {
+      card.querySelector("[data-live]")!.remove();
+      time.dataset.date = time.dateTime = track.date.toISOString();
+    }
+
+    list.querySelectorAll('[data-category="listening"]').forEach(el => el.remove());
+    const limit = Number(list.dataset.limit);
+    const next = limit && Array.from(list.children).find(el =>
+      Date.parse(el.querySelector("time")!.dateTime) <= track.date.getTime()
+    );
+    if (limit) list.insertBefore(card, next || null);
+    else list.prepend(card);
+    if (limit && list.children.length > limit) list.lastElementChild!.remove();
+    updateDates();
+  }
+
+  showRecentTrack().catch(() => {});
+</script>

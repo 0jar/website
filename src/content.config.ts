@@ -152,4 +152,3 @@ export type Project = z.infer<typeof projectsSchema>;
 export type UsesItem = z.infer<typeof usesItem>;
 export type UsesCategory = z.infer<typeof usesSchema>;
 export type WebringItem = z.infer<typeof webringsSchema>;
-

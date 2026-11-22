@@ -1,0 +1,18 @@
+---
+interface Props { id: string; class: string; timezone?: string }
+const { timezone, ...attrs } = Astro.props;
+---
+
+<time {...attrs} data-clock={timezone ?? ""}>--:--:--</time>
+
+<script>
+  const clocks = Array.from(document.querySelectorAll<HTMLTimeElement>("time[data-clock]"), el => ({
+    el, format: new Intl.DateTimeFormat("en-GB", { timeStyle: "medium", timeZone: el.dataset.clock || undefined }),
+  }));
+  function tick() {
+    const now = Date.now();
+    for (const { el, format } of clocks) el.textContent = format.format(now);
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>

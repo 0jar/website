@@ -1,18 +1,11 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
-import { getData } from "@/lib/data";
-import type { I18nContent, I18nContentOptional } from "@/content.config";
-import { nowIcons } from "@/lib/constants";
-import Card from "@/components/ui/Card.astro";
-import CardList from "@/components/ui/CardList.astro";
+import { getNowItems } from "@/lib/data";
+import NowItems from "@/components/home/NowItems.astro";
 
-const nowItems = await getData("now");
-
-const lang = Astro.locals?.lang || "en";
-const k = lang as keyof I18nContent;
-
-const sortedItems = [...nowItems].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const sortedItems = await getNowItems();
+const lang = Astro.locals.lang;
 ---
 
 <BaseLayout title="Now" description="What I'm currently up to, thinking about, and focused on.">
@@ -37,79 +30,11 @@ const sortedItems = [...nowItems].sort((a, b) => new Date(b.date).getTime() - ne
         <p class="text-muted-foreground text-sm">
           <T key="now.whatIsNowDescription" />
           {" "}
-          <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">nownownow.com</a>
+          <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" class="text-primary underline">nownownow.com</a>
         </p>
       </div>
 
-      <CardList id="now-items-container">
-        {sortedItems.map((item) => (
-          <Card
-            as="article"
-            data-category={item.category}
-            data-now-content={JSON.stringify(item.content)}
-            data-now-content-secondary={item.contentSecondary && JSON.stringify(item.contentSecondary)}
-          >
-            <div class="flex items-start gap-4">
-              <span class="text-3xl flex-shrink-0" aria-hidden="true">{nowIcons[item.icon] || "📌"}</span>
-              <div class="flex-1 min-w-0">
-                <T key={`now.categories.${item.category}`} tag="h2" class="font-semibold text-lg mb-2" />
-                <div class="flex items-center gap-3 overflow-hidden">
-                  {item.image && <img src={item.image} alt="Cover art" class="w-12 h-12 rounded-lg flex-shrink-0" loading="lazy" decoding="async" />}
-                  {item.contentSecondary ? (
-                    <div class="flex-1 min-w-0 overflow-hidden">
-                      <p class="now-text font-semibold break-words block">{item.content[k] || item.content.en}</p>
-                      <p class="now-subtext text-sm text-muted-foreground break-words">{(item.contentSecondary as I18nContentOptional)[k] || item.contentSecondary.en}</p>
-                    </div>
-                  ) : (
-                    <p class="now-text min-w-0">{item.content[k] || item.content.en}</p>
-                  )}
-                </div>
-                <time class="text-xs text-muted-foreground mt-3 block" datetime={item.date} data-date={item.date}>
-                  {new Date(item.date).toLocaleDateString(lang, {
-                    year: "numeric", month: "long", day: "numeric",
-                    hour: "2-digit", minute: "2-digit", timeZoneName: "short",
-                  })}
-                </time>
-              </div>
-            </div>
-          </Card>
-        ))}
-      </CardList>
+      <NowItems items={sortedItems} />
     </div>
   </div>
 </BaseLayout>
-
-<script>
-  import { getPageLocale } from "@/i18n/client";
-  import { fetchLiveData, renderCard, updateI18nElements, conflictMap } from "@/lib/utils/now";
-  import { updateDateElements, dateFull } from "@/lib/utils/timezone";
-
-  const enhance = async () => {
-    const container = document.getElementById("now-items-container");
-    if (!container) return;
-    try {
-      const live = await fetchLiveData();
-      if (!live.length) return;
-      const types = new Set<string>(live.map(i => i.type));
-      container.querySelectorAll("article").forEach(el => {
-        const cat = el.getAttribute("data-category") || "";
-        if (conflictMap[cat] && types.has(conflictMap[cat])) el.remove();
-      });
-      container.insertAdjacentHTML("afterbegin", live.map(renderCard).join(""));
-      translate();
-    } catch (e) { console.error("Failed to enhance with live data:", e); }
-  };
-
-  const translate = () => {
-    const page = document.getElementById("now-page");
-    if (!page) return;
-    const lang = getPageLocale();
-    updateI18nElements(page, lang);
-    updateDateElements(page, lang, dateFull);
-  };
-
-  const setup = async () => { await enhance(); translate(); };
-  setup();
-
-  document.addEventListener("timezone-change", translate);
-</script>

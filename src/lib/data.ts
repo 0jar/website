@@ -1,22 +1,10 @@
-import { getCollection } from "astro:content";
-import type { NowItem, Project, UsesCategory, WebringItem } from "@/content.config";
+import { getCollection, type CollectionEntry } from "astro:content";
 
-type DataMap = {
-  now: NowItem;
-  projects: Project;
-  uses: UsesCategory;
-  webrings: WebringItem;
-};
+export async function getData<C extends "now" | "projects" | "uses" | "webrings">(name: C) {
+  const entries = await getCollection(name);
+  return entries.map((entry): CollectionEntry<C>["data"] => entry.data);
+}
 
-const dataCache = new Map<string, Promise<any[]>>();
-
-export async function getData<C extends keyof DataMap>(name: C): Promise<DataMap[C][]> {
-  if (dataCache.has(name)) return dataCache.get(name) as Promise<DataMap[C][]>;
-  
-  const promise = getCollection(name as any).then((entries: any[]) => 
-    entries.map((e: { data: DataMap[C] }) => e.data)
-  );
-  
-  dataCache.set(name, promise);
-  return promise;
+export async function getNowItems() {
+  return (await getData("now")).sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 }

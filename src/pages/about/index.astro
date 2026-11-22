@@ -1,4 +1,5 @@
 ---
+import Clock from "@/components/ui/Clock.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import CommitTimeline from "@/components/widgets/CommitTimeline.astro";
 import T from "@/components/ui/T.astro";
@@ -78,7 +79,7 @@ const commits = aboutCommitsData
         <T key="home.time" tag="h2" id="timezone-heading" class="text-lg font-bold mb-3 text-center" />
         <div class="flex flex-col gap-2 w-full">
           <div class="text-center">
-            <p id="author-time" class="text-2xl font-bold text-primary" data-timezone={authorTimezone}>--:--:--</p>
+            <Clock id="author-time" class="text-2xl font-bold text-primary" timezone={authorTimezone} />
             <p class="text-xs text-muted-foreground mt-1"><T key="home.myTime" /> ({authorTimezoneLabel})</p>
           </div>
         </div>
@@ -164,20 +165,3 @@ o   o
     <CommitTimeline commits={commits} />
   </div>
 </BaseLayout>
-
-<script>
-  // Time widget
-  function updateTimes() {
-    const authorEl = document.getElementById("author-time");
-    if (!authorEl) return;
-
-    const now = new Date();
-    const fmt = (tz?: string) => now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", second: "2-digit", ...(tz && { timeZone: tz }) });
-
-    const tz = authorEl.dataset.timezone;
-    if (tz) authorEl.textContent = fmt(tz);
-  }
-
-  updateTimes();
-  setInterval(updateTimes, 1000);
-</script>

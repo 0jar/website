@@ -1,116 +1,17 @@
 ---
-// Now Section - displays recent activity items with i18n support
-// Server-side rendered with client-side progressive enhancement for Last.fm
 import T from "@/components/ui/T.astro";
-import { t } from "@/i18n";
-import { getData } from "@/lib/data";
-import type { I18nContent, I18nContentOptional } from "@/content.config";
-import { formatDate, dateFull } from "@/lib/utils/timezone";
+import NowItems from "./NowItems.astro";
+import { getNowItems } from "@/lib/data";
+import { localePath } from "@/i18n/routing";
 
-const nowItems = await getData("now");
-
-const lang = Astro.locals?.lang || "en";
-const k = lang as keyof I18nContent;
-
-const categoryIcons: Record<string, string> = {
-  listening: "🎧", planning: "📝", reading: "📖",
-  coding: "💻", drinking: "☕", thinking: "💭", studying: "📚",
-};
-
-const displayItems = [...nowItems]
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  .slice(0, 3);
-
-const getCategoryTranslation = (category: string) => {
-  const key = `now.categories.${category}`;
-  const translated = t(lang, key);
-  return translated !== key ? translated : category;
-};
+const items = (await getNowItems()).slice(0, 3);
 ---
 
-<section aria-labelledby="now-heading" id="now-section">
+<section aria-labelledby="now-heading">
   <h2 id="now-heading" class="text-2xl font-bold mb-4 text-center">
-    <a href="/now/" class="no-underline hover:underline focus:underline text-inherit">
+    <a href={localePath(Astro.locals.lang, "/now/")} class="no-underline hover:underline focus:underline text-inherit">
       <T key="home.latestNow" />
     </a>
   </h2>
-  <div class="grid grid-cols-1 gap-3" id="now-items-container">
-    {displayItems.map((item) => (
-      <article
-        class="border rounded-lg p-4 bg-card card-hover-effect"
-        data-now-content={JSON.stringify(item.content)}
-        data-now-content-secondary={item.contentSecondary ? JSON.stringify(item.contentSecondary) : undefined}
-        data-category={item.category}
-      >
-        <div class="flex items-center gap-2 font-semibold mb-1">
-          <span class="text-lg" aria-hidden="true">{categoryIcons[item.category] || "📌"}</span>
-          <span class="now-category" data-i18n={`now.categories.${item.category}`}>
-            {getCategoryTranslation(item.category)}
-          </span>
-        </div>
-        <div class="flex items-center gap-3 overflow-hidden">
-          {item.image ? (
-            <img src={item.image} alt="Cover art" class="w-12 h-12 rounded-lg flex-shrink-0" loading="lazy" decoding="async" />
-          ) : null}
-          {item.contentSecondary ? (
-            <div class="flex-1 min-w-0 overflow-hidden">
-              <p class="now-text text-sm font-semibold break-words block">{item.content[k] || item.content.en}</p>
-              <p class="now-subtext text-sm text-muted-foreground break-words">{(item.contentSecondary as I18nContentOptional)[k] || item.contentSecondary.en}</p>
-            </div>
-          ) : (
-            <p class="now-text text-sm break-words min-w-0">{item.content[k] || item.content.en}</p>
-          )}
-        </div>
-        <time class="text-xs text-muted-foreground mt-1 block" datetime={item.date} data-date={item.date}>
-          {formatDate(item.date, lang, dateFull)}
-        </time>
-      </article>
-    ))}
-  </div>
+  <NowItems items={items} compact />
 </section>
-
-<script>
-  import { fetchLiveData, renderCompact, updateI18nElements, conflictMap } from "@/lib/utils/now";
-  import { updateDateElements, dateFull } from "@/lib/utils/timezone";
-
-  async function enhance() {
-    const container = document.getElementById("now-items-container");
-    if (!container) return;
-
-    try {
-      const live = await fetchLiveData();
-      if (!live.length) return;
-
-      const hasType = (t: string) => live.some(i => i.type === t);
-      const statics = Array.from(container.querySelectorAll("article"))
-        .map(el => ({ el, cat: el.getAttribute("data-category") || "", dateObj: new Date(el.querySelector("time")?.getAttribute("datetime") || 0) }))
-        .filter(s => !hasType(conflictMap[s.cat]));
-
-      const sorted = [
-        ...live.map(item => ({ dateObj: item.dateObj, html: () => renderCompact(item, "border rounded-lg p-4 bg-card") })),
-        ...statics.map(s => ({ dateObj: s.dateObj, html: () => s.el.outerHTML })),
-      ].sort((a, b) => b.dateObj.getTime() - a.dateObj.getTime()).slice(0, 3);
-
-      container.innerHTML = sorted.map(c => c.html()).join("");
-      translate();
-    } catch (e) { console.error("Failed to enhance with live data:", e); }
-  }
-
-  function translate() {
-    const el = document.getElementById("now-section");
-    if (!el) return;
-    const lang = document.documentElement.dataset.locale || "en";
-    updateI18nElements(el, lang);
-    updateDateElements(el, lang, dateFull);
-  }
-
-  const setup = async () => { await enhance(); translate(); };
-  setup();
-
-  declare global { interface Window { __nowSectionInit?: boolean } }
-  if (!window.__nowSectionInit) {
-    window.__nowSectionInit = true;
-    document.addEventListener("astro:after-swap", setup);
-    document.addEventListener("timezone-change", translate);
-  }
-</script>
