@@ -60,11 +60,11 @@ const resolvedSiteName = getSiteName(lang);
             <T key="home.time" tag="h2" id="timezone-heading" class="text-lg font-bold mb-3 text-center" />
             <div class="flex items-center justify-center gap-6">
               <div class="text-center">
-                <Clock id="user-time" class="text-xl font-monaspice font-bold" />
+                <Clock id="user-time" class="text-xl font-bold" />
                 <p class="text-xs text-muted-foreground mt-1"><T key="home.yourTime" /></p>
               </div>
               <div class="text-center">
-                <Clock id="author-time" class="text-xl font-monaspice font-bold" timezone={authorTimezone} />
+                <Clock id="author-time" class="text-xl font-bold" timezone={authorTimezone} />
                 <p class="text-xs text-muted-foreground mt-1"><T key="home.myTime" /> ({authorTimezoneLabel})</p>
               </div>
             </div>
