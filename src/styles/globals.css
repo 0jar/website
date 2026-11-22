@@ -110,14 +110,6 @@
 }
 
 @font-face {
-  font-family: 'Basier Square';
-  src: url('/fonts/Basier Square.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Be Vietnam Pro';
   src: url('/fonts/BeVietnamPro-Regular.woff2') format('woff2');
   font-weight: 400;
@@ -364,13 +356,12 @@
 .personal-fonts :is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-personal-heading) !important; }
 :is(.personal-fonts, .personal-fonts :is(p, span, li, a, button)) { font-family: var(--font-personal-body); }
 
-:is(.lexend-font, .atkinson-font, .basier-font, .be-vietnam-pro-font, .geist-font, .grandstander-font, .outfit-font, .recursive-font, .space-grotesk-font, .tiresias-font) {
+:is(.lexend-font, .atkinson-font, .be-vietnam-pro-font, .geist-font, .grandstander-font, .outfit-font, .recursive-font, .space-grotesk-font, .tiresias-font) {
   --preferred-font-family: inherit;
 }
 
 .lexend-font { --preferred-font-family: 'Lexend', var(--font-system); }
 .atkinson-font { --preferred-font-family: 'Atkinson Hyperlegible', sans-serif; }
-.basier-font { --preferred-font-family: 'Basier Square', sans-serif; }
 .be-vietnam-pro-font { --preferred-font-family: 'Be Vietnam Pro', var(--font-system); }
 .geist-font { --preferred-font-family: 'Geist', sans-serif; }
 .grandstander-font { --preferred-font-family: 'Grandstander', sans-serif; }
@@ -380,7 +371,7 @@
 .tiresias-font { --preferred-font-family: 'Tiresias Infofont', sans-serif; }
 
 /* Apply the preferred font dynamically, but skip code elements */
-:is(.lexend-font, .atkinson-font, .basier-font, .be-vietnam-pro-font, .geist-font, .grandstander-font, .outfit-font, .recursive-font, .space-grotesk-font, .tiresias-font) :not(pre, code, kbd, samp, pre *, code *, kbd *, samp *) {
+:is(.lexend-font, .atkinson-font, .be-vietnam-pro-font, .geist-font, .grandstander-font, .outfit-font, .recursive-font, .space-grotesk-font, .tiresias-font) :not(pre, code, kbd, samp, pre *, code *, kbd *, samp *) {
   font-family: var(--preferred-font-family);
 }
 

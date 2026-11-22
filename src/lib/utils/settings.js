@@ -1,6 +1,6 @@
 export const activeClass = ["bg-primary", "text-primary-foreground"];
 export const inactiveClass = ["text-muted-foreground", "hover:bg-muted"];
-export const fontClasses = ["personal-fonts","atkinson-font","be-vietnam-pro-font","basier-font","dyslexia-font","geist-font","grandstander-font", "lexend-font","outfit-font","recursive-font","space-grotesk-font","tiresias-font"];
+export const fontClasses = ["personal-fonts","atkinson-font","be-vietnam-pro-font","dyslexia-font","geist-font","grandstander-font", "lexend-font","outfit-font","recursive-font","space-grotesk-font","tiresias-font"];
 
 export const setToggle = (btn, on) => {
   btn.setAttribute("aria-checked", String(on));

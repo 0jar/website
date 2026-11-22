@@ -68,7 +68,6 @@ const toggles = [
           { val: "personal", style: "'Lexend', ui-sans-serif, system-ui, sans-serif;", key: "settings.fontPersonal" },
           { val: "system", style: "-apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Nimbus Sans L', Roboto, Noto, 'Segoe UI', Arial, Helvetica, 'Helvetica Neue', sans-serif;", key: "settings.fontSystem" },
           { val: "atkinson", style: "'Atkinson Hyperlegible', sans-serif;", label: "Atkinson Hyperlegible" },
-          { val: "basier", style: "'Basier Square', sans-serif;", label: "Basier Square" },
           { val: "be-vietnam-pro", style: "'Be Vietnam Pro', sans-serif;", label: "Be Vietnam Pro" },
           { val: "dyslexia", style: "'OpenDyslexic', sans-serif;", label: "OpenDyslexic" },
           { val: "geist", style: "'Geist', sans-serif;", label: "Geist" },
@@ -137,7 +136,8 @@ const toggles = [
     if (fontSelect) {
       const savedFont = localStorage.getItem('font-family') || 'personal';
       fontSelect.value = savedFont;
-      applyFont(savedFont);
+      if (!fontSelect.value) fontSelect.value = 'personal';
+      applyFont(fontSelect.value);
       fontSelect.addEventListener('change', () => {
         const font = fontSelect.value;
         localStorage.setItem('font-family', font);
