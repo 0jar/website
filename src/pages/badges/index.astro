@@ -1,15 +1,12 @@
 ---
 // Badges page
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { t } from "@/i18n";
 import T from "@/components/ui/T.astro";
 import { Image } from "astro:assets";
 import { siteUrl, getSiteName, author } from "@/lib/constants";
 
-import BADGES from "@/content/data/badges.json";
-const badgesData = BADGES.map((b) => ({
-  ...b,
-  url: b.url === siteUrl ? siteUrl : b.url,
-}));
+import badgesData from "@/content/data/badges.json";
 
 const CATEGORIES = [
   "all",
@@ -144,13 +141,13 @@ const resolvedSiteName = getSiteName(lang);
             <input
               type="text"
               id="badge-search"
-              placeholder="Search badges..."
-              data-i18n-placeholder="badges.search"
+              placeholder={t(lang, "badges.search")}
+              aria-label={t(lang, "badges.search")}
               class="pl-10 w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
             />
           </div>
           <select
-            id="badge-category"
+            id="badge-category" aria-label={t(lang, "blog.category")}
             class="h-10 rounded-md border border-input bg-background px-3 py-2 text-sm min-w-[150px]"
           >
             {
