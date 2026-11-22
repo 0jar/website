@@ -14,10 +14,6 @@ const friendSites = badges.filter(badge => badge.category === "friend");
 
 const btn = "w-full sm:w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors h-11 px-8";
 
-// Calculate Android countdown server-side
-const androidDeadline = new Date(Date.UTC(2026, 8, 1, 0, 0, 0));
-const daysLeft = Math.ceil((androidDeadline.getTime() - Date.now()) / 864e5); // 864e5 = 1000*60*60*24
-const showAndroidCountdown = daysLeft > 0;
 const lang = Astro.locals?.lang || "en";
 const resolvedSiteName = getSiteName(lang);
 ---
@@ -26,30 +22,6 @@ const resolvedSiteName = getSiteName(lang);
   <div class="relative min-h-screen w-full overflow-hidden">
     <div class="container mx-auto px-2 sm:px-4 lg:px-6 py-8 lg:py-12 relative z-10">
       <div class="max-w-5xl mx-auto">
-        <!-- Android Lockdown Countdown Banner -->
-        {showAndroidCountdown && (
-          <aside id="android-countdown" class="mb-6 border-2 border-red-600 bg-red-50 dark:bg-red-950 rounded-lg p-4 relative" role="region" aria-label="Android lockdown warning" data-days={daysLeft}>
-            <button
-              id="close-countdown"
-              class="absolute top-2 right-2 text-red-900 dark:text-red-100 hover:text-red-700 dark:hover:text-red-300 transition-colors p-1 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-              aria-label="Dismiss warning"
-              type="button"
-            >
-              ✕
-            </button>
-            <a
-              href="https://keepandroidopen.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block text-center hover:underline pr-8 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded"
-            >
-              <p class="text-red-900 dark:text-red-100 font-semibold text-sm sm:text-base" id="countdown-text">
-                <T key="home.androidCountdown" />
-              </p>
-            </a>
-          </aside>
-        )}
-
         <div class="relative pt-6 lg:pt-0 pb-6 mb-6 text-center">
           <T key="home.heading" tag="h1" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" />
           <T key="home.subheading" tag="p" class="text-lg md:xl text-muted-foreground mb-8" />
@@ -181,27 +153,4 @@ const resolvedSiteName = getSiteName(lang);
   updateTimes();
   loadStatus();
   setInterval(updateTimes, 1000);
-
-  // Android countdown banner
-  const banner = document.getElementById("android-countdown");
-  if (banner) {
-    if (localStorage.getItem("androidCountdownDismissed") === "true") {
-      banner.hidden = true;
-    } else {
-      const text = document.getElementById("countdown-text");
-      const days = banner.dataset.days;
-      if (Number(days) <= 0) banner.hidden = true;
-      else if (text && days) text.textContent = text.textContent.replace("X", days);
-
-      const dismiss = () => {
-        banner.hidden = true;
-        localStorage.setItem("androidCountdownDismissed", "true");
-        document.removeEventListener("keydown", handleEscape);
-      };
-      const handleEscape = (e: KeyboardEvent) => e.key === "Escape" && dismiss();
-
-      document.getElementById("close-countdown")?.addEventListener("click", dismiss);
-      document.addEventListener("keydown", handleEscape);
-    }
-  }
 </script>
