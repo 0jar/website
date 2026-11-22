@@ -23,7 +23,7 @@ const lang = Astro.locals?.lang || "en";
 const resolvedSiteName = getSiteName(lang);
 ---
 
-<BaseLayout
+<BaseLayout clientSections={["badges"]}
   title={`Badges - ${resolvedSiteName}`}
   description="A collection of 88x31 badges."
 >

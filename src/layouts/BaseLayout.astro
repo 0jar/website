@@ -27,6 +27,7 @@ interface MetaTag {
 }
 
 interface Props {
+  clientSections?: string[];
   languagePaths?: Record<string, string>;
   title?: string;
   description?: string;
@@ -45,6 +46,7 @@ interface Props {
 const {
   lang = Astro.locals.lang,
   title = getSiteName(lang),
+  clientSections = [],
   languagePaths = Object.fromEntries(["en", ...locales].map(code => [
     code, localePath(code, stripLocale(Astro.url.pathname)),
   ])),
@@ -60,6 +62,12 @@ const {
   showFooter = true,
 } = Astro.props;
 
+const dictionary = translations[lang] ?? translations.en;
+const clientMessages = Object.fromEntries(
+  ["nav", "keyboardShortcuts", "actionSearch", ...clientSections].map(key => [
+    key, dictionary[key] ?? translations.en[key],
+  ])
+);
 const feedLanguages = hrefLangLanguages.filter(l => l.code === "en" || locales.includes(l.code));
 const siteName = getSiteName(lang);
 const basePath = stripLocale(Astro.url.pathname);
@@ -150,10 +158,8 @@ const structuredData = {
 <!--- My code's a lil messy, please bear with me :p --->
 <html lang={lang} data-locale={lang} class="dark">
   <head>
-    <script is:inline define:vars={{ dict: translations[lang] || translations.en }}>
-      window._I18N_DICT = dict;
-    </script>
     <meta charset="UTF-8" />
+    <script id="client-messages" type="application/json" is:inline set:html={scriptJson(clientMessages)}></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
