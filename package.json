@@ -11,7 +11,8 @@
     "build:fast": "SKIP_WEBMENTIONS=1 astro build",
     "build:neo": "NEOCITIES=1 astro build && neocities push --prune dist",
     "astro": "astro",
-    "check": "astro check"
+    "check": "astro check",
+    "test": "pnpm check && pnpm build:fast && python3 tests/static.py"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
