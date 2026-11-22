@@ -190,7 +190,7 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 195 100% 40%;
+    --primary: 220 100% 33%;
     --primary-foreground: 210 40% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -200,9 +200,9 @@
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 195 100% 65%;
+    --border: 240 6% 57%;
+    --input: 240 6% 54%;
+    --ring: 220 100% 33%;
   }
 
   .dark {
@@ -223,8 +223,9 @@
   .high-contrast.light {
     --foreground: 240 10% 2%;
     --muted-foreground: 240 5% 25%;
-    --border: 240 6% 70%;
-    --primary: 195 100% 30%;
+    --border: 240 6% 40%;
+    --input: 240 6% 40%;
+    --primary: 220 100% 26%;
     --card: 0 0% 100%;
     --popover: 0 0% 100%;
   }
@@ -456,8 +457,8 @@
   opacity: 1;
   visibility: visible;
   will-change: transform;
-  background-image: radial-gradient(4px 4px at 20px 30px, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
-    radial-gradient(2px 2px at 40px 70px, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background-image: radial-gradient(4px 4px at 20px 30px, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 40px 70px, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
   background-repeat: repeat;
   background-size: 200px 200px;
   animation: particles-animation 60s linear infinite;
@@ -475,7 +476,11 @@
 
 /* Blog styles */
 .prose a {
-  @apply text-primary underline hover:text-primary/80 transition-colors;
+  @apply text-primary underline dark:hover:text-primary/80 transition-colors;
+}
+
+.light .prose a:hover {
+  @apply decoration-2;
 }
 
 .blog-content img {

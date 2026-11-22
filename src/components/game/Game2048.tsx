@@ -123,7 +123,7 @@ export default function Game2048() {
                         {t('keepPlaying', 'Keep playing')}
                       </button>
                     )}
-                    <button onClick={resetGame} className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-bold hover:bg-primary/90 transition-colors">
+                    <button onClick={resetGame} className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-bold hover:bg-primary/95 dark:hover:bg-primary/90 transition-colors">
                       {gameWon ? t('newGame', 'New game') : t('tryAgain', 'Try again')}
                     </button>
                   </div>
@@ -140,7 +140,7 @@ export default function Game2048() {
                     onClick={() => processMove(item.dir)}
                     disabled={gameOver || gameWon || isAnimating}
                     aria-label={item.label}
-                    className="w-14 h-14 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-xl font-bold"
+                    className="w-14 h-14 bg-primary text-primary-foreground rounded-lg hover:bg-primary/95 dark:hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-xl font-bold"
                   >
                     <span aria-hidden="true">{item.icon}</span>
                   </button>
@@ -153,7 +153,7 @@ export default function Game2048() {
                 onClick={undoMove}
                 disabled={history.length === 0 || isAnimating}
                 aria-label={t('undo', 'Undo')}
-                className="flex-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-medium"
+                className="flex-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/95 dark:hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-medium"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
@@ -163,7 +163,7 @@ export default function Game2048() {
               <button
                 onClick={resetGame}
                 aria-label={t('newGame', 'New game')}
-                className="flex-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 font-medium"
+                className="flex-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/95 dark:hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 font-medium"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />

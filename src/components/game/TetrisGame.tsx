@@ -5,7 +5,7 @@ import { useTetris, TETROMINOS, musicPlaylist, BOARD_WIDTH, BOARD_HEIGHT } from 
 
 // Shared styles
 const overlayBase = 'absolute inset-0 flex flex-col items-center justify-center bg-black/80 rounded-lg'
-const btnPrimary = 'px-6 py-3 bg-primary text-primary-foreground rounded-lg font-bold hover:bg-primary/90 transition-colors'
+const btnPrimary = 'px-6 py-3 bg-primary text-primary-foreground rounded-lg font-bold hover:bg-primary/95 dark:hover:bg-primary/90 transition-colors'
 const keyBadge = 'inline-flex w-8 h-8 bg-primary text-primary-foreground text-xs items-center justify-center rounded'
 
 const cellClass = (cell: string | null) =>
@@ -146,7 +146,7 @@ export default function TetrisGame() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <button onClick={startGame} className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+              <button onClick={startGame} className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/95 dark:hover:bg-primary/90 transition-colors flex items-center gap-2">
                 <Icon d={RESET_ICON} />
                 {gameOver ? t('playAgain') : t('reset')}
               </button>

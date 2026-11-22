@@ -28,7 +28,7 @@ const resolvedSiteName = getSiteName(lang);
           <T key="home.heading" tag="h1" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" />
           <T key="home.subheading" tag="p" class="text-lg md:xl text-muted-foreground mb-8" />
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={localePath(lang, routes.contact)} class:list={[btn, "bg-primary text-primary-foreground hover:bg-primary/90"]}><T key="home.contactButton" /></a>
+            <a href={localePath(lang, routes.contact)} class:list={[btn, "bg-primary text-primary-foreground hover:bg-primary/95 dark:hover:bg-primary/90"]}><T key="home.contactButton" /></a>
             <a href={localePath(lang, routes.about)} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.aboutButton" /></a>
             <a href={localePath(lang, routes.blog)} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.blogButton" /></a>
             <a href={localePath(lang, routes.guestbook)} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.guestbookButton" /></a>
@@ -88,10 +88,10 @@ const resolvedSiteName = getSiteName(lang);
             {activeWebringItems.map((ring) => (
               <Card as="div" padding="none" class="p-3">
                 <nav class="flex items-center justify-between gap-1 text-sm" aria-label={`Navigate ${ring.name}`}>
-                  <a href={ring.previous} class="text-primary hover:text-primary/80 transition-colors px-1" aria-label={`Previous site in ${ring.name}`}>←</a>
+                  <a href={ring.previous} class="text-primary hover:text-foreground dark:hover:text-primary/80 transition-colors px-1" aria-label={`Previous site in ${ring.name}`}>←</a>
                   <a href={ring.url} class="text-primary hover:underline font-medium mx-2 truncate flex-1 text-center" target="_blank" rel="noopener noreferrer">{ring.name}</a>
-                  {ring.random && <a href={ring.random} class="text-primary hover:text-primary/80 transition-colors px-1" aria-label={`Random site in ${ring.name}`}>🎲</a>}
-                  <a href={ring.next} class="text-primary hover:text-primary/80 transition-colors px-1" aria-label={`Next site in ${ring.name}`}>→</a>
+                  {ring.random && <a href={ring.random} class="text-primary hover:text-foreground dark:hover:text-primary/80 transition-colors px-1" aria-label={`Random site in ${ring.name}`}>🎲</a>}
+                  <a href={ring.next} class="text-primary hover:text-foreground dark:hover:text-primary/80 transition-colors px-1" aria-label={`Next site in ${ring.name}`}>→</a>
                 </nav>
               </Card>
             ))}

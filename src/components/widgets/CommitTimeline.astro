@@ -24,7 +24,7 @@ import { author } from "@/lib/constants";
   <div class="p-2.5 bg-muted/20 border-b border-border/60 flex items-center gap-2">
     <div class="relative w-full sm:max-w-[280px]">
       <label for="commit-search" class="sr-only"><T key="scrapbook.searchCommits" tag="Fragment" /></label>
-      <input type="text" id="commit-search" placeholder="Search commits" class="w-full bg-background border border-border/60 rounded-md px-3 py-1.5 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary/50 placeholder:text-muted-foreground shadow-sm transition-shadow" />
+      <input type="text" id="commit-search" placeholder="Search commits" class="w-full bg-background border border-input dark:border-border/60 rounded-md px-3 py-1.5 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary/50 placeholder:text-muted-foreground shadow-sm transition-shadow" />
     </div>
     <button class="px-3 py-1.5 bg-background border border-border/60 rounded-md text-sm flex flex-shrink-0 items-center gap-1 sm:gap-2 hover:bg-muted/50 shadow-sm transition-colors disabled:opacity-50" disabled>
       <T key="scrapbook.thisBranch" tag="Fragment" /> <Icon name="chevronDown" width="12" height="12" class="hidden sm:block" />
@@ -65,7 +65,7 @@ import { author } from "@/lib/constants";
                 {commit.badges?.length > 0 && (
                   <div class="hidden md:flex gap-1 flex-shrink-0">
                     {commit.badges.map((badge: string) => (
-                      <span class="px-1.5 py-[1px] text-sm font-bold tracking-wider rounded-sm border border-primary/20 text-primary/70 bg-primary/5">{badge}</span>
+                      <span class="px-1.5 py-[1px] text-sm font-bold tracking-wider rounded-sm border border-primary/20 text-primary dark:text-primary/70 bg-primary/5">{badge}</span>
                     ))}
                   </div>
                 )}

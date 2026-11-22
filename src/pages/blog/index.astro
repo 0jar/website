@@ -78,7 +78,7 @@ const feedButtons = [
 
 const filterFieldsetClass = 'space-y-2 rounded-xl border p-3';
 const filterChipInputClass = 'peer absolute h-0 w-0 opacity-0 appearance-none';
-const filterChipLabelClass = 'inline-flex items-center rounded-full border border-border/70 px-3 py-1.5 text-sm transition-colors hover:bg-accent/60 peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-primary/60 peer-checked:border-primary/50 peer-checked:bg-primary/15 peer-checked:text-foreground';
+const filterChipLabelClass = 'inline-flex items-center rounded-full border border-input dark:border-border/70 px-3 py-1.5 text-sm transition-colors hover:bg-accent/60 peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-primary/60 peer-checked:border-primary dark:peer-checked:border-primary/50 peer-checked:bg-primary/15 peer-checked:text-foreground';
 
 const checkboxFilterGroups = [
   { key: 'blog.language', filterType: 'langs', fieldsetClass: filterFieldsetClass, items: Array.from(uniqueLanguages).map(value => ({ value, label: languageNames[value] || value })) },
