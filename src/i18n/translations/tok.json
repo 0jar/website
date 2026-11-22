@@ -70,12 +70,6 @@
     "fi": "toki Sumi",
     "tok": "toki pona"
   },
-  "greetings": {
-    "morning": "tenpo suno open o pona, jan tawa.",
-    "afternoon": "tenpo suno o pona, jan tawa.",
-    "evening": "tenpo suno pini o pona, jan alasa.",
-    "night": "sina awen lon pimeja la? mi kin."
-  },
   "home": {
     "buttons": {
       "about": "sona mi",

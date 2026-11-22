@@ -71,12 +71,6 @@
     "fi": "Finnish",
     "tok": "Toki Pona"
   },
-  "greetings": {
-    "morning": "Good morning, traveler.",
-    "afternoon": "Good afternoon, wanderer.",
-    "evening": "Good evening, explorer.",
-    "night": "Still awake? Me too."
-  },
   "home": {
     "buttons": {
       "about": "About me",

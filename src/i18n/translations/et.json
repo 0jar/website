@@ -70,12 +70,6 @@
     "fi": "Soome",
     "tok": "Toki Pona"
   },
-  "greetings": {
-    "morning": "Tere hommikust, rändur.",
-    "afternoon": "Tere päevast, uitaja.",
-    "evening": "Tere õhtust, avastaja.",
-    "night": "Veel üleval? Mina ka."
-  },
   "home": {
     "buttons": {
       "about": "Minust",

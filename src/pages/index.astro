@@ -51,7 +51,6 @@ const resolvedSiteName = getSiteName(lang);
         )}
 
         <div class="relative pt-6 lg:pt-0 pb-6 mb-6 text-center">
-          <p class="text-lg text-muted-foreground mb-2" id="greeting"><span id="greeting-emoji">👋</span> <T key="greetings.morning" /></p>
           <T key="home.heading" tag="h1" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" />
           <T key="home.subheading" tag="p" class="text-lg md:xl text-muted-foreground mb-8" />
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -147,23 +146,7 @@ const resolvedSiteName = getSiteName(lang);
 </BaseLayout>
 
 <script>
-  import { t } from "@/i18n/client";
   import { services } from "@/lib/constants";
-
-  const greetings = [
-    { start: 5, end: 12, emoji: "🌅", key: "greetings.morning" },
-    { start: 12, end: 17, emoji: "☀️", key: "greetings.afternoon" },
-    { start: 17, end: 21, emoji: "🌆", key: "greetings.evening" }
-  ];
-
-  function updateGreeting() {
-    const hour = new Date().getHours();
-    const g = greetings.find(g => hour >= g.start && hour < g.end) || { emoji: "🌙", key: "greetings.night" };
-    const emoji = document.getElementById("greeting-emoji");
-    const text = document.getElementById("greeting")?.querySelector("span:last-child");
-    if (emoji) emoji.textContent = g.emoji;
-    if (text) { const tr = t(g.key); if (tr !== g.key) text.textContent = tr; }
-  }
 
   function updateTimes() {
     const userEl = document.getElementById("user-time");
@@ -195,7 +178,6 @@ const resolvedSiteName = getSiteName(lang);
       .catch(() => c.textContent = "Couldn't load status.");
   }
 
-  updateGreeting();
   updateTimes();
   loadStatus();
   setInterval(updateTimes, 1000);
