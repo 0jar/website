@@ -143,6 +143,6 @@ export const config = {
 };
 ```
 
-Anyway, the code is up on the [link-in-bio site's repo on Codeberg](https://codeberg.org/jartf/links/src/branch/main/proxy.js) if you want to take a look. Nothing too major tbh, but it was a fun little thing to build. Now this blog post has an alternate URL at [https://jar.tf/b/7fj0hx](https://jar.tf/b/7fj0hx) too :3
+Anyway, the code is up on the [link-in-bio site's repo on Codeberg](https://codeberg.org/0jar/links/src/branch/main/proxy.js) if you want to take a look. Nothing too major tbh, but it was a fun little thing to build. Now this blog post has an alternate URL at [https://jar.tf/b/7fj0hx](https://jar.tf/b/7fj0hx) too :3
 
 This is also my fourth post for the [#100DaysToOffload](https://100daystooffload.com/) challenge. Jeez, it's been so long, last time I wrote a blog post was 1 April. I'm back on track now.

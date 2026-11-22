@@ -13,7 +13,7 @@ export const getSiteName = (lang?: string) => {
   return siteName;
 };
 export const siteDescription = "This site is the personal playground and digital garden for Jarema. I write some blog posts, sometimes content about economics, coding, and occasionally I post some cats too.";
-export const siteKeywords = "Jarema, jartf, digital garden, personal website, blog, economics, coding, tech, multilingual, student, cat, personal blog, digital playground, independent blog, independent writer, indie web, technology, now page, about page, personal reflections, ideas, thoughts, observation journal, how to build a personal site, economics and coding personal site";
+export const siteKeywords = "Jarema, 0jar, digital garden, personal website, blog, economics, coding, tech, multilingual, student, cat, personal blog, digital playground, independent blog, independent writer, indie web, technology, now page, about page, personal reflections, ideas, thoughts, observation journal, how to build a personal site, economics and coding personal site";
 
 // Author/Person constants
 export const author = {
@@ -35,8 +35,8 @@ export const author = {
 
 // Social media and identity links
 export const socialLinks = {
-  codeberg: "https://codeberg.org/jartf",
-  github: "https://github.com/jartf",
+  codeberg: "https://codeberg.org/0jar",
+  github: "https://github.com/0jar",
   pronounsPage: "https://pronouns.page/@jerryv",
   fediverse: ["@jar@blob.cat", "@jar@toot.io", "@jarema@mas.to"],
   neocities: "https://neocities.org/site/jarema",
