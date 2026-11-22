@@ -1,7 +1,85 @@
 export const messages = [
   {
-    name: "Charles_X",
+    name: "Hezekiah",
+    website: "https://autpunk.space",
+    social: "",
+    location: "",
+    camefrom: "SSGRing",
+    created_at: "2026-11-01T05:45:11.347Z",
+    message: `Found your site via SSGRing! Your design is very soothing.`,
+    reply: `Woah, thanks for stopping by! I really like your site's design too, it's really well made :D`,
+    reply_date: "2026-11-22T11:28:06.000Z"
+  },
+  {
+    name: "void",
     website: "",
+    social: "",
+    location: "",
+    camefrom: "",
+    created_at: "2026-10-31T16:03:27.362Z",
+    message: `you've been visited by the internet ghost. boo!`,
+    reply: `*gasp* you scared me!`,
+    reply_date: "2026-10-31T16:24:43.000Z"
+  },
+  {
+    name: "A cat",
+    website: "",
+    social: "",
+    location: "the cardboard box",
+    camefrom: "",
+    created_at: "2026-10-04T03:51:26.129Z",
+    message: `meow meow meow meow meow meow meow meow meow meow meow`,
+    reply: `meow :3`,
+    reply_date: "2026-10-05T06:46:25.000Z"
+  },
+  {
+    name: "Linh",
+    website: "",
+    social: "",
+    location: "TPHCM",
+    camefrom: "",
+    created_at: "2026-09-28T13:35:18.454Z",
+    message: `ủa ní người Việt hả =)))) web nhìn hay phết`,
+    reply: `real nha :3 hehe`,
+    reply_date: "2026-10-01T06:46:25.000Z"
+  },
+  {
+    name: "Миша",
+    website: "",
+    social: "",
+    location: "Россия",
+    camefrom: "",
+    created_at: "2026-09-17T16:28:09.483Z",
+    message: `Привет! Случайно наткнулся на твой сайт, очень уютно тут. Удачи с проектами!`,
+    reply: `Рад что понравилось, спасибо за пожелания))`,
+    reply_date: "2026-09-20T13:56:02.000Z"
+  },
+  {
+    name: "Markkus",
+    website: "",
+    social: "",
+    location: "",
+    camefrom: "",
+    created_at: "2026-08-10T23:58:12.847Z",
+    message: `YOUR WEBSITE HAS AN RSS FEED AND A GUESTBOOK??? IN THIS ECONOMY????
+10/10.`,
+    reply: `In this economy™. Truly a miracle 🙏`,
+    reply_date: "2026-08-15T19:42:00.000Z"
+  },
+  {
+    name: "Kasperian",
+    website: "",
+    social: "",
+    location: "Denmark",
+    camefrom: "",
+    created_at: "2026-07-20T08:14:37.546Z",
+    message: `found your site while looking through personal websites. i like the little pics at the bottom. greetings from denmark!!`,
+    reply: `They're buttons! Those are awesome and you should see more of those, take a look [at this wiki](https://en.everybodywiki.com/88x31_button)! And thanks for stopping by :D`,
+    reply_date: "2026-07-22T13:18:56.000Z"
+  },
+  {
+    name: "Charles_X",
+    website: "https://retroland.vercel.app",
     social: "",
     location: "",
     camefrom: "",
@@ -10,8 +88,8 @@ export const messages = [
 
 This website design looks so magnificent that it might be the best ever!
 Words can't express by how amazed I am by this website.`,
-    reply: ``,
-    reply_date: ""
+    reply: `Thanks!`,
+    reply_date: "2026-07-12T12:39:32.000Z"
   },
   {
     name: "Taivo",
