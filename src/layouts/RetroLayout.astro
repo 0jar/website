@@ -5,6 +5,28 @@
 
 import { siteUrl, author, socialLinks } from "@/lib/constants";
 
+const badges = [
+  { file: "sweet.png", alt: "Sweet homepage" },
+  { file: "any_browser.gif", alt: "Best viewed with any browser", href: "https://www.anybrowser.org/campaign/" },
+  { file: "lynxnow.gif", alt: "Lynx Now!" },
+  { file: "dumbass.gif", alt: "Dumbass webmaster ahead" },
+  { file: "join_logo.gif", alt: "Miaow" },
+  { file: "bannars.gif", alt: "Miaow" },
+  { file: "teto.gif", alt: "Teto" },
+  { file: "button2019.gif", alt: "Still using buttons in 2019!" },
+  { file: "people_pledge_badge_party_cream_pink_88x31.png", alt: "People Pledge", href: "https://people.pledge.party" },
+  { file: "kagi-smallweb-yellow.gif", alt: "Kagi Small Web", href: "https://kagi.com/smallweb" },
+  { file: "internetprivacy.gif", alt: "Internet Privacy Now!" },
+  { file: "saynotoweb3_88x31.gif", alt: "Keep the web free, say no to Web3", href: "https://yesterweb.org/no-to-web3/" },
+  { file: "valid-rss-rogers.png", alt: "Valid RSS feed", href: "/rss.xml" },
+  { file: "valid-atom.png", alt: "Valid Atom feed", href: "/atom.xml" },
+  { file: "humanstxt.png", alt: "humans.txt", href: "/humans.txt" },
+  { file: "got_html.gif", alt: "Got HTML?" },
+  { file: "fedora.gif", alt: "Fedora Linux", href: "https://fedoraproject.org/" },
+  { file: "anythingbut.gif", alt: "Anything but Chrome", href: "/blog/2025/08/anything-but-chrome" },
+  { file: "retrokid.gif", alt: "Retro" },
+];
+
 interface Props {
   title?: string;
 }
@@ -32,8 +54,8 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
 </head>
 <body style="background-color: #1A0F2E; color: #F2F2F2; font-family: Times New Roman, Times, serif; margin: 0; padding: 0;">
 
-<!-- Invisible h-card/vCard for parsers -->
-<div class="h-card vcard" style="position: absolute; left: -9999px; top: -9999px;">
+<a class="retro-skip" href="#main-content">Skip to main content</a>
+<div class="h-card vcard" hidden style="display: none">
   <a class="p-name u-url u-uid fn url uid" href={siteUrl}>{author.name}</a>
   <img class="u-photo photo" src={author.image} alt="">
   <a class="u-email email" href={`mailto:${author.email}`}>{author.email}</a>
@@ -43,12 +65,12 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
 </div>
 
 <!-- Main layout table -->
-<table width="100%" cellpadding="0" cellspacing="0" style="max-width: 800px; margin: 0 auto;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width: 800px; margin: 0 auto;">
   <tbody>
     <!-- Header row -->
     <tr>
       <td colspan="3" style="background-color: #2A1F45; color: #F2F2F2; padding: 10px; text-align: center;">
-        <table width="100%" cellpadding="0" cellspacing="0">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           <tbody>
             <tr>
               <td style="text-align: left;">
@@ -89,7 +111,7 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
     <!-- Modern browser notice -->
     <tr>
       <td colspan="3" style="padding: 5px 10px;">
-        <table width="100%" cellpadding="5" cellspacing="0" style="background-color: #2A1F45; border: 2px solid #54D4FF;">
+        <table role="presentation" width="100%" cellpadding="5" cellspacing="0" style="background-color: #2A1F45; border: 2px solid #54D4FF;">
           <tbody>
             <tr>
               <td>
@@ -106,12 +128,12 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
     <!-- Content area with sidebar -->
     <tr>
       <td colspan="3" style="padding: 10px;">
-        <table width="100%" cellpadding="0" cellspacing="10">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="10">
           <tbody>
             <tr>
               <!-- Main content -->
               <td style="vertical-align: top; width: 75%; background-color: #2A1F45; color: #F2F2F2; padding: 15px; border: 2px inset #4A3F6F;">
-                <slot />
+                <main id="main-content" tabindex="-1"><slot /></main>
                 {Astro.url.pathname !== '/retro/' && Astro.url.pathname !== '/retro' && (
                   <>
                     <br />
@@ -180,7 +202,7 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
                 <!-- Under construction -->
                 <center>
                   <font size="2">
-                    <img src="/underconstruction.png" alt="Under construction" width="88" height="31" style="image-rendering: pixelated;">
+                    <img src="/badges/underconstruction.png" alt="Under construction" width="88" height="31" style="image-rendering: pixelated;">
                     <br>
                     <font>This site is always under construction!</font>
                   </font>
@@ -225,95 +247,11 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
   </tbody>
 </table>
 
-<!-- Bottom badges -->
-<div style="text-align: center; padding: 20px;">
-  <table cellpadding="5" cellspacing="5" style="margin: 0 auto;" align="center">
-    <tbody>
-      <!-- Row 1 - First 8 badges -->
-      <tr style="text-align: center;">
-        <td>
-          <img src="/sweet.png" alt="Sweet homepage" width="88" height="31">
-        </td>
-        <td>
-          <a href="https://www.anybrowser.org/campaign/">
-            <img src="/any_browser.gif" alt="Best viewed with any browser" width="88" height="31">
-          </a>
-        </td>
-        <td>
-          <img src="/lynxnow.gif" alt="Lynx Now!" width="88" height="31">
-        </td>
-        <td>
-          <img src="/dumbass.gif" alt="Dumbass webmaster ahead" width="88" height="31">
-        </td>
-        <td>
-          <img src="/join_logo.gif" alt="Miaow" width="88" height="31">
-        </td>
-        <td>
-          <img src="/bannars.gif" alt="Miaow" width="88" height="31">
-        </td>
-        <td>
-          <img src="/teto.gif" alt="Teto" width="88" height="31">
-        </td>
-        <td>
-          <img src="/button2019.gif" alt="Still using buttons in 2019!" width="88" height="31">
-        </td>
-      </tr>
-      <!-- Row 2 - Next 8 badges -->
-      <tr style="text-align: center;">
-        <td>
-          <a href="https://people.pledge.party">
-            <img src="/people_pledge_badge_party_cream_pink_88x31.png" alt="People Pledge" width="88" height="31">
-          </a>
-        </td>
-        <td>
-          <a href="https://kagi.com/smallweb">
-            <img src="/kagi-smallweb-yellow.gif" alt="Kagi Small Web" width="88" height="31">
-          </a>
-        </td>
-        <td>
-          <img src="/internetprivacy.gif" alt="Internet Privacy Now!" width="88" height="31">
-        </td>
-        <td>
-          <a href="https://yesterweb.org/no-to-web3/">
-            <img src="/saynotoweb3_88x31.gif" alt="Keep the web free, say no to Web3" width="88" height="31">
-          </a>
-        </td>
-        <td>
-          <a href="/rss.xml">
-            <img src="/valid-rss-rogers.png" alt="Valid RSS feed" width="88" height="31">
-          </a>
-        </td>
-        <td>
-          <a href="/atom.xml">
-            <img src="/valid-atom.png" alt="Valid Atom feed" width="88" height="31">
-          </a>
-        </td>
-        <td>
-          <a href="/humans.txt">
-            <img src="/humanstxt.png" alt="humans.txt" width="88" height="31">
-          </a>
-        </td>
-        <td>
-          <img src="/got_html.gif" alt="Got HTML?" width="88" height="31">
-        </td>
-      </tr>
-      <!-- Row 3 - Last 3 badges -->
-      <tr>
-        <td colspan="8" align="center">
-          <a href="https://fedoraproject.org/">
-            <img src="/fedora.gif" alt="Fedora Linux" width="88" height="31">
-          </a>
-          {' '}
-          <a href="/blog/2025/08/anything-but-chrome">
-            <img src="/anythingbut.gif" alt="Anything but Chrome" width="88" height="31">
-          </a>
-          {' '}
-          <img src="/retrokid.gif" alt="Retro" width="88" height="31">
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="retro-badges">
+  {badges.map(({ file, alt, href }) => {
+    const image = <img src={`/badges/${file}`} alt={alt} width="88" height="31" loading="lazy" />;
+    return href ? <a href={href}>{image}</a> : image;
+  })}
 </div>
-
 </body>
 </html>
