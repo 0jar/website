@@ -34,7 +34,6 @@
   "nav": {
     "home": "Trang chủ",
     "about": "Giới thiệu",
-    "projects": "Dự án",
     "blog": "Blog",
     "now": "Hiện tại",
     "uses": "Công cụ",
@@ -72,8 +71,7 @@
   },
   "home": {
     "buttons": {
-      "about": "Về mình",
-      "projects": "Xem dự án của mình"
+      "about": "Về mình"
     },
     "footer": "Chào mừng bạn đến với trang web của mình. Cứ tự nhiên mà khám phá nhé.",
     "heading": "chào bạn, mình là Jarema",
@@ -162,45 +160,6 @@
       "copyHash": "Sao chép hash",
       "copyHashTitle": "Sao chép toàn bộ mã SHA"
     }
-  },
-  "projects": {
-    "title": "Các dự án của mình",
-    "description": "Tổng hợp các dự án cá nhân, học thuật và hoạt động mà mình đã và đang thực hiện. Một số cái thì đã xong, chỗ khác thì vẫn đang làm dở.",
-    "status": {
-      "completed": "Đã hoàn thành",
-      "inProgress": "Đang tiến hành",
-      "planned": "Dự kiến"
-    },
-    "categories": {
-      "personal": "Cá nhân",
-      "academic": "Học thuật",
-      "activism": "Hoạt động xã hội"
-    },
-    "details": {
-      "what": "Đây là gì",
-      "learned": "Mình đã học được gì",
-      "why": "Dự án này quan trọng với mình vì"
-    },
-    "cardActions": {
-      "clickForDetails": "Nhấn để xem chi tiết",
-      "clickToClose": "Nhấn để đóng"
-    },
-    "statusLabels": {
-      "completed": "Đã hoàn thành",
-      "inProgress": "Đang tiến hành",
-      "planned": "Dự kiến"
-    },
-    "buttons": {
-      "showRandom": "Hiện thêm vài dự án khác",
-      "hideRandom": "Thôi ẩn đi, nhiều quá"
-    },
-    "filters": {
-      "all": "Tất cả"
-    },
-    "clickToFlip": "Nhấn để lật",
-    "what": "Nó là gì?",
-    "learned": "Những gì tôi học được",
-    "why": "Tại sao tôi làm cái này?"
   },
   "blog": {
     "title": "Blog",
@@ -649,7 +608,6 @@
     "home": "Trang chủ",
     "about": "Giới thiệu",
     "blog": "Blog",
-    "projects": "Dự án",
     "now": "Hiện tại",
     "uses": "Công cụ",
     "contact": "Liên hệ",
@@ -684,15 +642,6 @@
     "games": "Trò chơi",
     "tetris": "Chơi Tetris",
     "help": "Trợ giúp",
-    "projects": {
-      "category": "Điều hướng qua các dự án",
-      "closeCard": "Đóng dự án",
-      "left": "Điều hướng sang trái",
-      "right": "Điều hướng sang phải",
-      "up": "Điều hướng lên",
-      "down": "Điều hướng xuống",
-      "flipCard": "Mở dự án {{title}}"
-    },
     "blog": {
       "category": "Điều hướng qua các bài viết",
       "next": "Đến bài viết tiếp theo",

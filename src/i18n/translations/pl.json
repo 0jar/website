@@ -34,7 +34,6 @@
   "nav": {
     "home": "Strona główna",
     "about": "O mnie",
-    "projects": "Projekty",
     "blog": "Blog",
     "now": "Teraz",
     "uses": "Używam",
@@ -72,8 +71,7 @@
   },
   "home": {
     "buttons": {
-      "about": "O mnie",
-      "projects": "Zobacz moje projekty"
+      "about": "O mnie"
     },
     "footer": "Witaj w moim cyfrowym ogrodzie. Czuj się swobodnie, eksploruj.",
     "heading": "cześć, jestem Jarema",
@@ -122,45 +120,6 @@
   "about": {
     "title": "O mnie",
     "description": "Historia o tym, kim jestem, skąd pochodzę, jaka jest moja pasja i do czego dążę."
-  },
-  "projects": {
-    "title": "Moje projekty",
-    "description": "Kolekcja projektów osobistych, akademickich i aktywistycznych, nad którymi pracowałem. Niektóre skończone, inne jeszcze się tworzą.",
-    "status": {
-      "completed": "Ukończony",
-      "inProgress": "W trakcie",
-      "planned": "Zaplanowany"
-    },
-    "statusLabels": {
-      "completed": "Ukończony",
-      "inProgress": "W trakcie",
-      "planned": "Zaplanowany"
-    },
-    "categories": {
-      "personal": "Osobiste",
-      "academic": "Akademickie",
-      "activism": "Aktywizm"
-    },
-    "details": {
-      "what": "Czym jest",
-      "learned": "Czego się nauczyłem",
-      "why": "Dlaczego to ważne"
-    },
-    "cardActions": {
-      "clickForDetails": "Kliknij, aby zobaczyć szczegóły",
-      "clickToClose": "Kliknij, aby zamknąć"
-    },
-    "buttons": {
-      "showRandom": "Pokaż więcej losowych",
-      "hideRandom": "Ukryj chaos"
-    },
-    "filters": {
-      "all": "Wszystkie"
-    },
-    "clickToFlip": "Kliknij, aby odwrócić",
-    "what": "Co to jest?",
-    "learned": "Czego się nauczyłem",
-    "why": "Dlaczego to zbudowałem?"
   },
   "blog": {
     "title": "Blog",
@@ -609,7 +568,6 @@
     "home": "Strona główna",
     "about": "O mnie",
     "blog": "Blog",
-    "projects": "Projekty",
     "now": "Teraz",
     "uses": "Używam",
     "contact": "Kontakt",
@@ -644,15 +602,6 @@
     "games": "Gry",
     "tetris": "Zagraj w Tetris",
     "help": "Pomoc",
-    "projects": {
-      "category": "Nawigacja po kartach projektów",
-      "closeCard": "Zamknij odwróconą kartę",
-      "left": "Przejdź w lewo",
-      "right": "Przejdź w prawo",
-      "up": "Przejdź w górę",
-      "down": "Przejdź w dół",
-      "flipCard": "Obróć kartę projektu: {{title}}"
-    },
     "blog": {
       "category": "Nawigacja po wpisach na blogu",
       "next": "Do następnego wpisu",

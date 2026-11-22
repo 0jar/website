@@ -131,19 +131,10 @@ export const ogLocaleMap: Record<string, string> = {
 export const themes = ["light", "dark", "system"] as const;
 export type Theme = (typeof themes)[number];
 
-// Project configurations
-export const projectIcons: Record<string, string> = { personal: "🧑‍💻", academic: "📚", activism: "✊" };
-export const projectStatusConfig = [
-  { key: "completed", bg: "bg-green-500", status: "completed" },
-  { key: "inProgress", bg: "bg-yellow-500 animate-pulse", status: "in-progress" },
-  { key: "planned", bg: "bg-blue-500", status: "planned" },
-];
-
 // Navigation routes
 export const routes = {
   home: "/",
   about: "/about/",
-  projects: "/projects/",
   blog: "/blog/",
   now: "/now/",
   uses: "/uses/",
@@ -187,7 +178,6 @@ export const usesIcons: Record<string, string> = {
 export const keyboardShortcuts: Record<string, string> = {
   home: "h",
   about: "a",
-  projects: "p",
   blog: "b",
   now: "n",
   uses: "u",

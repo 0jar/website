@@ -34,7 +34,6 @@
   "nav": {
     "home": "Avaleht",
     "about": "Minust",
-    "projects": "Projektid",
     "blog": "Blogi",
     "now": "Nüüd",
     "uses": "Kasutused",
@@ -72,8 +71,7 @@
   },
   "home": {
     "buttons": {
-      "about": "Minust",
-      "projects": "Vaata mu projekte"
+      "about": "Minust"
     },
     "footer": "Tere tulemast minu digiaeda. Uuri vabalt ringi.",
     "heading": "tere, mina olen Jarema",
@@ -122,45 +120,6 @@
   "about": {
     "title": "Minust",
     "description": "Lugu sellest, kes ma olen, kust ma tulen, mis on mu kirg ja mille poole ma püüdlen."
-  },
-  "projects": {
-    "title": "Minu projektid",
-    "description": "Kogumik isiklikest, akadeemilistest ja aktivismi projektidest, millega olen tegelenud. Mõned valmis, mõned veel valmimas.",
-    "status": {
-      "completed": "Valmis",
-      "inProgress": "Veel valmimas",
-      "planned": "Plaanitud"
-    },
-    "statusLabels": {
-      "completed": "Valmis",
-      "inProgress": "Töös",
-      "planned": "Plaanitud"
-    },
-    "categories": {
-      "personal": "Isiklik",
-      "academic": "Akadeemiline",
-      "activism": "Aktivism"
-    },
-    "details": {
-      "what": "Mis see on",
-      "learned": "Mida ma õppisin",
-      "why": "Miks see on minu jaoks oluline"
-    },
-    "cardActions": {
-      "clickForDetails": "Klõpsa detailide nägemiseks",
-      "clickToClose": "Klõpsa sulgemiseks"
-    },
-    "buttons": {
-      "showRandom": "Näita rohkem juhuslikkust",
-      "hideRandom": "Peida kaos"
-    },
-    "filters": {
-      "all": "Kõik"
-    },
-    "clickToFlip": "Klõpsake pööramiseks",
-    "what": "Mis see on?",
-    "learned": "Mida ma õppisin",
-    "why": "Miks ma selle ehitasin?"
   },
   "blog": {
     "title": "Blogi",
@@ -609,7 +568,6 @@
     "home": "Avaleht",
     "about": "Minust",
     "blog": "Blogi",
-    "projects": "Projektid",
     "now": "Praegu",
     "uses": "Kasutab",
     "contact": "Kontakt",
@@ -644,15 +602,6 @@
     "games": "Mängud",
     "tetris": "Mängi Tetrist",
     "help": "Abi",
-    "projects": {
-      "category": "Navigeeri projektide seas",
-      "closeCard": "Sulge avatud kaart",
-      "left": "Navigeeri vasakule",
-      "right": "Navigeeri paremale",
-      "up": "Navigeeri üles",
-      "down": "Navigeeri alla",
-      "flipCard": "Pööra projektikaarti: {{title}}"
-    },
     "blog": {
       "category": "Navigeeri blogipostitustes",
       "next": "Järgmise postituse juurde",

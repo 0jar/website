@@ -20,14 +20,6 @@ const usesItem = z.object({
   link: z.string().optional(),
 });
 
-const projectFields = z.object({
-  title: z.string(),
-  description: z.string(),
-  what: z.string(),
-  learned: z.string(),
-  why: z.string(),
-});
-
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "src/content/blog" }),
   schema: z.object({
@@ -84,21 +76,6 @@ const now = defineCollection({
   schema: nowSchema,
 });
 
-const projectsSchema = z.object({
-    id: z.number(),
-    url: z.string().optional(),
-    content: z.record(z.string(), projectFields),
-    tags: z.array(z.string()),
-    status: z.enum(["completed", "in-progress", "planned"]),
-    category: z.enum(["personal", "academic", "activism"]),
-    hidden: z.boolean().optional(),
-  });
-
-const projects = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "src/content/projects" }),
-  schema: projectsSchema,
-});
-
 const usesSchema = z.object({
     title: z.string(),
     icon: z.string(),
@@ -141,14 +118,12 @@ const aboutInterests = defineCollection({
   schema: aboutInterestsSchema,
 });
 
-export const collections = { blog, scrapbook, aboutCommit, now, projects, uses, webrings, aboutInterests };
+export const collections = { blog, scrapbook, aboutCommit, now, uses, webrings, aboutInterests };
 export type I18nContent = Record<Locale, string>;
 export type I18nContentOptional = { en: string } & Partial<Record<Exclude<Locale, "en">, string>>;
 
 // Infer types directly from Zod schemas to avoid duplication
 export type NowItem = z.infer<typeof nowSchema>;
-export type ProjectFields = z.infer<typeof projectFields>;
-export type Project = z.infer<typeof projectsSchema>;
 export type UsesItem = z.infer<typeof usesItem>;
 export type UsesCategory = z.infer<typeof usesSchema>;
 export type WebringItem = z.infer<typeof webringsSchema>;

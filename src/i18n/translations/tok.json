@@ -34,7 +34,6 @@
   "nav": {
     "home": "lipu open",
     "about": "sona mi",
-    "projects": "pali",
     "blog": "lipu toki",
     "now": "tenpo ni",
     "uses": "kepeken",
@@ -72,8 +71,7 @@
   },
   "home": {
     "buttons": {
-      "about": "sona mi",
-      "projects": "o lukin e pali mi"
+      "about": "sona mi"
     },
     "footer": "o kama pona tawa ma kasi pi lipu ni. o alasa lon ona.",
     "heading": "o kama pona. mi Jarema.",
@@ -122,45 +120,6 @@
   "about": {
     "title": "sona mi",
     "description": "toki pi seme mi, tan seme mi kama, seme pilin mi, en seme mi pali tawa."
-  },
-  "projects": {
-    "title": "pali mi",
-    "description": "kulupu pi pali jan, pi sona, en pi pali tawa kulupu. ijo poka li pini, ijo ante li lon pali.",
-    "status": {
-      "completed": "pini",
-      "inProgress": "pali lon",
-      "planned": "pali kama"
-    },
-    "statusLabels": {
-      "completed": "pini",
-      "inProgress": "lon",
-      "planned": "kama"
-    },
-    "categories": {
-      "personal": "jan",
-      "academic": "sona",
-      "activism": "pali tawa kulupu"
-    },
-    "details": {
-      "what": "seme li ona",
-      "learned": "mi kama sona e seme",
-      "why": "tan seme ona li suli"
-    },
-    "cardActions": {
-      "clickForDetails": "o lukin e sona",
-      "clickToClose": "o pini e lukin"
-    },
-    "buttons": {
-      "showRandom": "o pana e anpa lili sin",
-      "hideRandom": "o len e anpa"
-    },
-    "filters": {
-      "all": "ali"
-    },
-    "clickToFlip": "o luka tawa sike",
-    "what": "ni li seme?",
-    "learned": "mi kama sona e seme",
-    "why": "tan seme la mi pali e ni?"
   },
   "blog": {
     "title": "lipu toki",
@@ -609,7 +568,6 @@
     "home": "lipu open",
     "about": "sona mi",
     "blog": "lipu toki",
-    "projects": "pali",
     "now": "tenpo ni",
     "uses": "kepeken",
     "contact": "toki tawa",
@@ -644,15 +602,6 @@
     "games": "musi",
     "tetris": "musi Tetris",
     "help": "kama sona",
-    "projects": {
-      "category": "tawa lon poki pali",
-      "closeCard": "pini e lipu tawa",
-      "left": "tawa lete",
-      "right": "tawa poka",
-      "up": "tawa sewi",
-      "down": "tawa anpa",
-      "flipCard": "ante sinpin pi pali: {{title}}"
-    },
     "blog": {
       "category": "tawa lon lipu toki",
       "next": "tawa lipu kama",

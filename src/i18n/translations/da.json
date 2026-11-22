@@ -34,7 +34,6 @@
   "nav": {
     "home": "Hjem",
     "about": "Om mig",
-    "projects": "Projekter",
     "blog": "Blog",
     "now": "Lige nu",
     "uses": "Bruger",
@@ -72,8 +71,7 @@
   },
   "home": {
     "buttons": {
-      "about": "Om mig",
-      "projects": "Se mine projekter"
+      "about": "Om mig"
     },
     "footer": "Velkommen til min digitale have. Du er velkommen til at udforske.",
     "heading": "hej der, jeg er Jarema",
@@ -122,45 +120,6 @@
   "about": {
     "title": "Om mig",
     "description": "Historien om hvem jeg er, hvor jeg kommer fra, hvad min passion er, og hvad jeg arbejder hen imod."
-  },
-  "projects": {
-    "title": "Mine projekter",
-    "description": "En samling af personlige, akademiske og aktivistiske projekter, jeg har arbejdet på. Nogle færdige, nogle stadig under udvikling.",
-    "status": {
-      "completed": "Færdig",
-      "inProgress": "Stadig Under Udvikling",
-      "planned": "Planlagt"
-    },
-    "statusLabels": {
-      "completed": "Færdig",
-      "inProgress": "I gang",
-      "planned": "Planlagt"
-    },
-    "categories": {
-      "personal": "Personlig",
-      "academic": "Akademisk",
-      "activism": "Aktivisme"
-    },
-    "details": {
-      "what": "Hvad det er",
-      "learned": "Hvad jeg lærte",
-      "why": "Hvorfor det er vigtigt"
-    },
-    "cardActions": {
-      "clickForDetails": "Klik for detaljer",
-      "clickToClose": "Klik for at lukke"
-    },
-    "buttons": {
-      "showRandom": "Vis mere tilfældighed",
-      "hideRandom": "Skjul kaosset"
-    },
-    "filters": {
-      "all": "Alle"
-    },
-    "clickToFlip": "Klik for at vende",
-    "what": "Hvad er det?",
-    "learned": "Hvad jeg lærte",
-    "why": "Hvorfor byggede jeg det?"
   },
   "blog": {
     "title": "Blog",
@@ -609,7 +568,6 @@
     "home": "Forside",
     "about": "Om mig",
     "blog": "Blog",
-    "projects": "Projekter",
     "now": "Nu",
     "uses": "Værktøjer",
     "contact": "Kontakt",
@@ -644,15 +602,6 @@
     "games": "Spil",
     "tetris": "Spil Tetris",
     "help": "Hjælp",
-    "projects": {
-      "category": "Navigér mellem projekter",
-      "closeCard": "Luk vendt kort",
-      "left": "Navigér til venstre",
-      "right": "Navigér til højre",
-      "up": "Navigér op",
-      "down": "Navigér ned",
-      "flipCard": "Vend projektkort: {{title}}"
-    },
     "blog": {
       "category": "Navigér mellem blogindlæg",
       "next": "Til næste indlæg",

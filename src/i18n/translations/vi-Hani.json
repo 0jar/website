@@ -32,7 +32,6 @@
   "nav": {
     "home": "張主",
     "about": "介紹",
-    "projects": "預案",
     "blog": "Blog",
     "now": "現在",
     "uses": "工具",
@@ -68,8 +67,7 @@
   },
   "home": {
     "buttons": {
-      "about": "𧗱𨉟",
-      "projects": "䀡預案𧵑𨉟"
+      "about": "𧗱𨉟"
     },
     "footer": "嘲𢜠伴𦤾貝張䇼𧵑𨉟。據自然𦓡勘破唲。",
     "heading": "嘲伴、𨉟𱺵 Jarema",
@@ -91,38 +89,6 @@
   },
   "about": {
     "title": "介紹"
-  },
-  "projects": {
-    "title": "各預案𧵑𨉟",
-    "description": "綜合各預案個人、學術吧活動𦓡𨉟㐌吧當寔現。𠬠數時㐌歱、仍役恪時吻當𫜵𡁎。",
-    "status": {
-      "completed": "㐌完成",
-      "inProgress": "當進行",
-      "planned": "預見"
-    },
-    "categories": {
-      "personal": "個人",
-      "academic": "學術",
-      "activism": "活動社會"
-    },
-    "details": {
-      "what": "低𱺵之",
-      "learned": "𨉟㐌學得之",
-      "why": "預案尼關重貝𨉟爲"
-    },
-    "cardActions": {
-      "clickForDetails": "扨抵䀡枝節",
-      "clickToClose": "扨抵㨂"
-    },
-    "statusLabels": {
-      "completed": "㐌完成",
-      "inProgress": "當進行",
-      "planned": "預見"
-    },
-    "buttons": {
-      "showRandom": "現添𠄧預案恪",
-      "hideRandom": "催隱𠫾、𡗉過"
-    }
   },
   "blog": {
     "title": "Blog",
@@ -485,7 +451,6 @@
     "home": "Trang chủ",
     "about": "Giới thiệu",
     "blog": "Blog",
-    "projects": "Dự án",
     "now": "Hiện tại",
     "uses": "Công cụ",
     "contact": "Liên hệ",
@@ -519,15 +484,6 @@
     "games": "Trò chơi",
     "tetris": "Chơi Tetris",
     "help": "Trợ giúp",
-    "projects": {
-      "category": "Điều hướng qua các dự án",
-      "closeCard": "Đóng dự án",
-      "left": "Điều hướng sang trái",
-      "right": "Điều hướng sang phải",
-      "up": "Điều hướng lên",
-      "down": "Điều hướng xuống",
-      "flipCard": "Mở dự án {{title}}"
-    },
     "blog": {
       "category": "Điều hướng qua các bài viết",
       "next": "Đến bài viết tiếp theo",

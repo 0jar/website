@@ -20,7 +20,7 @@ export interface Action {
 }
 
 const navIcons = {
-  home: "home", about: "user", projects: "code", blog: "book-open", now: "clock", uses: "wrench",
+  home: "home", about: "user", blog: "book-open", now: "clock", uses: "wrench",
   contact: "mail", guestbook: "message-square", colophon: "file-text", webring: "flip-horizontal-2",
   scrapbook: "calendar", slashes: "slash", brand: "tag", tools: "wrench",
 } as const;
@@ -64,20 +64,6 @@ export function getActions(): Action[] {
       if (link) add(dir, t(`actionSearch.blog.${dir}`), dir === "prev" ? "arrow-left" : "arrow-right", blog, () => link.click());
     }
     add("back", t("actionSearch.blog.back"), "arrow-left", blog, navigate(routes.blog), "b");
-  }
-
-  if (path === routes.projects) {
-    const cards = Array.from(document.querySelectorAll<HTMLElement>(".project-card")).filter(card => card.offsetWidth);
-    const category = t("actionSearch.projects.category");
-    const open = cards.find(card => card.querySelector(".flipped"));
-    if (open) add("close-card", t("actionSearch.projects.closeCard"), "x", category, () => open.click());
-    for (const dir of ["left", "right", "up", "down"] as const) {
-      add(dir, t(`actionSearch.projects.${dir}`), `arrow-${dir}`, category, () => {
-        const card = cards.find(el => el.contains(document.activeElement)) ?? cards[0];
-        card?.focus();
-        card?.dispatchEvent(new KeyboardEvent("keydown", { key: `Arrow${dir[0].toUpperCase()}${dir.slice(1)}`, bubbles: true }));
-      });
-    }
   }
 
   const sections: Record<string, string> = {

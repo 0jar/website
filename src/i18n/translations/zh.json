@@ -34,7 +34,6 @@
   "nav": {
     "home": "首页",
     "about": "关于",
-    "projects": "项目",
     "blog": "博客",
     "now": "现在",
     "uses": "工具",
@@ -72,8 +71,7 @@
   },
   "home": {
     "buttons": {
-      "about": "关于我",
-      "projects": "看看我的项目"
+      "about": "关于我"
     },
     "footer": "欢迎来到我的网站。随便逛逛吧。",
     "heading": "你好，我是承靖",
@@ -122,45 +120,6 @@
   "about": {
     "title": "关于我",
     "description": "关于我是谁、我来自哪里、我的热情所在以及我正在为之奋斗的目标的故事。"
-  },
-  "projects": {
-    "title": "我的项目",
-    "description": "我参与或正在进行的个人、学术和社会活动项目的汇总。有些已经完成，有些还在进行中。",
-    "status": {
-      "completed": "已完成",
-      "inProgress": "进行中",
-      "planned": "计划中"
-    },
-    "categories": {
-      "personal": "个人",
-      "academic": "学术",
-      "activism": "社会活动"
-    },
-    "details": {
-      "what": "这是什么",
-      "learned": "我学到了什么",
-      "why": "这个项目对我很重要，因为"
-    },
-    "cardActions": {
-      "clickForDetails": "点击查看详情",
-      "clickToClose": "点击关闭"
-    },
-    "statusLabels": {
-      "completed": "已完成",
-      "inProgress": "进行中",
-      "planned": "计划中"
-    },
-    "buttons": {
-      "showRandom": "再显示几个项目",
-      "hideRandom": "隐藏吧，太多了"
-    },
-    "filters": {
-      "all": "全部"
-    },
-    "clickToFlip": "翻转",
-    "what": "这是什么？",
-    "learned": "我学到了什么",
-    "why": "我为什么要做这个？"
   },
   "blog": {
     "title": "博客",
@@ -609,7 +568,6 @@
     "home": "首页",
     "about": "关于我",
     "blog": "博客",
-    "projects": "项目",
     "now": "现在",
     "uses": "使用工具",
     "contact": "联系",
@@ -644,15 +602,6 @@
     "games": "游戏",
     "tetris": "玩俄罗斯方块",
     "help": "帮助",
-    "projects": {
-      "category": "浏览项目卡片",
-      "closeCard": "关闭翻转卡片",
-      "left": "向左浏览",
-      "right": "向右浏览",
-      "up": "向上浏览",
-      "down": "向下浏览",
-      "flipCard": "翻转项目卡片：{{title}}"
-    },
     "blog": {
       "category": "浏览博客文章",
       "next": "下一篇文章",

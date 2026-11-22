@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 
-export async function getData<C extends "now" | "projects" | "uses" | "webrings">(name: C) {
+export async function getData<C extends "now" | "uses" | "webrings">(name: C) {
   const entries = await getCollection(name);
   return entries.map((entry): CollectionEntry<C>["data"] => entry.data);
 }

@@ -34,7 +34,6 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "projects": "Projects",
     "blog": "Blog",
     "now": "Now",
     "uses": "Uses",
@@ -73,8 +72,7 @@
   },
   "home": {
     "buttons": {
-      "about": "About me",
-      "projects": "See my projects"
+      "about": "About me"
     },
     "footer": "Welcome to my digital garden. Feel free to explore.",
     "heading": "hi there, i'm Jarema",
@@ -163,46 +161,6 @@
       "copyHash": "Copy hash",
       "copyHashTitle": "Copy full SHA"
     }
-  },
-  "projects": {
-    "title": "My projects",
-    "description": "A collection of personal, academic, and activism projects I've worked on. Some finished, some still cooking.",
-    "status": {
-      "completed": "Completed",
-      "inProgress": "Still cooking",
-      "planned": "Planned"
-    },
-    "statusLabels": {
-      "completed": "Completed",
-      "inProgress": "In progress",
-      "planned": "Planned"
-    },
-    "categories": {
-      "personal": "Personal",
-      "academic": "Academic",
-      "activism": "Activism"
-    },
-    "details": {
-      "what": "What it is",
-      "learned": "What I learned",
-      "why": "Why it matters"
-    },
-    "cardActions": {
-      "clickForDetails": "Click for details",
-      "clickToClose": "Click to close"
-    },
-    "buttons": {
-      "showRandom": "Show more randomness",
-      "hideRandom": "Hide the chaos",
-      "visit": "Visit project"
-    },
-    "filters": {
-      "all": "All"
-    },
-    "clickToFlip": "Click to flip",
-    "what": "What is it?",
-    "learned": "What I learned",
-    "why": "Why did I build it?"
   },
   "blog": {
     "title": "Blog",
@@ -657,7 +615,6 @@
     "home": "Home",
     "about": "About",
     "blog": "Blog",
-    "projects": "Projects",
     "now": "Now",
     "uses": "Uses",
     "contact": "Contact",
@@ -693,15 +650,6 @@
     "games": "Games",
     "tetris": "Play Tetris",
     "help": "Help",
-    "projects": {
-      "category": "Navigate through project cards",
-      "closeCard": "Close flipped card",
-      "left": "Navigate left",
-      "right": "Navigate right",
-      "up": "Navigate up",
-      "down": "Navigate down",
-      "flipCard": "Flip project card: {{title}}"
-    },
     "blog": {
       "category": "Navigate through blog posts",
       "next": "To next post",
