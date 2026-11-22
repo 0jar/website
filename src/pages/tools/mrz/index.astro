@@ -96,14 +96,22 @@ const sexOptions = ["M", "F", "X", "<"];
             </div>
           </div>
 
-          <!-- Dynamic fields container -->
-          <div id="dynamic-fields" class="space-y-4 border-t pt-4 mt-4">
-            <!-- Populated by JS -->
+          <div id="dynamic-fields" class="grid grid-cols-1 md:grid-cols-2 gap-4 border-t pt-4 mt-4">
+            {[
+              { type: "td1", id: "opt1", length: 15 }, { type: "td1", id: "opt2", length: 11 },
+              { type: "td2", id: "opt", length: 7 }, { type: "td3", id: "pNum", length: 14 },
+            ].map(field => (
+              <div data-type={field.type} hidden={field.type !== "td1"}>
+                <label for={field.id} class="block text-sm font-medium">{tl(field.id)}</label>
+                <input id={field.id} name={field.id} class={controlCls} maxlength={field.length} />
+              </div>
+            ))}
           </div>
 
           <p id="mrz-error" aria-live="polite" class="text-xs text-destructive mt-1 hidden"></p>
 
-          <button type="submit" class={btnCls + " mt-4"}>
+          <noscript><p>Enable JavaScript to generate the MRZ in your browser.</p></noscript>
+          <button disabled type="submit" class={btnCls + " mt-4"}>
             <T key="mrz.generate" />
           </button>
         </form>
@@ -114,7 +122,7 @@ const sexOptions = ["M", "F", "X", "<"];
         class="bg-card border rounded-xl p-6 shadow-sm hidden opacity-0 transition-opacity duration-300"
       >
         <div>
-          <label class="block text-sm font-medium mb-1"><T key="mrz.outputString" /></label>
+          <label for="output-string" class="block text-sm font-medium mb-1"><T key="mrz.outputString" /></label>
           <div class="relative">
             <textarea
               id="output-string"
@@ -157,9 +165,8 @@ const sexOptions = ["M", "F", "X", "<"];
 </BaseLayout>
 
 <script>
-  import { t } from "@/i18n";
-  const lang = document.documentElement.lang || "en";
-  const tl = (key: string) => t(lang, `mrz.${key}`);
+  import { t } from "@/i18n/client";
+  const tl = (key: string) => t(`mrz.${key}`);
 
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 
@@ -172,40 +179,10 @@ const sexOptions = ["M", "F", "X", "<"];
   const mrzError = $("mrz-error");
 
   const btnCopyOrig = copyBtn.textContent;
-  const controlCls = "mt-1 w-full px-3 py-2 text-sm rounded-lg border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-ring";
-
   function updateDynFields() {
-    const val = docType.value;
-    let html = "";
-    if (val === "td1") {
-      html = `
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label for="opt1" class="block text-sm font-medium">${tl("opt1")}</label>
-            <input type="text" id="opt1" name="opt1" class="${controlCls}" maxlength="15" />
-          </div>
-          <div>
-            <label for="opt2" class="block text-sm font-medium">${tl("opt2")}</label>
-            <input type="text" id="opt2" name="opt2" class="${controlCls}" maxlength="11" />
-          </div>
-        </div>
-      `;
-    } else if (val === "td2") {
-      html = `
-        <div>
-          <label for="opt" class="block text-sm font-medium">${tl("opt")}</label>
-          <input type="text" id="opt" name="opt" class="${controlCls}" maxlength="7" />
-        </div>
-      `;
-    } else if (val === "td3") {
-      html = `
-        <div>
-          <label for="pNum" class="block text-sm font-medium">${tl("pNum")}</label>
-          <input type="text" id="pNum" name="pNum" class="${controlCls}" maxlength="14" />
-        </div>
-      `;
-    }
-    dynFields.innerHTML = html;
+    dynFields.querySelectorAll<HTMLElement>("[data-type]").forEach(field => {
+      field.hidden = field.dataset.type !== docType.value;
+    });
   }
 
   docType.addEventListener("change", updateDynFields);
@@ -310,6 +287,8 @@ const sexOptions = ["M", "F", "X", "<"];
       mrzError.classList.remove("hidden");
     }
   });
+
+  form.querySelector<HTMLButtonElement>('button[type="submit"]')!.disabled = false;
 
   copyBtn.addEventListener("click", () => {
     if (!outputString.value) return;

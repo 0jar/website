@@ -188,7 +188,8 @@ const bankBins = [
             </label>
           </div>
 
-          <button type="submit" class={btnCls + " mt-4"}>
+          <noscript><p>Enable JavaScript to generate the QR code in your browser.</p></noscript>
+          <button disabled type="submit" class={btnCls + " mt-4"}>
             <T key="vietqr.generate" />
           </button>
         </form>
@@ -368,6 +369,8 @@ const bankBins = [
       bank.setAttribute("aria-invalid", "true");
     }
   });
+
+  form.querySelector<HTMLButtonElement>('button[type="submit"]')!.disabled = false;
 
   copyBtn.addEventListener("click", () => {
     if (!outputString.value) return;

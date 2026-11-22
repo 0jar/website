@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import T from "@/components/ui/T.astro";
+import { scriptJson } from "@/lib/utils/escape";
 import { t } from "@/i18n";
 
 const lang = Astro.locals?.lang || "en";
@@ -29,7 +30,7 @@ const tl = (key: string) => t(lang, `recase.${key}`);
         
         <!-- Operation Select -->
         <div>
-          <label for="operation" class="block text-sm font-medium text-transparent select-none pointer-events-none mb-2" aria-hidden="true">Operation</label>
+          <label for="operation" class="block text-sm font-medium mb-2">Operation</label>
           <select id="operation" aria-label="Operation" class="w-full h-10 px-3 py-2 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
             <!-- Populated via JS -->
           </select>
@@ -63,7 +64,7 @@ const tl = (key: string) => t(lang, `recase.${key}`);
   </div>
 </BaseLayout>
 
-<script id="recase-options" type="application/json" set:html={JSON.stringify({
+<script id="recase-options" type="application/json" set:html={scriptJson({
   casing: [
     { id: 'reverse', name: tl("casing.reverse") },
     { id: 'upper', name: tl("casing.upper") },
@@ -113,7 +114,7 @@ const tl = (key: string) => t(lang, `recase.${key}`);
   const optionsData = JSON.parse($<HTMLScriptElement>("recase-options").textContent || "{}");
   
   function updateOperations() {
-    operationSelect.innerHTML = "";
+    operationSelect.replaceChildren();
     (optionsData[modeSelect.value] || []).forEach((op: { id: string, name: string }) => {
       const option = document.createElement("option");
       option.value = op.id;
@@ -133,10 +134,10 @@ const tl = (key: string) => t(lang, `recase.${key}`);
   function md5(str: string) {
     let hash = [1732584193, -271733879, -1732584194, 271733878];
     let bytes = Array.from(new TextEncoder().encode(str));
-    let l = bytes.length * 8;
+    const bitLength = bytes.length * 8;
     bytes.push(128);
     while ((bytes.length * 8) % 512 !== 448) bytes.push(0);
-    for (let i = 0; i < 8; i++) bytes.push((l >>> (i * 8)) & 0xff);
+    for (let i = 0; i < 8; i++) bytes.push(Math.floor(bitLength / 2 ** (i * 8)) & 0xff);
     
     let w = new Int32Array(16);
     for (let i = 0; i < bytes.length; i += 64) {
@@ -181,7 +182,7 @@ const tl = (key: string) => t(lang, `recase.${key}`);
       if (mode === "casing") {
         const w = getWords(text);
         switch (op) {
-          case "reverse": result = text.split('').reverse().join(''); break;
+          case "reverse": result = Array.from(text).reverse().join(''); break;
           case "upper": result = text.toUpperCase(); break;
           case "lower": result = text.toLowerCase(); break;
           case "title": result = text.toLowerCase().replace(/(?:^|[^a-z0-9])([a-z])/g, m => m.toUpperCase()); break;
@@ -242,7 +243,7 @@ const tl = (key: string) => t(lang, `recase.${key}`);
         }
       }
       
-      outputText.value = result;
+      if (inputText.value === text && modeSelect.value === mode && operationSelect.value === op) outputText.value = result;
     } catch (e: any) {
       outputText.value = "";
       errorMsg.textContent = e.message || "An error occurred";
