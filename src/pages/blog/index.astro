@@ -21,13 +21,13 @@ const tagMetaMap = new Map<string, { key: string; label: string }>();
 posts.forEach((post) => {
   uniqueLanguages.add(post.data.language || 'en');
   if (post.data.mood) uniqueMoods.add(post.data.mood);
-  
+
   const cats = post.data.categories?.length ? post.data.categories : post.data.category ? [post.data.category] : [];
   for (const cat of cats) {
     const meta = taxonomyLabel(lang, cat, 'category');
     categoryMetaMap.set(meta.key, meta);
   }
-  
+
   for (const tag of post.data.tags) {
     const meta = taxonomyLabel(lang, tag, 'tag');
     tagMetaMap.set(meta.key, meta);
@@ -99,8 +99,8 @@ const catApprovedOptions = [
   keywords={[localizedBlogTitle, ...taxonomyKeywords]}
   structuredData={blogIndexStructuredData}
 >
-  <div class="container mx-auto px-4 py-8 lg:py-12">
-    <div class="max-w-4xl mx-auto">
+  <div class="py-8 lg:py-12">
+    <div class="max-w-4xl mx-auto px-4">
       <div class="flex justify-between items-center mb-6">
         <T key="blog.title" tag="h1" class="text-4xl font-bold" />
         <div class="flex items-center gap-2">
@@ -218,7 +218,7 @@ const catApprovedOptions = [
           const postTags = (post.data.tags || []).map((t: string) => taxonomyLabel(lang, t, 'tag'));
           const cats = post.data.categories?.length ? post.data.categories : post.data.category ? [post.data.category] : [];
           const postCats = cats.map((c: string) => taxonomyLabel(lang, c, 'category'));
-          
+
           return (
           <Card
             padding="none"
