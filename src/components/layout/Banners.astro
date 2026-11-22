@@ -24,7 +24,7 @@ const isComplete = (completedLanguages as readonly string[]).includes(lang);
 )}
 
 <!-- Polyglot easter egg -->
-<div id="easter-egg" class="fixed top-16 inset-x-0 z-50 flex justify-center p-4 hidden">
+<div id="easter-egg" data-lang-codes={JSON.stringify(supportedLanguages.map(l => l.code))} class="fixed top-16 inset-x-0 z-50 flex justify-center p-4 hidden">
   <div class="bg-purple-100 dark:bg-purple-900 border border-purple-200 dark:border-purple-800 text-purple-800 dark:text-purple-100 px-4 py-3 rounded-lg shadow-md flex items-center max-w-xl">
     <Icon name="wand" width="20" height="20" class="mr-3 flex-shrink-0" />
     <div class="flex flex-col">
@@ -39,13 +39,20 @@ const isComplete = (completedLanguages as readonly string[]).includes(lang);
 
 <script is:inline>
   (function () {
+    var dismissalKeys = {
+      "lang-notice": "languageNoticeDismissed",
+      "easter-egg": "polyglotNoticeDismissed"
+    };
+
     // Dismiss buttons
     document.querySelectorAll("[data-dismiss]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var target = document.getElementById(btn.getAttribute("data-dismiss"));
-        if (target) target.classList.add("hidden");
-        if (btn.getAttribute("data-dismiss") === "lang-notice") {
-          try { localStorage.setItem("languageNoticeDismissed", "true"); } catch (e) {}
+        if (!target) return;
+        target.classList.add("hidden");
+        var key = dismissalKeys[target.id];
+        if (key) {
+          try { localStorage.setItem(key, "true"); } catch (e) {}
         }
       });
     });
@@ -53,20 +60,21 @@ const isComplete = (completedLanguages as readonly string[]).includes(lang);
     // Hide lang notice if previously dismissed
     var notice = document.getElementById("lang-notice");
     if (notice) {
-      try { if (localStorage.getItem("languageNoticeDismissed") === "true") notice.classList.add("hidden"); } catch (e) {}
+      try { if (localStorage.getItem(dismissalKeys[notice.id]) === "true") notice.classList.add("hidden"); } catch (e) {}
     }
 
     // Polyglot easter egg
     var locale = document.documentElement.dataset.locale || "en";
-    var allCodes = JSON.parse(document.getElementById("easter-egg")?.closest("[data-lang-codes]")?.dataset.langCodes || "[]");
+    var egg = document.getElementById("easter-egg");
+    var allCodes = JSON.parse(egg.dataset.langCodes);
     try {
       var visited = JSON.parse(localStorage.getItem("language-tracker") || "[]");
       var s = new Set(visited);
       s.add(locale);
       localStorage.setItem("language-tracker", JSON.stringify(Array.from(s)));
-      if (allCodes.length > 0 && allCodes.every(function (c) { return s.has(c); })) {
-        var egg = document.getElementById("easter-egg");
-        if (egg) egg.classList.remove("hidden");
+      if (localStorage.getItem(dismissalKeys[egg.id]) !== "true" &&
+        allCodes.length > 0 && allCodes.every(function (c) { return s.has(c); })) {
+        egg.classList.remove("hidden");
       }
     } catch (e) {}
   })();
