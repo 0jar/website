@@ -1,4 +1,4 @@
-import { getCollection } from "astro:content";
+import { getPublishedPosts } from "@/lib/blog";
 import { hrefLangLanguages, supportedLanguages, siteDescription, getSiteName, siteUrl, author } from "@/lib/constants";
 import { locales } from "@/i18n/routing";
 import { escapeXml } from "@/lib/utils/escape";
@@ -8,41 +8,15 @@ export function feedStaticPaths() {
   return ["en", ...locales].map((code) => ({ params: { lang: code } }));
 }
 
-const validLangCodes = new Set(supportedLanguages.map((l) => l.code));
-
-export function validateFeedLang(lang) {
-  return !!lang && validLangCodes.has(lang);
-}
-
 function getLanguageName(code) {
   const lang = supportedLanguages.find((l) => l.code === code);
   return lang ? lang.name : code.toUpperCase();
 }
 
-let allFeedPostsPromise = null;
-
-async function getAllFeedPosts() {
-  const posts = await getCollection("blog", (entry) => !entry.data.draft);
-
-  return posts
-    .map((post) => ({
-      slug: post.id,
-      title: post.data.title,
-      excerpt: post.data.excerpt ?? "",
-      date: post.data.date,
-      tags: post.data.tags ?? [],
-      language: post.data.language ?? "en",
-    }))
-    .sort((a, b) => b.date.getTime() - a.date.getTime());
-}
-
-function getAllFeedPostsCached() {
-  return (allFeedPostsPromise ??= getAllFeedPosts());
-}
-
-function postsForLanguage(allPosts, language, mode) {
-  if (language) return allPosts.filter((p) => p.language === language);
-  return mode === "en-only" ? allPosts.filter((p) => p.language === "en") : allPosts;
+async function feedPosts(language) {
+  const posts = await getPublishedPosts();
+  return posts.filter(p => !language || p.data.language === language)
+    .map(({ id, data }) => ({ ...data, slug: id, excerpt: data.excerpt ?? "" }));
 }
 
 function feedMeta(language) {
@@ -53,7 +27,7 @@ function feedMeta(language) {
 
 export function generateAtomFeed({ posts, title, description, language, feedUrl }) {
   const languageLinks = hrefLangLanguages
-    .filter((l) => l.code !== language)
+    .filter(l => l.code !== language && (l.code === "en" || locales.includes(l.code)))
     .map(
       (l) =>
         `  <link href="${siteUrl}/atom/${l.code}.xml" rel="alternate" type="application/atom+xml" hreflang="${l.code}" />`,
@@ -67,9 +41,9 @@ export function generateAtomFeed({ posts, title, description, language, feedUrl 
     <title>${escapeXml(post.title)}</title>
     <link href="${siteUrl}/blog/${post.slug}/" rel="alternate" type="text/html"/>
     <id>${siteUrl}/blog/${post.slug}/</id>
-    <published>${new Date(post.date).toISOString()}</published>
-    <updated>${new Date(post.date).toISOString()}</updated>
-    <summary type="html">${escapeXml(post.excerpt)}</summary>
+    <published>${post.date.toISOString()}</published>
+    <updated>${(post.updated ?? post.date).toISOString()}</updated>
+    <summary type="text">${escapeXml(post.excerpt)}</summary>
     ${post.tags.map((tag) => `<category term="${escapeXml(tag)}"/>`).join("\n    ")}
   </entry>`,
     )
@@ -102,10 +76,10 @@ export function generateJSONFeed({ posts, title, description, language, feedUrl 
       id: `${siteUrl}/blog/${post.slug}/`,
       url: `${siteUrl}/blog/${post.slug}/`,
       title: post.title,
-      content_html: post.excerpt,
+      content_text: post.excerpt,
       summary: post.excerpt,
-      date_published: new Date(post.date).toISOString(),
-      date_modified: new Date(post.date).toISOString(),
+      date_published: post.date.toISOString(),
+      date_modified: (post.updated ?? post.date).toISOString(),
       tags: post.tags || [],
     })),
   };
@@ -118,19 +92,13 @@ function cacheHeaders(contentType) {
 }
 
 export async function getRSSResponse(language) {
-  const allPosts = await getAllFeedPostsCached();
-  const posts = postsForLanguage(allPosts, language, "all");
-
-  if (language && posts.length === 0) {
-    return new Response("No posts found for this language", { status: 404 });
-  }
-
+  const posts = await feedPosts(language);
   const { title, description } = feedMeta(language);
   const lang = language || "en";
   const feedUrl = language ? `${siteUrl}/rss/${language}.xml` : `${siteUrl}/rss.xml`;
 
   const languageLinks = hrefLangLanguages
-    .filter((l) => l.code !== language)
+    .filter(l => l.code !== language && (l.code === "en" || locales.includes(l.code)))
     .map(
       (l) =>
         `  <atom:link href="${siteUrl}/rss/${l.code}.xml" rel="alternate" type="application/rss+xml" hreflang="${l.code}" />`,
@@ -159,32 +127,20 @@ ${languageLinks}`;
 }
 
 async function feedResponse(format, language) {
-  const allPosts = await getAllFeedPostsCached();
-  const mode = format === "json" ? "en-only" : "all";
-  const posts = postsForLanguage(allPosts, language, mode);
-
-  if (language && posts.length === 0) {
-    return new Response("No posts found for this language", { status: 404 });
-  }
-
+  const posts = await feedPosts(language ?? (format === "json" ? "en" : undefined));
   const { title, description } = feedMeta(language);
   const lang = language || "en";
-  const pathMap = { atom: "atom", json: "feed" };
-  const extMap = { atom: ".xml", json: ".json" };
-  const feedUrl = language
-    ? `${siteUrl}/${pathMap[format]}/${language}${extMap[format]}`
-    : `${siteUrl}/${pathMap[format]}${extMap[format]}`;
-    
+  const base = format === "json" ? "feed" : "atom";
+  const ext = format === "json" ? "json" : "xml";
+  const feedUrl = `${siteUrl}/${base}${language ? `/${language}` : ""}.${ext}`;
+
   const opts = { posts, title, description, language: lang, feedUrl };
 
   if (format === "json") {
     return Response.json(generateJSONFeed(opts), { headers: cacheHeaders() });
   }
   
-  const contentTypes = { atom: "application/atom+xml" };
-  const generators = { atom: generateAtomFeed };
-  
-  return new Response(generators[format](opts), { headers: cacheHeaders(contentTypes[format]) });
+  return new Response(generateAtomFeed(opts), { headers: cacheHeaders("application/atom+xml") });
 }
 
 export const getAtomResponse = (language) => feedResponse("atom", language);

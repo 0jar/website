@@ -1,5 +1,3 @@
 import { getAtomResponse } from "@/lib/feed";
 
-export const GET = async () => {
-  return getAtomResponse();
-};
+export const GET = () => getAtomResponse();

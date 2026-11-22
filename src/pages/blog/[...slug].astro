@@ -15,53 +15,13 @@ import {
 import { localePath, stripLocale } from "@/i18n/routing";
 import { dateFull } from "@/lib/utils/timezone";
 
-import { getPublishedPosts } from "@/lib/blog";
+import { getPublishedPosts, postPath, taxonomyLabel } from "@/lib/blog";
 
 
-const publishedBlogPostsSortedPromise = getPublishedPosts();
 
-interface WebmentionAuthor {
-  type?: string;
-  name?: string;
-  url?: string;
-  photo?: string;
-}
 
-interface Webmention {
-  type?: string;
-  author?: WebmentionAuthor;
-  url?: string;
-  published?: string;
-  "wm-received"?: string;
-  "wm-id"?: number;
-  "wm-property"?: string;
-  "wm-source"?: string;
-  content?: { text?: string; html?: string };
-}
-
-const webmentionsCache = new Map<string, Promise<Webmention[]>>();
-
-async function fetchWebmentions(target: string): Promise<Webmention[]> {
-  if (webmentionsCache.has(target)) return webmentionsCache.get(target)!;
-  const promise = fetch(`https://webmention.io/api/mentions.jf2?target=${encodeURIComponent(target)}`)
-    .then(r => r.ok ? r.json() : { children: [] })
-    .then(j => (j.children ?? []).sort((a: Webmention, b: Webmention) =>
-      new Date(a.published || a["wm-received"] || 0).getTime() - new Date(b.published || b["wm-received"] || 0).getTime()
-    ))
-    .catch(() => []);
-  webmentionsCache.set(target, promise);
-  return promise;
-}
-
-const safeUrl = (url?: string): string | undefined => {
-  if (!url) return undefined;
-  try {
-    const parsed = new URL(url);
-    return ["http:", "https:"].includes(parsed.protocol) ? parsed.href : undefined;
-  } catch {
-    return undefined;
-  }
-};
+import { fetchWebmentions, type Webmention } from "@/lib/webmentions";
+import { httpUrl as safeUrl } from "@/lib/utils/url";
 
 const lang = Astro.locals?.lang || "en";
 
@@ -100,25 +60,8 @@ const categories = rawCategories?.length
 
 type TaxonomyMeta = { key: string; label: string };
 
-const toTaxonomyKey = (value: string): string => {
-  const base = value
-    .trim()
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "");
-  const slug = base.replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-  return slug || value;
-};
-
-const getTaxonomyMeta = (raw: string, type: "category" | "tag"): TaxonomyMeta => {
-  const key = toTaxonomyKey(raw);
-  const translationKey = `blog.${type}Labels.${key}`;
-  const translated = t(lang, translationKey);
-  return { key, label: translated === translationKey ? raw : translated };
-};
-
-const categoryMeta = categories.map((c: string) => getTaxonomyMeta(c, "category"));
-const tagMeta = (tags ?? []).map((t: string) => getTaxonomyMeta(t, "tag"));
+const categoryMeta = categories.map((c: string) => taxonomyLabel(lang, c, "category"));
+const tagMeta = (tags ?? []).map((t: string) => taxonomyLabel(lang, t, "tag"));
 const taxonomyKeywords = Array.from(new Set([...categoryMeta, ...tagMeta].map(e => e.label)));
 
 const postUrl = Astro.url.href;
@@ -178,7 +121,7 @@ const postMetaTags = [
 ];
 
 // Post navigation
-const sortedPosts = await publishedBlogPostsSortedPromise;
+const sortedPosts = await getPublishedPosts();
 const currentIndex = sortedPosts.findIndex(
   (p: CollectionEntry<"blog">) => p.id === post.id,
 );
@@ -232,14 +175,16 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
 <BaseLayout
   title={title}
   description={description}
-  lang={postLang}
+  lang={lang}
+  languagePaths={Object.fromEntries([post, ...sortedPosts.filter(p => alternates?.some(a => a.slug === p.id))]
+    .map(p => [p.data.language, postPath(p, p.data.language)]))}
   structuredData={blogPostingStructuredData}
   canonicalUrl={postUrl}
   ogType="article"
   keywords={[title, ...taxonomyKeywords]}
   metaTags={postMetaTags}
 >
-  <article class="h-entry container mx-auto px-4 py-8 lg:py-12 max-w-3xl">
+  <article lang={postLang} class="h-entry container mx-auto px-4 py-8 lg:py-12 max-w-3xl">
     <header class="mb-8">
       <div class="text-sm text-muted-foreground mb-4">
         <a
@@ -529,13 +474,13 @@ const formatDate = (d: Date) => d.toLocaleDateString("en", dateFull);
     <nav class="mt-12 pt-8 border-t" aria-label="Post navigation">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {prevPost && (
-          <a href={localePath(lang, `/blog/${prevPost.id}/`)} rel="prev" class="group p-4 border rounded-lg hover:border-primary/50 transition-colors">
+          <a href={postPath(prevPost, lang)} rel="prev" class="group p-4 border rounded-lg hover:border-primary/50 transition-colors">
             <div class="text-xs text-muted-foreground mb-1">← <T key="blog.prev" /></div>
             <p class="font-medium group-hover:text-primary transition-colors line-clamp-1">{prevPost.data.title}</p>
           </a>
         )}
         {nextPost && (
-          <a href={localePath(lang, `/blog/${nextPost.id}/`)} rel="next" class="group p-4 border rounded-lg hover:border-primary/50 transition-colors md:text-right md:ml-auto w-full">
+          <a href={postPath(nextPost, lang)} rel="next" class="group p-4 border rounded-lg hover:border-primary/50 transition-colors md:text-right md:ml-auto w-full">
             <div class="text-xs text-muted-foreground mb-1"><T key="blog.next" /> →</div>
             <p class="font-medium group-hover:text-primary transition-colors line-clamp-1">{nextPost.data.title}</p>
           </a>

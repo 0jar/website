@@ -1,21 +1,22 @@
 ---
 // Language toggle
 import { supportedLanguages } from "@/lib/constants";
-import { localePath, stripLocale, locales } from "@/i18n/routing";
+import { locales } from "@/i18n/routing";
 import { t } from "@/i18n";
 
 const lang = Astro.locals?.lang || "en";
-const basePath = stripLocale(Astro.url.pathname);
+interface Props { paths: Record<string, string> }
+const { paths } = Astro.props;
 const currentInfo = supportedLanguages.find(l => l.code === lang) || supportedLanguages[0];
 
 const sections = [
-  { key: "main",  label: t(lang, "language.main"),    langs: supportedLanguages.filter(l => "main" in l && l.main && ((l.code as string) === "en" || locales.includes(l.code as any))) },
-  { key: "other", label: t(lang, "language.other"),    langs: supportedLanguages.filter(l => "other" in l && l.other && ((l.code as string) === "en" || locales.includes(l.code as any))) },
+  { key: "main",  label: t(lang, "language.main"),    langs: supportedLanguages.filter(l => "main" in l && l.main && paths[l.code]) },
+  { key: "other", label: t(lang, "language.other"),    langs: supportedLanguages.filter(l => "other" in l && l.other && paths[l.code]) },
 ];
 const itemCls = "lang-item relative flex items-center rounded-sm px-2 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground";
 ---
 
-{locales.length > 0 && (
+{locales.length > 0 && Object.keys(paths).length > 1 && (
 <details id="lang-toggle" class="group relative">
   <summary
     class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden"
@@ -28,7 +29,7 @@ const itemCls = "lang-item relative flex items-center rounded-sm px-2 py-1.5 tex
     </svg>
   </summary>
 
-  <div class="absolute right-0 mt-2 w-80 rounded-md border bg-popover p-1 text-popover-foreground shadow-md z-50 max-h-96 overflow-y-auto">
+  <div class="absolute right-0 mt-2 w-80 max-w-[calc(100vw-6rem)] rounded-md border bg-popover p-1 text-popover-foreground shadow-md z-50 max-h-96 overflow-y-auto">
     <div class="px-2 py-2">
       <input id="lang-search" type="text" placeholder={t(lang, "language.search")} aria-label={t(lang, "language.search")}
         class="w-full px-3 py-1.5 text-sm rounded-md border bg-background focus:outline-none focus:ring-1 focus:ring-ring" />
@@ -41,7 +42,10 @@ const itemCls = "lang-item relative flex items-center rounded-sm px-2 py-1.5 tex
         <div class="grid grid-cols-2 gap-1 lang-section">
           {langs.map(l => (
             <a
-              href={localePath(l.code, basePath)}
+              href={paths[l.code]}
+              hreflang={l.code}
+              lang={l.code}
+              aria-current={paths[l.code] === Astro.url.pathname ? "page" : undefined}
               class:list={[itemCls, l.code === lang && "bg-accent"]}
               data-search={`${l.name} ${l.code} ${l.aliases?.join(" ") ?? ""}`}
               aria-label={l.name}

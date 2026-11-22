@@ -22,7 +22,7 @@ export const author = {
   email: "hello@jarema.me",
   note: "Economics major, sometimes coder, most times cat whisperer.",
   image: "/favicons-128.png",
-  keyUrl: "/keys/gpg",
+  keyUrl: "/keys/pgp",
   repoUrl: "https://codeberg.org/0jar/website",
   repoOwner: "0jar",
   repoName: "website",

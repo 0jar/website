@@ -8,7 +8,8 @@ import Galaxy from "@/components/layout/Galaxy.astro";
 import BarListener from "@/components/layout/BarListener.astro";
 import Banners from "@/components/layout/Banners.astro";
 import { hrefLangLanguages, siteUrl, getSiteName, siteDescription, siteKeywords, author, socialLinks, alternativeDomains, services, themeColors, ogLocaleMap } from "@/lib/constants";
-import { localePath, stripLocale } from "@/i18n/routing";
+import { locales, localePath, stripLocale } from "@/i18n/routing";
+import { scriptJson } from "@/lib/utils/escape";
 import { translations } from "@/i18n";
 
 const analyticsWebsiteIds = services.analytics.websiteIds;
@@ -26,6 +27,7 @@ interface MetaTag {
 }
 
 interface Props {
+  languagePaths?: Record<string, string>;
   title?: string;
   description?: string;
   isHomePage?: boolean;
@@ -41,16 +43,13 @@ interface Props {
 }
 
 const {
-  lang: initialLang = Astro.locals?.lang || "en",
-} = Astro.props;
-
-const initialSiteName = getSiteName(initialLang);
-
-const {
-  title = initialSiteName,
+  lang = Astro.locals.lang,
+  title = getSiteName(lang),
+  languagePaths = Object.fromEntries(["en", ...locales].map(code => [
+    code, localePath(code, stripLocale(Astro.url.pathname)),
+  ])),
   description = siteDescription,
   isHomePage = false,
-  lang: langProp,
   breadcrumbs = [],
   structuredData: structuredDataProp = [],
   keywords = siteKeywords,
@@ -61,7 +60,7 @@ const {
   showFooter = true,
 } = Astro.props;
 
-const lang = langProp || Astro.locals?.lang || "en";
+const feedLanguages = hrefLangLanguages.filter(l => l.code === "en" || locales.includes(l.code));
 const siteName = getSiteName(lang);
 const basePath = stripLocale(Astro.url.pathname);
 
@@ -225,7 +224,7 @@ const structuredData = {
     <link rel="alternate" type="application/json" href={`${siteUrl}/feed.json`} title={`${siteName} - JSON Feed`} />
 
     <!-- Alternate language feeds -->
-    {hrefLangLanguages.map((lang) => (
+    {feedLanguages.map((lang) => (
       <>
         <link rel="alternate" type="application/rss+xml" href={`${siteUrl}/rss/${lang.code}.xml`} title={`RSS Feed - ${lang.code.toUpperCase()}`} hreflang={lang.code} />
         <link rel="alternate" type="application/atom+xml" href={`${siteUrl}/atom/${lang.code}.xml`} title={`Atom Feed - ${lang.code.toUpperCase()}`} hreflang={lang.code} />
@@ -234,16 +233,16 @@ const structuredData = {
 
     <!-- hreflang tags -->
     <link rel="canonical" href={canonicalHref} />
-    {hrefLangLanguages.map((l) => (
-        <link rel="alternate" hreflang={l.code} href={new URL(localePath(l.code, basePath), siteUrl).href} />
+    {feedLanguages.filter(l => languagePaths[l.code]).map((l) => (
+        <link rel="alternate" hreflang={l.code} href={new URL(languagePaths[l.code], siteUrl).href} />
       ))}
-    <link rel="alternate" hreflang="x-default" href={new URL(basePath, siteUrl).href} />
+    {Object.keys(languagePaths).length > 0 && <link rel="alternate" hreflang="x-default" href={new URL(languagePaths.en ?? basePath, siteUrl).href} />}
 
     <!-- Structured data -->
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)}></script>
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbStructuredData)}></script>
+    <script type="application/ld+json" is:inline set:html={scriptJson(structuredData)}></script>
+    <script type="application/ld+json" is:inline set:html={scriptJson(breadcrumbStructuredData)}></script>
     {extraStructuredData.map((data) => (
-      <script type="application/ld+json" is:inline set:html={JSON.stringify(data)}></script>
+      <script type="application/ld+json" is:inline set:html={scriptJson(data)}></script>
     ))}
 
     <!-- Theme initialization script (runs before page render) -->
@@ -293,7 +292,7 @@ const structuredData = {
   </head>
   <body class="min-h-screen bg-background">
     <!-- h-card -->
-    <div class="sr-only">
+    <div hidden>
       <div class="h-card vcard">
         <a class="p-name u-url u-uid fn url uid" href={siteUrl}>{author.name}</a>
         <img class="u-photo u-logo photo logo" src={author.image} alt="" />
@@ -324,9 +323,9 @@ const structuredData = {
         </a>
       </nav>
 
-      <Header />
+      <Header languagePaths={languagePaths} />
 
-      <main id="main-content" class="flex-1">
+      <main id="main-content" tabindex="-1" class="flex-1">
         <slot />
       </main>
 

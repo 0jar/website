@@ -8,4 +8,4 @@ export function escapeXml(value) {
     .replaceAll("'", "&#39;");
 }
 
-export { escapeXml as escapeHtml };
+export const scriptJson = (value) => JSON.stringify(value).replaceAll("<", "\\u003c");

@@ -1,24 +1,15 @@
 ---
-// Locale tool subpage, mirrors [locale]/blog/[...slug].astro pattern.
 import { locales } from "@/i18n/routing";
 
 export function getStaticPaths() {
-  const globs = import.meta.glob("../../tools/**/index.astro");
-  const slugs = Object.keys(globs)
-    .map((p) => p.replace(/^\.\.\/\.\.\/tools\//, "").replace(/\/index\.astro$/, ""))
-    .filter((s) => s !== "");
-  return locales.flatMap((locale) =>
-    slugs.map((slug) => ({ params: { locale, subpage: slug } }))
-  );
+  const tools = import.meta.glob("../../tools/*/index.astro");
+  return Object.keys(tools).flatMap(path => locales.map(locale => ({
+    params: { locale, subpage: path.split("/").at(-2)! },
+  })));
 }
 
-const { subpage } = Astro.params;
-const globs = import.meta.glob("../../tools/**/index.astro");
-const entry = Object.entries(globs).find(([p]) =>
-  p === `../../tools/${subpage}/index.astro`
-);
-if (!entry) return Astro.redirect("/404");
-const View = ((await entry[1]()) as { default: any }).default;
+const views = import.meta.glob<{ default: typeof import("../../tools/index.astro").default }>("../../tools/*/index.astro");
+const { default: View } = await views[`../../tools/${Astro.params.subpage}/index.astro`]();
 ---
 
 <View />

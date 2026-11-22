@@ -9,15 +9,12 @@ export const t = (key, params) => {
   return value ? interpolate(value, params) : key;
 };
 
-export const cycleLanguage = () => {
-  const codes = supportedLanguages.map((l) => l.code);
-  const idx = codes.indexOf(getPageLocale());
-  const next = codes[(idx + 1) % codes.length];
-  location.href =
-    next === "en"
-      ? stripLocale(location.pathname)
-      : `/${next}${stripLocale(location.pathname)}`;
-};
+export function cycleLanguage() {
+  const links = Array.from(document.querySelectorAll("#lang-toggle a[hreflang]"));
+  if (!links.length) return;
+  const current = links.findIndex(link => link.hreflang === document.documentElement.lang);
+  links[(current + 1) % links.length].click();
+}
 
 export const switchLocale = (locale) => {
   const basePath = stripLocale(location.pathname);

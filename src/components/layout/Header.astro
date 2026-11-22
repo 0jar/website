@@ -7,6 +7,8 @@ import { Image } from "astro:assets";
 import { localePath, stripLocale } from "@/i18n/routing";
 import SettingsMenu from "./SettingsMenu.astro";
 
+interface Props { languagePaths: Record<string, string> }
+
 const lang = Astro.locals?.lang || "en";
 const pathname = Astro.url.pathname;
 const basePath = stripLocale(pathname);
@@ -49,8 +51,7 @@ const navBase = `text-sm transition-colors hover:text-primary whitespace-nowrap 
     </div>
 
     <div class="flex items-center gap-1.5 md:gap-2 flex-shrink-0">
-      <!-- Language toggle (React) -->
-      <LanguageToggle transition:persist />
+      <LanguageToggle paths={Astro.props.languagePaths} />
 
       <!-- Settings menu -->
       <SettingsMenu />

@@ -9,18 +9,8 @@ export function getStaticPaths() {
   );
 }
 
-const { page } = Astro.params;
-
-// Vite requires literal strings in import(), so we enumerate all possible pages.
-// This map is only used at build time; pages not in localePages are never reached.
-const views: Record<string, () => Promise<{ default: any }>> = Object.fromEntries(
-  Object.entries(import.meta.glob("../**/index.astro")).map(([path, loader]) => [
-    path.replace(/^\.\.\//, "").replace(/\/index\.astro$/, ""),
-    loader as () => Promise<{ default: any }>,
-  ])
-);
-
-const View = (await views[page!]()).default;
+const views = import.meta.glob<{ default: typeof import("../index.astro").default }>("../*/index.astro");
+const { default: View } = await views[`../${Astro.params.page}/index.astro`]();
 ---
 
 <View />

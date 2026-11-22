@@ -1,7 +1,6 @@
 ---
 // Recent posts component
-import { getPublishedPosts } from "@/lib/blog";
-import type { CollectionEntry } from "astro:content";
+import { getPublishedPosts, postPath } from "@/lib/blog";
 import T from "@/components/ui/T.astro";
 import { routes } from "@/lib/constants";
 import { localePath } from "@/i18n/routing";
@@ -9,25 +8,7 @@ import { formatDate, dateLong } from "@/lib/utils/timezone";
 
 const lang = Astro.locals?.lang || "en";
 
-type RecentPost = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  dateISO: string;
-  readingTime: number;
-  dateTextEn: string;
-};
-
-const posts: RecentPost[] = (await getPublishedPosts())
-  .slice(0, 3)
-  .map((post: CollectionEntry<"blog">) => ({
-    slug: post.id,
-    title: post.data.title,
-    excerpt: post.data.excerpt ?? "No excerpt available",
-    dateISO: post.data.date.toISOString(),
-    readingTime: post.data.readingTime ?? 5,
-    dateTextEn: formatDate(post.data.date, lang, dateLong),
-  }));
+const posts = (await getPublishedPosts()).slice(0, 3);
 ---
 
 <section aria-labelledby="recent-posts-heading">
@@ -39,21 +20,21 @@ const posts: RecentPost[] = (await getPublishedPosts())
   <div class="space-y-4">
     {posts.map((post, index) => (
       <article class="border rounded-lg p-4 bg-card card-hover-effect group">
-        <a href={localePath(lang, `/blog/${post.slug}/`)} class="block">
+        <a href={postPath(post, lang)} class="block">
           <div class="flex items-start justify-between gap-4">
             <div class="flex-1 min-w-0">
               <h3 class="font-semibold text-lg group-hover:text-primary transition-colors line-clamp-1">
-                {post.title}
+                {post.data.title}
               </h3>
               <p class="text-sm text-muted-foreground mt-1 line-clamp-2">
-                {post.excerpt}
+                {post.data.excerpt ?? "No excerpt available"}
               </p>
               <div class="flex items-center gap-3 mt-2 text-xs text-muted-foreground">
-                <time datetime={post.dateISO} data-date={post.dateISO}>
-                  {post.dateTextEn}
+                <time datetime={post.data.date.toISOString()} data-date={post.data.date.toISOString()}>
+                  {formatDate(post.data.date, lang, dateLong)}
                 </time>
                 <span>•</span>
-                <span class="reading-time"><span data-reading-time>{post.readingTime}</span> <T key="blog.minRead" /></span>
+                <span class="reading-time"><span data-reading-time>{post.data.readingTime ?? 5}</span> <T key="blog.minRead" /></span>
               </div>
             </div>
             <div class="flex-shrink-0 text-2xl text-muted-foreground font-bold">

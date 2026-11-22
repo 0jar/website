@@ -1,62 +1,25 @@
-import { getCollection } from "astro:content";
-import { siteUrl as constantSiteUrl, localePages } from "@/lib/constants";
-import { locales } from "@/i18n/routing";
+import { getPublishedPosts } from "@/lib/blog";
+import { siteUrl, localePages } from "@/lib/constants";
+import { localePath, locales } from "@/i18n/routing";
+import { escapeXml } from "@/lib/utils/escape";
 
-export const GET = async ({ site }) => {
-  const siteUrl = (site?.toString() || constantSiteUrl).replace(/\/$/, "");
-
-  // Get all blog posts
-  const blogPosts = await getCollection("blog", ({ data }) => !data.draft);
-
-  // Get all .astro pages
-  const pages = import.meta.glob("/src/pages/**/*.astro");
-
-  const staticPages = [];
-  for (const path of Object.keys(pages)) {
-    let urlPath = path
-      .replace("/src/pages", "")
-      .replace(/\.astro$/, "")
-      .replace(/\/index$/, "");
-
-    // Skip API routes, 404, dynamic routes, and /records (locale variants added below)
-    if (
-      urlPath.includes("/api/") ||
-      urlPath === "/404" ||
-      urlPath.includes("[") ||
-      urlPath.includes("]") ||
-      urlPath === "/records" ||
-      urlPath.startsWith("/records/")
-    ) {
-      continue;
-    }
-
-    urlPath = urlPath || "/";
-    staticPages.push(urlPath);
-  }
-
-  // Build URLs array
-  const urls = [
-    // Root (English) static pages
-    ...staticPages.map((page) => `  <url>\n    <loc>${siteUrl}${page === "/" ? "/" : `${page}/`}</loc>\n  </url>`),
-    // Root (English) blog posts
-    ...blogPosts.map((post) => `  <url>\n    <loc>${siteUrl}/blog/${post.id}/</loc>\n  </url>`),
-    // Locale homepages
-    ...locales.map((l) => `  <url>\n    <loc>${siteUrl}/${l}/</loc>\n  </url>`),
-    // Locale static pages
-    ...locales.flatMap((l) => localePages.map((p) => `  <url>\n    <loc>${siteUrl}/${l}/${p}/</loc>\n  </url>`)),
-    // Locale blog posts
-    ...blogPosts.filter(post => locales.includes(post.data.language || 'en')).map((post) => `  <url>\n    <loc>${siteUrl}/${post.data.language}/blog/${post.id}/</loc>\n  </url>`),
+export async function GET({ site }) {
+  const pages = Object.keys(import.meta.glob("/src/pages/**/*.astro"))
+    .filter(path => !path.includes("[") && !path.endsWith("/404.astro"))
+    .map(path => path.slice("/src/pages".length).replace(/(?:\/index)?\.astro$/, "") || "/")
+    .map(path => path.endsWith("/") ? path : `${path}/`);
+  const localised = pages.filter(path => path === "/" || path.startsWith("/tools/") || localePages.includes(path.slice(1, -1)));
+  const posts = await getPublishedPosts();
+  const paths = [
+    ...pages,
+    ...locales.flatMap(lang => localised.map(path => localePath(lang, path))),
+    ...posts.map(post => `/blog/${post.id}/`),
+    ...posts.filter(post => locales.includes(post.data.language)).map(post => `/${post.data.language}/blog/${post.id}/`),
   ];
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const urls = paths.map(path => `  <url><loc>${escapeXml(new URL(path, site ?? siteUrl).href)}</loc></url>`);
+  return new Response(`<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.join("\n")}
-</urlset>`;
-
-  return new Response(sitemap, {
-    headers: {
-      "Content-Type": "application/xml; charset=utf-8",
-    },
-  });
-};
+</urlset>`, { headers: { "Content-Type": "application/xml; charset=utf-8" } });
+}

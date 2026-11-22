@@ -6,6 +6,7 @@ import { getData } from "@/lib/data";
 import badges from "@/content/data/badges.json";
 import MoodCat from "@/components/home/MoodCat.astro";
 import NowSection from "@/components/home/NowSection.astro";
+import { localePath } from "@/i18n/routing";
 import RecentPosts from "@/components/home/RecentPosts.astro";
 import Card from "@/components/ui/Card.astro";
 
@@ -26,10 +27,10 @@ const resolvedSiteName = getSiteName(lang);
           <T key="home.heading" tag="h1" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" />
           <T key="home.subheading" tag="p" class="text-lg md:xl text-muted-foreground mb-8" />
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={routes.contact} class:list={[btn, "bg-primary text-primary-foreground hover:bg-primary/90"]}><T key="home.contactButton" /></a>
-            <a href={routes.about} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.aboutButton" /></a>
-            <a href={routes.blog} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.blogButton" /></a>
-            <a href={routes.guestbook} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.guestbookButton" /></a>
+            <a href={localePath(lang, routes.contact)} class:list={[btn, "bg-primary text-primary-foreground hover:bg-primary/90"]}><T key="home.contactButton" /></a>
+            <a href={localePath(lang, routes.about)} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.aboutButton" /></a>
+            <a href={localePath(lang, routes.blog)} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.blogButton" /></a>
+            <a href={localePath(lang, routes.guestbook)} class:list={[btn, "border border-input bg-background hover:bg-accent hover:text-accent-foreground"]}><T key="home.guestbookButton" /></a>
           </div>
         </div>
 
@@ -77,7 +78,7 @@ const resolvedSiteName = getSiteName(lang);
 
         <section class="mt-10 lg:mt-12" aria-labelledby="webrings-heading">
           <h2 id="webrings-heading" class="text-2xl font-bold mb-4 text-center">
-            <a href="/webrings/" class="no-underline hover:underline focus:underline text-inherit"><T key="webrings.title" /></a>
+            <a href={localePath(lang, routes.webring)} class="no-underline hover:underline focus:underline text-inherit"><T key="webrings.title" /></a>
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {activeWebringItems.map((ring) => (
@@ -92,7 +93,7 @@ const resolvedSiteName = getSiteName(lang);
             ))}
           </div>
           <div class="mt-4 text-center">
-            <a href={routes.webring} class="inline-flex items-center gap-2 px-3 py-1.5 text-sm border rounded-lg hover:bg-accent transition-colors">
+            <a href={localePath(lang, routes.webring)} class="inline-flex items-center gap-2 px-3 py-1.5 text-sm border rounded-lg hover:bg-accent transition-colors">
               <T key="home.viewAllWebrings" /> →
             </a>
           </div>

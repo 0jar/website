@@ -34,7 +34,7 @@ const fullTitle = `${title} - ${resolvedSiteName}`;
 ---
 
 <!doctype html>
-<html style="background-color:hsl(270,30%,10%)">
+<html lang={language} style="background-color:hsl(270,30%,10%)">
   <head>
     <title>{fullTitle}</title>
     <link rel="canonical" href={canonicalUrl} />
@@ -51,4 +51,5 @@ const fullTitle = `${title} - ${resolvedSiteName}`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
   </head>
+  <body><a href={canonicalUrl}>{title}</a></body>
 </html>
