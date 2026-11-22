@@ -70,7 +70,7 @@ export const services = {
   },
   // status.cafe
   statusCafe: {
-    profileUrl: "https://status.cafe/users/jarema",
+    profileUrl: "https://status.cafe/users/jar",
   },
   // Analytics (Umami)
   analytics: {
